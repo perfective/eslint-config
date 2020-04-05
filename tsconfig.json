@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.strict.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "exclude": [
+        "dist",
+        "src/**/*.spec.ts"
+    ]
+}

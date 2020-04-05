@@ -1,0 +1,3 @@
+= Perfective ESLint Config
+
+`@perfective/eslint-config` package provides set of linter rules for the `@perfective` packages.
