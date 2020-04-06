@@ -1,7 +1,7 @@
 {
     "name": "@perfective/eslint-config",
     "version": "0.1.0",
-    "description": "Code style and formatting rules",
+    "description": "ESLint shareable rules configuration",
     "author": "Andrey Mikheychik <a.mikheychik@gmail.com>",
     "homepage": "https://github.com/perfective/eslint-config",
     "license": "MIT",
@@ -10,18 +10,22 @@
         "lib": "dist"
     },
     "files": [
-        "config",
-        "dist"
+        "dist",
+        "tslint"
     ],
     "scripts": {
-        "build": "tsc",
+        "clean": "rm -rf dist",
+        "build": "npm run clean && tsc",
         "lint": "npm run lint:eslint; npm run lint:tslint",
-        "lint:eslint": "eslint --ext .ts --fix ./src",
-        "lint:tslint": "tslint --project ./tsconfig.json --fix ./src/*"
+        "lint:eslint": "eslint --fix --ext .ts ./src",
+        "lint:tslint": "tslint --fix --project ./tsconfig.json"
     },
     "peerDependencies": {
-        "eslint-import-resolver-typescript": "^2.0.0",
+        "@typescript-eslint/eslint-plugin": "^2.26.0",
+        "@typescript-eslint/parser": "^2.26.0",
+        "eslint": "^6.8.0",
         "eslint-plugin-deprecation": "^1.0.0",
-        "eslint-plugin-import": "^2.20.2"
+        "eslint-plugin-import": "^2.20.2",
+        "tslint": "^6.1.1"
     }
 }
