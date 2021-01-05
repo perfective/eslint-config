@@ -98,7 +98,7 @@ export = {
             max: 1,
         }],
         'multiline-comment-style': ['warn', 'separate-lines'],
-        'multiline-ternary': ['error', 'always-multiline'],
+        'multiline-ternary': ['warn', 'always-multiline'],
         'new-cap': ['error', {
             // eslint-disable-next-line unicorn/no-keyword-prefix -- option name
             newIsCap: true,
