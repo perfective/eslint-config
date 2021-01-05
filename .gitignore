@@ -1,6 +1,9 @@
 # Build
 dist
 *.tsbuildinfo
+**/*.d.ts
+**/*.js
+**/*.map
 
 # Dependencies
 node_modules

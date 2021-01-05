@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "./"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.lint.json"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "project": "tsconfig.lint.json"
+            }
+        },
+        "jest": {
+            "version": 26
+        }
+    }
+}

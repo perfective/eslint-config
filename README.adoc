@@ -119,3 +119,12 @@ while keeping all others set by default.
 
 * Add `@perfective/eslint-plugin` with the rules for working with the `@perfective` library.
 * Replace all TSLint rules with ESLint rules.
+
+== Legacy
+
+Starting from version `0.11.0` the project was extracted into its own repository
+`link:https://github.com/perfective/eslint-config[@perfective/eslint-config]` from the original
+`link:https://github.com/perfective/js[@perfective/js]` monorepo.
+Its Git repository was rebuilt using `git filter-branch` to preserve commit log.
+Legacy commits cannot be used for rollbacks and debug,
+as there is no `package-lock.json`.
