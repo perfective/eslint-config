@@ -160,6 +160,30 @@ export = {
             allowAny: false,
             allowNullish: false,
         }],
+        // The idea for this rule is good, but it does not have enough granularity.
+        // For example, "null", "string" and "undefined" are keywords,
+        // so the sorted result will always be "null | string | undefined",
+        // while for readability, it makes more sense to have "string | null | undefined".
+        // (As well as mixed with "true" or "false" that are in the "literal" group).
+        // Another problem is that in case of polymorphism and different signatures,
+        // the order of the union types may be important for readability/maintainability as well.
+        '@typescript-eslint/sort-type-union-intersection-members': ['off', {
+            checkIntersections: true,
+            checkUnions: true,
+            groupOrder: [
+                'named',
+                'keyword',
+                'operator',
+                'literal',
+                'function',
+                'import',
+                'conditional',
+                'object',
+                'tuple',
+                'intersection',
+                'union',
+            ],
+        }],
         '@typescript-eslint/strict-boolean-expressions': ['error', {
             allowString: false,
             allowNumber: false,
