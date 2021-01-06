@@ -21,18 +21,18 @@
         "url": "https://github.com/perfective/eslint-config.git"
     },
     "license": "MIT",
-    "main": "./index.js",
+    "main": "./dist/index.js",
     "directories": {
-        "lib": "."
+        "lib": "./dist"
     },
     "files": [
-        "**/*.js",
-        "tslint/index.d.ts"
+        "dist/**/*.js",
+        "dist/tslint/index.d.ts"
     ],
     "scripts": {
         "build": "tsc",
         "build:clean": "npm run clean && npm run build",
-        "clean": "rimraf *.tsbuildinfo **/*.d.ts **/*.js **/*.map",
+        "clean": "rimraf *.tsbuildinfo ./dist",
         "lint": "npm run lint:eslint",
         "lint:eslint": "npm run build && eslint --fix --ext .ts ./"
     },

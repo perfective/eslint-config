@@ -1,12 +1,14 @@
 {
     "extends": "./tsconfig.strict.json",
     "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist",
         "declaration": true,
         "declarationMap": false,
-        "module": "commonjs",
-        "rootDir": "./"
+        "sourceMap": false
     },
     "exclude": [
+        "dist",
         "**/*.spec.ts"
     ]
 }

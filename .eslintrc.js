@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ['./'],
+    extends: ['./dist'],
     parserOptions: {
         project: './tsconfig.json',
     },
