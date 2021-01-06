@@ -4,6 +4,7 @@ dist
 **/*.d.ts
 **/*.js
 **/*.map
+!.eslintrc.js
 
 # Dependencies
 node_modules
