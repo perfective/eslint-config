@@ -1,5 +1,14 @@
 = Changelog
 
+== v0.11.0 (next)
+
+* Upgraded `eslint-plugin-unicorn` to `25.0.1`:
+** Multiple rules have been https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v25.0.0[renamed].
+* Updated `eslint` to `7.17.0`.
+* Updated `@typescript-eslint` to `4.12.0`.
+* Patched `eslint-plugin-json` to `30.7.13`.
+
+
 == v0.10.0
 
 * Upgraded `eslint` to `7.16.0`.

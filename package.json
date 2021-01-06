@@ -1,6 +1,6 @@
 {
     "name": "@perfective/eslint-config",
-    "version": "0.10.0",
+    "version": "0.11.0-alpha",
     "description": "ESLint shareable rules configuration",
     "keywords": [
         "code quality",
@@ -33,6 +33,7 @@
         "build": "tsc",
         "build:clean": "npm run clean && npm run build",
         "clean": "rimraf *.tsbuildinfo ./dist",
+        "dist": "npm run build:clean && gulp",
         "lint": "npm run lint:eslint",
         "lint:eslint": "npm run build && eslint --fix --ext .ts ./"
     },
