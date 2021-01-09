@@ -93,8 +93,8 @@ export = {
         'unicorn/prevent-abbreviations': ['warn', {
             extendDefaultReplacements: true,
             extendDefaultWhitelist: true,
-            checkDefaultAndNamespaceImports: true,
-            checkShorthandImports: false,
+            checkDefaultAndNamespaceImports: 'internal',
+            checkShorthandImports: 'internal',
             checkShorthandProperties: false,
             checkProperties: true,
             checkVariables: true,
