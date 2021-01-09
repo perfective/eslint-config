@@ -39,7 +39,9 @@ export = {
         'jsdoc/no-defaults': 'error',
         'jsdoc/no-types': 'error',
         'jsdoc/no-undefined-types': 'error',
-        'jsdoc/require-description': 'error',
+        'jsdoc/require-description': ['error', {
+            exemptedBy: ['inheritdoc', 'package', 'private'],
+        }],
         'jsdoc/require-description-complete-sentence': 'error',
         'jsdoc/require-example': 'off',
         'jsdoc/require-file-overview': 'off',
