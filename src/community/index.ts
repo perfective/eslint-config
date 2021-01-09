@@ -31,6 +31,29 @@ export = {
                 markers: ['/ <reference'],
             },
         }],
+        // See no-underscore-dangle
+        '@typescript-eslint/naming-convention': ['error', {
+            selector: ['enumMember', 'typeLike'],
+            format: ['StrictPascalCase'],
+        }, {
+            selector: ['memberLike', 'variableLike'],
+            format: ['strictCamelCase'],
+        }, {
+            selector: ['function'],
+            format: ['strictCamelCase', 'StrictPascalCase'],
+        }, {
+            selector: ['parameter'],
+            modifiers: ['unused'],
+            format: ['strictCamelCase'],
+            // Allow underscore for unused parameters, as they can be used as part of an interface
+            leadingUnderscore: 'allow',
+        }, {
+            selector: ['classProperty'],
+            modifiers: ['private'],
+            format: ['strictCamelCase'],
+            // Allow underscore for private properties, as they can conflict with method names
+            leadingUnderscore: 'allow',
+        }],
         // Conflicts with decorators
         '@typescript-eslint/no-extraneous-class': 'off',
         // Conflicts with "no-confusing-arrow" { allowParens: true }
