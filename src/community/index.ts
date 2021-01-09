@@ -89,6 +89,7 @@ export = {
         }],
         // Undesired behavior in functions like forkJoin
         'rxjs/finnish': 'off',
+        'sonarjs/cognitive-complexity': 'off',
         'unicorn/no-keyword-prefix': ['error', {
             blacklist: ['class'],
             checkProperties: true,
