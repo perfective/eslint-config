@@ -27,6 +27,8 @@
     },
     "files": [
         "dist/**/*.js",
+        "dist/rules.d.ts",
+        "dist/rules/**/rules/*.d.ts",
         "dist/tslint/index.d.ts"
     ],
     "scripts": {
