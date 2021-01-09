@@ -42,6 +42,16 @@ export = {
             selector: ['function'],
             format: ['strictCamelCase', 'StrictPascalCase'],
         }, {
+            // Allow all caps for constants.
+            selector: ['variable'],
+            modifiers: ['const'],
+            format: ['strictCamelCase', 'UPPER_CASE'],
+        }, {
+            // Allow all caps for static properties
+            selector: ['classProperty'],
+            modifiers: ['static'],
+            format: ['strictCamelCase', 'UPPER_CASE'],
+        }, {
             selector: ['parameter'],
             modifiers: ['unused'],
             format: ['strictCamelCase'],
