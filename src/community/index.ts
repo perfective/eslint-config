@@ -13,7 +13,6 @@ export = {
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         // Traditionally is used to avoid conflicts between property and method name
         'no-underscore-dangle': ['error', {
-            // eslint-disable-next-line unicorn/prevent-abbreviations -- option name
             allowFunctionParams: true,
         }],
         'object-curly-newline': ['error', {
@@ -79,7 +78,6 @@ export = {
         '@typescript-eslint/triple-slash-reference': ['error', {
             path: 'never',
             types: 'always',
-            // eslint-disable-next-line unicorn/prevent-abbreviations -- option name
             lib: 'never',
         }],
         // Using the established defaults in typescript-eslint v3.x
@@ -114,7 +112,6 @@ export = {
             checkProperties: false,
             checkVariables: true,
             checkFilenames: true,
-            /* eslint-disable unicorn/prevent-abbreviations -- additional abbreviations */
             replacements: {
                 args: false,
                 db: false,
@@ -123,7 +120,6 @@ export = {
                 i: false,
                 j: false,
             },
-            /* eslint-enable unicorn/prevent-abbreviations */
             ignore: [],
         }],
         // Requires research on level of effort in writing safer regular expressions

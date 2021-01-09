@@ -145,7 +145,6 @@ export = {
         'no-ternary': 'off',
         'no-trailing-spaces': 'warn',
         'no-underscore-dangle': ['error', {
-            // eslint-disable-next-line unicorn/prevent-abbreviations -- option name
             allowFunctionParams: false,
         }],
         'no-unneeded-ternary': 'warn',

@@ -9,7 +9,6 @@ export = {
         // NOTE: "never" is not implemented yet by the plugin
         'jsdoc/check-line-alignment': ['off', 'never'],
         'jsdoc/check-param-names': ['error', {
-            // eslint-disable-next-line unicorn/prevent-abbreviations -- option name
             allowExtraTrailingParamDocs: false,
             checkDestructured: true,
             checkRestProperty: false,

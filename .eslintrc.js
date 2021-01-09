@@ -13,4 +13,12 @@ module.exports = {
             version: 26,
         },
     },
+    overrides: [
+        {
+            files: ['*.ts'],
+            rules: {
+                'unicorn/prevent-abbreviations': 'off',
+            }
+        }
+    ],
 };

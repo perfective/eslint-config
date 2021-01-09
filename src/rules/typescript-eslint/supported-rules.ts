@@ -197,7 +197,6 @@ export = {
         '@typescript-eslint/triple-slash-reference': ['error', {
             path: 'never',
             types: 'never',
-            // eslint-disable-next-line unicorn/prevent-abbreviations -- option name
             lib: 'never',
         }],
         '@typescript-eslint/type-annotation-spacing': 'warn',

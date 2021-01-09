@@ -92,11 +92,9 @@ export = {
                     replacement: 'emits',
                 },
             },
-            /* eslint-disable unicorn/prevent-abbreviations -- configuration properties */
             overrideReplacesDocs: true,
             augmentsExtendsReplacesDocs: false,
             implementsReplacesDoc: false,
-            /* eslint-enable unicorn/prevent-abbreviations */
         },
     },
     ignorePatterns: ['**/*.d.ts'],
