@@ -54,6 +54,9 @@ export = {
             // Allow underscore for private properties, as they can conflict with method names
             leadingUnderscore: 'allow',
         }],
+        // An empty interface can be used as nominal type or a self-documenting placeholder.
+        // NOTE: "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
+        '@typescript-eslint/no-empty-interface': 'off',
         // Conflicts with decorators
         '@typescript-eslint/no-extraneous-class': 'off',
         // Conflicts with "no-confusing-arrow" { allowParens: true }
