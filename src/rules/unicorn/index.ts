@@ -91,6 +91,7 @@ export = {
         'unicorn/prefer-ternary': 'off',
         'unicorn/prefer-type-error': 'warn',
         'unicorn/prevent-abbreviations': ['warn', {
+            extendDefaultReplacements: true,
             extendDefaultWhitelist: true,
             checkDefaultAndNamespaceImports: true,
             checkShorthandImports: false,

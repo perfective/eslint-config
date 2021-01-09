@@ -104,23 +104,11 @@ export = {
             onlyCamelCase: false,
         }],
         'unicorn/prevent-abbreviations': ['warn', {
-            extendDefaultWhitelist: true,
-            checkDefaultAndNamespaceImports: true,
-            checkShorthandImports: false,
-            checkShorthandProperties: false,
             // Does not check for properties on external types
             checkProperties: false,
-            checkVariables: true,
-            checkFilenames: true,
             replacements: {
-                args: false,
-                db: false,
-                env: false,
                 params: false,
-                i: false,
-                j: false,
             },
-            ignore: [],
         }],
         // Requires research on level of effort in writing safer regular expressions
         'unicorn/no-unsafe-regex': 'off',
