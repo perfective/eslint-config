@@ -107,7 +107,8 @@ export = {
     },
     overrides: [
         {
-            files: ['*.spec.ts'],
+            // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
+            files: ['*.spec.ts', '*.spec.tsx', '*.test.ts', '*.test.tsx'],
             env: {
                 jest: true,
             },
