@@ -52,6 +52,8 @@ export = {
         // This rule is false-positive on `.then()` method used for monads
         'jest/valid-expect-in-promise': 'off',
         'jest/valid-expect': 'error',
-        'jest/valid-title': 'warn',
+        'jest/valid-title': ['warn', {
+            ignoreTypeOfDescribeName: true,
+        }],
     },
 };
