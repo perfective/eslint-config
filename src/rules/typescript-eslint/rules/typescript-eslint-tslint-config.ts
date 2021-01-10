@@ -3,6 +3,7 @@ export type TsLintRules = Record<string, TsLintRule>;
 
 export interface TypescriptEslintTslintConfig {
     rules: TsLintRules;
+    rulesDirectory?: string[];
 }
 
 const format: TsLintRules = {
@@ -35,7 +36,10 @@ const style: TsLintRules = {
     'switch-final-break': [true, 'always'],
 };
 
-export function typescriptEslintTslintConfig(overrides: TsLintRules = {}): TypescriptEslintTslintConfig {
+export function typescriptEslintTslintConfig(
+    overrides: TsLintRules = {},
+    directories: string[] = [],
+): TypescriptEslintTslintConfig {
     return {
         rules: {
             ...format,
@@ -44,5 +48,6 @@ export function typescriptEslintTslintConfig(overrides: TsLintRules = {}): Types
             ...style,
             ...overrides,
         },
+        rulesDirectory: directories,
     };
 }
