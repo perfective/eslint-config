@@ -7,17 +7,23 @@
 * Updated `eslint` to `7.17.0`.
 * Updated `@typescript-eslint` to `4.12.0`.
 * Patched `eslint-plugin-json` to `30.7.13`.
-* Exported `simpleImportSortImports` in `@perfective/eslint-config/rules` with support for internal packages groups.
+* Added `@perfective/eslint-config/rules` with functions to extended config for some rules:
+** `typescriptEslintTslintConfig` to override `@typescript-eslint/tslint/config`
+(removed `@perfective/eslint-config/tslint`);
+** `simpleImportSortImports` to add internal scope packages groups in `simple-import-sort/imports`;
+** `unicornPreventAbbreviations` to extend replacements in `unicorn/prevent-abbreviations`.
 * Changes in configuration:
 ** Allowed to use a function or a class in `describe()` name.
 ** Allowed to skip description for JSDocs marked as `@private` or `@package`.
 ** Added all Jest default extensions to the test overrides.
 ** _Added_ abbreviation checks for internal imports.
+** Disabled `max-lines` and `max-lines-per-function`.
 * Additional changes in the `community` configuration:
 ** Allowed leading underscores for unused parameters and private properties.
 ** Allowed `UPPER_CASE` for constants and static properties names.
 ** Allowed empty interfaces, so they can be used as placeholders or nominal types.
 ** Disabled the `sonarjs/cognitive-complexity` rule.
+
 
 == v0.10.0
 
