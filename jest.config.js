@@ -7,6 +7,8 @@ module.exports = {
             tsconfig: '<rootDir>/tsconfig.json',
         },
     },
+    // Prevent "jest-haste-map: Haste module naming collision" issue when package.json is copied into ./dist
+    testPathIgnorePatterns: ['/node_modules/', '/dist/'],
     collectCoverage: true,
     coverageReporters: ['text'],
     verbose: false,
