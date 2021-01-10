@@ -1,3 +1,5 @@
+import { unicornPreventAbbreviations } from './rules/prevent-abbreviations';
+
 export = {
     rules: {
         'unicorn/no-array-callback-reference': 'off', // == no-fn-reference-in-iterator
@@ -90,24 +92,7 @@ export = {
         'unicorn/prefer-string-trim-start-end': 'warn', // == prefer-trim-start-end
         'unicorn/prefer-ternary': 'off',
         'unicorn/prefer-type-error': 'warn',
-        'unicorn/prevent-abbreviations': ['warn', {
-            extendDefaultReplacements: true,
-            extendDefaultWhitelist: true,
-            checkDefaultAndNamespaceImports: 'internal',
-            checkShorthandImports: 'internal',
-            checkShorthandProperties: false,
-            checkProperties: true,
-            checkVariables: true,
-            checkFilenames: true,
-            replacements: {
-                args: false,
-                db: false,
-                env: false,
-                i: false,
-                j: false,
-            },
-            ignore: [],
-        }],
+        'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
         'unicorn/string-content': 'off',
         'unicorn/throw-new-error': 'warn',
     },

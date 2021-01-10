@@ -1,3 +1,6 @@
+// eslint-disable-next-line node/no-unpublished-import -- package.json is for the internal package
+import { unicornPreventAbbreviations } from '../rules/unicorn/rules/prevent-abbreviations';
+
 export = {
     extends: '../',
     rules: {
@@ -104,11 +107,9 @@ export = {
             onlyCamelCase: false,
         }],
         'unicorn/prevent-abbreviations': ['warn', {
+            ...unicornPreventAbbreviations(),
             // Does not check for properties on external types
             checkProperties: false,
-            replacements: {
-                params: false,
-            },
         }],
         // Requires research on level of effort in writing safer regular expressions
         'unicorn/no-unsafe-regex': 'off',
