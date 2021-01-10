@@ -13,8 +13,6 @@ function copyPackageJson() {
                 'rules.d.ts',
                 'rules/**/rules/*.d.ts'
             ],
-        }, {}, {
-            arrayMerge: (_dist, source, _options) => source,
         }))
         .pipe(dest('./dist/'));
 }

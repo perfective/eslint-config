@@ -21,15 +21,6 @@
         "url": "https://github.com/perfective/eslint-config.git"
     },
     "license": "MIT",
-    "main": "./dist/index.js",
-    "directories": {
-        "lib": "./dist"
-    },
-    "files": [
-        "dist/**/*.js",
-        "dist/rules.d.ts",
-        "dist/rules/**/rules/*.d.ts"
-    ],
     "scripts": {
         "build": "tsc --project tsconfig.build.json",
         "build:clean": "npm run clean && npm run build",
