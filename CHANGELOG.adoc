@@ -10,13 +10,14 @@
 * Added `@perfective/eslint-config/rules` with functions to extended config for some rules:
 ** `typescriptEslintTslintConfig` to override `@typescript-eslint/tslint/config`
 (removed `@perfective/eslint-config/tslint`);
-** `simpleImportSortImports` to add internal scope packages groups in `simple-import-sort/imports`;
-** `unicornPreventAbbreviations` to extend replacements in `unicorn/prevent-abbreviations`.
+** `simpleImportSortImports` to add internal scope packages groups in the `simple-import-sort/imports` rule;
+** `unicornPreventAbbreviations` to extend replacements in the `unicorn/prevent-abbreviations` rule.
 * Changes in configuration:
-** Allowed to use a function or a class in `describe()` name.
-** Allowed to skip description for JSDocs marked as `@private` or `@package`.
+** Allowed using a function, or a class in `describe()` name.
+** Allowed skipping description for JSDocs marked as `@private` or `@package`.
 ** Added all Jest default extensions to the test overrides.
 ** _Added_ abbreviation checks for internal imports.
+** Allowed `e2e` and `params` abbreviations.
 ** Disabled `max-lines` and `max-lines-per-function`.
 * Additional changes in the `community` configuration:
 ** Allowed leading underscores for unused parameters and private properties.

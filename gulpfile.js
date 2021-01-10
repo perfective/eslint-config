@@ -11,7 +11,7 @@ function copyPackageJson() {
             files: [
                 '**/*.js',
                 'rules.d.ts',
-                'rules/**/rules/*.d.ts'
+                'rules/**/rules/*.d.ts',
             ],
         }))
         .pipe(dest('./dist/'));
