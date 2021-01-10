@@ -116,8 +116,6 @@ export = {
                 }],
                 '@typescript-eslint/init-declarations': 'off',
                 'arrow-body-style': ['error', 'as-needed'],
-                'max-lines': 'off',
-                'max-lines-per-function': 'off',
                 'max-nested-callbacks': ['error', 4],
                 // Each "describe" or "it" is counted as a separated statement
                 'max-statements': 'off',

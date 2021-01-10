@@ -81,12 +81,9 @@ export = {
             ignoreRegExpLiterals: true,
             ignoreUrls: true,
         }],
-        'max-lines': ['error', {
-            max: 300,
-            skipBlankLines: true,
-            skipComments: true,
-        }],
-        'max-lines-per-function': ['error', 25],
+        // Business object may have many properties an even with basic logic will have many lines of code.
+        'max-lines': 'off',
+        'max-lines-per-function': 'off',
         'max-nested-callbacks': ['error', 2],
         'max-params': ['error', {
             max: 3,

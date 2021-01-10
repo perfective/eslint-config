@@ -6,8 +6,6 @@ export = {
     rules: {
         'arrow-body-style': ['error', 'as-needed'],
         'function-paren-newline': ['error', 'multiline-arguments'],
-        'max-lines': 'off',
-        'max-lines-per-function': 'off',
         'max-params': 'off',
         'max-statements': 'off',
         // Conflicts with decorators
