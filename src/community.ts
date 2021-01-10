@@ -1,8 +1,7 @@
-// eslint-disable-next-line node/no-unpublished-import -- package.json is for the internal package
-import { unicornPreventAbbreviations } from '../rules/unicorn/rules/prevent-abbreviations';
+import { unicornPreventAbbreviations } from './rules/unicorn/rules/prevent-abbreviations';
 
 export = {
-    extends: '../',
+    extends: './',
     rules: {
         'arrow-body-style': ['error', 'as-needed'],
         'function-paren-newline': ['error', 'multiline-arguments'],
