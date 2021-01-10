@@ -28,8 +28,7 @@
     "files": [
         "dist/**/*.js",
         "dist/rules.d.ts",
-        "dist/rules/**/rules/*.d.ts",
-        "dist/tslint/index.d.ts"
+        "dist/rules/**/rules/*.d.ts"
     ],
     "scripts": {
         "build": "tsc --project tsconfig.build.json",

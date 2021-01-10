@@ -1,10 +1,13 @@
-// eslint-plugin-simple-import-sort
 export {
     SimpleImportSortImports,
     simpleImportSortImports,
 } from './rules/simple-import-sort/rules/imports';
-
-// eslint-plugin-unicorn
+export {
+    TsLintRule,
+    TsLintRules,
+    TypescriptEslintTslintConfig,
+    typescriptEslintTslintConfig,
+} from './rules/typescript-eslint/rules/typescript-eslint-tslint-config';
 export {
     UnicornPreventAbbreviations,
     unicornPreventAbbreviations,

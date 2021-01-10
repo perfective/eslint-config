@@ -1,5 +1,3 @@
-import { tslint } from './tslint';
-
 export = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -43,6 +41,7 @@ export = {
         './rules/eslint/ecma-script-6',
         './rules/typescript-eslint/supported-rules',
         './rules/typescript-eslint/extension-rules',
+        './rules/typescript-eslint/tslint',
         './rules/array-func',
         './rules/deprecation',
         './rules/eslint-comments/best-practices',
@@ -98,11 +97,6 @@ export = {
         },
     },
     ignorePatterns: ['**/*.d.ts'],
-    rules: {
-        '@typescript-eslint/tslint/config': ['warn', {
-            rules: tslint,
-        }],
-    },
     overrides: [
         {
             // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)

@@ -1,11 +1,15 @@
-export type Rule = boolean | [boolean, unknown];
-export type Rules = Record<string, Rule>;
+export type TsLintRule = boolean | [boolean, unknown];
+export type TsLintRules = Record<string, TsLintRule>;
 
-const format: Rules = {
+export interface TypescriptEslintTslintConfig {
+    rules: TsLintRules;
+}
+
+const format: TsLintRules = {
     'import-spacing': true,
 };
 
-const functionality: Rules = {
+const functionality: TsLintRules = {
     'no-inferred-empty-object-type': true,
     'no-tautology-expression': true,
     'prefer-conditional-expression': [true, 'check-else-if'],
@@ -17,12 +21,12 @@ const functionality: Rules = {
     'strict-type-predicates': true,
 };
 
-const maintainability: Rules = {
+const maintainability: TsLintRules = {
     'no-default-import': true,
     'no-mergeable-namespace': true,
 };
 
-const style: Rules = {
+const style: TsLintRules = {
     'encoding': true,
     'no-unnecessary-callback-wrapper': true,
     'prefer-switch': [true, { 'min-cases': 2 }],
@@ -31,9 +35,14 @@ const style: Rules = {
     'switch-final-break': [true, 'always'],
 };
 
-export const tslint: Rules = {
-    ...format,
-    ...functionality,
-    ...maintainability,
-    ...style,
-};
+export function typescriptEslintTslintConfig(overrides: TsLintRules = {}): TypescriptEslintTslintConfig {
+    return {
+        rules: {
+            ...format,
+            ...functionality,
+            ...maintainability,
+            ...style,
+            ...overrides,
+        },
+    };
+}
