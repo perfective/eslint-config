@@ -14,6 +14,7 @@ describe(unicornPreventAbbreviations, () => {
                 replacements: {
                     args: false,
                     db: false,
+                    e2e: false,
                     env: false,
                     i: false,
                     j: false,
@@ -41,6 +42,7 @@ describe(unicornPreventAbbreviations, () => {
                 replacements: {
                     args: false,
                     db: false,
+                    e2e: false,
                     env: false,
                     i: false,
                     j: false,

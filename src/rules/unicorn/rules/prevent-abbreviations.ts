@@ -28,10 +28,11 @@ export function unicornPreventAbbreviations(
         replacements: {
             args: false,
             db: false,
+            e2e: false,
             env: false,
-            params: false,
             i: false,
             j: false,
+            params: false,
             ...replacements,
         },
         extendDefaultReplacements: true,
