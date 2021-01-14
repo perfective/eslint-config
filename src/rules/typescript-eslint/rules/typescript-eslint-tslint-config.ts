@@ -37,7 +37,7 @@ const style: TsLintRules = {
 };
 
 export function typescriptEslintTslintConfig(
-    overrides: TsLintRules = {},
+    rules: TsLintRules = {},
     directories: string[] = [],
 ): TypescriptEslintTslintConfig {
     return {
@@ -46,7 +46,7 @@ export function typescriptEslintTslintConfig(
             ...functionality,
             ...maintainability,
             ...style,
-            ...overrides,
+            ...rules,
         },
         rulesDirectory: directories,
     };
