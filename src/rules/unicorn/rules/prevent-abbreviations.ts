@@ -1,4 +1,4 @@
-type UnicornPreventAbbreviationReplacements = Record<string, boolean | Record<string, boolean>>;
+export type UnicornPreventAbbreviationReplacements = Record<string, boolean | Record<string, boolean>>;
 
 export interface UnicornPreventAbbreviations {
     replacements: UnicornPreventAbbreviationReplacements;

@@ -36,6 +36,7 @@ export type TypescriptEslintNamingConventionGroupSelector =
 export type TypescriptEslintNamingConventionSelector =
     | TypescriptEslintNamingConventionIndividualSelector
     | TypescriptEslintNamingConventionGroupSelector;
+
 export type TypescriptEslintNamingConventionUnderscore =
     | 'forbid'
     | 'require'

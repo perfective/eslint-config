@@ -18,6 +18,7 @@ export {
     typescriptEslintTslintConfig,
 } from './rules/typescript-eslint/rules/typescript-eslint-tslint-config';
 export {
+    UnicornPreventAbbreviationReplacements,
     UnicornPreventAbbreviations,
     unicornPreventAbbreviations,
 } from './rules/unicorn/rules/prevent-abbreviations';
