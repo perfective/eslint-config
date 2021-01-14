@@ -1,5 +1,10 @@
 = Changelog
 
+== v0.11.1
+
+* Exported `UnicornPreventAbbreviationReplacements`.
+
+
 == v0.11.0
 
 * Upgraded `eslint-plugin-unicorn` to `25.0.1`:
