@@ -22,7 +22,9 @@ describe(unicornPreventAbbreviations, () => {
                 },
                 extendDefaultWhitelist: true,
                 whitelist: {},
-                ignore: [],
+                ignore: [
+                    /e2e/u,
+                ],
             } as UnicornPreventAbbreviations);
     });
 
@@ -52,7 +54,9 @@ describe(unicornPreventAbbreviations, () => {
                 },
                 extendDefaultWhitelist: true,
                 whitelist: {},
-                ignore: [],
+                ignore: [
+                    /e2e/u,
+                ],
             } as UnicornPreventAbbreviations);
     });
 });

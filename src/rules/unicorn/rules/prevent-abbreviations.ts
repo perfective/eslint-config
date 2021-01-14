@@ -44,6 +44,10 @@ export function unicornPreventAbbreviations(
         checkProperties: true,
         checkVariables: true,
         checkFilenames: true,
-        ignore: [],
+        ignore: [
+            // The unicorn/prevent-abbreviations rule considers each "e" as an abbreviation ("error" or "event"),
+            // so it has to be ignored as "e2e" RegExp
+            /e2e/u,
+        ],
     };
 }
