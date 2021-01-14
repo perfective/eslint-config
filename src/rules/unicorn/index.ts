@@ -27,6 +27,7 @@ export = {
         'unicorn/no-hex-escape': 'warn',
         'unicorn/no-instanceof-array': 'warn', // == no-array-instanceof
         'unicorn/no-keyword-prefix': ['error', {
+            blacklist: ['new', 'class'],
             checkProperties: true,
             onlyCamelCase: false,
         }],

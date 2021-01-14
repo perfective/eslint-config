@@ -70,11 +70,10 @@ export = {
             checkProperties: true,
             onlyCamelCase: false,
         }],
-        'unicorn/prevent-abbreviations': ['warn', {
-            ...unicornPreventAbbreviations(),
-            // Does not check for properties on external types
+        'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations({}, {
+            // Do not check for properties on external types
             checkProperties: false,
-        }],
+        })],
         // Requires research on level of effort in writing safer regular expressions
         'unicorn/no-unsafe-regex': 'off',
     },

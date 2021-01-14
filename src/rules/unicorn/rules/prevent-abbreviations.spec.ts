@@ -28,16 +28,18 @@ describe(unicornPreventAbbreviations, () => {
             } as UnicornPreventAbbreviations);
     });
 
-    it('extends the default list of replacements', () => {
+    it('extends the default list of replacements and overrides', () => {
         expect(unicornPreventAbbreviations({
             props: false,
             refs: false,
+        }, {
+            checkProperties: false,
         }))
             .toStrictEqual({
                 checkDefaultAndNamespaceImports: 'internal',
                 checkShorthandImports: 'internal',
                 checkShorthandProperties: false,
-                checkProperties: true,
+                checkProperties: false,
                 checkVariables: true,
                 checkFilenames: true,
                 extendDefaultReplacements: true,
