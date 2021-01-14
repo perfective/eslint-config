@@ -30,39 +30,6 @@ export = {
                 markers: ['/ <reference'],
             },
         }],
-        // See no-underscore-dangle
-        '@typescript-eslint/naming-convention': ['error', {
-            selector: ['enumMember', 'typeLike'],
-            format: ['StrictPascalCase'],
-        }, {
-            selector: ['memberLike', 'variableLike'],
-            format: ['strictCamelCase'],
-        }, {
-            selector: ['function'],
-            format: ['strictCamelCase', 'StrictPascalCase'],
-        }, {
-            // Allow all caps for constants.
-            selector: ['variable'],
-            modifiers: ['const'],
-            format: ['strictCamelCase', 'UPPER_CASE'],
-        }, {
-            // Allow all caps for static properties
-            selector: ['classProperty'],
-            modifiers: ['static'],
-            format: ['strictCamelCase', 'UPPER_CASE'],
-        }, {
-            selector: ['parameter'],
-            modifiers: ['unused'],
-            format: ['strictCamelCase'],
-            // Allow underscore for unused parameters, as they can be used as part of an interface
-            leadingUnderscore: 'allow',
-        }, {
-            selector: ['classProperty'],
-            modifiers: ['private'],
-            format: ['strictCamelCase'],
-            // Allow underscore for private properties, as they can conflict with method names
-            leadingUnderscore: 'allow',
-        }],
         // An empty interface can be used as nominal type or a self-documenting placeholder.
         // NOTE: "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
         '@typescript-eslint/no-empty-interface': 'off',

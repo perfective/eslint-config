@@ -1,3 +1,5 @@
+import { typescriptEslintNamingConvention } from './rules/typescript-eslint-naming-convention';
+
 export = {
     rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -68,13 +70,8 @@ export = {
             ],
         }],
         '@typescript-eslint/method-signature-style': ['warn', 'property'],
-        '@typescript-eslint/naming-convention': ['error', {
-            selector: ['enumMember', 'typeLike'],
-            format: ['StrictPascalCase'],
-        }, {
-            selector: ['memberLike', 'variableLike'],
-            format: ['strictCamelCase'],
-        }],
+        // See no-underscore-dangle
+        '@typescript-eslint/naming-convention': ['error', ...typescriptEslintNamingConvention()],
         '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
         '@typescript-eslint/no-confusing-void-expression': ['warn', {
