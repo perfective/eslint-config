@@ -1,4 +1,7 @@
 export = {
+    plugins: [
+        'array-func',
+    ],
     rules: {
         'array-func/from-map': 'warn',
         'array-func/no-unnecessary-this-arg': 'error',

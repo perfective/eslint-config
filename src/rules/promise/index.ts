@@ -1,4 +1,7 @@
 export = {
+    plugins: [
+        'promise',
+    ],
     rules: {
         'promise/always-return': 'error',
         'promise/avoid-new': 'off',

@@ -167,6 +167,9 @@ where `plugin` is the name of the plugin (`eslint-plugin-` prefix).
 Each configuration is exported from the `./index.ts` file
 and is organized as a partial ESLint config.
 It should contain the plugin name and the list of the rules, sorted alphabetically.
+When a plugin's documentation groups rules,
+each group is configured in its own file
+and then extended in the `./index.ts` file.
 
 The final configuration extends each plugin configuration on the file-type basis.
 

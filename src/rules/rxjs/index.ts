@@ -1,4 +1,7 @@
 export = {
+    plugins: [
+        'rxjs',
+    ],
     rules: {
         'rxjs/ban-observables': 'error',
         'rxjs/ban-operators': ['error', {

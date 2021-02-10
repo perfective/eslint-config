@@ -1,4 +1,7 @@
 export = {
+    plugins: [
+        'jsdoc',
+    ],
     rules: {
         // @access should be optional and used only to mark package/private functions
         'jsdoc/check-access': 'off',

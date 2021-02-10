@@ -1,6 +1,9 @@
 import { unicornPreventAbbreviations } from './rules/prevent-abbreviations';
 
 export = {
+    plugins: [
+        'unicorn',
+    ],
     rules: {
         'unicorn/no-array-callback-reference': 'off', // == no-fn-reference-in-iterator
         'unicorn/no-array-reduce': 'off', // == no-reduce
