@@ -160,6 +160,17 @@ export = {
 while keeping all others set by default.
 
 
+== Internals
+
+Rule for each plugin are described in the `./src/rules/{plugin}` subdirectories,
+where `plugin` is the name of the plugin (`eslint-plugin-` prefix).
+Each configuration is exported from the `./index.ts` file
+and is organized as a partial ESLint config.
+It should contain the plugin name and the list of the rules, sorted alphabetically.
+
+The final configuration extends each plugin configuration on the file-type basis.
+
+
 == Roadmap
 
 * Add `@perfective/eslint-plugin` with the rules for working with the `@perfective` library.

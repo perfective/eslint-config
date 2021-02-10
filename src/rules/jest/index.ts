@@ -1,4 +1,7 @@
 export = {
+    plugins: [
+        'jest',
+    ],
     rules: {
         'jest/consistent-test-it': ['warn', {
             fn: 'test',

@@ -11,8 +11,7 @@ export = {
         warnOnUnsupportedTypeScriptVersion: true,
     },
     env: {
-        'es6': true,
-        'jest/globals': true,
+        es6: true,
     },
     plugins: [
         '@typescript-eslint',
@@ -21,7 +20,6 @@ export = {
         'deprecation',
         'eslint-comments',
         'import',
-        'jest',
         'jest-formatting',
         'jsdoc',
         'node',
@@ -50,7 +48,6 @@ export = {
         './rules/import/helpful-warnings',
         './rules/import/module-systems',
         './rules/import/style-guide',
-        './rules/jest',
         './rules/jest-formatting',
         './rules/jsdoc',
         './rules/node/possible-errors',
@@ -101,9 +98,15 @@ export = {
         {
             // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
             files: ['*.spec.ts', '*.spec.tsx', '*.test.ts', '*.test.tsx'],
+            // TBD: Should environment be a part of the files overrides?
             env: {
-                jest: true,
+                'jest': true,
+                // TBD: Is the above option sufficient and can the below option be removed?
+                'jest/globals': true,
             },
+            extends: [
+                './rules/jest',
+            ],
             rules: {
                 '@typescript-eslint/ban-ts-comment': ['error', {
                     'ts-expect-error': 'allow-with-description',
