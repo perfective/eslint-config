@@ -20,7 +20,6 @@ export = {
         'deprecation',
         'eslint-comments',
         'import',
-        'jest-formatting',
         'jsdoc',
         'node',
         'prefer-arrow',
@@ -48,7 +47,6 @@ export = {
         './rules/import/helpful-warnings',
         './rules/import/module-systems',
         './rules/import/style-guide',
-        './rules/jest-formatting',
         './rules/jsdoc',
         './rules/node/possible-errors',
         './rules/node/best-practices',
@@ -106,6 +104,7 @@ export = {
             },
             extends: [
                 './rules/jest',
+                './rules/jest-formatting',
             ],
             rules: {
                 '@typescript-eslint/ban-ts-comment': ['error', {

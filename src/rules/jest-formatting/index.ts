@@ -1,4 +1,7 @@
 export = {
+    plugins: [
+        'jest-formatting',
+    ],
     rules: {
         'jest-formatting/padding-around-after-all-blocks': 'warn',
         'jest-formatting/padding-around-after-each-blocks': 'warn',
