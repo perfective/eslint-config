@@ -2,6 +2,12 @@ module.exports = {
     extends: ['./dist'],
     overrides: [
         {
+            files: ['*.js'],
+            rules: {
+                'unicorn/prevent-abbreviations': 'off',
+            },
+        },
+        {
             files: ['*.ts'],
             parserOptions: {
                 project: './tsconfig.json',
@@ -15,15 +21,15 @@ module.exports = {
             },
             rules: {
                 'unicorn/prevent-abbreviations': 'off',
-            }
+            },
         },
         {
             files: ['*.spec.ts'],
             settings: {
-                'jest': {
+                jest: {
                     version: 26,
                 },
             },
-        }
+        },
     ],
 };

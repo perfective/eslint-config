@@ -28,7 +28,7 @@
         "clean": "rimraf *.tsbuildinfo ./dist",
         "dist": "npm run build:clean && gulp",
         "lint": "npm run lint:eslint",
-        "lint:eslint": "npm run build && eslint --fix --ext .ts ./"
+        "lint:eslint": "npm run build && eslint --fix ./"
     },
     "peerDependencies": {
         "@typescript-eslint/eslint-plugin": "^4.12.0",

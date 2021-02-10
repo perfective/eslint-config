@@ -1,38 +1,76 @@
 export = {
     env: {
+        // Overrides only extend this environment, but not other overrides (unlike rules and plugins)
         es6: true,
     },
     ignorePatterns: ['**/*.d.ts', '**/dist'],
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
-            parser: '@typescript-eslint/parser',
+            files: ['*.js', '*.jsx'],
+            parser: 'babel-eslint',
             parserOptions: {
                 ecmaVersion: 6,
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                 },
-                project: './tsconfig.json',
                 sourceType: 'module',
-                warnOnUnsupportedTypeScriptVersion: true,
             },
             extends: [
                 './rules/eslint',
-                './rules/typescript-eslint',
-                './rules/typescript-eslint/tslint',
                 './rules/array-func',
-                './rules/deprecation',
                 './rules/eslint-comments',
                 './rules/import',
                 './rules/jsdoc',
                 './rules/node',
                 './rules/prefer-arrow',
                 './rules/promise',
-                './rules/rxjs',
                 './rules/simple-import-sort',
                 './rules/sonarjs',
                 './rules/unicorn',
+            ],
+            settings: {
+                'import/extensions': ['.js', '.jsx'],
+            },
+            rules: {
+                'import/no-commonjs': 'off',
+                'import/no-extraneous-dependencies': 'off',
+                'import/unambiguous': 'off',
+            },
+        },
+        {
+            files: ['*.ts', '*.tsx'],
+            parser: '@typescript-eslint/parser',
+            parserOptions: {
+                // Parser options have to be duplicated when the parser is overridden
+                ecmaVersion: 6,
+                ecmaFeatures: {
+                    globalReturn: false,
+                    impliedStrict: true,
+                },
+                sourceType: 'module',
+                // TypeScript ESLint Parser
+                project: './tsconfig.json',
+                warnOnUnsupportedTypeScriptVersion: true,
+            },
+            extends: [
+                // JavaScript rules
+                './rules/eslint',
+                './rules/array-func',
+                './rules/eslint-comments',
+                './rules/import',
+                './rules/jsdoc',
+                './rules/node',
+                './rules/prefer-arrow',
+                './rules/promise',
+                './rules/simple-import-sort',
+                './rules/sonarjs',
+                './rules/unicorn',
+                // TypeScript rules
+                './rules/typescript-eslint',
+                './rules/typescript-eslint/tslint',
+                './rules/deprecation',
+                './rules/rxjs',
             ],
             settings: {
                 'import/parsers': {
@@ -46,9 +84,6 @@ export = {
                         alwaysTryTypes: true,
                         project: './tsconfig.json',
                     },
-                },
-                'jsdoc': {
-                    mode: 'typescript',
                 },
             },
         },
