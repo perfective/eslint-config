@@ -70,7 +70,10 @@ npm install --save-dev \
 }
 ----
 +
-. Configure your `.eslintignore` file.
+. `*.d.ts` files and `dist` directories are ignored by the configuration.
+`node_modules` and dot-files are ignored by the `eslint`.
+If more directories or file-types need to be ignored, see the
+`link:https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file[.eslintignore]` file docs.
 
 
 == Community Configuration

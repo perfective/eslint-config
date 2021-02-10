@@ -2,7 +2,7 @@ export = {
     env: {
         es6: true,
     },
-    ignorePatterns: ['**/*.d.ts'],
+    ignorePatterns: ['**/*.d.ts', '**/dist'],
     overrides: [
         {
             files: ['*.ts', '*.tsx'],
