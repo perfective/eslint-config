@@ -2,6 +2,25 @@ export = {
     plugins: [
         'jsdoc',
     ],
+    settings: {
+        jsdoc: {
+            tagNamePreference: {
+                augments: {
+                    message: '@extends is to be used over @augments as it is more evocative of classes than @augments',
+                    replacement: 'extends',
+                },
+                todo: {
+                    message: 'Use TODO for comments',
+                },
+                fires: {
+                    replacement: 'emits',
+                },
+            },
+            overrideReplacesDocs: true,
+            augmentsExtendsReplacesDocs: false,
+            implementsReplacesDoc: false,
+        },
+    },
     rules: {
         // @access should be optional and used only to mark package/private functions
         'jsdoc/check-access': 'off',

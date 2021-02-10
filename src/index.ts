@@ -1,69 +1,57 @@
 export = {
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaVersion: 6,
-        ecmaFeatures: {
-            globalReturn: false,
-            impliedStrict: true,
-        },
-        project: './tsconfig.json',
-        sourceType: 'module',
-        warnOnUnsupportedTypeScriptVersion: true,
-    },
     env: {
         es6: true,
     },
-    extends: [
-        './rules/eslint',
-        './rules/typescript-eslint',
-        './rules/typescript-eslint/tslint',
-        './rules/array-func',
-        './rules/deprecation',
-        './rules/eslint-comments',
-        './rules/import',
-        './rules/jsdoc',
-        './rules/node',
-        './rules/prefer-arrow',
-        './rules/promise',
-        './rules/rxjs',
-        './rules/simple-import-sort',
-        './rules/sonarjs',
-        './rules/unicorn',
-    ],
-    settings: {
-        'import/parsers': {
-            '@typescript-eslint/parser': [
-                '.ts',
-                '.tsx',
-            ],
-        },
-        'import/resolver': {
-            typescript: {
-                alwaysTryTypes: true,
-                project: './tsconfig.json',
-            },
-        },
-        'jsdoc': {
-            mode: 'typescript',
-            tagNamePreference: {
-                augments: {
-                    message: '@extends is to be used over @augments as it is more evocative of classes than @augments',
-                    replacement: 'extends',
-                },
-                todo: {
-                    message: 'Use TODO for comments',
-                },
-                fires: {
-                    replacement: 'emits',
-                },
-            },
-            overrideReplacesDocs: true,
-            augmentsExtendsReplacesDocs: false,
-            implementsReplacesDoc: false,
-        },
-    },
     ignorePatterns: ['**/*.d.ts'],
     overrides: [
+        {
+            files: ['*.ts', '*.tsx'],
+            parser: '@typescript-eslint/parser',
+            parserOptions: {
+                ecmaVersion: 6,
+                ecmaFeatures: {
+                    globalReturn: false,
+                    impliedStrict: true,
+                },
+                project: './tsconfig.json',
+                sourceType: 'module',
+                warnOnUnsupportedTypeScriptVersion: true,
+            },
+            extends: [
+                './rules/eslint',
+                './rules/typescript-eslint',
+                './rules/typescript-eslint/tslint',
+                './rules/array-func',
+                './rules/deprecation',
+                './rules/eslint-comments',
+                './rules/import',
+                './rules/jsdoc',
+                './rules/node',
+                './rules/prefer-arrow',
+                './rules/promise',
+                './rules/rxjs',
+                './rules/simple-import-sort',
+                './rules/sonarjs',
+                './rules/unicorn',
+            ],
+            settings: {
+                'import/parsers': {
+                    '@typescript-eslint/parser': [
+                        '.ts',
+                        '.tsx',
+                    ],
+                },
+                'import/resolver': {
+                    typescript: {
+                        alwaysTryTypes: true,
+                        project: './tsconfig.json',
+                    },
+                },
+                'jsdoc': {
+                    mode: 'typescript',
+                },
+            },
+        },
         {
             // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
             files: ['*.spec.ts', '*.spec.tsx', '*.test.ts', '*.test.tsx'],
