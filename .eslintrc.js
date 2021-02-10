@@ -1,24 +1,29 @@
 module.exports = {
     extends: ['./dist'],
-    parserOptions: {
-        project: './tsconfig.json',
-    },
-    settings: {
-        'import/resolver': {
-            typescript: {
-                project: 'tsconfig.json',
-            },
-        },
-        'jest': {
-            version: 26,
-        },
-    },
     overrides: [
         {
             files: ['*.ts'],
+            parserOptions: {
+                project: './tsconfig.json',
+            },
+            settings: {
+                'import/resolver': {
+                    typescript: {
+                        project: 'tsconfig.json',
+                    },
+                },
+            },
             rules: {
                 'unicorn/prevent-abbreviations': 'off',
             }
+        },
+        {
+            files: ['*.spec.ts'],
+            settings: {
+                'jest': {
+                    version: 26,
+                },
+            },
         }
     ],
 };
