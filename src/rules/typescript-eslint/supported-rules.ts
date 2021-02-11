@@ -179,6 +179,7 @@ export = {
                 'tuple',
                 'intersection',
                 'union',
+                'nullish',
             ],
         }],
         '@typescript-eslint/strict-boolean-expressions': ['error', {

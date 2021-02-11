@@ -94,6 +94,11 @@ export = {
         }],
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
+        'object-curly-spacing': 'off',
+        '@typescript-eslint/object-curly-spacing': ['warn', 'always', {
+            arraysInObjects: true,
+            objectsInObjects: true,
+        }],
         'quotes': 'off',
         '@typescript-eslint/quotes': ['warn', 'single', {
             avoidEscape: true,
