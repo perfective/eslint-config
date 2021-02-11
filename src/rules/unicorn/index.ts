@@ -9,6 +9,7 @@ export = {
         'unicorn/no-array-reduce': 'off', // == no-reduce
         'unicorn/better-regex': 'warn',
         'unicorn/catch-error-name': 'warn',
+        'unicorn/consistent-destructuring': 'warn',
         'unicorn/consistent-function-scoping': ['error', {
             checkArrowFunctions: true,
         }],
@@ -25,6 +26,8 @@ export = {
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/no-array-for-each': 'off',
+        'unicorn/no-array-push-push': 'off',
         'unicorn/no-console-spaces': 'warn',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
@@ -36,11 +39,13 @@ export = {
         }],
         'unicorn/no-lonely-if': 'warn',
         'unicorn/no-nested-ternary': 'off',
+        'unicorn/no-new-array': 'warn',
         'unicorn/no-new-buffer': 'warn',
         // TODO: Consider enabling this rule to promote using Just/Nothing
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'error',
         'unicorn/no-process-exit': 'error',
+        'unicorn/no-this-assignment': 'error',
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unsafe-regex': 'error',
         'unicorn/no-unused-properties': 'off',
@@ -77,6 +82,7 @@ export = {
         'unicorn/prefer-dom-node-remove': 'warn', // == prefer-node-remove
         'unicorn/prefer-dom-node-text-content': 'warn', // == prefer-text-content
         'unicorn/prefer-includes': 'warn',
+        'unicorn/prefer-array-index-of': 'warn',
         'unicorn/prefer-keyboard-event-key': 'warn', // == prefer-event-key
         'unicorn/prefer-math-trunc': 'warn',
         'unicorn/prefer-modern-dom-apis': 'warn',
@@ -86,6 +92,8 @@ export = {
         }],
         'unicorn/prefer-optional-catch-binding': 'warn',
         'unicorn/prefer-query-selector': 'warn',
+        // TBD: Conflicts with @typescript-eslint/prefer-regexp-exec
+        'unicorn/prefer-regexp-test': 'off',
         'unicorn/prefer-reflect-apply': 'warn',
         'unicorn/prefer-set-has': 'warn',
         // Autofix does not always work correctly
