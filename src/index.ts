@@ -115,5 +115,22 @@ export = {
                 'rxjs/no-topromise': 'off',
             },
         },
+        {
+            // Arbitrary choice for Cypress file extensions
+            files: ['*.e2e.ts', '*.cy.ts', '*.e2e.js', '*.cy.js'],
+            env: {
+                'cypress/globals': true,
+            },
+            extends: [
+                './rules/cypress',
+            ],
+            rules: {
+                '@typescript-eslint/init-declarations': 'off',
+                'arrow-body-style': ['error', 'as-needed'],
+                'max-nested-callbacks': ['error', 4],
+                // Each "describe" or "it" is counted as a separated statement
+                'max-statements': 'off',
+            },
+        },
     ],
 };

@@ -11,6 +11,7 @@ and the [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-e
 `@perfective/eslint-config` configures:
 
 * [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
+* [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress);
 * [`eslint-plugin-deprecation`](https://github.com/gund/eslint-plugin-deprecation);
 * [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments);
 * [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import);
@@ -44,6 +45,7 @@ npm install --save-dev \
     eslint \
     eslint-import-resolver-typescript \
     eslint-plugin-array-func \
+    eslint-plugin-cypress \
     eslint-plugin-deprecation \
     eslint-plugin-eslint-comments \
     eslint-plugin-import \
