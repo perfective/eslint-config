@@ -98,6 +98,7 @@ export = {
             },
             extends: [
                 './rules/jest',
+                './rules/jest-dom',
                 './rules/jest-formatting',
             ],
             rules: {

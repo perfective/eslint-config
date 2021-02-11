@@ -15,6 +15,7 @@ and the `link:https://github.com/typescript-eslint/typescript-eslint/tree/master
 * `link:https://mysticatea.github.io/eslint-plugin-eslint-comments[eslint-plugin-eslint-comments]`;
 * `link:https://github.com/benmosher/eslint-plugin-import[eslint-plugin-import]`;
 * `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]`;
+* `link:https://github.com/testing-library/eslint-plugin-jest-dom[eslint-plugin-jest-dom]`;
 * `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting[eslint-plugin-jest-formatting]`;
 * `link:https://github.com/gajus/eslint-plugin-jsdoc[eslint-plugin-jsdoc]`;
 * `link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]`;
@@ -49,6 +50,7 @@ npm install --save-dev \
     eslint-plugin-eslint-comments \
     eslint-plugin-import \
     eslint-plugin-jest \
+    eslint-plugin-jest-dom \
     eslint-plugin-jest-formatting \
     eslint-plugin-jsdoc \
     eslint-plugin-node \

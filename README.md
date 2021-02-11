@@ -15,6 +15,7 @@ and the [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-e
 * [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments);
 * [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import);
 * [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest);
+* [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom);
 * [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting);
 * [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
 * [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node);
@@ -46,6 +47,7 @@ npm install --save-dev \
     eslint-plugin-eslint-comments \
     eslint-plugin-import \
     eslint-plugin-jest \
+    eslint-plugin-jest-dom \
     eslint-plugin-jest-formatting \
     eslint-plugin-jsdoc \
     eslint-plugin-node \
