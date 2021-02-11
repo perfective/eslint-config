@@ -34,7 +34,10 @@ export = {
             allowExtraTrailingParamDocs: false,
             checkDestructured: true,
             checkRestProperty: false,
+            disableExtraPropertyReporting: false,
             enableFixer: true,
+            // TBD
+            useDefaultObjectProperties: false,
         }],
         'jsdoc/check-property-names': ['error', {
             enableFixer: true,
@@ -83,6 +86,8 @@ export = {
         // Conflicts with jsdoc/no-types: types are defined in the TypeScript code.
         'jsdoc/require-returns-type': 'off',
         'jsdoc/require-throws': 'error',
+        'jsdoc/require-yields': 'error',
+        'jsdoc/require-yields-check': 'error',
         'jsdoc/valid-types': 'error',
     },
 };
