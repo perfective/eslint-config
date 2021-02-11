@@ -100,6 +100,7 @@ export = {
                 './rules/jest',
                 './rules/jest-dom',
                 './rules/jest-formatting',
+                './rules/testing-library',
             ],
             rules: {
                 '@typescript-eslint/ban-ts-comment': ['error', {

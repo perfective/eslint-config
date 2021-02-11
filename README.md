@@ -24,6 +24,7 @@ and the [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-e
 * [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs);
 * [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
 * [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
+* [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library);
 * [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn).
 
 To simplify configuring ESLint support in the IDEs and editors,
@@ -56,6 +57,7 @@ npm install --save-dev \
     eslint-plugin-rxjs \
     eslint-plugin-simple-import-sort \
     eslint-plugin-sonarjs \
+    eslint-plugin-testing-library \
     eslint-plugin-unicorn \
     tslint
 ```
