@@ -1,5 +1,27 @@
 = Changelog
 
+== v0.12.0 (next)
+
+* Split configuration based on file extensions:
+** Added support of JS files using `babel-eslint` parser (except Jest files);
+** Added support of both `.test.ts(x)` files for Jest;
+** `eslint-plugin-jest` and `eslint-plugin-jest-formatting` are loaded only for Jest files;
+** `dist` directories are excluded by the config.
+* Added plugins:
+** `eslint-plugin-jest-dom` `3.6.5`;
+** `eslint-plugin-testing-library` `3.10.1`;
+** `eslint-plugin-cypress` `2.11.2`.
+* Updated plugins:
+** `eslint` to `7.19.0`;
+** `@typescript-eslint` to `4.15.0`;
+** `eslint-plugin-unicorn` to `28.0.0`;
+** `eslint-plugin-jsdoc` to `31.6.1`;
+** `eslint-plugin-jest-formatting` to `2.0.1`;
+** `eslint-plugin-prefer-arrow` to `1.2.3`;
+** `eslint-plugin-promise` to `4.3.1`;
+** `eslint-plugin-rxjs` to `3.0.1`.
+
+
 == v0.11.1
 
 * Exported `UnicornPreventAbbreviationReplacements`.
