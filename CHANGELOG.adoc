@@ -17,6 +17,7 @@
 * Disabled rules:
 ** `max-statements`;
 ** `newline-per-chained-call`;
+** `prefer-arrow/prefer-arrow-functions` (in Jest tests only);
 ** `promise/always-return` (in tests only);
 ** `sonarjs/cognitive-complexity`;
 ** `unicorn/no-keyword-prefix`;
