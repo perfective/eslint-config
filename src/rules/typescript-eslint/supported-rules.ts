@@ -87,7 +87,12 @@ export = {
             ignoreRestArgs: false,
         }],
         '@typescript-eslint/no-extra-non-null-assertion': 'warn',
-        '@typescript-eslint/no-extraneous-class': 'error',
+        '@typescript-eslint/no-extraneous-class': ['error', {
+            allowConstructorOnly: false,
+            allowEmpty: false,
+            allowStaticOnly: false,
+            allowWithDecorator: true,
+        }],
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-implicit-any-catch': ['error', {
