@@ -18,7 +18,10 @@ export = {
         'no-empty-character-class': 'error',
         'no-ex-assign': 'error',
         'no-extra-boolean-cast': 'warn',
-        'no-extra-parens': 'warn',
+        'no-extra-parens': ['warn', 'all', {
+            // Nested binary expressions may be hard to break down into named functions
+            nestedBinaryExpressions: false,
+        }],
         'no-extra-semi': 'warn',
         'no-func-assign': 'error',
         'no-import-assign': 'error',

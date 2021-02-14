@@ -11,8 +11,6 @@ export = {
             files: ['*.ts', '*.tsx'],
             rules: {
                 ...jsCommunityOverrides(),
-                // Conflicts with "no-confusing-arrow" { allowParens: true }
-                '@typescript-eslint/no-extra-parens': 'off',
                 '@typescript-eslint/triple-slash-reference': ['error', {
                     path: 'never',
                     types: 'always',

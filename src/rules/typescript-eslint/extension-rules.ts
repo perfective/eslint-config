@@ -60,7 +60,9 @@ export = {
             allow: ['protected-constructors', 'private-constructors'],
         }],
         'no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-parens': 'warn',
+        '@typescript-eslint/no-extra-parens': ['warn', 'all', {
+            nestedBinaryExpressions: false,
+        }],
         'no-extra-semi': 'off',
         '@typescript-eslint/no-extra-semi': 'warn',
         'no-loss-of-precision': 'off',
