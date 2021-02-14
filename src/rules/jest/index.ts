@@ -11,7 +11,10 @@ export = {
         'jest/expect-expect': ['error', {
             assertFunctionNames: ['expect', 'request.*.expect'],
         }],
-        'jest/lowercase-name': 'warn',
+        // Allow uppercase in describe() as it can be used for the class name in PascalCase
+        'jest/lowercase-name': ['error', {
+            ignore: ['describe'],
+        }],
         'jest/no-alias-methods': 'warn',
         'jest/no-commented-out-tests': 'error',
         'jest/no-conditional-expect': 'error',

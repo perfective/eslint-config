@@ -31,12 +31,7 @@ export = {
         },
         {
             files: ['*.spec.ts', '*.spec.tsx', '*.test.ts', '*.test.tsx'],
-            rules: {
-                // Allow uppercase in describe() as it can be used for the class name in PascalCase
-                'jest/lowercase-name': ['error', {
-                    ignore: ['describe'],
-                }],
-            },
+            rules: {},
         },
     ],
 };
