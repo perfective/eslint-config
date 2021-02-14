@@ -13,11 +13,6 @@ export = {
                 ...jsCommunityOverrides(),
                 // Conflicts with "no-confusing-arrow" { allowParens: true }
                 '@typescript-eslint/no-extra-parens': 'off',
-                // Arrow functions should be used only as parameters,
-                // so `async` keywords can be skipped for brevity.
-                '@typescript-eslint/promise-function-async': ['warn', {
-                    checkArrowFunctions: false,
-                }],
                 '@typescript-eslint/triple-slash-reference': ['error', {
                     path: 'never',
                     types: 'always',

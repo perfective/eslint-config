@@ -151,7 +151,14 @@ export = {
         '@typescript-eslint/prefer-regexp-exec': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
-        '@typescript-eslint/promise-function-async': 'warn',
+        // With the "func-style" as "declaration",
+        // arrow functions can only be lambdas,
+        // so `async` keywords can be skipped for brevity.
+        // NOTE: if "func-style" as "expression",
+        //  not checking arrow functions causes "require-await" to miss async functions.
+        '@typescript-eslint/promise-function-async': ['warn', {
+            checkArrowFunctions: false,
+        }],
         '@typescript-eslint/require-array-sort-compare': ['error', {
             ignoreStringArrays: true,
         }],
