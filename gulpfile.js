@@ -1,9 +1,10 @@
-const { dest, series, src } = require('gulp');
-const jsonEditor = require('gulp-json-editor');
+const gulp = require('gulp');
+const gulpJsonEditor = require('gulp-json-editor');
 
 function copyPackageJson() {
-    return src('./package.json')
-        .pipe(jsonEditor({
+    return gulp
+        .src('./package.json')
+        .pipe(gulpJsonEditor({
             main: './index.js',
             directories: {
                 lib: './',
@@ -14,24 +15,30 @@ function copyPackageJson() {
                 'rules/**/rules/*.d.ts',
             ],
         }))
-        .pipe(dest('./dist/'));
+        .pipe(
+            gulp.dest('./dist/'),
+        );
 }
 
 exports.copyPackageJson = copyPackageJson;
 
 function copyStaticFiles() {
-    return src([
-        './LICENSE',
-        './CHANGELOG.adoc',
-        './README.adoc',
-        './README.md',
-        './src/**/package.json',
-    ]).pipe(dest('./dist/'));
+    return gulp
+        .src([
+            './LICENSE',
+            './CHANGELOG.adoc',
+            './README.adoc',
+            './README.md',
+            './src/**/package.json',
+        ])
+        .pipe(
+            gulp.dest('./dist/'),
+        );
 }
 
 exports.copyStaticFiles = copyStaticFiles;
 
-exports.default = series(
+exports.default = gulp.series(
     copyPackageJson,
     copyStaticFiles,
 );
