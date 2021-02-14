@@ -23,6 +23,7 @@ export = {
             ignoreJSX: 'all',
             // Nested binary expressions may be hard to break down into named functions
             nestedBinaryExpressions: false,
+            enforceForArrowConditionals: true,
         }],
         'no-extra-semi': 'warn',
         'no-func-assign': 'error',
