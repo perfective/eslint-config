@@ -123,6 +123,8 @@ export = {
                     peerDependencies: false,
                 }],
                 'max-nested-callbacks': ['error', 4],
+                // Conflicts with func-style inside describe()
+                'prefer-arrow/prefer-arrow-functions': 'off',
                 // In tests the last step of a Promise is to run "expect".
                 // TODO: This rule can be improved by allowing configuring functions when Promise<void> is expected.
                 'promise/always-return': 'off',
