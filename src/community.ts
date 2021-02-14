@@ -46,7 +46,5 @@ function jsCommunityOverrides(): Record<string, unknown> {
         'object-property-newline': ['error', {
             allowAllPropertiesOnSameLine: true,
         }],
-        // Requires research on level of effort in writing safer regular expressions
-        'unicorn/no-unsafe-regex': 'off',
     };
 }
