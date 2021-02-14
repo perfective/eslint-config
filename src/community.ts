@@ -82,7 +82,6 @@ function jsCommunityOverrides(): Record<string, unknown> {
         'object-property-newline': ['error', {
             allowAllPropertiesOnSameLine: true,
         }],
-        'sonarjs/cognitive-complexity': 'off',
         'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations({}, {
             // Do not check for properties on external types
             checkProperties: false,

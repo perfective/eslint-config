@@ -1,6 +1,7 @@
 export = {
     rules: {
-        'sonarjs/cognitive-complexity': ['error', 5],
+        // Regular complexity with strict settings limit function complexity
+        'sonarjs/cognitive-complexity': ['off', 5],
         // This rule should be based on exhaustiveness, not count
         'sonarjs/max-switch-cases': 'off',
         'sonarjs/no-collapsible-if': 'error',
