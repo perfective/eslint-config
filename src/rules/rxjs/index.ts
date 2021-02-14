@@ -13,6 +13,7 @@ export = {
             names: {},
             parameters: true,
             properties: true,
+            strict: true,
             types: {},
             variables: true,
         }],
