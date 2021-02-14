@@ -67,8 +67,6 @@ function jsCommunityOverrides(): Record<string, unknown> {
         'function-paren-newline': ['error', 'multiline-arguments'],
         'max-params': 'off',
         'max-statements': 'off',
-        // Conflicts with decorators
-        'new-cap': 'off',
         'newline-per-chained-call': 'off',
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         // Traditionally is used to avoid conflicts between property and method name
