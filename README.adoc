@@ -81,22 +81,6 @@ npm install --save-dev \
 If more directories or file-types need to be ignored, see the
 `link:https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file[.eslintignore]` file docs.
 
-
-== Community Configuration
-
-As the default config may seem too strict,
-the package also provides a slightly relaxed `community` configuration.
-Some settings used in the `community` config may be eventually migrated into the default config.
-
-.Using community config in the `.eslintrc.json`.
-[source,json]
-----
-{
-    "extends": ["@perfective/eslint-config/community"]
-}
-----
-
-
 == Rules Configuration Extension Functions
 
 Some rules have complex configuration objects or arrays
