@@ -139,8 +139,12 @@ export = {
             },
         },
         {
-            // Arbitrary choice for Cypress file extensions
-            files: ['*.e2e.ts', '*.cy.ts', '*.e2e.js', '*.cy.js'],
+            // The /cypress directory is used in the Cypress docs:
+            //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
+            // Integrations for Cypress are shown with ".spec.js",
+            //  but that would conflict with Jest configuration above,
+            //  so skipping them until it's possible to add directory configuration for Jest rules.
+            files: ['cypress/**/*.js', 'cypress/**/*.ts'],
             env: {
                 'cypress/globals': true,
             },
@@ -148,14 +152,18 @@ export = {
                 './rules/cypress',
             ],
             rules: {
+                // Tests may declare variables that are set only by beforeEach/beforeAll functions.
+                'init-declarations': 'off',
                 '@typescript-eslint/init-declarations': 'off',
                 'import/no-extraneous-dependencies': ['error', {
-                    // TODO: This list should be extracted into a function to allow overrides
-                    devDependencies: ['**/*.e2e.ts', '**/*.cy.ts', '**/*.e2e.js', '**/*.cy.js'],
+                    devDependencies: ['cypress/**/*.js', 'cypress/**/*.ts'],
                     optionalDependencies: false,
                     peerDependencies: false,
                 }],
                 'max-nested-callbacks': ['error', 4],
+                'new-cap': ['error', {
+                    capIsNewExceptions: ['Given', 'When', 'Then'],
+                }],
             },
         },
     ],
