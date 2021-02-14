@@ -103,7 +103,10 @@ export = {
             properties: true,
         }],
         'new-parens': 'warn',
-        'newline-per-chained-call': ['warn', {
+        // As long as the line is under the length limit, it should be ok to have any number of calls.
+        // The real challenge is to enforce a new line in custom situations, e.g. before ".pipe()" or ".then()".
+        // Especially this is a problem in TypeScript, where indents do not work properly all the time (yet).
+        'newline-per-chained-call': ['off', {
             ignoreChainWithDepth: 3,
         }],
         'no-array-constructor': 'error',
