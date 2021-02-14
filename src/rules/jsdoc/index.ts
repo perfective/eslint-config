@@ -64,7 +64,7 @@ export = {
         'jsdoc/no-types': 'error',
         'jsdoc/no-undefined-types': 'error',
         'jsdoc/require-description': ['error', {
-            exemptedBy: ['inheritdoc', 'package', 'private'],
+            exemptedBy: ['inheritdoc', 'package', 'private', 'see'],
         }],
         'jsdoc/require-description-complete-sentence': 'error',
         'jsdoc/require-example': 'off',
