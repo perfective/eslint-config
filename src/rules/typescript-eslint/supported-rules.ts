@@ -208,7 +208,7 @@ export = {
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
         '@typescript-eslint/triple-slash-reference': ['error', {
             path: 'never',
-            types: 'never',
+            types: 'always',
             lib: 'never',
         }],
         '@typescript-eslint/type-annotation-spacing': 'warn',

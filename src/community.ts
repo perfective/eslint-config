@@ -9,11 +9,6 @@ export = {
             files: ['*.ts', '*.tsx'],
             rules: {
                 ...jsCommunityOverrides(),
-                '@typescript-eslint/triple-slash-reference': ['error', {
-                    path: 'never',
-                    types: 'always',
-                    lib: 'never',
-                }],
             },
         },
         {
