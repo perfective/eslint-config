@@ -159,11 +159,13 @@ export = {
         'no-unneeded-ternary': 'warn',
         'no-whitespace-before-property': 'warn',
         'nonblock-statement-body-position': ['warn', 'below'],
+        // For imports and exports this rule may conflict with the "max-len" rule:
+        //  it is possible to have an import or export declaration that is too long.
         'object-curly-newline': ['warn', {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             ImportDeclaration: { multiline: true },
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
-            ExportDeclaration: 'always',
+            ExportDeclaration: { multiline: true },
         }],
         'object-curly-spacing': ['warn', 'always', {
             arraysInObjects: true,
