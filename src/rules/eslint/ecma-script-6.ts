@@ -1,6 +1,11 @@
 export = {
     rules: {
-        'arrow-body-style': ['warn', 'never'],
+        // The "never" setting is great to prevent nested callbacks,
+        // but it can be addressed by other rules.
+        // At the same time this rule does not handle high-order functions,
+        // where whole body of the function is in the arrow function.
+        // The same problem is with the test files, where this rule is always disabled.
+        'arrow-body-style': ['error', 'as-needed'],
         'arrow-parens': ['warn', 'as-needed'],
         'arrow-spacing': ['warn', {
             before: true,

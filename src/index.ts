@@ -116,7 +116,6 @@ export = {
                     'ts-expect-error': 'allow-with-description',
                 }],
                 '@typescript-eslint/init-declarations': 'off',
-                'arrow-body-style': ['error', 'as-needed'],
                 'max-nested-callbacks': ['error', 4],
                 // Passing promise is required for async testing
                 'rxjs/no-topromise': 'off',
@@ -133,7 +132,6 @@ export = {
             ],
             rules: {
                 '@typescript-eslint/init-declarations': 'off',
-                'arrow-body-style': ['error', 'as-needed'],
                 'max-nested-callbacks': ['error', 4],
             },
         },

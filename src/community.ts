@@ -63,7 +63,6 @@ export = {
 
 function jsCommunityOverrides(): Record<string, unknown> {
     return {
-        'arrow-body-style': ['error', 'as-needed'],
         'function-paren-newline': ['error', 'multiline-arguments'],
         'max-params': 'off',
         'newline-per-chained-call': 'off',
