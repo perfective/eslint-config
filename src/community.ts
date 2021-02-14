@@ -26,8 +26,5 @@ function jsCommunityOverrides(): Record<string, unknown> {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             ExportDeclaration: { multiline: true },
         }],
-        'object-property-newline': ['error', {
-            allowAllPropertiesOnSameLine: true,
-        }],
     };
 }

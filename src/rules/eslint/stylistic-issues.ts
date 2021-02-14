@@ -170,7 +170,12 @@ export = {
             objectsInObjects: true,
         }],
         'object-property-newline': ['warn', {
-            allowAllPropertiesOnSameLine: false,
+            // In some cases, like object spread, or "re-structuring",
+            // having properties on the same line is more readable
+            // (e.g. it allows to see the whole object in the search/grep).
+            // TODO: This rule can be improved if it can require consistency
+            //  and limit inlined properties only to basic expressions (no function calls, ternaries, etc.)
+            allowAllPropertiesOnSameLine: true,
         }],
         'one-var': ['warn', 'never'],
         'one-var-declaration-per-line': ['warn', 'always'],
