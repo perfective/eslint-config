@@ -27,8 +27,6 @@ export = {
                     variableDeclaration: false,
                     variableDeclarationIgnoreFunction: false,
                 }],
-                // Undesired behavior in functions like forkJoin
-                'rxjs/finnish': 'off',
             },
         },
         {
