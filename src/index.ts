@@ -82,12 +82,6 @@ export = {
                 './rules/rxjs',
             ],
             settings: {
-                'spaced-comment': ['error', 'always', {
-                    line: {
-                        // Compatibility with "@typescript-eslint/triple-slash-reference"
-                        markers: ['/ <reference'],
-                    },
-                }],
                 'import/parsers': {
                     '@typescript-eslint/parser': [
                         '.ts',

@@ -224,7 +224,12 @@ export = {
             words: true,
             nonwords: false,
         }],
-        'spaced-comment': ['warn', 'always'],
+        'spaced-comment': ['warn', 'always', {
+            line: {
+                // Compatibility with "@typescript-eslint/triple-slash-reference"
+                markers: ['/ <reference'],
+            },
+        }],
         'switch-colon-spacing': ['warn', {
             after: true,
             before: false,
