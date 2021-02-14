@@ -4,7 +4,6 @@ export = {
     ],
     rules: {
         'jest/consistent-test-it': ['warn', {
-            // eslint-disable-next-line unicorn/prevent-abbreviations -- configuration property
             fn: 'test',
             withinDescribe: 'it',
         }],

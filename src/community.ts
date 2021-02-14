@@ -1,5 +1,3 @@
-import { unicornPreventAbbreviations } from './rules/unicorn/rules/prevent-abbreviations';
-
 export = {
     extends: './',
     overrides: [
@@ -48,10 +46,6 @@ function jsCommunityOverrides(): Record<string, unknown> {
         'object-property-newline': ['error', {
             allowAllPropertiesOnSameLine: true,
         }],
-        'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations({}, {
-            // Do not check for properties on external types
-            checkProperties: false,
-        })],
         // Requires research on level of effort in writing safer regular expressions
         'unicorn/no-unsafe-regex': 'off',
     };

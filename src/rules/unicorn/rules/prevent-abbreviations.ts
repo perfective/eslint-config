@@ -49,7 +49,9 @@ export function unicornPreventAbbreviations(
         checkDefaultAndNamespaceImports: 'internal',
         checkShorthandImports: 'internal',
         checkShorthandProperties: false,
-        checkProperties: true,
+        // This rule checks properties even on external types.
+        // If it's once fixed, it should be enabled.
+        checkProperties: false,
         checkVariables: true,
         checkFilenames: true,
         ...options,
