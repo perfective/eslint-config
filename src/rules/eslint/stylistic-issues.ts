@@ -85,7 +85,9 @@ export = {
         'max-lines': 'off',
         'max-lines-per-function': 'off',
         'max-nested-callbacks': ['error', 2],
-        'max-params': ['error', {
+        // TODO: This rule does not allow to separate functions and constructors.
+        //  Constructors may have properties declarations, making it impossible to limit parameters count.
+        'max-params': ['off', {
             max: 3,
         }],
         // Checking for function complexity is enough, while this rule is overridden for test files anyway

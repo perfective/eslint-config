@@ -20,7 +20,6 @@ export = {
 
 function jsCommunityOverrides(): Record<string, unknown> {
     return {
-        'max-params': 'off',
         'object-curly-newline': ['error', {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             ImportDeclaration: { multiline: true },
