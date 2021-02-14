@@ -14,17 +14,6 @@ export = {
                     types: 'always',
                     lib: 'never',
                 }],
-                // Using the established defaults in typescript-eslint v3.x
-                '@typescript-eslint/typedef': ['error', {
-                    arrayDestructuring: false,
-                    arrowParameter: false,
-                    memberVariableDeclaration: true,
-                    objectDestructuring: false,
-                    parameter: true,
-                    propertyDeclaration: true,
-                    variableDeclaration: false,
-                    variableDeclarationIgnoreFunction: false,
-                }],
             },
         },
         {
