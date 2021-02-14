@@ -16,7 +16,6 @@ export = {
         }],
         'no-use-before-define': ['error', {
             functions: false,
-            // eslint-disable-next-line unicorn/no-keyword-prefix -- option name
             classes: false,
         }],
     },

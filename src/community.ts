@@ -85,11 +85,6 @@ function jsCommunityOverrides(): Record<string, unknown> {
             allowAllPropertiesOnSameLine: true,
         }],
         'sonarjs/cognitive-complexity': 'off',
-        'unicorn/no-keyword-prefix': ['error', {
-            blacklist: ['class'],
-            checkProperties: true,
-            onlyCamelCase: false,
-        }],
         'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations({}, {
             // Do not check for properties on external types
             checkProperties: false,
