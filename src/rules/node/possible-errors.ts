@@ -10,7 +10,8 @@ export = {
         'node/no-missing-require': 'off',
         'node/no-new-require': 'error',
         'node/no-path-concat': 'error',
-        'node/no-process-exit': 'error',
+        // "unicorn/no-process-exit" is more flexible
+        'node/no-process-exit': 'off',
         'node/no-unpublished-bin': 'error',
         'node/no-unpublished-import': 'error',
         'node/no-unpublished-require': 'error',
