@@ -139,7 +139,9 @@ export = {
         'no-negated-condition': 'error',
         'no-nested-ternary': 'error',
         'no-new-object': 'error',
-        'no-plusplus': 'error',
+        // Using i++ in the for() loops is a classic pattern.
+        // Rather disallow using loops at all and use filter/map/reduce instead.
+        'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-restricted-syntax': ['error', 'ForInStatement'],
         'no-tabs': 'error',
         'no-ternary': 'off',

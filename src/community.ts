@@ -44,7 +44,6 @@ export = {
 function jsCommunityOverrides(): Record<string, unknown> {
     return {
         'max-params': 'off',
-        'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         // Traditionally is used to avoid conflicts between property and method name
         'no-underscore-dangle': ['error', {
             allowFunctionParams: true,
