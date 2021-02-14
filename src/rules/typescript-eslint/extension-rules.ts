@@ -61,6 +61,9 @@ export = {
         }],
         'no-extra-parens': 'off',
         '@typescript-eslint/no-extra-parens': ['warn', 'all', {
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external property
+            ignoreJSX: 'all',
+            // Nested binary expressions may be hard to break down into named functions
             nestedBinaryExpressions: false,
         }],
         'no-extra-semi': 'off',
