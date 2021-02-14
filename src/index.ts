@@ -122,6 +122,12 @@ export = {
                     optionalDependencies: false,
                     peerDependencies: false,
                 }],
+                'import/no-unassigned-import': ['error', {
+                    allow: [
+                        '@testing-library/jest-dom',
+                        '@testing-library/jest-dom/extend-expect',
+                    ],
+                }],
                 'max-nested-callbacks': ['error', 4],
                 // Conflicts with func-style inside describe()
                 'prefer-arrow/prefer-arrow-functions': 'off',
