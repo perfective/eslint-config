@@ -39,10 +39,6 @@ export = {
 function jsCommunityOverrides(): Record<string, unknown> {
     return {
         'max-params': 'off',
-        // Traditionally is used to avoid conflicts between property and method name
-        'no-underscore-dangle': ['error', {
-            allowFunctionParams: true,
-        }],
         'object-curly-newline': ['error', {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             ImportDeclaration: { multiline: true },

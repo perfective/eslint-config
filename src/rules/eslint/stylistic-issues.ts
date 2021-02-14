@@ -146,8 +146,13 @@ export = {
         'no-tabs': 'error',
         'no-ternary': 'off',
         'no-trailing-spaces': 'warn',
+        // Allow underscore prefix for unused parameters
         'no-underscore-dangle': ['error', {
-            allowFunctionParams: false,
+            allowAfterThis: false,
+            allowAfterSuper: false,
+            allowAfterThisConstructor: false,
+            enforceInMethodNames: true,
+            allowFunctionParams: true,
         }],
         'no-unneeded-ternary': 'warn',
         'no-whitespace-before-property': 'warn',
