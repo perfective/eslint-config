@@ -34,7 +34,16 @@ export = {
             },
             rules: {
                 'import/no-commonjs': 'off',
-                'import/no-extraneous-dependencies': 'off',
+                'import/no-extraneous-dependencies': ['error', {
+                    // TODO: This list should be extracted into a function to allow overrides
+                    devDependencies: [
+                        '**/.*.js',
+                        '**/*.config.js',
+                        '**/gulpfile.js',
+                    ],
+                    optionalDependencies: false,
+                    peerDependencies: false,
+                }],
                 'import/unambiguous': 'off',
             },
         },
