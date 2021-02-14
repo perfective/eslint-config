@@ -122,6 +122,12 @@ export = {
                     'ts-expect-error': 'allow-with-description',
                 }],
                 '@typescript-eslint/init-declarations': 'off',
+                'import/no-extraneous-dependencies': ['error', {
+                    // TODO: This list should be extracted into a function to allow overrides
+                    devDependencies: ['**/*.spec.ts', '**/*.spec.tsx', '**/*.test.ts', '**/*.test.tsx'],
+                    optionalDependencies: false,
+                    peerDependencies: false,
+                }],
                 'max-nested-callbacks': ['error', 4],
                 // Passing promise is required for async testing
                 'rxjs/no-topromise': 'off',
@@ -138,6 +144,12 @@ export = {
             ],
             rules: {
                 '@typescript-eslint/init-declarations': 'off',
+                'import/no-extraneous-dependencies': ['error', {
+                    // TODO: This list should be extracted into a function to allow overrides
+                    devDependencies: ['**/*.e2e.ts', '**/*.cy.ts', '**/*.e2e.js', '**/*.cy.js'],
+                    optionalDependencies: false,
+                    peerDependencies: false,
+                }],
                 'max-nested-callbacks': ['error', 4],
             },
         },
