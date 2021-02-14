@@ -66,7 +66,6 @@ function jsCommunityOverrides(): Record<string, unknown> {
         'arrow-body-style': ['error', 'as-needed'],
         'function-paren-newline': ['error', 'multiline-arguments'],
         'max-params': 'off',
-        'max-statements': 'off',
         'newline-per-chained-call': 'off',
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         // Traditionally is used to avoid conflicts between property and method name

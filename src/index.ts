@@ -118,8 +118,6 @@ export = {
                 '@typescript-eslint/init-declarations': 'off',
                 'arrow-body-style': ['error', 'as-needed'],
                 'max-nested-callbacks': ['error', 4],
-                // Each "describe" or "it" is counted as a separated statement
-                'max-statements': 'off',
                 // Passing promise is required for async testing
                 'rxjs/no-topromise': 'off',
             },
@@ -137,8 +135,6 @@ export = {
                 '@typescript-eslint/init-declarations': 'off',
                 'arrow-body-style': ['error', 'as-needed'],
                 'max-nested-callbacks': ['error', 4],
-                // Each "describe" or "it" is counted as a separated statement
-                'max-statements': 'off',
             },
         },
     ],

@@ -88,7 +88,8 @@ export = {
         'max-params': ['error', {
             max: 3,
         }],
-        'max-statements': ['error', {
+        // Checking for function complexity is enough, while this rule is overridden for test files anyway
+        'max-statements': ['off', {
             max: 10,
         }],
         'max-statements-per-line': ['error', {
