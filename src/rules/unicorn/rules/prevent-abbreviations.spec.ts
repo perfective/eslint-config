@@ -1,5 +1,6 @@
 import { UnicornPreventAbbreviations, unicornPreventAbbreviations } from './prevent-abbreviations';
 
+/* eslint-disable unicorn/prevent-abbreviations -- testing abbreviations */
 describe(unicornPreventAbbreviations, () => {
     it('creates a configuration for the unicorn/prevent-abbreviations rule', () => {
         expect(unicornPreventAbbreviations())
@@ -12,12 +13,18 @@ describe(unicornPreventAbbreviations, () => {
                 checkFilenames: true,
                 extendDefaultReplacements: true,
                 replacements: {
+                    arg: false,
                     args: false,
                     db: false,
+                    doc: false,
+                    docs: false,
                     e2e: false,
                     env: false,
                     i: false,
                     j: false,
+                    lib: false,
+                    libs: false,
+                    param: false,
                     params: false,
                 },
                 extendDefaultWhitelist: true,
@@ -44,12 +51,18 @@ describe(unicornPreventAbbreviations, () => {
                 checkFilenames: true,
                 extendDefaultReplacements: true,
                 replacements: {
+                    arg: false,
                     args: false,
                     db: false,
+                    doc: false,
+                    docs: false,
                     e2e: false,
                     env: false,
                     i: false,
                     j: false,
+                    lib: false,
+                    libs: false,
+                    param: false,
                     params: false,
                     props: false,
                     refs: false,
@@ -62,3 +75,4 @@ describe(unicornPreventAbbreviations, () => {
             } as UnicornPreventAbbreviations);
     });
 });
+/* eslint-enable unicorn/prevent-abbreviations */

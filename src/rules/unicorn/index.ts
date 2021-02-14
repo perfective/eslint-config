@@ -105,6 +105,7 @@ export = {
         'unicorn/prefer-string-trim-start-end': 'warn', // == prefer-trim-start-end
         'unicorn/prefer-ternary': 'off',
         'unicorn/prefer-type-error': 'warn',
+        // TBD: At this point this rule catches mostly "e" as "event" | "error". Is it really worth maintaining it?
         'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
         'unicorn/string-content': 'off',
         'unicorn/throw-new-error': 'warn',

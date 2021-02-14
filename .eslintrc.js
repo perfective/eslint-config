@@ -3,9 +3,7 @@ module.exports = {
     overrides: [
         {
             files: ['*.js'],
-            rules: {
-                'unicorn/prevent-abbreviations': 'off',
-            },
+            rules: {},
         },
         {
             files: ['*.ts'],
@@ -19,9 +17,7 @@ module.exports = {
                     },
                 },
             },
-            rules: {
-                'unicorn/prevent-abbreviations': 'off',
-            },
+            rules: {},
         },
         {
             files: ['*.spec.ts'],
