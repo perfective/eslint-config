@@ -11,9 +11,6 @@ export = {
             files: ['*.ts', '*.tsx'],
             rules: {
                 ...jsCommunityOverrides(),
-                // An empty interface can be used as nominal type or a self-documenting placeholder.
-                // "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
-                '@typescript-eslint/no-empty-interface': 'off',
                 // Conflicts with "no-confusing-arrow" { allowParens: true }
                 '@typescript-eslint/no-extra-parens': 'off',
                 // Arrow functions should be used only as parameters,

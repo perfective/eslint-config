@@ -79,7 +79,9 @@ export = {
             ignoreVoidOperator: false,
         }],
         '@typescript-eslint/no-dynamic-delete': 'warn',
-        '@typescript-eslint/no-empty-interface': ['warn', {
+        // An empty interface can be used as nominal type or a self-documenting placeholder.
+        // "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
+        '@typescript-eslint/no-empty-interface': ['off', {
             allowSingleExtends: true,
         }],
         '@typescript-eslint/no-explicit-any': ['error', {
