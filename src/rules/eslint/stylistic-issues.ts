@@ -148,13 +148,16 @@ export = {
         'no-tabs': 'error',
         'no-ternary': 'off',
         'no-trailing-spaces': 'warn',
-        // Allow underscore prefix for unused parameters
         'no-underscore-dangle': ['error', {
-            allowAfterThis: false,
             allowAfterSuper: false,
+            // Allow to have underscore as a private property name with a corresponding public method without it.
+            allowAfterThis: true,
             allowAfterThisConstructor: false,
-            enforceInMethodNames: true,
+            // Allow underscore prefix for unused parameters
             allowFunctionParams: true,
+            // Only private properties should use underscore.
+            // Public and protected properties should be access through an accessor method.
+            enforceInMethodNames: true,
         }],
         'no-unneeded-ternary': 'warn',
         'no-whitespace-before-property': 'warn',
