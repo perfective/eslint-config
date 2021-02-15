@@ -6,16 +6,7 @@ export = {
     ignorePatterns: ['**/*.d.ts', '**/dist'],
     overrides: [
         {
-            files: ['*.js', '*.jsx'],
-            parser: 'babel-eslint',
-            parserOptions: {
-                ecmaVersion: 6,
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                },
-                sourceType: 'module',
-            },
+            files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
             extends: [
                 './rules/eslint',
                 './rules/array-func',
@@ -29,6 +20,18 @@ export = {
                 './rules/sonarjs',
                 './rules/unicorn',
             ],
+        },
+        {
+            files: ['*.js', '*.jsx'],
+            parser: 'babel-eslint',
+            parserOptions: {
+                ecmaVersion: 6,
+                ecmaFeatures: {
+                    globalReturn: false,
+                    impliedStrict: true,
+                },
+                sourceType: 'module',
+            },
             settings: {
                 'import/extensions': ['.js', '.jsx'],
             },
@@ -63,19 +66,6 @@ export = {
                 warnOnUnsupportedTypeScriptVersion: true,
             },
             extends: [
-                // JavaScript rules
-                './rules/eslint',
-                './rules/array-func',
-                './rules/eslint-comments',
-                './rules/import',
-                './rules/jsdoc',
-                './rules/node',
-                './rules/prefer-arrow',
-                './rules/promise',
-                './rules/simple-import-sort',
-                './rules/sonarjs',
-                './rules/unicorn',
-                // TypeScript rules
                 './rules/typescript-eslint',
                 './rules/typescript-eslint/tslint',
                 './rules/deprecation',
