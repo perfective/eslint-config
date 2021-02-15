@@ -17,6 +17,7 @@
 * Disabled rules:
 ** `max-statements`;
 ** `newline-per-chained-call`;
+** `node/no-process-exit` (using `unicorn/no-process-exit` instead);
 ** `prefer-arrow/prefer-arrow-functions` (in Jest tests only);
 ** `promise/always-return` (in tests only);
 ** `sonarjs/cognitive-complexity`;
@@ -28,12 +29,15 @@
 ** `object-curly-newline` allows new lines in export declarations only for multiple exports.
 ** `object-property-newline` allows properties on the same line.
 ** `max-params` is disabled.
-** `no-extra-parens` allows extra parens in nested binary expressions.
+** `no-extra-parens`/`@typescript-eslint/no-extra-parens` allows parens: in nested binary expressions and JSX,
+and enforces parens for arrow conditionals.
 ** `no-plusplus` enabled in `for`-loop afterthoughts.
 ** `no-underscore-dangle` allows leading underscor for parameters; enforces no underscore in method names.
 ** `spaced-comment` allows triple-slash references.
 ** `import/no-extraneous-dependencies` allows `devDependencies` in test, config, and build files.
+** `import/no-unassigned-import` allows `@testing-library/jest-dom` import in Jest tests.
 ** `jest/lowercase-name` allows PascalCase in `describe`.
+** `jsdoc/require-description` allows to omit description if `@see` tag is used.
 ** `unicorn/prevent-abbreviations` allows `doc`/`docs` and `lib`/`libs`; does not check properties.
 ** `@typescript-eslint/no-extraneous-class` allows extraneous classes with decorators.
 ** `@typescript-eslint/promise-function-async` does not check arrow functions.
@@ -43,7 +47,7 @@
 * Added plugins:
 ** `eslint-plugin-jest-dom` `3.6.5`;
 ** `eslint-plugin-testing-library` `3.10.1`;
-** `eslint-plugin-cypress` `2.11.2`.
+** `eslint-plugin-cypress` `2.11.2` (supports JS and TS files in the `cypress` directory).
 +
 * Updated plugins:
 ** `eslint` to `7.20.0`;
