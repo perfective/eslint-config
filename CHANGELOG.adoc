@@ -22,7 +22,8 @@
 ** `promise/always-return` (in tests only);
 ** `sonarjs/cognitive-complexity`;
 ** `unicorn/no-keyword-prefix`;
-** `@typescript-eslint/no-empty-interface`.
+** `@typescript-eslint/no-empty-interface`;
+** `@typescript-eslint/no-unused-vars-experimental`.
 +
 * Changed rules:
 ** `arrow-body-style` is set to `as-needed`.
@@ -51,13 +52,14 @@ and enforces parens for arrow conditionals.
 +
 * Updated plugins:
 ** `eslint` to `7.20.0`;
-** `@typescript-eslint` to `4.15.0`;
-** `eslint-plugin-unicorn` to `28.0.0`;
-** `eslint-plugin-jsdoc` to `31.6.1`;
+** `@typescript-eslint` to `4.15.1`;
+** `eslint-plugin-unicorn` to `28.0.1`;
+** `eslint-plugin-jsdoc` to `32.0.1`;
 ** `eslint-plugin-jest-formatting` to `2.0.1`;
 ** `eslint-plugin-prefer-arrow` to `1.2.3`;
 ** `eslint-plugin-promise` to `4.3.1`;
-** `eslint-plugin-rxjs` to `3.0.1`.
+** `eslint-plugin-rxjs` to `3.0.1`;
+** `eslint-plugin-sonarjs` to `0.6.0`.
 
 
 == v0.11.1
