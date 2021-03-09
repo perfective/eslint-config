@@ -153,7 +153,8 @@ export = {
                 }],
                 'max-nested-callbacks': ['error', 4],
                 'new-cap': ['error', {
-                    capIsNewExceptions: ['Given', 'When', 'Then'],
+                    // These are functions from cypress-cucumber-preprocessor/steps
+                    capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
                 }],
             },
         },
