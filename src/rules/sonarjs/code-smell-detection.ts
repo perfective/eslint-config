@@ -9,6 +9,8 @@ export = {
         // This rule fails to recognize string-based properties, like element['property-a']
         'sonarjs/no-duplicate-string': 'off',
         'sonarjs/no-duplicated-branches': 'error',
+        // TODO: This rule fails to recognize different default arguments,
+        //  which can be used for named functions currying.
         'sonarjs/no-identical-functions': 'error',
         'sonarjs/no-inverted-boolean-check': 'error',
         'sonarjs/no-redundant-boolean': 'error',

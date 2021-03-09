@@ -1,3 +1,9 @@
+import {
+    cypressImportNoExtraneousDependencies,
+    jestImportNoExtraneousDependencies,
+    jsImportNoExtraneousDependencies,
+} from './rules/import/rules/no-extraneous-dependencies';
+
 export = {
     env: {
         // Overrides only extend this environment, but not other overrides (unlike rules and plugins)
@@ -38,16 +44,7 @@ export = {
             },
             rules: {
                 'import/no-commonjs': 'off',
-                'import/no-extraneous-dependencies': ['error', {
-                    // TODO: This list should be extracted into a function to allow overrides
-                    devDependencies: [
-                        '**/.*.js',
-                        '**/*.config.js',
-                        '**/gulpfile.js',
-                    ],
-                    optionalDependencies: false,
-                    peerDependencies: false,
-                }],
+                'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
                 'import/unambiguous': 'off',
             },
         },
@@ -107,12 +104,7 @@ export = {
                     'ts-expect-error': 'allow-with-description',
                 }],
                 '@typescript-eslint/init-declarations': 'off',
-                'import/no-extraneous-dependencies': ['error', {
-                    // TODO: This list should be extracted into a function to allow overrides
-                    devDependencies: ['**/*.spec.ts', '**/*.spec.tsx', '**/*.test.ts', '**/*.test.tsx'],
-                    optionalDependencies: false,
-                    peerDependencies: false,
-                }],
+                'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
                 'import/no-unassigned-import': ['error', {
                     allow: [
                         '@testing-library/jest-dom',
@@ -146,11 +138,7 @@ export = {
                 // Tests may declare variables that are set only by beforeEach/beforeAll functions.
                 'init-declarations': 'off',
                 '@typescript-eslint/init-declarations': 'off',
-                'import/no-extraneous-dependencies': ['error', {
-                    devDependencies: ['cypress/**/*.js', 'cypress/**/*.ts'],
-                    optionalDependencies: false,
-                    peerDependencies: false,
-                }],
+                'import/no-extraneous-dependencies': ['error', cypressImportNoExtraneousDependencies()],
                 'max-nested-callbacks': ['error', 4],
                 'new-cap': ['error', {
                     // These are functions from cypress-cucumber-preprocessor/steps
