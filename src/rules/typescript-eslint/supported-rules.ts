@@ -36,6 +36,7 @@ export = {
                 delimiter: 'semi',
                 requireLast: true,
             },
+            multilineDetection: 'brackets',
         }],
         '@typescript-eslint/member-ordering': ['error', {
             default: [
