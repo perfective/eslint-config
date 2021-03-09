@@ -31,7 +31,7 @@
         "lint:eslint": "npm run build && eslint --fix ./"
     },
     "peerDependencies": {
-        "@babel/eslint-parser": "^7.12.16",
+        "@babel/eslint-parser": "^7.13.10",
         "@typescript-eslint/eslint-plugin": "^4.17.0",
         "@typescript-eslint/eslint-plugin-tslint": "^4.17.0",
         "@typescript-eslint/parser": "^4.17.0",
@@ -57,7 +57,7 @@
         "tslint": "^6.1.3"
     },
     "devDependencies": {
-        "@babel/eslint-parser": "7.12.16",
+        "@babel/eslint-parser": "7.13.10",
         "@types/jest": "26.0.20",
         "@typescript-eslint/eslint-plugin": "4.17.0",
         "@typescript-eslint/eslint-plugin-tslint": "4.17.0",
