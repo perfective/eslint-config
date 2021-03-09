@@ -12,7 +12,7 @@ export = {
     ignorePatterns: ['**/*.d.ts', '**/dist'],
     overrides: [
         {
-            files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
+            files: ['*.[jt]s?(x)'],
             extends: [
                 './rules/eslint',
                 './rules/array-func',
@@ -28,7 +28,7 @@ export = {
             ],
         },
         {
-            files: ['*.js', '*.jsx'],
+            files: ['*.js?(x)'],
             parser: '@babel/eslint-parser',
             parserOptions: {
                 ecmaVersion: 6,
@@ -49,7 +49,7 @@ export = {
             },
         },
         {
-            files: ['*.ts', '*.tsx'],
+            files: ['*.ts?(x)'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 // Parser options have to be duplicated when the parser is overridden
@@ -86,7 +86,7 @@ export = {
         },
         {
             // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
-            files: ['*.spec.ts', '*.spec.tsx', '*.test.ts', '*.test.tsx'],
+            files: ['*.@(spec|test).[jt]s?(x)'],
             // TBD: Should environment be a part of the files overrides?
             env: {
                 'jest': true,
@@ -127,7 +127,7 @@ export = {
             // Integrations for Cypress are shown with ".spec.js",
             //  but that would conflict with Jest configuration above,
             //  so skipping them until it's possible to add directory configuration for Jest rules.
-            files: ['cypress/**/*.js', 'cypress/**/*.ts'],
+            files: ['cypress/**/*.[jt]s'],
             env: {
                 'cypress/globals': true,
             },
