@@ -1,5 +1,21 @@
 = Changelog
 
+== v0.13.0 (next)
+
+* Switched to globs in the configuration.
++
+* Added configuration functions for the `import/no-extraneous-dependencies` rule:
+** `importNoExtraneousDependencies()`;
+** `jsImportNoExtraneousDependencies()`;
+** `jestImportNoExtraneousDependencies()`;
+** `cypressImportNoExtraneousDependencies()`.
++
+* Updated packages:
+** `eslint` to `7.20.1`;
+** `@typescript-eslint` to `4.17.0`;
+** `eslint-plugin-jsdoc` to `32.2.0`;
+** `eslint-plugin-jest` to `24.1.10`.
+
 == v0.12.0
 
 * Split configuration based on file extensions:

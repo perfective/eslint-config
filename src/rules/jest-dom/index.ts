@@ -8,6 +8,7 @@ export = {
         'jest-dom/prefer-enabled-disabled': 'warn',
         'jest-dom/prefer-focus': 'warn',
         // TODO: Set to "warn" once the rule is fixed
+        //  https://github.com/testing-library/eslint-plugin-jest-dom/pull/107
         //  https://github.com/testing-library/eslint-plugin-jest-dom/pull/105
         'jest-dom/prefer-in-document': 'off',
         'jest-dom/prefer-required': 'warn',
