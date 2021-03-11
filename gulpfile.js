@@ -1,6 +1,19 @@
 const del = require('del');
 const gulp = require('gulp');
 const gulpJsonEditor = require('gulp-json-editor');
+const gulpTypeScript = require('gulp-typescript');
+
+function typeScriptConfig(config, settings = {}) {
+    const project = gulpTypeScript.createProject(config, settings);
+    return project.src().pipe(project());
+}
+
+function build() {
+    return typeScriptConfig('tsconfig.build.json')
+        .pipe(gulp.dest('dist'));
+}
+
+exports.build = build;
 
 function clean(callback) {
     del(['dist', '*.tsbuildinfo']);
@@ -44,6 +57,7 @@ function staticFiles() {
 
 exports.default = gulp.series(
     clean,
+    build,
     packageJson,
     staticFiles,
 );

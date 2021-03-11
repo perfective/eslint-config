@@ -22,13 +22,9 @@
     },
     "license": "MIT",
     "scripts": {
-        "build": "tsc --project tsconfig.build.json",
-        "build:clean": "npm run clean && npm run build",
-        "test": "jest",
-        "clean": "rimraf *.tsbuildinfo ./dist",
-        "dist": "npm run build:clean && gulp",
-        "lint": "npm run lint:eslint",
-        "lint:eslint": "npm run build && eslint --fix ./"
+        "dist": "gulp",
+        "lint": "gulp build && eslint --fix ./",
+        "test": "jest"
     },
     "peerDependencies": {
         "@babel/eslint-parser": "^7.13.10",
