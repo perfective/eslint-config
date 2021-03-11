@@ -15,6 +15,10 @@
 ** `@typescript-eslint` to `4.17.0`;
 ** `eslint-plugin-jsdoc` to `32.2.0`;
 ** `eslint-plugin-jest` to `24.1.10`.
++
+* Internal:
+** Use `gulp` for build.
+
 
 == v0.12.0
 
