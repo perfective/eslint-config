@@ -1,7 +1,15 @@
+const del = require('del');
 const gulp = require('gulp');
 const gulpJsonEditor = require('gulp-json-editor');
 
-function copyPackageJson() {
+function clean(callback) {
+    del(['dist', '*.tsbuildinfo']);
+    callback();
+}
+
+exports.clean = clean;
+
+function packageJson() {
     return gulp
         .src('./package.json')
         .pipe(gulpJsonEditor({
@@ -20,9 +28,7 @@ function copyPackageJson() {
         );
 }
 
-exports.copyPackageJson = copyPackageJson;
-
-function copyStaticFiles() {
+function staticFiles() {
     return gulp
         .src([
             './LICENSE',
@@ -36,9 +42,8 @@ function copyStaticFiles() {
         );
 }
 
-exports.copyStaticFiles = copyStaticFiles;
-
 exports.default = gulp.series(
-    copyPackageJson,
-    copyStaticFiles,
+    clean,
+    packageJson,
+    staticFiles,
 );
