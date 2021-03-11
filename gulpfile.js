@@ -10,13 +10,13 @@ function typeScriptConfig(config, settings = {}) {
 
 function build() {
     return typeScriptConfig('tsconfig.build.json')
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./dist'));
 }
 
 exports.build = build;
 
 function clean(callback) {
-    del(['dist', '*.tsbuildinfo']);
+    del(['./dist', '*.tsbuildinfo']);
     callback();
 }
 
@@ -35,10 +35,10 @@ function packageJson() {
                 'rules.d.ts',
                 'rules/**/rules/*.d.ts',
             ],
+            devDependencies: undefined,
+            scripts: undefined,
         }))
-        .pipe(
-            gulp.dest('./dist/'),
-        );
+        .pipe(gulp.dest('./dist'));
 }
 
 function staticFiles() {
@@ -50,9 +50,7 @@ function staticFiles() {
             './README.md',
             './src/**/package.json',
         ])
-        .pipe(
-            gulp.dest('./dist/'),
-        );
+        .pipe(gulp.dest('./dist'));
 }
 
 exports.default = gulp.series(
