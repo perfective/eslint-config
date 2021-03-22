@@ -2,6 +2,9 @@ export = {
     plugins: [
         'jest',
     ],
+    extends: [
+        './typescript-eslint',
+    ],
     rules: {
         'jest/consistent-test-it': ['warn', {
             fn: 'test',

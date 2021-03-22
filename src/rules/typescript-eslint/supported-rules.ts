@@ -222,7 +222,10 @@ export = {
             variableDeclaration: false,
             variableDeclarationIgnoreFunction: false,
         }],
-        '@typescript-eslint/unbound-method': 'error',
+        '@typescript-eslint/unbound-method': ['error', {
+            // See TSLint "static-this"
+            ignoreStatic: true,
+        }],
         '@typescript-eslint/unified-signatures': 'error',
     },
 };

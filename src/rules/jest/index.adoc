@@ -210,3 +210,18 @@ for https://jestjs.io[Jest].
 | Warning
 
 |===
+
+
+== TypeScript Rules
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md[jest/valid-title]`
+|
+|
+| Error
+4+| Extends the base `@typescript-eslint/unbound-method` rule to support `expect` calls.
+
+|===

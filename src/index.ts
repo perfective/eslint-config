@@ -104,6 +104,8 @@ export = {
                     'ts-expect-error': 'allow-with-description',
                 }],
                 '@typescript-eslint/init-declarations': 'off',
+                // See "@typescript-eslint/unbound-method"
+                '@typescript-eslint/unbound-method': 'off',
                 'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
                 'import/no-unassigned-import': ['error', {
                     allow: [
