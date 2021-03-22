@@ -3,6 +3,8 @@
 == v0.13.0 (next)
 
 * Switched to globs in the configuration.
+* Initialized user documentation
+(`docs.html` file available in the distribution).
 +
 * Added configuration functions for the `import/no-extraneous-dependencies` rule:
 ** `importNoExtraneousDependencies()`;
@@ -11,10 +13,13 @@
 ** `cypressImportNoExtraneousDependencies()`.
 +
 * Updated packages:
-** `eslint` to `7.20.1`;
-** `@typescript-eslint` to `4.17.0`;
-** `eslint-plugin-jsdoc` to `32.2.0`;
-** `eslint-plugin-jest` to `24.1.10`.
+** `eslint` to `7.22.0`;
+** `@typescript-eslint` to `4.18.0`;
+** `eslint-plugin-jest` to `24.3.2`;
+** `eslint-plugin-jsdoc` to `32.3.0`;
+** `eslint-plugin-rxjs` to `3.1.2`;
+** `eslint-plugin-testing-library` to `3.10.2`;
+** `eslint-plugin-unicorn` to `29.0.0`.
 +
 * Internal:
 ** Use `gulp` for build.
