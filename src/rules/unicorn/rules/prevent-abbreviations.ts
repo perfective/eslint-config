@@ -33,7 +33,7 @@ export function unicornPreventAbbreviations(
             db: false,
             doc: false,
             docs: false,
-            e2e: false,
+            dev: false,
             env: false,
             i: false,
             j: false,
