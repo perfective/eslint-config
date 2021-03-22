@@ -24,14 +24,14 @@ export = {
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
-        'unicorn/no-array-callback-reference': 'off', // == no-fn-reference-in-iterator
+        'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'off',
         'unicorn/no-array-push-push': 'off',
-        'unicorn/no-array-reduce': 'off', // == no-reduce
+        'unicorn/no-array-reduce': 'off',
         'unicorn/no-console-spaces': 'warn',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
-        'unicorn/no-instanceof-array': 'warn', // == no-array-instanceof
+        'unicorn/no-instanceof-array': 'warn',
         // Benefit of this rule is questionable and it's being overridden all the time.
         'unicorn/no-keyword-prefix': ['off', {
             blacklist: ['new', 'class'],
@@ -45,6 +45,7 @@ export = {
         // TODO: Consider enabling this rule to promote using Just/Nothing
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'error',
+        'unicorn/no-static-only-class': 'error',
         'unicorn/no-process-exit': 'error',
         'unicorn/no-this-assignment': 'error',
         'unicorn/no-unreadable-array-destructuring': 'error',
@@ -74,17 +75,22 @@ export = {
         }],
         'unicorn/prefer-add-event-listener': 'warn',
         'unicorn/prefer-array-find': 'warn',
-        'unicorn/prefer-array-flat-map': 'warn', // == prefer-flat-map
+        // Array.prototype.flat() is not supported in the ES6 library for TypeScript
+        // See: 'array-func/prefer-flat'
+        'unicorn/prefer-array-flat': 'off',
+        // Array.prototype.flatMap() is not supported in the ES6 library for TypeScript
+        // See: 'array-func/prefer-flat-map'
+        'unicorn/prefer-array-flat-map': 'off',
         'unicorn/prefer-array-index-of': 'warn',
         'unicorn/prefer-array-some': 'error',
         'unicorn/prefer-date-now': 'warn',
         'unicorn/prefer-default-parameters': 'warn',
-        'unicorn/prefer-dom-node-append': 'warn', // == prefer-node-append
-        'unicorn/prefer-dom-node-dataset': 'warn', // == prefer-dataset
-        'unicorn/prefer-dom-node-remove': 'warn', // == prefer-node-remove
-        'unicorn/prefer-dom-node-text-content': 'warn', // == prefer-text-content
+        'unicorn/prefer-dom-node-append': 'warn',
+        'unicorn/prefer-dom-node-dataset': 'warn',
+        'unicorn/prefer-dom-node-remove': 'warn',
+        'unicorn/prefer-dom-node-text-content': 'warn',
         'unicorn/prefer-includes': 'warn',
-        'unicorn/prefer-keyboard-event-key': 'warn', // == prefer-event-key
+        'unicorn/prefer-keyboard-event-key': 'warn',
         'unicorn/prefer-math-trunc': 'warn',
         'unicorn/prefer-modern-dom-apis': 'warn',
         'unicorn/prefer-negative-index': 'warn',
@@ -99,13 +105,12 @@ export = {
         'unicorn/prefer-set-has': 'warn',
         // Autofix does not always work correctly
         'unicorn/prefer-spread': 'off',
-        'unicorn/prefer-string-replace-all': 'off', // == prefer-replace-all
+        'unicorn/prefer-string-replace-all': 'off',
         'unicorn/prefer-string-slice': 'warn',
-        'unicorn/prefer-string-starts-ends-with': 'warn', // == prefer-starts-ends-with
-        'unicorn/prefer-string-trim-start-end': 'warn', // == prefer-trim-start-end
+        'unicorn/prefer-string-starts-ends-with': 'warn',
+        'unicorn/prefer-string-trim-start-end': 'warn',
         'unicorn/prefer-ternary': 'off',
         'unicorn/prefer-type-error': 'warn',
-        // TBD: At this point this rule catches mostly "e" as "event" | "error". Is it really worth maintaining it?
         'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
         'unicorn/string-content': 'off',
         'unicorn/throw-new-error': 'warn',

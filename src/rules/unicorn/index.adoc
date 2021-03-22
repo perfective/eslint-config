@@ -161,6 +161,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-static-only-class.md[unicorn/no-static-only-class]`
+| Yes
+| Partially
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-this-assignment.md[unicorn/no-this-assignment]`
 | Yes
 |
@@ -211,10 +216,17 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Partially
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat.md[unicorn/prefer-array-flat]`
+|
+| Yes
+| Off
+4+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat-map.md[unicorn/prefer-array-flat-map]`
 |
 | Yes
-| Warning
+| Off
+4+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-index-of.md[unicorn/prefer-array-index-of]`
 | Yes
@@ -350,6 +362,14 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Partially
 | Warning
+4+| The https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/rules/prevent-abbreviations.js#L13[default config]
+is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`, `ctx`, `cur`/`curr`, `dest`, `dev`,
+`dir`/`dirs`, `e`, `el`, `elem`, `envs`, `err`, `ev`/`evt`, `ext`/`exts`, `fn`/`func`, `idx`, `len`, `mod`, `msg`,
+`num`, `obj`, `opts`, `pkg`, `prev`, `prod`,
+`prop`/`props` (allowed in `@perfective/eslint-config-react`),
+`ref`/`refs` (allowed in `@perfective/eslint-config-angular` and `@perfective/eslint-config-angular`),
+`rel`, `req`, `res`, `ret`, `retval`, `sep`, `src`, `stdDev`, `str`, `tbl`, `temp`, `tit`, `tmp`,
+`val`, `var`/`vars`, `ver`.
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/string-content.md[unicorn/string-content]`
 |

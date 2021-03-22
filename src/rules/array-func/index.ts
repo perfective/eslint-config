@@ -8,8 +8,10 @@ export = {
         'array-func/prefer-array-from': 'warn',
         'array-func/avoid-reverse': 'warn',
         // Array.prototype.flatMap() is not supported in the ES6 library for TypeScript
+        // See: 'unicorn/prefer-array-flat-map'
         'array-func/prefer-flat-map': 'off',
         // Array.prototype.flat() is not supported in the ES6 library for TypeScript
+        // See: 'unicorn/prefer-array-flat'
         'array-func/prefer-flat': 'off',
     },
 };
