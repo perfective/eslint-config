@@ -46,6 +46,7 @@ export = {
         // TODO: Check if tags like @abstract, @async, etc. that have keywords in TypeScript are removed.
         'jsdoc/check-tag-names': ['error', {
             definedTags: ['final', 'flags', 'sealed', 'workaround'],
+            jsxTags: true,
         }],
         'jsdoc/check-types': ['error', {
             noDefaults: false,

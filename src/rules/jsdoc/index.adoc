@@ -51,6 +51,8 @@ The `link:https://github.com/gajus/eslint-plugin-jsdoc[eslint-plugin-jsdoc]` pro
 | Yes
 |
 | Error
+4+| JSX tags (`jsx`, `jsxFrag`, `jsxImportSource`, `jsxRuntime`) are allowed.
+Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-types[jsdoc/check-types]`
 | Yes
