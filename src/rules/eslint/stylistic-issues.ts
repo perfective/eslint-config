@@ -81,12 +81,14 @@ export = {
             ignoreRegExpLiterals: true,
             ignoreUrls: true,
         }],
-        // Business object may have many properties an even with basic logic will have many lines of code.
+        // Business object may have many properties and even with basic logic will have many lines of code.
         'max-lines': 'off',
         'max-lines-per-function': 'off',
         'max-nested-callbacks': ['error', 2],
-        // TODO: This rule does not allow to separate functions and constructors.
-        //  Constructors may have properties declarations, making it impossible to limit parameters count.
+        // This rule does not allow separating functions and constructors.
+        // Constructors may have properties declarations,
+        // and be used for dependency injections,
+        // making it impossible to limit parameters count.
         'max-params': ['off', {
             max: 3,
         }],
@@ -162,8 +164,8 @@ export = {
         'no-unneeded-ternary': 'warn',
         'no-whitespace-before-property': 'warn',
         'nonblock-statement-body-position': ['warn', 'below'],
-        // For imports and exports this rule may conflict with the "max-len" rule:
-        //  it is possible to have an import or export declaration that is too long.
+        // For imports and exports this rule may conflict with the "max-len" rule,
+        // as it is possible to have an import or export declaration that is too long.
         'object-curly-newline': ['warn', {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             ImportDeclaration: { multiline: true },

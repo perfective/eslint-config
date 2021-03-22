@@ -1,0 +1,68 @@
+= `eslint-comments`
+
+The `link:https://mysticatea.github.io/eslint-plugin-eslint-comments[eslint-plugin-eslint-comments]` provides
+additional ESLint rules for ESLint directive comments
+(e.g. `//eslint-disable-line`).
+
+
+== Best Practices
+
+[cols="~,1,1,1"]
+|===
+| Rule | https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/lib/configs/recommended.js[Recommended] | Fixable | Config
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/disable-enable-pair.html[eslint-comments/disable-enable-pair]`
+| Yes
+|
+| Error
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-aggregating-enable.html[eslint-comments/no-aggregating-enable]`
+| Yes
+|
+| Error
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-duplicate-disable.html[eslint-comments/no-duplicate-disable]`
+| Yes
+|
+| Error
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unlimited-disable.html[eslint-comments/no-unlimited-disable]`
+| Yes
+|
+| Error
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unused-disable.html[eslint-comments/no-unused-disable]`
+|
+|
+| Error
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unused-enable.html[eslint-comments/no-unused-enable]`
+| Yes
+|
+| Error
+
+|===
+
+
+== Stylistic Issues
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-restricted-disable.html[eslint-comments/no-restricted-disable]`
+|
+|
+| Off
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-use.html[eslint-comments/no-use]`
+|
+|
+| Error
+
+| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/require-description.html[eslint-comments/require-description]`
+|
+|
+| Error
+
+|===

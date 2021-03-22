@@ -1,0 +1,21 @@
+= `simple-import-sort`
+
+The `link:https://github.com/lydell/eslint-plugin-simple-import-sort[eslint-plugin-simple-import-sort]` provides
+rules for auto-fixable import and export sorting.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `simple-import-sort/exports`
+|
+| Yes
+| Warning
+
+| `simple-import-sort/imports`
+|
+| Yes
+| Warning
+
+|===

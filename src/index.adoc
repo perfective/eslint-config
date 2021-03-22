@@ -1,0 +1,24 @@
+= Perfective ESLint Config
+:toc: left
+:toclevels: 2
+:icons: font
+:sourcedir: ./
+
+== Overview
+
+The purpose of this configuration is to create a subset of the JavaScript and TypeScript languages,
+to enforce code quality, readability, and maintainability.
+It is based on the ideas that:
+
+* Code maintainability and support cost more than original development.
+* Code readability is more important than the speed of writing it.
+
+It brings the https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited[Don't Make Me Think]
+approach from web usability to code,
+and assumes that:
+
+* Simple code is better than complex code.
+* Certainty is better than uncertainty.
+* Explicit statements are better than implicit statements.
+
+include::rules/index.adoc[leveloffset=+1]

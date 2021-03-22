@@ -5,8 +5,6 @@ export = {
         'unicorn',
     ],
     rules: {
-        'unicorn/no-array-callback-reference': 'off', // == no-fn-reference-in-iterator
-        'unicorn/no-array-reduce': 'off', // == no-reduce
         'unicorn/better-regex': 'warn',
         'unicorn/catch-error-name': 'warn',
         'unicorn/consistent-destructuring': 'warn',
@@ -26,8 +24,10 @@ export = {
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/no-array-callback-reference': 'off', // == no-fn-reference-in-iterator
         'unicorn/no-array-for-each': 'off',
         'unicorn/no-array-push-push': 'off',
+        'unicorn/no-array-reduce': 'off', // == no-reduce
         'unicorn/no-console-spaces': 'warn',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
@@ -74,8 +74,9 @@ export = {
         }],
         'unicorn/prefer-add-event-listener': 'warn',
         'unicorn/prefer-array-find': 'warn',
-        'unicorn/prefer-array-some': 'error',
         'unicorn/prefer-array-flat-map': 'warn', // == prefer-flat-map
+        'unicorn/prefer-array-index-of': 'warn',
+        'unicorn/prefer-array-some': 'error',
         'unicorn/prefer-date-now': 'warn',
         'unicorn/prefer-default-parameters': 'warn',
         'unicorn/prefer-dom-node-append': 'warn', // == prefer-node-append
@@ -83,7 +84,6 @@ export = {
         'unicorn/prefer-dom-node-remove': 'warn', // == prefer-node-remove
         'unicorn/prefer-dom-node-text-content': 'warn', // == prefer-text-content
         'unicorn/prefer-includes': 'warn',
-        'unicorn/prefer-array-index-of': 'warn',
         'unicorn/prefer-keyboard-event-key': 'warn', // == prefer-event-key
         'unicorn/prefer-math-trunc': 'warn',
         'unicorn/prefer-modern-dom-apis': 'warn',
@@ -93,9 +93,9 @@ export = {
         }],
         'unicorn/prefer-optional-catch-binding': 'warn',
         'unicorn/prefer-query-selector': 'warn',
+        'unicorn/prefer-reflect-apply': 'warn',
         // TBD: Conflicts with @typescript-eslint/prefer-regexp-exec
         'unicorn/prefer-regexp-test': 'off',
-        'unicorn/prefer-reflect-apply': 'warn',
         'unicorn/prefer-set-has': 'warn',
         // Autofix does not always work correctly
         'unicorn/prefer-spread': 'off',

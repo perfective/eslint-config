@@ -1,0 +1,241 @@
+= `import`
+
+The `link:https://github.com/benmosher/eslint-plugin-import[eslint-plugin-import]` provides rules
+for the ES2015+ (ES6+) import/export syntax
+to prevent issues with misspelling of file paths and import names.
+
+
+== Static Analysis
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md[import/no-unresolved]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md[import/named]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md[import/default]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md[import/namespace]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md[import/no-restricted-paths]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md[import/no-absolute-path]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md[import/no-dynamic-require]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md[import/no-internal-modules]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md[import/no-webpack-loader-syntax]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md[import/no-self-import]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md[import/no-cycle]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md[import/no-useless-path-segments]`
+|
+|
+| Warning
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md[import/no-relative-parent-imports]`
+|
+|
+| Off
+
+|===
+
+
+== Helpful Warnings
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md[import/export]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md[import/no-named-as-default]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md[import/no-named-as-default-member]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md[import/no-deprecated]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md[import/no-extraneous-dependencies]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md[import/no-mutable-exports]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md[import/no-unused-modules]`
+|
+|
+| Error
+
+|===
+
+
+== Module Systems
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md[import/unambiguous]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md[import/no-commonjs]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md[import/no-amd]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md[import/no-nodejs-modules]`
+|
+|
+| Off
+
+|===
+
+
+== Style Guide
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md[import/first]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md[import/exports-last]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md[import/no-duplicates]`
+|
+|
+| Warning
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md[import/no-namespace]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md[import/extensions]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md[import/order]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md[import/newline-after-import]`
+|
+|
+| Warning
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md[import/prefer-default-export]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md[import/max-dependencies]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md[import/no-unassigned-import]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md[import/no-named-default]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md[import/no-default-export]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-export.md[import/no-named-export]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md[import/no-anonymous-default-export]`
+|
+|
+| Error
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md[import/group-exports]`
+|
+|
+| Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md[import/dynamic-import-chunkname]`
+|
+|
+| Off
+
+|===

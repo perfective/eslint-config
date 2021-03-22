@@ -1,0 +1,86 @@
+= `promise`
+
+The `link:https://github.com/xjamundx/eslint-plugin-promise[eslint-plugin-promise]` provides rules
+to enforce best practices for JavaScript promises.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/catch-or-return.md[promise/catch-or-return]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-return-wrap.md[promise/no-return-wrap]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/param-names.md[promise/param-names]`
+| Yes
+|
+| Warning
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/always-return.md[promise/always-return]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-native.md[promise/no-native]`
+|
+|
+| Off
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-nesting.md[promise/no-nesting]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-promise-in-callback.md[promise/no-promise-in-callback]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-callback-in-promise.md[promise/no-callback-in-promise]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/avoid-new.md[promise/avoid-new]`
+|
+|
+| Off
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-new-statics.md[promise/no-new-statics]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-return-in-finally.md[promise/no-return-in-finally]`
+| Yes
+|
+| Error
+
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/valid-params.md[promise/valid-params]`
+|
+|
+| Error
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/prefer-await-to-then.md[promise/prefer-await-to-then]`
+|
+|
+| Off
+4+| Requires ES2017 `async`/`await`
+and would be turned off either way,
+as Promises should be preferred.
+
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/prefer-await-to-callbacks.md[promise/prefer-await-to-callbacks]`
+|
+|
+| Off
+4+| Requires ES2017 `async`/`await`.
+
+|===

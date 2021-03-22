@@ -101,7 +101,6 @@ export = {
         '@typescript-eslint/no-implicit-any-catch': ['error', {
             allowExplicitAny: false,
         }],
-        '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-inferrable-types': 'off',
         // Allow for generic types like "Nullary<void>" (as "(value: T) => void" declaration is already valid)
         '@typescript-eslint/no-invalid-void-type': ['error', {
@@ -154,7 +153,7 @@ export = {
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
         // With the "func-style" as "declaration",
         // arrow functions can only be lambdas,
-        // so `async` keywords can be skipped for brevity.
+        // so `async` keyword can be skipped for brevity.
         // NOTE: if "func-style" as "expression",
         //  not checking arrow functions causes "require-await" to miss async functions.
         '@typescript-eslint/promise-function-async': ['warn', {

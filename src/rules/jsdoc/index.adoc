@@ -1,0 +1,215 @@
+= `jsdoc`
+
+The `link:https://github.com/gajus/eslint-plugin-jsdoc[eslint-plugin-jsdoc]` provide JSDoc linting rules for ESLint.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | https://github.com/gajus/eslint-plugin-jsdoc/blob/master/src/index.js[Recommended] | Fixable | Config
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-access[jsdoc/check-access]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-alignment[jsdoc/check-alignment]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-examples[jsdoc/check-examples]`
+|
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-indentation[jsdoc/check-indentation]`
+|
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-line-alignment[jsdoc/check-line-alignment]`
+|
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-param-names[jsdoc/check-param-names]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-property-names[jsdoc/check-property-names]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-syntax[jsdoc/check-syntax]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-tag-names[jsdoc/check-tag-names]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-types[jsdoc/check-types]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-values[jsdoc/check-values]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-empty-tags[jsdoc/empty-tags]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-implements-on-classes[jsdoc/implements-on-classes]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-match-description[jsdoc/match-description]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-newline-after-description[jsdoc/newline-after-description]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-bad-blocks[jsdoc/no-bad-blocks]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-defaults[jsdoc/no-defaults]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-types[jsdoc/no-types]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-undefined-types[jsdoc/no-undefined-types]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-description[jsdoc/require-description]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-description-complete-sentence[jsdoc/require-description-complete-sentence]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-example[jsdoc/require-example]`
+|
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-file-overview[jsdoc/require-file-overview]`
+|
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-hyphen-before-param-description[jsdoc/require-hyphen-before-param-description]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-jsdoc[jsdoc/require-jsdoc]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param[jsdoc/require-param]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description[jsdoc/require-param-description]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-name[jsdoc/require-param-name]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-type[jsdoc/require-param-type]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-property[jsdoc/require-property]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-property-description[jsdoc/require-property-description]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-property-name[jsdoc/require-property-name]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-property-type[jsdoc/require-property-type]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns[jsdoc/require-returns]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-check[jsdoc/require-returns-check]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-description[jsdoc/require-returns-description]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-type[jsdoc/require-returns-type]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-throws[jsdoc/require-throws]`
+|
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-yields[jsdoc/require-yields]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-yields-check[jsdoc/require-yields-check]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-valid-types[jsdoc/valid-types]`
+| Yes
+|
+| Error
+
+|===

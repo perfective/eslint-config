@@ -1,0 +1,151 @@
+= `sonarjs`
+
+The `link:https://github.com/SonarSource/eslint-plugin-sonarjs[eslint-plugin-sonarjs]` provides
+SonarJS rules for ESLint to detect bugs and suspicious patterns in your code.
+
+
+== Bug Detection
+
+[cols="~,1,1,1"]
+|===
+| Rule | https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/src/index.ts[Recommended] | Fixable | Config
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-all-duplicated-branches.md[sonarjs/no-all-duplicated-branches]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-element-overwrite.md[sonarjs/no-element-overwrite]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-extra-arguments.md[sonarjs/no-extra-arguments]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-identical-conditions.md[sonarjs/no-identical-conditions]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-identical-expressions.md[sonarjs/no-identical-expressions]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-one-iteration-loop.md[sonarjs/no-one-iteration-loop]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-use-of-empty-return-value.md[sonarjs/no-use-of-empty-return-value]`
+| Yes
+|
+| Error
+
+|===
+
+
+== Code Smell Detection
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md[sonarjs/cognitive-complexity]`
+| Yes
+|
+| Off
+4+| The core `complexity` rule (with strict level of complexity) covers all the cases.
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/max-switch-cases.md[sonarjs/max-switch-cases]`
+| Yes
+|
+| Off
+4+| The number of `switch`-cases is covered by the `complexity` rule.
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-collapsible-if.md[sonarjs/no-collapsible-if]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-collection-size-mischeck.md[sonarjs/no-collection-size-mischeck]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-duplicate-string.md[sonarjs/no-duplicate-string]`
+| Yes
+|
+| Off
+4+| Fails to recognize string-based properties, like `element['a']`.
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-duplicated-branches.md[sonarjs/no-duplicated-branches]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-identical-functions.md[sonarjs/no-identical-functions]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-inverted-boolean-check.md[sonarjs/no-inverted-boolean-check]`
+| Yes
+| Yes
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-redundant-boolean.md[sonarjs/no-redundant-boolean]`
+|
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-redundant-jump.md[sonarjs/no-redundant-jump]`
+|
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-same-line-conditional.md[sonarjs/no-same-line-conditional]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-small-switch.md[sonarjs/no-small-switch]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-unused-collection.md[sonarjs/no-unused-collection]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-useless-catch.md[sonarjs/no-useless-catch]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/prefer-immediate-return.md[sonarjs/prefer-immediate-return]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/prefer-object-literal.md[sonarjs/prefer-object-literal]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/prefer-single-boolean-return.md[sonarjs/prefer-single-boolean-return]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/prefer-while.md[sonarjs/prefer-while]`
+| Yes
+| Yes
+| Warning
+
+
+|===

@@ -1,0 +1,17 @@
+= `deprecation`
+
+The `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]` provides a rule
+to report usage of deprecated code.
+It only works with the `@typescript-eslint/parser`.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `deprecation/deprecation`
+| N/A
+|
+| Error
+
+|===

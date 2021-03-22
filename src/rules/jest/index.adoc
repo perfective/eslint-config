@@ -1,0 +1,212 @@
+= `jest`
+
+The `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]` provides rules
+for https://jestjs.io[Jest].
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/consistent-test-it.md[jest/consistent-test-it]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/expect-expect.md[jest/expect-expect]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/lowercase-name.md[jest/lowercase-name]`
+|
+| Yes
+| Error
+4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-alias-methods.md[jest/no-alias-methods]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-commented-out-tests.md[jest/no-commented-out-tests]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-conditional-expect.md[jest/no-conditional-expect]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-deprecated-functions.md[jest/no-deprecated-functions]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-disabled-tests.md[jest/no-disabled-tests]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-done-callback.md[jest/no-done-callback]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-duplicate-hooks.md[jest/no-duplicate-hooks]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-export.md[jest/no-export]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-focused-tests.md[jest/no-focused-tests]`
+| Yes
+|
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-hooks.md[jest/no-hooks]`
+|
+|
+| Off
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-identical-title.md[jest/no-identical-title]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-if.md[jest/no-if]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-interpolation-in-snapshots.md[jest/no-interpolation-in-snapshots]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-jasmine-globals.md[jest/no-jasmine-globals]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-jest-import.md[jest/no-jest-import]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-large-snapshots.md[jest/no-large-snapshots]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-mocks-import.md[jest/no-mocks-import]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-restricted-matchers.md[jest/no-restricted-matchers]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-standalone-expect.md[jest/no-standalone-expect]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-test-prefixes.md[jest/no-test-prefixes]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-test-return-statement.md[jest/no-test-return-statement]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-called-with.md[jest/prefer-called-with]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-expect-assertions.md[jest/prefer-expect-assertions]`
+|
+|
+| Off
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-on-top.md[jest/prefer-hooks-on-top]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-spy-on.md[jest/prefer-spy-on]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-strict-equal.md[jest/prefer-strict-equal]`
+|
+|
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be-null.md[jest/prefer-to-be-null]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be-undefined.md[jest/prefer-to-be-undefined]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-contain.md[jest/prefer-to-contain]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-have-length.md[jest/prefer-to-have-length]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-todo.md[jest/prefer-todo]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md[jest/require-top-level-describe]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-to-throw-message.md[jest/require-to-throw-message]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-describe.md[jest/valid-describe]`
+|
+| Yes
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-expect-in-promise.md[jest/valid-expect-in-promise]`
+|
+| Yes
+| Off
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-expect.md[jest/valid-expect]`
+|
+| Yes
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-title.md[jest/valid-title]`
+| Yes
+| Yes
+| Warning
+
+|===

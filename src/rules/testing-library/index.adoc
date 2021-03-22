@@ -1,0 +1,96 @@
+= `testing-library`
+
+The `link:https://github.com/testing-library/eslint-plugin-testing-library[eslint-plugin-testing-library]`
+provides rules to follow best practices
+and anticipate common mistakes when writing tests with https://testing-library.com[Testing Library].
+
+[cols="~,1,1,1"]
+|===
+| Rule | https://github.com/testing-library/eslint-plugin-testing-library#supported-rules[Recommended] | Fixable | Config
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-async-query.md[testing-library/await-async-query]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-async-utils.md[testing-library/await-async-utils]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-fire-event.md[testing-library/await-fire-event]`
+|
+|
+| Off
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/consistent-data-testid.md[testing-library/consistent-data-testid]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-await-sync-events.md[testing-library/no-await-sync-events]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-await-sync-query.md[testing-library/no-await-sync-query]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-debug.md[testing-library/no-debug]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-dom-import.md[testing-library/no-dom-import]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-manual-cleanup.md[testing-library/no-manual-cleanup]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-render-in-setup.md[testing-library/no-render-in-setup]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-empty-callback.md[testing-library/no-wait-for-empty-callback]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-find-by.md[testing-library/prefer-find-by]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-wait-for.md[testing-library/prefer-wait-for]`
+|
+| Yes
+| Warning
+
+|===

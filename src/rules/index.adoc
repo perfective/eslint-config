@@ -1,0 +1,23 @@
+= Rules
+
+include::eslint/index.adoc[leveloffset=+1]
+include::typescript-eslint/index.adoc[leveloffset=+1]
+include::typescript-eslint/tslint.adoc[leveloffset=+1]
+
+include::array-func/index.adoc[leveloffset=+1]
+include::cypress/index.adoc[leveloffset=+1]
+include::deprecation/index.adoc[leveloffset=+1]
+include::eslint-comments/index.adoc[leveloffset=+1]
+include::import/index.adoc[leveloffset=+1]
+include::jest/index.adoc[leveloffset=+1]
+include::jest-dom/index.adoc[leveloffset=+1]
+include::jest-formatting/index.adoc[leveloffset=+1]
+include::jsdoc/index.adoc[leveloffset=+1]
+include::node/index.adoc[leveloffset=+1]
+include::prefer-arrow/index.adoc[leveloffset=+1]
+include::promise/index.adoc[leveloffset=+1]
+include::rxjs/index.adoc[leveloffset=+1]
+include::simple-import-sort/index.adoc[leveloffset=+1]
+include::sonarjs/index.adoc[leveloffset=+1]
+include::testing-library/index.adoc[leveloffset=+1]
+include::unicorn/index.adoc[leveloffset=+1]

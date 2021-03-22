@@ -1,0 +1,68 @@
+= `jest-dom`
+
+The `link:https://github.com/testing-library/eslint-plugin-jest-dom[eslint-plugin-jest-dom]` provides rules
+to follow best practices and anticipate common mistakes
+when writing tests with Testing Library `link:https://testing-library.com/docs/ecosystem-jest-dom/[jest-dom]`.
+
+[cols="~,1,1,1"]
+|===
+| Rule | https://github.com/testing-library/eslint-plugin-jest-dom#supported-rules[Recommended] | Fixable | Config
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-checked.md[jest-dom/prefer-checked]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-empty.md[jest-dom/prefer-empty]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-enabled-disabled.md[jest-dom/prefer-enabled-disabled]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-focus.md[jest-dom/prefer-focus]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-in-document.md[jest-dom/prefer-in-document]`
+| Yes
+| Yes
+| Off
+4+| This rule will be set to _Warning_ once
+the https://github.com/testing-library/eslint-plugin-jest-dom/pull/107[fix] is published.
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-required.md[jest-dom/prefer-required]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-attribute.md[jest-dom/prefer-to-have-attribute]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-class.md[jest-dom/prefer-to-have-class]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-style.md[jest-dom/prefer-to-have-style]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-text-content.md[jest-dom/prefer-to-have-text-content]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-value.md[jest-dom/prefer-to-have-value]`
+| Yes
+| Yes
+| Warning
+
+|===

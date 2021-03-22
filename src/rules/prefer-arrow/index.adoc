@@ -1,0 +1,16 @@
+= `prefer-arrow`
+
+The `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow[eslint-plugin-prefer-arrow]` provide
+rule to prefer arrow functions.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow#configuration[prefer-arrow/prefer-arrow-functions]`
+|
+| Yes
+| Error
+
+|===

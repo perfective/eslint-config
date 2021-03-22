@@ -1,0 +1,221 @@
+= `node`
+
+The `link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]` provides
+additional ESLint rules for Node.js.
+This plugin is recommended by ESLint in replacement of Node.js-related rules
+the deprecated in v7.0.
+
+== Possible Errors
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/handle-callback-err.md[node/handle-callback-err]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-callback-literal.md[node/no-callback-literal]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-exports-assign.md[node/no-exports-assign]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-import.md[node/no-extraneous-import]`
+| Yes
+|
+| Off
+4+| The `import/no-extraneous-dependencies` is used instead.
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-require.md[node/no-extraneous-require]`
+| Yes
+|
+| Off
+4+| The `import/no-extraneous-dependencies` is used instead.
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-import.md[node/no-missing-import]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-require.md[node/no-missing-require]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-new-require.md[node/no-new-require]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-path-concat.md[node/no-path-concat]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-process-exit.md[node/no-process-exit]`
+|
+|
+| Off
+4+| The `unicorn/no-process-exit` rule is more flexible.
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-bin.md[node/no-unpublished-bin]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-import.md[node/no-unpublished-import]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-require.md[node/no-unpublished-require]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-builtins.md[node/no-unsupported-features/es-builtins]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md[node/no-unsupported-features/es-syntax]`
+| Yes
+|
+| Off
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md[node/no-unsupported-features/node-builtins]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/process-exit-as-throw.md[node/process-exit-as-throw]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/shebang.md[node/shebang]`
+| Yes
+| Yes
+| Warning
+
+|===
+
+
+== Best Practices
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md[node/no-deprecated-api]`
+| Yes
+|
+| Error
+
+|===
+
+
+== Stylistic Issues
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/callback-return.md[node/callback-return]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/exports-style.md[node/exports-style]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/file-extension-in-import.md[node/file-extension-in-import]`
+|
+| Yes
+| Off
+4+| Conflicts with the file suffixes like: `.module.ts`, `.component.ts`, `.mock.ts`, etc.
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/global-require.md[node/global-require]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-mixed-requires.md[node/no-mixed-requires]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-process-env.md[node/no-process-env]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-restricted-import.md[node/no-restricted-import]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-restricted-require.md[node/no-restricted-require]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-sync.md[node/no-sync]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/buffer.md[node/prefer-global/buffer]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/console.md[node/prefer-global/console]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/process.md[node/prefer-global/process]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/text-decoder.md[node/prefer-global/text-decoder]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/text-encoder.md[node/prefer-global/text-encoder]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/url-search-params.md[node/prefer-global/url-search-params]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/url.md[node/prefer-global/url]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/dns.md[node/prefer-promises/dns]`
+|
+|
+| Error
+
+| `link:https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/fs.md[node/prefer-promises/fs]`
+|
+|
+| Error
+
+|===

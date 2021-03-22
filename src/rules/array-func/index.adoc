@@ -1,0 +1,43 @@
+= `array-func`
+
+The `link:https://github.com/freaktechnik/eslint-plugin-array-func[eslint-plugin-array-func]`
+provides rules for Array functions and methods.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | https://github.com/freaktechnik/eslint-plugin-array-func#array-funcrecommended-configuration[Recommended] | Fixable | Config
+
+| `link:https://github.com/freaktechnik/eslint-plugin-array-func#from-map[array-func/from-map]`
+| Yes
+| Yes
+| Error
+
+| `link:https://github.com/freaktechnik/eslint-plugin-array-func#no-unnecessary-this-arg[array-func/no-unnecessary-this-arg]`
+| Yes
+| Partially
+| Warning
+
+| `link:https://github.com/freaktechnik/eslint-plugin-array-func#prefer-array-from[array-func/prefer-array-from]`
+| Yes
+| Yes
+| Error
+
+| `link:https://github.com/freaktechnik/eslint-plugin-array-func#avoid-reverse[array-func/avoid-reverse]`
+| Yes
+| Yes
+| Error
+
+| `link:https://github.com/freaktechnik/eslint-plugin-array-func#prefer-flat-map[array-func/prefer-flat-map]`
+|
+|
+| Off
+4+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
+
+| `link:https://github.com/freaktechnik/eslint-plugin-array-func#prefer-flat[array-func/prefer-flat]`
+|
+|
+| Off
+4+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
+
+|===

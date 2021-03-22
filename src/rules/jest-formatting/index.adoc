@@ -1,0 +1,51 @@
+= `jest-formatting`
+
+The `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting[eslint-plugin-jest-formatting]` provides
+ESLint formatting rules to ensure consistency and readability in Jest test suites.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-after-all-blocks.md[jest-formatting/padding-around-after-all-blocks]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-after-each-blocks.md[jest-formatting/padding-around-after-each-blocks]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-all.md[jest-formatting/padding-around-all]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-before-all-blocks.md[jest-formatting/padding-around-before-all-blocks]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-before-each-blocks.md[jest-formatting/padding-around-before-each-blocks]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-describe-blocks.md[jest-formatting/padding-around-describe-blocks]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-expect-groups.md[jest-formatting/padding-around-expect-groups]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting/blob/master/docs/rules/padding-around-test-blocks.md[jest-formatting/padding-around-test-blocks]`
+|
+| Yes
+| Warning
+
+|===
