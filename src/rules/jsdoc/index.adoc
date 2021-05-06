@@ -104,6 +104,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-asterisk-prefix[jsdoc/require-asterisk-prefix]`
+|
+|
+| Error
+
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-description[jsdoc/require-description]`
 |
 |

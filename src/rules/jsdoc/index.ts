@@ -67,6 +67,7 @@ export = {
         'jsdoc/require-description': ['error', {
             exemptedBy: ['inheritdoc', 'package', 'private', 'see'],
         }],
+        'jsdoc/require-asterisk-prefix': ['error', 'always'],
         'jsdoc/require-description-complete-sentence': 'error',
         'jsdoc/require-example': 'off',
         'jsdoc/require-file-overview': 'off',
