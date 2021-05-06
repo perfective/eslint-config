@@ -3,8 +3,8 @@ export type UnicornPreventAbbreviationReplacements = Record<string, boolean | Re
 export interface UnicornPreventAbbreviations {
     replacements: UnicornPreventAbbreviationReplacements;
     extendDefaultReplacements: boolean;
-    whitelist: Record<string, boolean>;
-    extendDefaultWhitelist: boolean;
+    allowList: Record<string, boolean>;
+    extendDefaultAllowList: boolean;
     checkDefaultAndNamespaceImports: 'internal' | boolean;
     checkShorthandImports: 'internal' | boolean;
     checkShorthandProperties: boolean;
@@ -44,8 +44,8 @@ export function unicornPreventAbbreviations(
             ...replacements,
         },
         extendDefaultReplacements: true,
-        whitelist: {},
-        extendDefaultWhitelist: true,
+        allowList: {},
+        extendDefaultAllowList: true,
         checkDefaultAndNamespaceImports: 'internal',
         checkShorthandImports: 'internal',
         checkShorthandProperties: false,

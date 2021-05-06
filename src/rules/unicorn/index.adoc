@@ -94,7 +94,7 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-push-push.md[unicorn/no-array-push-push]`
 | Yes
 | Partially
-| Off
+| Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-reduce.md[unicorn/no-array-reduce]`
 | Yes
@@ -105,6 +105,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Yes
 | Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-document-cookie.md[unicorn/no-document-cookie]`
+| Yes
+|
+| Error
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-for-loop.md[unicorn/no-for-loop]`
 | Yes
@@ -202,7 +207,7 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md[unicorn/numeric-separators-style]`
-|
+| Yes
 | Yes
 | Warning
 
@@ -217,13 +222,13 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat.md[unicorn/prefer-array-flat]`
-|
+| Yes
 | Yes
 | Off
 4+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat-map.md[unicorn/prefer-array-flat-map]`
-|
+| Yes
 | Yes
 | Off
 4+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
@@ -288,7 +293,17 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-module.md[unicorn/prefer-module]`
+| Yes
+| Yes
+| Off
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-negative-index.md[unicorn/prefer-negative-index]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-node-protocol.md[unicorn/prefer-node-protocol]`
 | Yes
 | Yes
 | Warning
@@ -344,6 +359,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-trim-start-end.md[unicorn/prefer-string-trim-start-end]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-switch.md[unicorn/prefer-switch]`
 | Yes
 | Yes
 | Warning

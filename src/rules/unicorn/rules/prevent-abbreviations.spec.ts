@@ -26,8 +26,8 @@ describe(unicornPreventAbbreviations, () => {
                     param: false,
                     params: false,
                 },
-                extendDefaultWhitelist: true,
-                whitelist: {},
+                extendDefaultAllowList: true,
+                allowList: {},
                 ignore: [
                     /e2e/u,
                 ],
@@ -66,8 +66,8 @@ describe(unicornPreventAbbreviations, () => {
                     props: false,
                     refs: false,
                 },
-                extendDefaultWhitelist: true,
-                whitelist: {},
+                extendDefaultAllowList: true,
+                allowList: {},
                 ignore: [
                     /e2e/u,
                 ],

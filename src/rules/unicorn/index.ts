@@ -26,15 +26,18 @@ export = {
         'unicorn/no-abusive-eslint-disable': 'error',
         'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'off',
-        'unicorn/no-array-push-push': 'off',
+        'unicorn/no-array-push-push': ['warn', {
+            ignore: ['readable', 'this', 'this.stream'],
+        }],
         'unicorn/no-array-reduce': 'off',
         'unicorn/no-console-spaces': 'warn',
+        'unicorn/no-document-cookie': 'error',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
         'unicorn/no-instanceof-array': 'warn',
         // Benefit of this rule is questionable and it's being overridden all the time.
         'unicorn/no-keyword-prefix': ['off', {
-            blacklist: ['new', 'class'],
+            disallowedPrefixes: ['new', 'class'],
             checkProperties: true,
             onlyCamelCase: false,
         }],
@@ -93,9 +96,14 @@ export = {
         'unicorn/prefer-keyboard-event-key': 'warn',
         'unicorn/prefer-math-trunc': 'warn',
         'unicorn/prefer-modern-dom-apis': 'warn',
+        'unicorn/prefer-module': 'off',
         'unicorn/prefer-negative-index': 'warn',
         'unicorn/prefer-number-properties': ['warn', {
             checkInfinity: true,
+        }],
+        'unicorn/prefer-node-protocol': ['warn', {
+            // Requires NodeJS 16
+            checkRequire: false,
         }],
         'unicorn/prefer-optional-catch-binding': 'warn',
         'unicorn/prefer-query-selector': 'warn',
@@ -109,6 +117,10 @@ export = {
         'unicorn/prefer-string-slice': 'warn',
         'unicorn/prefer-string-starts-ends-with': 'warn',
         'unicorn/prefer-string-trim-start-end': 'warn',
+        'unicorn/prefer-switch': ['error', {
+            minimumCases: 3,
+            emptyDefaultCase: 'do-nothing-comment',
+        }],
         'unicorn/prefer-ternary': 'off',
         'unicorn/prefer-type-error': 'warn',
         'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
