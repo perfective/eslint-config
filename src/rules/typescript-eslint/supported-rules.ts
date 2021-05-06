@@ -124,6 +124,7 @@ export = {
         '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
+        '@typescript-eslint/no-unsafe-argument': 'error',
         '@typescript-eslint/no-unsafe-assignment': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'error',
@@ -148,7 +149,7 @@ export = {
         // Rule behavior is unpredictable and 3rd-party libraries may not provide read-only types
         '@typescript-eslint/prefer-readonly-parameter-types': 'off',
         '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
-        '@typescript-eslint/prefer-regexp-exec': 'error',
+        '@typescript-eslint/prefer-regexp-exec': 'warn',
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
         // With the "func-style" as "declaration",
