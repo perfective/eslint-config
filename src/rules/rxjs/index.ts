@@ -40,7 +40,7 @@ export = {
             allowExplicitAny: false,
         }],
         'rxjs/no-index': 'error',
-        'rxjs/no-internal': 'error',
+        'rxjs/no-internal': 'warn',
         'rxjs/no-nested-subscribe': 'error',
         'rxjs/no-redundant-notify': 'error',
         // Prior to v6.4.0 shareReplay() operator had some surprising behavior:
