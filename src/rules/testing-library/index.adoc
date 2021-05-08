@@ -38,6 +38,11 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-container.md[testing-library/no-container]`
+|
+|
+| Error
+
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-debug.md[testing-library/no-debug]`
 |
 |
@@ -53,12 +58,32 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-node-access.md[testing-library/no-node-access]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]`
+|
+|
+| Error
+
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-render-in-setup.md[testing-library/no-render-in-setup]`
 |
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-empty-callback.md[testing-library/no-wait-for-empty-callback]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
+|
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
 |
 |
 | Error
@@ -83,6 +108,11 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md[testing-library/prefer-user-event]`
+|
+|
+| Error
+
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
 |
 |
@@ -92,5 +122,10 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Yes
 | Warning
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
+|
+|
+| Error
 
 |===
