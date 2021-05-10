@@ -1,5 +1,42 @@
 = Changelog
 
+== v0.14.0 (next)
+
+* Updated `eslint` to `7.26.0`.
+* Updated `@typescript-eslint` to `4.23.0`.
++
+* Upgraded `eslint-plugin-unicorn` to `32.0.1`:
+** Enabled `unicorn/no-array-push-push` as a warning;
+** Enabled `unicorn/no-document-cookie` as an error;
+** Enabled `unicorn/prefer-node-protocol` as a warning;
+** Enabled `unicorn/prefer-switch` as an error.
++
+* Upgraded `eslint-plugin-jsdoc` to `33.3.0`:
+** Enabled `jsdoc/require-asterisk-prefix` as an error.
++
+* Upgraded `eslint-plugin-jest-formatting` to `3.0.0`.
++
+* Upgraded `eslint-plugin-testing-library` to `4.2.1`:
+** Enabled `testing-library/no-container` as an error;
+** Enabled `testing-library/no-node-access` as an error;
+** Enabled `testing-library/no-promise-in-fire-event` as an error;
+** Enabled `testing-library/no-wait-for-multiple-assertions` as an error;
+** Enabled `testing-library/no-wait-for-side-effects` as an error;
+** Enabled `testing-library/prefer-user-event` as an error;
+** Enabled `testing-library/render-result-naming-convention` as an error.
++
+* Upgraded `eslint-plugin-promise` to `5.1.0`.
+* Updated `eslint-plugin-jest-dom` to `3.9.0`.
+* Updated `eslint-plugin-sonarjs` to `0.7.0`.
++
+* Updated `eslint-plugin-rxjs` to `3.3.0`:
+** Switched `rxjs/no-internal` into a warning.
++
+* Bumped `eslint-plugin-jest` to `24.3.6`.
+* Bumped `eslint-plugin-deprecation` to `1.2.1`.
+* Bumped `eslint-plugin-cypress` to `2.11.3`.
+
+
 == v0.13.0
 
 * Switched to globs in the configuration.
