@@ -11,7 +11,7 @@
 ** Enabled `unicorn/prefer-node-protocol` as a warning;
 ** Enabled `unicorn/prefer-switch` as an error.
 +
-* Upgraded `eslint-plugin-jsdoc` to `33.3.0`:
+* Upgraded `eslint-plugin-jsdoc` to `34.0.0`:
 ** Enabled `jsdoc/require-asterisk-prefix` as an error.
 +
 * Upgraded `eslint-plugin-jest-formatting` to `3.0.0`.
