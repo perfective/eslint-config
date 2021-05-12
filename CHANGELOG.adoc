@@ -3,7 +3,10 @@
 == v0.14.0 (next)
 
 * Updated `eslint` to `7.26.0`.
-* Updated `@typescript-eslint` to `4.23.0`.
++
+* Updated `@typescript-eslint` to `4.23.0`:
+** Enabled `@typescript-eslint/no-unsafe-argument` as an error;
+** Switched `@typescript-eslint/prefer-regexp-exec` into a warning.
 +
 * Upgraded `eslint-plugin-unicorn` to `32.0.1`:
 ** Enabled `unicorn/no-array-push-push` as a warning;
@@ -16,7 +19,7 @@
 +
 * Upgraded `eslint-plugin-jest-formatting` to `3.0.0`.
 +
-* Upgraded `eslint-plugin-testing-library` to `4.2.1`:
+* Upgraded `eslint-plugin-testing-library` to `4.3.0`:
 ** Enabled `testing-library/no-container` as an error;
 ** Enabled `testing-library/no-node-access` as an error;
 ** Enabled `testing-library/no-promise-in-fire-event` as an error;
