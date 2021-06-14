@@ -1,0 +1,8 @@
+# Build
+dist
+
+# ESLint
+*.js
+*.jsx
+*.ts
+*.tsx

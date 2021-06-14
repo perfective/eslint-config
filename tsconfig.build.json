@@ -5,8 +5,5 @@
         "declarationMap": false,
         "sourceMap": false
     },
-    "exclude": [
-        "dist",
-        "**/*.spec.ts"
-    ]
+    "exclude": ["dist", "**/*.spec.ts"]
 }
