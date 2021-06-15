@@ -144,7 +144,7 @@ ESLint rules for https://rxjs.dev[RxJS].
 | Error
 
 | `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-subject-value.md[rxjs/no-subject-value]`
-| Yes
+|
 |
 | Error
 
