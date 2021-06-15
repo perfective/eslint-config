@@ -76,6 +76,13 @@ to prevent issues with misspelling of file paths and import names.
 |
 | Off
 
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md[import/no-relative-packages]`
+|
+|
+| Error
+4+| Safety measure for monorepos where packages are published separately.
+It should not affect "namespaced" packages with `package.json` generated during the build.
+
 |===
 
 
@@ -148,6 +155,11 @@ to prevent issues with misspelling of file paths and import names.
 |
 |
 | Off
+
+| `link:https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md[import/no-import-module-exports]`
+|
+|
+| Error
 
 |===
 

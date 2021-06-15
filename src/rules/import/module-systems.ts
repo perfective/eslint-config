@@ -8,5 +8,6 @@ export = {
         'import/no-amd': 'error',
         // TODO: Research usage
         'import/no-nodejs-modules': 'off',
+        'import/no-import-module-exports': 'error',
     },
 };
