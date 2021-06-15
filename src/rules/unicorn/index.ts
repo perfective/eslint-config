@@ -105,7 +105,9 @@ export = {
             // Requires NodeJS 16
             checkRequire: false,
         }],
+        'unicorn/prefer-object-has-own': 'off',
         'unicorn/prefer-optional-catch-binding': 'warn',
+        'unicorn/prefer-prototype-methods': 'warn',
         'unicorn/prefer-query-selector': 'warn',
         'unicorn/prefer-reflect-apply': 'warn',
         // TBD: Conflicts with @typescript-eslint/prefer-regexp-exec
@@ -124,6 +126,8 @@ export = {
         'unicorn/prefer-ternary': 'off',
         'unicorn/prefer-type-error': 'warn',
         'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
+        'unicorn/require-array-join-separator': 'warn',
+        'unicorn/require-number-to-fixed-digits-argument': 'warn',
         'unicorn/string-content': 'off',
         'unicorn/throw-new-error': 'warn',
     },

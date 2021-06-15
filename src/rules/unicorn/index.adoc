@@ -313,7 +313,18 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-has-own.md[unicorn/prefer-object-has-own]`
+|
+| Yes
+| Off
+4+| `link:https://github.com/tc39/proposal-accessible-object-hasownproperty[Object.hasOwn()]` is not a part of ES6 standard.
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-optional-catch-binding.md[unicorn/prefer-optional-catch-binding]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-prototype-methods.md[unicorn/prefer-prototype-methods]`
 | Yes
 | Yes
 | Warning
@@ -387,6 +398,16 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 `dir`/`dirs`, `e`, `el`, `elem`, `envs`, `err`, `ev`/`evt`, `ext`/`exts`, `fn`/`func`, `idx`, `len`, `mod`, `msg`,
 `num`, `obj`, `opts`, `pkg`, `prev`, `prod`, `prop`/`props`, `ref`/`refs`, `rel`, `req`, `res`, `ret`, `retval`,
 `sep`, `src`, `stdDev`, `str`, `tbl`, `temp`, `tit`, `tmp`, `val`, `var`/`vars`, `ver`.
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-array-join-separator.md[unicorn/require-array-join-separator]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-number-to-fixed-digits-argument.md[unicorn/require-number-to-fixed-digits-argument]`
+| Yes
+| Yes
+| Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/string-content.md[unicorn/string-content]`
 |
