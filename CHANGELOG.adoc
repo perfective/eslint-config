@@ -1,5 +1,29 @@
 = Changelog
 
+== v0.15.0 (next)
+
+* Updated `eslint` to `7.28.0`.
++
+* Updated `@typescript-eslint` to `4.27.0`:
+** Allowed using bitwise operators in the enum declarations.
++
+* Updated `eslint-plugin-import` to `2.23.4`:
+** Enabled `import/no-import-module-exports` as an error;
+** Enabled `import/no-relative-packages` as an error.
++
+* Upgraded `eslint-plugin-jsdoc` to `35.2.0`:
+** Enabled `jsdoc/multiline-blocks` as an error;
+** Enabled `jsdoc/no-multi-asterisks` as an error;
++
+* Upgraded `eslint-plugin-unicorn` to `33.0.1`:
+** Enabled `unicorn/prefer-prototype-methods` as a warning;
+** Enabled `unicorn/require-array-join-separator` as a warning;
+** Enabled `unicorn/require-number-to-fixed-digits-argument` as a warning.
++
+* Updated `eslint-plugin-testing-library` to `4.6.0`.
+* Bumped `eslint-plugin-rxjs` to `3.3.3`.
+
+
 == v0.14.0
 
 * Updated `eslint` to `7.26.0`.
