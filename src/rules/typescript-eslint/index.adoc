@@ -309,6 +309,7 @@ provides lint rules for TypeScript codebases.
 |
 |
 | Error
+4+| Allows bitwise expressions, as enums may be used for bit flags.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-namespace-keyword.md[@typescript-eslint/prefer-namespace-keyword]`
 | Yes
@@ -359,10 +360,11 @@ provides lint rules for TypeScript codebases.
 |
 | Yes
 | Warning
-4+| With the "func-style" as "declaration",
+4+| If the `func-style` is `declaration`,
 arrow functions can only be lambdas,
 so `async` keyword can be skipped for brevity.
-If the `func-style` rule is set to `expression`,
+
+If the `func-style` is `expression`,
 not checking arrow functions causes `require-await` to miss async functions.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-array-sort-compare.md[@typescript-eslint/require-array-sort-compare]`
