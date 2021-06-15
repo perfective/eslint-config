@@ -23,7 +23,8 @@
     "license": "MIT",
     "scripts": {
         "dist": "gulp",
-        "lint": "gulp build && eslint --fix ./ && npm run lint:prettier",
+        "lint": "gulp build && npm run lint:eslint && npm run lint:prettier",
+        "lint:eslint": "eslint --fix ./",
         "lint:prettier": "prettier --write .",
         "lint:prettier:build": "prettier --check .",
         "test": "jest",
