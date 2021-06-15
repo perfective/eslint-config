@@ -79,6 +79,12 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-multiline-blocks[jsdoc/multiline-blocks]`
+| Yes
+|
+| Error
+4+| Allows `@lends`, `@type`, and `@deprecated` tags to be single-line JSDocs.
+
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-newline-after-description[jsdoc/newline-after-description]`
 | Yes
 |
@@ -93,6 +99,21 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 |
 | Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc/#eslint-plugin-jsdoc-rules-no-missing-syntax[jsdoc/no-missing-syntax]`
+|
+|
+| Off
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-multi-asterisks[jsdoc/no-multi-asterisks]`
+| Yes
+| Yes
+| Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc/#eslint-plugin-jsdoc-rules-no-restricted-syntax[jsdoc/no-restricted-syntax]`
+|
+|
+| Off
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-types[jsdoc/no-types]`
 |
@@ -213,6 +234,14 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | Yes
 |
 | Error
+
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#tag-lines[jsdoc/tag-lines]`
+| Yes
+| Yes
+| Off
+4+| The rule is not flexible enough to configure different tags.
+For example, it does not allow to enforce a new line after a block of `@param` tags
+without adding a new line after each `@param` tag.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-valid-types[jsdoc/valid-types]`
 | Yes
