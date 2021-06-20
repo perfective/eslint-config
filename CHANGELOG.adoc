@@ -2,7 +2,10 @@
 
 == v0.15.0 (next)
 
-* Updated `eslint` to `7.28.0`.
+* JSDoc requires `@param` and `@returns` tags and their types in JavaScript files.
+* Added a workaround for the `@typescript-eslint/indent` to reduce issues with indent when using generics.
++
+* Updated `eslint` to `7.29.0`.
 +
 * Updated `@typescript-eslint` to `4.27.0`:
 ** Allowed using bitwise operators in the enum declarations.
@@ -11,7 +14,7 @@
 ** Enabled `import/no-import-module-exports` as an error;
 ** Enabled `import/no-relative-packages` as an error.
 +
-* Upgraded `eslint-plugin-jsdoc` to `35.2.0`:
+* Upgraded `eslint-plugin-jsdoc` to `35.3.2`:
 ** Enabled `jsdoc/multiline-blocks` as an error;
 ** Enabled `jsdoc/no-multi-asterisks` as an error;
 +
