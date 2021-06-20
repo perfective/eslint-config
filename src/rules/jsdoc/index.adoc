@@ -124,7 +124,9 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-types[jsdoc/no-types]`
 |
 |
-| Error
+| Error for TypeScript; Off for JavaScript.
+4+| In TypeScript adding types to JSDoc would duplicate existing information.
+In JavaScript types should be required in the JSDocs.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-undefined-types[jsdoc/no-undefined-types]`
 | Yes
@@ -169,7 +171,8 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param[jsdoc/require-param]`
 | Yes
 |
-| Off
+| Off in TypeScript; Error in JavaScript
+4+| Once a JSDoc block is added, ensure it provides all type information.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description[jsdoc/require-param-description]`
 | Yes
@@ -184,7 +187,8 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-type[jsdoc/require-param-type]`
 | Yes
 |
-| Off
+| Off for TypeScript; Error for JavaScript
+4+| In JavaScript, we have to require types to allow better static checks.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-property[jsdoc/require-property]`
 | Yes
@@ -209,7 +213,8 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns[jsdoc/require-returns]`
 | Yes
 |
-| Off
+| Off in TypeScript; Error in JavaScript
+4+| Once a JSDoc block is added, ensure it provides all type information.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-check[jsdoc/require-returns-check]`
 | Yes
@@ -224,7 +229,8 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-type[jsdoc/require-returns-type]`
 | Yes
 |
-| Off
+| Off in TypeScript; Error in JavaScript
+4+| In JavaScript, we have to require types to allow better static checks.
 
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-throws[jsdoc/require-throws]`
 |

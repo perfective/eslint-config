@@ -46,6 +46,11 @@ export = {
                 'import/no-commonjs': 'off',
                 'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
                 'import/unambiguous': 'off',
+                'jsdoc/no-types': 'off',
+                'jsdoc/require-param': 'error',
+                'jsdoc/require-param-type': 'error',
+                'jsdoc/require-returns': 'error',
+                'jsdoc/require-returns-type': 'error',
             },
         },
         {
