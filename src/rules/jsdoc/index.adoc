@@ -79,6 +79,12 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-match-name[jsdoc/match-name]`
+|
+|
+| Off
+4+| This rule requires a custom configuration that depends on the accepted code style.
+
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-multiline-blocks[jsdoc/multiline-blocks]`
 | Yes
 |

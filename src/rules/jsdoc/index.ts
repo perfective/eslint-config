@@ -57,6 +57,7 @@ export = {
         }],
         'jsdoc/implements-on-classes': 'error',
         'jsdoc/match-description': 'error',
+        'jsdoc/match-name': 'off',
         'jsdoc/multiline-blocks': ['error', {
             noZeroLineText: true,
             noFinalLineText: true,
