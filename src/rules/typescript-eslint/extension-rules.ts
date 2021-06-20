@@ -31,9 +31,17 @@ export = {
         'func-call-spacing': 'off',
         '@typescript-eslint/func-call-spacing': ['warn', 'never'],
         'indent': 'off',
+        // TODO: Research more options using https://astexplorer.net
         '@typescript-eslint/indent': ['warn', 4, {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             SwitchCase: 1,
+            ignoredNodes: [
+
+                /**
+                 * @workaround https://github.com/typescript-eslint/typescript-eslint/issues/455#issuecomment-580636221
+                 */
+                'TSTypeParameterInstantiation',
+            ],
         }],
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': ['error', 'always'],
