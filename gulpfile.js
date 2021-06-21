@@ -20,6 +20,9 @@ exports.default = gulp.series(
             'rules.d.ts',
             'rules/**/rules/*.d.ts',
         ],
+    }, {
+        // Remove the "exports" property as it doesn't support `rules.js` file.
+        exports: undefined,
     }),
     build.copy([
         './LICENSE*',
