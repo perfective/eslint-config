@@ -7,14 +7,14 @@
 +
 * Updated `eslint` to `7.29.0`.
 +
-* Updated `@typescript-eslint` to `4.27.0`:
+* Updated `@typescript-eslint` to `4.28.0`:
 ** Allowed using bitwise operators in the enum declarations.
 +
 * Updated `eslint-plugin-import` to `2.23.4`:
 ** Enabled `import/no-import-module-exports` as an error;
 ** Enabled `import/no-relative-packages` as an error.
 +
-* Upgraded `eslint-plugin-jsdoc` to `35.3.2`:
+* Upgraded `eslint-plugin-jsdoc` to `35.4.0`:
 ** Enabled `jsdoc/multiline-blocks` as an error;
 ** Enabled `jsdoc/no-multi-asterisks` as an error;
 +
