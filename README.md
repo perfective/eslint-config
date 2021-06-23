@@ -81,5 +81,5 @@ Yet, there are few rules that still need to be supported.
 TSLint rules are executed using the
 [ESLint Plugin TSLint](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint).
 
-Read the [full documentation](https://github.com/perfective/eslint-config/blob/master/README.adoc)
+Read the [full documentation](https://github.com/perfective/eslint-config/blob/main/README.adoc)
 in the repository.

@@ -1,6 +1,6 @@
 = Changelog
 
-== v0.15.0 (next)
+== v0.15.0
 
 * JSDoc requires `@param` and `@returns` tags and their types in JavaScript files.
 * Added a workaround for the `@typescript-eslint/indent` to reduce issues with indent when using generics.
