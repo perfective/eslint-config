@@ -1,5 +1,10 @@
 = Changelog
 
+== v0.15.1
+
+* Fixed the conflict between the `no-extra-parens` and the `no-confusing-arrow` rules (#1).
+
+
 == v0.15.0
 
 * JSDoc requires `@param` and `@returns` tags and their types in JavaScript files.
