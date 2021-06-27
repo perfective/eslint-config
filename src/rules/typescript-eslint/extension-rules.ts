@@ -73,7 +73,7 @@ export = {
             ignoreJSX: 'all',
             // Nested binary expressions may be hard to break down into named functions
             nestedBinaryExpressions: false,
-            enforceForArrowConditionals: true,
+            enforceForArrowConditionals: false,
         }],
         'no-extra-semi': 'off',
         '@typescript-eslint/no-extra-semi': 'warn',
