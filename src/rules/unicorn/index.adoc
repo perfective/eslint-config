@@ -91,6 +91,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Partially
 | Off
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-method-this-argument.md[unicorn/no-array-method-this-argument]`
+| Yes
+| Yes
+| Warning
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-push-push.md[unicorn/no-array-push-push]`
 | Yes
 | Partially
@@ -243,6 +248,12 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-some.md[unicorn/prefer-array-some]`
+|
+| Yes
+|
+4+| `String#at()` is experimental.
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-date-now.md[unicorn/prefer-date-now]`
 | Yes
 | Yes
@@ -384,6 +395,13 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Off
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md[unicorn/prefer-top-level-await]`
+|
+|
+| Off
+4+| https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level-await[Top level]
+is only supported by the latest browsers.
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-type-error.md[unicorn/prefer-type-error]`
 | Yes
 | Yes
@@ -408,6 +426,11 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Yes
 | Yes
 | Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-post-message-target-origin.md[unicorn/require-post-message-target-origin]`
+| Yes
+|
+| Error
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/string-content.md[unicorn/string-content]`
 |

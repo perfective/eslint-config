@@ -1,5 +1,10 @@
 = Changelog
 
+== Unpublished
+
+* Upgraded `eslint-plugin-unicorn` to `34.0.0`.
+
+
 == v0.15.1
 
 * Fixed the conflict between the `no-extra-parens` and the `no-confusing-arrow` rules (#1).
