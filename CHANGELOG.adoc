@@ -3,6 +3,7 @@
 == Unpublished
 
 * Bumped `@typescript-eslint` to `4.28.1`;
+* Bumped `eslint-plugin-jsdoc` to `35.4.1`;
 * Upgraded `eslint-plugin-unicorn` to `34.0.0`.
 
 
