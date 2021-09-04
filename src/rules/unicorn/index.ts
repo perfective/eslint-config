@@ -55,6 +55,8 @@ export = {
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unsafe-regex': 'error',
         'unicorn/no-unused-properties': 'off',
+        'unicorn/no-useless-length-check': 'warn',
+        'unicorn/no-useless-spread': 'warn',
         'unicorn/no-useless-undefined': 'off',
         'unicorn/no-zero-fractions': 'off',
         'unicorn/number-literal-case': 'warn',
@@ -100,12 +102,16 @@ export = {
         'unicorn/prefer-modern-dom-apis': 'warn',
         'unicorn/prefer-module': 'off',
         'unicorn/prefer-negative-index': 'warn',
-        'unicorn/prefer-number-properties': ['warn', {
-            checkInfinity: true,
-        }],
         'unicorn/prefer-node-protocol': ['warn', {
             // Requires NodeJS 16
             checkRequire: false,
+        }],
+        'unicorn/prefer-number-properties': ['warn', {
+            checkInfinity: true,
+        }],
+        // TBD: Check if Object.fromEntries() is part of the ES6 spec
+        'unicorn/prefer-object-from-entries': ['off', {
+            functions: [],
         }],
         'unicorn/prefer-object-has-own': 'off',
         'unicorn/prefer-optional-catch-binding': 'warn',

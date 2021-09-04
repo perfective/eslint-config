@@ -191,6 +191,16 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-length-check.md[unicorn/no-useless-length-check]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-spread.md[unicorn/no-useless-spread]`
+| Yes
+| Yes
+| Warning
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unused-properties.md[unicorn/no-unused-properties]`
 |
 |
@@ -323,6 +333,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Yes
 | Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-from-entries.md[unicorn/prefer-object-from-entries]`
+| Yes
+| Yes
+| Off
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-has-own.md[unicorn/prefer-object-has-own]`
 |
