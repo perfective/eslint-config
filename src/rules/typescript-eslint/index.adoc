@@ -349,7 +349,8 @@ provides lint rules for TypeScript codebases.
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-return-this-type.md[@typescript-eslint/prefer-return-this-type]`
 |
 | Yes
-| Warning
+| Off
+4+| Temporarily `Off` due to a bug in the auto-fix.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md[@typescript-eslint/prefer-string-starts-ends-with]`
 |

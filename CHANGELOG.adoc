@@ -1,10 +1,37 @@
 = Changelog
 
-== Unpublished
+== v0.16.0-alpha
 
-* Bumped `@typescript-eslint` to `4.28.1`;
-* Bumped `eslint-plugin-jsdoc` to `35.4.1`;
-* Upgraded `eslint-plugin-unicorn` to `34.0.0`.
+* Updated `eslint` to `7.32.0`;
+* Updated `@typescript-eslint` to `4.30.0`;
++
+* Updated `eslint-plugin-import` to `2.24.2`:
+** Enabled ESM `import()` no dynamic values check;
+** Enabled CommonJS named imports existence check.
++
+* Upgraded `eslint-plugin-jsdoc` to `36.0.8`.
++
+* Upgraded `eslint-plugin-unicorn` to `35.0.0`:
+** Enabled `unicorn/no-useless-length-check` as a warning;
+** Enabled `unicorn/no-useless-spread` as a warning.
++
+* Updated `eslint-plugin-jest` to `24.4.0`:
+** Enabled `jest/max-nested-describe` as an error.
++
+* Updated `eslint-plugin-testing-library` to `4.12.0`:
+** Enabled `testing-library/prefer-query-by-disappearance` as an error.
++
+* Upgraded `eslint-plugin-sonarjs` to `0.10.0`:
+** Enabled `sonarjs/no-empty-collection` as an error;
+** Enabled `sonarjs/no-ignored-return` as an error;
+** Enabled `sonarjs/non-existent-operator` as an error;
+** Enabled `sonarjs/no-gratuitous-expressions` as an error;
+** Enabled `sonarjs/no-nested-switch` as an error;
+** Enabled `sonarjs/no-nested-template-literals` as an error;
+** Switched `sonarjs/no-inverted-boolean-check` to a warning.
++
+* Bumped `eslint-plugin-rxjs` to `3.3.7`.
+* Updated `@babel/eslint-parser` to `7.15.4`.
 
 
 == v0.15.1
