@@ -20,6 +20,11 @@ SonarJS rules for ESLint to detect bugs and suspicious patterns in your code.
 |
 | Error
 
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-empty-collection.md[sonarjs/no-empty-collection]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-extra-arguments.md[sonarjs/no-extra-arguments]`
 | Yes
 |
@@ -35,12 +40,22 @@ SonarJS rules for ESLint to detect bugs and suspicious patterns in your code.
 |
 | Error
 
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-ignored-return.md[sonarjs/no-ignored-return]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-one-iteration-loop.md[sonarjs/no-one-iteration-loop]`
 | Yes
 |
 | Error
 
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-use-of-empty-return-value.md[sonarjs/no-use-of-empty-return-value]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/non-existent-operator.md[sonarjs/non-existent-operator]`
 | Yes
 |
 | Error
@@ -58,6 +73,13 @@ SonarJS rules for ESLint to detect bugs and suspicious patterns in your code.
 | Yes
 |
 | Off
+4+| The core `complexity` rule (with strict level of complexity) covers all the cases.
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/elseif-without-else.md[sonarjs/elseif-without-else]`
+|
+|
+| Off
+
 4+| The core `complexity` rule (with strict level of complexity) covers all the cases.
 
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/max-switch-cases.md[sonarjs/max-switch-cases]`
@@ -87,6 +109,11 @@ SonarJS rules for ESLint to detect bugs and suspicious patterns in your code.
 |
 | Error
 
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-gratuitous-expressions.md[sonarjs/no-gratuitous-expressions]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-identical-functions.md[sonarjs/no-identical-functions]`
 | Yes
 |
@@ -95,6 +122,16 @@ SonarJS rules for ESLint to detect bugs and suspicious patterns in your code.
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-inverted-boolean-check.md[sonarjs/no-inverted-boolean-check]`
 | Yes
 | Yes
+| Warning
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-nested-switch.md[sonarjs/no-nested-switch]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-nested-template-literals.md[sonarjs/no-nested-template-literals]`
+| Yes
+|
 | Error
 
 | `link:https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-redundant-boolean.md[sonarjs/no-redundant-boolean]`
