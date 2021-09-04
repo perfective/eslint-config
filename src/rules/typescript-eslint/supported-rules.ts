@@ -152,6 +152,7 @@ export = {
         '@typescript-eslint/prefer-readonly-parameter-types': 'off',
         '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
         '@typescript-eslint/prefer-regexp-exec': 'warn',
+        '@typescript-eslint/prefer-return-this-type': 'warn',
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
         // With the "func-style" as "declaration",
