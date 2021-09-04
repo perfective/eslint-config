@@ -24,6 +24,12 @@ for https://jestjs.io[Jest].
 | Error
 4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-nested-describe.md[jest/max-nested-describe]`
+|
+|
+| Error
+4+| The maximum of `3` nested `describe` should be enough for a hierarchy: Class → Method → Precondition ("When").
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-alias-methods.md[jest/no-alias-methods]`
 |
 | Yes
