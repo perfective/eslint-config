@@ -113,6 +113,11 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]`
+|
+|
+| Error
+
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md[testing-library/prefer-user-event]`
 |
 |
