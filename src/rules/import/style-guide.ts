@@ -5,6 +5,8 @@ export = {
         'import/no-duplicates': ['warn', {
             considerQueryString: true,
         }],
+        // TODO: This rule now has the "ignore" option.
+        //  Should this rule be enabled by default?
         'import/no-namespace': 'off',
         'import/extensions': ['error', 'never'],
         'import/order': ['off', {

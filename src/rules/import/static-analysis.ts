@@ -1,13 +1,17 @@
 export = {
     rules: {
         'import/no-unresolved': 'error',
-        'import/named': 'error',
+        'import/named': ['error', {
+            commonjs: true,
+        }],
         'import/default': 'error',
         'import/namespace': 'error',
         // TODO: Research usage
         'import/no-restricted-paths': 'off',
         'import/no-absolute-path': 'error',
-        'import/no-dynamic-require': 'error',
+        'import/no-dynamic-require': ['error', {
+            esmodule: true,
+        }],
         // TODO: Research usage
         'import/no-internal-modules': 'off',
         'import/no-webpack-loader-syntax': 'error',
