@@ -3,6 +3,7 @@
     "compilerOptions": {
         "declaration": true,
         "declarationMap": false,
+        "exactOptionalPropertyTypes": false,
         "sourceMap": false
     },
     "exclude": ["dist", "**/*.spec.ts"]
