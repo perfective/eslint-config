@@ -1,5 +1,11 @@
 = Changelog
 
+== Unpublished
+
+* Updated `@typescript-eslint` to `4.31.1`:
+** Enabled `@typescript-eslint/no-meaningless-void-operator` as a warning.
+
+
 == v0.16.0-alpha
 
 * Updated `eslint` to `7.32.0`;

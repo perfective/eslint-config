@@ -114,6 +114,8 @@ export = {
             arraysInObjects: true,
             objectsInObjects: true,
         }],
+        'padding-line-between-statements': 'off',
+        '@typescript-eslint/padding-line-between-statements': 'off',
         'quotes': 'off',
         '@typescript-eslint/quotes': ['warn', 'single', {
             avoidEscape: true,

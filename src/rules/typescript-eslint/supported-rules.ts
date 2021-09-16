@@ -106,6 +106,9 @@ export = {
         '@typescript-eslint/no-invalid-void-type': ['error', {
             allowInGenericTypeArguments: true,
         }],
+        '@typescript-eslint/no-meaningless-void-operator': ['warn', {
+            checkNever: true,
+        }],
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
@@ -174,10 +177,11 @@ export = {
             checkCompoundAssignments: true,
         }],
         '@typescript-eslint/restrict-template-expressions': ['error', {
-            allowNumber: false,
-            allowBoolean: false,
             allowAny: false,
+            allowBoolean: false,
             allowNullish: false,
+            allowNumber: false,
+            allowRegExp: false,
         }],
         // The idea for this rule is good, but it does not have enough granularity.
         // For example, "null", "string" and "undefined" are keywords,
