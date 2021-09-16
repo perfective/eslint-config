@@ -9,6 +9,7 @@
 ** Enabled 'unicorn/no-invalid-remove-event-listener' as an error;
 ** Enabled `unicorn/no-useless-fallback-in-spread` as a warning.
 +
+* Updated `eslint-plugin-jsdoc` to `36.1.0`.
 * Bumped `eslint-plugin-testing-library` to `4.12.2`.
 * Bumped `eslint-plugin-jest-dom` to `3.9.2`.
 

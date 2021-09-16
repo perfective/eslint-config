@@ -16,6 +16,7 @@ export = {
                     replacement: 'emits',
                 },
             },
+            ignoreReplacesDocs: true,
             overrideReplacesDocs: true,
             augmentsExtendsReplacesDocs: false,
             implementsReplacesDoc: false,
