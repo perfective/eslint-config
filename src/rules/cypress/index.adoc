@@ -27,6 +27,11 @@ some of the https://docs.cypress.io/guides/references/best-practices.html[best p
 |
 | Error
 
+| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-pause.md[cypress/no-pause]`
+|
+|
+| Error
+
 | `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-unnecessary-waiting.md[cypress/no-unnecessary-waiting]`
 |
 |
