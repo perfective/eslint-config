@@ -4,6 +4,10 @@
 
 * Updated `@typescript-eslint` to `4.31.1`:
 ** Enabled `@typescript-eslint/no-meaningless-void-operator` as a warning.
++
+* Updated `eslint-plugin-unicorn` to `36.0.0`:
+** Enabled 'unicorn/no-invalid-remove-event-listener' as an error;
+** Enabled `unicorn/no-useless-fallback-in-spread` as a warning.
 
 
 == v0.16.0-alpha

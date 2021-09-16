@@ -131,6 +131,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-remove-event-listener.md[unicorn/no-invalid-remove-event-listener]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-keyword-prefix.md[unicorn/no-keyword-prefix]`
 |
 |
@@ -190,6 +195,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 |
 | Error
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
+| Yes
+| Yes
+| Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-length-check.md[unicorn/no-useless-length-check]`
 | Yes

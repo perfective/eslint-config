@@ -36,6 +36,7 @@ export = {
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
         'unicorn/no-instanceof-array': 'warn',
+        'unicorn/no-invalid-remove-event-listener': 'error',
         // Benefit of this rule is questionable and it's being overridden all the time.
         'unicorn/no-keyword-prefix': ['off', {
             disallowedPrefixes: ['new', 'class'],
@@ -55,6 +56,7 @@ export = {
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unsafe-regex': 'error',
         'unicorn/no-unused-properties': 'off',
+        'unicorn/no-useless-fallback-in-spread': 'warn',
         'unicorn/no-useless-length-check': 'warn',
         'unicorn/no-useless-spread': 'warn',
         'unicorn/no-useless-undefined': 'off',
