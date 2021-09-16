@@ -13,6 +13,7 @@
 ** Enabled `cypress/no-pause` as an error.
 +
 * Updated `eslint-plugin-jsdoc` to `36.1.0`.
+* Updated `eslint-import-resolver-typescript` to `2.5.0`.
 * Bumped `eslint-plugin-testing-library` to `4.12.2`.
 * Bumped `eslint-plugin-jest-dom` to `3.9.2`.
 
