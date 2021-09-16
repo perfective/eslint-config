@@ -8,6 +8,8 @@
 * Updated `eslint-plugin-unicorn` to `36.0.0`:
 ** Enabled 'unicorn/no-invalid-remove-event-listener' as an error;
 ** Enabled `unicorn/no-useless-fallback-in-spread` as a warning.
++
+* Bumped `eslint-plugin-testing-library` to `4.12.2`.
 
 
 == v0.16.0-alpha
