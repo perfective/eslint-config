@@ -10,6 +10,7 @@
 ** Enabled `unicorn/no-useless-fallback-in-spread` as a warning.
 +
 * Bumped `eslint-plugin-testing-library` to `4.12.2`.
+* Bumped `eslint-plugin-jest-dom` to `3.9.2`.
 
 
 == v0.16.0-alpha
