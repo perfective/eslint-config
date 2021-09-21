@@ -1,6 +1,6 @@
 {
     "name": "@perfective/eslint-config",
-    "version": "0.16.0-alpha",
+    "version": "0.16.0-alpha.1",
     "description": "ESLint shareable rules configuration",
     "keywords": [
         "code quality",
@@ -31,7 +31,7 @@
         "test:build": "jest --clearCache && jest --collectCoverage"
     },
     "peerDependencies": {
-        "@babel/eslint-parser": "^7.15.4",
+        "@babel/eslint-parser": "^7.15.7",
         "@typescript-eslint/eslint-plugin": "^4.31.1",
         "@typescript-eslint/eslint-plugin-tslint": "^4.31.1",
         "@typescript-eslint/parser": "^4.31.1",
@@ -58,7 +58,7 @@
     },
     "devDependencies": {
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
-        "@babel/eslint-parser": "^7.15.4",
+        "@babel/eslint-parser": "^7.15.7",
         "@perfective/build": "~0.2.0-alpha",
         "@types/jest": "^27.0.1",
         "@typescript-eslint/eslint-plugin": "4.31.1",
