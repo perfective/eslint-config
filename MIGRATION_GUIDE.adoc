@@ -1,0 +1,42 @@
+= Migration Guide
+
+Migration between minor versions follows the same steps:
+
+. Update `@perfective/eslint-config` and its peer dependencies.
+. Disable all new rules.
+. Gradually enable the new rules checking for the regressions.
+
+
+== From `v0.15.1` to `v0.16.0-alpha.1`
+
+.`.eslintrc.js`
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                '@typescript-eslint/no-meaningless-void-operator': 'off',
+                'cypress/no-pause': 'off',
+                'jest/max-nested-describe': 'off',
+                'sonarjs/no-empty-collection': 'off',
+                'sonarjs/no-gratuitous-expressions': 'off',
+                'sonarjs/no-ignored-return': 'off',
+                'sonarjs/no-inverted-boolean-check': 'off',
+                'sonarjs/no-nested-switch': 'off',
+                'sonarjs/no-nested-template-literals': 'off',
+                'sonarjs/non-existent-operator': 'off',
+                'testing-library/prefer-query-by-disappearance': 'off',
+                'unicorn/no-invalid-remove-event-listener': 'off',
+                'unicorn/no-useless-fallback-in-spread': 'off',
+                'unicorn/no-useless-length-check': 'off',
+                'unicorn/no-useless-spread': 'off',
+            }
+        }
+    ]
+};
+----
