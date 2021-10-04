@@ -24,6 +24,7 @@ module.exports = {
             files: ['*.[jt]s?(x)'],
             rules: {
                 '@typescript-eslint/no-meaningless-void-operator': 'off',
+                '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'off',
                 '@typescript-eslint/prefer-return-this-type': 'off',
                 'cypress/no-pause': 'off',
                 'jest/prefer-expect-resolves': 'off',
