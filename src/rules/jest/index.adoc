@@ -168,8 +168,7 @@ for https://jestjs.io[Jest].
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md[jest/prefer-to-be]`
 |
 | Yes
-| Off
-4+| The rule is temporarily `Off` due to the https://github.com/jest-community/eslint-plugin-jest/issues/921[bug] with the `RegExp` literal notation.
+| Warning
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be-null.md[jest/prefer-to-be-null]`
 |
