@@ -14,7 +14,7 @@ and the `link:https://github.com/typescript-eslint/typescript-eslint/tree/master
 * `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]`;
 * `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]`;
 * `link:https://mysticatea.github.io/eslint-plugin-eslint-comments[eslint-plugin-eslint-comments]`;
-* `link:https://github.com/benmosher/eslint-plugin-import[eslint-plugin-import]`;
+* `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]`;
 * `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]`;
 * `link:https://github.com/testing-library/eslint-plugin-jest-dom[eslint-plugin-jest-dom]`;
 * `link:https://github.com/dangreenisrael/eslint-plugin-jest-formatting[eslint-plugin-jest-formatting]`;

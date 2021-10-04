@@ -14,7 +14,7 @@ and the [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-e
 -   [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress);
 -   [`eslint-plugin-deprecation`](https://github.com/gund/eslint-plugin-deprecation);
 -   [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments);
--   [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import);
+-   [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
 -   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest);
 -   [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom);
 -   [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting);
