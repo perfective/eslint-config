@@ -53,7 +53,10 @@ export = {
         'jest/prefer-hooks-on-top': 'error',
         'jest/prefer-spy-on': 'warn',
         'jest/prefer-strict-equal': 'warn',
-        'jest/prefer-to-be': 'warn',
+        // TODO: Enable when it is fixed:
+        //  This rule treats regular expression literal notion as a literal
+        // See https://github.com/jest-community/eslint-plugin-jest/issues/921
+        'jest/prefer-to-be': 'off',
         'jest/prefer-to-be-null': 'warn',
         'jest/prefer-to-be-undefined': 'warn',
         'jest/prefer-to-contain': 'warn',
