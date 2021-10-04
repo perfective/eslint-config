@@ -6,6 +6,10 @@
 ** Enabled `@typescript-eslint/prefer-return-this-type` as a warning;
 ** Enabled `@typescript-eslint/no-non-null-asserted-nullish-coalescing` as an error;
 ** Use `@typescript-eslint/no-restricted-imports` instead of `no-restricted-imports` for TS files.
++
+* Updated `eslint-plugin-jest` to `24.5.0`:
+** Enabled `jest/prefer-expect-resolves` as a warning;
+** Enabled `jest/prefer-to-be` as a warning.
 
 
 == v0.16.0-alpha.1

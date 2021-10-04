@@ -145,6 +145,11 @@ for https://jestjs.io[Jest].
 |
 | Off
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-expect-resolves.md[jest/prefer-expect-resolves]`
+|
+|
+| Warning
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-on-top.md[jest/prefer-hooks-on-top]`
 |
 |
@@ -156,6 +161,11 @@ for https://jestjs.io[Jest].
 | Warning
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-strict-equal.md[jest/prefer-strict-equal]`
+|
+|
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md[jest/prefer-to-be]`
 |
 |
 | Warning
