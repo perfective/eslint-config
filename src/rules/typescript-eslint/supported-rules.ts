@@ -112,6 +112,7 @@ export = {
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
+        '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/no-parameter-properties': 'off',
@@ -155,11 +156,7 @@ export = {
         '@typescript-eslint/prefer-readonly-parameter-types': 'off',
         '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
         '@typescript-eslint/prefer-regexp-exec': 'warn',
-        // TODO: This rule has a bug in the fixer,
-        //  it doesn't replace the generic types,
-        //  e.g. Just<T> becomes this<T> which is invalid.
-        // @see https://github.com/typescript-eslint/typescript-eslint/issues/3842
-        '@typescript-eslint/prefer-return-this-type': 'off',
+        '@typescript-eslint/prefer-return-this-type': 'warn',
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
         // With the "func-style" as "declaration",

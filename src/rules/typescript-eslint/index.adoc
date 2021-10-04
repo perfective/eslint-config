@@ -185,6 +185,11 @@ provides lint rules for TypeScript codebases.
 |
 | Error
 
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-nullish-coalescing.md[@typescript-eslint/no-non-null-asserted-nullish-coalescing]`
+|
+|
+| Error
+
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.md[@typescript-eslint/no-non-null-asserted-optional-chain]`
 | Yes
 |
@@ -354,8 +359,7 @@ provides lint rules for TypeScript codebases.
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-return-this-type.md[@typescript-eslint/prefer-return-this-type]`
 |
 | Yes
-| Off
-4+| Temporarily `Off` due to a bug in the auto-fix.
+| Warning
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md[@typescript-eslint/prefer-string-starts-ends-with]`
 |
@@ -550,6 +554,11 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Off
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.md[@typescript-eslint/no-redeclare]`
+|
+|
+| Error
+
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-restricted-imports.md[@typescript-eslint/no-restricted-imports]`
 |
 |
 | Error

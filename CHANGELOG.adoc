@@ -1,5 +1,13 @@
 = Changelog
 
+== Unpublished
+
+* Updated `@typescript-eslint` to `4.32.0`:
+** Enabled `@typescript-eslint/prefer-return-this-type` as a warning;
+** Enabled `@typescript-eslint/no-non-null-asserted-nullish-coalescing` as an error;
+** Use `@typescript-eslint/no-restricted-imports` instead of `no-restricted-imports` for TS files.
+
+
 == v0.16.0-alpha.1
 
 * Updated `@typescript-eslint` to `4.31.1`:

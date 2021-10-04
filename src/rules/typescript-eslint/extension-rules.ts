@@ -89,6 +89,10 @@ export = {
         '@typescript-eslint/no-magic-numbers': 'off',
         'no-redeclare': 'off',
         '@typescript-eslint/no-redeclare': 'error',
+        'no-restricted-imports': 'off',
+        '@typescript-eslint/no-restricted-imports': ['error', {
+            allowTypeImports: false,
+        }],
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'off',
         'no-throw-literal': 'off',
