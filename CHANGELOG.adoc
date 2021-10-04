@@ -10,6 +10,8 @@
 * Updated `eslint-plugin-jest` to `24.5.0`:
 ** Enabled `jest/prefer-expect-resolves` as a warning;
 ** Enabled `jest/prefer-to-be` as a warning.
++
+* Bumped `eslint-plugin-testing-library` to `4.12.4`.
 
 
 == v0.16.0-alpha.1
