@@ -1,6 +1,6 @@
 = Changelog
 
-== Unpublished
+== v0.16.0-alpha.2
 
 * Updated `@typescript-eslint` to `4.32.0`:
 ** Enabled `@typescript-eslint/prefer-return-this-type` as a warning;

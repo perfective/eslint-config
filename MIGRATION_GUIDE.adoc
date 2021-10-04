@@ -4,12 +4,15 @@ Migration between minor versions follows the same steps:
 
 . Update `@perfective/eslint-config` and its peer dependencies.
 . Disable all new rules.
-. Gradually enable the new rules checking for the regressions.
+. Gradually enable the new rules:
+** remove one or more rules from the list;
+** fix errors or check auto-fixes of warnings;
+** check for the regressions.
 
 
-== From `v0.15.1` to `v0.16.0-alpha.1`
+== From `v0.15.1` to `v0.16.0-alpha.2`
 
-.`.eslintrc.js`
+.Disable new rules in the `.eslintrc.js`
 [source,js]
 ----
 module.exports = {
@@ -21,7 +24,10 @@ module.exports = {
             files: ['*.[jt]s?(x)'],
             rules: {
                 '@typescript-eslint/no-meaningless-void-operator': 'off',
+                '@typescript-eslint/prefer-return-this-type': 'off',
                 'cypress/no-pause': 'off',
+                'jest/prefer-expect-resolves': 'off',
+                'jest/prefer-to-be': 'off',
                 'jest/max-nested-describe': 'off',
                 'sonarjs/no-empty-collection': 'off',
                 'sonarjs/no-gratuitous-expressions': 'off',
