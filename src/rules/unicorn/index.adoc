@@ -106,12 +106,22 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Off
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-await-expression-member.md[unicorn/no-await-expression-member]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-console-spaces.md[unicorn/no-console-spaces]`
 | Yes
 | Yes
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-document-cookie.md[unicorn/no-document-cookie]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-empty-file.md[unicorn/no-empty-file]`
 | Yes
 |
 | Error
@@ -274,6 +284,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 4+| `String#at()` is experimental.
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-code-point.md[unicorn/prefer-code-point]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-date-now.md[unicorn/prefer-date-now]`
 | Yes
 | Yes
@@ -300,6 +315,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-text-content.md[unicorn/prefer-dom-node-text-content]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md[unicorn/prefer-export-from]`
 | Yes
 | Yes
 | Warning
@@ -461,6 +481,11 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 |
 | Yes
 | Off
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/template-indent.md[unicorn/template-indent]`
+| Yes
+| Yes
+| Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/throw-new-error.md[unicorn/throw-new-error]`
 | Yes
