@@ -1,6 +1,9 @@
 export = {
     rules: {
-        'import/no-unresolved': 'error',
+        'import/no-unresolved': ['error', {
+            caseSensitive: true,
+            caseSensitiveStrict: true,
+        }],
         'import/named': ['error', {
             commonjs: true,
         }],
