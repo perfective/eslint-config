@@ -115,7 +115,7 @@ ESLint rules for https://rxjs.dev[RxJS].
 
 | `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-internal.md[rxjs/no-internal]`
 | Yes
-|
+| Yes
 | Warning
 
 | `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-nested-subscribe.md[rxjs/no-nested-subscribe]`

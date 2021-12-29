@@ -20,7 +20,7 @@ to enforce best practices for JavaScript promises.
 
 | `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/param-names.md[promise/param-names]`
 | Yes
-|
+| Yes
 | Warning
 
 | `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/always-return.md[promise/always-return]`

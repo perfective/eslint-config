@@ -68,7 +68,7 @@ to prevent issues with misspelling of file paths and import names.
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md[import/no-useless-path-segments]`
 |
-|
+| Yes
 | Warning
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md[import/no-relative-parent-imports]`
@@ -182,7 +182,7 @@ It should not affect "namespaced" packages with `package.json` generated during 
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md[import/no-duplicates]`
 | Yes
-|
+| Yes
 | Warning
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-namespace.md[import/no-namespace]`
@@ -202,7 +202,7 @@ It should not affect "namespaced" packages with `package.json` generated during 
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md[import/newline-after-import]`
 |
-|
+| Yes
 | Warning
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md[import/prefer-default-export]`
