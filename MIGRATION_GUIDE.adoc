@@ -10,7 +10,7 @@ Migration between minor versions follows the same steps:
 ** check for the regressions.
 
 
-== From `v0.15.1` to `v0.16.0-alpha.2`
+== From `v0.15.1` to `v0.16.0-beta`
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -27,9 +27,11 @@ module.exports = {
                 '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'off',
                 '@typescript-eslint/prefer-return-this-type': 'off',
                 'cypress/no-pause': 'off',
+                'jest/max-nested-describe': 'off',
                 'jest/prefer-expect-resolves': 'off',
                 'jest/prefer-to-be': 'off',
-                'jest/max-nested-describe': 'off',
+                'jest/require-hook': 'off',
+                'jest/valid-expect-in-promise': 'off',
                 'sonarjs/no-empty-collection': 'off',
                 'sonarjs/no-gratuitous-expressions': 'off',
                 'sonarjs/no-ignored-return': 'off',
@@ -38,10 +40,15 @@ module.exports = {
                 'sonarjs/no-nested-template-literals': 'off',
                 'sonarjs/non-existent-operator': 'off',
                 'testing-library/prefer-query-by-disappearance': 'off',
+                'unicorn/no-await-expression-member': 'off',
+                'unicorn/no-empty-file': 'off',
                 'unicorn/no-invalid-remove-event-listener': 'off',
                 'unicorn/no-useless-fallback-in-spread': 'off',
                 'unicorn/no-useless-length-check': 'off',
                 'unicorn/no-useless-spread': 'off',
+                'unicorn/prefer-code-point': 'off',
+                'unicorn/prefer-export-from': 'off',
+                'unicorn/template-indent': 'off',
             },
         },
     ],
