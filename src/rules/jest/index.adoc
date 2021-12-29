@@ -195,6 +195,11 @@ for https://jestjs.io[Jest].
 | Yes
 | Warning
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-hook.md[jest/require-hook]`
+|
+|
+| Error
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md[jest/require-top-level-describe]`
 |
 |
@@ -206,18 +211,18 @@ for https://jestjs.io[Jest].
 | Error
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-describe.md[jest/valid-describe]`
-|
 | Yes
+|
 | Error
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-expect-in-promise.md[jest/valid-expect-in-promise]`
-|
 | Yes
-| Off
+|
+| Error
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-expect.md[jest/valid-expect]`
-|
 | Yes
+|
 | Error
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-title.md[jest/valid-title]`
