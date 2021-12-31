@@ -3,11 +3,21 @@
 The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 
 
-== Possible Errors
+== Possible Problems
 
 [cols="~,1,1,1"]
 |===
 | Rule | Recommended | Fixable | Config
+
+| `link:https://eslint.org/docs/rules/array-callback-return[array-callback-return]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/constructor-super[constructor-super]`
+| Yes
+|
+| Error
 
 | `link:https://eslint.org/docs/rules/for-direction[for-direction]`
 | Yes
@@ -29,6 +39,11 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-class-assign[no-class-assign]`
+| Yes
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-compare-neg-zero[no-compare-neg-zero]`
 | Yes
 |
@@ -39,13 +54,18 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-console[no-console]`
-|
+| `link:https://eslint.org/docs/rules/no-const-assign[no-const-assign]`
+| Yes
 |
 | Error
 
 | `link:https://eslint.org/docs/rules/no-constant-condition[no-constant-condition]`
 | Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-constructor-return[no-constructor-return]`
+|
 |
 | Error
 
@@ -60,6 +80,11 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Error
 
 | `link:https://eslint.org/docs/rules/no-dupe-args[no-dupe-args]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-dupe-class-members[no-dupe-class-members]`
 | Yes
 |
 | Error
@@ -79,12 +104,17 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-empty[no-empty]`
-| Yes
+| `link:https://eslint.org/docs/rules/no-duplicate-imports[no-duplicate-imports]`
+|
 |
 | Error
 
 | `link:https://eslint.org/docs/rules/no-empty-character-class[no-empty-character-class]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-empty-pattern[no-empty-pattern]`
 | Yes
 |
 | Error
@@ -94,20 +124,10 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-extra-boolean-cast[no-extra-boolean-cast]`
+| `link:https://eslint.org/docs/rules/no-fallthrough[no-fallthrough]`
 | Yes
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-extra-parens[no-extra-parens]`
 |
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-extra-semi[no-extra-semi]`
-| Yes
-| Yes
-| Warning
+| Error
 
 | `link:https://eslint.org/docs/rules/no-func-assign[no-func-assign]`
 | Yes
@@ -135,11 +155,16 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Error
 
 | `link:https://eslint.org/docs/rules/no-loss-of-precision[no-loss-of-precision]`
-|
+| Yes
 |
 | Error
 
 | `link:https://eslint.org/docs/rules/no-misleading-character-class[no-misleading-character-class]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-new-symbol[no-new-symbol]`
 | Yes
 |
 | Error
@@ -159,10 +184,15 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-regex-spaces[no-regex-spaces]`
+| `link:https://eslint.org/docs/rules/no-self-assign[no-self-assign]`
 | Yes
-| Yes
-| Warning
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-self-compare[no-self-compare]`
+|
+|
+| Error
 
 | `link:https://eslint.org/docs/rules/no-setter-return[no-setter-return]`
 | Yes
@@ -179,8 +209,24 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-this-before-super[no-this-before-super]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-undef[no-undef]`
+| Yes
+|
+| Off
+4+| TypeScript compiler checks defined symbols.
+
 | `link:https://eslint.org/docs/rules/no-unexpected-multiline[no-unexpected-multiline]`
 | Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-unmodified-loop-condition[no-unmodified-loop-condition]`
+|
 |
 | Error
 
@@ -205,12 +251,27 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Error
 
 | `link:https://eslint.org/docs/rules/no-unsafe-optional-chaining[no-unsafe-optional-chaining]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-unused-private-class-members[no-unused-private-class-members]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-unused-vars[no-unused-vars]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-use-before-define[no-use-before-define]`
 |
 |
 | Error
 
 | `link:https://eslint.org/docs/rules/no-useless-backreference[no-useless-backreference]`
-|
+| Yes
 |
 | Error
 
@@ -231,8 +292,7 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 
 |===
 
-
-== Best Practices
+== Suggestions
 
 [cols="~,1,1,1"]
 |===
@@ -243,15 +303,29 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/array-callback-return[array-callback-return]`
+| `link:https://eslint.org/docs/rules/arrow-body-style[arrow-body-style]`
 |
-|
+| Yes
 | Error
+4+| This rule does not handle higher-order functions,
+where the whole body may be located inside the inner function.
+This rule is always disabled in tests.
 
 | `link:https://eslint.org/docs/rules/block-scoped-var[block-scoped-var]`
 |
 |
 | Error
+
+| `link:https://eslint.org/docs/rules/camelcase[camelcase]`
+|
+|
+| Off
+4+| The `@typescript-eslint/naming-convention` rule is used instead.
+
+| `link:https://eslint.org/docs/rules/capitalized-comments[capitalized-comments]`
+|
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/class-methods-use-this[class-methods-use-this]`
 |
@@ -265,6 +339,11 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 4+| Maximum complexity is `3`
 
 | `link:https://eslint.org/docs/rules/consistent-return[consistent-return]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/consistent-this[consistent-this]`
 |
 |
 | Error
@@ -289,11 +368,6 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/dot-location[dot-location]`
-|
-| Yes
-| Warning
-
 | `link:https://eslint.org/docs/rules/dot-notation[dot-notation]`
 |
 | Yes
@@ -303,6 +377,21 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Yes
 | Warning
+
+| `link:https://eslint.org/docs/rules/func-name-matching[func-name-matching]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/func-names[func-names]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/func-style[func-style]`
+|
+|
+| Error
 
 | `link:https://eslint.org/docs/rules/grouped-accessor-pairs[grouped-accessor-pairs]`
 |
@@ -314,12 +403,90 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/id-denylist[id-denylist]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/id-length[id-length]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/id-match[id-match]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/init-declarations[init-declarations]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/max-classes-per-file[max-classes-per-file]`
 |
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/max-depth[max-depth]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/max-lines[max-lines]`
+|
+|
+| Off
+4+| Business objects may have many properties
+and even with basic logic will have many lines of code.
+
+| `link:https://eslint.org/docs/rules/max-lines-per-function[max-lines-per-function]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/max-nested-callbacks[max-nested-callbacks]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/max-params[max-params]`
+|
+|
+| Off
+4+| This rule does not allow separating functions and constructors.
+Constructors may have properties declarations,
+and be used for dependency injections,
+making it impossible to limit parameters count.
+
+| `link:https://eslint.org/docs/rules/max-statements[max-statements]`
+|
+|
+| Off
+4+| Linear statements do not contribute to complexity and do not reduce readability.
+Using `complexity` rule instead to keep the functions simple.
+
+| `link:https://eslint.org/docs/rules/multiline-comment-style[multiline-comment-style]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/new-cap[new-cap]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-alert[no-alert]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-array-constructor[no-array-constructor]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-bitwise[no-bitwise]`
 |
 |
 | Error
@@ -334,8 +501,23 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-constructor-return[no-constructor-return]`
+| `link:https://eslint.org/docs/rules/no-confusing-arrow[no-confusing-arrow]`
 |
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/no-console[no-console]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-continue[no-continue]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-delete-var[no-delete-var]`
+| Yes
 |
 | Error
 
@@ -349,13 +531,13 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/no-empty-function[no-empty-function]`
-|
+| `link:https://eslint.org/docs/rules/no-empty[no-empty]`
+| Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-empty-pattern[no-empty-pattern]`
-| Yes
+| `link:https://eslint.org/docs/rules/no-empty-function[no-empty-function]`
+|
 |
 | Error
 
@@ -379,15 +561,20 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Yes
 | Warning
 
+| `link:https://eslint.org/docs/rules/no-extra-boolean-cast[no-extra-boolean-cast]`
+| Yes
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/no-extra-label[no-extra-label]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/no-fallthrough[no-fallthrough]`
+| `link:https://eslint.org/docs/rules/no-extra-semi[no-extra-semi]`
 | Yes
-|
-| Error
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/no-floating-decimal[no-floating-decimal]`
 |
@@ -414,12 +601,22 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-inline-comments[no-inline-comments]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-invalid-this[no-invalid-this]`
 |
 |
 | Error
 
 | `link:https://eslint.org/docs/rules/no-iterator[no-iterator]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-label-var[no-label-var]`
 |
 |
 | Error
@@ -434,6 +631,11 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-lonely-if[no-lonely-if]`
+|
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/no-loop-func[no-loop-func]`
 |
 |
@@ -444,12 +646,27 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Off
 
-| `link:https://eslint.org/docs/rules/no-multi-spaces[no-multi-spaces]`
+| `link:https://eslint.org/docs/rules/no-mixed-operators[no-mixed-operators]`
 |
-| Yes
-| Warning
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-multi-assign[no-multi-assign]`
+|
+|
+| Error
 
 | `link:https://eslint.org/docs/rules/no-multi-str[no-multi-str]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-negated-condition[no-negated-condition]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-nested-ternary[no-nested-ternary]`
 |
 |
 | Error
@@ -464,13 +681,18 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-new-object[no-new-object]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-new-wrappers[no-new-wrappers]`
 |
 |
 | Error
 
 | `link:https://eslint.org/docs/rules/no-nonoctal-decimal-escape[no-nonoctal-decimal-escape]`
-|
+| Yes
 |
 | Error
 
@@ -489,6 +711,11 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-plusplus[no-plusplus]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-proto[no-proto]`
 |
 |
@@ -499,11 +726,36 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-regex-spaces[no-regex-spaces]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/no-restricted-exports[no-restricted-exports]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/no-restricted-globals[no-restricted-globals]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-restricted-properties[no-restricted-properties]`
 |
 |
 | Error
 
+
+| `link:https://eslint.org/docs/rules/no-restricted-imports[no-restricted-imports]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-restricted-syntax[no-restricted-syntax]`
+|
+|
+| Error
 | `link:https://eslint.org/docs/rules/no-return-assign[no-return-assign]`
 |
 |
@@ -519,30 +771,50 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-self-assign[no-self-assign]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-self-compare[no-self-compare]`
-|
-|
-| Error
-
 | `link:https://eslint.org/docs/rules/no-sequences[no-sequences]`
 |
 |
 | Error
+
+| `link:https://eslint.org/docs/rules/no-shadow[no-shadow]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/no-shadow-restricted-names[no-shadow-restricted-names]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-ternary[no-ternary]`
+|
+|
+| Off
 
 | `link:https://eslint.org/docs/rules/no-throw-literal[no-throw-literal]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-unmodified-loop-condition[no-unmodified-loop-condition]`
+| `link:https://eslint.org/docs/rules/no-undef-init[no-undef-init]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/no-undefined[no-undefined]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/no-underscore-dangle[no-underscore-dangle]`
 |
 |
 | Error
+
+| `link:https://eslint.org/docs/rules/no-unneeded-ternary[no-unneeded-ternary]`
+|
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/no-unused-expressions[no-unused-expressions]`
 |
@@ -555,7 +827,7 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Warning
 
 | `link:https://eslint.org/docs/rules/no-useless-call[no-useless-call]`
-| Yes
+|
 |
 | Error
 
@@ -564,7 +836,17 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-useless-computed-key[no-useless-computed-key]`
+|
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/no-useless-concat[no-useless-concat]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/no-useless-constructor[no-useless-constructor]`
 |
 |
 | Error
@@ -574,7 +856,17 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-useless-rename[no-useless-rename]`
+|
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/no-useless-return[no-useless-return]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/no-var[no-var]`
 |
 | Yes
 | Warning
@@ -594,11 +886,66 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/object-shorthand[object-shorthand]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/one-var[one-var]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/one-var-declaration-per-line[one-var-declaration-per-line]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/operator-assignment[operator-assignment]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/prefer-arrow-callback[prefer-arrow-callback]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/prefer-const[prefer-const]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/prefer-destructuring[prefer-destructuring]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/prefer-exponentiation-operator[prefer-exponentiation-operator]`
+|
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/prefer-named-capture-group[prefer-named-capture-group]`
 |
 |
 | Off
 4+| Requires ECMAScript 2018
+
+| `link:https://eslint.org/docs/rules/prefer-numeric-literals[prefer-numeric-literals]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/prefer-object-has-own[prefer-object-has-own]`
+|
+| Yes
+| Off
+
+| `link:https://eslint.org/docs/rules/prefer-object-spread[prefer-object-spread]`
+|
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/prefer-promise-reject-errors[prefer-promise-reject-errors]`
 |
@@ -609,6 +956,26 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 |
 | Off
+
+| `link:https://eslint.org/docs/rules/prefer-rest-params[prefer-rest-params]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/prefer-spread[prefer-spread]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/prefer-template[prefer-template]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/quote-props[quote-props]`
+|
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/radix[radix]`
 |
@@ -625,15 +992,45 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/vars-on-top[vars-on-top]`
+| `link:https://eslint.org/docs/rules/require-yield[require-yield]`
+| Yes
+|
+| Error
+
+| `link:https://eslint.org/docs/rules/sort-imports[sort-imports]`
+|
+| Yes
+| Off
+
+| `link:https://eslint.org/docs/rules/sort-keys[sort-keys]`
+|
+|
+| Off
+
+| `link:https://eslint.org/docs/rules/sort-vars[sort-vars]`
+|
+| Yes
+| Off
+
+| `link:https://eslint.org/docs/rules/spaced-comment[spaced-comment]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/strict[strict]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/symbol-description[symbol-description]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/wrap-iife[wrap-iife]`
+| `link:https://eslint.org/docs/rules/vars-on-top[vars-on-top]`
 |
-| Yes
-| Warning
+|
+| Error
 
 | `link:https://eslint.org/docs/rules/yoda[yoda]`
 |
@@ -643,87 +1040,7 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 
 |===
 
-
-== Strict Mode
-
-[cols="~,1,1,1"]
-|===
-| Rule | Recommended | Fixable | Config
-
-| `link:https://eslint.org/docs/rules/strict[strict]`
-|
-| Yes
-| Warning
-
-|===
-
-
-== Variables
-
-[cols="~,1,1,1"]
-|===
-| Rule | Recommended | Fixable | Config
-
-| `link:https://eslint.org/docs/rules/init-declarations[init-declarations]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-delete-var[no-delete-var]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-label-var[no-label-var]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-restricted-globals[no-restricted-globals]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-shadow[no-shadow]`
-|
-|
-| Off
-
-| `link:https://eslint.org/docs/rules/no-shadow-restricted-names[no-shadow-restricted-names]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-undef[no-undef]`
-| Yes
-|
-| Off
-4+| TypeScript compiler checks defined symbols.
-
-| `link:https://eslint.org/docs/rules/no-undef-init[no-undef-init]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-undefined[no-undefined]`
-|
-|
-| Off
-
-| `link:https://eslint.org/docs/rules/no-unused-vars[no-unused-vars]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-use-before-define[no-use-before-define]`
-|
-|
-| Error
-
-|===
-
-
-== Stylistic Issues
+== Layout & Formatting
 
 [cols="~,1,1,1"]
 |===
@@ -744,6 +1061,16 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Yes
 | Warning
 
+| `link:https://eslint.org/docs/rules/arrow-parens[arrow-parens]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/arrow-spacing[arrow-spacing]`
+|
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/block-spacing[block-spacing]`
 |
 | Yes
@@ -755,17 +1082,6 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 | Warning
 4+| Stroustrup style is enforced.
 Single lines are disallowed.
-
-| `link:https://eslint.org/docs/rules/camelcase[camelcase]`
-|
-|
-| Off
-4+| The `@typescript-eslint/naming-convention` rule is used instead.
-
-| `link:https://eslint.org/docs/rules/capitalized-comments[capitalized-comments]`
-|
-| Yes
-| Warning
 
 | `link:https://eslint.org/docs/rules/comma-dangle[comma-dangle]`
 |
@@ -787,10 +1103,10 @@ Single lines are disallowed.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/consistent-this[consistent-this]`
+| `link:https://eslint.org/docs/rules/dot-location[dot-location]`
 |
-|
-| Error
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/eol-last[eol-last]`
 |
@@ -802,21 +1118,6 @@ Single lines are disallowed.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/func-name-matching[func-name-matching]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/func-names[func-names]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/func-style[func-style]`
-|
-|
-| Error
-
 | `link:https://eslint.org/docs/rules/function-call-argument-newline[function-call-argument-newline]`
 |
 | Yes
@@ -827,20 +1128,10 @@ Single lines are disallowed.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/id-denylist[id-denylist]`
+| `link:https://eslint.org/docs/rules/generator-star-spacing[generator-star-spacing]`
 |
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/id-length[id-length]`
-|
-|
-| Off
-
-| `link:https://eslint.org/docs/rules/id-match[id-match]`
-|
-|
-| Off
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/implicit-arrow-linebreak[implicit-arrow-linebreak]`
 |
@@ -887,68 +1178,20 @@ Single lines are disallowed.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/max-depth[max-depth]`
-|
-|
-| Error
-
 | `link:https://eslint.org/docs/rules/max-len[max-len]`
 |
 |
 | Error
-
-| `link:https://eslint.org/docs/rules/max-lines[max-lines]`
-|
-|
-| Off
-4+| Business objects may have many properties
-and even with basic logic will have many lines of code.
-
-| `link:https://eslint.org/docs/rules/max-lines-per-function[max-lines-per-function]`
-|
-|
-| Off
-
-| `link:https://eslint.org/docs/rules/max-nested-callbacks[max-nested-callbacks]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/max-params[max-params]`
-|
-|
-| Off
-4+| This rule does not allow separating functions and constructors.
-Constructors may have properties declarations,
-and be used for dependency injections,
-making it impossible to limit parameters count.
-
-| `link:https://eslint.org/docs/rules/max-statements[max-statements]`
-|
-|
-| Off
-4+| Linear statements do not contribute to complexity and do not reduce readability.
-Using `complexity` rule instead to keep the functions simple.
 
 | `link:https://eslint.org/docs/rules/max-statements-per-line[max-statements-per-line]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/multiline-comment-style[multiline-comment-style]`
-|
-| Yes
-| Warning
-
 | `link:https://eslint.org/docs/rules/multiline-ternary[multiline-ternary]`
 |
 | Yes
 | Warning
-
-| `link:https://eslint.org/docs/rules/new-cap[new-cap]`
-|
-|
-| Error
 
 | `link:https://eslint.org/docs/rules/new-parens[new-parens]`
 |
@@ -968,97 +1211,32 @@ and sometimes has to go on the new line.
 Additional challenge comes from the problems with `@typescript-eslint/indent` rule,
 that https://github.com/typescript-eslint/typescript-eslint/issues/1824[does not always indent] chained calls correctly.
 
-| `link:https://eslint.org/docs/rules/no-array-constructor[no-array-constructor]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-bitwise[no-bitwise]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-continue[no-continue]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-inline-comments[no-inline-comments]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-lonely-if[no-lonely-if]`
+| `link:https://eslint.org/docs/rules/no-extra-parens[no-extra-parens]`
 |
 | Yes
 | Warning
-
-| `link:https://eslint.org/docs/rules/no-mixed-operators[no-mixed-operators]`
-|
-|
-| Error
 
 | `link:https://eslint.org/docs/rules/no-mixed-spaces-and-tabs[no-mixed-spaces-and-tabs]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-multi-assign[no-multi-assign]`
+| `link:https://eslint.org/docs/rules/no-multi-spaces[no-multi-spaces]`
 |
-|
-| Error
+| Yes
+| Warning
 
 | `link:https://eslint.org/docs/rules/no-multiple-empty-lines[no-multiple-empty-lines]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/no-negated-condition[no-negated-condition]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-nested-ternary[no-nested-ternary]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-new-object[no-new-object]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-plusplus[no-plusplus]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-restricted-syntax[no-restricted-syntax]`
-|
-|
-| Error
-
 | `link:https://eslint.org/docs/rules/no-tabs[no-tabs]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/rules/no-ternary[no-ternary]`
-|
-|
-| Off
-
 | `link:https://eslint.org/docs/rules/no-trailing-spaces[no-trailing-spaces]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-underscore-dangle[no-underscore-dangle]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-unneeded-ternary[no-unneeded-ternary]`
 |
 | Yes
 | Warning
@@ -1090,21 +1268,6 @@ as it is possible to have an import or export declaration that is too long.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/one-var[one-var]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/one-var-declaration-per-line[one-var-declaration-per-line]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/operator-assignment[operator-assignment]`
-|
-| Yes
-| Warning
-
 | `link:https://eslint.org/docs/rules/operator-linebreak[operator-linebreak]`
 |
 | Yes
@@ -1120,22 +1283,12 @@ as it is possible to have an import or export declaration that is too long.
 | Yes
 | Off
 
-| `link:https://eslint.org/docs/rules/prefer-exponentiation-operator[prefer-exponentiation-operator]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/prefer-object-spread[prefer-object-spread]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/quote-props[quote-props]`
-|
-| Yes
-| Warning
-
 | `link:https://eslint.org/docs/rules/quotes[quotes]`
+|
+| Yes
+| Warning
+
+| `link:https://eslint.org/docs/rules/rest-spread-spacing[rest-spread-spacing]`
 |
 | Yes
 | Warning
@@ -1154,16 +1307,6 @@ as it is possible to have an import or export declaration that is too long.
 |
 | Yes
 | Warning
-
-| `link:https://eslint.org/docs/rules/sort-keys[sort-keys]`
-|
-|
-| Off
-
-| `link:https://eslint.org/docs/rules/sort-vars[sort-vars]`
-|
-| Yes
-| Off
 
 | `link:https://eslint.org/docs/rules/space-before-blocks[space-before-blocks]`
 |
@@ -1190,12 +1333,12 @@ as it is possible to have an import or export declaration that is too long.
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/spaced-comment[spaced-comment]`
+| `link:https://eslint.org/docs/rules/switch-colon-spacing[switch-colon-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/rules/switch-colon-spacing[switch-colon-spacing]`
+| `link:https://eslint.org/docs/rules/template-curly-spacing[template-curly-spacing]`
 |
 | Yes
 | Warning
@@ -1210,174 +1353,12 @@ as it is possible to have an import or export declaration that is too long.
 | Yes
 | Warning
 
+| `link:https://eslint.org/docs/rules/wrap-iife[wrap-iife]`
+|
+| Yes
+| Warning
+
 | `link:https://eslint.org/docs/rules/wrap-regex[wrap-regex]`
-|
-| Yes
-| Warning
-
-|===
-
-
-== ECMAScript 6
-
-[cols="~,1,1,1"]
-|===
-| Rule | Recommended | Fixable | Config
-
-| `link:https://eslint.org/docs/rules/arrow-body-style[arrow-body-style]`
-|
-| Yes
-| Error
-4+| This rule does not handle higher-order functions,
-where the whole body may be located inside the inner function.
-This rule is always disabled in tests.
-
-| `link:https://eslint.org/docs/rules/arrow-parens[arrow-parens]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/arrow-spacing[arrow-spacing]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/constructor-super[constructor-super]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/generator-star-spacing[generator-star-spacing]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-class-assign[no-class-assign]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-confusing-arrow[no-confusing-arrow]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-const-assign[no-const-assign]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-dupe-class-members[no-dupe-class-members]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-duplicate-imports[no-duplicate-imports]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-new-symbol[no-new-symbol]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-restricted-exports[no-restricted-exports]`
-|
-|
-| Off
-
-| `link:https://eslint.org/docs/rules/no-restricted-imports[no-restricted-imports]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-this-before-super[no-this-before-super]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-useless-computed-key[no-useless-computed-key]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-useless-constructor[no-useless-constructor]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/no-useless-rename[no-useless-rename]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/no-var[no-var]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/object-shorthand[object-shorthand]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/prefer-arrow-callback[prefer-arrow-callback]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/prefer-const[prefer-const]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/prefer-destructuring[prefer-destructuring]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/prefer-numeric-literals[prefer-numeric-literals]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/prefer-rest-params[prefer-rest-params]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/prefer-spread[prefer-spread]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/prefer-template[prefer-template]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/require-yield[require-yield]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/rest-spread-spacing[rest-spread-spacing]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/rules/sort-imports[sort-imports]`
-|
-| Yes
-| Off
-
-| `link:https://eslint.org/docs/rules/symbol-description[symbol-description]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/rules/template-curly-spacing[template-curly-spacing]`
 |
 | Yes
 | Warning

@@ -3,15 +3,14 @@ export = {
         'array-bracket-newline': ['warn', 'consistent'],
         'array-bracket-spacing': ['warn', 'never'],
         'array-element-newline': ['warn', 'consistent'],
+        'arrow-parens': ['warn', 'as-needed'],
+        'arrow-spacing': ['warn', {
+            before: true,
+            after: true,
+        }],
         'block-spacing': ['warn', 'always'],
         'brace-style': ['warn', 'stroustrup', {
             allowSingleLine: false,
-        }],
-        // See @typescript-eslint/naming-convention
-        'camelcase': 'off',
-        'capitalized-comments': ['warn', 'always', {
-            ignorePattern: 'eslint|tslint',
-            ignoreConsecutiveComments: true,
         }],
         'comma-dangle': ['warn', {
             arrays: 'always-multiline',
@@ -26,17 +25,15 @@ export = {
         }],
         'comma-style': ['warn', 'last'],
         'computed-property-spacing': ['warn', 'never'],
-        'consistent-this': ['error', 'self'],
+        'dot-location': ['warn', 'property'],
         'eol-last': ['warn', 'always'],
         'func-call-spacing': ['warn', 'never'],
-        'func-name-matching': ['error', 'always'],
-        'func-names': ['error', 'always'],
-        'func-style': ['error', 'declaration'],
         'function-call-argument-newline': ['warn', 'consistent'],
         'function-paren-newline': ['warn', 'consistent'],
-        'id-denylist': ['error', 'arr', 'ctx', 'el', 'elem', 'err', 'ind', 'ptr'],
-        'id-length': 'off',
-        'id-match': 'off',
+        'generator-star-spacing': ['warn', {
+            before: true,
+            after: false,
+        }],
         'implicit-arrow-linebreak': ['warn', 'beside'],
         'indent': ['warn', 4, {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
@@ -74,38 +71,16 @@ export = {
         'lines-between-class-members': ['warn', 'always', {
             exceptAfterSingleLine: true,
         }],
-        'max-depth': ['error', 4],
         'max-len': ['error', {
             code: 120,
             tabWidth: 4,
             ignoreRegExpLiterals: true,
             ignoreUrls: true,
         }],
-        // Business object may have many properties and even with basic logic will have many lines of code.
-        'max-lines': 'off',
-        'max-lines-per-function': 'off',
-        'max-nested-callbacks': ['error', 2],
-        // This rule does not allow separating functions and constructors.
-        // Constructors may have properties declarations,
-        // and be used for dependency injections,
-        // making it impossible to limit parameters count.
-        'max-params': ['off', {
-            max: 3,
-        }],
-        // Checking for function complexity is enough, while this rule is overridden for test files anyway
-        'max-statements': ['off', {
-            max: 10,
-        }],
         'max-statements-per-line': ['error', {
             max: 1,
         }],
-        'multiline-comment-style': ['warn', 'separate-lines'],
         'multiline-ternary': ['warn', 'always-multiline'],
-        'new-cap': ['error', {
-            newIsCap: true,
-            capIsNew: true,
-            properties: true,
-        }],
         'new-parens': 'warn',
         // As long as the line is under the length limit, it should be ok to have any number of calls.
         // The real challenge is to enforce a new line in custom situations, e.g. before ".pipe()" or ".then()".
@@ -113,26 +88,15 @@ export = {
         'newline-per-chained-call': ['off', {
             ignoreChainWithDepth: 3,
         }],
-        'no-array-constructor': 'error',
-        'no-bitwise': 'error',
-        'no-continue': 'error',
-        'no-inline-comments': ['error', {
-            ignorePattern: '^ == .+',
-        }],
-        'no-lonely-if': 'warn',
-        'no-mixed-operators': ['error', {
-            groups: [
-                ['+', '-'],
-                ['*', '/', '%', '**'],
-                ['&', '|', '^', '~', '<<', '>>', '>>>'],
-                ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-                ['&&', '||', '?:', '??'],
-                ['in', 'instanceof'],
-            ],
-            allowSamePrecedence: true,
+        'no-extra-parens': ['warn', 'all', {
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external property
+            ignoreJSX: 'all',
+            // Nested binary expressions may be hard to break down into named functions
+            nestedBinaryExpressions: false,
+            enforceForArrowConditionals: false,
         }],
         'no-mixed-spaces-and-tabs': 'error',
-        'no-multi-assign': 'error',
+        'no-multi-spaces': 'warn',
         'no-multiple-empty-lines': ['warn', {
             max: 1,
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
@@ -140,28 +104,8 @@ export = {
             // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
             maxBOF: 0,
         }],
-        'no-negated-condition': 'error',
-        'no-nested-ternary': 'error',
-        'no-new-object': 'error',
-        // Using i++ in the for() loops is a classic pattern.
-        // Rather disallow using loops at all and use filter/map/reduce instead.
-        'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-        'no-restricted-syntax': ['error', 'ForInStatement'],
         'no-tabs': 'error',
-        'no-ternary': 'off',
         'no-trailing-spaces': 'warn',
-        'no-underscore-dangle': ['error', {
-            allowAfterSuper: false,
-            // Allow to have underscore as a private property name with a corresponding public method without it.
-            allowAfterThis: true,
-            allowAfterThisConstructor: false,
-            // Allow underscore prefix for unused parameters
-            allowFunctionParams: true,
-            // Only private properties should use underscore.
-            // Public and protected properties should be access through an accessor method.
-            enforceInMethodNames: true,
-        }],
-        'no-unneeded-ternary': 'warn',
         'no-whitespace-before-property': 'warn',
         'nonblock-statement-body-position': ['warn', 'below'],
         // For imports and exports this rule may conflict with the "max-len" rule,
@@ -184,9 +128,6 @@ export = {
             //  and limit inlined properties only to basic expressions (no function calls, ternaries, etc.)
             allowAllPropertiesOnSameLine: true,
         }],
-        'one-var': ['warn', 'never'],
-        'one-var-declaration-per-line': ['warn', 'always'],
-        'operator-assignment': ['warn', 'always'],
         'operator-linebreak': ['warn', 'before', {
             overrides: {
                 '=': 'none',
@@ -200,21 +141,17 @@ export = {
         }],
         'padded-blocks': ['warn', 'never'],
         'padding-line-between-statements': 'off',
-        'prefer-exponentiation-operator': 'warn',
-        'prefer-object-spread': 'warn',
-        'quote-props': ['warn', 'consistent-as-needed'],
         'quotes': ['warn', 'single', {
             avoidEscape: true,
             allowTemplateLiterals: true,
         }],
+        'rest-spread-spacing': ['warn', 'never'],
         'semi': ['warn', 'always'],
         'semi-spacing': ['warn', {
             before: false,
             after: true,
         }],
         'semi-style': ['warn', 'last'],
-        'sort-keys': 'off',
-        'sort-vars': 'off',
         'space-before-blocks': ['warn', 'always'],
         'space-before-function-paren': ['warn', {
             anonymous: 'always',
@@ -229,18 +166,18 @@ export = {
             words: true,
             nonwords: false,
         }],
-        'spaced-comment': ['warn', 'always', {
-            line: {
-                // Compatibility with "@typescript-eslint/triple-slash-reference"
-                markers: ['/ <reference'],
-            },
-        }],
         'switch-colon-spacing': ['warn', {
             after: true,
             before: false,
         }],
+        'template-curly-spacing': ['warn', 'never'],
         'template-tag-spacing': ['warn', 'never'],
         'unicode-bom': ['warn', 'never'],
+        'wrap-iife': ['warn', 'outside'],
         'wrap-regex': 'warn',
+        'yield-star-spacing': ['warn', {
+            before: true,
+            after: false,
+        }],
     },
 };
