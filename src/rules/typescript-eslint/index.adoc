@@ -60,6 +60,12 @@ provides lint rules for TypeScript codebases.
 | Yes
 | Warning
 
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-exports.md[@typescript-eslint/consistent-type-exports]`
+|
+| Yes
+| Off
+4+| As of v5.8.1 moment this rule causes linting failures.
+
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-imports.md[@typescript-eslint/consistent-type-imports]`
 |
 | Yes
@@ -76,7 +82,7 @@ provides lint rules for TypeScript codebases.
 | Warning
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md[@typescript-eslint/explicit-module-boundary-types]`
-| Yes
+|
 |
 | Error
 
@@ -154,6 +160,7 @@ provides lint rules for TypeScript codebases.
 |
 | Yes
 | Error
+4+| Deprecated, use TypeScript `useUnknownInCatchVariables` option instead (since v4.4).
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md[@typescript-eslint/no-inferrable-types]`
 | Yes
@@ -246,12 +253,12 @@ provides lint rules for TypeScript codebases.
 | Warning
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-constraint.md[@typescript-eslint/no-unnecessary-type-constraint]`
-|
+| Yes
 | Yes
 | Warning
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-argument.md[@typescript-eslint/no-unsafe-argument]`
-|
+| Yes
 |
 | Error
 
@@ -274,11 +281,6 @@ provides lint rules for TypeScript codebases.
 | Yes
 |
 | Error
-
-| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars-experimental.md[@typescript-eslint/no-unused-vars-experimental]`
-|
-|
-| Off
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md[@typescript-eslint/no-var-requires]`
 | Yes
@@ -352,7 +354,7 @@ provides lint rules for TypeScript codebases.
 | Warning
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md[@typescript-eslint/prefer-regexp-exec]`
-| Yes
+|
 | Yes
 | Warning
 
@@ -544,7 +546,7 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Error
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.md[@typescript-eslint/no-loss-of-precision]`
-|
+| Yes
 |
 | Error
 
@@ -579,8 +581,8 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Error
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md[@typescript-eslint/no-unused-vars]`
-|
 | Yes
+|
 | Error
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md[@typescript-eslint/no-use-before-define]`
