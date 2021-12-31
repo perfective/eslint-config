@@ -14,7 +14,7 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-async-utils.md[testing-library/await-async-utils]`
-|
+| Yes
 |
 | Error
 
@@ -29,27 +29,27 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-await-sync-events.md[testing-library/no-await-sync-events]`
-| Yes
+|
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-await-sync-query.md[testing-library/no-await-sync-query]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-container.md[testing-library/no-container]`
-|
+| Yes
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-debug.md[testing-library/no-debug]`
-|
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-debugging-utils.md[testing-library/no-debugging-utils]`
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-dom-import.md[testing-library/no-dom-import]`
-|
+| Yes
 | Yes
 | Warning
 
@@ -59,17 +59,17 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-node-access.md[testing-library/no-node-access]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-render-in-setup.md[testing-library/no-render-in-setup]`
-|
+| Yes
 |
 | Error
 
@@ -79,22 +79,22 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-empty-callback.md[testing-library/no-wait-for-empty-callback]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]`
-|
+| Yes
 |
 | Error
 
@@ -109,21 +109,21 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Warning
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]`
-|
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md[testing-library/prefer-user-event]`
-|
+| Yes
 |
 | Error
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
+| Yes
+|
+| Error
+
+| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md[testing-library/prefer-user-event]`
 |
 |
 | Error
@@ -134,7 +134,7 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Warning
 
 | `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
-|
+| Yes
 |
 | Error
 
