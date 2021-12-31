@@ -1,6 +1,6 @@
 = Changelog
 
-== v0.16.0-beta
+== v0.16.0
 
 * Updated `@typescript-eslint` to `4.33.0`.
 +

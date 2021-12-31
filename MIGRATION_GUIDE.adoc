@@ -10,7 +10,7 @@ Migration between minor versions follows the same steps:
 ** check for the regressions.
 
 
-== From `v0.15.1` to `v0.16.0-beta`
+== From `v0.15.1` to `v0.16.0`
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
