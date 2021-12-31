@@ -12,10 +12,7 @@ export = {
         }],
         'jest/expect-expect': ['error', {
             assertFunctionNames: ['expect', 'request.*.expect'],
-        }],
-        // Allow uppercase in describe() as it can be used for the class name in PascalCase
-        'jest/lowercase-name': ['error', {
-            ignore: ['describe'],
+            additionalTestBlockFunctions: [],
         }],
         'jest/max-nested-describe': ['error', {
             max: 3,
@@ -51,20 +48,23 @@ export = {
         'jest/prefer-expect-assertions': 'off',
         'jest/prefer-expect-resolves': 'warn',
         'jest/prefer-hooks-on-top': 'error',
+        'jest/prefer-lowercase-title': ['error', {
+            allowedPrefixes: [],
+            ignore: [],
+            ignoreTopLevelDescribe: true,
+        }],
         'jest/prefer-spy-on': 'warn',
         'jest/prefer-strict-equal': 'warn',
         'jest/prefer-to-be': 'warn',
-        // Deprecated
-        'jest/prefer-to-be-null': 'warn',
-        // Deprecated
-        'jest/prefer-to-be-undefined': 'warn',
         'jest/prefer-to-contain': 'warn',
         'jest/prefer-to-have-length': 'warn',
         'jest/prefer-todo': 'warn',
-        'jest/require-hook': 'error',
-        'jest/require-top-level-describe': 'error',
+        'jest/require-hook': ['error', {
+            allowedFunctionCalls: [],
+        }],
         'jest/require-to-throw-message': 'error',
-        'jest/valid-describe': 'error',
+        'jest/require-top-level-describe': 'error',
+        'jest/valid-describe-callback': 'error',
         'jest/valid-expect-in-promise': 'error',
         'jest/valid-expect': 'error',
         'jest/valid-title': ['warn', {

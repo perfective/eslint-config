@@ -18,12 +18,6 @@ for https://jestjs.io[Jest].
 |
 | Error
 
-| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/lowercase-name.md[jest/lowercase-name]`
-|
-| Yes
-| Error
-4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
-
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-nested-describe.md[jest/max-nested-describe]`
 |
 |
@@ -155,6 +149,12 @@ for https://jestjs.io[Jest].
 |
 | Error
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-lowercase-title.md[jest/prefer-lowercase-title]`
+|
+| Yes
+| Error
+4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-spy-on.md[jest/prefer-spy-on]`
 |
 | Yes
@@ -166,16 +166,6 @@ for https://jestjs.io[Jest].
 | Warning
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md[jest/prefer-to-be]`
-|
-| Yes
-| Warning
-
-| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be-null.md[jest/prefer-to-be-null]`
-|
-| Yes
-| Warning
-
-| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be-undefined.md[jest/prefer-to-be-undefined]`
 |
 | Yes
 | Warning
@@ -200,17 +190,17 @@ for https://jestjs.io[Jest].
 |
 | Error
 
-| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md[jest/require-top-level-describe]`
-|
-|
-| Error
-
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-to-throw-message.md[jest/require-to-throw-message]`
 |
 |
 | Error
 
-| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-describe.md[jest/valid-describe]`
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md[jest/require-top-level-describe]`
+|
+|
+| Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-describe-callback.md[jest/valid-describe-callback]`
 | Yes
 |
 | Error
