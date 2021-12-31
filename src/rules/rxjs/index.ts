@@ -49,6 +49,8 @@ export = {
         'rxjs/no-subclass': 'error',
         'rxjs/no-subject-unsubscribe': 'error',
         'rxjs/no-subject-value': 'error',
+        // Using subscribe is more semantic than using `tap()`
+        'rxjs/no-subscribe-handlers': 'off',
         // Deprecated
         'rxjs/no-tap': 'off',
         'rxjs/no-topromise': 'error',
