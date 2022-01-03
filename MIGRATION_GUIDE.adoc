@@ -9,6 +9,37 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.16.0` to `v0.17.0-alpha`
+
+.Disable new rules in the `.eslintrc.js`
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                'no-unused-private-class-members': 'off',
+                'unicorn/no-thenable': 'off',
+                'unicorn/no-useless-promise-resolve-reject': 'off',
+                'unicorn/prefer-json-parse-buffer': 'off',
+                'unicorn/relative-url-style': 'off',
+            },
+        },
+    ],
+};
+----
+
+If you have customization of the renamed rules,
+update the rules' names:
+
+* `jest/valid-describe` into `jest/valid-describe-callback`;
+* `jest/lowercase-name` into `jest/prefer-lowercase-title`;
+* `testing-library/no-debug` into `testing-library/no-debugging-utils`
+
 
 == From `v0.15.1` to `v0.16.0`
 
