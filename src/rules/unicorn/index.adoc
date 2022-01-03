@@ -191,6 +191,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Partially
 | Error
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-thenable.md[unicorn/no-thenable]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-this-assignment.md[unicorn/no-this-assignment]`
 | Yes
 |
@@ -212,6 +217,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-length-check.md[unicorn/no-useless-length-check]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-promise-resolve-reject.md[unicorn/no-useless-promise-resolve-reject]`
 | Yes
 | Yes
 | Warning
@@ -327,6 +337,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-includes.md[unicorn/prefer-includes]`
 | Yes
 | Partially
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-json-parse-buffer.md[unicorn/prefer-json-parse-buffer]`
+| Yes
+| Yes
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-keyboard-event-key.md[unicorn/prefer-keyboard-event-key]`
@@ -461,6 +476,12 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 `dir`/`dirs`, `e`, `el`, `elem`, `envs`, `err`, `ev`/`evt`, `ext`/`exts`, `fn`/`func`, `idx`, `len`, `mod`, `msg`,
 `num`, `obj`, `opts`, `pkg`, `prev`, `prod`, `prop`/`props`, `ref`/`refs`, `rel`, `req`, `res`, `ret`, `retval`,
 `sep`, `src`, `stdDev`, `str`, `tbl`, `temp`, `tit`, `tmp`, `val`, `var`/`vars`, `ver`.
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/relative-url-style.md[unicorn/relative-url-style]`
+| Yes
+| Yes
+| Warning
+4+| Always use the `./` prefix for the relative URLs for clarity.
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-array-join-separator.md[unicorn/require-array-join-separator]`
 | Yes
