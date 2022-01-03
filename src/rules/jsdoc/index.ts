@@ -76,6 +76,7 @@ export = {
         'jsdoc/no-defaults': 'error',
         'jsdoc/no-missing-syntax': 'off',
         'jsdoc/no-multi-asterisks': ['error', {
+            allowWhitespace: false,
             preventAtMiddleLines: true,
             preventAtEnd: true,
         }],
