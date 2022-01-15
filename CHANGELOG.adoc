@@ -1,11 +1,11 @@
 = Changelog
 
-== v0.17.0-alpha
+== v0.17.0-alpha.1
 
 * Upgraded `eslint` to `8.6.0`:
 ** Enabled the `no-unused-private-class-members` rule as an error.
 +
-* Upgraded `@typescript-eslint` to `5.8.1`:
+* Upgraded `@typescript-eslint` to `5.9.1`:
 ** specified `set` and `get` methods to be ordered after regular methods.
 +
 * Upgraded `eslint-plugin-jest` to `25.3.4`:
@@ -15,7 +15,7 @@
 ** Renamed `jest/lowercase-name` into `jest/prefer-lowercase-title`;
 ** Ignored only top-level describe (can be used for a class name) in `jest/prefer-lowercase-title`.
 +
-* Upgraded `eslint-plugin-testing-library` to `5.0.1`:
+* Upgraded `eslint-plugin-testing-library` to `5.0.3`:
 ** Renamed `testing-library/no-debug` into `testing-library/no-debugging-utils`.
 +
 * Upgraded `eslint-plugin-unicorn` to `40.0.0`:
@@ -24,8 +24,8 @@
 ** Enabled `unicorn/prefer-json-parse-buffer` as a warning;
 ** Enabled `unicorn/relative-url-style` as a warning.
 +
-* Upgraded `eslint-plugin-rxjs` to `4.0.4`.
-* Updated `eslint-plugin-jsdoc` to `37.5.0`.
+* Upgraded `eslint-plugin-rxjs` to `5.0.1`.
+* Updated `eslint-plugin-jsdoc` to `37.6.1`.
 * Bumped `eslint-plugin-jest-dom` to `4.0.1`.
 * Bumped `eslint-plugin-import` to `2.25.4`.
 
