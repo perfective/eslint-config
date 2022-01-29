@@ -201,7 +201,7 @@ ESLint rules for https://rxjs.dev[RxJS].
 | `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/suffix-subjects.md[rxjs/suffix-subjects]`
 |
 |
-| Error
+| Off
 
 | `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/throw-error.md[rxjs/throw-error]`
 |

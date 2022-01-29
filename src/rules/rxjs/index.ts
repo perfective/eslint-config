@@ -62,7 +62,7 @@ export = {
         'rxjs/no-unsafe-switchmap': 'error',
         'rxjs/no-unsafe-takeuntil': 'error',
         'rxjs/prefer-observer': 'off',
-        'rxjs/suffix-subjects': 'error',
+        'rxjs/suffix-subjects': 'off',
         'rxjs/throw-error': 'error',
     },
 };
