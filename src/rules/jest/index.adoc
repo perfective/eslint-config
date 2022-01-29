@@ -134,6 +134,16 @@ for https://jestjs.io[Jest].
 |
 | Error
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-comparison-matcher.md[jest/prefer-comparison-matcher]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-equality-matcher.md[jest/prefer-equality-matcher]`
+|
+| Suggest
+| Error
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-expect-assertions.md[jest/prefer-expect-assertions]`
 |
 |

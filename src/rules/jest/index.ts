@@ -45,6 +45,8 @@ export = {
         'jest/no-test-prefixes': 'warn',
         'jest/no-test-return-statement': 'error',
         'jest/prefer-called-with': 'error',
+        'jest/prefer-comparison-matcher': 'warn',
+        'jest/prefer-equality-matcher': 'error',
         'jest/prefer-expect-assertions': 'off',
         'jest/prefer-expect-resolves': 'warn',
         'jest/prefer-hooks-on-top': 'error',
