@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.16.0` to `v0.17.0-alpha.2`
+== From `v0.16.0` to `v0.17.0-beta`
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -23,12 +23,18 @@ module.exports = {
             files: ['*.[jt]s?(x)'],
             rules: {
                 'no-unused-private-class-members': 'off',
+                'jest/no-conditional-in-test': 'off',
+                // Deprecated; turn off when `jest/no-conditional-in-test` is enabled
+                'jest/no-if': 'error',
                 'jest/prefer-comparison-matcher': 'off',
                 'jest/prefer-equality-matcher': 'off',
+                'jest/prefer-snapshot-hint': 'off',
+                'jsdoc/sort-tags': 'off',
                 'unicorn/no-thenable': 'off',
                 'unicorn/no-useless-promise-resolve-reject': 'off',
                 'unicorn/prefer-json-parse-buffer': 'off',
                 'unicorn/relative-url-style': 'off',
+                'unicorn/text-encoding-identifier-case': 'off',
             },
         },
     ],

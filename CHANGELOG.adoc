@@ -1,34 +1,42 @@
 = Changelog
 
-== v0.17.0-alpha.2
+== v0.17.0-beta
 
-* Upgraded `eslint` to `8.8.0`:
+* Upgraded `eslint` to `8.9.0`:
 ** Enabled the `no-unused-private-class-members` rule as an error.
 +
-* Upgraded `@typescript-eslint` to `5.10.1`:
+* Upgraded `@typescript-eslint` to `5.12.0`:
 ** specified `set` and `get` methods to be ordered after regular methods.
 +
-* Upgraded `eslint-plugin-jest` to `26.0.0`:
+* Upgraded `eslint-plugin-jest` to `26.1.1`:
 ** Removed the `jest/prefer-to-be-null` and the `jest/prefer-to-be-undefined` rules
 (replaced by the `jest/prefer-to-be` rule).
 ** Renamed `jest/valid-describe` into `jest/valid-describe-callback`;
 ** Renamed `jest/lowercase-name` into `jest/prefer-lowercase-title`;
 ** Enabled `jest/prefer-comparison-matcher` as a warning;
 ** Enabled `jest/prefer-equality-matcher` as an error;
-** Ignored only top-level describe (can be used for a class name) in `jest/prefer-lowercase-title`.
+** Ignored only top-level describe (can be used for a class name) in `jest/prefer-lowercase-title`;
+* Enabled `jest/no-conditional-in-test` as an error;
+* Disabled `jest/no-if` as deprecated
+(replaced by `jest/no-conditional-in-test`);
+* Enabled `jest/prefer-snapshot-init` as an error.
 +
-* Upgraded `eslint-plugin-testing-library` to `5.0.4`:
+* Upgraded `eslint-plugin-testing-library` to `5.0.5`:
 ** Renamed `testing-library/no-debug` into `testing-library/no-debugging-utils`.
 +
-* Upgraded `eslint-plugin-unicorn` to `40.1.0`:
+* Upgraded `eslint-plugin-unicorn` to `41.0.0`:
 ** Enabled `unicorn/no-thenable` as an error;
 ** Enabled `unicorn/no-useless-promise-resolve-reject` as a warning;
 ** Enabled `unicorn/prefer-json-parse-buffer` as a warning;
-** Enabled `unicorn/relative-url-style` as a warning.
+** Enabled `unicorn/relative-url-style` as a warning;
+** Enabled `unicorn/text-encoding-identifier-case` as an error.
 +
 * Upgraded `eslint-plugin-rxjs` to `5.0.2`:
 ** Disabled the `rxjs/suffix-subjects` rule.
-* Updated `eslint-plugin-jsdoc` to `37.7.0.
++
+* Updated `eslint-plugin-jsdoc` to `37.9.3:
+** * Enabled `jsdoc/sort-tags` as a warning.
++
 * Bumped `eslint-plugin-jest-dom` to `4.0.1`.
 * Bumped `eslint-plugin-import` to `2.25.4`.
 
