@@ -109,6 +109,7 @@ export = {
         'jsdoc/require-throws': 'error',
         'jsdoc/require-yields': 'error',
         'jsdoc/require-yields-check': 'error',
+        'jsdoc/sort-tags': 'warn',
         'jsdoc/tag-lines': ['off', 'never', {
             count: 1,
             noEndLines: true,

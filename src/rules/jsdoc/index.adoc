@@ -247,6 +247,11 @@ In JavaScript types should be required in the JSDocs.
 |
 | Error
 
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-sort-tags[jsdoc/sort-tags]`
+|
+| Yes
+| Warning
+
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#tag-lines[jsdoc/tag-lines]`
 | Yes
 | Yes
