@@ -31,7 +31,7 @@
         "test:build": "jest --clearCache && jest --collectCoverage"
     },
     "peerDependencies": {
-        "@babel/eslint-parser": "^7.16.5",
+        "@babel/eslint-parser": "^7.17.0",
         "@typescript-eslint/eslint-plugin": "^5.10.1",
         "@typescript-eslint/eslint-plugin-tslint": "^5.10.1",
         "@typescript-eslint/parser": "^5.10.1",
@@ -58,7 +58,7 @@
     },
     "devDependencies": {
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
-        "@babel/eslint-parser": "^7.16.5",
+        "@babel/eslint-parser": "^7.17.0",
         "@perfective/build": "~0.3.0-alpha.1",
         "@types/jest": "^27.4.0",
         "@typescript-eslint/eslint-plugin": "5.10.1",
