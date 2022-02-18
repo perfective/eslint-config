@@ -508,6 +508,11 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Yes
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/text-encoding-identifier-case.md[unicorn/text-encoding-identifier-case]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/throw-new-error.md[unicorn/throw-new-error]`
 | Yes
 | Yes
