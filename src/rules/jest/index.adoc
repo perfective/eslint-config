@@ -39,6 +39,11 @@ for https://jestjs.io[Jest].
 |
 | Error
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-conditional-in-testt.md[jest/no-conditional-in-test]`
+|
+|
+| Error
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-deprecated-functions.md[jest/no-deprecated-functions]`
 | Yes
 | Yes
@@ -82,7 +87,7 @@ for https://jestjs.io[Jest].
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-if.md[jest/no-if]`
 |
 |
-| Error
+| Off (Deprecated)
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-interpolation-in-snapshots.md[jest/no-interpolation-in-snapshots]`
 | Yes
@@ -164,6 +169,11 @@ for https://jestjs.io[Jest].
 | Yes
 | Error
 4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-snapshot-hint.md[jest/prefer-snapshot-hint]`
+|
+|
+| Error
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-spy-on.md[jest/prefer-spy-on]`
 |
