@@ -5,7 +5,10 @@ export = {
             caseSensitiveStrict: true,
         }],
         'import/named': ['error', {
-            commonjs: true,
+            // TODO: This setting is reported to cause issues,
+            //  and it is not documented.
+            // See https://github.com/import-js/eslint-plugin-import/pull/1222
+            commonjs: false,
         }],
         'import/default': 'error',
         'import/namespace': 'error',
