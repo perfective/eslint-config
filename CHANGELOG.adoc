@@ -1,14 +1,14 @@
 = Changelog
 
-== v0.17.0-beta
+== v0.17.0
 
 * Upgraded `eslint` to `8.9.0`:
 ** Enabled the `no-unused-private-class-members` rule as an error.
 +
-* Upgraded `@typescript-eslint` to `5.12.0`:
+* Upgraded `@typescript-eslint` to `5.12.1`:
 ** specified `set` and `get` methods to be ordered after regular methods.
 +
-* Upgraded `eslint-plugin-jest` to `26.1.1`:
+* Upgraded `eslint-plugin-jest` to `26.1.3`:
 ** Removed the `jest/prefer-to-be-null` and the `jest/prefer-to-be-undefined` rules
 (replaced by the `jest/prefer-to-be` rule).
 ** Renamed `jest/valid-describe` into `jest/valid-describe-callback`;
@@ -21,10 +21,10 @@
 (replaced by `jest/no-conditional-in-test`);
 * Enabled `jest/prefer-snapshot-init` as an error.
 +
-* Upgraded `eslint-plugin-testing-library` to `5.0.5`:
+* Upgraded `eslint-plugin-testing-library` to `5.0.6`:
 ** Renamed `testing-library/no-debug` into `testing-library/no-debugging-utils`.
 +
-* Upgraded `eslint-plugin-unicorn` to `41.0.0`:
+* Upgraded `eslint-plugin-unicorn` to `41.0.1`:
 ** Enabled `unicorn/no-thenable` as an error;
 ** Enabled `unicorn/no-useless-promise-resolve-reject` as a warning;
 ** Enabled `unicorn/prefer-json-parse-buffer` as a warning;
@@ -34,7 +34,7 @@
 * Upgraded `eslint-plugin-rxjs` to `5.0.2`:
 ** Disabled the `rxjs/suffix-subjects` rule.
 +
-* Updated `eslint-plugin-jsdoc` to `37.9.3:
+* Updated `eslint-plugin-jsdoc` to `37.9.7:
 ** * Enabled `jsdoc/sort-tags` as a warning.
 +
 * Bumped `eslint-plugin-jest-dom` to `4.0.1`.

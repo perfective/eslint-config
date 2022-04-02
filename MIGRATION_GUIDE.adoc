@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.16.0` to `v0.17.0-beta`
+== From `v0.16.0` to `v0.17.0`
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
