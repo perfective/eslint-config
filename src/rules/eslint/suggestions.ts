@@ -65,6 +65,7 @@ export = {
         'no-case-declarations': 'error',
         'no-confusing-arrow': ['warn', {
             allowParens: true,
+            onlyOneSimpleParam: false,
         }],
         'no-console': 'error',
         'no-continue': 'error',

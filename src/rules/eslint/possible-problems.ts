@@ -58,6 +58,10 @@ export = {
         'no-unused-vars': ['error', {
             args: 'after-used',
             argsIgnorePattern: '^_',
+            caughtErrors: 'all',
+            destructuredArrayIgnorePattern: '^_',
+            ignoreRestSiblings: false,
+            vars: 'all',
         }],
         'no-use-before-define': ['error', {
             functions: false,
@@ -68,6 +72,8 @@ export = {
             allowProperties: false,
         }],
         'use-isnan': 'error',
-        'valid-typeof': 'error',
+        'valid-typeof': ['error', {
+            requireStringLiterals: true,
+        }],
     },
 };

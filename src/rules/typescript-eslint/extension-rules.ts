@@ -107,6 +107,10 @@ export = {
             args: 'after-used',
             // TypeScript recognizes underscore for unused parameters
             argsIgnorePattern: '^_',
+            caughtErrors: 'all',
+            destructuredArrayIgnorePattern: '^_',
+            ignoreRestSiblings: false,
+            vars: 'all',
         }],
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', {
