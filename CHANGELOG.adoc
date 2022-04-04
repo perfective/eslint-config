@@ -8,6 +8,12 @@
 ** Supported `typescript` `4.6`;
 ** Enabled `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redundant-type-constituents.md[@typescript-eslint/no-redundant-type-constituents]` as an error;
 ** Enabled `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-empty-export.md[@typescript-eslint/no-useless-empty-export]` as a warning.
++
+* Upgraded `eslint-plugin-unicorn` to `42.0.0`:
+** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-iife.md[unicorn/no-unreadable-iife]` as an error;
+** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-switch-case.md[unicorn/no-useless-switch-case]` as an error;
+** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]` as a warning;
+** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]` as a warning.
 
 
 == v0.17.0
