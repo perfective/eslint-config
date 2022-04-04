@@ -14,7 +14,7 @@ export = {
         'sonarjs/no-gratuitous-expressions': 'error',
         // TODO: This rule fails to recognize different default arguments,
         //  which can be used for named functions currying.
-        'sonarjs/no-identical-functions': 'error',
+        'sonarjs/no-identical-functions': ['error', 3],
         'sonarjs/no-inverted-boolean-check': 'warn',
         'sonarjs/no-nested-switch': 'error',
         'sonarjs/no-nested-template-literals': 'error',

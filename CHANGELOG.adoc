@@ -14,6 +14,8 @@
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-switch-case.md[unicorn/no-useless-switch-case]` as an error;
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]` as a warning;
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]` as a warning.
++
+* Updated `eslint-plugin-sonarjs` to `0.13.0`.
 
 
 == v0.17.0
