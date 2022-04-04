@@ -112,6 +112,7 @@ export = {
         'jsdoc/sort-tags': 'warn',
         'jsdoc/tag-lines': ['off', 'never', {
             count: 1,
+            dropEndLines: false,
             noEndLines: true,
             tags: {},
         }],
