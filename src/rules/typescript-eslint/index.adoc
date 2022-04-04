@@ -212,6 +212,11 @@ provides lint rules for TypeScript codebases.
 |
 | Off
 
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redundant-type-constituents.md[@typescript-eslint/no-redundant-type-constituents]`
+|
+|
+| Error
+
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md[@typescript-eslint/no-require-imports]`
 |
 |
@@ -439,6 +444,11 @@ not checking arrow functions causes `require-await` to miss async functions.
 |
 | Error
 
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-empty-export.md[@typescript-eslint/no-useless-empty-export]`
+|
+| Yes
+| Warning
+
 |===
 
 
@@ -621,6 +631,11 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Warning
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md[@typescript-eslint/semi]`
+|
+| Yes
+| Warning
+
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-blocks.md[@typescript-eslint/space-before-blocks]`
 |
 | Yes
 | Warning

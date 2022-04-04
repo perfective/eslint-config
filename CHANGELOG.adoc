@@ -3,6 +3,11 @@
 == v0.18.0-alpha (unpublished)
 
 * Updated `eslint` to `8.12.0`.
++
+* Updated `@typescript-eslint` to `5.17.0`:
+** Supported `typescript` `4.6`;
+** Enabled `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redundant-type-constituents.md[@typescript-eslint/no-redundant-type-constituents]` as an error;
+** Enabled `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-empty-export.md[@typescript-eslint/no-useless-empty-export]` as a warning.
 
 
 == v0.17.0

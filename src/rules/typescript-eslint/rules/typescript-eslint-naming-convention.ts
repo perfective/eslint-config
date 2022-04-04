@@ -47,7 +47,7 @@ export type TypescriptEslintNamingConventionUnderscore =
 
 export interface TypescriptEslintNamingConvention {
     selector: TypescriptEslintNamingConventionSelector | TypescriptEslintNamingConventionSelector[];
-    format?: TypescriptEslintNamingConventionFormat[];
+    format: TypescriptEslintNamingConventionFormat[] | null;
     modifiers?: string[];
     leadingUnderscore?: TypescriptEslintNamingConventionUnderscore;
     trailingUnderscore?: TypescriptEslintNamingConventionUnderscore;
@@ -79,6 +79,10 @@ function typescriptEslintNamingConventionDefaults(): TypescriptEslintNamingConve
         }, {
             selector: ['memberLike', 'variableLike'],
             format: ['strictCamelCase'],
+        }, {
+            selector: ['objectLiteralProperty'],
+            modifiers: ['requiresQuotes'],
+            format: null,
         }, {
             selector: ['parameter'],
             modifiers: ['unused'],

@@ -138,6 +138,8 @@ export = {
         '@typescript-eslint/return-await': ['warn', 'never'],
         'semi': 'off',
         '@typescript-eslint/semi': ['warn', 'always'],
+        'space-before-blocks': 'off',
+        '@typescript-eslint/space-before-blocks': ['warn', 'always'],
         'space-before-function-paren': 'off',
         '@typescript-eslint/space-before-function-paren': ['warn', {
             anonymous: 'always',
