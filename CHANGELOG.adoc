@@ -1,6 +1,6 @@
 = Changelog
 
-== v0.18.0-alpha (unpublished)
+== v0.18.0-alpha (next)
 
 * Updated `eslint` to `8.12.0`.
 +
