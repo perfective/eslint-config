@@ -12,6 +12,7 @@ export = {
         'no-compare-neg-zero': 'error',
         'no-cond-assign': ['error', 'always'],
         'no-const-assign': 'error',
+        'no-constant-binary-expression': 'error',
         'no-constant-condition': 'error',
         'no-constructor-return': 'error',
         'no-control-regex': 'error',
@@ -66,6 +67,8 @@ export = {
         'no-use-before-define': ['error', {
             functions: false,
             classes: false,
+            variables: false,
+            allowNamedExports: false,
         }],
         'no-useless-backreference': 'error',
         'require-atomic-updates': ['error', {

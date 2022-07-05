@@ -59,6 +59,11 @@ The https://eslint.org/docs/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/rules/no-constant-binary-expression[no-constant-binary-expression]`
+| Yes
+|
+| Error
+
 | `link:https://eslint.org/docs/rules/no-constant-condition[no-constant-condition]`
 | Yes
 |

@@ -147,7 +147,7 @@ export = {
         'no-undefined': 'off',
         'no-underscore-dangle': ['error', {
             allowAfterSuper: false,
-            // Allow to have underscore as a private property name with a corresponding public method without it.
+            // Allow to have an underscore as a private property name with a corresponding public method without it.
             allowAfterThis: true,
             allowAfterThisConstructor: false,
             // Allow underscore prefix for unused parameters
@@ -155,6 +155,8 @@ export = {
             // Only private properties should use underscore.
             // Public and protected properties should be access through an accessor method.
             enforceInMethodNames: true,
+            // Disallow dangling underscores in es2022 class fields names
+            enforceInClassFields: true,
         }],
         'no-unneeded-ternary': 'warn',
         'no-unused-expressions': 'error',
