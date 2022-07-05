@@ -64,7 +64,8 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-index.md[unicorn/import-index]`
 |
 | Yes
-| Warning
+| Off
+4+| Deprecated since v43.0.0.
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md[unicorn/import-style]`
 | Yes
@@ -339,6 +340,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-event-target.md[unicorn/prefer-event-target]`
+| Yes
+|
+| Error
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md[unicorn/prefer-export-from]`
 | Yes
 | Yes
@@ -358,6 +364,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Partially
 | Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]`
+| Yes
+| Suggestion
+| Error
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-math-trunc.md[unicorn/prefer-math-trunc]`
 | Yes

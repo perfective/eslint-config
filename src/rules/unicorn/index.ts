@@ -20,7 +20,8 @@ export = {
         'unicorn/filename-case': ['error', {
             case: 'kebabCase',
         }],
-        'unicorn/import-index': 'warn',
+        // Deprecated since v43.0.0
+        'unicorn/import-index': 'off',
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
@@ -105,20 +106,19 @@ export = {
         'unicorn/prefer-dom-node-dataset': 'warn',
         'unicorn/prefer-dom-node-remove': 'warn',
         'unicorn/prefer-dom-node-text-content': 'warn',
+        'unicorn/prefer-event-target': 'error',
         'unicorn/prefer-export-from': 'warn',
         'unicorn/prefer-includes': 'warn',
         'unicorn/prefer-json-parse-buffer': 'warn',
         'unicorn/prefer-keyboard-event-key': 'warn',
+        'unicorn/prefer-logical-operator-over-ternary': 'error',
         'unicorn/prefer-math-trunc': 'warn',
         'unicorn/prefer-modern-dom-apis': 'warn',
         'unicorn/prefer-modern-math-apis': 'warn',
         'unicorn/prefer-module': 'off',
         'unicorn/prefer-native-coercion-functions': 'warn',
         'unicorn/prefer-negative-index': 'warn',
-        'unicorn/prefer-node-protocol': ['warn', {
-            // Requires NodeJS 16
-            checkRequire: false,
-        }],
+        'unicorn/prefer-node-protocol': 'warn',
         'unicorn/prefer-number-properties': ['warn', {
             checkInfinity: true,
         }],
