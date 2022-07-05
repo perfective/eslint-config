@@ -4,8 +4,8 @@ https://palantir.github.io/tslint/[TSLint] is an extensible linter for the TypeS
 that was deprecated in 2019.
 Unfortunately, not all of its rules has yet been replaced,
 and it is not possible to
-https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/ROADMAP.md[migrate] from it.
-The https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint[ESLint Plugin TSLint]
+https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/ROADMAP.md[migrate] from it.
+The https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint[ESLint Plugin TSLint]
 is used to run the remaining TSLint
 and http://codelyzer.com/rules/[Codelyzer]
 (in `link:https://github.com/perfective/eslint-config-angular[@perfective/eslint-config-angular]`) rules.

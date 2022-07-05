@@ -7,7 +7,7 @@ As the `@perfective` library itself,
 these rules are configured for the TypeScript projects only.
 
 In addition to the core https://eslint.org/docs/rules/[ESLint rules]
-and the `link:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin[@typescript-eslint]` plugin rules,
+and the `link:https://typescript-eslint.io/rules/[@typescript-eslint]` plugin rules,
 `@perfective/eslint-config` configures:
 
 * `link:https://github.com/freaktechnik/eslint-plugin-array-func[eslint-plugin-array-func]`;
@@ -131,7 +131,7 @@ and override `options` for the `unicorn/prevent-abbreviation` rule.
 ESLint and its plugins replace most of the https://palantir.github.io/tslint/[TSLint] rules.
 Yet, there are few rules that still need to be supported.
 TSLint rules are executed using the
-https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint[ESLint Plugin TSLint].
+https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint[ESLint Plugin TSLint].
 
 `eslint-plugin-tslint` provides only one rule `@typescript-eslint/tslint/config`
 that configures all the remaining TSLint rules,

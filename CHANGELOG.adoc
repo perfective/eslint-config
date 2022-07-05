@@ -6,8 +6,8 @@
 +
 * Updated `@typescript-eslint` to `5.17.0`:
 ** Supported `typescript` `4.6`;
-** Enabled `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redundant-type-constituents.md[@typescript-eslint/no-redundant-type-constituents]` as an error;
-** Enabled `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-empty-export.md[@typescript-eslint/no-useless-empty-export]` as a warning.
+** Enabled `link:https://typescript-eslint.io/rules/no-redundant-type-constituents/[@typescript-eslint/no-redundant-type-constituents]` as an error;
+** Enabled `link:https://typescript-eslint.io/rules/no-useless-empty-export/[@typescript-eslint/no-useless-empty-export]` as a warning.
 +
 * Upgraded `eslint-plugin-unicorn` to `42.0.0`:
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-iife.md[unicorn/no-unreadable-iife]` as an error;
@@ -570,7 +570,7 @@ than the default one.
 
 == v0.2.0
 
-* Upgraded https://github.com/typescript-eslint/typescript-eslint/[TypeScript ESLint] to `v2.29.0`.
+* Upgraded https://typescript-eslint.io/[TypeScript ESLint] to `v2.29.0`.
 * Added `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]` rules.
 
 == v0.1.2
@@ -586,7 +586,7 @@ as a peer dependency.
 == v0.1.0
 
 * Added https://eslint.org[ESLint] rules.
-* Added https://github.com/typescript-eslint/typescript-eslint/[TypeScript ESLint] rules.
+* Added https://typescript-eslint.io/rules/[TypeScript ESLint] rules.
 * Added `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]` rules.
 * Added `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]` rules.
 * Added https://palantir.github.io/tslint/[TSLint] rules

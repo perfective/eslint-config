@@ -62,7 +62,7 @@ export interface TypescriptEslintNamingConvention {
 /**
  * Provides configuration and extensions for the @typescript-eslint/naming-convention.
  *
- * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
+ * @see https://typescript-eslint.io/rules/naming-convention/
  */
 export function typescriptEslintNamingConvention(
     extensions: TypescriptEslintNamingConvention[] = [],

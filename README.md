@@ -7,7 +7,7 @@ As the `@perfective` library itself,
 these rules are configured for the TypeScript projects only.
 
 In addition to the core [ESLint rules](https://eslint.org/docs/rules/)
-and the [`@typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) plugin rules,
+and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules,
 `@perfective/eslint-config` configures:
 
 -   [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
@@ -79,7 +79,7 @@ Require the configuration in your root `.eslintrc.js` or `.eslintrc.json`.
 ESLint and its plugins replace most of the [TSLint](https://palantir.github.io/tslint/) rules.
 Yet, there are few rules that still need to be supported.
 TSLint rules are executed using the
-[ESLint Plugin TSLint](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint).
+[ESLint Plugin TSLint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint).
 
 Read the [full documentation](https://github.com/perfective/eslint-config/blob/main/README.adoc)
 in the repository.
