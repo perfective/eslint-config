@@ -29,6 +29,10 @@ provides lint rules for TypeScript codebases.
 | Yes
 |
 | Error
+4+| Disallows `@ts-<directive>` comments, as they would suppress TypeScript compiler errors and reduce the strictness of the compiler.
+`@ts-expect-error` is allowed with a description in unit tests,
+as it may be required to force an error
+(e.g. to test typings of the functions).
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-tslint-comment.md[@typescript-eslint/ban-tslint-comment]`
 |
@@ -44,6 +48,13 @@ provides lint rules for TypeScript codebases.
 |
 | Yes
 | Off
+
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-generic-constructors.md[@typescript-eslint/consistent-generic-constructors]`
+|
+| Yes
+| Warning
+4+| Enforces specifying type arguments only in the type annotation,
+as type inferences should be minimized and types must be declared explicitly.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-indexed-object-style.md[@typescript-eslint/consistent-indexed-object-style]`
 |
@@ -120,6 +131,11 @@ provides lint rules for TypeScript codebases.
 |
 | Yes
 | Warning
+
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-duplicate-enum-values.md[@typescript-eslint/no-duplicate-enum-values]`
+|
+|
+| Error
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md[@typescript-eslint/no-dynamic-delete]`
 |
@@ -211,6 +227,7 @@ provides lint rules for TypeScript codebases.
 |
 |
 | Off
+4+| Deprecated. Use the `@typescript-eslint/parameters-properties` instead.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redundant-type-constituents.md[@typescript-eslint/no-redundant-type-constituents]`
 |
@@ -295,6 +312,11 @@ provides lint rules for TypeScript codebases.
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/non-nullable-type-assertion-style.md[@typescript-eslint/non-nullable-type-assertion-style]`
 |
 | Yes
+| Error
+
+| `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/parameter-properties.md[@typescript-eslint/parameter-properties]`
+|
+|
 | Error
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-as-const.md[@typescript-eslint/prefer-as-const]`
@@ -443,6 +465,8 @@ not checking arrow functions causes `require-await` to miss async functions.
 |
 |
 | Error
+4+| If parameters in the signatures have different names,
+then the function signatures will remain separate.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-empty-export.md[@typescript-eslint/no-useless-empty-export]`
 |
@@ -523,12 +547,15 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-duplicate-imports.md[@typescript-eslint/no-duplicate-imports]`
 |
 |
-| Error
+| Off
+4+| The rule is deprecated. Use the `imports/no-duplicates` rule instead.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md[@typescript-eslint/no-empty-function]`
 | Yes
 |
 | Error
+4+| The `overrideMethods` option is disallowed, as it may change the behavior and needs to be commented.
+The `decoratedFunctions` option is disallowed, as the decorator behavior needs to be commented.
 
 | `link:https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md[@typescript-eslint/no-extra-parens]`
 |

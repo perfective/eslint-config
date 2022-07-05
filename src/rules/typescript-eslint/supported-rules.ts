@@ -24,6 +24,7 @@ export = {
             extendDefaults: true,
         }],
         '@typescript-eslint/class-literal-property-style': 'off',
+        '@typescript-eslint/consistent-generic-constructors': ['warn', 'type-annotation'],
         '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
         '@typescript-eslint/consistent-type-assertions': ['error', {
             assertionStyle: 'as',
@@ -118,6 +119,7 @@ export = {
             ignoreArrowShorthand: true,
             ignoreVoidOperator: false,
         }],
+        '@typescript-eslint/no-duplicate-enum-values': 'error',
         '@typescript-eslint/no-dynamic-delete': 'warn',
         // An empty interface can be used as nominal type or a self-documenting placeholder.
         // "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
@@ -180,6 +182,9 @@ export = {
         // This rule is fixable, but
         //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+        '@typescript-eslint/parameter-properties': ['error', {
+            prefer: 'parameter-property',
+        }],
         '@typescript-eslint/prefer-as-const': 'warn',
         '@typescript-eslint/prefer-enum-initializers': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
@@ -276,7 +281,10 @@ export = {
             // See TSLint "static-this"
             ignoreStatic: true,
         }],
-        '@typescript-eslint/unified-signatures': 'error',
+        '@typescript-eslint/unified-signatures': ['error', {
+            // Allow different parameter names as they suggest different semantics
+            ignoreDifferentlyNamedParameters: true,
+        }],
         '@typescript-eslint/no-useless-empty-export': 'warn',
     },
 };

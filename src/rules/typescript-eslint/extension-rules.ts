@@ -60,7 +60,8 @@ export = {
         'no-dupe-class-members': 'off',
         '@typescript-eslint/no-dupe-class-members': 'error',
         'no-duplicate-imports': 'off',
-        '@typescript-eslint/no-duplicate-imports': ['error', {
+        // The rule is deprecated. Use imports/no-duplicates instead.
+        '@typescript-eslint/no-duplicate-imports': ['off', {
             includeExports: true,
         }],
         'no-empty-function': 'off',
