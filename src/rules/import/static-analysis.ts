@@ -27,6 +27,6 @@ export = {
         }],
         'import/no-useless-path-segments': 'warn',
         'import/no-relative-parent-imports': 'off',
-        'import/no-relative-packages': 'error',
+        'import/no-relative-packages': 'warn',
     },
 };

@@ -78,8 +78,8 @@ to prevent issues with misspelling of file paths and import names.
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md[import/no-relative-packages]`
 |
-|
-| Error
+| Yes
+| Warning
 4+| Safety measure for monorepos where packages are published separately.
 It should not affect "namespaced" packages with `package.json` generated during the build.
 
