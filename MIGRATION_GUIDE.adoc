@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.17.0` to `v0.18.0-alpha` (next)
+== From `v0.17.0` to `v0.18.0-beta` (next)
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -22,13 +22,20 @@ module.exports = {
         {
             files: ['*.[jt]s?(x)'],
             rules: {
+                'no-constant-binary-expression': 'off',
+                '@typescript-eslint/consistent-generic-constructors': 'off', // auto-fixable
+                '@typescript-eslint/no-duplicate-enum-values': 'off',
                 '@typescript-eslint/no-redundant-type-constituents': 'off',
                 '@typescript-eslint/no-useless-empty-export': 'off', // auto-fixable
+                '@typescript-eslint/parameter-properties': 'off',
+                'jest/prefer-hooks-in-order': 'off',
+                'testing-library/no-global-regexp-flag-in-query': 'off', // auto-fixable
                 'unicorn/no-unreadable-iife': 'off',
                 'unicorn/no-useless-switch-case': 'off',
+                'unicorn/prefer-event-target': 'off',
+                'unicorn/prefer-logical-operator-over-ternary': 'off',
                 'unicorn/prefer-modern-math-apis': 'off', // auto-fixable
                 'unicorn/prefer-native-coercion-functions': 'off', // auto-fixable
-                'testing-library/no-global-regexp-flag-in-query': 'off', // auto-fixable
             },
         },
     ],
