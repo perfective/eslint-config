@@ -341,7 +341,7 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-event-target.md[unicorn/prefer-event-target]`
-| Yes
+|
 |
 | Error
 
