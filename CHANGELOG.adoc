@@ -1,6 +1,6 @@
 = Changelog
 
-== v0.18.0-beta (next)
+== v0.18.0-beta.1 (next)
 
 * Updated `typescript` to `4.6.4`.
 * Updated `eslint` to `8.19.0`.
@@ -20,7 +20,7 @@ Enforce specifying type arguments only in the type annotation.
 ** Disabled `link:https://typescript-eslint.io/rules/no-duplicate-imports/[@typescript-eslint/no-duplicate-imports]` as deprecated.
 Use the `imports/no-duplicates` instead.
 +
-* Upgraded `eslint-plugin-unicorn` to `43.0.0`:
+* Upgraded `eslint-plugin-unicorn` to `43.0.1`:
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-iife.md[unicorn/no-unreadable-iife]` as an error;
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-switch-case.md[unicorn/no-useless-switch-case]` as an error;
 ** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]` as a warning;
@@ -30,7 +30,7 @@ Use the `imports/no-duplicates` instead.
 ** Disabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-index[unicorn/import-index]` as deprecated.
 +
 * Upgraded `eslint-plugin-jsdoc` to `39.3.3`.
-* Upgraded `eslint-import-resolver-typescript` to `3.2.4`.
+* Upgraded `eslint-import-resolver-typescript` to `3.2.5`.
 * Updated `eslint-plugin-import` to `2.26.0`.
 * Updated `eslint-plugin-sonarjs` to `0.13.0`.
 * Updated `eslint-plugin-jest` to `26.5.3`.
