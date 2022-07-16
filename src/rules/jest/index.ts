@@ -14,6 +14,9 @@ export = {
             assertFunctionNames: ['expect', 'request.*.expect'],
             additionalTestBlockFunctions: [],
         }],
+        'jest/max-expects': ['error', {
+            max: 5,
+        }],
         'jest/max-nested-describe': ['error', {
             max: 3,
         }],
