@@ -12,6 +12,8 @@ exports.default = gulp.series(
     build.packageJson.packageJson({
         main: './index.js',
         module: undefined,
+        // The index.d.ts file is not published
+        types: undefined,
         directories: {
             lib: './',
         },
