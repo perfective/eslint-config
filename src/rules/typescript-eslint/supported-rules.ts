@@ -194,7 +194,11 @@ export = {
             allowBitwiseExpressions: true,
         }],
         '@typescript-eslint/prefer-namespace-keyword': 'warn',
-        '@typescript-eslint/prefer-nullish-coalescing': 'error',
+        '@typescript-eslint/prefer-nullish-coalescing': ['error', {
+            ignoreTernaryTests: false,
+            ignoreConditionalTests: true,
+            ignoreMixedLogicalExpressions: true,
+        }],
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-readonly': 'warn',
         // Rule behavior is unpredictable and 3rd-party libraries may not provide read-only types
