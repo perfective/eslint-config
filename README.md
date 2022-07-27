@@ -1,19 +1,17 @@
 # Perfective ESLint Config
 
 `@perfective/eslint-config` provides
-a [shareable ESLint configuration](https://eslint.org/docs/developer-guide/shareable-configs)
+a [shareable ESLint configuration](https://eslint.org/docs/latest/developer-guide/shareable-configs)
 that is used for the development of the `@perfective` packages.
-As the `@perfective` library itself,
-these rules are configured for the TypeScript projects only.
+These rules are primarily configured for TypeScript projects.
 
-In addition to the core [ESLint rules](https://eslint.org/docs/rules/)
-and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules,
-`@perfective/eslint-config` configures:
+In addition to the core [ESLint rules](https://eslint.org/docs/latest/rules/)
+and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules, `@perfective/eslint-config` configures:
 
 -   [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
 -   [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress);
 -   [`eslint-plugin-deprecation`](https://github.com/gund/eslint-plugin-deprecation);
--   [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments);
+-   [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments/);
 -   [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
 -   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest);
 -   [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom);
@@ -29,8 +27,8 @@ and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules
 -   [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn).
 
 To simplify configuring ESLint support in the IDEs and editors,
-the severity of all fixable rules is `warning`.
-That allows to visually distinguish errors that have to be fixed manually
+the severity of all fixable rules is a `warning`.
+In addition, it allows distinguishing errors that have to be fixed manually
 from issues that will be fixed automatically.
 
 ## Setup
@@ -66,18 +64,18 @@ npm install --save-dev \
     tslint
 ```
 
-Require the configuration in your root `.eslintrc.js` or `.eslintrc.json`.
+Require the configuration in your root `.eslintrc.js`.
 
-```json
-{
-    "extends": ["@perfective"]
-}
+```javascript
+module.exports = {
+    extends: ['@perfective/eslint-config'],
+};
 ```
 
 ## TSLint
 
 ESLint and its plugins replace most of the [TSLint](https://palantir.github.io/tslint/) rules.
-Yet, there are few rules that still need to be supported.
+Yet, a few rules still need to be supported.
 TSLint rules are executed using the
 [ESLint Plugin TSLint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint).
 

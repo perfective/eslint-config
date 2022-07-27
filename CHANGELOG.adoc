@@ -48,10 +48,10 @@ Use the `imports/no-duplicates` instead.
 ** Enabled the `no-unused-private-class-members` rule as an error.
 +
 * Upgraded `@typescript-eslint` to `5.12.1`:
-** specified `set` and `get` methods to be ordered after regular methods.
+** Specified `set` and `get` methods to be ordered after regular methods.
 +
 * Upgraded `eslint-plugin-jest` to `26.1.3`:
-** Removed the `jest/prefer-to-be-null` and the `jest/prefer-to-be-undefined` rules
+** Removed `jest/prefer-to-be-null` and `jest/prefer-to-be-undefined`
 (replaced by the `jest/prefer-to-be` rule).
 ** Renamed `jest/valid-describe` into `jest/valid-describe-callback`;
 ** Renamed `jest/lowercase-name` into `jest/prefer-lowercase-title`;
@@ -276,7 +276,7 @@ Use the `imports/no-duplicates` instead.
 *** Allowed `dev` abbreviation.
 +
 * Internal:
-** Use `gulp` for build.
+** Use `gulp` for the build.
 
 
 == v0.12.0
@@ -309,15 +309,15 @@ Use the `imports/no-duplicates` instead.
 ** `object-curly-newline` allows new lines in export declarations only for multiple exports.
 ** `object-property-newline` allows properties on the same line.
 ** `max-params` is disabled.
-** `no-extra-parens`/`@typescript-eslint/no-extra-parens` allows parens: in nested binary expressions and JSX,
+** `no-extra-parens`/`@typescript-eslint/no-extra-parens` allow parenthesis: in nested binary expressions and JSX
 and enforces parens for arrow conditionals.
 ** `no-plusplus` enabled in `for`-loop afterthoughts.
-** `no-underscore-dangle` allows leading underscor for parameters; enforces no underscore in method names.
+** `no-underscore-dangle` allows leading underscore for parameters; enforces no underscore in method names.
 ** `spaced-comment` allows triple-slash references.
 ** `import/no-extraneous-dependencies` allows `devDependencies` in test, config, and build files.
 ** `import/no-unassigned-import` allows `@testing-library/jest-dom` import in Jest tests.
 ** `jest/lowercase-name` allows PascalCase in `describe`.
-** `jsdoc/require-description` allows to omit description if `@see` tag is used.
+** `jsdoc/require-description` allows omitting description if `@see` tag is used.
 ** `unicorn/prevent-abbreviations` allows `doc`/`docs` and `lib`/`libs`; does not check properties.
 ** `@typescript-eslint/no-extraneous-class` allows extraneous classes with decorators.
 ** `@typescript-eslint/promise-function-async` does not check arrow functions.
@@ -351,25 +351,29 @@ and enforces parens for arrow conditionals.
 
 * Upgraded `eslint-plugin-unicorn` to `25.0.1`:
 ** Multiple rules have been https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v25.0.0[renamed].
++
 * Updated `eslint` to `7.17.0`.
 * Updated `@typescript-eslint` to `4.12.0`.
 * Patched `eslint-plugin-json` to `30.7.13`.
++
 * Added `@perfective/eslint-config/rules` with functions to extended config for some rules:
 ** `simpleImportSortImports` to add internal scope packages groups in the `simple-import-sort/imports` rule;
 ** `typescriptEslintNamingConvention` to override the `@typescript-eslint/naming-convention` rule;
 ** `typescriptEslintTslintConfig` to override the `@typescript-eslint/tslint/config` rule
 (removed `@perfective/eslint-config/tslint`);
 ** `unicornPreventAbbreviations` to extend replacements in the `unicorn/prevent-abbreviations` rule.
-* Changes in configuration:
-** Allowed using a function, or a class in `describe()` name.
++
+* Configuration changes:
+** Allowed using a function or a class in `describe()` name.
 ** Allowed skipping description for JSDocs marked as `@private` or `@package`.
 ** Added all Jest default extensions to the test overrides.
 ** _Added_ abbreviation checks for `internal` imports.
 ** Allowed `e2e` and `params` abbreviations.
 ** Allowed leading underscore for unused parameters and private properties.
 ** Disabled `max-lines` and `max-lines-per-function`.
++
 * Additional changes in the `community` configuration:
-** Allowed empty interfaces, so they can be used as placeholders or nominal types.
+** Allowed empty interfaces to be used as placeholders or nominal types.
 ** Disabled the `sonarjs/cognitive-complexity` rule.
 
 
@@ -388,6 +392,7 @@ and enforces parens for arrow conditionals.
 * Added `@typescript-eslint/eslint-plugin-tslint` to run TSLint rules.
 ** Added `@perfective/eslint-config/tslint` subpackage to export the default TSLint rules for `eslint-plugin-tslint`.
 ** Removed TSLint configuration.
++
 * Moved the community config into the `@perfective/eslint-config/community` subpackage.
 * Upgraded `eslint` to `7.14.0`.
 * Upgraded `@typescript-eslint` to `4.8.2`.
@@ -406,8 +411,10 @@ and enforces parens for arrow conditionals.
 * Upgraded `eslint-plugin-unicorn` to `23.0.0`.
 * Upgraded `eslint-plugin-rxjs` to `2.1.3`.
 * Added `eslint-plugin-array-func` support (`3.1.7`).
++
 * Added `eslint-plugin-simple-import-sort` support (`5.0.3`).
 ** Removed TSLint `ordered-imports` rule.
++
 * Added `eslint-plugin-jsdoc` support (`30.7.7`):
 ** Removed TSLint `jsdoc-format` and `no-redundant-jsdoc` rules.
 
@@ -415,16 +422,19 @@ and enforces parens for arrow conditionals.
 == v0.7.0
 
 * Upgraded `eslint` to `7.9.0`.
++
 * Upgraded `@typescript-eslint` to `4.2.0`.
 ** Allow `// @ts-expect-error` comments with description in specs.
 ** Add common abbreviations to the default configuration.
 ** Enforce consistent (no `type`) imports.
++
 * Upgraded `eslint-plugin-jest` to `24.0.2`.
 * Upgraded `eslint-plugin-rxjs` to `0.0.3-beta.30`.
 * Upgraded `eslint-plugin-unicorn` to `22.0.0`.
 * Upgraded `eslint-import-resolver-typescript` to `2.3.0`.
 * Upgraded `tslint` to `6.1.3`.
 * Disabled 'rxjs/finnish' in the community config.
++
 * Allowed `args`, `db`, and `env` abbreviations.
 ** Allowed `params` abbreviation in the community config.
 
@@ -435,8 +445,10 @@ and enforces parens for arrow conditionals.
 * Upgraded `@typescript-eslint` to `3.7.0`.
 * Upgraded `eslint-plugin-jest` to `23.18.0`.
 * Upgraded `eslint-plugin-unicorn` to `21.0.0`.
++
 * Added `eslint-plugin-prefer-arrow` support.
 ** Removed TSLint `only-arrow-functions` rule.
++
 * Added `eslint-plugin-jest-formatting` support.
 * Added `eslint-plugin-eslint-comments` support.
 * Added `eslint-plugin-rxjs` support.
@@ -453,6 +465,7 @@ and enforces parens for arrow conditionals.
 ** Fix: configured `no-mixed-operators` to ignore arithmetic operations.
 ** Fix: enabled the `default-case-last` rule.
 ** Fix: enabled the `no-useless-backreference` rule.
++
 * Upgraded `@typescript-eslint` to `3.5.0`.
 ** Enabled the new `@typescript-eslint/ban-tslint-comment` rule.
 ** Enabled the new `@typescript-eslint/no-confusing-non-null-assertion` rule.
@@ -461,11 +474,14 @@ and enforces parens for arrow conditionals.
 ** Enabled the new `ignoreStringArrays` configuration flag
 for the `@typescript-eslint/require-array-sort-compare` rule.
 ** Fix: enabled the `@typescript-eslint/method-signature-style` rule.
++
 * Upgraded `eslint-plugin-import` to `2.22.0`.
 ** Enabled the new `ignoreExternal` configuration flag for the `import/no-cycle` rule.
++
 * Upgraded `eslint-plugin-jest` to `23.17.1`.
 ** Enabled the new `jest/no-conditional-expect` rule.
 ** Removed the deprecated `jest/no-try-expect` rule.
++
 * Set fixable ESLint rules as warnings (`warn` severity).
 * Updated the package documentation.
 * Disabled the `node/file-extension-in-import` rule.
@@ -499,11 +515,13 @@ for the `@typescript-eslint/require-array-sort-compare` rule.
 ** Enabled the `@typescript-eslint/no-invalid-this` rule.
 ** Configured sorting order for decorated fields and methods.
 ** Configured the `@typescript-eslint/prefer-optional-chain` rule.
++
 * Updated `eslint-plugin-jest` to `23.9.0`:
 ** Enabled the `jest/no-deprecated-functions` rule.
++
 * Updated `eslint-plugin-deprecation` to `1.0.1`.
 * Disabled the `max-statements` rule for specs.
-* [`community`] Allowed uppercase names in `describe()` for to support PascalCase class names.
+* [`community`] Allowed uppercase names in `describe()` to support PascalCase class names.
 
 == v0.2.10
 

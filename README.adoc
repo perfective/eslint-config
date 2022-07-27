@@ -1,19 +1,18 @@
 = Perfective ESLint Config
 
 `@perfective/eslint-config` provides
-a https://eslint.org/docs/developer-guide/shareable-configs[shareable ESLint configuration]
+a https://eslint.org/docs/latest/developer-guide/shareable-configs[shareable ESLint configuration]
 that is used for the development of the `@perfective` packages.
-As the `@perfective` library itself,
-these rules are configured for the TypeScript projects only.
+These rules are primarily configured for TypeScript projects.
 
-In addition to the core https://eslint.org/docs/rules/[ESLint rules]
+In addition to the core https://eslint.org/docs/latest/rules/[ESLint rules]
 and the `link:https://typescript-eslint.io/rules/[@typescript-eslint]` plugin rules,
 `@perfective/eslint-config` configures:
 
 * `link:https://github.com/freaktechnik/eslint-plugin-array-func[eslint-plugin-array-func]`;
 * `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]`;
 * `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]`;
-* `link:https://mysticatea.github.io/eslint-plugin-eslint-comments[eslint-plugin-eslint-comments]`;
+* `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/]`;
 * `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]`;
 * `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]`;
 * `link:https://github.com/testing-library/eslint-plugin-jest-dom[eslint-plugin-jest-dom]`;
@@ -29,8 +28,8 @@ and the `link:https://typescript-eslint.io/rules/[@typescript-eslint]` plugin ru
 * `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-unicorn]`.
 
 To simplify configuring ESLint support in the IDEs and editors,
-the severity of all fixable rules is `warning`.
-That allows to visually distinguish errors that have to be fixed manually
+the severity of all fixable rules is a `warning`.
+In addition, it allows distinguishing errors that have to be fixed manually
 from issues that will be fixed automatically.
 
 
@@ -68,32 +67,34 @@ npm install --save-dev \
     tslint
 ----
 +
-. Require the configuration in your root `.eslintrc.js` or `.eslintrc.json`.
+. Require the configuration in your root `.eslintrc.js`.
 +
-[source,json]
+[source,javascript]
 ----
-{
-    "extends": ["@perfective"]
-}
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+};
 ----
 +
 . `*.d.ts` files and `dist` directories are ignored by the configuration.
 `node_modules` and dot-files are ignored by the `eslint`.
-If more directories or file-types need to be ignored, see the
+If more directories or file types need to be ignored, see the
 `link:https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file[.eslintignore]` file docs.
 
 == Rules Configuration Extension Functions
 
 Some rules have complex configuration objects or arrays
-that are not merged but completely overridden by ESLint.
-It requires to copy/paste a rule config, instead of just extending it.
-This is a challenge to maintain rules updates,
-which is solved by providing custom config functions.
+that are not merged but are completely overridden by ESLint.
+Therefore, it requires copying and pasting a rule config instead of just extending it.
+Maintaining rules updates is challenging
+and is simplified by the custom config functions.
 
-These functions and their related types are exported in `@perfective/eslint-config/rules`
+These functions and related types are exported in `@perfective/eslint-config/rules`
 and match the rule name in `camelCase`.
-When an extended configuration is needed,
-it can be applied in the `.eslintrc.js` file:
+If you need an extended configuration,
+you can use these functions in the `.eslintrc.js` file:
 
 [source,javascript]
 ----
@@ -122,14 +123,14 @@ for the `simple-import-sort/imports` rule.
 — overrides `rules` and provides custom `directories`
 for the `@typescript-eslint/tslint/config` rule.
 * `unicornPreventAbbreviations(replacements, options)`
-— extends and overrides the list of `replacements`,
-and override `options` for the `unicorn/prevent-abbreviation` rule.
+— extends and overrides the list of `replacements`
+and `options` for the `unicorn/prevent-abbreviation` rule.
 
 
 == TSLint
 
 ESLint and its plugins replace most of the https://palantir.github.io/tslint/[TSLint] rules.
-Yet, there are few rules that still need to be supported.
+Yet, a few rules still need to be supported.
 TSLint rules are executed using the
 https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint[ESLint Plugin TSLint].
 
@@ -150,35 +151,25 @@ export = {
     }
 }
 ----
-<1> Overriding only one of the rules,
+<1> Overrides only one of the rules
 while keeping all others set by default.
 
 
 == Internals
 
-Rule for each plugin are described in the `./src/rules/{plugin}` subdirectories,
-where `plugin` is the name of the plugin (`eslint-plugin-` prefix).
+The rules for each plugin are described in the `./src/rules/{plugin}` subdirectories,
+where the `{plugin}` is the name of the plugin (after the `eslint-plugin-` prefix).
 Each configuration is exported from the `./index.ts` file
 and is organized as a partial ESLint config.
 It should contain the plugin name and the list of the rules, sorted alphabetically.
 When a plugin's documentation groups rules,
-each group is configured in its own file
+each group is configured in a separate file
 and then extended in the `./index.ts` file.
 
-The final configuration extends each plugin configuration on the file-type basis.
+The final configuration extends each plugin configuration on a file-type basis.
 
 
 == Roadmap
 
-* Add `@perfective/eslint-plugin` with the rules for working with the `@perfective` library.
+* Add the `@perfective/eslint-plugin` with the rules for working with the `@perfective` packages.
 * Replace all TSLint rules with ESLint rules.
-
-
-== Legacy
-
-Starting from version `0.11.0` the project was extracted into its own repository
-`link:https://github.com/perfective/eslint-config[@perfective/eslint-config]` from the original
-`link:https://github.com/perfective/js[@perfective/js]` monorepo.
-Its Git repository was rebuilt using `git filter-branch` to preserve commit log.
-Legacy commits cannot be used for rollbacks and debug,
-as there is no `package-lock.json`.
