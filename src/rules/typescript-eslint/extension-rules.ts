@@ -117,7 +117,11 @@ export = {
         '@typescript-eslint/no-use-before-define': ['error', {
             functions: false,
             classes: false,
+            variables: false,
+            allowNamedExports: false,
+            enums: false,
             typedefs: false,
+            ignoreTypeReferences: false,
         }],
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
