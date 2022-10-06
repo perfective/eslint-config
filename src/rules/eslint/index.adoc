@@ -428,6 +428,11 @@ This rule is always disabled in tests.
 |
 | Error
 
+| `link:https://eslint.org/docs/latest/rules/logical-assignment-operators[logical-assignment-operators]`
+|
+|
+| Warning
+
 | `link:https://eslint.org/docs/latest/rules/max-classes-per-file[max-classes-per-file]`
 |
 |

@@ -35,6 +35,9 @@ export = {
         'id-length': 'off',
         'id-match': 'off',
         'init-declarations': ['error', 'always'],
+        'logical-assignment-operators': ['warn', 'always', {
+            enforceForIfStatements: true,
+        }],
         'max-classes-per-file': ['error', 1],
         'max-depth': ['error', 4],
         // Business object may have many properties and even with basic logic will have many lines of code.
