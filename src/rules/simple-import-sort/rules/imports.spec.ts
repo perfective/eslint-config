@@ -6,6 +6,7 @@ describe(simpleImportSortImports, () => {
             .toStrictEqual({
                 groups: [
                     ['^\\u0000'],
+                    ['^node:'],
                     ['^[a-zA-Z]'],
                     ['^@'],
                     ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
@@ -20,6 +21,7 @@ describe(simpleImportSortImports, () => {
             .toStrictEqual({
                 groups: [
                     ['^\\u0000'],
+                    ['^node:'],
                     ['^[a-zA-Z]'],
                     ['^(?!@angular|@rxjs|@perfective)@'],
                     ['^@angular'],

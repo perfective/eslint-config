@@ -14,6 +14,7 @@ export function simpleImportSortImports(internal: string[] = []): SimpleImportSo
     return {
         groups: [
             sideEffects(),
+            nodePrefixedModules(),
             unscopedPackages(),
             scopedPackages(internal),
             ...internalPackages(internal),
@@ -26,6 +27,10 @@ export function simpleImportSortImports(internal: string[] = []): SimpleImportSo
 
 function sideEffects(): Group {
     return ['^\\u0000'];
+}
+
+function nodePrefixedModules(): Group {
+    return ['^node:'];
 }
 
 function unscopedPackages(): Group {
