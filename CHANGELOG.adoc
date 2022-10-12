@@ -1,5 +1,32 @@
 = Changelog
 
+== v0.19.0 (next)
+
+* Updated `eslint` to `8.25.0`:
+** Enabled the `link:https://eslint.org/docs/latest/rules/logical-assignment-operators[logical-assignment-operators]` rule as a warning.
++
+* Updated `@typescript-eslint` to `5.40.0`:
+** Added check for enums, typedefs, named exports, and type references in the `link:https://typescript-eslint.io/rules/no-use-before-define/[@typescript-eslint/no-use-before-define]` rule.
++
+* Upgraded `eslint-plugin-unicorn` to `44.0.2`:
+** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-await.md[unicorn/no-unnecessary-await]` rule as a warning.
++
+* Upgraded `eslint-plugin-jest` to `27.1.1`:
+** Added the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-each.md[jest/prefer-each]` rule as an error.
+** Added the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]` as a warning.
+** Removed the `jest/no-jest-import` rule (was removed in `eslint-plugin-jest` v27.0.0).
++
+* Upgraded `eslint-plugin-simple-import-sort` to `8.0.0`:
+** Added Node modules prefixes with `node:` as a separate import group.
++
+* Updated `eslint-import-resolver-typescript` to `3.5.1`.
+* Updated `eslint-plugin-sonarjs` to `0.16.0`.
+* Updated `eslint-plugin-testing-library` to `5.7.2`.
+* Updated `@babel/eslint-parser` to `7.19.1`.
+* Patched `eslint-plugin-jsdoc` to `39.3.6`.
+* Patched `eslint-plugin-promise` to `6.0.1`.
+
+
 == v0.18.0
 
 * Updated `eslint` to `8.20.0`.
