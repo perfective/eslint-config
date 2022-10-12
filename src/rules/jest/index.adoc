@@ -33,7 +33,7 @@ for https://jestjs.io[Jest].
 For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtablename-fn-timeout[it.each]`.
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-alias-methods.md[jest/no-alias-methods]`
-|
+| Yes
 | Yes
 | Warning
 
@@ -107,11 +107,6 @@ For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtab
 | Yes
 | Warning
 
-| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-jest-import.md[jest/no-jest-import]`
-| Yes
-|
-| Error
-
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-large-snapshots.md[jest/no-large-snapshots]`
 |
 |
@@ -121,6 +116,11 @@ For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtab
 | Yes
 |
 | Error
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-restricted-jest-methods.md[jest/no-restricted-jest-methods]`
+|
+|
+| Off
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-restricted-matchers.md[jest/no-restricted-matchers]`
 |
@@ -152,6 +152,11 @@ For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtab
 | Yes
 | Warning
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-each.md[jest/prefer-each]`
+|
+|
+| Error
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-equality-matcher.md[jest/prefer-equality-matcher]`
 |
 | Suggest
@@ -182,6 +187,11 @@ For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtab
 | Yes
 | Error
 4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
+
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]`
+|
+| Yes
+| Warning
 
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-snapshot-hint.md[jest/prefer-snapshot-hint]`
 |
