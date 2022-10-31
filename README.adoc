@@ -20,7 +20,7 @@ and the `link:https://typescript-eslint.io/rules/[@typescript-eslint]` plugin ru
 * `link:https://github.com/gajus/eslint-plugin-jsdoc[eslint-plugin-jsdoc]`;
 * `link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]`;
 * `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow[eslint-plugin-prefer-arrow]`;
-* `link:https://github.com/xjamundx/eslint-plugin-promise[eslint-plugin-promise]`;
+* `link:https://github.com/eslint-community/eslint-plugin-promise[eslint-plugin-promise]`;
 * `link:https://github.com/cartant/eslint-plugin-rxjs[eslint-plugin-rxjs]`;
 * `link:https://github.com/lydell/eslint-plugin-simple-import-sort[eslint-plugin-simple-import-sort]`;
 * `link:https://github.com/SonarSource/eslint-plugin-sonarjs[eslint-plugin-sonarjs]`;

@@ -19,7 +19,7 @@ and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules
 -   [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
 -   [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node);
 -   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
--   [`eslint-plugin-promise`](https://github.com/xjamundx/eslint-plugin-promise);
+-   [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
 -   [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs);
 -   [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
 -   [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
