@@ -294,6 +294,11 @@ as type inferences should be minimized and types must be declared explicitly.
 |
 | Error
 
+| `link:https://typescript-eslint.io/rules/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]`
+| Yes
+|
+| Error
+
 | `link:https://typescript-eslint.io/rules/no-unsafe-member-access/[@typescript-eslint/no-unsafe-member-access]`
 | Yes
 |
