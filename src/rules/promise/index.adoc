@@ -28,6 +28,11 @@ to enforce best practices for JavaScript promises.
 |
 | Error
 
+| `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-multiple-resolved.md[promise/no-multiple-resolved]`
+|
+|
+| Error
+
 | `link:https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-native.md[promise/no-native]`
 |
 |

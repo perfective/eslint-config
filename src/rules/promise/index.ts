@@ -7,6 +7,7 @@ export = {
         'promise/no-return-wrap': 'error',
         'promise/param-names': 'warn',
         'promise/always-return': 'error',
+        'promise/no-multiple-resolved': 'error',
         'promise/no-native': 'off',
         'promise/no-nesting': 'error',
         'promise/no-promise-in-callback': 'error',
