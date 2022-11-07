@@ -36,6 +36,7 @@ export = {
         'no-irregular-whitespace': 'error',
         'no-loss-of-precision': 'error',
         'no-misleading-character-class': 'error',
+        'no-new-native-nonconstructor': 'error',
         'no-new-symbol': 'error',
         'no-obj-calls': 'error',
         'no-promise-executor-return': 'error',

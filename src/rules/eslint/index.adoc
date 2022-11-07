@@ -169,6 +169,11 @@ The https://eslint.org/docs/latest/rules/[rules] provided by the ESLint.
 |
 | Error
 
+| `link:https://eslint.org/docs/latest/rules/no-new-native-nonconstructor[no-new-native-nonconstructor]`
+|
+|
+| Error
+
 | `link:https://eslint.org/docs/latest/rules/no-new-symbol[no-new-symbol]`
 | Yes
 |
@@ -547,6 +552,11 @@ Using `complexity` rule instead to keep the functions simple.
 | Error
 
 | `link:https://eslint.org/docs/latest/rules/no-empty-function[no-empty-function]`
+|
+|
+| Error
+
+| `link:https://eslint.org/docs/latest/rules/no-empty-static-block[no-empty-static-block]`
 |
 |
 | Error
