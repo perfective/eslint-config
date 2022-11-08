@@ -1,20 +1,20 @@
 = Changelog
 
-== v0.19.0-beta.1 (next)
+== v0.19.0
 
 * Updated `eslint` to `8.27.0`:
 ** Enabled the `link:https://eslint.org/docs/latest/rules/logical-assignment-operators[logical-assignment-operators]` rule as a warning.
 ** Enabled the `link:https://eslint.org/docs/latest/rules/no-new-native-nonconstructor[no-new-native-nonconstructor]` rule as a error.
 ** Enabled the `link:https://eslint.org/docs/latest/rules/no-empty-static-block[no-empty-static-block]` rule as an error.
 +
-* Updated `@typescript-eslint` to `5.41.0`:
+* Updated `@typescript-eslint` to `5.42.1`:
 ** Enabled the `link:https://typescript-eslint.io/rules/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]` rule as an error.
 ** Added check for enums, typedefs, named exports, and type references in the `link:https://typescript-eslint.io/rules/no-use-before-define/[@typescript-eslint/no-use-before-define]` rule.
 +
 * Upgraded `eslint-plugin-unicorn` to `44.0.2`:
 ** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-await.md[unicorn/no-unnecessary-await]` rule as a warning.
 +
-* Upgraded `eslint-plugin-jest` to `27.1.3`:
+* Upgraded `eslint-plugin-jest` to `27.1.4`:
 ** Added the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-each.md[jest/prefer-each]` rule as an error.
 ** Added the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]` as a warning.
 ** Removed the `jest/no-jest-import` rule (was removed in `eslint-plugin-jest` v27.0.0).
@@ -28,7 +28,7 @@
 * Updated `eslint-import-resolver-typescript` to `3.5.2`.
 * Updated `eslint-plugin-sonarjs` to `0.16.0`.
 * Updated `eslint-plugin-testing-library` to `5.9.1`.
-* Updated `eslint-plugin-jsdoc` to `39.4.0`.
+* Updated `eslint-plugin-jsdoc` to `39.6.2`.
 * Updated `@babel/eslint-parser` to `7.19.1`.
 
 
