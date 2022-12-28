@@ -47,6 +47,7 @@ export = {
             onlyCamelCase: false,
         }],
         'unicorn/no-lonely-if': 'warn',
+        'unicorn/no-negated-condition': 'warn',
         'unicorn/no-nested-ternary': 'off',
         'unicorn/no-new-array': 'warn',
         'unicorn/no-new-buffer': 'warn',
@@ -57,6 +58,9 @@ export = {
         'unicorn/no-static-only-class': 'error',
         'unicorn/no-thenable': 'error',
         'unicorn/no-this-assignment': 'error',
+        'unicorn/no-typeof-undefined': ['warn', {
+            checkGlobalVariables: true,
+        }],
         'unicorn/no-unnecessary-await': 'warn',
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unreadable-iife': 'error',
@@ -135,6 +139,7 @@ export = {
         // TBD: Conflicts with @typescript-eslint/prefer-regexp-exec
         'unicorn/prefer-regexp-test': 'off',
         'unicorn/prefer-set-has': 'warn',
+        'unicorn/prefer-set-size': 'warn',
         // Autofix does not always work correctly
         'unicorn/prefer-spread': 'off',
         'unicorn/prefer-string-replace-all': 'off',

@@ -157,6 +157,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negated-condition.md[unicorn/no-negated-condition]`
+| Yes
+| Yes
+| Warning
+
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nested-ternary.md[unicorn/no-nested-ternary]`
 | Yes
 | Partially
@@ -201,6 +206,12 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 |
 | Error
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md[unicorn/no-typeof-undefined]`
+| Yes
+| Yes
+| Warning
+4+| Checks global variables
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-array-destructuring.md[unicorn/no-unreadable-array-destructuring]`
 | Yes
@@ -452,6 +463,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Off
 
 | `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-set-has.md[unicorn/prefer-set-has]`
+| Yes
+| Yes
+| Warning
+
+| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-set-size.md[unicorn/prefer-set-size]`
 | Yes
 | Yes
 | Warning
