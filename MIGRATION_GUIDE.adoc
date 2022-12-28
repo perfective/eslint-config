@@ -9,7 +9,30 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.18.0` to `v0.19.0` (next)
+== From `v0.19.0` to `v0.20.0` (next)
+
+.Disable new rules in the `.eslintrc.js`
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                'unicorn/no-typeof-undefined': 'off', // auto-fixable
+                'unicorn/no-negated-condition': 'off', // auto-fixable
+                'unicorn/refer-set-size': 'off', // auto-fixable
+            },
+        },
+    ],
+};
+----
+
+
+== From `v0.18.0` to `v0.19.0`
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
