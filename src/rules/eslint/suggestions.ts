@@ -116,7 +116,7 @@ export = {
         }],
         'no-multi-assign': 'error',
         'no-multi-str': 'error',
-        'no-negated-condition': 'error',
+        'no-negated-condition': 'off',
         'no-nested-ternary': 'error',
         'no-new': 'error',
         'no-new-func': 'error',

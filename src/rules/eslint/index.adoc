@@ -684,7 +684,8 @@ Using `complexity` rule instead to keep the functions simple.
 | `link:https://eslint.org/docs/latest/rules/no-negated-condition[no-negated-condition]`
 |
 |
-| Error
+| Off
+4+| Using `unicorn/no-negated-condition` instead, as it provides an auto-fix.
 
 | `link:https://eslint.org/docs/latest/rules/no-nested-ternary[no-nested-ternary]`
 |
