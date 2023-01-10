@@ -49,6 +49,7 @@ export = {
         'jest/no-standalone-expect': 'error',
         'jest/no-test-prefixes': 'warn',
         'jest/no-test-return-statement': 'error',
+        'jest/no-untyped-mock-factory': 'warn',
         'jest/prefer-called-with': 'error',
         'jest/prefer-comparison-matcher': 'warn',
         'jest/prefer-each': 'error',

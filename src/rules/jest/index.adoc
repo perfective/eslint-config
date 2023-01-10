@@ -142,6 +142,11 @@ For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtab
 |
 | Error
 
+| `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]`
+|
+| Yes
+| Warning
+
 | `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-called-with.md[jest/prefer-called-with]`
 |
 |
