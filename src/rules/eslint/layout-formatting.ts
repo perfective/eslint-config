@@ -65,7 +65,10 @@ export = {
             allowObjectEnd: false,
             allowArrayStart: false,
             allowArrayEnd: false,
-            allowClassStart: false,
+            // No reason to have an empty first line in the beginning of a class declaration,
+            // if the first line is an opening of a JSDoc.
+            // Keeping an empty line before the JSDoc conflicts with the `padded-blocks` rule.
+            allowClassStart: true,
             allowClassEnd: false,
         }],
         'lines-between-class-members': ['warn', 'always', {
