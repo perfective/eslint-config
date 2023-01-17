@@ -1,13 +1,13 @@
 export = {
     rules: {
-        'import/unambiguous': 'error',
+        'import/no-amd': 'error',
         'import/no-commonjs': ['error', {
             allowConditionalRequire: true,
             allowPrimitiveModules: true,
         }],
-        'import/no-amd': 'error',
+        'import/no-import-module-exports': 'error',
         // TODO: Research usage
         'import/no-nodejs-modules': 'off',
-        'import/no-import-module-exports': 'error',
+        'import/unambiguous': 'error',
     },
 };
