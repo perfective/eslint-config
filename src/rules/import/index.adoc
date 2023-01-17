@@ -97,6 +97,11 @@ It should not affect "namespaced" packages with `package.json` generated during 
 |
 | Error
 
+| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-empty-named-blocks.md[import/no-empty-named-blocks]`
+|
+| Yes
+| Warning
+
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md[import/no-named-as-default]`
 | Yes
 |
@@ -169,6 +174,11 @@ It should not affect "namespaced" packages with `package.json` generated during 
 [cols="~,1,1,1"]
 |===
 | Rule | Recommended | Fixable | Config
+
+| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/consistent-type-specifier-style.md[import/consistent-type-specifier-style]`
+|
+| Yes
+| Warning
 
 | `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md[import/first]`
 |

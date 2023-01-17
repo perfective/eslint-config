@@ -24,6 +24,7 @@ export = {
         'import/no-self-import': 'error',
         'import/no-cycle': ['error', {
             ignoreExternal: true,
+            allowUnsafeDynamicCyclicDependency: false,
         }],
         'import/no-useless-path-segments': 'warn',
         'import/no-relative-parent-imports': 'off',

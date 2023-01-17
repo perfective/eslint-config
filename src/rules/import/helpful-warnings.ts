@@ -3,6 +3,7 @@ import { importNoExtraneousDependencies } from './rules/no-extraneous-dependenci
 export = {
     rules: {
         'import/export': 'error',
+        'import/no-empty-named-blocks': 'warn',
         'import/no-named-as-default': 'error',
         'import/no-named-as-default-member': 'error',
         'import/no-deprecated': 'off',

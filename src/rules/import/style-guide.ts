@@ -1,9 +1,11 @@
 export = {
     rules: {
+        'import/consistent-type-specifier-style': ['warn', 'prefer-inline'],
         'import/first': 'off',
         'import/exports-last': 'off',
         'import/no-duplicates': ['warn', {
-            considerQueryString: true,
+            'considerQueryString': true,
+            'prefer-inline': true,
         }],
         // TODO: This rule now has the "ignore" option.
         //  Should this rule be enabled by default?
@@ -17,7 +19,9 @@ export = {
                 caseInsensitive: false,
             },
         }],
-        'import/newline-after-import': 'warn',
+        'import/newline-after-import': ['warn', {
+            considerComments: true,
+        }],
         'import/prefer-default-export': 'off',
         'import/max-dependencies': 'off',
         'import/no-unassigned-import': 'error',
