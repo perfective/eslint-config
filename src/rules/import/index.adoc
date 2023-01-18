@@ -11,42 +11,42 @@ to prevent issues with misspelling of file paths and import names.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/export.md[import/export]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/export.md[import/export]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md[import/no-deprecated]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-deprecated.md[import/no-deprecated]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-empty-named-blocks.md[import/no-empty-named-blocks]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-empty-named-blocks.md[import/no-empty-named-blocks]`
 |
 | Yes
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md[import/no-extraneous-dependencies]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md[import/no-extraneous-dependencies]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md[import/no-mutable-exports]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-mutable-exports.md[import/no-mutable-exports]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md[import/no-named-as-default]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-as-default.md[import/no-named-as-default]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md[import/no-named-as-default-member]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-as-default-member.md[import/no-named-as-default-member]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md[import/no-unused-modules]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md[import/no-unused-modules]`
 |
 |
 | Error
@@ -60,27 +60,27 @@ to prevent issues with misspelling of file paths and import names.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-amd.md[import/no-amd]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-amd.md[import/no-amd]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md[import/no-commonjs]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-commonjs.md[import/no-commonjs]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md[import/no-import-module-exports]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-import-module-exports.md[import/no-import-module-exports]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md[import/no-nodejs-modules]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-nodejs-modules.md[import/no-nodejs-modules]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/unambiguous.md[import/unambiguous]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/unambiguous.md[import/unambiguous]`
 |
 |
 | Error
@@ -94,74 +94,74 @@ to prevent issues with misspelling of file paths and import names.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/default.md[import/default]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/default.md[import/default]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/named.md[import/named]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/named.md[import/named]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/namespace.md[import/namespace]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/namespace.md[import/namespace]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md[import/no-absolute-path]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-absolute-path.md[import/no-absolute-path]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-cycle.md[import/no-cycle]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-cycle.md[import/no-cycle]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md[import/no-dynamic-require]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-dynamic-require.md[import/no-dynamic-require]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md[import/no-internal-modules]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-internal-modules.md[import/no-internal-modules]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md[import/no-relative-packages]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-relative-packages.md[import/no-relative-packages]`
 |
 | Yes
 | Warning
 4+| Safety measure for monorepos where packages are published separately.
 It should not affect "namespaced" packages with `package.json` generated during the build.
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md[import/no-relative-parent-imports]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-relative-parent-imports.md[import/no-relative-parent-imports]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md[import/no-restricted-paths]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-restricted-paths.md[import/no-restricted-paths]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-self-import.md[import/no-self-import]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-self-import.md[import/no-self-import]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md[import/no-unresolved]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md[import/no-unresolved]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md[import/no-useless-path-segments]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-useless-path-segments.md[import/no-useless-path-segments]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md[import/no-webpack-loader-syntax]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-webpack-loader-syntax.md[import/no-webpack-loader-syntax]`
 |
 |
 | Error
@@ -175,87 +175,87 @@ It should not affect "namespaced" packages with `package.json` generated during 
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/consistent-type-specifier-style.md[import/consistent-type-specifier-style]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md[import/consistent-type-specifier-style]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md[import/dynamic-import-chunkname]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/dynamic-import-chunkname.md[import/dynamic-import-chunkname]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/exports-last.md[import/exports-last]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md[import/exports-last]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/extensions.md[import/extensions]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md[import/extensions]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md[import/first]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md[import/first]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/group-exports.md[import/group-exports]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/group-exports.md[import/group-exports]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md[import/max-dependencies]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/max-dependencies.md[import/max-dependencies]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md[import/newline-after-import]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md[import/newline-after-import]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md[import/no-anonymous-default-export]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-anonymous-default-export.md[import/no-anonymous-default-export]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-default-export.md[import/no-default-export]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md[import/no-default-export]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md[import/no-duplicates]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md[import/no-duplicates]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-default.md[import/no-named-default]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-default.md[import/no-named-default]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-export.md[import/no-named-export]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-export.md[import/no-named-export]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-namespace.md[import/no-namespace]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-namespace.md[import/no-namespace]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md[import/no-unassigned-import]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unassigned-import.md[import/no-unassigned-import]`
 |
 |
 | Error
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/order.md[import/order]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md[import/order]`
 |
 |
 | Off
 
-| `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md[import/prefer-default-export]`
+| `link:https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/prefer-default-export.md[import/prefer-default-export]`
 |
 |
 | Off
