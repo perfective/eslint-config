@@ -40,7 +40,6 @@ export = {
         'jest/no-mocks-import': 'error',
         'jest/no-restricted-jest-methods': 'off',
         'jest/no-restricted-matchers': ['error', {
-            resolves: 'Use `expect(await promise)` instead.',
             toBeFalsy: 'Avoid `toBeFalsy`',
             toBeTruthy: 'Avoid `toBeTruthy`',
             toMatchSnapshot: 'Use `toMatchInlineSnapshot()` instead',
