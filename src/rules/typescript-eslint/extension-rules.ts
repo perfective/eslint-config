@@ -45,6 +45,12 @@ export = {
         }],
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': ['error', 'always'],
+        'key-spacing': 'off',
+        '@typescript-eslint/key-spacing': ['warn', {
+            beforeColon: false,
+            afterColon: true,
+            mode: 'strict',
+        }],
         'keyword-spacing': 'off',
         '@typescript-eslint/keyword-spacing': ['warn', {
             before: true,

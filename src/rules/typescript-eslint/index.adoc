@@ -529,6 +529,11 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 |
 | Error
 
+| `link:https://typescript-eslint.io/rules/key-spacing/[@typescript-eslint/key-spacing]`
+|
+| Yes
+| Warning
+
 | `link:https://typescript-eslint.io/rules/keyword-spacing/[@typescript-eslint/keyword-spacing]`
 |
 | Yes
