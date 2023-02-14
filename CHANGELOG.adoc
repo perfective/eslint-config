@@ -1,10 +1,11 @@
 = Changelog
 
-== v0.20.0-alpha.3 (next)
+== v0.20.0-beta (next)
 
-* Updated `eslint` to `8.33.0`.
-* Updated `@typescript-eslint` to `5.50.0`.
+* Updated `eslint` to `8.34.0`.
+* Updated `@typescript-eslint` to `5.52.0`.
 ** Enabled the `link:https://typescript-eslint.io/rules/key-spacing/[@typescript-eslint/key-spacing]` rule as a warning.
+** Enabled the `link:https://typescript-eslint.io/rules/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]` rule as a warning.
 +
 * Updated `eslint-plugin-unicorn` to `45.0.2`.
 ** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md[unicorn/no-typeof-undefined]` rule as a warning (with `checkGlobalVariables`).
@@ -19,9 +20,9 @@
 ** Enabled the `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-empty-named-blocks.md[import/no-empty-named-blocks]` rule as a warning;
 +
 * Upgraded `eslint-plugin-simple-import-sort` to `10.0.0`.
-* Updated `eslint-plugin-jsdoc` to `39.7.4`.
+* Updated `eslint-plugin-jsdoc` to `40.0.0`.
 * Updated `eslint-plugin-sonarjs` to `0.18.0`.
-* Updated `eslint-plugin-testing-library` to `5.10.0`
+* Updated `eslint-plugin-testing-library` to `5.10.1`
 * Patched `eslint-import-resolver-typescript` to `3.5.3`.
 * Patched `eslint-plugin-array-func` to `3.1.8`.
 * Patched `eslint-plugin-deprecation` to `1.3.3`.
