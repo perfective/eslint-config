@@ -178,6 +178,11 @@ as type inferences should be minimized and types must be declared explicitly.
 | Error
 4+| Deprecated, use TypeScript `useUnknownInCatchVariables` option instead (since v4.4).
 
+| `link:https://typescript-eslint.io/rules/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]`
+|
+| Yes
+| Warning
+
 | `link:https://typescript-eslint.io/rules/no-inferrable-types/[@typescript-eslint/no-inferrable-types]`
 | Yes
 | Yes

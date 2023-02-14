@@ -148,6 +148,7 @@ export = {
         '@typescript-eslint/no-implicit-any-catch': ['error', {
             allowExplicitAny: false,
         }],
+        '@typescript-eslint/no-import-type-side-effects': 'warn',
         '@typescript-eslint/no-inferrable-types': 'off',
         // Allow for generic types like "Nullary<void>" (as "(value: T) => void" declaration is already valid)
         '@typescript-eslint/no-invalid-void-type': ['error', {
@@ -265,6 +266,7 @@ export = {
         '@typescript-eslint/strict-boolean-expressions': ['error', {
             allowString: false,
             allowNumber: false,
+            allowNullableEnum: false,
             allowNullableObject: true,
             allowNullableBoolean: false,
             allowNullableString: false,
