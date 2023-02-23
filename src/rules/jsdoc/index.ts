@@ -85,7 +85,7 @@ export = {
         'jsdoc/no-undefined-types': 'error',
         'jsdoc/require-asterisk-prefix': ['error', 'always'],
         'jsdoc/require-description': ['error', {
-            exemptedBy: ['inheritdoc', 'package', 'private', 'see'],
+            exemptedBy: ['inheritdoc', 'package', 'private', 'see', 'deprecated'],
         }],
         'jsdoc/require-description-complete-sentence': 'error',
         'jsdoc/require-example': 'off',
