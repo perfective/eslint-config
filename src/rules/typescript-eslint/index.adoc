@@ -208,6 +208,11 @@ as type inferences should be minimized and types must be declared explicitly.
 |
 | Error
 
+| `link:https://typescript-eslint.io/rules/no-namespace/[@typescript-eslint/no-mixed-enums]`
+|
+|
+| Error
+
 | `link:https://typescript-eslint.io/rules/no-namespace/[@typescript-eslint/no-namespace]`
 | Yes
 |
