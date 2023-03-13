@@ -70,6 +70,7 @@ export = {
             // Keeping an empty line before the JSDoc conflicts with the `padded-blocks` rule.
             allowClassStart: true,
             allowClassEnd: false,
+            afterHashbangComment: true,
         }],
         'lines-between-class-members': ['warn', 'always', {
             exceptAfterSingleLine: true,

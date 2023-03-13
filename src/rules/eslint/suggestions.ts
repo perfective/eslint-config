@@ -55,7 +55,10 @@ export = {
         'max-statements': ['off', {
             max: 10,
         }],
-        'multiline-comment-style': ['warn', 'separate-lines'],
+        'multiline-comment-style': ['warn', 'separate-lines', {
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external rule name
+            checkJSDoc: false,
+        }],
         'new-cap': ['error', {
             newIsCap: true,
             capIsNew: true,
