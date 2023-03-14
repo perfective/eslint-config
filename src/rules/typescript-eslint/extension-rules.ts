@@ -56,6 +56,31 @@ export = {
             before: true,
             after: true,
         }],
+        'lines-around-comment': 'off',
+        '@typescript-eslint/lines-around-comment': ['warn', {
+            beforeBlockComment: true,
+            afterBlockComment: false,
+            beforeLineComment: false,
+            afterLineComment: false,
+            allowBlockStart: false,
+            allowBlockEnd: false,
+            allowObjectStart: false,
+            allowObjectEnd: false,
+            allowArrayStart: false,
+            allowArrayEnd: false,
+            // No reason to have an empty first line in the beginning of a class declaration,
+            // if the first line is an opening of a JSDoc.
+            // Keeping an empty line before the JSDoc conflicts with the `padded-blocks` rule.
+            allowClassStart: true,
+            allowClassEnd: false,
+            // TODO: afterHashbangComment: true,
+            // TypeScript ESLint
+            allowInterfaceStart: true,
+            allowInterfaceEnd: true,
+            allowTypeStart: true,
+            allowTypeEnd: true,
+        }],
+
         'lines-between-class-members': 'off',
         '@typescript-eslint/lines-between-class-members': ['warn', 'always', {
             exceptAfterSingleLine: true,

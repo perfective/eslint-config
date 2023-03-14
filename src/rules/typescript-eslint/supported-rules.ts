@@ -54,6 +54,9 @@ export = {
             },
             multilineDetection: 'brackets',
         }],
+        // Do not group readonly fields,
+        // because readonly is an implementation detail and when it changes
+        // it should not affect the layout of the code.
         '@typescript-eslint/member-ordering': ['error', {
             default: [
                 'signature',
