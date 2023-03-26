@@ -1,4 +1,4 @@
-import { optionalConfig } from './plugin';
+import { optionalConfig, optionalOverrides } from './plugin';
 
 describe(optionalConfig, () => {
     describe('when a given plugin is installed', () => {
@@ -19,6 +19,27 @@ describe(optionalConfig, () => {
             expect(optionalConfig('javascript', {
                 'javascript/rule': 'off',
             })).toStrictEqual({});
+        });
+    });
+});
+
+describe(optionalOverrides, () => {
+    const overrides = {
+        files: ['cypress/**/*.[jt]s'],
+        extends: [
+            './rules/cypress',
+        ],
+    };
+
+    describe('when a given plugin is installed', () => {
+        it('returns the given overrides configuration', () => {
+            expect(optionalOverrides('cypress', overrides)).toStrictEqual(overrides);
+        });
+    });
+
+    describe('when a given plugin is not installed', () => {
+        it('returns null', () => {
+            expect(optionalOverrides('javascript', overrides)).toBeNull();
         });
     });
 });
