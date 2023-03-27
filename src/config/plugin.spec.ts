@@ -1,4 +1,4 @@
-import { optionalConfig, optionalOverrides } from './plugin';
+import { hasEslintPlugin, optionalConfig, optionalOverrides } from './plugin';
 
 describe(optionalConfig, () => {
     describe('when a given plugin is installed', () => {
@@ -40,6 +40,22 @@ describe(optionalOverrides, () => {
     describe('when a given plugin is not installed', () => {
         it('returns null', () => {
             expect(optionalOverrides('javascript', overrides)).toBeNull();
+        });
+    });
+});
+
+describe(hasEslintPlugin, () => {
+    describe('when a given plugin is installed', () => {
+        it('returns true', () => {
+            expect(hasEslintPlugin('import')).toBe(true);
+            expect(hasEslintPlugin('@typescript-eslint')).toBe(true);
+        });
+    });
+
+    describe('when a given plugin is not installed', () => {
+        it('returns false', () => {
+            expect(hasEslintPlugin('javascript')).toBe(false);
+            expect(hasEslintPlugin('@javascript')).toBe(false);
         });
     });
 });
