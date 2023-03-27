@@ -1,3 +1,4 @@
+import { optionalOverrides } from './config/plugin';
 import {
     cypressImportNoExtraneousDependencies,
     jestImportNoExtraneousDependencies,
@@ -130,7 +131,7 @@ export = {
                 'rxjs/no-topromise': 'off',
             },
         },
-        {
+        optionalOverrides('cypress', {
             // The /cypress directory is used in the Cypress docs:
             //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
             // Integrations for Cypress are shown with ".spec.js",
@@ -154,6 +155,6 @@ export = {
                     capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
                 }],
             },
-        },
-    ],
+        }),
+    ].filter(Boolean),
 };
