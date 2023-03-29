@@ -7,12 +7,12 @@ These rules are primarily configured for TypeScript projects.
 
 In addition to the core https://eslint.org/docs/latest/rules/[ESLint rules]
 and the `link:https://typescript-eslint.io/rules/[@typescript-eslint]` plugin rules,
-`@perfective/eslint-config` configures:
+`@perfective/eslint-config` includes configurations for the ESLint plugins:
 
 * `link:https://github.com/freaktechnik/eslint-plugin-array-func[eslint-plugin-array-func]`;
-* `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]`;
+* `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]` _(optional)_;
 * `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]`;
-* `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/]`;
+* `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/[eslint-plugin-eslint-comments]`;
 * `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]`;
 * `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]`;
 * `link:https://github.com/testing-library/eslint-plugin-jest-dom[eslint-plugin-jest-dom]`;
@@ -48,7 +48,6 @@ npm install --save-dev \
     eslint \
     eslint-import-resolver-typescript \
     eslint-plugin-array-func \
-    eslint-plugin-cypress \
     eslint-plugin-deprecation \
     eslint-plugin-eslint-comments \
     eslint-plugin-import \
@@ -66,6 +65,20 @@ npm install --save-dev \
     eslint-plugin-unicorn \
     tslint
 ----
++
+. Install optional peer dependencies that add linting rules for the tools you use.
++
+[source,bash]
+----
+npm install --save-dev \
+    eslint-plugin-cypress
+----
++
+[NOTE]
+====
+The `@perfective/eslint-config` automatically includes rules for these plugins,
+if the dependency is installed.
+====
 +
 . Require the configuration in your root `.eslintrc.js`.
 +
