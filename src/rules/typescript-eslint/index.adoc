@@ -137,6 +137,11 @@ as type inferences should be minimized and types must be declared explicitly.
 |
 | Error
 
+| `link:https://typescript-eslint.io/rules/no-duplicate-type-constituents/[@typescript-eslint/no-duplicate-type-constituents]`
+|
+|
+| Error
+
 | `link:https://typescript-eslint.io/rules/no-dynamic-delete/[@typescript-eslint/no-dynamic-delete]`
 |
 | Yes

@@ -129,6 +129,10 @@ export = {
             ignoreVoidOperator: false,
         }],
         '@typescript-eslint/no-duplicate-enum-values': 'error',
+        '@typescript-eslint/no-duplicate-type-constituents': ['error', {
+            ignoreIntersections: false,
+            ignoreUnions: false,
+        }],
         '@typescript-eslint/no-dynamic-delete': 'warn',
         // An empty interface can be used as nominal type or a self-documenting placeholder.
         // "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
@@ -241,6 +245,7 @@ export = {
             allowNullish: false,
             allowNumber: false,
             allowRegExp: false,
+            allowNever: false,
         }],
         // The idea for this rule is good, but it does not have enough granularity.
         // For example, "null", "string" and "undefined" are keywords,
