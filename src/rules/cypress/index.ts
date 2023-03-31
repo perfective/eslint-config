@@ -8,4 +8,5 @@ export = optionalConfig('cypress', {
     'cypress/no-pause': 'error',
     'cypress/no-unnecessary-waiting': 'error',
     'cypress/require-data-selectors': 'error',
+    'cypress/unsafe-to-chain-command': 'error',
 });
