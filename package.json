@@ -59,6 +59,9 @@
     "peerDependenciesMeta": {
         "eslint-plugin-cypress": {
             "optional": true
+        },
+        "eslint-plugin-rxjs": {
+            "optional": true
         }
     },
     "devDependencies": {

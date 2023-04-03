@@ -1,4 +1,4 @@
-import { optionalOverrides } from './config/plugin';
+import { optionalOverrides, optionalRules } from './config/plugin';
 import {
     cypressImportNoExtraneousDependencies,
     jestImportNoExtraneousDependencies,
@@ -73,8 +73,8 @@ export = {
                 './rules/typescript-eslint',
                 './rules/typescript-eslint/tslint',
                 './rules/deprecation',
-                './rules/rxjs',
-            ],
+                optionalRules('rxjs'),
+            ].filter(Boolean),
             settings: {
                 'import/parsers': {
                     '@typescript-eslint/parser': [
