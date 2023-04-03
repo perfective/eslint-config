@@ -30,6 +30,19 @@ export function optionalOverrides(plugin: string, overrides: Record<string, unkn
 }
 
 /**
+ * If a given ESLint {@linkcode plugin} is installed,
+ * returns a path to the plugin rules.
+ *
+ * Otherwise, returns {@linkcode null}.
+ */
+export function optionalRules(plugin: string): string | null {
+    if (hasEslintPlugin(plugin)) {
+        return `./rules/${plugin.replace(/^@/u, '')}`;
+    }
+    return null;
+}
+
+/**
  * Returns true if a given ESLint plugin exists.
  */
 export function hasEslintPlugin(plugin: string): boolean {

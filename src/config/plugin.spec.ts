@@ -1,4 +1,4 @@
-import { hasEslintPlugin, optionalConfig, optionalOverrides } from './plugin';
+import { hasEslintPlugin, optionalConfig, optionalOverrides, optionalRules } from './plugin';
 
 describe(optionalConfig, () => {
     describe('when a given plugin is installed', () => {
@@ -40,6 +40,21 @@ describe(optionalOverrides, () => {
     describe('when a given plugin is not installed', () => {
         it('returns null', () => {
             expect(optionalOverrides('javascript', overrides)).toBeNull();
+        });
+    });
+});
+
+describe(optionalRules, () => {
+    describe('when a given plugin is installed', () => {
+        it('returns a path to the plugin rules', () => {
+            expect(optionalRules('import')).toBe('./rules/import');
+            expect(optionalRules('@typescript-eslint')).toBe('./rules/typescript-eslint');
+        });
+    });
+
+    describe('when a given plugin is not installed', () => {
+        it('returns null', () => {
+            expect(optionalRules('javascript')).toBeNull();
         });
     });
 });
