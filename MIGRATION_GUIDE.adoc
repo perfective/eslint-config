@@ -9,11 +9,19 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.20.0` to `v0.21.0-alpha` (next)
+== From `v0.20.0` to `v0.21.0-alpha.1` (next)
 
-* Remove `eslint-plugin-cypress` from `devDependencies`,
-if you do not use `cypress`.
-+
+* If you do not use `cypress`, remove `eslint-plugin-cypress` from `devDependencies`.
+* If you do not use `rxjs`, remove `eslint-plugin-rxjs` from `devDependencies`.
+* If you do not use `@testing-library/jest-dom`, remove `eslint-plugin-jest-dom` from `devDependencies`.
+* If you do not use `@testing-library`, remove `eslint-plugin-testing-library` from `devDependencies`.
+
+[NOTE]
+====
+After removing optional peer dependencies, you may need to regenerate your `package-lock.json`,
+as these dependencies may remain in it and in the `node_modules`.
+====
+
 * Disable new rules in the `.eslintrc.js`.
 +
 [source,js]

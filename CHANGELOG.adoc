@@ -1,6 +1,19 @@
 = Changelog
 
-== v0.21.0-alpha (next)
+== v0.21.0-alpha.1 (next)
+
+* All plugins support TypeScript v5.0.
++
+* Marked `eslint-plugin-rxjs` as an optional peer dependency.
+* Marked `eslint-plugin-jest-dom` as an optional peer dependency.
+* Marked `eslint-plugin-testing-library` as an optional peer dependency.
++
+* Updated `eslint-plugin-deprecation` to `1.4.0`.
+* Patched `@typescript-eslint` to `5.57.1`.
+* Patched `eslint-plugin-jsdoc` to `40.1.1`.
+
+
+== v0.21.0-alpha
 
 * Added support for optional plugins.
 ** Marked `eslint-plugin-cypress` as an optional peer dependency.
