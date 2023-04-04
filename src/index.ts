@@ -103,7 +103,7 @@ export = {
                 './rules/jest',
                 optionalRules('jest-dom'),
                 './rules/jest-formatting',
-                './rules/testing-library',
+                optionalRules('testing-library'),
             ].filter(Boolean),
             rules: {
                 '@typescript-eslint/ban-ts-comment': ['error', {

@@ -65,6 +65,9 @@
         },
         "eslint-plugin-rxjs": {
             "optional": true
+        },
+        "eslint-plugin-testing-library": {
+            "optional": true
         }
     },
     "devDependencies": {
