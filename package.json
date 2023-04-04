@@ -60,6 +60,9 @@
         "eslint-plugin-cypress": {
             "optional": true
         },
+        "eslint-plugin-jest-dom": {
+            "optional": true
+        },
         "eslint-plugin-rxjs": {
             "optional": true
         }

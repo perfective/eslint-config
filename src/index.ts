@@ -101,10 +101,10 @@ export = {
             },
             extends: [
                 './rules/jest',
-                './rules/jest-dom',
+                optionalRules('jest-dom'),
                 './rules/jest-formatting',
                 './rules/testing-library',
-            ],
+            ].filter(Boolean),
             rules: {
                 '@typescript-eslint/ban-ts-comment': ['error', {
                     'ts-expect-error': 'allow-with-description',
