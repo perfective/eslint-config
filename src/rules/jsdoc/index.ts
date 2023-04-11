@@ -73,6 +73,7 @@ export = {
             ignore: ['ts-check', 'ts-expect-error', 'ts-ignore', 'ts-nocheck', 'typescript-eslint'],
             preventAllMultiAsteriskBlocks: false,
         }],
+        'jsdoc/no-blank-block-descriptions': 'off',
         'jsdoc/no-defaults': 'error',
         'jsdoc/no-missing-syntax': 'off',
         'jsdoc/no-multi-asterisks': ['error', {

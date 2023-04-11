@@ -101,6 +101,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-blank-block-descriptions[jsdoc/no-blank-block-descriptions]`
+|
+|
+| Off
+
 | `link:https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-defaults[jsdoc/no-defaults]`
 |
 |
