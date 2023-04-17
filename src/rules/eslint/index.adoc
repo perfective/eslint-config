@@ -1,6 +1,7 @@
 = ESLint
+:eslint-rules: https://eslint.org/docs/latest/rules
 
-The https://eslint.org/docs/latest/rules/[rules] provided by the ESLint.
+The link:{eslint-rules}[rules] provided by ESLint.
 
 
 == Possible Problems
@@ -9,293 +10,293 @@ The https://eslint.org/docs/latest/rules/[rules] provided by the ESLint.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://eslint.org/docs/latest/rules/array-callback-return[array-callback-return]`
+| `link:{eslint-rules}/array-callback-return[array-callback-return]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/constructor-super[constructor-super]`
+| `link:{eslint-rules}/constructor-super[constructor-super]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/for-direction[for-direction]`
+| `link:{eslint-rules}/for-direction[for-direction]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/getter-return[getter-return]`
+| `link:{eslint-rules}/getter-return[getter-return]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-async-promise-executor[no-async-promise-executor]`
+| `link:{eslint-rules}/no-async-promise-executor[no-async-promise-executor]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-await-in-loop[no-await-in-loop]`
+| `link:{eslint-rules}/no-await-in-loop[no-await-in-loop]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-class-assign[no-class-assign]`
+| `link:{eslint-rules}/no-class-assign[no-class-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-compare-neg-zero[no-compare-neg-zero]`
+| `link:{eslint-rules}/no-compare-neg-zero[no-compare-neg-zero]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-cond-assign[no-cond-assign]`
+| `link:{eslint-rules}/no-cond-assign[no-cond-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-const-assign[no-const-assign]`
+| `link:{eslint-rules}/no-const-assign[no-const-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-constant-binary-expression[no-constant-binary-expression]`
+| `link:{eslint-rules}/no-constant-binary-expression[no-constant-binary-expression]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-constant-condition[no-constant-condition]`
+| `link:{eslint-rules}/no-constant-condition[no-constant-condition]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-constructor-return[no-constructor-return]`
+| `link:{eslint-rules}/no-constructor-return[no-constructor-return]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-control-regex[no-control-regex]`
+| `link:{eslint-rules}/no-control-regex[no-control-regex]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-debugger[no-debugger]`
+| `link:{eslint-rules}/no-debugger[no-debugger]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-dupe-args[no-dupe-args]`
+| `link:{eslint-rules}/no-dupe-args[no-dupe-args]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-dupe-class-members[no-dupe-class-members]`
+| `link:{eslint-rules}/no-dupe-class-members[no-dupe-class-members]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-dupe-else-if[no-dupe-else-if]`
+| `link:{eslint-rules}/no-dupe-else-if[no-dupe-else-if]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-dupe-keys[no-dupe-keys]`
+| `link:{eslint-rules}/no-dupe-keys[no-dupe-keys]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-duplicate-case[no-duplicate-case]`
+| `link:{eslint-rules}/no-duplicate-case[no-duplicate-case]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-duplicate-imports[no-duplicate-imports]`
+| `link:{eslint-rules}/no-duplicate-imports[no-duplicate-imports]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-empty-character-class[no-empty-character-class]`
+| `link:{eslint-rules}/no-empty-character-class[no-empty-character-class]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-empty-pattern[no-empty-pattern]`
+| `link:{eslint-rules}/no-empty-pattern[no-empty-pattern]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-ex-assign[no-ex-assign]`
+| `link:{eslint-rules}/no-ex-assign[no-ex-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-fallthrough[no-fallthrough]`
+| `link:{eslint-rules}/no-fallthrough[no-fallthrough]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-func-assign[no-func-assign]`
+| `link:{eslint-rules}/no-func-assign[no-func-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-import-assign[no-import-assign]`
+| `link:{eslint-rules}/no-import-assign[no-import-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-inner-declarations[no-inner-declarations]`
+| `link:{eslint-rules}/no-inner-declarations[no-inner-declarations]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-invalid-regexp[no-invalid-regexp]`
+| `link:{eslint-rules}/no-invalid-regexp[no-invalid-regexp]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-irregular-whitespace[no-irregular-whitespace]`
+| `link:{eslint-rules}/no-irregular-whitespace[no-irregular-whitespace]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-loss-of-precision[no-loss-of-precision]`
+| `link:{eslint-rules}/no-loss-of-precision[no-loss-of-precision]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-misleading-character-class[no-misleading-character-class]`
+| `link:{eslint-rules}/no-misleading-character-class[no-misleading-character-class]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-new-native-nonconstructor[no-new-native-nonconstructor]`
+| `link:{eslint-rules}/no-new-native-nonconstructor[no-new-native-nonconstructor]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-new-symbol[no-new-symbol]`
+| `link:{eslint-rules}/no-new-symbol[no-new-symbol]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-obj-calls[no-obj-calls]`
+| `link:{eslint-rules}/no-obj-calls[no-obj-calls]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-promise-executor-return[no-promise-executor-return]`
+| `link:{eslint-rules}/no-promise-executor-return[no-promise-executor-return]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-prototype-builtins[no-prototype-builtins]`
+| `link:{eslint-rules}/no-prototype-builtins[no-prototype-builtins]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-self-assign[no-self-assign]`
+| `link:{eslint-rules}/no-self-assign[no-self-assign]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-self-compare[no-self-compare]`
+| `link:{eslint-rules}/no-self-compare[no-self-compare]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-setter-return[no-setter-return]`
+| `link:{eslint-rules}/no-setter-return[no-setter-return]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-sparse-arrays[no-sparse-arrays]`
+| `link:{eslint-rules}/no-sparse-arrays[no-sparse-arrays]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-template-curly-in-string[no-template-curly-in-string]`
+| `link:{eslint-rules}/no-template-curly-in-string[no-template-curly-in-string]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-this-before-super[no-this-before-super]`
+| `link:{eslint-rules}/no-this-before-super[no-this-before-super]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-undef[no-undef]`
+| `link:{eslint-rules}/no-undef[no-undef]`
 | Yes
 |
 | Off
 4+| TypeScript compiler checks defined symbols.
 
-| `link:https://eslint.org/docs/latest/rules/no-unexpected-multiline[no-unexpected-multiline]`
+| `link:{eslint-rules}/no-unexpected-multiline[no-unexpected-multiline]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unmodified-loop-condition[no-unmodified-loop-condition]`
+| `link:{eslint-rules}/no-unmodified-loop-condition[no-unmodified-loop-condition]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unreachable[no-unreachable]`
+| `link:{eslint-rules}/no-unreachable[no-unreachable]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unreachable-loop[no-unreachable-loop]`
+| `link:{eslint-rules}/no-unreachable-loop[no-unreachable-loop]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unsafe-finally[no-unsafe-finally]`
+| `link:{eslint-rules}/no-unsafe-finally[no-unsafe-finally]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unsafe-negation[no-unsafe-negation]`
+| `link:{eslint-rules}/no-unsafe-negation[no-unsafe-negation]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining[no-unsafe-optional-chaining]`
+| `link:{eslint-rules}/no-unsafe-optional-chaining[no-unsafe-optional-chaining]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unused-private-class-members[no-unused-private-class-members]`
+| `link:{eslint-rules}/no-unused-private-class-members[no-unused-private-class-members]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unused-vars[no-unused-vars]`
+| `link:{eslint-rules}/no-unused-vars[no-unused-vars]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-use-before-define[no-use-before-define]`
+| `link:{eslint-rules}/no-use-before-define[no-use-before-define]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-useless-backreference[no-useless-backreference]`
+| `link:{eslint-rules}/no-useless-backreference[no-useless-backreference]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/require-atomic-updates[require-atomic-updates]`
+| `link:{eslint-rules}/require-atomic-updates[require-atomic-updates]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/use-isnan[use-isnan]`
+| `link:{eslint-rules}/use-isnan[use-isnan]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/valid-typeof[valid-typeof]`
+| `link:{eslint-rules}/valid-typeof[valid-typeof]`
 | Yes
 |
 | Error
@@ -308,12 +309,12 @@ The https://eslint.org/docs/latest/rules/[rules] provided by the ESLint.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://eslint.org/docs/latest/rules/accessor-pairs[accessor-pairs]`
+| `link:{eslint-rules}/accessor-pairs[accessor-pairs]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/arrow-body-style[arrow-body-style]`
+| `link:{eslint-rules}/arrow-body-style[arrow-body-style]`
 |
 | Yes
 | Error
@@ -321,151 +322,151 @@ The https://eslint.org/docs/latest/rules/[rules] provided by the ESLint.
 where the whole body may be located inside the inner function.
 This rule is always disabled in tests.
 
-| `link:https://eslint.org/docs/latest/rules/block-scoped-var[block-scoped-var]`
+| `link:{eslint-rules}/block-scoped-var[block-scoped-var]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/camelcase[camelcase]`
+| `link:{eslint-rules}/camelcase[camelcase]`
 |
 |
 | Off
 4+| The `@typescript-eslint/naming-convention` rule is used instead.
 
-| `link:https://eslint.org/docs/latest/rules/capitalized-comments[capitalized-comments]`
+| `link:{eslint-rules}/capitalized-comments[capitalized-comments]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/class-methods-use-this[class-methods-use-this]`
+| `link:{eslint-rules}/class-methods-use-this[class-methods-use-this]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/complexity[complexity]`
+| `link:{eslint-rules}/complexity[complexity]`
 |
 |
 | Error
 4+| Maximum complexity is `3`
 
-| `link:https://eslint.org/docs/latest/rules/consistent-return[consistent-return]`
+| `link:{eslint-rules}/consistent-return[consistent-return]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/consistent-this[consistent-this]`
+| `link:{eslint-rules}/consistent-this[consistent-this]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/curly[curly]`
+| `link:{eslint-rules}/curly[curly]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/default-case[default-case]`
+| `link:{eslint-rules}/default-case[default-case]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/default-case-last[default-case-last]`
+| `link:{eslint-rules}/default-case-last[default-case-last]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/default-param-last[default-param-last]`
+| `link:{eslint-rules}/default-param-last[default-param-last]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/dot-notation[dot-notation]`
+| `link:{eslint-rules}/dot-notation[dot-notation]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/eqeqeq[eqeqeq]`
+| `link:{eslint-rules}/eqeqeq[eqeqeq]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/func-name-matching[func-name-matching]`
+| `link:{eslint-rules}/func-name-matching[func-name-matching]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/func-names[func-names]`
+| `link:{eslint-rules}/func-names[func-names]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/func-style[func-style]`
+| `link:{eslint-rules}/func-style[func-style]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/grouped-accessor-pairs[grouped-accessor-pairs]`
+| `link:{eslint-rules}/grouped-accessor-pairs[grouped-accessor-pairs]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/guard-for-in[guard-for-in]`
+| `link:{eslint-rules}/guard-for-in[guard-for-in]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/id-denylist[id-denylist]`
+| `link:{eslint-rules}/id-denylist[id-denylist]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/id-length[id-length]`
+| `link:{eslint-rules}/id-length[id-length]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/id-match[id-match]`
+| `link:{eslint-rules}/id-match[id-match]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/init-declarations[init-declarations]`
+| `link:{eslint-rules}/init-declarations[init-declarations]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/logical-assignment-operators[logical-assignment-operators]`
+| `link:{eslint-rules}/logical-assignment-operators[logical-assignment-operators]`
 |
 |
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/max-classes-per-file[max-classes-per-file]`
+| `link:{eslint-rules}/max-classes-per-file[max-classes-per-file]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/max-depth[max-depth]`
+| `link:{eslint-rules}/max-depth[max-depth]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/max-lines[max-lines]`
+| `link:{eslint-rules}/max-lines[max-lines]`
 |
 |
 | Off
 4+| Business objects may have many properties
 and even with basic logic will have many lines of code.
 
-| `link:https://eslint.org/docs/latest/rules/max-lines-per-function[max-lines-per-function]`
+| `link:{eslint-rules}/max-lines-per-function[max-lines-per-function]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/max-nested-callbacks[max-nested-callbacks]`
+| `link:{eslint-rules}/max-nested-callbacks[max-nested-callbacks]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/max-params[max-params]`
+| `link:{eslint-rules}/max-params[max-params]`
 |
 |
 | Off
@@ -474,586 +475,586 @@ Constructors may have properties declarations,
 and be used for dependency injections,
 making it impossible to limit parameters count.
 
-| `link:https://eslint.org/docs/latest/rules/max-statements[max-statements]`
+| `link:{eslint-rules}/max-statements[max-statements]`
 |
 |
 | Off
 4+| Linear statements do not contribute to complexity and do not reduce readability.
 Using `complexity` rule instead to keep the functions simple.
 
-| `link:https://eslint.org/docs/latest/rules/multiline-comment-style[multiline-comment-style]`
+| `link:{eslint-rules}/multiline-comment-style[multiline-comment-style]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/new-cap[new-cap]`
+| `link:{eslint-rules}/new-cap[new-cap]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-alert[no-alert]`
+| `link:{eslint-rules}/no-alert[no-alert]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-array-constructor[no-array-constructor]`
+| `link:{eslint-rules}/no-array-constructor[no-array-constructor]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-bitwise[no-bitwise]`
+| `link:{eslint-rules}/no-bitwise[no-bitwise]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-caller[no-caller]`
+| `link:{eslint-rules}/no-caller[no-caller]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-case-declarations[no-case-declarations]`
+| `link:{eslint-rules}/no-case-declarations[no-case-declarations]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-confusing-arrow[no-confusing-arrow]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-console[no-console]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-continue[no-continue]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-delete-var[no-delete-var]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-div-regex[no-div-regex]`
+| `link:{eslint-rules}/no-confusing-arrow[no-confusing-arrow]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-else-return[no-else-return]`
+| `link:{eslint-rules}/no-console[no-console]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-continue[no-continue]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-delete-var[no-delete-var]`
+| Yes
+|
+| Error
+
+| `link:{eslint-rules}/no-div-regex[no-div-regex]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-empty[no-empty]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-empty-function[no-empty-function]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-empty-static-block[no-empty-static-block]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-eq-null[no-eq-null]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-eval[no-eval]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-extend-native[no-extend-native]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-extra-bind[no-extra-bind]`
+| `link:{eslint-rules}/no-else-return[no-else-return]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-extra-boolean-cast[no-extra-boolean-cast]`
-| Yes
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-extra-label[no-extra-label]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-extra-semi[no-extra-semi]`
-| Yes
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-floating-decimal[no-floating-decimal]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-global-assign[no-global-assign]`
+| `link:{eslint-rules}/no-empty[no-empty]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-implicit-coercion[no-implicit-coercion]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-implicit-globals[no-implicit-globals]`
+| `link:{eslint-rules}/no-empty-function[no-empty-function]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-implied-eval[no-implied-eval]`
+| `link:{eslint-rules}/no-empty-static-block[no-empty-static-block]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-inline-comments[no-inline-comments]`
+| `link:{eslint-rules}/no-eq-null[no-eq-null]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-invalid-this[no-invalid-this]`
+| `link:{eslint-rules}/no-eval[no-eval]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-iterator[no-iterator]`
+| `link:{eslint-rules}/no-extend-native[no-extend-native]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-label-var[no-label-var]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-labels[no-labels]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-lone-blocks[no-lone-blocks]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-lonely-if[no-lonely-if]`
+| `link:{eslint-rules}/no-extra-bind[no-extra-bind]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-loop-func[no-loop-func]`
+| `link:{eslint-rules}/no-extra-boolean-cast[no-extra-boolean-cast]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-extra-label[no-extra-label]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-extra-semi[no-extra-semi]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-floating-decimal[no-floating-decimal]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-global-assign[no-global-assign]`
+| Yes
+|
+| Error
+
+| `link:{eslint-rules}/no-implicit-coercion[no-implicit-coercion]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-implicit-globals[no-implicit-globals]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-magic-numbers[no-magic-numbers]`
+| `link:{eslint-rules}/no-implied-eval[no-implied-eval]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-inline-comments[no-inline-comments]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-invalid-this[no-invalid-this]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-iterator[no-iterator]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-label-var[no-label-var]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-labels[no-labels]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-lone-blocks[no-lone-blocks]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-lonely-if[no-lonely-if]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-loop-func[no-loop-func]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-magic-numbers[no-magic-numbers]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/no-mixed-operators[no-mixed-operators]`
+| `link:{eslint-rules}/no-mixed-operators[no-mixed-operators]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-multi-assign[no-multi-assign]`
+| `link:{eslint-rules}/no-multi-assign[no-multi-assign]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-multi-str[no-multi-str]`
+| `link:{eslint-rules}/no-multi-str[no-multi-str]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-negated-condition[no-negated-condition]`
+| `link:{eslint-rules}/no-negated-condition[no-negated-condition]`
 |
 |
 | Off
 4+| Using `unicorn/no-negated-condition` instead, as it provides an auto-fix.
 
-| `link:https://eslint.org/docs/latest/rules/no-nested-ternary[no-nested-ternary]`
+| `link:{eslint-rules}/no-nested-ternary[no-nested-ternary]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-new[no-new]`
+| `link:{eslint-rules}/no-new[no-new]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-new-func[no-new-func]`
+| `link:{eslint-rules}/no-new-func[no-new-func]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-new-object[no-new-object]`
+| `link:{eslint-rules}/no-new-object[no-new-object]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-new-wrappers[no-new-wrappers]`
+| `link:{eslint-rules}/no-new-wrappers[no-new-wrappers]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape[no-nonoctal-decimal-escape]`
+| `link:{eslint-rules}/no-nonoctal-decimal-escape[no-nonoctal-decimal-escape]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-octal[no-octal]`
+| `link:{eslint-rules}/no-octal[no-octal]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-octal-escape[no-octal-escape]`
+| `link:{eslint-rules}/no-octal-escape[no-octal-escape]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-param-reassign[no-param-reassign]`
+| `link:{eslint-rules}/no-param-reassign[no-param-reassign]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-plusplus[no-plusplus]`
+| `link:{eslint-rules}/no-plusplus[no-plusplus]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-proto[no-proto]`
+| `link:{eslint-rules}/no-proto[no-proto]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-redeclare[no-redeclare]`
+| `link:{eslint-rules}/no-redeclare[no-redeclare]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-regex-spaces[no-regex-spaces]`
+| `link:{eslint-rules}/no-regex-spaces[no-regex-spaces]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-restricted-exports[no-restricted-exports]`
+| `link:{eslint-rules}/no-restricted-exports[no-restricted-exports]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/no-restricted-globals[no-restricted-globals]`
+| `link:{eslint-rules}/no-restricted-globals[no-restricted-globals]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-restricted-properties[no-restricted-properties]`
+| `link:{eslint-rules}/no-restricted-properties[no-restricted-properties]`
 |
 |
 | Error
 
 
-| `link:https://eslint.org/docs/latest/rules/no-restricted-imports[no-restricted-imports]`
+| `link:{eslint-rules}/no-restricted-imports[no-restricted-imports]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-restricted-syntax[no-restricted-syntax]`
+| `link:{eslint-rules}/no-restricted-syntax[no-restricted-syntax]`
 |
 |
 | Error
-| `link:https://eslint.org/docs/latest/rules/no-return-assign[no-return-assign]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-return-await[no-return-await]`
+| `link:{eslint-rules}/no-return-assign[no-return-assign]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-script-url[no-script-url]`
+| `link:{eslint-rules}/no-return-await[no-return-await]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-sequences[no-sequences]`
+| `link:{eslint-rules}/no-script-url[no-script-url]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-shadow[no-shadow]`
+| `link:{eslint-rules}/no-sequences[no-sequences]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-shadow[no-shadow]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/no-shadow-restricted-names[no-shadow-restricted-names]`
+| `link:{eslint-rules}/no-shadow-restricted-names[no-shadow-restricted-names]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-ternary[no-ternary]`
+| `link:{eslint-rules}/no-ternary[no-ternary]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/no-throw-literal[no-throw-literal]`
+| `link:{eslint-rules}/no-throw-literal[no-throw-literal]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-undef-init[no-undef-init]`
+| `link:{eslint-rules}/no-undef-init[no-undef-init]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-undefined[no-undefined]`
+| `link:{eslint-rules}/no-undefined[no-undefined]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/no-underscore-dangle[no-underscore-dangle]`
+| `link:{eslint-rules}/no-underscore-dangle[no-underscore-dangle]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unneeded-ternary[no-unneeded-ternary]`
+| `link:{eslint-rules}/no-unneeded-ternary[no-unneeded-ternary]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-unused-expressions[no-unused-expressions]`
+| `link:{eslint-rules}/no-unused-expressions[no-unused-expressions]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-unused-labels[no-unused-labels]`
+| `link:{eslint-rules}/no-unused-labels[no-unused-labels]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-useless-call[no-useless-call]`
+| `link:{eslint-rules}/no-useless-call[no-useless-call]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-useless-catch[no-useless-catch]`
+| `link:{eslint-rules}/no-useless-catch[no-useless-catch]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-useless-computed-key[no-useless-computed-key]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-useless-concat[no-useless-concat]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-useless-constructor[no-useless-constructor]`
-|
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-useless-escape[no-useless-escape]`
-| Yes
-|
-| Error
-
-| `link:https://eslint.org/docs/latest/rules/no-useless-rename[no-useless-rename]`
+| `link:{eslint-rules}/no-useless-computed-key[no-useless-computed-key]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-useless-return[no-useless-return]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-var[no-var]`
-|
-| Yes
-| Warning
-
-| `link:https://eslint.org/docs/latest/rules/no-void[no-void]`
+| `link:{eslint-rules}/no-useless-concat[no-useless-concat]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-warning-comments[no-warning-comments]`
+| `link:{eslint-rules}/no-useless-constructor[no-useless-constructor]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-useless-escape[no-useless-escape]`
+| Yes
+|
+| Error
+
+| `link:{eslint-rules}/no-useless-rename[no-useless-rename]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-useless-return[no-useless-return]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-var[no-var]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-rules}/no-void[no-void]`
+|
+|
+| Error
+
+| `link:{eslint-rules}/no-warning-comments[no-warning-comments]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/no-with[no-with]`
+| `link:{eslint-rules}/no-with[no-with]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/object-shorthand[object-shorthand]`
+| `link:{eslint-rules}/object-shorthand[object-shorthand]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/one-var[one-var]`
+| `link:{eslint-rules}/one-var[one-var]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/one-var-declaration-per-line[one-var-declaration-per-line]`
+| `link:{eslint-rules}/one-var-declaration-per-line[one-var-declaration-per-line]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/operator-assignment[operator-assignment]`
+| `link:{eslint-rules}/operator-assignment[operator-assignment]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-arrow-callback[prefer-arrow-callback]`
+| `link:{eslint-rules}/prefer-arrow-callback[prefer-arrow-callback]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-const[prefer-const]`
+| `link:{eslint-rules}/prefer-const[prefer-const]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-destructuring[prefer-destructuring]`
+| `link:{eslint-rules}/prefer-destructuring[prefer-destructuring]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-exponentiation-operator[prefer-exponentiation-operator]`
+| `link:{eslint-rules}/prefer-exponentiation-operator[prefer-exponentiation-operator]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-named-capture-group[prefer-named-capture-group]`
+| `link:{eslint-rules}/prefer-named-capture-group[prefer-named-capture-group]`
 |
 |
 | Off
 4+| Requires ECMAScript 2018
 
-| `link:https://eslint.org/docs/latest/rules/prefer-numeric-literals[prefer-numeric-literals]`
+| `link:{eslint-rules}/prefer-numeric-literals[prefer-numeric-literals]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-object-has-own[prefer-object-has-own]`
+| `link:{eslint-rules}/prefer-object-has-own[prefer-object-has-own]`
 |
 | Yes
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/prefer-object-spread[prefer-object-spread]`
+| `link:{eslint-rules}/prefer-object-spread[prefer-object-spread]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/prefer-promise-reject-errors[prefer-promise-reject-errors]`
+| `link:{eslint-rules}/prefer-promise-reject-errors[prefer-promise-reject-errors]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/prefer-regex-literals[prefer-regex-literals]`
+| `link:{eslint-rules}/prefer-regex-literals[prefer-regex-literals]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/prefer-rest-params[prefer-rest-params]`
+| `link:{eslint-rules}/prefer-rest-params[prefer-rest-params]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/prefer-spread[prefer-spread]`
+| `link:{eslint-rules}/prefer-spread[prefer-spread]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/prefer-template[prefer-template]`
+| `link:{eslint-rules}/prefer-template[prefer-template]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/quote-props[quote-props]`
+| `link:{eslint-rules}/quote-props[quote-props]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/radix[radix]`
+| `link:{eslint-rules}/radix[radix]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/require-await[require-await]`
+| `link:{eslint-rules}/require-await[require-await]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/require-unicode-regexp[require-unicode-regexp]`
+| `link:{eslint-rules}/require-unicode-regexp[require-unicode-regexp]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/require-yield[require-yield]`
+| `link:{eslint-rules}/require-yield[require-yield]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/sort-imports[sort-imports]`
+| `link:{eslint-rules}/sort-imports[sort-imports]`
 |
 | Yes
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/sort-keys[sort-keys]`
+| `link:{eslint-rules}/sort-keys[sort-keys]`
 |
 |
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/sort-vars[sort-vars]`
+| `link:{eslint-rules}/sort-vars[sort-vars]`
 |
 | Yes
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/spaced-comment[spaced-comment]`
+| `link:{eslint-rules}/spaced-comment[spaced-comment]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/strict[strict]`
+| `link:{eslint-rules}/strict[strict]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/symbol-description[symbol-description]`
+| `link:{eslint-rules}/symbol-description[symbol-description]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/vars-on-top[vars-on-top]`
+| `link:{eslint-rules}/vars-on-top[vars-on-top]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/yoda[yoda]`
+| `link:{eslint-rules}/yoda[yoda]`
 |
 | Yes
 | Warning
@@ -1067,159 +1068,159 @@ Using `complexity` rule instead to keep the functions simple.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://eslint.org/docs/latest/rules/array-bracket-newline[array-bracket-newline]`
+| `link:{eslint-rules}/array-bracket-newline[array-bracket-newline]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/array-bracket-spacing[array-bracket-spacing]`
+| `link:{eslint-rules}/array-bracket-spacing[array-bracket-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/array-element-newline[array-element-newline]`
+| `link:{eslint-rules}/array-element-newline[array-element-newline]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/arrow-parens[arrow-parens]`
+| `link:{eslint-rules}/arrow-parens[arrow-parens]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/arrow-spacing[arrow-spacing]`
+| `link:{eslint-rules}/arrow-spacing[arrow-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/block-spacing[block-spacing]`
+| `link:{eslint-rules}/block-spacing[block-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/brace-style[brace-style]`
+| `link:{eslint-rules}/brace-style[brace-style]`
 |
 | Yes
 | Warning
 4+| Stroustrup style is enforced.
 Single lines are disallowed.
 
-| `link:https://eslint.org/docs/latest/rules/comma-dangle[comma-dangle]`
+| `link:{eslint-rules}/comma-dangle[comma-dangle]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/comma-spacing[comma-spacing]`
+| `link:{eslint-rules}/comma-spacing[comma-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/comma-style[comma-style]`
+| `link:{eslint-rules}/comma-style[comma-style]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/computed-property-spacing[computed-property-spacing]`
+| `link:{eslint-rules}/computed-property-spacing[computed-property-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/dot-location[dot-location]`
+| `link:{eslint-rules}/dot-location[dot-location]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/eol-last[eol-last]`
+| `link:{eslint-rules}/eol-last[eol-last]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/func-call-spacing[func-call-spacing]`
+| `link:{eslint-rules}/func-call-spacing[func-call-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/function-call-argument-newline[function-call-argument-newline]`
+| `link:{eslint-rules}/function-call-argument-newline[function-call-argument-newline]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/function-paren-newline[function-paren-newline]`
+| `link:{eslint-rules}/function-paren-newline[function-paren-newline]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/generator-star-spacing[generator-star-spacing]`
+| `link:{eslint-rules}/generator-star-spacing[generator-star-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/implicit-arrow-linebreak[implicit-arrow-linebreak]`
+| `link:{eslint-rules}/implicit-arrow-linebreak[implicit-arrow-linebreak]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/indent[indent]`
+| `link:{eslint-rules}/indent[indent]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/jsx-quotes[jsx-quotes]`
+| `link:{eslint-rules}/jsx-quotes[jsx-quotes]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/key-spacing[key-spacing]`
+| `link:{eslint-rules}/key-spacing[key-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/keyword-spacing[keyword-spacing]`
+| `link:{eslint-rules}/keyword-spacing[keyword-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/line-comment-position[line-comment-position]`
+| `link:{eslint-rules}/line-comment-position[line-comment-position]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/linebreak-style[linebreak-style]`
+| `link:{eslint-rules}/linebreak-style[linebreak-style]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/lines-around-comment[lines-around-comment]`
+| `link:{eslint-rules}/lines-around-comment[lines-around-comment]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/lines-between-class-members[lines-between-class-members]`
+| `link:{eslint-rules}/lines-between-class-members[lines-between-class-members]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/max-len[max-len]`
+| `link:{eslint-rules}/max-len[max-len]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/max-statements-per-line[max-statements-per-line]`
+| `link:{eslint-rules}/max-statements-per-line[max-statements-per-line]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/multiline-ternary[multiline-ternary]`
+| `link:{eslint-rules}/multiline-ternary[multiline-ternary]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/new-parens[new-parens]`
+| `link:{eslint-rules}/new-parens[new-parens]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/newline-per-chained-call[newline-per-chained-call]`
+| `link:{eslint-rules}/newline-per-chained-call[newline-per-chained-call]`
 |
 | Yes
 | Off
@@ -1232,159 +1233,159 @@ and sometimes has to go on the new line.
 Additional challenge comes from the problems with `@typescript-eslint/indent` rule,
 that https://github.com/typescript-eslint/typescript-eslint/issues/1824[does not always indent] chained calls correctly.
 
-| `link:https://eslint.org/docs/latest/rules/no-extra-parens[no-extra-parens]`
+| `link:{eslint-rules}/no-extra-parens[no-extra-parens]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-mixed-spaces-and-tabs[no-mixed-spaces-and-tabs]`
+| `link:{eslint-rules}/no-mixed-spaces-and-tabs[no-mixed-spaces-and-tabs]`
 | Yes
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-multi-spaces[no-multi-spaces]`
+| `link:{eslint-rules}/no-multi-spaces[no-multi-spaces]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-multiple-empty-lines[no-multiple-empty-lines]`
+| `link:{eslint-rules}/no-multiple-empty-lines[no-multiple-empty-lines]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-tabs[no-tabs]`
+| `link:{eslint-rules}/no-tabs[no-tabs]`
 |
 |
 | Error
 
-| `link:https://eslint.org/docs/latest/rules/no-trailing-spaces[no-trailing-spaces]`
+| `link:{eslint-rules}/no-trailing-spaces[no-trailing-spaces]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/no-whitespace-before-property[no-whitespace-before-property]`
+| `link:{eslint-rules}/no-whitespace-before-property[no-whitespace-before-property]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/nonblock-statement-body-position[nonblock-statement-body-position]`
+| `link:{eslint-rules}/nonblock-statement-body-position[nonblock-statement-body-position]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/object-curly-newline[object-curly-newline]`
+| `link:{eslint-rules}/object-curly-newline[object-curly-newline]`
 |
 | Yes
 | Warning
 4+| For imports and exports this rule may conflict with the "max-len" rule,
 as it is possible to have an import or export declaration that is too long.
 
-| `link:https://eslint.org/docs/latest/rules/object-curly-spacing[object-curly-spacing]`
+| `link:{eslint-rules}/object-curly-spacing[object-curly-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/object-property-newline[object-property-newline]`
+| `link:{eslint-rules}/object-property-newline[object-property-newline]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/operator-linebreak[operator-linebreak]`
+| `link:{eslint-rules}/operator-linebreak[operator-linebreak]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/padded-blocks[padded-blocks]`
+| `link:{eslint-rules}/padded-blocks[padded-blocks]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/padding-line-between-statements[padding-line-between-statements]`
+| `link:{eslint-rules}/padding-line-between-statements[padding-line-between-statements]`
 |
 | Yes
 | Off
 
-| `link:https://eslint.org/docs/latest/rules/quotes[quotes]`
+| `link:{eslint-rules}/quotes[quotes]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/rest-spread-spacing[rest-spread-spacing]`
+| `link:{eslint-rules}/rest-spread-spacing[rest-spread-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/semi[semi]`
+| `link:{eslint-rules}/semi[semi]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/semi-spacing[semi-spacing]`
+| `link:{eslint-rules}/semi-spacing[semi-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/semi-style[semi-style]`
+| `link:{eslint-rules}/semi-style[semi-style]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/space-before-blocks[space-before-blocks]`
+| `link:{eslint-rules}/space-before-blocks[space-before-blocks]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/space-before-function-paren[space-before-function-paren]`
+| `link:{eslint-rules}/space-before-function-paren[space-before-function-paren]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/space-in-parens[space-in-parens]`
+| `link:{eslint-rules}/space-in-parens[space-in-parens]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/space-infix-ops[space-infix-ops]`
+| `link:{eslint-rules}/space-infix-ops[space-infix-ops]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/space-unary-ops[space-unary-ops]`
+| `link:{eslint-rules}/space-unary-ops[space-unary-ops]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/switch-colon-spacing[switch-colon-spacing]`
+| `link:{eslint-rules}/switch-colon-spacing[switch-colon-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/template-curly-spacing[template-curly-spacing]`
+| `link:{eslint-rules}/template-curly-spacing[template-curly-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/template-tag-spacing[template-tag-spacing]`
+| `link:{eslint-rules}/template-tag-spacing[template-tag-spacing]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/unicode-bom[unicode-bom]`
+| `link:{eslint-rules}/unicode-bom[unicode-bom]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/wrap-iife[wrap-iife]`
+| `link:{eslint-rules}/wrap-iife[wrap-iife]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/wrap-regex[wrap-regex]`
+| `link:{eslint-rules}/wrap-regex[wrap-regex]`
 |
 | Yes
 | Warning
 
-| `link:https://eslint.org/docs/latest/rules/yield-star-spacing[yield-star-spacing]`
+| `link:{eslint-rules}/yield-star-spacing[yield-star-spacing]`
 |
 | Yes
 | Warning

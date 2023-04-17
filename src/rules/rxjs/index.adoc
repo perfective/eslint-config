@@ -1,4 +1,5 @@
 = `rxjs`
+:eslint-rxjs-rules: https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules
 
 The `link:https://github.com/cartant/eslint-plugin-rxjs[eslint-plugin-rxjs]` provides
 ESLint rules for https://rxjs.dev[RxJS].
@@ -8,202 +9,202 @@ ESLint rules for https://rxjs.dev[RxJS].
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/ban-observables.md[rxjs/ban-observables]`
+| `link:{eslint-rxjs-rules}/ban-observables.md[rxjs/ban-observables]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/ban-operators.md[rxjs/ban-operators]`
+| `link:{eslint-rxjs-rules}/ban-operators.md[rxjs/ban-operators]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md[rxjs/finnish]`
+| `link:{eslint-rxjs-rules}/finnish.md[rxjs/finnish]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/just.md[rxjs/just]`
+| `link:{eslint-rxjs-rules}/just.md[rxjs/just]`
 |
 | Yes
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-async-subscribe.md[rxjs/no-async-subscribe]`
+| `link:{eslint-rxjs-rules}/no-async-subscribe.md[rxjs/no-async-subscribe]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-compat.md[rxjs/no-compat]`
+| `link:{eslint-rxjs-rules}/no-compat.md[rxjs/no-compat]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-connectable.md[rxjs/no-connectable]`
+| `link:{eslint-rxjs-rules}/no-connectable.md[rxjs/no-connectable]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-create.md[rxjs/no-create]`
+| `link:{eslint-rxjs-rules}/no-create.md[rxjs/no-create]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-cyclic-action.md[rxjs/no-cyclic-action]`
+| `link:{eslint-rxjs-rules}/no-cyclic-action.md[rxjs/no-cyclic-action]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-explicit-generics.md[rxjs/no-explicit-generics]`
+| `link:{eslint-rxjs-rules}/no-explicit-generics.md[rxjs/no-explicit-generics]`
 |
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-exposed-subjects.md[rxjs/no-exposed-subjects]`
+| `link:{eslint-rxjs-rules}/no-exposed-subjects.md[rxjs/no-exposed-subjects]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-finnish.md[rxjs/no-finnish]`
+| `link:{eslint-rxjs-rules}/no-finnish.md[rxjs/no-finnish]`
 |
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-error.md[rxjs/no-ignored-error]`
+| `link:{eslint-rxjs-rules}/no-ignored-error.md[rxjs/no-ignored-error]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-notifier.md[rxjs/no-ignored-notifier]`
+| `link:{eslint-rxjs-rules}/no-ignored-notifier.md[rxjs/no-ignored-notifier]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-observable.md[rxjs/no-ignored-observable]`
+| `link:{eslint-rxjs-rules}/no-ignored-observable.md[rxjs/no-ignored-observable]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-replay-buffer.md[rxjs/no-ignored-replay-buffer]`
+| `link:{eslint-rxjs-rules}/no-ignored-replay-buffer.md[rxjs/no-ignored-replay-buffer]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-subscribe.md[rxjs/no-ignored-subscribe]`
+| `link:{eslint-rxjs-rules}/no-ignored-subscribe.md[rxjs/no-ignored-subscribe]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-subscription.md[rxjs/no-ignored-subscription]`
+| `link:{eslint-rxjs-rules}/no-ignored-subscription.md[rxjs/no-ignored-subscription]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-ignored-takewhile-value.md[rxjs/no-ignored-takewhile-value]`
+| `link:{eslint-rxjs-rules}/no-ignored-takewhile-value.md[rxjs/no-ignored-takewhile-value]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-implicit-any-catch.md[rxjs/no-implicit-any-catch]`
+| `link:{eslint-rxjs-rules}/no-implicit-any-catch.md[rxjs/no-implicit-any-catch]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-index.md[rxjs/no-index]`
+| `link:{eslint-rxjs-rules}/no-index.md[rxjs/no-index]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-internal.md[rxjs/no-internal]`
+| `link:{eslint-rxjs-rules}/no-internal.md[rxjs/no-internal]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-nested-subscribe.md[rxjs/no-nested-subscribe]`
+| `link:{eslint-rxjs-rules}/no-nested-subscribe.md[rxjs/no-nested-subscribe]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-redundant-notify.md[rxjs/no-redundant-notify]`
+| `link:{eslint-rxjs-rules}/no-redundant-notify.md[rxjs/no-redundant-notify]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-sharereplay.md[rxjs/no-sharereplay]`
+| `link:{eslint-rxjs-rules}/no-sharereplay.md[rxjs/no-sharereplay]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-subclass.md[rxjs/no-subclass]`
+| `link:{eslint-rxjs-rules}/no-subclass.md[rxjs/no-subclass]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-subject-unsubscribe.md[rxjs/no-subject-unsubscribe]`
+| `link:{eslint-rxjs-rules}/no-subject-unsubscribe.md[rxjs/no-subject-unsubscribe]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-subject-value.md[rxjs/no-subject-value]`
+| `link:{eslint-rxjs-rules}/no-subject-value.md[rxjs/no-subject-value]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-subject-value.md[rxjs/no-subscribe-handlers]`
+| `link:{eslint-rxjs-rules}/no-subject-value.md[rxjs/no-subscribe-handlers]`
 |
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-tap.md[rxjs/no-tap]`
+| `link:{eslint-rxjs-rules}/no-tap.md[rxjs/no-tap]`
 |
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-topromise.md[rxjs/no-topromise]`
+| `link:{eslint-rxjs-rules}/no-topromise.md[rxjs/no-topromise]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unbound-methods.md[rxjs/no-unbound-methods]`
+| `link:{eslint-rxjs-rules}/no-unbound-methods.md[rxjs/no-unbound-methods]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-catch.md[rxjs/no-unsafe-catch]`
+| `link:{eslint-rxjs-rules}/no-unsafe-catch.md[rxjs/no-unsafe-catch]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-first.md[rxjs/no-unsafe-first]`
+| `link:{eslint-rxjs-rules}/no-unsafe-first.md[rxjs/no-unsafe-first]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-subject-next.md[rxjs/no-unsafe-subject-next]`
+| `link:{eslint-rxjs-rules}/no-unsafe-subject-next.md[rxjs/no-unsafe-subject-next]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-switchmap.md[rxjs/no-unsafe-switchmap]`
+| `link:{eslint-rxjs-rules}/no-unsafe-switchmap.md[rxjs/no-unsafe-switchmap]`
 |
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md[rxjs/no-unsafe-takeuntil]`
+| `link:{eslint-rxjs-rules}/no-unsafe-takeuntil.md[rxjs/no-unsafe-takeuntil]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/prefer-observer.md[rxjs/prefer-observer]`
+| `link:{eslint-rxjs-rules}/prefer-observer.md[rxjs/prefer-observer]`
 |
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/suffix-subjects.md[rxjs/suffix-subjects]`
+| `link:{eslint-rxjs-rules}/suffix-subjects.md[rxjs/suffix-subjects]`
 |
 |
 | Off
 
-| `link:https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/throw-error.md[rxjs/throw-error]`
+| `link:{eslint-rxjs-rules}/throw-error.md[rxjs/throw-error]`
 |
 |
 | Error

@@ -1,4 +1,5 @@
 = `eslint-comments`
+:eslint-comments-rules: https://mysticatea.github.io/eslint-plugin-eslint-comments/rules
 
 The `link:https://mysticatea.github.io/eslint-plugin-eslint-comments[eslint-plugin-eslint-comments]` provides
 additional ESLint rules for ESLint directive comments
@@ -11,32 +12,32 @@ additional ESLint rules for ESLint directive comments
 |===
 | Rule | https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/lib/configs/recommended.js[Recommended] | Fixable | Config
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/disable-enable-pair.html[eslint-comments/disable-enable-pair]`
+| `link:{eslint-comments-rules}/disable-enable-pair.html[eslint-comments/disable-enable-pair]`
 | Yes
 |
 | Error
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-aggregating-enable.html[eslint-comments/no-aggregating-enable]`
+| `link:{eslint-comments-rules}/no-aggregating-enable.html[eslint-comments/no-aggregating-enable]`
 | Yes
 |
 | Error
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-duplicate-disable.html[eslint-comments/no-duplicate-disable]`
+| `link:{eslint-comments-rules}/no-duplicate-disable.html[eslint-comments/no-duplicate-disable]`
 | Yes
 |
 | Error
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unlimited-disable.html[eslint-comments/no-unlimited-disable]`
+| `link:{eslint-comments-rules}/no-unlimited-disable.html[eslint-comments/no-unlimited-disable]`
 | Yes
 |
 | Error
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unused-disable.html[eslint-comments/no-unused-disable]`
+| `link:{eslint-comments-rules}/no-unused-disable.html[eslint-comments/no-unused-disable]`
 |
 |
 | Error
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unused-enable.html[eslint-comments/no-unused-enable]`
+| `link:{eslint-comments-rules}/no-unused-enable.html[eslint-comments/no-unused-enable]`
 | Yes
 |
 | Error
@@ -50,17 +51,17 @@ additional ESLint rules for ESLint directive comments
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-restricted-disable.html[eslint-comments/no-restricted-disable]`
+| `link:{eslint-comments-rules}/no-restricted-disable.html[eslint-comments/no-restricted-disable]`
 |
 |
 | Off
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-use.html[eslint-comments/no-use]`
+| `link:{eslint-comments-rules}/no-use.html[eslint-comments/no-use]`
 |
 |
 | Error
 
-| `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/require-description.html[eslint-comments/require-description]`
+| `link:{eslint-comments-rules}/require-description.html[eslint-comments/require-description]`
 |
 |
 | Error

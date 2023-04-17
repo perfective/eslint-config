@@ -1,4 +1,5 @@
 = TSLint
+:tslint-rules: https://palantir.github.io/tslint/rules
 
 https://palantir.github.io/tslint/[TSLint] is an extensible linter for the TypeScript language
 that was deprecated in 2019.
@@ -12,24 +13,24 @@ and http://codelyzer.com/rules/[Codelyzer]
 
 
 * Functionality
-** `link:https://palantir.github.io/tslint/rules/no-inferred-empty-object-type[no-inferred-empty-object-type]`
-** `link:https://palantir.github.io/tslint/rules/no-tautology-expression[no-tautology-expression]`
-** `link:https://palantir.github.io/tslint/rules/prefer-conditional-expression/[prefer-conditional-expression]`
-** `link:https://palantir.github.io/tslint/rules/static-this/[static-this]`
-** `link:https://palantir.github.io/tslint/rules/strict-comparisons/[strict-comparisons]`
-** `link:https://palantir.github.io/tslint/rules/strict-type-predicates/[strict-type-predicates]`
+** `link:{tslint-rules}/no-inferred-empty-object-type[no-inferred-empty-object-type]`
+** `link:{tslint-rules}/no-tautology-expression[no-tautology-expression]`
+** `link:{tslint-rules}/prefer-conditional-expression/[prefer-conditional-expression]`
+** `link:{tslint-rules}/static-this/[static-this]`
+** `link:{tslint-rules}/strict-comparisons/[strict-comparisons]`
+** `link:{tslint-rules}/strict-type-predicates/[strict-type-predicates]`
 +
 * Maintainability
-** `link:https://palantir.github.io/tslint/rules/no-default-import/[no-default-import]`
-** `link:https://palantir.github.io/tslint/rules/no-mergeable-namespace/[no-mergeable-namespace]`
+** `link:{tslint-rules}/no-default-import/[no-default-import]`
+** `link:{tslint-rules}/no-mergeable-namespace/[no-mergeable-namespace]`
 +
 * Style
-** `link:https://palantir.github.io/tslint/rules/encoding/[encoding]`
-** `link:https://palantir.github.io/tslint/rules/no-unnecessary-callback-wrapper/[no-unnecessary-callback-wrapper]`
-** `link:https://palantir.github.io/tslint/rules/prefer-switch/[prefer-switch]`
-** `link:https://palantir.github.io/tslint/rules/prefer-while/[prefer-while]`
-** `link:https://palantir.github.io/tslint/rules/return-undefined/[return-undefined]`
-** `link:https://palantir.github.io/tslint/rules/switch-final-break/[switch-final-break]`
+** `link:{tslint-rules}/encoding/[encoding]`
+** `link:{tslint-rules}/no-unnecessary-callback-wrapper/[no-unnecessary-callback-wrapper]`
+** `link:{tslint-rules}/prefer-switch/[prefer-switch]`
+** `link:{tslint-rules}/prefer-while/[prefer-while]`
+** `link:{tslint-rules}/return-undefined/[return-undefined]`
+** `link:{tslint-rules}/switch-final-break/[switch-final-break]`
 +
 * Format
-** `link:https://palantir.github.io/tslint/rules/import-spacing/[import-spacing]`
+** `link:{tslint-rules}/import-spacing/[import-spacing]`

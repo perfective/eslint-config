@@ -1,4 +1,5 @@
 = `cypress`
+:eslint-plugin-cypress-rules: https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules
 
 The `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]` allows to enforce
 some of the https://docs.cypress.io/guides/references/best-practices.html[best practices] for Cypress tests.
@@ -7,42 +8,42 @@ some of the https://docs.cypress.io/guides/references/best-practices.html[best p
 |===
 | Rule | https://github.com/cypress-io/eslint-plugin-cypress#rules[Recommended] | Fixable | Config
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/assertion-before-screenshot.md[cypress/assertion-before-screenshot]`
+| `link:{eslint-plugin-cypress-rules}/assertion-before-screenshot.md[cypress/assertion-before-screenshot]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-assigning-return-values.md[cypress/no-assigning-return-values]`
+| `link:{eslint-plugin-cypress-rules}/no-assigning-return-values.md[cypress/no-assigning-return-values]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-async-tests.md[cypress/no-async-tests]`
+| `link:{eslint-plugin-cypress-rules}/no-async-tests.md[cypress/no-async-tests]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md[cypress/no-force]`
+| `link:{eslint-plugin-cypress-rules}/no-force.md[cypress/no-force]`
 |
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-pause.md[cypress/no-pause]`
+| `link:{eslint-plugin-cypress-rules}/no-pause.md[cypress/no-pause]`
 |
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-unnecessary-waiting.md[cypress/no-unnecessary-waiting]`
+| `link:{eslint-plugin-cypress-rules}/no-unnecessary-waiting.md[cypress/no-unnecessary-waiting]`
 |
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/require-data-selectors.md[cypress/require-data-selectors]`
+| `link:{eslint-plugin-cypress-rules}/require-data-selectors.md[cypress/require-data-selectors]`
 |
 |
 | Error
 
-| `link:https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/unsafe-to-chain-command.md[cypress/unsafe-to-chain-command]`
+| `link:{eslint-plugin-cypress-rules}/unsafe-to-chain-command.md[cypress/unsafe-to-chain-command]`
 | Yes
 |
 | Error

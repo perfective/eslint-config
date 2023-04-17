@@ -1,4 +1,5 @@
 = `testing-library`
+:eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 
 The `link:https://github.com/testing-library/eslint-plugin-testing-library[eslint-plugin-testing-library]`
 provides rules to follow best practices
@@ -8,137 +9,137 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |===
 | Rule | https://github.com/testing-library/eslint-plugin-testing-library#supported-rules[Recommended] | Fixable | Config
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-async-query.md[testing-library/await-async-query]`
+| `link:{eslint-testing-library-rules}/await-async-query.md[testing-library/await-async-query]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-async-utils.md[testing-library/await-async-utils]`
+| `link:{eslint-testing-library-rules}/await-async-utils.md[testing-library/await-async-utils]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-fire-event.md[testing-library/await-fire-event]`
+| `link:{eslint-testing-library-rules}/await-fire-event.md[testing-library/await-fire-event]`
 |
 |
 | Off
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/consistent-data-testid.md[testing-library/consistent-data-testid]`
+| `link:{eslint-testing-library-rules}/consistent-data-testid.md[testing-library/consistent-data-testid]`
 |
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-await-sync-events.md[testing-library/no-await-sync-events]`
+| `link:{eslint-testing-library-rules}/no-await-sync-events.md[testing-library/no-await-sync-events]`
 |
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-await-sync-query.md[testing-library/no-await-sync-query]`
+| `link:{eslint-testing-library-rules}/no-await-sync-query.md[testing-library/no-await-sync-query]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-container.md[testing-library/no-container]`
+| `link:{eslint-testing-library-rules}/no-container.md[testing-library/no-container]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-debugging-utils.md[testing-library/no-debugging-utils]`
+| `link:{eslint-testing-library-rules}/no-debugging-utils.md[testing-library/no-debugging-utils]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-dom-import.md[testing-library/no-dom-import]`
-| Yes
-| Yes
-| Warning
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]`
-|
-| Yes
-| Warning
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-manual-cleanup.md[testing-library/no-manual-cleanup]`
-|
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-node-access.md[testing-library/no-node-access]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-render-in-setup.md[testing-library/no-render-in-setup]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
-|
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-empty-callback.md[testing-library/no-wait-for-empty-callback]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]`
-|
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-find-by.md[testing-library/prefer-find-by]`
+| `link:{eslint-testing-library-rules}/no-dom-import.md[testing-library/no-dom-import]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md[testing-library/prefer-user-event]`
-|
-|
-| Error
-
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-wait-for.md[testing-library/prefer-wait-for]`
+| `link:{eslint-testing-library-rules}/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
+| `link:{eslint-testing-library-rules}/no-manual-cleanup.md[testing-library/no-manual-cleanup]`
+|
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-node-access.md[testing-library/no-node-access]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-render-in-setup.md[testing-library/no-render-in-setup]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
+|
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-wait-for-empty-callback.md[testing-library/no-wait-for-empty-callback]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]`
+|
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-find-by.md[testing-library/prefer-find-by]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-testing-library-rules}/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
+| Yes
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-user-event.md[testing-library/prefer-user-event]`
+|
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-wait-for.md[testing-library/prefer-wait-for]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-testing-library-rules}/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
 | Yes
 |
 | Error

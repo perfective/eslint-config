@@ -1,263 +1,264 @@
 = `jsdoc`
+:eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc
 
-The `link:https://github.com/gajus/eslint-plugin-jsdoc[eslint-plugin-jsdoc]` provide JSDoc linting rules for ESLint.
+The `link:{eslint-jsdoc-rules}[eslint-plugin-jsdoc]` provide JSDoc linting rules for ESLint.
 
 
 [cols="~,1,1,1"]
 |===
-| Rule | https://github.com/gajus/eslint-plugin-jsdoc/blob/master/src/index.js[Recommended] | Fixable | Config
+| Rule | {eslint-jsdoc-rules}/blob/master/src/index.js[Recommended] | Fixable | Config
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-access[jsdoc/check-access]`
+| `link:{eslint-jsdoc-rules}#check-access[jsdoc/check-access]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-alignment[jsdoc/check-alignment]`
+| `link:{eslint-jsdoc-rules}#check-alignment[jsdoc/check-alignment]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-examples[jsdoc/check-examples]`
+| `link:{eslint-jsdoc-rules}#check-examples[jsdoc/check-examples]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-indentation[jsdoc/check-indentation]`
+| `link:{eslint-jsdoc-rules}#check-indentation[jsdoc/check-indentation]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-line-alignment[jsdoc/check-line-alignment]`
+| `link:{eslint-jsdoc-rules}#check-line-alignment[jsdoc/check-line-alignment]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-param-names[jsdoc/check-param-names]`
+| `link:{eslint-jsdoc-rules}#check-param-names[jsdoc/check-param-names]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-property-names[jsdoc/check-property-names]`
+| `link:{eslint-jsdoc-rules}#check-property-names[jsdoc/check-property-names]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-syntax[jsdoc/check-syntax]`
+| `link:{eslint-jsdoc-rules}#check-syntax[jsdoc/check-syntax]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-tag-names[jsdoc/check-tag-names]`
+| `link:{eslint-jsdoc-rules}#check-tag-names[jsdoc/check-tag-names]`
 | Yes
 |
 | Error
 4+| JSX tags (`jsx`, `jsxFrag`, `jsxImportSource`, `jsxRuntime`) are allowed.
 Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-types[jsdoc/check-types]`
+| `link:{eslint-jsdoc-rules}#check-types[jsdoc/check-types]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#check-values[jsdoc/check-values]`
+| `link:{eslint-jsdoc-rules}#check-values[jsdoc/check-values]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#empty-tags[jsdoc/empty-tags]`
+| `link:{eslint-jsdoc-rules}#empty-tags[jsdoc/empty-tags]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#implements-on-classes[jsdoc/implements-on-classes]`
+| `link:{eslint-jsdoc-rules}#implements-on-classes[jsdoc/implements-on-classes]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#match-description[jsdoc/match-description]`
+| `link:{eslint-jsdoc-rules}#match-description[jsdoc/match-description]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#match-name[jsdoc/match-name]`
+| `link:{eslint-jsdoc-rules}#match-name[jsdoc/match-name]`
 |
 |
 | Off
 4+| This rule requires a custom configuration that depends on the accepted code style.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#multiline-blocks[jsdoc/multiline-blocks]`
+| `link:{eslint-jsdoc-rules}#multiline-blocks[jsdoc/multiline-blocks]`
 | Yes
 |
 | Error
 4+| Allows `@lends`, `@type`, and `@deprecated` tags to be single-line JSDocs.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#newline-after-description[jsdoc/newline-after-description]`
+| `link:{eslint-jsdoc-rules}#newline-after-description[jsdoc/newline-after-description]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-bad-blocks[jsdoc/no-bad-blocks]`
+| `link:{eslint-jsdoc-rules}#no-bad-blocks[jsdoc/no-bad-blocks]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-blank-block-descriptions[jsdoc/no-blank-block-descriptions]`
+| `link:{eslint-jsdoc-rules}#no-blank-block-descriptions[jsdoc/no-blank-block-descriptions]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-defaults[jsdoc/no-defaults]`
+| `link:{eslint-jsdoc-rules}#no-defaults[jsdoc/no-defaults]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc/#eslint-plugin-jsdoc-rules-no-missing-syntax[jsdoc/no-missing-syntax]`
+| `link:{eslint-jsdoc-rules}/#eslint-plugin-jsdoc-rules-no-missing-syntax[jsdoc/no-missing-syntax]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-multi-asterisks[jsdoc/no-multi-asterisks]`
+| `link:{eslint-jsdoc-rules}#no-multi-asterisks[jsdoc/no-multi-asterisks]`
 | Yes
 | Yes
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc/#eslint-plugin-jsdoc-rules-no-restricted-syntax[jsdoc/no-restricted-syntax]`
+| `link:{eslint-jsdoc-rules}/#eslint-plugin-jsdoc-rules-no-restricted-syntax[jsdoc/no-restricted-syntax]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-types[jsdoc/no-types]`
+| `link:{eslint-jsdoc-rules}#no-types[jsdoc/no-types]`
 |
 |
 | Error for TypeScript; Off for JavaScript.
 4+| In TypeScript adding types to JSDoc would duplicate existing information.
 In JavaScript types should be required in the JSDocs.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#no-undefined-types[jsdoc/no-undefined-types]`
+| `link:{eslint-jsdoc-rules}#no-undefined-types[jsdoc/no-undefined-types]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-asterisk-prefix[jsdoc/require-asterisk-prefix]`
+| `link:{eslint-jsdoc-rules}#require-asterisk-prefix[jsdoc/require-asterisk-prefix]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-description[jsdoc/require-description]`
+| `link:{eslint-jsdoc-rules}#require-description[jsdoc/require-description]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-description-complete-sentence[jsdoc/require-description-complete-sentence]`
+| `link:{eslint-jsdoc-rules}#require-description-complete-sentence[jsdoc/require-description-complete-sentence]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-example[jsdoc/require-example]`
+| `link:{eslint-jsdoc-rules}#require-example[jsdoc/require-example]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-file-overview[jsdoc/require-file-overview]`
+| `link:{eslint-jsdoc-rules}#require-file-overview[jsdoc/require-file-overview]`
 |
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-hyphen-before-param-description[jsdoc/require-hyphen-before-param-description]`
+| `link:{eslint-jsdoc-rules}#require-hyphen-before-param-description[jsdoc/require-hyphen-before-param-description]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-jsdoc[jsdoc/require-jsdoc]`
+| `link:{eslint-jsdoc-rules}#require-jsdoc[jsdoc/require-jsdoc]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-param[jsdoc/require-param]`
+| `link:{eslint-jsdoc-rules}#require-param[jsdoc/require-param]`
 | Yes
 |
 | Off in TypeScript; Error in JavaScript
 4+| Once a JSDoc block is added, ensure it provides all type information.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-param-description[jsdoc/require-param-description]`
+| `link:{eslint-jsdoc-rules}#require-param-description[jsdoc/require-param-description]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-param-name[jsdoc/require-param-name]`
+| `link:{eslint-jsdoc-rules}#require-param-name[jsdoc/require-param-name]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-param-type[jsdoc/require-param-type]`
+| `link:{eslint-jsdoc-rules}#require-param-type[jsdoc/require-param-type]`
 | Yes
 |
 | Off for TypeScript; Error for JavaScript
 4+| In JavaScript, we have to require types to allow better static checks.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-property[jsdoc/require-property]`
+| `link:{eslint-jsdoc-rules}#require-property[jsdoc/require-property]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-property-description[jsdoc/require-property-description]`
+| `link:{eslint-jsdoc-rules}#require-property-description[jsdoc/require-property-description]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-property-name[jsdoc/require-property-name]`
+| `link:{eslint-jsdoc-rules}#require-property-name[jsdoc/require-property-name]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-property-type[jsdoc/require-property-type]`
+| `link:{eslint-jsdoc-rules}#require-property-type[jsdoc/require-property-type]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-returns[jsdoc/require-returns]`
+| `link:{eslint-jsdoc-rules}#require-returns[jsdoc/require-returns]`
 | Yes
 |
 | Off in TypeScript; Error in JavaScript
 4+| Once a JSDoc block is added, ensure it provides all type information.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-returns-check[jsdoc/require-returns-check]`
+| `link:{eslint-jsdoc-rules}#require-returns-check[jsdoc/require-returns-check]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-returns-description[jsdoc/require-returns-description]`
+| `link:{eslint-jsdoc-rules}#require-returns-description[jsdoc/require-returns-description]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-returns-type[jsdoc/require-returns-type]`
+| `link:{eslint-jsdoc-rules}#require-returns-type[jsdoc/require-returns-type]`
 | Yes
 |
 | Off in TypeScript; Error in JavaScript
 4+| In JavaScript, we have to require types to allow better static checks.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-throws[jsdoc/require-throws]`
+| `link:{eslint-jsdoc-rules}#require-throws[jsdoc/require-throws]`
 |
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-yields[jsdoc/require-yields]`
+| `link:{eslint-jsdoc-rules}#require-yields[jsdoc/require-yields]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#require-yields-check[jsdoc/require-yields-check]`
+| `link:{eslint-jsdoc-rules}#require-yields-check[jsdoc/require-yields-check]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#sort-tags[jsdoc/sort-tags]`
+| `link:{eslint-jsdoc-rules}#sort-tags[jsdoc/sort-tags]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#tag-lines[jsdoc/tag-lines]`
+| `link:{eslint-jsdoc-rules}#tag-lines[jsdoc/tag-lines]`
 | Yes
 | Yes
 | Off
@@ -265,7 +266,7 @@ In JavaScript types should be required in the JSDocs.
 For example, it does not allow to enforce a new line after a block of `@param` tags
 without adding a new line after each `@param` tag.
 
-| `link:https://github.com/gajus/eslint-plugin-jsdoc#valid-types[jsdoc/valid-types]`
+| `link:{eslint-jsdoc-rules}#valid-types[jsdoc/valid-types]`
 | Yes
 |
 | Error

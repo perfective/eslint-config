@@ -1,4 +1,11 @@
 = Changelog
+:eslint-rules: https://eslint.org/docs/latest/rules
+:ts-eslint-rules: https://typescript-eslint.io/rules
+:eslint-import-rules: https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules
+:eslint-jest-rules: https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules
+:eslint-promise-rules: https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules
+:eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
+:eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
 == v0.21.0-alpha.1 (next)
 
@@ -21,7 +28,7 @@
 * Updated `eslint` to `8.37.0`.
 +
 * Updated `@typescript-eslint` to `5.57.0`:
-** Enabled the `link:https://typescript-eslint.io/rules/no-duplicate-type-constituents/[@typescript-eslint/no-duplicate-type-constituents]` rule as an error.
+** Enabled the `link:{ts-eslint-rules}/no-duplicate-type-constituents/[@typescript-eslint/no-duplicate-type-constituents]` rule as an error.
 +
 * Upgraded `eslint-plugin-unicorn` to `46.0.0`.
 * Updated `eslint-plugin-cypress` to `2.13.1`.
@@ -36,21 +43,21 @@
 
 * Updated `eslint` to `8.34.0`.
 * Updated `@typescript-eslint` to `5.53.0`.
-** Enabled the `link:https://typescript-eslint.io/rules/key-spacing/[@typescript-eslint/key-spacing]` rule as a warning.
-** Enabled the `link:https://typescript-eslint.io/rules/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]` rule as a warning.
-** Enabled the `link:https://typescript-eslint.io/rules/no-namespace/[@typescript-eslint/no-mixed-enums]` rule as an error.
+** Enabled the `link:{ts-eslint-rules}/key-spacing/[@typescript-eslint/key-spacing]` rule as a warning.
+** Enabled the `link:{ts-eslint-rules}/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]` rule as a warning.
+** Enabled the `link:{ts-eslint-rules}/no-namespace/[@typescript-eslint/no-mixed-enums]` rule as an error.
 +
 * Updated `eslint-plugin-unicorn` to `45.0.2`.
-** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md[unicorn/no-typeof-undefined]` rule as a warning (with `checkGlobalVariables`).
-** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negated-condition.md[unicorn/no-negated-condition]` rule as a warning.
-** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-set-size.md[unicorn/prefer-set-size]` rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/no-typeof-undefined.md[unicorn/no-typeof-undefined]` rule as a warning (with `checkGlobalVariables`).
+** Enabled the `link:{eslint-unicorn-rules}/no-negated-condition.md[unicorn/no-negated-condition]` rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/prefer-set-size.md[unicorn/prefer-set-size]` rule as a warning.
 +
 * Updated `eslint-plugin-jest` to `27.2.1`.
-** Enabled the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]` rule as a warning.
+** Enabled the `link:{eslint-jest-rules}/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]` rule as a warning.
 +
 * Updated `eslint-plugin-import` to `2.27.5`.
-** Enabled the `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/consistent-type-specifier-style.md[import/consistent-type-specifier-style]` as a warning.
-** Enabled the `link:https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-empty-named-blocks.md[import/no-empty-named-blocks]` rule as a warning;
+** Enabled the `link:{eslint-import-rules}/consistent-type-specifier-style.md[import/consistent-type-specifier-style]` as a warning.
+** Enabled the `link:{eslint-import-rules}/no-empty-named-blocks.md[import/no-empty-named-blocks]` rule as a warning;
 +
 * Upgraded `eslint-plugin-simple-import-sort` to `10.0.0`.
 * Updated `eslint-plugin-jsdoc` to `40.0.0`.
@@ -70,27 +77,27 @@
 == v0.19.0
 
 * Updated `eslint` to `8.27.0`:
-** Enabled the `link:https://eslint.org/docs/latest/rules/logical-assignment-operators[logical-assignment-operators]` rule as a warning.
-** Enabled the `link:https://eslint.org/docs/latest/rules/no-new-native-nonconstructor[no-new-native-nonconstructor]` rule as a error.
-** Enabled the `link:https://eslint.org/docs/latest/rules/no-empty-static-block[no-empty-static-block]` rule as an error.
+** Enabled the `link:{eslint-rules}/logical-assignment-operators[logical-assignment-operators]` rule as a warning.
+** Enabled the `link:{eslint-rules}/no-new-native-nonconstructor[no-new-native-nonconstructor]` rule as a error.
+** Enabled the `link:{eslint-rules}/no-empty-static-block[no-empty-static-block]` rule as an error.
 +
 * Updated `@typescript-eslint` to `5.42.1`:
-** Enabled the `link:https://typescript-eslint.io/rules/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]` rule as an error.
-** Added check for enums, typedefs, named exports, and type references in the `link:https://typescript-eslint.io/rules/no-use-before-define/[@typescript-eslint/no-use-before-define]` rule.
+** Enabled the `link:{ts-eslint-rules}/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]` rule as an error.
+** Added check for enums, typedefs, named exports, and type references in the `link:{ts-eslint-rules}/no-use-before-define/[@typescript-eslint/no-use-before-define]` rule.
 +
 * Upgraded `eslint-plugin-unicorn` to `44.0.2`:
-** Enabled the `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-await.md[unicorn/no-unnecessary-await]` rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/no-unnecessary-await.md[unicorn/no-unnecessary-await]` rule as a warning.
 +
 * Upgraded `eslint-plugin-jest` to `27.1.4`:
-** Added the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-each.md[jest/prefer-each]` rule as an error.
-** Added the `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]` as a warning.
+** Added the `link:{eslint-jest-rules}/prefer-each.md[jest/prefer-each]` rule as an error.
+** Added the `link:{eslint-jest-rules}/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]` as a warning.
 ** Removed the `jest/no-jest-import` rule (was removed in `eslint-plugin-jest` v27.0.0).
 +
 * Upgraded `eslint-plugin-simple-import-sort` to `8.0.0`:
 ** Added Node modules prefixes with `node:` as a separate import group.
 +
 * Updated `eslint-plugin-promise` to `6.1.1`:
-** Enabled `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-multiple-resolved.md[promise/no-multiple-resolved]` as an error.
+** Enabled `link:{eslint-promise-rules}/no-multiple-resolved.md[promise/no-multiple-resolved]` as an error.
 +
 * Updated `eslint-import-resolver-typescript` to `3.5.2`.
 * Updated `eslint-plugin-sonarjs` to `0.16.0`.
@@ -102,41 +109,41 @@
 == v0.18.0
 
 * Updated `eslint` to `8.20.0`.
-** Enabled `link:https://eslint.org/docs/latest/rules/no-constant-binary-expression[no-constant-binary-expression]` as an error.
+** Enabled `link:{eslint-rules}/no-constant-binary-expression[no-constant-binary-expression]` as an error.
 ** Disabled use of variables and named exports before define.
 ** Disallowed dangling underscores in es2022 class fields names.
 +
 * Updated `@typescript-eslint` to `5.31.0`:
-** Enabled `link:https://typescript-eslint.io/rules/no-redundant-type-constituents/[@typescript-eslint/no-redundant-type-constituents]` as an error;
-** Enabled `link:https://typescript-eslint.io/rules/no-useless-empty-export/[@typescript-eslint/no-useless-empty-export]` as a warning.
-** Enabled `link:https://typescript-eslint.io/rules/parameter-properties/[@typescript-eslint/parameter-properties]` as an error.
+** Enabled `link:{ts-eslint-rules}/no-redundant-type-constituents/[@typescript-eslint/no-redundant-type-constituents]` as an error;
+** Enabled `link:{ts-eslint-rules}/no-useless-empty-export/[@typescript-eslint/no-useless-empty-export]` as a warning.
+** Enabled `link:{ts-eslint-rules}/parameter-properties/[@typescript-eslint/parameter-properties]` as an error.
 Prefer parameter properties instead of class properties.
-** Enabled `link:https://typescript-eslint.io/rules/no-duplicate-enum-values/[@typescript-eslint/no-duplicate-enum-values]` as an error:
-** Enabled `link:https://typescript-eslint.io/rules/consistent-generic-constructors/[@typescript-eslint/consistent-generic-constructors]` as a warning.
+** Enabled `link:{ts-eslint-rules}/no-duplicate-enum-values/[@typescript-eslint/no-duplicate-enum-values]` as an error:
+** Enabled `link:{ts-eslint-rules}/consistent-generic-constructors/[@typescript-eslint/consistent-generic-constructors]` as a warning.
 Enforce specifying type arguments only in the type annotation.
 ** Allowed to keep separate signatures if parameters have different names.
-** Disabled `link:https://typescript-eslint.io/rules/no-duplicate-imports/[@typescript-eslint/no-duplicate-imports]` as deprecated.
+** Disabled `link:{ts-eslint-rules}/no-duplicate-imports/[@typescript-eslint/no-duplicate-imports]` as deprecated.
 Use the `imports/no-duplicates` instead.
 +
 * Upgraded `eslint-plugin-unicorn` to `43.0.2`:
-** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-iife.md[unicorn/no-unreadable-iife]` as an error;
-** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-switch-case.md[unicorn/no-useless-switch-case]` as an error;
-** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]` as a warning;
-** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]` as a warning.
-** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-event-target.md[unicorn/prefer-event-target]` as an error.
-** Enabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]` as an error.
-** Disabled `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-index[unicorn/import-index]` as deprecated.
+** Enabled `link:{eslint-unicorn-rules}/no-unreadable-iife.md[unicorn/no-unreadable-iife]` as an error;
+** Enabled `link:{eslint-unicorn-rules}/no-useless-switch-case.md[unicorn/no-useless-switch-case]` as an error;
+** Enabled `link:{eslint-unicorn-rules}/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]` as a warning;
+** Enabled `link:{eslint-unicorn-rules}/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]` as a warning.
+** Enabled `link:{eslint-unicorn-rules}/prefer-event-target.md[unicorn/prefer-event-target]` as an error.
+** Enabled `link:{eslint-unicorn-rules}/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]` as an error.
+** Disabled `link:{eslint-unicorn-rules}/import-index[unicorn/import-index]` as deprecated.
 +
 * Upgraded `eslint-plugin-jsdoc` to `39.3.3`.
 * Upgraded `eslint-import-resolver-typescript` to `3.3.0`.
 * Updated `eslint-plugin-import` to `2.26.0`.
 * Updated `eslint-plugin-sonarjs` to `0.14.0`.
 * Updated `eslint-plugin-jest` to `26.6.0`.
-** Enabled `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-in-order.md[jest/prefer-hooks-in-order]` as an error.
-** Enabled `link:https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-expects.md[jest/max-expects]` as an error.
+** Enabled `link:{eslint-jest-rules}/prefer-hooks-in-order.md[jest/prefer-hooks-in-order]` as an error.
+** Enabled `link:{eslint-jest-rules}/max-expects.md[jest/max-expects]` as an error.
 +
 * Updated `eslint-plugin-testing-library` to `5.5.1`:
-** Enabled `link:https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]` as a warning.
+** Enabled `link:{eslint-testing-library-rules}/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]` as a warning.
 +
 * Patched `eslint-plugin-jest-dom` to `4.0.2`.
 
@@ -722,7 +729,7 @@ as a peer dependency.
 == v0.1.0
 
 * Added https://eslint.org[ESLint] rules.
-* Added https://typescript-eslint.io/rules/[TypeScript ESLint] rules.
+* Added {ts-eslint-rules}/[TypeScript ESLint] rules.
 * Added `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]` rules.
 * Added `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]` rules.
 * Added https://palantir.github.io/tslint/[TSLint] rules

@@ -1,4 +1,5 @@
 = `unicorn`
+:eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
 The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-unicorn]` provides various ESLint rules.
 
@@ -6,520 +7,520 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |===
 | Rule | https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/index.js[Recommended] | Fixable | Config
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/better-regex.md[unicorn/better-regex]`
+| `link:{eslint-unicorn-rules}/better-regex.md[unicorn/better-regex]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/catch-error-name.md[unicorn/catch-error-name]`
+| `link:{eslint-unicorn-rules}/catch-error-name.md[unicorn/catch-error-name]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-destructuring.md[unicorn/consistent-destructuring]`
+| `link:{eslint-unicorn-rules}/consistent-destructuring.md[unicorn/consistent-destructuring]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-function-scoping.md[unicorn/consistent-function-scoping]`
+| `link:{eslint-unicorn-rules}/consistent-function-scoping.md[unicorn/consistent-function-scoping]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/custom-error-definition.md[unicorn/custom-error-definition]`
+| `link:{eslint-unicorn-rules}/custom-error-definition.md[unicorn/custom-error-definition]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/empty-brace-spaces.md[unicorn/empty-brace-spaces]`
+| `link:{eslint-unicorn-rules}/empty-brace-spaces.md[unicorn/empty-brace-spaces]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/error-message.md[unicorn/error-message]`
-| Yes
-|
-| Error
-
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/escape-case.md[unicorn/escape-case]`
-| Yes
-| Yes
-| Warning
-
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md[unicorn/expiring-todo-comments]`
+| `link:{eslint-unicorn-rules}/error-message.md[unicorn/error-message]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/explicit-length-check.md[unicorn/explicit-length-check]`
+| `link:{eslint-unicorn-rules}/escape-case.md[unicorn/escape-case]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/expiring-todo-comments.md[unicorn/expiring-todo-comments]`
+| Yes
+|
+| Error
+
+| `link:{eslint-unicorn-rules}/explicit-length-check.md[unicorn/explicit-length-check]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md[unicorn/filename-case]`
+| `link:{eslint-unicorn-rules}/filename-case.md[unicorn/filename-case]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-index.md[unicorn/import-index]`
+| `link:{eslint-unicorn-rules}/import-index.md[unicorn/import-index]`
 |
 | Yes
 | Off
 4+| Deprecated since v43.0.0.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md[unicorn/import-style]`
+| `link:{eslint-unicorn-rules}/import-style.md[unicorn/import-style]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/new-for-builtins.md[unicorn/new-for-builtins]`
+| `link:{eslint-unicorn-rules}/new-for-builtins.md[unicorn/new-for-builtins]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-abusive-eslint-disable.md[unicorn/no-abusive-eslint-disable]`
+| `link:{eslint-unicorn-rules}/no-abusive-eslint-disable.md[unicorn/no-abusive-eslint-disable]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-callback-reference.md[unicorn/no-array-callback-reference]`
+| `link:{eslint-unicorn-rules}/no-array-callback-reference.md[unicorn/no-array-callback-reference]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-for-each.md[unicorn/no-array-for-each]`
+| `link:{eslint-unicorn-rules}/no-array-for-each.md[unicorn/no-array-for-each]`
 | Yes
 | Partially
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-method-this-argument.md[unicorn/no-array-method-this-argument]`
+| `link:{eslint-unicorn-rules}/no-array-method-this-argument.md[unicorn/no-array-method-this-argument]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-push-push.md[unicorn/no-array-push-push]`
+| `link:{eslint-unicorn-rules}/no-array-push-push.md[unicorn/no-array-push-push]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-reduce.md[unicorn/no-array-reduce]`
+| `link:{eslint-unicorn-rules}/no-array-reduce.md[unicorn/no-array-reduce]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-await-expression-member.md[unicorn/no-await-expression-member]`
+| `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-console-spaces.md[unicorn/no-console-spaces]`
+| `link:{eslint-unicorn-rules}/no-console-spaces.md[unicorn/no-console-spaces]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-document-cookie.md[unicorn/no-document-cookie]`
+| `link:{eslint-unicorn-rules}/no-document-cookie.md[unicorn/no-document-cookie]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-empty-file.md[unicorn/no-empty-file]`
+| `link:{eslint-unicorn-rules}/no-empty-file.md[unicorn/no-empty-file]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-for-loop.md[unicorn/no-for-loop]`
+| `link:{eslint-unicorn-rules}/no-for-loop.md[unicorn/no-for-loop]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-hex-escape.md[unicorn/no-hex-escape]`
+| `link:{eslint-unicorn-rules}/no-hex-escape.md[unicorn/no-hex-escape]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-instanceof-array.md[unicorn/no-instanceof-array]`
+| `link:{eslint-unicorn-rules}/no-instanceof-array.md[unicorn/no-instanceof-array]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-remove-event-listener.md[unicorn/no-invalid-remove-event-listener]`
+| `link:{eslint-unicorn-rules}/no-invalid-remove-event-listener.md[unicorn/no-invalid-remove-event-listener]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-keyword-prefix.md[unicorn/no-keyword-prefix]`
+| `link:{eslint-unicorn-rules}/no-keyword-prefix.md[unicorn/no-keyword-prefix]`
 |
 |
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-lonely-if.md[unicorn/no-lonely-if]`
+| `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negated-condition.md[unicorn/no-negated-condition]`
+| `link:{eslint-unicorn-rules}/no-negated-condition.md[unicorn/no-negated-condition]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nested-ternary.md[unicorn/no-nested-ternary]`
+| `link:{eslint-unicorn-rules}/no-nested-ternary.md[unicorn/no-nested-ternary]`
 | Yes
 | Partially
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-new-array.md[unicorn/no-new-array]`
+| `link:{eslint-unicorn-rules}/no-new-array.md[unicorn/no-new-array]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-new-buffer.md[unicorn/no-new-buffer]`
+| `link:{eslint-unicorn-rules}/no-new-buffer.md[unicorn/no-new-buffer]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md[unicorn/no-null]`
+| `link:{eslint-unicorn-rules}/no-null.md[unicorn/no-null]`
 | Yes
 |
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-object-as-default-parameter.md[unicorn/no-object-as-default-parameter]`
+| `link:{eslint-unicorn-rules}/no-object-as-default-parameter.md[unicorn/no-object-as-default-parameter]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-process-exit.md[unicorn/no-process-exit]`
+| `link:{eslint-unicorn-rules}/no-process-exit.md[unicorn/no-process-exit]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-static-only-class.md[unicorn/no-static-only-class]`
+| `link:{eslint-unicorn-rules}/no-static-only-class.md[unicorn/no-static-only-class]`
 | Yes
 | Partially
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-thenable.md[unicorn/no-thenable]`
+| `link:{eslint-unicorn-rules}/no-thenable.md[unicorn/no-thenable]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-this-assignment.md[unicorn/no-this-assignment]`
+| `link:{eslint-unicorn-rules}/no-this-assignment.md[unicorn/no-this-assignment]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md[unicorn/no-typeof-undefined]`
+| `link:{eslint-unicorn-rules}/no-typeof-undefined.md[unicorn/no-typeof-undefined]`
 | Yes
 | Yes
 | Warning
 4+| Checks global variables
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-array-destructuring.md[unicorn/no-unreadable-array-destructuring]`
+| `link:{eslint-unicorn-rules}/no-unreadable-array-destructuring.md[unicorn/no-unreadable-array-destructuring]`
 | Yes
 | Partially
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-iife.md[unicorn/no-unreadable-iife]`
+| `link:{eslint-unicorn-rules}/no-unreadable-iife.md[unicorn/no-unreadable-iife]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-await.md[unicorn/no-unnecessary-await]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-await.md[unicorn/no-unnecessary-await]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unsafe-regex.md[unicorn/no-unsafe-regex]`
+| `link:{eslint-unicorn-rules}/no-unsafe-regex.md[unicorn/no-unsafe-regex]`
 |
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
+| `link:{eslint-unicorn-rules}/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-length-check.md[unicorn/no-useless-length-check]`
+| `link:{eslint-unicorn-rules}/no-useless-length-check.md[unicorn/no-useless-length-check]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-promise-resolve-reject.md[unicorn/no-useless-promise-resolve-reject]`
+| `link:{eslint-unicorn-rules}/no-useless-promise-resolve-reject.md[unicorn/no-useless-promise-resolve-reject]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-spread.md[unicorn/no-useless-spread]`
+| `link:{eslint-unicorn-rules}/no-useless-spread.md[unicorn/no-useless-spread]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-switch-case.md[unicorn/no-useless-switch-case]`
+| `link:{eslint-unicorn-rules}/no-useless-switch-case.md[unicorn/no-useless-switch-case]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unused-properties.md[unicorn/no-unused-properties]`
+| `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
 |
 |
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-undefined.md[unicorn/no-useless-undefined]`
+| `link:{eslint-unicorn-rules}/no-useless-undefined.md[unicorn/no-useless-undefined]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-zero-fractions.md[unicorn/no-zero-fractions]`
+| `link:{eslint-unicorn-rules}/no-zero-fractions.md[unicorn/no-zero-fractions]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/number-literal-case.md[unicorn/number-literal-case]`
+| `link:{eslint-unicorn-rules}/number-literal-case.md[unicorn/number-literal-case]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md[unicorn/numeric-separators-style]`
+| `link:{eslint-unicorn-rules}/numeric-separators-style.md[unicorn/numeric-separators-style]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-add-event-listener.md[unicorn/prefer-add-event-listener]`
+| `link:{eslint-unicorn-rules}/prefer-add-event-listener.md[unicorn/prefer-add-event-listener]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-find.md[unicorn/prefer-array-find]`
+| `link:{eslint-unicorn-rules}/prefer-array-find.md[unicorn/prefer-array-find]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat.md[unicorn/prefer-array-flat]`
+| `link:{eslint-unicorn-rules}/prefer-array-flat.md[unicorn/prefer-array-flat]`
 | Yes
 | Yes
 | Off
 4+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat-map.md[unicorn/prefer-array-flat-map]`
+| `link:{eslint-unicorn-rules}/prefer-array-flat-map.md[unicorn/prefer-array-flat-map]`
 | Yes
 | Yes
 | Off
 4+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-index-of.md[unicorn/prefer-array-index-of]`
+| `link:{eslint-unicorn-rules}/prefer-array-index-of.md[unicorn/prefer-array-index-of]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-some.md[unicorn/prefer-array-some]`
+| `link:{eslint-unicorn-rules}/prefer-array-some.md[unicorn/prefer-array-some]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-some.md[unicorn/prefer-array-some]`
+| `link:{eslint-unicorn-rules}/prefer-array-some.md[unicorn/prefer-array-some]`
 |
 | Yes
 |
 4+| `String#at()` is experimental.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-code-point.md[unicorn/prefer-code-point]`
+| `link:{eslint-unicorn-rules}/prefer-code-point.md[unicorn/prefer-code-point]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-date-now.md[unicorn/prefer-date-now]`
+| `link:{eslint-unicorn-rules}/prefer-date-now.md[unicorn/prefer-date-now]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-default-parameters.md[unicorn/prefer-default-parameters]`
+| `link:{eslint-unicorn-rules}/prefer-default-parameters.md[unicorn/prefer-default-parameters]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-append.md[unicorn/prefer-dom-node-append]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-append.md[unicorn/prefer-dom-node-append]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-dataset.md[unicorn/prefer-dom-node-dataset]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-dataset.md[unicorn/prefer-dom-node-dataset]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-remove.md[unicorn/prefer-dom-node-remove]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-remove.md[unicorn/prefer-dom-node-remove]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-text-content.md[unicorn/prefer-dom-node-text-content]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-text-content.md[unicorn/prefer-dom-node-text-content]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-event-target.md[unicorn/prefer-event-target]`
+| `link:{eslint-unicorn-rules}/prefer-event-target.md[unicorn/prefer-event-target]`
 |
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md[unicorn/prefer-export-from]`
+| `link:{eslint-unicorn-rules}/prefer-export-from.md[unicorn/prefer-export-from]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-includes.md[unicorn/prefer-includes]`
+| `link:{eslint-unicorn-rules}/prefer-includes.md[unicorn/prefer-includes]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-json-parse-buffer.md[unicorn/prefer-json-parse-buffer]`
+| `link:{eslint-unicorn-rules}/prefer-json-parse-buffer.md[unicorn/prefer-json-parse-buffer]`
 |
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-keyboard-event-key.md[unicorn/prefer-keyboard-event-key]`
+| `link:{eslint-unicorn-rules}/prefer-keyboard-event-key.md[unicorn/prefer-keyboard-event-key]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]`
+| `link:{eslint-unicorn-rules}/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]`
 | Yes
 | Suggestion
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-math-trunc.md[unicorn/prefer-math-trunc]`
+| `link:{eslint-unicorn-rules}/prefer-math-trunc.md[unicorn/prefer-math-trunc]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-dom-apis.md[unicorn/prefer-modern-dom-apis]`
+| `link:{eslint-unicorn-rules}/prefer-modern-dom-apis.md[unicorn/prefer-modern-dom-apis]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]`
+| `link:{eslint-unicorn-rules}/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-module.md[unicorn/prefer-module]`
+| `link:{eslint-unicorn-rules}/prefer-module.md[unicorn/prefer-module]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]`
+| `link:{eslint-unicorn-rules}/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-negative-index.md[unicorn/prefer-negative-index]`
+| `link:{eslint-unicorn-rules}/prefer-negative-index.md[unicorn/prefer-negative-index]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-node-protocol.md[unicorn/prefer-node-protocol]`
+| `link:{eslint-unicorn-rules}/prefer-node-protocol.md[unicorn/prefer-node-protocol]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-number-properties.md[unicorn/prefer-number-properties]`
+| `link:{eslint-unicorn-rules}/prefer-number-properties.md[unicorn/prefer-number-properties]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-from-entries.md[unicorn/prefer-object-from-entries]`
+| `link:{eslint-unicorn-rules}/prefer-object-from-entries.md[unicorn/prefer-object-from-entries]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-has-own.md[unicorn/prefer-object-has-own]`
+| `link:{eslint-unicorn-rules}/prefer-object-has-own.md[unicorn/prefer-object-has-own]`
 |
 | Yes
 | Off
 4+| `link:https://github.com/tc39/proposal-accessible-object-hasownproperty[Object.hasOwn()]` is not a part of ES6 standard.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-optional-catch-binding.md[unicorn/prefer-optional-catch-binding]`
+| `link:{eslint-unicorn-rules}/prefer-optional-catch-binding.md[unicorn/prefer-optional-catch-binding]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-prototype-methods.md[unicorn/prefer-prototype-methods]`
+| `link:{eslint-unicorn-rules}/prefer-prototype-methods.md[unicorn/prefer-prototype-methods]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-query-selector.md[unicorn/prefer-query-selector]`
+| `link:{eslint-unicorn-rules}/prefer-query-selector.md[unicorn/prefer-query-selector]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-reflect-apply.md[unicorn/prefer-reflect-apply]`
+| `link:{eslint-unicorn-rules}/prefer-reflect-apply.md[unicorn/prefer-reflect-apply]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-regexp-test.md[unicorn/prefer-regexp-test]`
+| `link:{eslint-unicorn-rules}/prefer-regexp-test.md[unicorn/prefer-regexp-test]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-set-has.md[unicorn/prefer-set-has]`
+| `link:{eslint-unicorn-rules}/prefer-set-has.md[unicorn/prefer-set-has]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-set-size.md[unicorn/prefer-set-size]`
+| `link:{eslint-unicorn-rules}/prefer-set-size.md[unicorn/prefer-set-size]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-spread.md[unicorn/prefer-spread]`
+| `link:{eslint-unicorn-rules}/prefer-spread.md[unicorn/prefer-spread]`
 | Yes
 | Partially
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
+| `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
 |
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-slice.md[unicorn/prefer-string-slice]`
+| `link:{eslint-unicorn-rules}/prefer-string-slice.md[unicorn/prefer-string-slice]`
 | Yes
 | Partially
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-starts-ends-with.md[unicorn/prefer-string-starts-ends-with]`
+| `link:{eslint-unicorn-rules}/prefer-string-starts-ends-with.md[unicorn/prefer-string-starts-ends-with]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-trim-start-end.md[unicorn/prefer-string-trim-start-end]`
+| `link:{eslint-unicorn-rules}/prefer-string-trim-start-end.md[unicorn/prefer-string-trim-start-end]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-switch.md[unicorn/prefer-switch]`
+| `link:{eslint-unicorn-rules}/prefer-switch.md[unicorn/prefer-switch]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md[unicorn/prefer-ternary]`
+| `link:{eslint-unicorn-rules}/prefer-ternary.md[unicorn/prefer-ternary]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md[unicorn/prefer-top-level-await]`
+| `link:{eslint-unicorn-rules}/prefer-ternary.md[unicorn/prefer-top-level-await]`
 |
 |
 | Off
 4+| https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level-await[Top level]
 is only supported by the latest browsers.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-type-error.md[unicorn/prefer-type-error]`
+| `link:{eslint-unicorn-rules}/prefer-type-error.md[unicorn/prefer-type-error]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md[unicorn/prevent-abbreviations]`
+| `link:{eslint-unicorn-rules}/prevent-abbreviations.md[unicorn/prevent-abbreviations]`
 | Yes
 | Partially
 | Warning
@@ -529,48 +530,48 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 `num`, `obj`, `opts`, `pkg`, `prev`, `prod`, `prop`/`props`, `ref`/`refs`, `rel`, `req`, `res`, `ret`, `retval`,
 `sep`, `src`, `stdDev`, `str`, `tbl`, `temp`, `tit`, `tmp`, `val`, `var`/`vars`, `ver`.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/relative-url-style.md[unicorn/relative-url-style]`
+| `link:{eslint-unicorn-rules}/relative-url-style.md[unicorn/relative-url-style]`
 | Yes
 | Yes
 | Warning
 4+| Always use the `./` prefix for the relative URLs for clarity.
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-array-join-separator.md[unicorn/require-array-join-separator]`
+| `link:{eslint-unicorn-rules}/require-array-join-separator.md[unicorn/require-array-join-separator]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-number-to-fixed-digits-argument.md[unicorn/require-number-to-fixed-digits-argument]`
+| `link:{eslint-unicorn-rules}/require-number-to-fixed-digits-argument.md[unicorn/require-number-to-fixed-digits-argument]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-post-message-target-origin.md[unicorn/require-post-message-target-origin]`
+| `link:{eslint-unicorn-rules}/require-post-message-target-origin.md[unicorn/require-post-message-target-origin]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/string-content.md[unicorn/string-content]`
+| `link:{eslint-unicorn-rules}/string-content.md[unicorn/string-content]`
 |
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/switch-case-braces.md[unicorn/switch-case-braces]`
+| `link:{eslint-unicorn-rules}/switch-case-braces.md[unicorn/switch-case-braces]`
 | Yes
 | Yes
 | Off
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/template-indent.md[unicorn/template-indent]`
+| `link:{eslint-unicorn-rules}/template-indent.md[unicorn/template-indent]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/text-encoding-identifier-case.md[unicorn/text-encoding-identifier-case]`
+| `link:{eslint-unicorn-rules}/text-encoding-identifier-case.md[unicorn/text-encoding-identifier-case]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/throw-new-error.md[unicorn/throw-new-error]`
+| `link:{eslint-unicorn-rules}/throw-new-error.md[unicorn/throw-new-error]`
 | Yes
 | Yes
 | Warning

@@ -1,4 +1,5 @@
 = `promise`
+:eslint-promise-rules: https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules
 
 The `link:https://github.com/eslint-community/eslint-plugin-promise[eslint-plugin-promise]` provides rules
 to enforce best practices for JavaScript promises.
@@ -8,73 +9,73 @@ to enforce best practices for JavaScript promises.
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/catch-or-return.md[promise/catch-or-return]`
+| `link:{eslint-promise-rules}/catch-or-return.md[promise/catch-or-return]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-return-wrap.md[promise/no-return-wrap]`
+| `link:{eslint-promise-rules}/no-return-wrap.md[promise/no-return-wrap]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/param-names.md[promise/param-names]`
+| `link:{eslint-promise-rules}/param-names.md[promise/param-names]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/always-return.md[promise/always-return]`
+| `link:{eslint-promise-rules}/always-return.md[promise/always-return]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-multiple-resolved.md[promise/no-multiple-resolved]`
+| `link:{eslint-promise-rules}/no-multiple-resolved.md[promise/no-multiple-resolved]`
 |
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-native.md[promise/no-native]`
+| `link:{eslint-promise-rules}/no-native.md[promise/no-native]`
 |
 |
 | Off
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-nesting.md[promise/no-nesting]`
+| `link:{eslint-promise-rules}/no-nesting.md[promise/no-nesting]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-promise-in-callback.md[promise/no-promise-in-callback]`
+| `link:{eslint-promise-rules}/no-promise-in-callback.md[promise/no-promise-in-callback]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-callback-in-promise.md[promise/no-callback-in-promise]`
+| `link:{eslint-promise-rules}/no-callback-in-promise.md[promise/no-callback-in-promise]`
 | Yes
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/avoid-new.md[promise/avoid-new]`
+| `link:{eslint-promise-rules}/avoid-new.md[promise/avoid-new]`
 |
 |
 | Off
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-new-statics.md[promise/no-new-statics]`
+| `link:{eslint-promise-rules}/no-new-statics.md[promise/no-new-statics]`
 | Yes
 | Yes
 | Warning
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-return-in-finally.md[promise/no-return-in-finally]`
+| `link:{eslint-promise-rules}/no-return-in-finally.md[promise/no-return-in-finally]`
 | Yes
 |
 | Error
 
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/valid-params.md[promise/valid-params]`
+| `link:{eslint-promise-rules}/valid-params.md[promise/valid-params]`
 |
 |
 | Error
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/prefer-await-to-then.md[promise/prefer-await-to-then]`
+| `link:{eslint-promise-rules}/prefer-await-to-then.md[promise/prefer-await-to-then]`
 |
 |
 | Off
@@ -82,7 +83,7 @@ to enforce best practices for JavaScript promises.
 and would be turned off either way,
 as Promises should be preferred.
 
-| `link:https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/prefer-await-to-callbacks.md[promise/prefer-await-to-callbacks]`
+| `link:{eslint-promise-rules}/prefer-await-to-callbacks.md[promise/prefer-await-to-callbacks]`
 |
 |
 | Off
