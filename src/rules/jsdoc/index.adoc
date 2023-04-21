@@ -1,5 +1,5 @@
 = `jsdoc`
-:eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc
+:eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc/blob/main/README.md
 
 The `link:{eslint-jsdoc-rules}[eslint-plugin-jsdoc]` provide JSDoc linting rules for ESLint.
 
@@ -91,11 +91,6 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 4+| Allows `@lends`, `@type`, and `@deprecated` tags to be single-line JSDocs.
-
-| `link:{eslint-jsdoc-rules}#newline-after-description[jsdoc/newline-after-description]`
-| Yes
-|
-| Error
 
 | `link:{eslint-jsdoc-rules}#no-bad-blocks[jsdoc/no-bad-blocks]`
 |
@@ -261,7 +256,7 @@ In JavaScript types should be required in the JSDocs.
 | `link:{eslint-jsdoc-rules}#tag-lines[jsdoc/tag-lines]`
 | Yes
 | Yes
-| Off
+| Error
 4+| The rule is not flexible enough to configure different tags.
 For example, it does not allow to enforce a new line after a block of `@param` tags
 without adding a new line after each `@param` tag.

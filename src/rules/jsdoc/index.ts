@@ -68,7 +68,6 @@ export = {
             multilineTags: ['*'],
             allowMultipleTags: true,
         }],
-        'jsdoc/newline-after-description': ['error', 'always'],
         'jsdoc/no-bad-blocks': ['error', {
             ignore: ['ts-check', 'ts-expect-error', 'ts-ignore', 'ts-nocheck', 'typescript-eslint'],
             preventAllMultiAsteriskBlocks: false,
@@ -111,10 +110,11 @@ export = {
         'jsdoc/require-yields': 'error',
         'jsdoc/require-yields-check': 'error',
         'jsdoc/sort-tags': 'warn',
-        'jsdoc/tag-lines': ['off', 'never', {
-            count: 1,
-            dropEndLines: false,
-            noEndLines: true,
+        'jsdoc/tag-lines': ['error', 'always', {
+            count: 0,
+            startLines: 1,
+            endLines: 0,
+            applyToEndTag: false,
             tags: {},
         }],
         'jsdoc/valid-types': 'error',

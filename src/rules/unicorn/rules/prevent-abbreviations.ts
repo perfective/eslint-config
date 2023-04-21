@@ -17,10 +17,9 @@ export interface UnicornPreventAbbreviations {
 /**
  * Allows to extend unicorn/prevent-abbreviation rules replacements, instead of overriding them.
  *
- *  @param replacements - List of additional replacements.
- *  @param options - Additional properties to override.
- *
- *  @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prevent-abbreviations.md
+ * @param replacements - List of additional replacements.
+ * @param options - Additional properties to override.
+ * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prevent-abbreviations.md
  */
 export function unicornPreventAbbreviations(
     replacements: UnicornPreventAbbreviationReplacements = {},
