@@ -119,9 +119,10 @@ export = {
                         '@testing-library/jest-dom/extend-expect',
                     ],
                 }],
-                // There can be 3 levels of `describe()`: Class -> Method -> "When...", followed by a level for `it()`.
-                // The 5th level (inside an `it()`) can be required for a callback to test `toThrow()`.
-                'max-nested-callbacks': ['error', 5],
+                // There can be 4 levels of `describe()`: Class -> Method -> Method Signature -> "When...",
+                // followed by a level for `it()`.
+                // The 6th level (inside of `it()`) can be required for a callback to test `toThrow()`.
+                'max-nested-callbacks': ['error', 6],
                 // Conflicts with func-style inside describe()
                 'prefer-arrow/prefer-arrow-functions': 'off',
                 // In tests the last step of a Promise is to run "expect".

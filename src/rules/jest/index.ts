@@ -18,7 +18,7 @@ export = {
             max: 5,
         }],
         'jest/max-nested-describe': ['error', {
-            max: 3,
+            max: 4,
         }],
         'jest/no-alias-methods': 'warn',
         'jest/no-commented-out-tests': 'error',

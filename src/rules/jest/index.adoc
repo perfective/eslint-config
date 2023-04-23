@@ -19,12 +19,6 @@ for https://jestjs.io[Jest].
 |
 | Error
 
-| `link:{eslint-jest-rules}/max-nested-describe.md[jest/max-nested-describe]`
-|
-|
-| Error
-4+| The maximum of `3` nested `describe` should be enough for a hierarchy: Class → Method → Precondition ("When").
-
 | `link:{eslint-jest-rules}/max-expects.md[jest/max-expects]`
 |
 |
@@ -32,6 +26,13 @@ for https://jestjs.io[Jest].
 4+| Using the default maximum of `5`, but may reduce it later.
 
 For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtablename-fn-timeout[it.each]`.
+
+| `link:{eslint-jest-rules}/max-nested-describe.md[jest/max-nested-describe]`
+|
+|
+| Error
+4+| The maximum of `4` nested `describe` should be enough for a hierarchy:
+Class → Method → Method Signature → Precondition ("When").
 
 | `link:{eslint-jest-rules}/no-alias-methods.md[jest/no-alias-methods]`
 | Yes
