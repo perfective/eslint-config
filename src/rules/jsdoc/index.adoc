@@ -262,9 +262,7 @@ In JavaScript types should be required in the JSDocs.
 | Yes
 | Yes
 | Warning
-4+| The rule is not flexible enough to configure different tags.
-For example, it does not allow to enforce a new line after a block of `@param` tags
-without adding a new line after each `@param` tag.
+4+| Use `jsdoc/sort-tags` to configure empty lines between tags.
 
 | `link:{eslint-jsdoc-rules}#valid-types[jsdoc/valid-types]`
 | Yes

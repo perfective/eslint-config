@@ -110,7 +110,205 @@ export = {
         'jsdoc/require-throws': 'error',
         'jsdoc/require-yields': 'error',
         'jsdoc/require-yields-check': 'error',
-        'jsdoc/sort-tags': 'warn',
+        'jsdoc/sort-tags': ['warn', {
+            tagSequence: [
+                {
+                    // Brief descriptions
+                    tags: [
+                        'summary',
+                        'typeSummary',
+                    ],
+                },
+                {
+                    // Module/file-level
+                    tags: [
+                        'module',
+                        'exports',
+                        'file',
+                        'fileoverview',
+                        'overview',
+                    ],
+                },
+                {
+                    // Identifying (name, type)
+                    tags: [
+                        'typedef',
+                        'interface',
+                        'record',
+                        'template',
+                        'name',
+                        'kind',
+                        'type',
+                        'alias',
+                        'external',
+                        'host',
+                        'callback',
+                        'func',
+                        'function',
+                        'method',
+                        'class',
+                        'constructor',
+                    ],
+                },
+                {
+                    // Relationships
+                    tags: [
+                        'modifies',
+                        'mixes',
+                        'mixin',
+                        'mixinClass',
+                        'mixinFunction',
+                        'namespace',
+                        'borrows',
+                        'constructs',
+                        'lends',
+                        'implements',
+                        'requires',
+                    ],
+                },
+                {
+                    // Long descriptions
+                    tags: [
+                        'desc',
+                        'description',
+                        'classdesc',
+                        'tutorial',
+                        'copyright',
+                        'license',
+                    ],
+                },
+                {
+                    // Simple annotations
+                    tags: [
+                        'const',
+                        'constant',
+                        'final',
+                        'global',
+                        'readonly',
+                        'abstract',
+                        'virtual',
+                        'var',
+                        'member',
+                        'memberof',
+                        'memberof!',
+                        'inner',
+                        'instance',
+                        'inheritdoc',
+                        'inheritDoc',
+                        'override',
+                        'hideconstructor',
+                    ],
+                },
+                {
+                    // Core function/object info
+                    tags: [
+                        'param',
+                        'arg',
+                        'argument',
+                        'prop',
+                        'property',
+                        'return',
+                        'returns',
+                    ],
+                },
+                {
+                    // Important behavior details
+                    tags: [
+                        'async',
+                        'generator',
+                        'default',
+                        'defaultvalue',
+                        'enum',
+                        'augments',
+                        'extends',
+                        'throws',
+                        'exception',
+                        'yield',
+                        'yields',
+                        'event',
+                        'fires',
+                        'emits',
+                        'listens',
+                        'this',
+                    ],
+                },
+                {
+                    // Access
+                    tags: [
+                        'static',
+                        'private',
+                        'protected',
+                        'public',
+                        'access',
+                        'package',
+                    ],
+                },
+                {
+                    // Supplementary descriptions
+                    tags: [
+                        'see',
+                        'example',
+                    ],
+                },
+                {
+                    // Other Closure (undocumented) metadata
+                    tags: [
+                        'closurePrimitive',
+                        'customElement',
+                        'expose',
+                        'hidden',
+                        'idGenerator',
+                        'meaning',
+                        'ngInject',
+                        'owner',
+                        'wizaction',
+                    ],
+                },
+                {
+                    // Other Closure (documented) metadata
+                    tags: [
+                        'define',
+                        'dict',
+                        'export',
+                        'externs',
+                        'implicitCast',
+                        'noalias',
+                        'nocollapse',
+                        'nocompile',
+                        'noinline',
+                        'nosideeffects',
+                        'polymer',
+                        'polymerBehavior',
+                        'preserve',
+                        'struct',
+                        'suppress',
+                        'unrestricted',
+                    ],
+                },
+                {
+                    // @homer0/prettier-plugin-jsdoc metadata
+                    tags: [
+                        'category',
+                    ],
+                },
+                {
+                    // Non-Closure metadata
+                    tags: [
+                        'ignore',
+                        'author',
+                        'version',
+                        'variation',
+                        'since',
+                        'deprecated',
+                        'todo',
+                    ],
+                },
+            ],
+            alphabetizeExtras: false,
+            linesBetween: 1,
+            reportTagGroupSpacing: true,
+            reportIntraTagGroupSpacing: true,
+        }],
         'jsdoc/tag-lines': ['warn', 'always', {
             count: 0,
             startLines: 1,

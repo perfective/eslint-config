@@ -19,6 +19,7 @@ export interface UnicornPreventAbbreviations {
  *
  * @param replacements - List of additional replacements.
  * @param options - Additional properties to override.
+ *
  * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prevent-abbreviations.md
  */
 export function unicornPreventAbbreviations(
