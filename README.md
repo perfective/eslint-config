@@ -14,17 +14,18 @@ and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules
 -   [`eslint-plugin-deprecation`](https://github.com/gund/eslint-plugin-deprecation);
 -   [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments/);
 -   [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
--   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest);
--   [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom);
--   [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting);
+-   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest) _(optional)_;
+-   [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom) _(optional)_;
+-   [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
+    _(optional, required if `eslint-plugin-jest` is installed)_;
 -   [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
 -   [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node);
 -   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
 -   [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
--   [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs);
+-   [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
 -   [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
 -   [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
--   [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library);
+-   [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library) _(optional)_;
 -   [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn).
 
 To simplify configuring ESLint support in the IDEs and editors,
@@ -49,17 +50,12 @@ from issues that will be fixed automatically.
         eslint-plugin-deprecation \
         eslint-plugin-eslint-comments \
         eslint-plugin-import \
-        eslint-plugin-jest \
-        eslint-plugin-jest-dom \
-        eslint-plugin-jest-formatting \
         eslint-plugin-jsdoc \
         eslint-plugin-node \
         eslint-plugin-prefer-arrow \
         eslint-plugin-promise \
-        eslint-plugin-rxjs \
         eslint-plugin-simple-import-sort \
         eslint-plugin-sonarjs \
-        eslint-plugin-testing-library \
         eslint-plugin-unicorn \
         tslint
     ```
@@ -68,8 +64,16 @@ from issues that will be fixed automatically.
 
     ```bash
     npm install --save-dev \
-        eslint-plugin-cypress
+        eslint-plugin-cypress \
+        eslint-plugin-jest \
+        eslint-plugin-jest-dom \
+        eslint-plugin-jest-formatting \
+        eslint-plugin-rxjs \
+        eslint-plugin-testing-library
     ```
+
+    The `eslint-plugin-jest-formatting` module is required,
+    if the `eslint-plugin-jest` module is installed.
 
     The `@perfective/eslint-config` automatically includes rules for these plugins,
     if the dependency is installed.

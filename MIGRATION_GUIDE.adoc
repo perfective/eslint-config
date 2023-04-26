@@ -9,18 +9,26 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.20.0` to `v0.21.0-alpha.1` (next)
+== From `v0.20.0` to `v0.21.0-beta` (next)
 
-* If you do not use `cypress`, remove `eslint-plugin-cypress` from `devDependencies`.
-* If you do not use `rxjs`, remove `eslint-plugin-rxjs` from `devDependencies`.
+* If you do not use `jest`,
+remove `eslint-plugin-jest`, `eslint-plugin-jest-formatting`, `eslint-plugin-jest-dom`,
+and `eslint-plugin-testing-library` from `devDependencies`.
++
 * If you do not use `@testing-library/jest-dom`, remove `eslint-plugin-jest-dom` from `devDependencies`.
 * If you do not use `@testing-library`, remove `eslint-plugin-testing-library` from `devDependencies`.
++
+* If you do not use `cypress`, remove `eslint-plugin-cypress` from `devDependencies`.
+* If you do not use `rxjs`, remove `eslint-plugin-rxjs` from `devDependencies`.
 
 [NOTE]
 ====
 After removing optional peer dependencies, you may need to regenerate your `package-lock.json`,
 as these dependencies may remain in it and in the `node_modules`.
 ====
+
+* Remove the `jsdoc/newline-after-description` rule customizations,
+if you have any.
 
 * Disable new rules in the `.eslintrc.js`.
 +
@@ -35,6 +43,9 @@ module.exports = {
             files: ['*.[jt]s?(x)'],
             rules: {
                 '@typescript-eslint/no-duplicate-type-constituents': 'off',
+                '@typescript-eslint/no-unsafe-enum-comparison': 'off',
+                'jsdoc/no-blank-blocks': 'off', // auto-fixable
+                'jsdoc/tag-lines': 'off', // auto-fixable
             },
         },
     ],
