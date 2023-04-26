@@ -97,6 +97,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:{eslint-jsdoc-rules}#no-blank-blocks[jsdoc/no-blank-blocks]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-jsdoc-rules}#no-blank-block-descriptions[jsdoc/no-blank-block-descriptions]`
 |
 |
