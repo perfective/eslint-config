@@ -90,7 +90,7 @@ export = {
                 },
             },
         },
-        {
+        optionalOverrides('jest', {
             // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
             files: ['*.@(spec|test).[jt]s?(x)'],
             // TBD: Should environment be a part of the files overrides?
@@ -131,7 +131,7 @@ export = {
                 // Passing promise is required for async testing
                 'rxjs/no-topromise': 'off',
             },
-        },
+        }),
         optionalOverrides('cypress', {
             // The /cypress directory is used in the Cypress docs:
             //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
