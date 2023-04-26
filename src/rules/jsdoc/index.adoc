@@ -261,7 +261,7 @@ In JavaScript types should be required in the JSDocs.
 | `link:{eslint-jsdoc-rules}#tag-lines[jsdoc/tag-lines]`
 | Yes
 | Yes
-| Error
+| Warning
 4+| The rule is not flexible enough to configure different tags.
 For example, it does not allow to enforce a new line after a block of `@param` tags
 without adding a new line after each `@param` tag.

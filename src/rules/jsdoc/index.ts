@@ -111,7 +111,7 @@ export = {
         'jsdoc/require-yields': 'error',
         'jsdoc/require-yields-check': 'error',
         'jsdoc/sort-tags': 'warn',
-        'jsdoc/tag-lines': ['error', 'always', {
+        'jsdoc/tag-lines': ['warn', 'always', {
             count: 0,
             startLines: 1,
             endLines: 0,
