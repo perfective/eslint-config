@@ -3,7 +3,7 @@
 :ts-eslint-rules: https://typescript-eslint.io/rules
 :eslint-import-rules: https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules
 :eslint-jest-rules: https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules
-:eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc/blob/main/README.md
+:eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules
 :eslint-promise-rules: https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
@@ -20,9 +20,9 @@ and must be installed when the `eslint-plugin-jest` module is installed.
 ** Enabled the `link:{ts-eslint-rules}/no-unsafe-enum-comparison/[@typescript-eslint/no-unsafe-enum-comparison]` rule as an error.
 +
 * Upgrade `eslint-plugin-jsdoc` to `43.1.1`
-** Enabled the `link:{eslint-jsdoc-rules}#no-blank-blocks[jsdoc/no-blank-blocks]` rule as a warning.
-** Enabled the `link:{eslint-jsdoc-rules}#tag-lines[jsdoc/tag-lines]` rule as a warning.
-** Configured the `link:{eslint-jsdoc-rules}#sort-tags[jsdoc/sort-tags]` rule to group tags.
+** Enabled the `link:{eslint-jsdoc-rules}/no-blank-blocks.md[jsdoc/no-blank-blocks]` rule as a warning.
+** Enabled the `link:{eslint-jsdoc-rules}/tag-lines.md[jsdoc/tag-lines]` rule as a warning.
+** Configured the `link:{eslint-jsdoc-rules}/sort-tags.md[jsdoc/sort-tags]` rule to group tags.
 ** Removed the `jsdoc/newline-after-description` rule (removed from `eslint-plugin-jsdoc`).
 +
 * Patched `eslint-plugin-testing-library` to `5.10.3`.
