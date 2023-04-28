@@ -207,8 +207,6 @@ export = {
                         'argument',
                         'prop',
                         'property',
-                        'return',
-                        'returns',
                     ],
                 },
                 {
@@ -221,6 +219,8 @@ export = {
                         'enum',
                         'augments',
                         'extends',
+                        'return',
+                        'returns',
                         'throws',
                         'exception',
                         'yield',
