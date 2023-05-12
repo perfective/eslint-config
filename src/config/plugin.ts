@@ -1,8 +1,8 @@
 import { hasNodeModule } from './node';
 
 /**
- * If a given ESLint {@linkcode plugin} is installed,
- * returns configuration for the {@linkcode plugin} with the given {@linkcode rules}.
+ * If a given ESLint `plugin` is installed,
+ * returns configuration for the `plugin` with the given `rules`.
  *
  * Otherwise, returns an empty object.
  */
@@ -17,10 +17,10 @@ export function optionalConfig(plugin: string, rules: Record<string, unknown>): 
 }
 
 /**
- * If a given ESLint {@linkcode plugin} is installed,
- * returns the given configuration {@linkcode overrides}.
+ * If a given ESLint `plugin` is installed,
+ * returns the given configuration `overrides`.
  *
- * Otherwise, returns {@linkcode null}.
+ * Otherwise, returns `null`.
  */
 export function optionalOverrides(plugin: string, overrides: Record<string, unknown>): Record<string, unknown> | null {
     if (hasEslintPlugin(plugin)) {
@@ -30,10 +30,10 @@ export function optionalOverrides(plugin: string, overrides: Record<string, unkn
 }
 
 /**
- * If a given ESLint {@linkcode plugin} is installed,
+ * If a given ESLint `plugin` is installed,
  * returns a path to the plugin rules.
  *
- * Otherwise, returns {@linkcode null}.
+ * Otherwise, returns `null`.
  */
 export function optionalRules(plugin: string): string | null {
     if (hasEslintPlugin(plugin)) {

@@ -1,5 +1,5 @@
 /**
- * Returns true if a given {@linkcode module} can be resolved in node_modules.
+ * Returns true if a given `module` can be resolved in node_modules.
  *
  * A module does not have to be required directly by the package.json.
  * The function returns true,
