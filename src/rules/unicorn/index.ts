@@ -104,6 +104,7 @@ export = {
         'unicorn/prefer-array-index-of': 'warn',
         'unicorn/prefer-array-some': 'error',
         'unicorn/prefer-at': 'off',
+        'unicorn/prefer-blob-reading-methods': 'error',
         'unicorn/prefer-code-point': 'error',
         'unicorn/prefer-date-now': 'warn',
         'unicorn/prefer-default-parameters': 'warn',
@@ -131,7 +132,6 @@ export = {
         'unicorn/prefer-object-from-entries': ['off', {
             functions: [],
         }],
-        'unicorn/prefer-object-has-own': 'off',
         'unicorn/prefer-optional-catch-binding': 'warn',
         'unicorn/prefer-prototype-methods': 'warn',
         'unicorn/prefer-query-selector': 'warn',

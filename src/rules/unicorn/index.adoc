@@ -234,6 +234,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
+|
+|
+| Off
+
 | `link:{eslint-unicorn-rules}/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
 | Yes
 | Yes
@@ -258,11 +263,6 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 |
 | Error
-
-| `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
-|
-|
-| Off
 
 | `link:{eslint-unicorn-rules}/no-useless-undefined.md[unicorn/no-useless-undefined]`
 | Yes
@@ -316,11 +316,16 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-array-some.md[unicorn/prefer-array-some]`
-|
+| `link:{eslint-unicorn-rules}/prefer-at.md[unicorn/prefer-at]`
+| Yes
 | Yes
 |
 4+| `String#at()` is experimental.
+
+| `link:{eslint-unicorn-rules}/prefer-blob-reading-methods.md[unicorn/prefer-blob-reading-methods]`
+| Yes
+|
+| Error
 
 | `link:{eslint-unicorn-rules}/prefer-code-point.md[unicorn/prefer-code-point]`
 | Yes
@@ -358,7 +363,7 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:{eslint-unicorn-rules}/prefer-event-target.md[unicorn/prefer-event-target]`
-|
+| Yes
 |
 | Error
 
@@ -432,12 +437,6 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Off
 
-| `link:{eslint-unicorn-rules}/prefer-object-has-own.md[unicorn/prefer-object-has-own]`
-|
-| Yes
-| Off
-4+| `link:https://github.com/tc39/proposal-accessible-object-hasownproperty[Object.hasOwn()]` is not a part of ES6 standard.
-
 | `link:{eslint-unicorn-rules}/prefer-optional-catch-binding.md[unicorn/prefer-optional-catch-binding]`
 | Yes
 | Yes
@@ -479,7 +478,7 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Off
 
 | `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
-|
+| Yes
 | Yes
 | Off
 
@@ -547,7 +546,7 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Warning
 
 | `link:{eslint-unicorn-rules}/require-post-message-target-origin.md[unicorn/require-post-message-target-origin]`
-| Yes
+|
 |
 | Error
 
