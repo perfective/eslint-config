@@ -124,6 +124,11 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
+| `link:{eslint-testing-library-rules}/prefer-query-matchers.md[testing-library/prefer-query-matchers]`
+|
+|
+| Off
+
 | `link:{eslint-testing-library-rules}/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
 | Yes
 |

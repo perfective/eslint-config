@@ -34,6 +34,8 @@ export = {
             absence: true,
         }],
         'testing-library/prefer-query-by-disappearance': 'error',
+        // TODO: Configure matchers
+        'testing-library/prefer-query-matchers': 'off',
         'testing-library/prefer-user-event': 'error',
         'testing-library/prefer-screen-queries': 'error',
         'testing-library/prefer-wait-for': 'warn',
