@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.20.0` to `v0.21.0-beta.1` (next)
+== From `v0.20.0` to `v0.21.0-beta.2` (next)
 
 * If you do not use `jest`,
 remove `eslint-plugin-jest`, `eslint-plugin-jest-formatting`, `eslint-plugin-jest-dom`,
