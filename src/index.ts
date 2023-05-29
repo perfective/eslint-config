@@ -48,6 +48,7 @@ export = {
                 'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
                 'import/unambiguous': 'off',
                 'jsdoc/no-types': 'off',
+                'jsdoc/no-undefined-types': 'off',
                 'jsdoc/require-param': 'error',
                 'jsdoc/require-param-type': 'error',
                 'jsdoc/require-returns': 'error',

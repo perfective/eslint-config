@@ -137,7 +137,8 @@ In JavaScript types should be required in the JSDocs.
 | `link:{eslint-jsdoc-rules}/no-undefined-types.md[jsdoc/no-undefined-types]`
 | Yes
 |
-| Error
+| Error in JavaScript.
+Off in TypeScript.
 
 | `link:{eslint-jsdoc-rules}/require-asterisk-prefix.md[jsdoc/require-asterisk-prefix]`
 |
