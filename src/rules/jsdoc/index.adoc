@@ -75,6 +75,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:{eslint-jsdoc-rules}/imports-as-dependencies.md[jsdoc/imports-as-dependencies]`
+|
+|
+| Error
+
 | `link:{eslint-jsdoc-rules}/match-description.md[jsdoc/match-description]`
 |
 |

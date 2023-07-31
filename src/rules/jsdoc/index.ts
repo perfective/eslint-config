@@ -57,6 +57,7 @@ export = {
             tags: ['final', 'flags', 'sealed'],
         }],
         'jsdoc/implements-on-classes': 'error',
+        'jsdoc/imports-as-dependencies': 'error',
         'jsdoc/match-description': 'error',
         'jsdoc/match-name': 'off',
         'jsdoc/multiline-blocks': ['error', {
