@@ -64,7 +64,8 @@ export = {
         'unicorn/no-unnecessary-await': 'warn',
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unreadable-iife': 'error',
-        'unicorn/no-unsafe-regex': 'error',
+        // The rule is deprecated
+        'unicorn/no-unsafe-regex': 'off',
         'unicorn/no-unused-properties': 'off',
         'unicorn/no-useless-fallback-in-spread': 'warn',
         'unicorn/no-useless-length-check': 'warn',

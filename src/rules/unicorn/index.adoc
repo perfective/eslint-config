@@ -232,7 +232,8 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | `link:{eslint-unicorn-rules}/no-unsafe-regex.md[unicorn/no-unsafe-regex]`
 |
 |
-| Error
+| Off
+4+| The rule is https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2135[deprecated].
 
 | `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
 |
