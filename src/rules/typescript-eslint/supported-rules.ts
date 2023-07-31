@@ -215,6 +215,12 @@ export = {
             ignoreTernaryTests: false,
             ignoreConditionalTests: true,
             ignoreMixedLogicalExpressions: true,
+            ignorePrimitives: {
+                bigint: false,
+                boolean: false,
+                number: false,
+                string: false,
+            },
         }],
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-readonly': 'warn',
@@ -237,8 +243,12 @@ export = {
             ignoreStringArrays: true,
         }],
         '@typescript-eslint/restrict-plus-operands': ['error', {
-            checkCompoundAssignments: true,
             allowAny: false,
+            allowBoolean: false,
+            allowNullish: false,
+            allowNumberAndString: false,
+            allowRegExp: false,
+            checkCompoundAssignments: true,
         }],
         '@typescript-eslint/restrict-template-expressions': ['error', {
             allowAny: false,
