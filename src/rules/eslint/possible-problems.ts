@@ -33,7 +33,14 @@ export = {
         'no-import-assign': 'error',
         'no-inner-declarations': 'error',
         'no-invalid-regexp': 'error',
-        'no-irregular-whitespace': 'error',
+        'no-irregular-whitespace': ['error', {
+            skipStrings: false,
+            skipComments: false,
+            skipRegExps: false,
+            skipTemplates: false,
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
+            skipJSXText: false,
+        }],
         'no-loss-of-precision': 'error',
         'no-misleading-character-class': 'error',
         'no-new-native-nonconstructor': 'error',

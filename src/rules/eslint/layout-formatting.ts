@@ -98,6 +98,7 @@ export = {
             // Nested binary expressions may be hard to break down into named functions
             nestedBinaryExpressions: false,
             enforceForArrowConditionals: false,
+            ternaryOperandBinaryExpressions: false,
         }],
         'no-mixed-spaces-and-tabs': 'error',
         'no-multi-spaces': 'warn',

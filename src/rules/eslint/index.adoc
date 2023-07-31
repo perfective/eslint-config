@@ -786,7 +786,8 @@ Using `complexity` rule instead to keep the functions simple.
 | `link:{eslint-rules}/no-return-await[no-return-await]`
 |
 |
-| Error
+| Off
+4+| The rule is https://github.com/eslint/eslint/issues/17345[deprecated].
 
 | `link:{eslint-rules}/no-script-url[no-script-url]`
 |
