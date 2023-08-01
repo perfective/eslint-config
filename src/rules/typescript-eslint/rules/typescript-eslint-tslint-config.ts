@@ -19,7 +19,10 @@ const functionality: TsLintRules = {
         'allow-object-equal-comparison': true,
         'allow-string-order-comparison': true,
     }],
-    'strict-type-predicates': true,
+    // Relies on deprecated API
+    // DeprecationWarning: 'originalKeywordKind' has been deprecated since v5.0.0
+    // and will no longer be usable after v5.2.0. Use 'identifierToKeywordKind(identifier)' instead.
+    // 'strict-type-predicates': true,
 };
 
 const maintainability: TsLintRules = {
