@@ -100,6 +100,7 @@ module.exports = {
 If more directories or file types need to be ignored, see the
 `link:https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file[.eslintignore]` file docs.
 
+
 == Rules Configuration Extension Functions
 
 Some rules have complex configuration objects or arrays
@@ -128,6 +129,7 @@ module.exports = {
 ----
 <1> Framework-specific packages, based on `@perfective/eslint-config`, re-export all the rules.
 So rules should be required from those packages for correct `node_modules` resolution.
+
 
 === Supported Rules
 
