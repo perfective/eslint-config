@@ -11,6 +11,7 @@
 == v0.21.0
 
 * All plugins support TypeScript v5.0.
+** Disabled the TSLint `strict-type-predicates` rule as it uses a deprecated in 5.0 API.
 +
 * Added support for optional plugins.
 ** Marked `eslint-plugin-cypress` as an optional peer dependency.
