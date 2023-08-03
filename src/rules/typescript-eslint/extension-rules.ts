@@ -1,9 +1,13 @@
 export = {
     rules: {
+        'block-spacing': 'off',
+        '@typescript-eslint/block-spacing': ['warn', 'always'],
         'brace-style': 'off',
         '@typescript-eslint/brace-style': ['warn', 'stroustrup', {
             allowSingleLine: false,
         }],
+        'class-methods-use-this': 'off',
+        '@typescript-eslint/class-methods-use-this': 'off',
         'comma-dangle': 'off',
         '@typescript-eslint/comma-dangle': ['warn', {
             arrays: 'always-multiline',
@@ -91,10 +95,6 @@ export = {
         'no-dupe-class-members': 'off',
         '@typescript-eslint/no-dupe-class-members': 'error',
         'no-duplicate-imports': 'off',
-        // The rule is deprecated. Use imports/no-duplicates instead.
-        '@typescript-eslint/no-duplicate-imports': ['off', {
-            includeExports: true,
-        }],
         'no-empty-function': 'off',
         '@typescript-eslint/no-empty-function': ['error', {
             allow: ['protected-constructors', 'private-constructors'],
@@ -122,9 +122,7 @@ export = {
         'no-redeclare': 'off',
         '@typescript-eslint/no-redeclare': 'error',
         'no-restricted-imports': 'off',
-        '@typescript-eslint/no-restricted-imports': ['error', {
-            allowTypeImports: false,
-        }],
+        '@typescript-eslint/no-restricted-imports': ['error', {}],
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'off',
         'no-throw-literal': 'off',

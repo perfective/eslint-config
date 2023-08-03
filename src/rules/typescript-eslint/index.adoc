@@ -6,430 +6,341 @@ The `link:https://typescript-eslint.io[@typescript-eslint]` plugin provides lint
 
 == Supported Rules
 
-[cols="~,1,1,1"]
+[cols="~,1,1"]
 |===
-| Rule | {ts-eslint-rules}/#supported-rules[Recommended] | Fixable | Config
+| Rule | {ts-eslint-rules}/#supported-rules[Config] | Severity
 
 | `link:{ts-eslint-rules}/adjacent-overload-signatures/[@typescript-eslint/adjacent-overload-signatures]`
-| Yes
-|
+| Stylistic
 | Error
 
 | `link:{ts-eslint-rules}/array-type/[@typescript-eslint/array-type]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/await-thenable/[@typescript-eslint/await-thenable]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/ban-ts-comment/[@typescript-eslint/ban-ts-comment]`
-| Yes
-|
+| Recommended
 | Error
-4+| Disallows `@ts-<directive>` comments, as they would suppress TypeScript compiler errors and reduce the strictness of the compiler.
+3+| Disallows `@ts-<directive>` comments, as they would suppress TypeScript compiler errors and reduce the strictness of the compiler.
 `@ts-expect-error` is allowed with a description in unit tests,
 as it may be required to force an error
 (e.g. to test typings of the functions).
 
 | `link:{ts-eslint-rules}/ban-tslint-comment/[@typescript-eslint/ban-tslint-comment]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/ban-types/[@typescript-eslint/ban-types]`
-| Yes
-| Yes
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/class-literal-property-style/[@typescript-eslint/class-literal-property-style]`
-|
-| Yes
+| Stylistic
 | Off
 
 | `link:{ts-eslint-rules}/consistent-generic-constructors/[@typescript-eslint/consistent-generic-constructors]`
-|
-| Yes
+| Stylistic
 | Warning
-4+| Enforces specifying type arguments only in the type annotation,
+3+| Enforces specifying type arguments only in the type annotation,
 as type inferences should be minimized and types must be declared explicitly.
 
 | `link:{ts-eslint-rules}/consistent-indexed-object-style/[@typescript-eslint/consistent-indexed-object-style]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/consistent-type-assertions/[@typescript-eslint/consistent-type-assertions]`
-|
-|
+| Stylistic
 | Error
 
 | `link:{ts-eslint-rules}/consistent-type-definitions/[@typescript-eslint/consistent-type-definitions]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/consistent-type-exports/[@typescript-eslint/consistent-type-exports]`
 |
-| Yes
 | Off
-4+| As of v5.8.1 moment this rule causes linting failures.
+3+| As of v5.8.1 moment this rule causes linting failures.
 
 | `link:{ts-eslint-rules}/consistent-type-imports/[@typescript-eslint/consistent-type-imports]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/explicit-function-return-type/[@typescript-eslint/explicit-function-return-type]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/explicit-member-accessibility/[@typescript-eslint/explicit-member-accessibility]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/explicit-module-boundary-types/[@typescript-eslint/explicit-module-boundary-types]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/member-delimiter-style/[@typescript-eslint/member-delimiter-style]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/member-ordering/[@typescript-eslint/member-ordering]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/method-signature-style/[@typescript-eslint/method-signature-style]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/naming-convention/[@typescript-eslint/naming-convention]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/no-base-to-string/[@typescript-eslint/no-base-to-string]`
-|
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-confusing-non-null-assertion/[@typescript-eslint/no-confusing-non-null-assertion]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/no-confusing-void-expression/[@typescript-eslint/no-confusing-void-expression]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/no-duplicate-enum-values/[@typescript-eslint/no-duplicate-enum-values]`
-|
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-duplicate-type-constituents/[@typescript-eslint/no-duplicate-type-constituents]`
-|
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-dynamic-delete/[@typescript-eslint/no-dynamic-delete]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/no-empty-interface/[@typescript-eslint/no-empty-interface]`
-| Yes
-| Yes
+| Stylistic
 | Off
 
 | `link:{ts-eslint-rules}/no-explicit-any/[@typescript-eslint/no-explicit-any]`
-| Yes
-| Yes
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-extra-non-null-assertion/[@typescript-eslint/no-extra-non-null-assertion]`
-| Yes
-| Yes
+| Recommended
 | Warning
 
 | `link:{ts-eslint-rules}/no-extraneous-class/[@typescript-eslint/no-extraneous-class]`
-|
-|
+| Strict
 | Error
 
 | `link:{ts-eslint-rules}/no-floating-promises/[@typescript-eslint/no-floating-promises]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-for-in-array/[@typescript-eslint/no-for-in-array]`
-| Yes
-|
+| Recommended
 | Error
-
-| `link:{ts-eslint-rules}/no-implicit-any-catch/[@typescript-eslint/no-implicit-any-catch]`
-|
-| Yes
-| Error
-4+| Deprecated, use TypeScript `useUnknownInCatchVariables` option instead (since v4.4).
 
 | `link:{ts-eslint-rules}/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/no-inferrable-types/[@typescript-eslint/no-inferrable-types]`
-| Yes
-| Yes
+| Stylistic
 | Off
 
 | `link:{ts-eslint-rules}/no-invalid-void-type/[@typescript-eslint/no-invalid-void-type]`
-|
-|
+| Strict
 | Error
 
 | `link:{ts-eslint-rules}/no-meaningless-void-operator/[@typescript-eslint/no-meaningless-void-operator]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/no-misused-new/[@typescript-eslint/no-misused-new]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-misused-promises/[@typescript-eslint/no-misused-promises]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-namespace/[@typescript-eslint/no-mixed-enums]`
-|
-|
+| Strict
 | Error
 
 | `link:{ts-eslint-rules}/no-namespace/[@typescript-eslint/no-namespace]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-non-null-asserted-nullish-coalescing/[@typescript-eslint/no-non-null-asserted-nullish-coalescing]`
-|
-|
+| Strict
 | Error
 
 | `link:{ts-eslint-rules}/no-non-null-asserted-optional-chain/[@typescript-eslint/no-non-null-asserted-optional-chain]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-non-null-assertion/[@typescript-eslint/no-non-null-assertion]`
-| Yes
-|
+| Strict
 | Error
 
-| `link:{ts-eslint-rules}/no-parameter-properties/[@typescript-eslint/no-parameter-properties]`
-|
-|
-| Off
-4+| Deprecated. Use the `@typescript-eslint/parameters-properties` instead.
-
 | `link:{ts-eslint-rules}/no-redundant-type-constituents/[@typescript-eslint/no-redundant-type-constituents]`
-|
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-require-imports/[@typescript-eslint/no-require-imports]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/no-this-alias/[@typescript-eslint/no-this-alias]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-type-alias/[@typescript-eslint/no-type-alias]`
 |
-|
 | Off
 
 | `link:{ts-eslint-rules}/no-unnecessary-boolean-literal-compare/[@typescript-eslint/no-unnecessary-boolean-literal-compare]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/no-unnecessary-condition/[@typescript-eslint/no-unnecessary-condition]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/no-unnecessary-qualifier/[@typescript-eslint/no-unnecessary-qualifier]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/no-unnecessary-type-arguments/[@typescript-eslint/no-unnecessary-type-arguments]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/no-unnecessary-type-assertion/[@typescript-eslint/no-unnecessary-type-assertion]`
-| Yes
-| Yes
+| Recommended
 | Warning
 
 | `link:{ts-eslint-rules}/no-unnecessary-type-constraint/[@typescript-eslint/no-unnecessary-type-constraint]`
-| Yes
-| Yes
+| Recommended
 | Warning
 
 | `link:{ts-eslint-rules}/no-unsafe-argument/[@typescript-eslint/no-unsafe-argument]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-assignment/[@typescript-eslint/no-unsafe-assignment]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-call/[@typescript-eslint/no-unsafe-call]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-enum-comparison/[@typescript-eslint/no-unsafe-enum-comparison]`
-|
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-member-access/[@typescript-eslint/no-unsafe-member-access]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-return/[@typescript-eslint/no-unsafe-return]`
-| Yes
-|
+| Recommended
 | Error
 
-| `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
-| Yes
+| `link:{ts-eslint-rules}/no-useless-empty-export/[@typescript-eslint/no-useless-empty-export]`
 |
+| Warning
+
+| `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/non-nullable-type-assertion-style/[@typescript-eslint/non-nullable-type-assertion-style]`
-|
-| Yes
+| Stylistic
 | Error
 
 | `link:{ts-eslint-rules}/parameter-properties/[@typescript-eslint/parameter-properties]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/prefer-as-const/[@typescript-eslint/prefer-as-const]`
-| Yes
-| Yes
+| Recommended
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-enum-initializers/[@typescript-eslint/prefer-enum-initializers]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/prefer-for-of/[@typescript-eslint/prefer-for-of]`
-|
-|
+| Stylistic
 | Error
 
 | `link:{ts-eslint-rules}/prefer-function-type/[@typescript-eslint/prefer-function-type]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-includes/[@typescript-eslint/prefer-includes]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-literal-enum-member/[@typescript-eslint/prefer-literal-enum-member]`
-|
-|
+| Strict
 | Error
-4+| Allows bitwise expressions, as enums may be used for bit flags.
 
 | `link:{ts-eslint-rules}/prefer-namespace-keyword/[@typescript-eslint/prefer-namespace-keyword]`
-| Yes
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-nullish-coalescing/[@typescript-eslint/prefer-nullish-coalescing]`
-|
-|
+| Stylistic
 | Error
 
 | `link:{ts-eslint-rules}/prefer-optional-chain/[@typescript-eslint/prefer-optional-chain]`
-|
-|
+| Stylistic
 | Error
 
 | `link:{ts-eslint-rules}/prefer-readonly/[@typescript-eslint/prefer-readonly]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-readonly-parameter-types/[@typescript-eslint/prefer-readonly-parameter-types]`
 |
-|
 | Off
 
 | `link:{ts-eslint-rules}/prefer-reduce-type-parameter/[@typescript-eslint/prefer-reduce-type-parameter]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-regexp-exec/[@typescript-eslint/prefer-regexp-exec]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-return-this-type/[@typescript-eslint/prefer-return-this-type]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-string-starts-ends-with/[@typescript-eslint/prefer-string-starts-ends-with]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-ts-expect-error/[@typescript-eslint/prefer-ts-expect-error]`
-|
-| Yes
+| Strict
 | Warning
 
 | `link:{ts-eslint-rules}/promise-function-async/[@typescript-eslint/promise-function-async]`
 |
-| Yes
 | Warning
-4+| If the `func-style` is `declaration`,
+3+| If the `func-style` is `declaration`,
 arrow functions can only be lambdas,
 so `async` keyword can be skipped for brevity.
 
@@ -438,65 +349,49 @@ not checking arrow functions causes `require-await` to miss async functions.
 
 | `link:{ts-eslint-rules}/require-array-sort-compare/[@typescript-eslint/require-array-sort-compare]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/restrict-plus-operands/[@typescript-eslint/restrict-plus-operands]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/restrict-template-expressions/[@typescript-eslint/restrict-template-expressions]`
-| Yes
-|
+| Recommended
 | Error
 
-| `link:{ts-eslint-rules}/sort-type-union-intersection-members/[@typescript-eslint/sort-type-union-intersection-members]`
+| `link:{ts-eslint-rules}/sort-type-constituents/[@typescript-eslint/sort-type-constituents]`
 |
-| Yes
 | Off
 
 | `link:{ts-eslint-rules}/strict-boolean-expressions/[@typescript-eslint/strict-boolean-expressions]`
 |
-| Yes
 | Error
 
 | `link:{ts-eslint-rules}/switch-exhaustiveness-check/[@typescript-eslint/switch-exhaustiveness-check]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/triple-slash-reference/[@typescript-eslint/triple-slash-reference]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/type-annotation-spacing/[@typescript-eslint/type-annotation-spacing]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/typedef/[@typescript-eslint/typedef]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/unbound-method/[@typescript-eslint/unbound-method]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/unified-signatures/[@typescript-eslint/unified-signatures]`
-|
-|
+| Strict
 | Error
-4+| If parameters in the signatures have different names,
+3+| If parameters in the signatures have different names,
 then the function signatures will remain separate.
-
-| `link:{ts-eslint-rules}/no-useless-empty-export/[@typescript-eslint/no-useless-empty-export]`
-|
-| Yes
-| Warning
 
 |===
 
@@ -505,206 +400,174 @@ then the function signatures will remain separate.
 
 These rules extend and disable the corresponding ESLint core rules for TypeScript files.
 
-[cols="~,1,1,1"]
+[cols="~,1,1"]
 |===
-| Rule | {ts-eslint-rules}/#extension-rules[Recommended] | Fixable | Config
+| Rule | {ts-eslint-rules}/#supported-rules[Config] | Severity
+
+| `link:{ts-eslint-rules}/block-spacing/[@typescript-eslint/block-spacing]`
+|
+| Warning
 
 | `link:{ts-eslint-rules}/brace-style/[@typescript-eslint/brace-style]`
 |
-| Yes
+| Warning
+
+| `link:{ts-eslint-rules}/class-methods-use-this/[@typescript-eslint/class-methods-use-this]`
+|
 | Warning
 
 | `link:{ts-eslint-rules}/comma-dangle/[@typescript-eslint/comma-dangle]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/comma-spacing/[@typescript-eslint/comma-spacing]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/default-param-last/[@typescript-eslint/default-param-last]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/dot-notation/[@typescript-eslint/dot-notation]`
-|
-| Yes
+| Stylistic
 | Warning
 
 | `link:{ts-eslint-rules}/func-call-spacing/[@typescript-eslint/func-call-spacing]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/indent/[@typescript-eslint/indent]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/init-declarations/[@typescript-eslint/init-declarations]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/key-spacing/[@typescript-eslint/key-spacing]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/keyword-spacing/[@typescript-eslint/keyword-spacing]`
 |
-| Yes
+| Warning
+
+| `link:{ts-eslint-rules}/lines-around-comment/[@typescript-eslint/lines-around-comment]`
+|
 | Warning
 
 | `link:{ts-eslint-rules}/lines-between-class-members/[@typescript-eslint/lines-between-class-members]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/no-array-constructor/[@typescript-eslint/no-array-constructor]`
-| Yes
-| Yes
+| Recommended
 | Warning
 
 | `link:{ts-eslint-rules}/no-dupe-class-members/[@typescript-eslint/no-dupe-class-members]`
 |
-|
 | Error
-
-| `link:{ts-eslint-rules}/no-duplicate-imports/[@typescript-eslint/no-duplicate-imports]`
-|
-|
-| Off
-4+| The rule is deprecated. Use the `imports/no-duplicates` rule instead.
 
 | `link:{ts-eslint-rules}/no-empty-function/[@typescript-eslint/no-empty-function]`
-| Yes
-|
+| Stylistic
 | Error
-4+| The `overrideMethods` option is disallowed, as it may change the behavior and needs to be commented.
+3+| The `overrideMethods` option is disallowed, as it may change the behavior and needs to be commented.
 The `decoratedFunctions` option is disallowed, as the decorator behavior needs to be commented.
 
 | `link:{ts-eslint-rules}/no-extra-parens/[@typescript-eslint/no-extra-parens]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/no-extra-semi/[@typescript-eslint/no-extra-semi]`
-| Yes
-| Yes
+|
 | Warning
 
 | `link:{ts-eslint-rules}/no-implied-eval/[@typescript-eslint/no-implied-eval]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-invalid-this/[@typescript-eslint/no-invalid-this]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/no-loop-func/[@typescript-eslint/no-loop-func]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/no-loss-of-precision/[@typescript-eslint/no-loss-of-precision]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-magic-numbers/[@typescript-eslint/no-magic-numbers]`
-|
 |
 | Off
 
 | `link:{ts-eslint-rules}/no-redeclare/[@typescript-eslint/no-redeclare]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/no-restricted-imports/[@typescript-eslint/no-restricted-imports]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/no-shadow/[@typescript-eslint/no-shadow]`
 |
-|
 | Off
 
 | `link:{ts-eslint-rules}/no-throw-literal/[@typescript-eslint/no-throw-literal]`
-|
 |
 | Error
 
 | `link:{ts-eslint-rules}/no-unused-expressions/[@typescript-eslint/no-unused-expressions]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/no-unused-vars/[@typescript-eslint/no-unused-vars]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/no-use-before-define/[@typescript-eslint/no-use-before-define]`
 |
-|
 | Error
 
 | `link:{ts-eslint-rules}/no-useless-constructor/[@typescript-eslint/no-useless-constructor]`
-|
-|
+| Strict
 | Error
 
 | `link:{ts-eslint-rules}/object-curly-spacing/[@typescript-eslint/object-curly-spacing]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/padding-line-between-statements/[@typescript-eslint/padding-line-between-statements]`
 |
-| Yes
 | Off
 
 | `link:{ts-eslint-rules}/quotes/[@typescript-eslint/quotes]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/require-await/[@typescript-eslint/require-await]`
-| Yes
-|
+| Recommended
 | Error
 
 | `link:{ts-eslint-rules}/return-await/[@typescript-eslint/return-await]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/semi/[@typescript-eslint/semi]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/space-before-blocks/[@typescript-eslint/space-before-blocks]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/space-before-function-paren/[@typescript-eslint/space-before-function-paren]`
 |
-| Yes
 | Warning
 
 | `link:{ts-eslint-rules}/space-infix-ops/[@typescript-eslint/space-infix-ops]`
 |
-| Yes
 | Warning
 
 |===

@@ -152,9 +152,6 @@ export = {
         }],
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
-        '@typescript-eslint/no-implicit-any-catch': ['error', {
-            allowExplicitAny: false,
-        }],
         '@typescript-eslint/no-import-type-side-effects': 'warn',
         '@typescript-eslint/no-inferrable-types': 'off',
         // Allow for generic types like "Nullary<void>" (as "(value: T) => void" declaration is already valid)
@@ -174,7 +171,6 @@ export = {
         '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
-        '@typescript-eslint/no-parameter-properties': 'off',
         '@typescript-eslint/no-redundant-type-constituents': 'error',
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-this-alias': 'error',
@@ -195,6 +191,7 @@ export = {
         '@typescript-eslint/no-unsafe-enum-comparison': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
+        '@typescript-eslint/no-useless-empty-export': 'warn',
         '@typescript-eslint/no-var-requires': 'error',
         // This rule is fixable, but
         //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
@@ -222,7 +219,15 @@ export = {
                 string: false,
             },
         }],
-        '@typescript-eslint/prefer-optional-chain': 'error',
+        '@typescript-eslint/prefer-optional-chain': ['error', {
+            checkAny: true,
+            checkUnknown: true,
+            checkString: true,
+            checkNumber: true,
+            checkBoolean: true,
+            checkBigInt: true,
+            requireNullish: false,
+        }],
         '@typescript-eslint/prefer-readonly': 'warn',
         // Rule behavior is unpredictable and 3rd-party libraries may not provide read-only types
         '@typescript-eslint/prefer-readonly-parameter-types': 'off',
@@ -248,7 +253,7 @@ export = {
             allowNullish: false,
             allowNumberAndString: false,
             allowRegExp: false,
-            checkCompoundAssignments: true,
+            skipCompoundAssignments: false,
         }],
         '@typescript-eslint/restrict-template-expressions': ['error', {
             allowAny: false,
@@ -258,31 +263,7 @@ export = {
             allowRegExp: false,
             allowNever: false,
         }],
-        // The idea for this rule is good, but it does not have enough granularity.
-        // For example, "null", "string" and "undefined" are keywords,
-        // so the sorted result will always be "null | string | undefined",
-        // while for readability, it makes more sense to have "string | null | undefined".
-        // (As well as mixed with "true" or "false" that are in the "literal" group).
-        // Another problem is that in case of polymorphism and different signatures,
-        // the order of the union types may be important for readability/maintainability as well.
-        '@typescript-eslint/sort-type-union-intersection-members': ['off', {
-            checkIntersections: true,
-            checkUnions: true,
-            groupOrder: [
-                'named',
-                'keyword',
-                'operator',
-                'literal',
-                'function',
-                'import',
-                'conditional',
-                'object',
-                'tuple',
-                'intersection',
-                'union',
-                'nullish',
-            ],
-        }],
+        '@typescript-eslint/sort-type-constituents': 'off',
         '@typescript-eslint/strict-boolean-expressions': ['error', {
             allowString: false,
             allowNumber: false,
@@ -318,6 +299,5 @@ export = {
             // Allow different parameter names as they suggest different semantics
             ignoreDifferentlyNamedParameters: true,
         }],
-        '@typescript-eslint/no-useless-empty-export': 'warn',
     },
 };
