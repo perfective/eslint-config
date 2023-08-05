@@ -8,6 +8,26 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.22.0-alpha (next)
+
+* Upgraded `@typescript-eslint` to `6.2.1`:
+** Enabled the `link:{ts-eslint-rules}/block-spacing/[@typescript-eslint/block-spacing]` rule as a warning.
+** Removed deprecated rules (removed from `@typescript-eslint` in https://typescript-eslint.io/blog/announcing-typescript-eslint-v6[v6.0]):
+*** `@typescript-eslint/no-duplicate-imports`
+*** `@typescript-eslint/no-implicit-any-catch`
+*** `@typescript-eslint/no-parameter-properties`
+*** `@typescript-eslint/sort-type-union-intersection-members`
+** Restructured documentation:
+*** Showing a config the rule belong too (“Recommended”, “Strict”, or “Stylistic”).
+*** Removed the “Fixable” column, as rules with auto-fixers are enabled as “Warnings”.
++
+* Upgraded `eslint-plugin-jest-dom` to `5.0.2`:
+** `eslint-plugin-jest-dom` now requires `@testing-library/dom` as a peer dependency.
++
+* Updated `eslint-plugin-sonarjs` to `0.20.0`.
+* Patched `eslint-plugin-jsdoc` to `46.4.6`.
+
+
 == v0.21.0
 
 * All plugins support TypeScript v5.0.
