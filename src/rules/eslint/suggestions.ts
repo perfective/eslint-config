@@ -141,7 +141,6 @@ export = {
         // Rather disallow using loops at all and use filter/map/reduce instead.
         'no-restricted-syntax': ['error', 'ForInStatement'],
         'no-return-assign': 'error',
-        'no-return-await': 'off',
         'no-script-url': 'error',
         'no-sequences': ['error', {
             allowInParentheses: false,
