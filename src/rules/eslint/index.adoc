@@ -257,7 +257,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 
 | `link:{eslint-rules}/arrow-body-style[arrow-body-style]`
 |
-| Error
+| Warning
 3+| This rule does not handle higher-order functions,
 where the whole body may be located inside the inner function.
 This rule is always disabled in tests.

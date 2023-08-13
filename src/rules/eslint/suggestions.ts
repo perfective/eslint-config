@@ -6,7 +6,7 @@ export = {
         // At the same time this rule does not handle high-order functions,
         // where whole body of the function is in the arrow function.
         // The same problem is with the test files, where this rule is always disabled.
-        'arrow-body-style': ['error', 'as-needed'],
+        'arrow-body-style': ['warn', 'as-needed'],
         'block-scoped-var': 'error',
         // See @typescript-eslint/naming-convention
         'camelcase': 'off',
