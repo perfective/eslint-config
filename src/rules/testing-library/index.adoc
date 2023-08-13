@@ -9,7 +9,12 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |===
 | Rule | https://github.com/testing-library/eslint-plugin-testing-library#supported-rules[Recommended] | Fixable | Config
 
-| `link:{eslint-testing-library-rules}/await-async-query.md[testing-library/await-async-query]`
+| `link:{eslint-testing-library-rules}/await-async-events.md[testing-library/await-async-events]`
+|
+|
+| Off
+
+| `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]`
 | Yes
 |
 | Error
@@ -18,11 +23,6 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Yes
 |
 | Error
-
-| `link:{eslint-testing-library-rules}/await-fire-event.md[testing-library/await-fire-event]`
-|
-|
-| Off
 
 | `link:{eslint-testing-library-rules}/consistent-data-testid.md[testing-library/consistent-data-testid]`
 |
@@ -34,7 +34,7 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
-| `link:{eslint-testing-library-rules}/no-await-sync-query.md[testing-library/no-await-sync-query]`
+| `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]`
 | Yes
 |
 | Error
@@ -74,18 +74,13 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
-| `link:{eslint-testing-library-rules}/no-render-in-setup.md[testing-library/no-render-in-setup]`
+| `link:{eslint-testing-library-rules}/no-render-in-lifecycle.md[testing-library/no-render-in-lifecycle]`
 | Yes
 |
 | Error
 
 | `link:{eslint-testing-library-rules}/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
 |
-|
-| Error
-
-| `link:{eslint-testing-library-rules}/no-wait-for-empty-callback.md[testing-library/no-wait-for-empty-callback]`
-| Yes
 |
 | Error
 
@@ -138,11 +133,6 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 |
 | Error
-
-| `link:{eslint-testing-library-rules}/prefer-wait-for.md[testing-library/prefer-wait-for]`
-|
-| Yes
-| Warning
 
 | `link:{eslint-testing-library-rules}/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
 | Yes
