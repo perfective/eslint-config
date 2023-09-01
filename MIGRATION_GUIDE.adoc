@@ -9,8 +9,14 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.21.0` to `v0.22.0-alpha` (next)
+== From `v0.21.0` to `v0.22.0-beta` (next)
 
+* Update `eslint-plugin-testing-library` rules:
+** Replace `testing-library/await-async-query` with `testing-library/await-async-queries`.
+** Replace `testing-library/await-fire-event` with `testing-library/await-async-events`.
+** Replace `testing-library/no-await-sync-query` with `testing-library/no-await-sync-queries`.
+** Replace `testing-library/no-render-in-setup` with `testing-library/no-render-in-lifecycle`.
++
 * Disable new rules in the `.eslintrc.js`.
 +
 [source,js]
