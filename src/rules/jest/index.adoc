@@ -49,7 +49,12 @@ Class → Method → Method Signature → Precondition ("When").
 |
 | Error
 
-| `link:{eslint-jest-rules}/no-conditional-in-testt.md[jest/no-conditional-in-test]`
+| `link:{eslint-jest-rules}/no-conditional-in-test.md[jest/no-conditional-in-test]`
+|
+|
+| Error
+
+| `link:{eslint-jest-rules}/no-confusing-set-timeout.md[jest/no-confusing-set-timeout]`
 |
 |
 | Error

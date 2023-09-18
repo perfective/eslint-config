@@ -24,6 +24,7 @@ export = {
         'jest/no-commented-out-tests': 'error',
         'jest/no-conditional-expect': 'error',
         'jest/no-conditional-in-test': 'error',
+        'jest/no-confusing-set-timeout': 'error',
         'jest/no-deprecated-functions': 'warn',
         'jest/no-disabled-tests': 'error',
         'jest/no-done-callback': 'error',
@@ -80,6 +81,7 @@ export = {
         'jest/valid-expect': 'error',
         'jest/valid-title': ['warn', {
             ignoreTypeOfDescribeName: true,
+            ignoreSpaces: false,
         }],
     },
 };
