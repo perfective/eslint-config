@@ -2,6 +2,8 @@ export = {
     rules: {
         'array-callback-return': ['error', {
             allowImplicit: true,
+            checkForEach: false,
+            allowVoid: false,
         }],
         'constructor-super': 'error',
         'for-direction': 'error',

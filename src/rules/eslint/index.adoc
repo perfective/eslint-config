@@ -569,16 +569,16 @@ Using `complexity` rule instead to keep the functions simple.
 |
 | Error
 
-| `link:{eslint-rules}/no-new-object[no-new-object]`
-|
-| Error
-
 | `link:{eslint-rules}/no-new-wrappers[no-new-wrappers]`
 |
 | Error
 
 | `link:{eslint-rules}/no-nonoctal-decimal-escape[no-nonoctal-decimal-escape]`
 | Recommended
+| Error
+
+| `link:{eslint-rules}/no-object-constructor[no-object-constructor]`
+|
 | Error
 
 | `link:{eslint-rules}/no-octal[no-octal]`

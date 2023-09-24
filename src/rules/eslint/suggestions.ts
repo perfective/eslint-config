@@ -123,9 +123,11 @@ export = {
         'no-nested-ternary': 'error',
         'no-new': 'error',
         'no-new-func': 'error',
-        'no-new-object': 'error',
+        // Deprecated since ESLint v8.50.0
+        'no-new-object': 'off',
         'no-new-wrappers': 'error',
         'no-nonoctal-decimal-escape': 'error',
+        'no-object-constructor': 'error',
         'no-octal': 'error',
         'no-octal-escape': 'error',
         'no-param-reassign': 'error',
