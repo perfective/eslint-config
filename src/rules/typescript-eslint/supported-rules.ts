@@ -295,6 +295,7 @@ export = {
             // See TSLint "static-this"
             ignoreStatic: true,
         }],
+        // TODO: This rule needs support ignoring functions with JSDocs.
         '@typescript-eslint/unified-signatures': ['error', {
             // Allow different parameter names as they suggest different semantics
             ignoreDifferentlyNamedParameters: true,
