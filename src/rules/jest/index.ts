@@ -81,6 +81,7 @@ export = {
         'jest/valid-expect': 'error',
         'jest/valid-title': ['warn', {
             ignoreTypeOfDescribeName: true,
+            ignoreTypeOfTestName: false,
             ignoreSpaces: false,
         }],
     },
