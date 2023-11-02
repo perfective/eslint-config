@@ -161,6 +161,8 @@ export = {
         }],
         'padding-line-between-statements': 'off',
         '@typescript-eslint/padding-line-between-statements': 'off',
+        'prefer-destructuring': 'off',
+        '@typescript-eslint/prefer-destructuring': 'off',
         'quotes': 'off',
         '@typescript-eslint/quotes': ['warn', 'single', {
             avoidEscape: true,

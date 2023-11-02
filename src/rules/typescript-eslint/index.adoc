@@ -546,6 +546,10 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 |
 | Warning
 
+| `link:{ts-eslint-rules}/prefer-destructuring/[@typescript-eslint/prefer-destructuring]`
+|
+| Off
+
 | `link:{ts-eslint-rules}/require-await/[@typescript-eslint/require-await]`
 | Recommended
 | Error

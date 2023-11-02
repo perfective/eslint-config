@@ -187,10 +187,7 @@ export = {
         'operator-assignment': ['warn', 'always'],
         'prefer-arrow-callback': 'warn',
         'prefer-const': 'warn',
-        'prefer-destructuring': ['warn', {
-            object: false,
-            array: false,
-        }],
+        'prefer-destructuring': 'off',
         'prefer-exponentiation-operator': 'warn',
         // ECMAScript 2018
         'prefer-named-capture-group': 'off',
