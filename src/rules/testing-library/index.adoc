@@ -102,12 +102,17 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | `link:{eslint-testing-library-rules}/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]`
 |
 |
-| Error
+| Off
 
 | `link:{eslint-testing-library-rules}/prefer-find-by.md[testing-library/prefer-find-by]`
 | Yes
 | Yes
 | Warning
+
+| `link:{eslint-testing-library-rules}/prefer-implicit-assert.md[testing-library/prefer-implicit-assert]`
+|
+|
+| Error
 
 | `link:{eslint-testing-library-rules}/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
 | Yes
