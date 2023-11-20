@@ -18,7 +18,7 @@
     "homepage": "https://github.com/perfective/eslint-config",
     "repository": {
         "type": "git",
-        "url": "https://github.com/perfective/eslint-config.git"
+        "url": "git+https://github.com/perfective/eslint-config.git"
     },
     "license": "MIT",
     "scripts": {
