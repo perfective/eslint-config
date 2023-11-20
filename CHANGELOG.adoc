@@ -8,6 +8,38 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.23.0
+
+* Updated `eslint` to `8.54.0`
+** Enabled the `link:{eslint-rules}/no-object-constructor[no-object-constructor]` rule
+as an error.
+** Disabled the `no-new-object` rule as deprecated.
++
+* Updated `@typescript-eslint` to `6.11.0`:
+** Enabled the `link:{ts-eslint-rules}/no-unsafe-unary-minus/[@typescript-eslint/no-unsafe-unary-minus]` rule
+as an error.
+** Disabled the `link:{ts-eslint-rules}/prefer-destructuring/[@typescript-eslint/prefer-destructuring]` rule
+as it is not enforced for either arrays or objects.
++
+* Upgraded `eslint-plugin-array-func` to `4.0.0`
+* Upgraded `eslint-plugin-deprecation` to `2.0.0`
+* Upgraded `eslint-plugin-unicorn` to `49.0.0`
++
+* Updated `@babel/eslint-parser` to `7.23.3`
+* Updated `eslint-plugin-cypress` to `2.15.1`
+* Updated `eslint-plugin-import` to `2.29.0`
+* Updated `eslint-plugin-jest` to `27.6.0`
+** Enabled the `link:{eslint-jest-rules}/no-confusing-set-timeout.md[jest/no-confusing-set-timeout]` rule
+as an error.
+* Updated `eslint-plugin-jsdoc` to `46.9.0`
+* Updated `eslint-plugin-sonarjs` to `0.23.0`
+* Updated `eslint-plugin-testing-library` to `6.1.2`
+** Enabled the
+`link:{eslint-testing-library-rules}/prefer-implicit-assert.md[testing-library/prefer-implicit-assert]` rule
+as an error.
+** Disabled the `link:{eslint-testing-library-rules}/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]` rule.
+
+
 == v0.22.0
 
 * Changed `link:{eslint-rules}/arrow-body-style[arrow-body-style]` severity to warning,
