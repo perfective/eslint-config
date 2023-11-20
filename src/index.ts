@@ -109,6 +109,9 @@ export = {
             rules: {
                 '@typescript-eslint/ban-ts-comment': ['error', {
                     'ts-expect-error': 'allow-with-description',
+                    'ts-ignore': true,
+                    'ts-nocheck': true,
+                    'ts-check': false,
                 }],
                 '@typescript-eslint/init-declarations': 'off',
                 // See "@typescript-eslint/unbound-method"
