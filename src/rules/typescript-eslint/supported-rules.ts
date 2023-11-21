@@ -275,7 +275,9 @@ export = {
             allowNullableNumber: false,
             allowAny: false,
         }],
-        '@typescript-eslint/switch-exhaustiveness-check': 'error',
+        '@typescript-eslint/switch-exhaustiveness-check': ['error', {
+            requireDefaultForNonUnion: true,
+        }],
         '@typescript-eslint/triple-slash-reference': ['error', {
             path: 'never',
             types: 'always',
