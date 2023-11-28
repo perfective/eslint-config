@@ -8,6 +8,12 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.23.2
+
+* Updated `@typescript-eslint` to `6.13.1`:
+** Supports TypeScript 5.3.
+
+
 == v0.23.1
 
 * Updated `@typescript-eslint` to `6.12.0`.
