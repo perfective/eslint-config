@@ -265,6 +265,10 @@ as type inferences should be minimized and types must be declared explicitly.
 |
 | Warning
 
+| `link:{ts-eslint-rules}/no-useless-template-literals/[@typescript-eslint/no-useless-template-literals]`
+|
+| Error
+
 | `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
 | Recommended
 | Error

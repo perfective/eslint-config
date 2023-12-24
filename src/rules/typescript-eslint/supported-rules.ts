@@ -40,6 +40,14 @@ export = {
         }],
         '@typescript-eslint/explicit-function-return-type': ['error', {
             allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+            allowDirectConstAssertionInArrowFunctions: true,
+            allowExpressions: false,
+            allowFunctionsWithoutTypeParameters: false,
+            allowHigherOrderFunctions: true,
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external option name
+            allowIIFEs: false,
+            allowTypedFunctionExpressions: true,
+            allowedNames: [],
         }],
         '@typescript-eslint/explicit-member-accessibility': 'warn',
         '@typescript-eslint/explicit-module-boundary-types': 'error',
@@ -193,6 +201,7 @@ export = {
         '@typescript-eslint/no-unsafe-return': 'error',
         '@typescript-eslint/no-unsafe-unary-minus': 'error',
         '@typescript-eslint/no-useless-empty-export': 'warn',
+        '@typescript-eslint/no-useless-template-literals': 'error',
         '@typescript-eslint/no-var-requires': 'error',
         // This rule is fixable, but
         //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
