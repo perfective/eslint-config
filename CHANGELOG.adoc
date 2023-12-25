@@ -8,6 +8,22 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.23.3
+
+* Updated `eslint` to `8.56.0`
++
+* Updated `@typescript-eslint` to `6.15.0`:
+** Enabled the `link:{ts-eslint-rules}/no-useless-template-literals/[@typescript-eslint/no-useless-template-literals]`
+rule as an error.
++
+* Upgraded `unicorn` to `50.0.1`:
+** Enabled the `link:{eslint-unicorn-rules}/no-unnecessary-polyfills.md[unicorn/no-unnecessary-polyfills]`
+rule as an error.
++
+* Patched `eslint-plugin-jsdoc` to `46.9.1`
+* Patched `eslint-plugin-import` to `2.29.1`
+
+
 == v0.23.2
 
 * Updated `@typescript-eslint` to `6.13.1`:

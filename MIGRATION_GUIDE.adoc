@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.22.0` to `v0.23.2`
+== From `v0.22.0` to `v0.23.3`
 
 * Disable and gradually enable new rules in the `.eslintrc.js`.
 +
@@ -24,6 +24,7 @@ module.exports = {
             files: ['*.[jt]s?(x)'],
             rules: {
                 'no-object-constructor': 'off',
+                '@typescript-eslint/no-useless-template-literals': 'off',
                 '@typescript-eslint/no-unsafe-unary-minus': 'off',
                 'jest/no-confusing-set-timeout': 'off',
                 'testing-library/prefer-implicit-assert': 'off',
