@@ -62,6 +62,7 @@ export = {
             checkGlobalVariables: true,
         }],
         'unicorn/no-unnecessary-await': 'warn',
+        'unicorn/no-unnecessary-polyfills': 'error',
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unreadable-iife': 'error',
         // The rule is deprecated

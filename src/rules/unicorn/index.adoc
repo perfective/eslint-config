@@ -229,6 +229,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/no-unnecessary-polyfills.md[unicorn/no-unnecessary-polyfills]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/no-unsafe-regex.md[unicorn/no-unsafe-regex]`
 |
 |
