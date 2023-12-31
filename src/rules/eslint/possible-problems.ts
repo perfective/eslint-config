@@ -24,7 +24,8 @@ export = {
         'no-dupe-else-if': 'error',
         'no-dupe-keys': 'error',
         'no-duplicate-case': 'error',
-        'no-duplicate-imports': ['error', {
+        // Use `import/no-duplicates`.
+        'no-duplicate-imports': ['off', {
             includeExports: true,
         }],
         'no-empty-character-class': 'error',
