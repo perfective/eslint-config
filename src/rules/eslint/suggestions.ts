@@ -69,10 +69,8 @@ export = {
         'no-bitwise': 'error',
         'no-caller': 'error',
         'no-case-declarations': 'error',
-        'no-confusing-arrow': ['warn', {
-            allowParens: true,
-            onlyOneSimpleParam: false,
-        }],
+        // Deprecated. Use https://eslint.style/rules/js/no-confusing-arrow.
+        'no-confusing-arrow': 'off',
         'no-console': 'error',
         'no-continue': 'error',
         'no-delete-var': 'error',
@@ -89,8 +87,10 @@ export = {
         'no-extra-bind': 'warn',
         'no-extra-boolean-cast': 'warn',
         'no-extra-label': 'warn',
-        'no-extra-semi': 'warn',
-        'no-floating-decimal': 'warn',
+        // Deprecated. Use https://eslint.style/rules/js/no-extra-semi.
+        'no-extra-semi': 'off',
+        // Deprecated. Use https://eslint.style/rules/js/no-floating-decimal.
+        'no-floating-decimal': 'off',
         'no-global-assign': 'error',
         'no-implicit-coercion': 'warn',
         'no-implicit-globals': 'error',
@@ -106,17 +106,8 @@ export = {
         'no-lonely-if': 'warn',
         'no-loop-func': 'error',
         'no-magic-numbers': 'off',
-        'no-mixed-operators': ['error', {
-            groups: [
-                ['+', '-'],
-                ['*', '/', '%', '**'],
-                ['&', '|', '^', '~', '<<', '>>', '>>>'],
-                ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-                ['&&', '||', '?:', '??'],
-                ['in', 'instanceof'],
-            ],
-            allowSamePrecedence: true,
-        }],
+        // Deprecated. Use https://eslint.style/rules/js/no-mixed-operators.
+        'no-mixed-operators': 'off',
         'no-multi-assign': 'error',
         'no-multi-str': 'error',
         'no-negated-condition': 'off',
@@ -183,7 +174,8 @@ export = {
         'no-with': 'error',
         'object-shorthand': ['warn', 'always'],
         'one-var': ['warn', 'never'],
-        'one-var-declaration-per-line': ['warn', 'always'],
+        // Deprecated. Use https://eslint.style/rules/js/one-var-declaration-per-line.
+        'one-var-declaration-per-line': 'off',
         'operator-assignment': ['warn', 'always'],
         'prefer-arrow-callback': 'warn',
         'prefer-const': 'warn',
@@ -200,7 +192,8 @@ export = {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'warn',
-        'quote-props': ['warn', 'consistent-as-needed'],
+        // Deprecated. Use https://eslint.style/rules/js/quote-props.
+        'quote-props': 'off',
         'radix': 'error',
         'require-await': 'error',
         'require-unicode-regexp': 'error',
@@ -208,12 +201,8 @@ export = {
         'sort-imports': 'off',
         'sort-keys': 'off',
         'sort-vars': 'off',
-        'spaced-comment': ['warn', 'always', {
-            line: {
-                // Compatibility with "@typescript-eslint/triple-slash-reference"
-                markers: ['/ <reference'],
-            },
-        }],
+        // Deprecated. Use https://eslint.style/rules/js/spaced-comment.
+        'spaced-comment': 'off',
         'strict': 'warn',
         'symbol-description': 'error',
         'vars-on-top': 'error',

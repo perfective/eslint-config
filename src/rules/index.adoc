@@ -3,6 +3,7 @@
 include::eslint/index.adoc[leveloffset=+1]
 include::typescript-eslint/index.adoc[leveloffset=+1]
 include::typescript-eslint/tslint.adoc[leveloffset=+1]
+include::stylistic/index.adoc[leveloffset=+1]
 
 include::array-func/index.adoc[leveloffset=+1]
 include::cypress/index.adoc[leveloffset=+1]

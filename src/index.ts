@@ -25,6 +25,8 @@ export = {
                 './rules/promise',
                 './rules/simple-import-sort',
                 './rules/sonarjs',
+                './rules/stylistic/js',
+                './rules/stylistic/plus',
                 './rules/unicorn',
             ],
         },
@@ -74,6 +76,7 @@ export = {
                 './rules/typescript-eslint',
                 './rules/typescript-eslint/tslint',
                 './rules/deprecation',
+                './rules/stylistic/ts',
                 optionalRules('rxjs'),
             ].filter(Boolean),
             settings: {
@@ -90,6 +93,12 @@ export = {
                     },
                 },
             },
+        },
+        {
+            files: ['*.jsx', '*.tsx'],
+            extends: [
+                './rules/stylistic/jsx',
+            ],
         },
         optionalOverrides('jest', {
             // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)

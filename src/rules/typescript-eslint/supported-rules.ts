@@ -51,17 +51,8 @@ export = {
         }],
         '@typescript-eslint/explicit-member-accessibility': 'warn',
         '@typescript-eslint/explicit-module-boundary-types': 'error',
-        '@typescript-eslint/member-delimiter-style': ['warn', {
-            multiline: {
-                delimiter: 'semi',
-                requireLast: true,
-            },
-            singleline: {
-                delimiter: 'semi',
-                requireLast: true,
-            },
-            multilineDetection: 'brackets',
-        }],
+        // Deprecated. Use https://eslint.style/rules/ts/member-delimiter-style.
+        '@typescript-eslint/member-delimiter-style': 'off',
         // Do not group readonly fields,
         // because readonly is an implementation detail and when it changes
         // it should not affect the layout of the code.
@@ -293,7 +284,8 @@ export = {
             types: 'always',
             lib: 'never',
         }],
-        '@typescript-eslint/type-annotation-spacing': 'warn',
+        // Deprecated. Use https://eslint.style/rules/ts/type-annotation-spacing.
+        '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/typedef': ['error', {
             arrayDestructuring: false,
             arrowParameter: false,

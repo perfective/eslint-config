@@ -1,29 +1,19 @@
 export = {
     rules: {
+        // Deprecated. Use https://eslint.style/rules/ts/block-spacing.
         'block-spacing': 'off',
-        '@typescript-eslint/block-spacing': ['warn', 'always'],
+        '@typescript-eslint/block-spacing': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/brace-style.
         'brace-style': 'off',
-        '@typescript-eslint/brace-style': ['warn', 'stroustrup', {
-            allowSingleLine: false,
-        }],
+        '@typescript-eslint/brace-style': 'off',
         'class-methods-use-this': 'off',
         '@typescript-eslint/class-methods-use-this': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/comma-dangle.
         'comma-dangle': 'off',
-        '@typescript-eslint/comma-dangle': ['warn', {
-            arrays: 'always-multiline',
-            enums: 'always-multiline',
-            exports: 'always-multiline',
-            functions: 'always-multiline',
-            generics: 'always-multiline',
-            imports: 'always-multiline',
-            objects: 'always-multiline',
-            tuples: 'always-multiline',
-        }],
+        '@typescript-eslint/comma-dangle': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/comma-spacing.
         'comma-spacing': 'off',
-        '@typescript-eslint/comma-spacing': ['warn', {
-            before: false,
-            after: true,
-        }],
+        '@typescript-eslint/comma-spacing': 'off',
         'default-param-last': 'off',
         '@typescript-eslint/default-param-last': 'error',
         'dot-notation': 'off',
@@ -32,64 +22,26 @@ export = {
             allowPrivateClassPropertyAccess: false,
             allowProtectedClassPropertyAccess: false,
         }],
+        // Deprecated. Use https://eslint.style/rules/ts/function-call-spacing.
         'func-call-spacing': 'off',
-        '@typescript-eslint/func-call-spacing': ['warn', 'never'],
+        '@typescript-eslint/func-call-spacing': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/indent.
         'indent': 'off',
-        // TODO: Research more options using https://astexplorer.net
-        '@typescript-eslint/indent': ['warn', 4, {
-            // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
-            SwitchCase: 1,
-            ignoredNodes: [
-
-                /**
-                 * @workaround https://github.com/typescript-eslint/typescript-eslint/issues/455#issuecomment-580636221
-                 */
-                'TSTypeParameterInstantiation',
-            ],
-        }],
+        '@typescript-eslint/indent': 'off',
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': ['error', 'always'],
+        // Deprecated. Use https://eslint.style/rules/ts/key-spacing.
         'key-spacing': 'off',
-        '@typescript-eslint/key-spacing': ['warn', {
-            beforeColon: false,
-            afterColon: true,
-            mode: 'strict',
-        }],
+        '@typescript-eslint/key-spacing': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/keyword-spacing.
         'keyword-spacing': 'off',
-        '@typescript-eslint/keyword-spacing': ['warn', {
-            before: true,
-            after: true,
-        }],
+        '@typescript-eslint/keyword-spacing': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/lines-around-comment.
         'lines-around-comment': 'off',
-        '@typescript-eslint/lines-around-comment': ['warn', {
-            beforeBlockComment: true,
-            afterBlockComment: false,
-            beforeLineComment: false,
-            afterLineComment: false,
-            allowBlockStart: false,
-            allowBlockEnd: false,
-            allowObjectStart: false,
-            allowObjectEnd: false,
-            allowArrayStart: false,
-            allowArrayEnd: false,
-            // No reason to have an empty first line in the beginning of a class declaration,
-            // if the first line is an opening of a JSDoc.
-            // Keeping an empty line before the JSDoc conflicts with the `padded-blocks` rule.
-            allowClassStart: true,
-            allowClassEnd: false,
-            // TODO: afterHashbangComment: true,
-            // TypeScript ESLint
-            allowInterfaceStart: true,
-            allowInterfaceEnd: true,
-            allowTypeStart: true,
-            allowTypeEnd: true,
-        }],
-
+        '@typescript-eslint/lines-around-comment': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/lines-between-class-members.
         'lines-between-class-members': 'off',
-        '@typescript-eslint/lines-between-class-members': ['warn', 'always', {
-            exceptAfterSingleLine: true,
-            exceptAfterOverload: true,
-        }],
+        '@typescript-eslint/lines-between-class-members': 'off',
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'warn',
         'no-dupe-class-members': 'off',
@@ -98,16 +50,12 @@ export = {
         '@typescript-eslint/no-empty-function': ['error', {
             allow: ['protected-constructors', 'private-constructors'],
         }],
+        // Deprecated. Use https://eslint.style/rules/ts/no-extra-parens.
         'no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-parens': ['warn', 'all', {
-            // eslint-disable-next-line @typescript-eslint/naming-convention -- external property
-            ignoreJSX: 'all',
-            // Nested binary expressions may be hard to break down into named functions
-            nestedBinaryExpressions: false,
-            enforceForArrowConditionals: false,
-        }],
+        '@typescript-eslint/no-extra-parens': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/no-extra-semi.
         'no-extra-semi': 'off',
-        '@typescript-eslint/no-extra-semi': 'warn',
+        '@typescript-eslint/no-extra-semi': 'off',
         'no-implied-eval': 'off',
         '@typescript-eslint/no-implied-eval': 'error',
         'no-invalid-this': 'off',
@@ -153,37 +101,32 @@ export = {
         }],
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
+        // Deprecated. Use https://eslint.style/rules/ts/object-curly-spacing.
         'object-curly-spacing': 'off',
-        '@typescript-eslint/object-curly-spacing': ['warn', 'always', {
-            arraysInObjects: true,
-            objectsInObjects: true,
-        }],
+        '@typescript-eslint/object-curly-spacing': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/padding-line-between-statements.
         'padding-line-between-statements': 'off',
         '@typescript-eslint/padding-line-between-statements': 'off',
         'prefer-destructuring': 'off',
         '@typescript-eslint/prefer-destructuring': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/quotes.
         'quotes': 'off',
-        '@typescript-eslint/quotes': ['warn', 'single', {
-            avoidEscape: true,
-            allowTemplateLiterals: true,
-        }],
+        '@typescript-eslint/quotes': 'off',
         'require-await': 'off',
         '@typescript-eslint/require-await': 'error',
         'no-return-await': 'off',
         '@typescript-eslint/return-await': ['warn', 'never'],
+        // Deprecated. Use https://eslint.style/rules/ts/semi.
         'semi': 'off',
-        '@typescript-eslint/semi': ['warn', 'always'],
+        '@typescript-eslint/semi': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/space-before-blocks.
         'space-before-blocks': 'off',
-        '@typescript-eslint/space-before-blocks': ['warn', 'always'],
+        '@typescript-eslint/space-before-blocks': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/space-before-function-paren.
         'space-before-function-paren': 'off',
-        '@typescript-eslint/space-before-function-paren': ['warn', {
-            anonymous: 'always',
-            named: 'never',
-            asyncArrow: 'always',
-        }],
+        '@typescript-eslint/space-before-function-paren': 'off',
+        // Deprecated. Use https://eslint.style/rules/ts/space-infix-ops.
         'space-infix-ops': 'off',
-        '@typescript-eslint/space-infix-ops': ['warn', {
-            int32Hint: false,
-        }],
+        '@typescript-eslint/space-infix-ops': 'off',
     },
 };

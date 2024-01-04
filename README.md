@@ -5,8 +5,9 @@ a [shareable ESLint configuration](https://eslint.org/docs/latest/developer-guid
 that is used for the development of the `@perfective` packages.
 These rules are primarily configured for TypeScript projects.
 
-In addition to the core [ESLint rules](https://eslint.org/docs/latest/rules/)
-and the [`@typescript-eslint`](https://typescript-eslint.io/rules/) plugin rules,
+In addition to the core [ESLint rules](https://eslint.org/docs/latest/rules/),
+[`@typescript-eslint`](https://typescript-eslint.io/rules/),
+and [ESlint Stylistic](https://eslint.style) plugin rules,
 `@perfective/eslint-config` includes configurations for the ESLint plugins:
 
 -   [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
@@ -41,6 +42,7 @@ from issues that will be fixed automatically.
     npm install --save-dev \
         @perfective/eslint-config \
         @babel/eslint-parser \
+        @stylistic/eslint-plugin \
         @typescript-eslint/eslint-plugin \
         @typescript-eslint/eslint-plugin-tslint \
         @typescript-eslint/parser \

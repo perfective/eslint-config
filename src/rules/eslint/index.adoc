@@ -421,8 +421,9 @@ Using `complexity` rule instead to keep the functions simple.
 | Error
 
 | `link:{eslint-rules}/no-confusing-arrow[no-confusing-arrow]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-confusing-arrow.
 
 | `link:{eslint-rules}/no-console[no-console]`
 |
@@ -481,12 +482,14 @@ Using `complexity` rule instead to keep the functions simple.
 | Warning
 
 | `link:{eslint-rules}/no-extra-semi[no-extra-semi]`
-| Recommended
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-extra-semi.
 
 | `link:{eslint-rules}/no-floating-decimal[no-floating-decimal]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-floating-decimal.
 
 | `link:{eslint-rules}/no-global-assign[no-global-assign]`
 | Recommended
@@ -541,8 +544,9 @@ Using `complexity` rule instead to keep the functions simple.
 | Off
 
 | `link:{eslint-rules}/no-mixed-operators[no-mixed-operators]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-mixed-operators.
 
 | `link:{eslint-rules}/no-multi-assign[no-multi-assign]`
 |
@@ -739,8 +743,9 @@ Using `complexity` rule instead to keep the functions simple.
 | Warning
 
 | `link:{eslint-rules}/one-var-declaration-per-line[one-var-declaration-per-line]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/one-var-declaration-per-line.
 
 | `link:{eslint-rules}/operator-assignment[operator-assignment]`
 |
@@ -800,8 +805,9 @@ Using `complexity` rule instead to keep the functions simple.
 | Warning
 
 | `link:{eslint-rules}/quote-props[quote-props]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/quote-props.
 
 | `link:{eslint-rules}/radix[radix]`
 |
@@ -832,8 +838,9 @@ Using `complexity` rule instead to keep the functions simple.
 | Off
 
 | `link:{eslint-rules}/spaced-comment[spaced-comment]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/spaced-comment.
 
 | `link:{eslint-rules}/strict[strict]`
 |
@@ -861,263 +868,311 @@ Using `complexity` rule instead to keep the functions simple.
 | Rule | https://eslint.org/docs/latest/rules/#layout--formatting[ESLint] | Severity
 
 | `link:{eslint-rules}/array-bracket-newline[array-bracket-newline]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/array-bracket-newline.
 
 | `link:{eslint-rules}/array-bracket-spacing[array-bracket-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/array-bracket-spacing.
 
 | `link:{eslint-rules}/array-element-newline[array-element-newline]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/array-element-newline.
 
 | `link:{eslint-rules}/arrow-parens[arrow-parens]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/arrow-parens.
 
 | `link:{eslint-rules}/arrow-spacing[arrow-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/arrow-spacing.
 
 | `link:{eslint-rules}/block-spacing[block-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/block-spacing.
 
 | `link:{eslint-rules}/brace-style[brace-style]`
-|
-| Warning
-3+| Stroustrup style is enforced.
-Single lines are disallowed.
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/brace-style.
 
 | `link:{eslint-rules}/comma-dangle[comma-dangle]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/comma-dangle.
 
 | `link:{eslint-rules}/comma-spacing[comma-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/comma-spacing.
 
 | `link:{eslint-rules}/comma-style[comma-style]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/comma-style.
 
 | `link:{eslint-rules}/computed-property-spacing[computed-property-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/computed-property-spacing.
 
 | `link:{eslint-rules}/dot-location[dot-location]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/dot-location.
 
 | `link:{eslint-rules}/eol-last[eol-last]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/eol-last.
 
 | `link:{eslint-rules}/func-call-spacing[func-call-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/function-call-spacing.
 
 | `link:{eslint-rules}/function-call-argument-newline[function-call-argument-newline]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/function-call-argument-newline.
 
 | `link:{eslint-rules}/function-paren-newline[function-paren-newline]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/function-paren-newline.
 
 | `link:{eslint-rules}/generator-star-spacing[generator-star-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/generator-star-spacing.
 
 | `link:{eslint-rules}/implicit-arrow-linebreak[implicit-arrow-linebreak]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/implicit-arrow-linebreak.
 
 | `link:{eslint-rules}/indent[indent]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/indent.
 
 | `link:{eslint-rules}/jsx-quotes[jsx-quotes]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/jsx-quotes.
 
 | `link:{eslint-rules}/key-spacing[key-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/key-spacing.
 
 | `link:{eslint-rules}/keyword-spacing[keyword-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/keyword-spacing.
 
 | `link:{eslint-rules}/line-comment-position[line-comment-position]`
 |
 | Error
 
 | `link:{eslint-rules}/linebreak-style[linebreak-style]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/linebreak-style.
 
 | `link:{eslint-rules}/lines-around-comment[lines-around-comment]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/lines-around-comment.
 
 | `link:{eslint-rules}/lines-between-class-members[lines-between-class-members]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/lines-between-class-members.
 
 | `link:{eslint-rules}/max-len[max-len]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/max-len.
 
 | `link:{eslint-rules}/max-statements-per-line[max-statements-per-line]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/max-statements-per-line.
 
 | `link:{eslint-rules}/multiline-ternary[multiline-ternary]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/multiline-ternary.
 
 | `link:{eslint-rules}/new-parens[new-parens]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/new-parens.
 
 | `link:{eslint-rules}/newline-per-chained-call[newline-per-chained-call]`
-|
+| Deprecated
 | Off
-3+| Readability of the code depends on the different types and situations.
-For example, `Promise.resolve()` is often used to start a vertically-formatted `.then()` statements,
-so the newline must start right after it, as well as after each then.
-On the other hand,
-the `.pipe()` method for an observable may usually be more readable when left on the same line,
-and sometimes has to go on the new line.
-Additional challenge comes from the problems with `@typescript-eslint/indent` rule,
-that https://github.com/typescript-eslint/typescript-eslint/issues/1824[does not always indent] chained calls correctly.
+3+| Use https://eslint.style/rules/js/newline-per-chained-call.
 
 | `link:{eslint-rules}/no-extra-parens[no-extra-parens]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-extra-parens.
 
 | `link:{eslint-rules}/no-mixed-spaces-and-tabs[no-mixed-spaces-and-tabs]`
-| Recommended
-| Error
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-mixed-spaces-and-tabs.
 
 | `link:{eslint-rules}/no-multi-spaces[no-multi-spaces]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-multi-spaces.
 
 | `link:{eslint-rules}/no-multiple-empty-lines[no-multiple-empty-lines]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-multiple-empty-lines.
 
 | `link:{eslint-rules}/no-tabs[no-tabs]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-tabs.
 
 | `link:{eslint-rules}/no-trailing-spaces[no-trailing-spaces]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-trailing-spaces.
 
 | `link:{eslint-rules}/no-whitespace-before-property[no-whitespace-before-property]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/no-whitespace-before-property.
 
 | `link:{eslint-rules}/nonblock-statement-body-position[nonblock-statement-body-position]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/nonblock-statement-body-position.
 
 | `link:{eslint-rules}/object-curly-newline[object-curly-newline]`
-|
-| Warning
-3+| For imports and exports this rule may conflict with the "max-len" rule,
-as it is possible to have an import or export declaration that is too long.
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/object-curly-newline.
 
 | `link:{eslint-rules}/object-curly-spacing[object-curly-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/object-curly-spacing.
 
 | `link:{eslint-rules}/object-property-newline[object-property-newline]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/object-property-newline.
 
 | `link:{eslint-rules}/operator-linebreak[operator-linebreak]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/operator-linebreak.
 
 | `link:{eslint-rules}/padded-blocks[padded-blocks]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/padded-blocks.
 
 | `link:{eslint-rules}/padding-line-between-statements[padding-line-between-statements]`
-|
+| Deprecated
 | Off
+3+| Use https://eslint.style/rules/js/padding-line-between-statements.
 
 | `link:{eslint-rules}/quotes[quotes]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/quotes.
 
 | `link:{eslint-rules}/rest-spread-spacing[rest-spread-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/rest-spread-spacing.
 
 | `link:{eslint-rules}/semi[semi]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/semi.
 
 | `link:{eslint-rules}/semi-spacing[semi-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/semi-spacing.
 
 | `link:{eslint-rules}/semi-style[semi-style]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/semi-style.
 
 | `link:{eslint-rules}/space-before-blocks[space-before-blocks]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/space-before-blocks.
 
 | `link:{eslint-rules}/space-before-function-paren[space-before-function-paren]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/space-before-function-paren.
 
 | `link:{eslint-rules}/space-in-parens[space-in-parens]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/space-in-parens.
 
 | `link:{eslint-rules}/space-infix-ops[space-infix-ops]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/space-infix-ops.
 
 | `link:{eslint-rules}/space-unary-ops[space-unary-ops]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/space-unary-ops.
 
 | `link:{eslint-rules}/switch-colon-spacing[switch-colon-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/switch-colon-spacing.
 
 | `link:{eslint-rules}/template-curly-spacing[template-curly-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/template-curly-spacing.
 
 | `link:{eslint-rules}/template-tag-spacing[template-tag-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/template-tag-spacing.
 
 | `link:{eslint-rules}/unicode-bom[unicode-bom]`
 |
 | Warning
 
 | `link:{eslint-rules}/wrap-iife[wrap-iife]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/wrap-iife.
 
 | `link:{eslint-rules}/wrap-regex[wrap-regex]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/wrap-regex.
 
 | `link:{eslint-rules}/yield-star-spacing[yield-star-spacing]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use https://eslint.style/rules/js/yield-star-spacing.
 
 |===
