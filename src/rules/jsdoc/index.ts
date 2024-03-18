@@ -36,6 +36,7 @@ export = {
             checkDestructured: true,
             checkRestProperty: false,
             disableExtraPropertyReporting: false,
+            disableMissingParamChecks: false,
             enableFixer: true,
             // TBD
             useDefaultObjectProperties: false,
