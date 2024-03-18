@@ -121,6 +121,7 @@ export = {
         '@typescript-eslint/method-signature-style': ['warn', 'property'],
         // See no-underscore-dangle
         '@typescript-eslint/naming-convention': ['error', ...typescriptEslintNamingConvention()],
+        '@typescript-eslint/no-array-delete': 'error',
         '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
         '@typescript-eslint/no-confusing-void-expression': ['warn', {
@@ -171,7 +172,9 @@ export = {
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/no-redundant-type-constituents': 'error',
-        '@typescript-eslint/no-require-imports': 'error',
+        '@typescript-eslint/no-require-imports': ['error', {
+            allow: [],
+        }],
         '@typescript-eslint/no-this-alias': 'error',
         '@typescript-eslint/no-type-alias': 'off',
         '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['warn', {
@@ -193,7 +196,9 @@ export = {
         '@typescript-eslint/no-unsafe-unary-minus': 'error',
         '@typescript-eslint/no-useless-empty-export': 'warn',
         '@typescript-eslint/no-useless-template-literals': 'error',
-        '@typescript-eslint/no-var-requires': 'error',
+        '@typescript-eslint/no-var-requires': ['error', {
+            allow: [],
+        }],
         // This rule is fixable, but
         //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
@@ -202,6 +207,7 @@ export = {
         }],
         '@typescript-eslint/prefer-as-const': 'warn',
         '@typescript-eslint/prefer-enum-initializers': 'error',
+        '@typescript-eslint/prefer-find': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
         '@typescript-eslint/prefer-function-type': 'warn',
         '@typescript-eslint/prefer-includes': 'warn',

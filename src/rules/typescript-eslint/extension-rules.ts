@@ -109,6 +109,8 @@ export = {
         '@typescript-eslint/padding-line-between-statements': 'off',
         'prefer-destructuring': 'off',
         '@typescript-eslint/prefer-destructuring': 'off',
+        'prefer-promise-reject-errors': 'off',
+        '@typescript-eslint/prefer-promise-reject-errors': 'error',
         // Deprecated. Use https://eslint.style/rules/ts/quotes.
         'quotes': 'off',
         '@typescript-eslint/quotes': 'off',

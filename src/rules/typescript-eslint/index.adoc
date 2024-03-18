@@ -98,6 +98,10 @@ as type inferences should be minimized and types must be declared explicitly.
 |
 | Error
 
+| `link:{ts-eslint-rules}/no-array-delete/[@typescript-eslint/no-array-delete]`
+|
+| Error
+
 | `link:{ts-eslint-rules}/no-base-to-string/[@typescript-eslint/no-base-to-string]`
 | Recommended
 | Error
@@ -287,6 +291,10 @@ as type inferences should be minimized and types must be declared explicitly.
 | Warning
 
 | `link:{ts-eslint-rules}/prefer-enum-initializers/[@typescript-eslint/prefer-enum-initializers]`
+|
+| Error
+
+| `link:{ts-eslint-rules}/prefer-find/[@typescript-eslint/prefer-find]`
 |
 | Error
 
@@ -574,6 +582,10 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | `link:{ts-eslint-rules}/prefer-destructuring/[@typescript-eslint/prefer-destructuring]`
 |
 | Off
+
+| `link:{ts-eslint-rules}/prefer-promise-reject-errors/[@typescript-eslint/prefer-promise-reject-errors]`
+|
+| Error
 
 | `link:{ts-eslint-rules}/require-await/[@typescript-eslint/require-await]`
 | Recommended
