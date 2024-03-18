@@ -112,6 +112,8 @@ export = {
         }],
         '@stylistic/js/padding-line-between-statements': 'off',
         '@stylistic/ts/padding-line-between-statements': 'off',
+        '@stylistic/js/quote-props': 'off',
+        '@stylistic/ts/quote-props': ['warn', 'consistent-as-needed'],
         '@stylistic/js/quotes': 'off',
         '@stylistic/ts/quotes': ['warn', 'single', {
             avoidEscape: true,

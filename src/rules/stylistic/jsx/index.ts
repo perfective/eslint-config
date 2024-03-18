@@ -44,6 +44,12 @@ export = {
         '@stylistic/jsx/jsx-one-expression-per-line': ['warn', {
             allow: 'single-child',
         }],
+        '@stylistic/jsx/pascal-case': ['error', {
+            allowAllCaps: false,
+            allowLeadingUnderscore: false,
+            allowNamespace: false,
+            ignore: [],
+        }],
         '@stylistic/jsx/jsx-props-no-multi-spaces': 'warn',
         '@stylistic/jsx/jsx-self-closing-comp': ['warn', {
             component: true,

@@ -287,6 +287,9 @@ as it is possible to have an import or export declaration that is too long.
 | `link:{stylistic-ts-rules}/padding-line-between-statements[@stylistic/ts/padding-line-between-statements]`
 | Off
 
+| `link:{stylistic-ts-rules}/quote-props[@stylistic/ts/quote-props]`
+| Warning
+
 | `link:{stylistic-ts-rules}/quotes[@stylistic/ts/quotes]`
 | Warning
 
@@ -352,6 +355,9 @@ as it is possible to have an import or export declaration that is too long.
 
 | `link:{stylistic-jsx-rules}/jsx-one-expression-per-line[@stylistic/jsx/jsx-one-expression-per-line]`
 | Warning
+
+| `link:{stylistic-jsx-rules}/jsx-pascal-case[@stylistic/jsx/jsx-pascal-case]`
+| Error
 
 | `link:{stylistic-jsx-rules}/jsx-props-no-multi-spaces[@stylistic/jsx/jsx-props-no-multi-spaces]`
 | Warning
