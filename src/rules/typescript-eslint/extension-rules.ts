@@ -14,6 +14,8 @@ export = {
         // Deprecated. Use https://eslint.style/rules/ts/comma-spacing.
         'comma-spacing': 'off',
         '@typescript-eslint/comma-spacing': 'off',
+        'consistent-return': 'off',
+        '@typescript-eslint/consistent-return': 'error',
         'default-param-last': 'off',
         '@typescript-eslint/default-param-last': 'error',
         'dot-notation': 'off',

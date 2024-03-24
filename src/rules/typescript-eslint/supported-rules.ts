@@ -241,7 +241,9 @@ export = {
         '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
         '@typescript-eslint/prefer-regexp-exec': 'warn',
         '@typescript-eslint/prefer-return-this-type': 'warn',
-        '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
+        '@typescript-eslint/prefer-string-starts-ends-with': ['warn', {
+            allowSingleElementEquality: 'never',
+        }],
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
         // With the "func-style" as "declaration",
         // arrow functions can only be lambdas,
@@ -264,6 +266,7 @@ export = {
         }],
         '@typescript-eslint/restrict-template-expressions': ['error', {
             allowAny: false,
+            allowArray: false,
             allowBoolean: false,
             allowNullish: false,
             allowNumber: false,
@@ -311,5 +314,6 @@ export = {
             // Allow different parameter names as they suggest different semantics
             ignoreDifferentlyNamedParameters: true,
         }],
+        '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
     },
 };

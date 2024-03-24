@@ -411,6 +411,10 @@ not checking arrow functions causes `require-await` to miss async functions.
 3+| If parameters in the signatures have different names,
 then the function signatures will remain separate.
 
+| `link:{ts-eslint-rules}/use-unknown-in-catch-callback-variable/[@typescript-eslint/use-unknown-in-catch-callback-variable]`
+| Strict
+| Error
+
 |===
 
 
@@ -445,6 +449,10 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Deprecated
 | Off
 3+| Use https://eslint.style/rules/ts/comma-spacing.
+
+| `link:{ts-eslint-rules}/consistent-return/[@typescript-eslint/consistent-return]`
+|
+| Error
 
 | `link:{ts-eslint-rules}/default-param-last/[@typescript-eslint/default-param-last]`
 |
