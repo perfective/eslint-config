@@ -20,6 +20,7 @@ export = {
                 './rules/eslint-comments',
                 './rules/import',
                 './rules/jsdoc',
+                './rules/n',
                 './rules/node',
                 './rules/prefer-arrow',
                 './rules/promise',

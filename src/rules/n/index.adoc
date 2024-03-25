@@ -1,0 +1,175 @@
+= `n`
+:eslint-n-rules: https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules
+
+The `link:https://github.com/eslint-community/eslint-plugin-n[eslint-plugin-n]` provides ESLint rules for Node.js.
+The `link:https://github.com/eslint-community/eslint-plugin-n[eslint-plugin-n]` replaced
+the link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]` that has not been updated
+since March 2020.
+
+[cols="~,1,1"]
+|===
+| Rule | Configuration | Config
+
+| `link:{eslint-n-rules}/callback-return.md[n/callback-return]`
+|
+| Error
+
+| `link:{eslint-n-rules}/exports-style.md[n/exports-style]`
+|
+| Error
+
+| `link:{eslint-n-rules}/file-extension-in-import.md[n/file-extension-in-import]`
+| Yes
+| Off
+3+| Conflicts with the file suffixes like: `.module.ts`, `.component.ts`, `.mock.ts`, etc.
+
+| `link:{eslint-n-rules}/global-require.md[n/global-require]`
+|
+| Error
+
+| `link:{eslint-n-rules}/handle-callback-err.md[n/handle-callback-err]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-callback-literal.md[n/no-callback-literal]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-deprecated-api.md[n/no-deprecated-api]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-exports-assign.md[n/no-exports-assign]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-extraneous-import.md[n/no-extraneous-import]`
+|
+| Off
+3+| Use `import/no-extraneous-dependencies` instead.
+
+| `link:{eslint-n-rules}/no-extraneous-require.md[n/no-extraneous-require]`
+|
+| Off
+3+| Use `import/no-extraneous-dependencies` instead.
+
+| `link:{eslint-n-rules}/no-hide-core-modules.md[n/no-hide-core-modules]`
+|
+| Error
+3+| Ignores indirect dependencies.
+
+| `link:{eslint-n-rules}/no-missing-import.md[n/no-missing-import]`
+|
+| Off
+
+| `link:{eslint-n-rules}/no-missing-require.md[n/no-missing-require]`
+|
+| Off
+
+| `link:{eslint-n-rules}/no-mixed-requires.md[n/no-mixed-requires]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-new-require.md[n/no-new-require]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-path-concat.md[n/no-path-concat]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-process-env.md[n/no-process-env]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-process-exit.md[n/no-process-exit]`
+|
+| Off
+3+| Use `unicorn/no-process-exit` as more flexible.
+
+| `link:{eslint-n-rules}/no-restricted-import.md[n/no-restricted-import]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-restricted-require.md[n/no-restricted-require]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-sync.md[n/no-sync]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-unpublished-bin.md[n/no-unpublished-bin]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-unpublished-import.md[n/no-unpublished-import]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-unpublished-require.md[n/no-unpublished-require]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-unsupported-features/es-builtins.md[n/no-unsupported-features/es-builtins]`
+|
+| Error
+
+| `link:{eslint-n-rules}/no-unsupported-features/es-syntax.md[n/no-unsupported-features/es-syntax]`
+|
+| Off
+
+| `link:{eslint-n-rules}/no-unsupported-features/node-builtins.md[n/no-unsupported-features/node-builtins]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/buffer.md[n/prefer-global/buffer]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/console.md[n/prefer-global/console]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/process.md[n/prefer-global/process]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/text-decoder.md[n/prefer-global/text-decoder]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/text-encoder.md[n/prefer-global/text-encoder]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/url-search-params.md[n/prefer-global/url-search-params]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/url.md[n/prefer-global/url]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-node-protocol.md[n/prefer-node-protocol]`
+|
+| Off
+3+| Use `unicorn/prefer-node-protocol` instead.
+
+| `link:{eslint-n-rules}/prefer-promises/dns.md[n/prefer-promises/dns]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-promises/fs.md[n/prefer-promises/fs]`
+|
+| Error
+
+| `link:{eslint-n-rules}/process-exit-as-throw.md[n/process-exit-as-throw]`
+|
+| Error
+
+| `link:{eslint-n-rules}/shebang.md[n/shebang]`
+|
+| Warning
+
+|===
