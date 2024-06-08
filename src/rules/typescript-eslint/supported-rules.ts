@@ -183,6 +183,7 @@ export = {
         }],
         '@typescript-eslint/no-unnecessary-condition': 'warn',
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
+        '@typescript-eslint/no-unnecessary-template-expression': 'error',
         '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
@@ -195,7 +196,8 @@ export = {
         '@typescript-eslint/no-unsafe-return': 'error',
         '@typescript-eslint/no-unsafe-unary-minus': 'error',
         '@typescript-eslint/no-useless-empty-export': 'warn',
-        '@typescript-eslint/no-useless-template-literals': 'error',
+        // Deprecated. Use @typescript-eslint/no-useless-template-expressions instead.
+        '@typescript-eslint/no-useless-template-literal': 'off',
         '@typescript-eslint/no-var-requires': ['error', {
             allow: [],
         }],
@@ -244,7 +246,8 @@ export = {
         '@typescript-eslint/prefer-string-starts-ends-with': ['warn', {
             allowSingleElementEquality: 'never',
         }],
-        '@typescript-eslint/prefer-ts-expect-error': 'warn',
+        // Deprecated. Use @typescript-eslint/ban-ts-comment instead.
+        '@typescript-eslint/prefer-ts-expect-error': 'off',
         // With the "func-style" as "declaration",
         // arrow functions can only be lambdas,
         // so `async` keyword can be skipped for brevity.

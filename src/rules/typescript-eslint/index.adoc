@@ -222,6 +222,10 @@ as type inferences should be minimized and types must be declared explicitly.
 |
 | Warning
 
+| `link:{ts-eslint-rules}/no-unnecessary-template-expression/[@typescript-eslint/no-unnecessary-template-expression]`
+|
+| Error
+
 | `link:{ts-eslint-rules}/no-unnecessary-type-arguments/[@typescript-eslint/no-unnecessary-type-arguments]`
 | Strict
 | Warning
@@ -272,7 +276,8 @@ as type inferences should be minimized and types must be declared explicitly.
 
 | `link:{ts-eslint-rules}/no-useless-template-literals/[@typescript-eslint/no-useless-template-literals]`
 |
-| Error
+| Off
+3+| Renamed into `@typescript-eslint/no-useless-template-expression`.
 
 | `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
 | Recommended
@@ -352,7 +357,8 @@ as type inferences should be minimized and types must be declared explicitly.
 
 | `link:{ts-eslint-rules}/prefer-ts-expect-error/[@typescript-eslint/prefer-ts-expect-error]`
 | Strict
-| Warning
+| Off
+3+| Deprecated. Use `@typescript-eslint/ban-ts-comment` instead.
 
 | `link:{ts-eslint-rules}/promise-function-async/[@typescript-eslint/promise-function-async]`
 |
@@ -554,7 +560,8 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 
 | `link:{ts-eslint-rules}/no-throw-literal/[@typescript-eslint/no-throw-literal]`
 |
-| Error
+| Off
+3+| Deprecated. Use `@typescript-eslint/only-throw-error` instead.
 
 | `link:{ts-eslint-rules}/no-unused-expressions/[@typescript-eslint/no-unused-expressions]`
 |
@@ -576,6 +583,10 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Deprecated
 | Off
 3+| Use https://eslint.style/rules/ts/object-curly-spacing.
+
+| `link:{ts-eslint-rules}/only-throw-error/[@typescript-eslint/only-throw-error]`
+|
+| Error
 
 | `link:{ts-eslint-rules}/padding-line-between-statements/[@typescript-eslint/padding-line-between-statements]`
 | Deprecated

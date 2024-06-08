@@ -75,7 +75,9 @@ export = {
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'off',
         'no-throw-literal': 'off',
-        '@typescript-eslint/no-throw-literal': ['error', {
+        // Deprecated. Use @typescript-eslint/only-throw-error instead.
+        '@typescript-eslint/no-throw-literal': 'off',
+        '@typescript-eslint/only-throw-error': ['error', {
             allowThrowingAny: false,
             allowThrowingUnknown: false,
         }],
