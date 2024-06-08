@@ -54,6 +54,10 @@ export = {
             before: true,
             after: true,
         }],
+        '@stylistic/js/line-comment-position': ['error', {
+            position: 'above',
+            ignorePattern: '^ == .+',
+        }],
         '@stylistic/js/linebreak-style': ['warn', 'unix'],
         '@stylistic/js/lines-around-comment': ['warn', {
             beforeBlockComment: true,
@@ -84,6 +88,10 @@ export = {
         }],
         '@stylistic/js/max-statements-per-line': ['error', {
             max: 1,
+        }],
+        '@stylistic/js/multiline-comment-style': ['warn', 'separate-lines', {
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external rule name
+            checkJSDoc: false,
         }],
         '@stylistic/js/multiline-ternary': ['warn', 'always-multiline'],
         '@stylistic/js/new-parens': 'warn',

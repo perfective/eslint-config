@@ -34,7 +34,7 @@
     },
     "peerDependencies": {
         "@babel/eslint-parser": "^7.24.1",
-        "@stylistic/eslint-plugin": "^1.7.0",
+        "@stylistic/eslint-plugin": "^2.1.0",
         "@typescript-eslint/eslint-plugin": "^7.12.0",
         "@typescript-eslint/eslint-plugin-tslint": "^7.0.2",
         "@typescript-eslint/parser": "^7.12.0",
@@ -85,7 +85,7 @@
         "@babel/eslint-parser": "^7.24.1",
         "@jest/globals": "~29.7.0",
         "@perfective/build": "~0.12.2",
-        "@stylistic/eslint-plugin": "1.7.0",
+        "@stylistic/eslint-plugin": "2.1.0",
         "@types/jest": "^29.5.12",
         "@typescript-eslint/eslint-plugin": "7.12.0",
         "@typescript-eslint/eslint-plugin-tslint": "7.0.2",

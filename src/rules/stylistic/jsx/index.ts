@@ -27,6 +27,7 @@ export = {
         }],
         '@stylistic/jsx/jsx-equals-spacing': ['warn', 'never'],
         '@stylistic/jsx/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
+        '@stylistic/jsx/jsx-function-call-newline': ['warn', 'multiline'],
         // See the 'indent' and '@typescript-eslint/indent' rules
         '@stylistic/jsx/jsx-indent': ['warn', 4, {
             checkAttributes: true,

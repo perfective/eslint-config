@@ -394,7 +394,8 @@ Using `complexity` rule instead to keep the functions simple.
 
 | `link:{eslint-rules}/multiline-comment-style[multiline-comment-style]`
 |
-| Warning
+| Off
+3+| Use https://eslint.style/rules/js/multiline-comment-style.
 
 | `link:{eslint-rules}/new-cap[new-cap]`
 |
@@ -979,7 +980,8 @@ Using `complexity` rule instead to keep the functions simple.
 
 | `link:{eslint-rules}/line-comment-position[line-comment-position]`
 |
-| Error
+| Off
+3+| Use https://eslint.style/rules/js/line-comment-position.
 
 | `link:{eslint-rules}/linebreak-style[linebreak-style]`
 | Deprecated

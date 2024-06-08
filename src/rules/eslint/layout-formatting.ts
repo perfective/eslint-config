@@ -44,10 +44,8 @@ export = {
         'key-spacing': 'off',
         // Deprecated. Use https://eslint.style/rules/js/keyword-spacing.
         'keyword-spacing': 'off',
-        'line-comment-position': ['error', {
-            position: 'above',
-            ignorePattern: '^ == .+',
-        }],
+        // Deprecated. Use https://eslint.style/rules/js/line-comment-position.
+        'line-comment-position': 'off',
         // Deprecated. Use https://eslint.style/rules/js/linebreak-style.
         'linebreak-style': 'off',
         // Deprecated. Use https://eslint.style/rules/js/lines-around-comment.

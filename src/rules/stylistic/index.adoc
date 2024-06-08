@@ -84,6 +84,9 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 | `link:{stylistic-js-rules}/keyword-spacing[@stylistic/js/keyword-spacing]`
 | Warning
 
+| `link:{stylistic-js-rules}/line-comment-position[@stylistic/js/line-comment-position]`
+| Error
+
 | `link:{stylistic-js-rules}/linebreak-style[@stylistic/js/linebreak-style]`
 | Warning
 
@@ -98,6 +101,9 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 
 | `link:{stylistic-js-rules}/max-statements-per-line[@stylistic/js/max-statements-per-line]`
 | Error
+
+| `link:{stylistic-js-rules}/multiline-comment-style[@stylistic/js/multiline-comment-style]`
+| Warning
 
 | `link:{stylistic-js-rules}/multiline-ternary[@stylistic/js/multiline-ternary]`
 | Warning
@@ -339,6 +345,9 @@ as it is possible to have an import or export declaration that is too long.
 | Warning
 
 | `link:{stylistic-jsx-rules}/jsx-first-prop-new-line[@stylistic/jsx/jsx-first-prop-new-line]`
+| Warning
+
+| `link:{stylistic-jsx-rules}/jsx-function-call-newline[@stylistic/jsx/jsx-function-call-newline]`
 | Warning
 
 | `link:{stylistic-jsx-rules}/jsx-indent[@stylistic/jsx/jsx-indent]`
