@@ -8,6 +8,7 @@ export = {
         'unicorn/better-regex': 'warn',
         'unicorn/catch-error-name': 'warn',
         'unicorn/consistent-destructuring': 'warn',
+        'unicorn/consistent-empty-array-spread': 'warn',
         'unicorn/consistent-function-scoping': ['error', {
             checkArrowFunctions: true,
         }],
@@ -25,6 +26,7 @@ export = {
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/no-anonymous-default-export': 'error',
         'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'off',
         'unicorn/no-array-method-this-argument': 'warn',
@@ -33,12 +35,14 @@ export = {
         }],
         'unicorn/no-array-reduce': 'off',
         'unicorn/no-await-expression-member': 'error',
+        'unicorn/no-await-in-promise-methods': 'error',
         'unicorn/no-console-spaces': 'warn',
         'unicorn/no-document-cookie': 'error',
         'unicorn/no-empty-file': 'error',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
         'unicorn/no-instanceof-array': 'warn',
+        'unicorn/no-invalid-fetch-options': 'error',
         'unicorn/no-invalid-remove-event-listener': 'error',
         // Benefit of this rule is questionable and it's being overridden all the time.
         'unicorn/no-keyword-prefix': ['off', {
@@ -47,6 +51,7 @@ export = {
             onlyCamelCase: false,
         }],
         'unicorn/no-lonely-if': 'warn',
+        'unicorn/no-magic-array-flat-depth': 'error',
         'unicorn/no-negated-condition': 'warn',
         'unicorn/no-nested-ternary': 'off',
         'unicorn/no-new-array': 'warn',
@@ -55,6 +60,7 @@ export = {
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'error',
         'unicorn/no-process-exit': 'error',
+        'unicorn/no-single-promise-in-promise-methods': 'warn',
         'unicorn/no-static-only-class': 'error',
         'unicorn/no-thenable': 'error',
         'unicorn/no-this-assignment': 'error',
@@ -129,6 +135,7 @@ export = {
         'unicorn/prefer-node-protocol': 'warn',
         'unicorn/prefer-number-properties': ['warn', {
             checkInfinity: true,
+            checkNaN: true,
         }],
         // TBD: Check if Object.fromEntries() is part of the ES6 spec
         'unicorn/prefer-object-from-entries': ['off', {
@@ -144,10 +151,13 @@ export = {
         'unicorn/prefer-set-size': 'warn',
         // Autofix does not always work correctly
         'unicorn/prefer-spread': 'off',
+        'unicorn/prefer-string-raw': 'warn',
         'unicorn/prefer-string-replace-all': 'off',
         'unicorn/prefer-string-slice': 'warn',
         'unicorn/prefer-string-starts-ends-with': 'warn',
         'unicorn/prefer-string-trim-start-end': 'warn',
+        // Requires a polyfill for older browsers.
+        'unicorn/prefer-structured-clone': 'off',
         'unicorn/prefer-switch': ['error', {
             minimumCases: 3,
             emptyDefaultCase: 'do-nothing-comment',

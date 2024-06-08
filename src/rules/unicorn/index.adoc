@@ -22,6 +22,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Partially
 | Warning
 
+| `link:{eslint-unicorn-rules}/consistent-empty-array-spread.md[unicorn/consistent-empty-array-spread]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/consistent-function-scoping.md[unicorn/consistent-function-scoping]`
 | Yes
 |
@@ -83,6 +88,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/no-anonymous-default-export.md[unicorn/no-anonymous-default-export]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/no-array-callback-reference.md[unicorn/no-array-callback-reference]`
 | Yes
 |
@@ -109,6 +119,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Off
 
 | `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]`
+| Yes
+|
+| Error
+
+| `link:{eslint-unicorn-rules}/no-await-in-promise-methods.md[unicorn/no-await-in-promise-methods]`
 | Yes
 |
 | Error
@@ -143,6 +158,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/no-invalid-fetch-options.md[unicorn/no-invalid-fetch-options]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/no-invalid-remove-event-listener.md[unicorn/no-invalid-remove-event-listener]`
 | Yes
 |
@@ -157,6 +177,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Yes
 | Warning
+
+| `link:{eslint-unicorn-rules}/no-magic-array-flat-depth.md[unicorn/no-magic-array-flat-depth]`
+| Yes
+|
+| Error
 
 | `link:{eslint-unicorn-rules}/no-negated-condition.md[unicorn/no-negated-condition]`
 | Yes
@@ -192,6 +217,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/no-single-promise-in-promise-methods.md[unicorn/no-single-promise-in-promise-methods]`
+| Yes
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/no-static-only-class.md[unicorn/no-static-only-class]`
 | Yes
@@ -483,6 +513,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Partially
 | Off
 
+| `link:{eslint-unicorn-rules}/prefer-string-raw.md[unicorn/prefer-string-raw]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
 | Yes
 | Yes
@@ -502,6 +537,12 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Yes
 | Warning
+
+| `link:{eslint-unicorn-rules}/prefer-structured-clone.md[unicorn/prefer-structured-clone]`
+| Yes
+|
+| Off
+4+| Requires polyfill for older browsers.
 
 | `link:{eslint-unicorn-rules}/prefer-switch.md[unicorn/prefer-switch]`
 | Yes
