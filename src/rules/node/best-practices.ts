@@ -1,5 +1,5 @@
 export = {
     rules: {
-        'node/no-deprecated-api': 'error',
+        'node/no-deprecated-api': 'off',
     },
 };

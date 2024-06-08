@@ -13,97 +13,76 @@ the deprecated in v7.0.
 | Rule | Recommended | Fixable | Config
 
 | `link:{eslint-node-rules}/handle-callback-err.md[node/handle-callback-err]`
-|
-|
-| Error
+| Off
+2+| Use `n/handle-callback-err` instead.
 
 | `link:{eslint-node-rules}/no-callback-literal.md[node/no-callback-literal]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-callback-literal` instead.
 
 | `link:{eslint-node-rules}/no-exports-assign.md[node/no-exports-assign]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-exports-assign` instead.
 
 | `link:{eslint-node-rules}/no-extraneous-import.md[node/no-extraneous-import]`
-| Yes
-|
 | Off
-4+| The `import/no-extraneous-dependencies` is used instead.
+2+| Use `n/no-extraneous-import` instead.
 
 | `link:{eslint-node-rules}/no-extraneous-require.md[node/no-extraneous-require]`
-| Yes
-|
 | Off
-4+| The `import/no-extraneous-dependencies` is used instead.
+2+| Use `n/no-extraneous-require` instead.
 
 | `link:{eslint-node-rules}/no-missing-import.md[node/no-missing-import]`
-| Yes
-|
 | Off
+2+| Use `n/no-missing-import` instead.
 
 | `link:{eslint-node-rules}/no-missing-require.md[node/no-missing-require]`
-| Yes
-|
 | Off
+2+| Use `n/no-missing-require` instead.
 
 | `link:{eslint-node-rules}/no-new-require.md[node/no-new-require]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-new-require` instead.
 
 | `link:{eslint-node-rules}/no-path-concat.md[node/no-path-concat]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-path-concat` instead.
 
 | `link:{eslint-node-rules}/no-process-exit.md[node/no-process-exit]`
-|
-|
 | Off
-4+| The `unicorn/no-process-exit` rule is more flexible.
+2+| Use `n/no-process-exit` instead.
 
 | `link:{eslint-node-rules}/no-unpublished-bin.md[node/no-unpublished-bin]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-unpublished-bin` instead.
 
 | `link:{eslint-node-rules}/no-unpublished-import.md[node/no-unpublished-import]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-unpublished-import` instead.
 
 | `link:{eslint-node-rules}/no-unpublished-require.md[node/no-unpublished-require]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-unpublished-require` instead.
 
 | `link:{eslint-node-rules}/no-unsupported-features/es-builtins.md[node/no-unsupported-features/es-builtins]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-unsupported-features/es-builtins` instead.
 
 | `link:{eslint-node-rules}/no-unsupported-features/es-syntax.md[node/no-unsupported-features/es-syntax]`
-| Yes
-|
 | Off
+2+| Use `n/no-unsupported-features/es-syntax` instead.
 
 | `link:{eslint-node-rules}/no-unsupported-features/node-builtins.md[node/no-unsupported-features/node-builtins]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-unsupported-features/node-builtins` instead.
 
 | `link:{eslint-node-rules}/process-exit-as-throw.md[node/process-exit-as-throw]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/process-exit-as-throw` instead.
 
 | `link:{eslint-node-rules}/shebang.md[node/shebang]`
-| Yes
-| Yes
-| Warning
+| Off
+2+| Use `n/shebang` instead.
 
 |===
 
@@ -115,9 +94,8 @@ the deprecated in v7.0.
 | Rule | Recommended | Fixable | Config
 
 | `link:{eslint-node-rules}/no-deprecated-api.md[node/no-deprecated-api]`
-| Yes
-|
-| Error
+| Off
+2+| Use `n/no-deprecated-api` instead.
 
 |===
 
@@ -129,94 +107,75 @@ the deprecated in v7.0.
 | Rule | Recommended | Fixable | Config
 
 | `link:{eslint-node-rules}/callback-return.md[node/callback-return]`
-|
-|
-| Error
+| Off
+2+| Use `n/callback-return` instead.
 
 | `link:{eslint-node-rules}/exports-style.md[node/exports-style]`
-|
-|
-| Error
+| Off
+2+| Use `n/exports-style` instead.
 
 | `link:{eslint-node-rules}/file-extension-in-import.md[node/file-extension-in-import]`
-|
-| Yes
 | Off
-4+| Conflicts with the file suffixes like: `.module.ts`, `.component.ts`, `.mock.ts`, etc.
+2+| Use `n/file-extension-in-import` instead.
 
 | `link:{eslint-node-rules}/global-require.md[node/global-require]`
-|
-|
-| Error
+| Off
+2+| Use `n/global-require` instead.
 
 | `link:{eslint-node-rules}/no-mixed-requires.md[node/no-mixed-requires]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-mixed-requires` instead.
 
 | `link:{eslint-node-rules}/no-process-env.md[node/no-process-env]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-process-env` instead.
 
 | `link:{eslint-node-rules}/no-restricted-import.md[node/no-restricted-import]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-restricted-import` instead.
 
 | `link:{eslint-node-rules}/no-restricted-require.md[node/no-restricted-require]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-restricted-require` instead.
 
 | `link:{eslint-node-rules}/no-sync.md[node/no-sync]`
-|
-|
-| Error
+| Off
+2+| Use `n/no-sync` instead.
 
 | `link:{eslint-node-rules}/prefer-global/buffer.md[node/prefer-global/buffer]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/buffer` instead.
 
 | `link:{eslint-node-rules}/prefer-global/console.md[node/prefer-global/console]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/console` instead.
 
 | `link:{eslint-node-rules}/prefer-global/process.md[node/prefer-global/process]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/process` instead.
 
 | `link:{eslint-node-rules}/prefer-global/text-decoder.md[node/prefer-global/text-decoder]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/text-decoder` instead.
 
 | `link:{eslint-node-rules}/prefer-global/text-encoder.md[node/prefer-global/text-encoder]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/text-encoder` instead.
 
 | `link:{eslint-node-rules}/prefer-global/url-search-params.md[node/prefer-global/url-search-params]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/url-search-params` instead.
 
 | `link:{eslint-node-rules}/prefer-global/url.md[node/prefer-global/url]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-global/url` instead.
 
 | `link:{eslint-node-rules}/prefer-promises/dns.md[node/prefer-promises/dns]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-promises/dns` instead.
 
 | `link:{eslint-node-rules}/prefer-promises/fs.md[node/prefer-promises/fs]`
-|
-|
-| Error
+| Off
+2+| Use `n/prefer-promises/fs` instead.
 
 |===
