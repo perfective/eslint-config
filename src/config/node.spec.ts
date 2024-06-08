@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { hasNodeModule } from './node';
 
 describe(hasNodeModule, () => {

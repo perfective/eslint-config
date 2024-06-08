@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { internalPackages, scopedPackages, simpleImportSortImports } from './imports';
 
 describe(simpleImportSortImports, () => {

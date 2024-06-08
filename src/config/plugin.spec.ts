@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { hasEslintPlugin, optionalConfig, optionalOverrides, optionalRule, optionalRules } from './plugin';
 
 describe(optionalConfig, () => {

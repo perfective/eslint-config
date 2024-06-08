@@ -194,6 +194,16 @@ Class → Method → Method Signature → Precondition ("When").
 |
 | Error
 
+| `link:{eslint-jest-rules}/prefer-importing-jest-globals.md[jest/prefer-importing-jest-globals]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/prefer-jest-mocked.md[jest/prefer-jest-mocked]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-jest-rules}/prefer-lowercase-title.md[jest/prefer-lowercase-title]`
 |
 | Yes

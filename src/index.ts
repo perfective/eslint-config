@@ -137,6 +137,10 @@ export = {
                 // followed by a level for `it()`.
                 // The 6th level (inside of `it()`) can be required for a callback to test `toThrow()`.
                 'max-nested-callbacks': ['error', 6],
+                'n/no-unpublished-import': ['error', {
+                    // Required in devDependencies.
+                    allowModules: ['@jest/globals'],
+                }],
                 // Conflicts with func-style inside describe()
                 'prefer-arrow/prefer-arrow-functions': 'off',
                 // In tests the last step of a Promise is to run "expect".

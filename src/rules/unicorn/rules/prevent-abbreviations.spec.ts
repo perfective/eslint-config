@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { UnicornPreventAbbreviations, unicornPreventAbbreviations } from './prevent-abbreviations';
 
 describe(unicornPreventAbbreviations, () => {

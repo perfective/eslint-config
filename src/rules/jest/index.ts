@@ -33,8 +33,6 @@ export = {
         'jest/no-focused-tests': 'warn',
         'jest/no-hooks': 'off',
         'jest/no-identical-title': 'error',
-        // Deprecated; use `jest/no-conditional-in-test`
-        'jest/no-if': 'off',
         'jest/no-interpolation-in-snapshots': 'error',
         'jest/no-jasmine-globals': 'warn',
         'jest/no-large-snapshots': 'error',
@@ -58,6 +56,8 @@ export = {
         'jest/prefer-expect-resolves': 'warn',
         'jest/prefer-hooks-in-order': 'error',
         'jest/prefer-hooks-on-top': 'error',
+        'jest/prefer-importing-jest-globals': 'warn',
+        'jest/prefer-jest-mocked': 'warn',
         'jest/prefer-lowercase-title': ['error', {
             allowedPrefixes: [],
             ignore: [],
