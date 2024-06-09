@@ -1,6 +1,6 @@
 {
     "name": "@perfective/eslint-config",
-    "version": "0.24.0",
+    "version": "0.25.0",
     "description": "ESLint shareable rules configuration",
     "keywords": [
         "code quality",

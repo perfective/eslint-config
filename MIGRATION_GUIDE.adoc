@@ -9,6 +9,57 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.24.0` to `v0.25.0`
+
+* Replace customized `eslint-plugin-node` rules (if any) with `eslint-plugin-n`:
+** Replace customized `node/` rules with `n/`.
+** Replace `node/shebang` rule with `n/hashbang`.
+** Disable `n/no-hide-core-modules` as deprecated.
+** Change `n/exports-style` severity to `warn`.
++
+* Update customizations (if any) for the deprecated `@typescript-eslint` rules:
+** Replace `@typescript-eslint/no-throw-literal` with `@typescript-eslint/only-throw-error`.
+** Replace `@typescript-eslint/no-useless-template-literals`
+with `@typescript-eslint/no-unnecessary-template-expression`.
+** Disabled deprecated `@typescript-eslint/prefer-ts-expect-error`.
++
+* Add `@jest/globals` to the `devDependencies` for the `jest/prefer-importing-jest-globals` rule.
++
+* Disable and gradually enable new rules in the `.eslintrc.js`.
++
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                '@stylistic/js/line-comment-position': 'off',
+                '@stylistic/js/multiline-comment-style': 'off', // Auto-fixable
+                '@stylistic/jsx/jsx-function-call-newline': 'off', // Auto-fixable
+                '@typescript-eslint/consistent-return': 'off',
+                '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
+                'cypress/no-async-before: 'off',
+                'jest/prefer-importing-jest-globals': 'off', // Auto-fixable
+                'jest/prefer-jest-mocked': 'off', # Auto-fixable
+                'unicorn/consistent-empty-array-spread': 'off', // Auto-fixable
+                'unicorn/no-anonymous-default-export': 'off',
+                'unicorn/no-await-in-promise-methods': 'off',
+                'unicorn/no-invalid-fetch-options': 'off',
+                'unicorn/no-magic-array-flat-depth': 'off',
+                'unicorn/no-single-promise-in-promise-methods': 'off', // Auto-fixable
+                'unicorn/prefer-string-raw': 'off', // Auto-fixable
+            },
+        },
+    ],
+};
+----
+
+
+
 == From `v0.23.4` to `v0.24.0`
 
 * Check customizations of the `eslint` and `@typescript-eslint` rules replaced

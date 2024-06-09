@@ -1,12 +1,86 @@
 = Changelog
 :eslint-rules: https://eslint.org/docs/latest/rules
 :ts-eslint-rules: https://typescript-eslint.io/rules
+:stylistic-rules: https://eslint.style/rules
+:eslint-cypress-rules: https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules
 :eslint-import-rules: https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules
 :eslint-jest-rules: https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules
 :eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules
+:eslint-n-rules: https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules
 :eslint-promise-rules: https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
+
+== v0.25.0
+
+* Added `eslint-plugin-n` `17.8.1`.
+** *Deprecated `eslint-plugin-node` (replaced by `eslint-plugin-n`).*
+** Replaced `node/` rules with `n/` rules.
+** Changed the `link:{eslint-n-rules}/exports-style.md[n/exports-style]` rule severity to warning, as it has a fixer.
+** Enabled the `link:{eslint-n-rules}/hashbang.md[n/hashbang]` rule as a warning.
+** Disabled the `n/no-hide-core-modules` rule as deprecated.
+** Disabled the `n/shebang` rule as deprecated.
++
+* Upgraded `@typescript-eslint` to `7.12.0`:
+** Supports TypeScript v5.4
+** Enabled the `link:{ts-eslint-rules}/consistent-return/[@typescript-eslint/consistent-return]` rule as an error.
+** Enabled the `link:{ts-eslint-rules}/use-unknown-in-catch-callback-variable/[@typescript-eslint/use-unknown-in-catch-callback-variable]`
+rule as an error.
+** Replaced deprecated `@typescript-eslint/no-throw-literal`
+with `link:{ts-eslint-rules}/only-throw-error/[@typescript-eslint/only-throw-error]`.
+** Replaced deprecated `@typescript-eslint/no-useless-template-literals`
+with `link:{ts-eslint-rules}/no-unnecessary-template-expression/[@typescript-eslint/no-unnecessary-template-expression]`.
+** Disabled deprecated `@typescript-eslint/prefer-ts-expect-error`.
+** Updated `@typescript-eslint/eslint-plugin-tslint` to `7.0.2`
+(the plugin was moved into a standalone repository).
++
+* Upgraded `@stylistic/eslint-plugin` to v2.1.0:
+** Enabled the `link:{stylistic-rules}/js/line-comment-position[@stylistic/js/line-comment-position]`
+rule as a warning.
+*** Disabled ESLint `line-comment-position` rule.
+** Enabled the `link:{stylistic-rules}/js/multiline-comment-style[@stylistic/js/multiline-comment-style]`
+rule as an error.
+*** Disabled ESLint `multiline-comment-style` rule.
+** Enabled the `link:{stylistic-rules}/jsx/jsx-function-call-newline[@stylistic/jsx/jsx-function-call-newline]`
+rule as a warning.
++
+* Upgraded `eslint-plugin-unicorn` to `53.0.0`:
+** Enabled the `link:{eslint-unicorn-rules}/consistent-empty-array-spread.md[unicorn/consistent-empty-array-spread]`
+rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/no-anonymous-default-export.md[unicorn/no-anonymous-default-export]`
+rule as an error.
+** Enabled the `link:{eslint-unicorn-rules}/no-await-in-promise-methods.md[unicorn/no-await-in-promise-methods]`
+rule as an error.
+** Enabled the `link:{eslint-unicorn-rules}/no-invalid-fetch-options.md[unicorn/no-invalid-fetch-options]`
+rule as an error.
+** Enabled the `link:{eslint-unicorn-rules}/no-magic-array-flat-depth.md[unicorn/no-magic-array-flat-depth]`
+rule as an error.
+** Enabled the `link:{eslint-unicorn-rules}/no-single-promise-in-promise-methods.md[unicorn/no-single-promise-in-promise-methods]`
+rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/prefer-string-raw.md[unicorn/prefer-string-raw]`
+rule as a warning.
++
+* Updated `eslint-plugin-jest` to `28.6.0`.
+** Enabled the `link:{eslint-jest-rules}/prefer-importing-jest-globals.md[jest/prefer-importing-jest-globals]` rule
+as a warning.
+*** Allowed `@jest/globals` for Jest tests in `n/no-unpublished-import`.
+** Enabled the `link:{eslint-jest-rules}/prefer-jest-mocked.md[jest/prefer-jest-mocked]` rule
+as a warning.
++
+* Upgraded `eslint-plugin-cypress` to `3.3.0`.
+** Enable the `link:{eslint-cypress-rules}/no-async-before.md[cypress/no-async-before]` rule as an error.
++
+* Upgraded `eslint-plugin-deprecation` to `3.0.0`.
+* Upgraded `eslint-plugin-sonarjs` to `1.0.3`.
++
+* Updated `eslint-plugin-jest-dom` to `5.4.0`.
+* Updated `eslint-plugin-promise` to `6.2.0`.
+* Updated `eslint-plugin-simple-import-sort` to `12.1.0`.
++
+* Patched `eslint-plugin-jsdoc` to `48.2.9`.
+* Patched `eslint-plugin-testing-library` to `6.2.2`.
+* Patched `@babel/eslint-parser` to `7.24.7`.
+
 
 == v0.24.0
 
