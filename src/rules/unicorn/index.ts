@@ -151,7 +151,7 @@ export = {
         'unicorn/prefer-set-size': 'warn',
         // Autofix does not always work correctly
         'unicorn/prefer-spread': 'off',
-        'unicorn/prefer-string-raw': 'warn',
+        'unicorn/prefer-string-raw': 'off',
         'unicorn/prefer-string-replace-all': 'off',
         'unicorn/prefer-string-slice': 'warn',
         'unicorn/prefer-string-starts-ends-with': 'warn',

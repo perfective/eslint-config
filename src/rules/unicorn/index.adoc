@@ -516,7 +516,8 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | `link:{eslint-unicorn-rules}/prefer-string-raw.md[unicorn/prefer-string-raw]`
 | Yes
 | Yes
-| Warning
+| Off
+4+| Reduces readability of trivial strings and conflicts with `sonarjs/no-nested-template-literals`.
 
 | `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
 | Yes

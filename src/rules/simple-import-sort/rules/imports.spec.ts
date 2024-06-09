@@ -7,13 +7,13 @@ describe(simpleImportSortImports, () => {
         expect(simpleImportSortImports())
             .toStrictEqual({
                 groups: [
-                    [String.raw`^\u0000`],
+                    ['^\\u0000'],
                     ['^node:'],
                     ['^[a-zA-Z]'],
                     ['^@'],
-                    [String.raw`^\.\.(?!/?$)`, String.raw`^\.\./?$`],
-                    [String.raw`^\./(?=.*/)(?!/?$)`, String.raw`^\.(?!/?$)`, String.raw`^\./?$`],
-                    [String.raw`^.+\.s?css$`],
+                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                    ['^.+\\.s?css$'],
                 ],
             });
     });
@@ -22,16 +22,16 @@ describe(simpleImportSortImports, () => {
         expect(simpleImportSortImports(['@angular', '@rxjs', '@perfective']))
             .toStrictEqual({
                 groups: [
-                    [String.raw`^\u0000`],
+                    ['^\\u0000'],
                     ['^node:'],
                     ['^[a-zA-Z]'],
                     ['^(?!@angular|@rxjs|@perfective)@'],
                     ['^@angular'],
                     ['^@rxjs'],
                     ['^@perfective'],
-                    [String.raw`^\.\.(?!/?$)`, String.raw`^\.\./?$`],
-                    [String.raw`^\./(?=.*/)(?!/?$)`, String.raw`^\.(?!/?$)`, String.raw`^\./?$`],
-                    [String.raw`^.+\.s?css$`],
+                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                    ['^.+\\.s?css$'],
                 ],
             });
     });

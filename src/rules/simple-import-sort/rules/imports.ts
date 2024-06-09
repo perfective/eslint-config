@@ -26,7 +26,7 @@ export function simpleImportSortImports(internal: string[] = []): SimpleImportSo
 }
 
 function sideEffects(): Group {
-    return [String.raw`^\u0000`];
+    return ['^\\u0000'];
 }
 
 function nodePrefixedModules(): Group {
@@ -58,16 +58,16 @@ export function internalPackages(internal: string[]): Group[] {
  * Parent imports, put `..` last.
  */
 function parentImports(): Group {
-    return [String.raw`^\.\.(?!/?$)`, String.raw`^\.\./?$`];
+    return ['^\\.\\.(?!/?$)', '^\\.\\./?$'];
 }
 
 /**
  * Other relative imports, put same-folder imports and `.` last.
  */
 function relativeImports(): Group {
-    return [String.raw`^\./(?=.*/)(?!/?$)`, String.raw`^\.(?!/?$)`, String.raw`^\./?$`];
+    return ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'];
 }
 
 function styleImports(): Group {
-    return [String.raw`^.+\.s?css$`];
+    return ['^.+\\.s?css$'];
 }
