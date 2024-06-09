@@ -20,6 +20,7 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 -   [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
     _(optional, required if `eslint-plugin-jest` is installed)_;
 -   [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
+-   [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n);
 -   [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node);
 -   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
 -   [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
@@ -53,6 +54,7 @@ from issues that will be fixed automatically.
         eslint-plugin-eslint-comments \
         eslint-plugin-import \
         eslint-plugin-jsdoc \
+        eslint-plugin-n \
         eslint-plugin-node \
         eslint-plugin-prefer-arrow \
         eslint-plugin-promise \
