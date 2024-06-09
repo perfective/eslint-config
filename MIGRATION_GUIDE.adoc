@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.24.0` to `v0.25.0`
+== From `v0.24.0` to `v0.25.1`
 
 * Replace customized `eslint-plugin-node` rules (if any) with `eslint-plugin-n`:
 ** Replace customized `node/` rules with `n/`.
@@ -51,7 +51,6 @@ module.exports = {
                 'unicorn/no-invalid-fetch-options': 'off',
                 'unicorn/no-magic-array-flat-depth': 'off',
                 'unicorn/no-single-promise-in-promise-methods': 'off', // Auto-fixable
-                'unicorn/prefer-string-raw': 'off', // Auto-fixable
             },
         },
     ],

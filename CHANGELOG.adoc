@@ -11,6 +11,11 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.25.1
+
+* Disabled the `unicorn/prefer-string-raw` rule.
+
+
 == v0.25.0
 
 * Added `eslint-plugin-n` `17.8.1`.
