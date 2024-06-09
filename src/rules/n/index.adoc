@@ -2,13 +2,17 @@
 :eslint-n-rules: https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules
 
 The `link:https://github.com/eslint-community/eslint-plugin-n[eslint-plugin-n]` provides ESLint rules for Node.js.
+
+[NOTE]
+====
 The `link:https://github.com/eslint-community/eslint-plugin-n[eslint-plugin-n]` replaced
-the link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]` that has not been updated
+the `link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]` that has not been updated
 since March 2020.
+====
 
 [cols="~,1,1"]
 |===
-| Rule | Configuration | Config
+| Rule | Configuration | Severity
 
 | `link:{eslint-n-rules}/callback-return.md[n/callback-return]`
 |
@@ -16,10 +20,10 @@ since March 2020.
 
 | `link:{eslint-n-rules}/exports-style.md[n/exports-style]`
 |
-| Error
+| Warning
 
 | `link:{eslint-n-rules}/file-extension-in-import.md[n/file-extension-in-import]`
-| Yes
+|
 | Off
 3+| Conflicts with the file suffixes like: `.module.ts`, `.component.ts`, `.mock.ts`, etc.
 
@@ -31,39 +35,42 @@ since March 2020.
 |
 | Error
 
+| `link:{eslint-n-rules}/hashbang.md[n/hashbang]`
+| Recommended
+| Warning
+
 | `link:{eslint-n-rules}/no-callback-literal.md[n/no-callback-literal]`
 |
 | Error
 
 | `link:{eslint-n-rules}/no-deprecated-api.md[n/no-deprecated-api]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/no-exports-assign.md[n/no-exports-assign]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/no-extraneous-import.md[n/no-extraneous-import]`
-|
+| Recommended
 | Off
 3+| Use `import/no-extraneous-dependencies` instead.
 
 | `link:{eslint-n-rules}/no-extraneous-require.md[n/no-extraneous-require]`
-|
+| Recommended
 | Off
 3+| Use `import/no-extraneous-dependencies` instead.
 
 | `link:{eslint-n-rules}/no-hide-core-modules.md[n/no-hide-core-modules]`
-|
-| Error
-3+| Ignores indirect dependencies.
+| Deprecated
+| Off
 
 | `link:{eslint-n-rules}/no-missing-import.md[n/no-missing-import]`
-|
+| Recommended
 | Off
 
 | `link:{eslint-n-rules}/no-missing-require.md[n/no-missing-require]`
-|
+| Recommended
 | Off
 
 | `link:{eslint-n-rules}/no-mixed-requires.md[n/no-mixed-requires]`
@@ -83,7 +90,7 @@ since March 2020.
 | Error
 
 | `link:{eslint-n-rules}/no-process-exit.md[n/no-process-exit]`
-|
+| Recommended
 | Off
 3+| Use `unicorn/no-process-exit` as more flexible.
 
@@ -100,27 +107,27 @@ since March 2020.
 | Error
 
 | `link:{eslint-n-rules}/no-unpublished-bin.md[n/no-unpublished-bin]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/no-unpublished-import.md[n/no-unpublished-import]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/no-unpublished-require.md[n/no-unpublished-require]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/no-unsupported-features/es-builtins.md[n/no-unsupported-features/es-builtins]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/no-unsupported-features/es-syntax.md[n/no-unsupported-features/es-syntax]`
-|
+| Recommended
 | Off
 
 | `link:{eslint-n-rules}/no-unsupported-features/node-builtins.md[n/no-unsupported-features/node-builtins]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/buffer.md[n/prefer-global/buffer]`
@@ -143,11 +150,11 @@ since March 2020.
 |
 | Error
 
-| `link:{eslint-n-rules}/prefer-global/url-search-params.md[n/prefer-global/url-search-params]`
+| `link:{eslint-n-rules}/prefer-global/url.md[n/prefer-global/url]`
 |
 | Error
 
-| `link:{eslint-n-rules}/prefer-global/url.md[n/prefer-global/url]`
+| `link:{eslint-n-rules}/prefer-global/url-search-params.md[n/prefer-global/url-search-params]`
 |
 | Error
 
@@ -165,11 +172,12 @@ since March 2020.
 | Error
 
 | `link:{eslint-n-rules}/process-exit-as-throw.md[n/process-exit-as-throw]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-n-rules}/shebang.md[n/shebang]`
-|
-| Warning
+| Deprecated
+| Off
+3+| Use `n/hashbang` instead.
 
 |===

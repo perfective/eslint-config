@@ -4,22 +4,19 @@ export = {
     ],
     rules: {
         'n/callback-return': ['error', ['callback', 'cb', 'next']],
-        'n/exports-style': ['error', 'module.exports', { allowBatchAssign: false }],
+        'n/exports-style': ['warn', 'module.exports', { allowBatchAssign: false }],
         // Conflicts with the file suffixes like: .module, .component, .mock, etc.
         'n/file-extension-in-import': 'off',
         'n/global-require': 'error',
         'n/handle-callback-err': 'error',
+        'n/hashbang': 'warn',
         'n/no-callback-literal': 'error',
         'n/no-deprecated-api': 'error',
         'n/no-exports-assign': 'error',
         // Imports and require are handled by the "eslint-plugin-import"
         'n/no-extraneous-import': 'off',
         'n/no-extraneous-require': 'off',
-        'n/no-hide-core-modules': ['error', {
-            allow: [],
-            ignoreDirectDependencies: false,
-            ignoreIndirectDependencies: true,
-        }],
+        'n/no-hide-core-modules': 'off',
         'n/no-missing-import': 'off',
         'n/no-missing-require': 'off',
         'n/no-mixed-requires': 'error',
@@ -61,6 +58,7 @@ export = {
         'n/prefer-promises/dns': 'error',
         'n/prefer-promises/fs': 'error',
         'n/process-exit-as-throw': 'error',
-        'n/shebang': 'warn',
+        // Use n/hashbang instead
+        'n/shebang': 'off',
     },
 };
