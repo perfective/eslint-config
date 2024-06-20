@@ -24,6 +24,7 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 -   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
 -   [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
 -   [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
+-   [`eslint-plugin-security`](https://github.com/eslint-community/eslint-plugin-security);
 -   [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
 -   [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
 -   [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library) _(optional)_;
@@ -56,6 +57,7 @@ from issues that will be fixed automatically.
         eslint-plugin-n \
         eslint-plugin-prefer-arrow \
         eslint-plugin-promise \
+        eslint-plugin-security \
         eslint-plugin-simple-import-sort \
         eslint-plugin-sonarjs \
         eslint-plugin-unicorn \

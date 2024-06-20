@@ -11,6 +11,22 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.26.0
+
+* *Removed `eslint-plugin-node`*.
+* *Added `eslint-plugin-security` `3.0.1`*.
++
+* Updated `@typescript-eslint` to `7.13.1`.
+* Updated `@stylistic/eslint-plugin` to `2.2.2`.
+* Updated `eslint-plugin-n` to `17.9.0`.
++
+* Upgraded `eslint-plugin-unicorn` to `54.0.0`:
+** Enable the `link:{eslint-unicorn-rules}/no-negation-in-equality-check.md[unicorn/no-negation-in-equality-check]`
+rule as an error.
++
+* Patched `eslint-plugin-node` to `48.2.12`.
+
+
 == v0.25.1
 
 * Disabled the `unicorn/prefer-string-raw` rule.

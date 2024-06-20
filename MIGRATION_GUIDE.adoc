@@ -9,6 +9,44 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.25.1` to `v0.26.0`
+
+* Remove `eslint-plugin-node` from `devDependencies`, if present.
++
+* Disable and gradually enable new rules in the `.eslintrc.js`.
++
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                'security/detect-bidi-characters': 'off',
+                'security/detect-buffer-noassert': 'off',
+                'security/detect-child-process': 'off',
+                'security/detect-disable-mustache-escape': 'off',
+                'security/detect-eval-with-expression': 'off',
+                'security/detect-new-buffer': 'off',
+                'security/detect-no-csrf-before-method-override': 'off',
+                'security/detect-non-literal-fs-filename': 'off',
+                'security/detect-non-literal-regexp': 'off',
+                'security/detect-non-literal-require': 'off',
+                'security/detect-object-injection': 'off',
+                'security/detect-possible-timing-attacks': 'off',
+                'security/detect-pseudoRandomBytes': 'off',
+                'security/detect-unsafe-regex': 'off',
+                'unicorn/no-negation-in-equality-check': 'off',
+            },
+        },
+    ],
+};
+----
+
+
 == From `v0.24.0` to `v0.25.1`
 
 * Replace customized `eslint-plugin-node` rules (if any) with `eslint-plugin-n`:
