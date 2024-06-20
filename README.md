@@ -21,7 +21,6 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
     _(optional, required if `eslint-plugin-jest` is installed)_;
 -   [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
 -   [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n);
--   [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node);
 -   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
 -   [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
 -   [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
@@ -55,7 +54,6 @@ from issues that will be fixed automatically.
         eslint-plugin-import \
         eslint-plugin-jsdoc \
         eslint-plugin-n \
-        eslint-plugin-node \
         eslint-plugin-prefer-arrow \
         eslint-plugin-promise \
         eslint-plugin-simple-import-sort \

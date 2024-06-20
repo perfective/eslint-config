@@ -21,7 +21,6 @@ export = {
                 './rules/import',
                 './rules/jsdoc',
                 './rules/n',
-                './rules/node',
                 './rules/prefer-arrow',
                 './rules/promise',
                 './rules/simple-import-sort',
