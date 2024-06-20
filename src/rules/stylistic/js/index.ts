@@ -177,6 +177,7 @@ export = {
         '@stylistic/js/quotes': ['warn', 'single', {
             avoidEscape: true,
             allowTemplateLiterals: true,
+            ignoreStringLiterals: false,
         }],
         '@stylistic/js/rest-spread-spacing': ['warn', 'never'],
         '@stylistic/js/semi': ['warn', 'always'],
