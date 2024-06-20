@@ -53,6 +53,7 @@ export = {
         'unicorn/no-lonely-if': 'warn',
         'unicorn/no-magic-array-flat-depth': 'error',
         'unicorn/no-negated-condition': 'warn',
+        'unicorn/no-negation-in-equality-check': 'error',
         'unicorn/no-nested-ternary': 'off',
         'unicorn/no-new-array': 'warn',
         'unicorn/no-new-buffer': 'warn',
@@ -102,7 +103,9 @@ export = {
             },
         }],
         'unicorn/prefer-add-event-listener': 'warn',
-        'unicorn/prefer-array-find': 'warn',
+        'unicorn/prefer-array-find': ['warn', {
+            checkFromLast: true,
+        }],
         // Array.prototype.flat() is not supported in the ES6 library for TypeScript
         // See: 'array-func/prefer-flat'
         'unicorn/prefer-array-flat': 'off',

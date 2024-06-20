@@ -188,6 +188,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/no-negation-in-equality-check.md[unicorn/no-negation-in-equality-check]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/no-nested-ternary.md[unicorn/no-nested-ternary]`
 | Yes
 | Partially
