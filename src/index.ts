@@ -23,6 +23,7 @@ export = {
                 './rules/n',
                 './rules/prefer-arrow',
                 './rules/promise',
+                './rules/security',
                 './rules/simple-import-sort',
                 './rules/sonarjs',
                 './rules/stylistic/js',

@@ -1,0 +1,67 @@
+= `security`
+:eslint-security-rules: https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/rules
+
+The `link:https://github.com/eslint-community/eslint-plugin-security[eslint-plugin-security]` provides ESLint rules
+to identify potential security issues.
+
+[cols="~,1,1"]
+|===
+| Rule | Configuration | Severity
+
+| `link:{eslint-security-rules}/detect-bidi-characters.md[security/detect-bidi-characters]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-buffer-noassert.md[security/detect-buffer-noassert]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-child-process.md[security/detect-child-process]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-disable-mustache-escape.md[security/detect-disable-mustache-escape]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-eval-with-expression.md[security/detect-eval-with-expression]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-new-buffer.md[security/detect-new-buffer]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-no-csrf-before-method-override.md[security/detect-no-csrf-before-method-override]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-non-literal-fs-filename.md[security/detect-non-literal-fs-filename]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-non-literal-regexp.md[security/detect-non-literal-regexp]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-non-literal-require.md[security/detect-non-literal-require]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-object-injection.md[security/detect-object-injection]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-possible-timing-attacks.md[security/detect-possible-timing-attacks]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-pseudoRandomBytes.md[security/detect-pseudoRandomBytes]`
+| Recommended
+| Error
+
+| `link:{eslint-security-rules}/detect-unsafe-regex.md[security/detect-unsafe-regex]`
+| Recommended
+| Error
+
+|===
