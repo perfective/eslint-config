@@ -31,9 +31,12 @@ export = {
             allowAtRootLevel: false,
         }],
         'n/no-unpublished-bin': 'error',
-        'n/no-unpublished-import': 'error',
+        'n/no-unpublished-import': ['error', {
+            ignorePrivate: false,
+        }],
         'n/no-unpublished-require': ['error', {
             allowModules: [],
+            ignorePrivate: false,
             tryExtensions: ['.js', '.json', '.node'],
         }],
         'n/no-unsupported-features/es-builtins': ['error', {
