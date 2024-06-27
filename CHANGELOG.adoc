@@ -11,6 +11,19 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.26.1
+
+* Updated `@typescript-eslint` to `7.14.1`:
+** **Supported TypeScript v5.5**
++
+* Updated `@stylistic/eslint-plugin` to `2.3.0`:
+** Enabled the `link:{stylistic-rules}/ts/object-curly-newline[@stylistic/ts/object-curly-newline]` rule as a warning.
+** Enabled the `link:{stylistic-rules}/ts/object-property-newline[@stylistic/ts/object-property-newline]` as a warning.
+** Disabled the `@stylistic/jsx/jsx-indent` rule as deprecated.
++
+* Updated `eslint-plugin-jsdoc` to `48.5.0`.
+
+
 == v0.26.0
 
 * *Removed `eslint-plugin-node`*.

@@ -9,6 +9,29 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.26.0` to `v0.26.1`
+
+* Disable and gradually enable new rules in the `.eslintrc.js`.
++
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                '@stylistic/ts/object-curly-newline': 'off',
+                '@stylistic/ts/object-property-newline': 'off',
+            },
+        },
+    ],
+};
+----
+
+
 == From `v0.25.1` to `v0.26.0`
 
 * Remove `eslint-plugin-node` from `devDependencies`, if present.
