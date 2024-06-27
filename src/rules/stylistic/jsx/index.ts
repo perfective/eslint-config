@@ -28,11 +28,9 @@ export = {
         '@stylistic/jsx/jsx-equals-spacing': ['warn', 'never'],
         '@stylistic/jsx/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
         '@stylistic/jsx/jsx-function-call-newline': ['warn', 'multiline'],
-        // See the 'indent' and '@typescript-eslint/indent' rules
-        '@stylistic/jsx/jsx-indent': ['warn', 4, {
-            checkAttributes: true,
-            indentLogicalExpressions: true,
-        }],
+        // Deprecated since v2.3.0.
+        // Use the '@stylistic/js/indent' and '@stylistic/ts/indent' rules.
+        '@stylistic/jsx/jsx-indent': 'off',
         '@stylistic/jsx/jsx-indent-props': ['warn', {
             indentMode: 1,
             ignoreTernaryOperator: false,

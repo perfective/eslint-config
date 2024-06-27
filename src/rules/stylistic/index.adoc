@@ -287,7 +287,15 @@ as it is possible to have an import or export declaration that is too long.
 | `link:{stylistic-ts-rules}/no-extra-semi[@stylistic/ts/no-extra-semi]`
 | Warning
 
+| `link:{stylistic-ts-rules}/object-curly-newline[@stylistic/ts/object-curly-newline]`
+| Warning
+2+| For imports and exports this rule may conflict with the "max-len" rule,
+as it is possible to have an import or export declaration that is too long.
+
 | `link:{stylistic-ts-rules}/object-curly-spacing[@stylistic/ts/object-curly-spacing]`
+| Warning
+
+| `link:{stylistic-ts-rules}/object-property-newline[@stylistic/ts/object-property-newline]`
 | Warning
 
 | `link:{stylistic-ts-rules}/padding-line-between-statements[@stylistic/ts/padding-line-between-statements]`
@@ -351,7 +359,9 @@ as it is possible to have an import or export declaration that is too long.
 | Warning
 
 | `link:{stylistic-jsx-rules}/jsx-indent[@stylistic/jsx/jsx-indent]`
-| Warning
+| Off
+2+| Deprecated since v2.3.0.
+Use the '@stylistic/js/indent' and '@stylistic/ts/indent' rules.
 
 | `link:{stylistic-jsx-rules}/jsx-indent-props[@stylistic/jsx/jsx-indent-props]`
 | Warning

@@ -105,10 +105,26 @@ export = {
         }],
         '@stylistic/js/no-extra-semi': 'off',
         '@stylistic/ts/no-extra-semi': 'warn',
+        '@stylistic/js/object-curly-newline': 'off',
+        '@stylistic/ts/object-curly-newline': ['warn', {
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
+            ImportDeclaration: { multiline: true },
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
+            ExportDeclaration: { multiline: true },
+        }],
         '@stylistic/js/object-curly-spacing': 'off',
         '@stylistic/ts/object-curly-spacing': ['warn', 'always', {
             arraysInObjects: true,
             objectsInObjects: true,
+        }],
+        '@stylistic/js/object-property-newline': 'off',
+        '@stylistic/ts/object-property-newline': ['warn', {
+            // In some cases, like object spread, or "re-structuring",
+            // having properties on the same line is more readable
+            // (e.g. it allows to see the whole object in the search/grep).
+            // TODO: This rule can be improved if it can require consistency
+            //  and limit inlined properties only to basic expressions (no function calls, ternaries, etc.)
+            allowAllPropertiesOnSameLine: true,
         }],
         '@stylistic/js/padding-line-between-statements': 'off',
         '@stylistic/ts/padding-line-between-statements': 'off',
