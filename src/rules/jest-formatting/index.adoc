@@ -12,41 +12,41 @@ ESLint formatting rules to ensure consistency and readability in Jest test suite
 | `link:{eslint-jest-formatting-rules}/padding-around-after-all-blocks.md[jest-formatting/padding-around-after-all-blocks]`
 | Yes
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-after-each-blocks.md[jest-formatting/padding-around-after-each-blocks]`
 | Yes
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-all.md[jest-formatting/padding-around-all]`
 |
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-before-all-blocks.md[jest-formatting/padding-around-before-all-blocks]`
 | Yes
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-before-each-blocks.md[jest-formatting/padding-around-before-each-blocks]`
 | Yes
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-describe-blocks.md[jest-formatting/padding-around-describe-blocks]`
 | Yes
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-expect-groups.md[jest-formatting/padding-around-expect-groups]`
 |
 | Yes
-| Warning
+| Off
 
 | `link:{eslint-jest-formatting-rules}/padding-around-test-blocks.md[jest-formatting/padding-around-test-blocks]`
 | Yes
 | Yes
-| Warning
+| Off
 
 |===

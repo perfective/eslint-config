@@ -154,6 +154,46 @@ Class → Method → Method Signature → Precondition ("When").
 | Yes
 | Warning
 
+| `link:{eslint-jest-rules}/padding-around-after-all-blocks.md[jest/padding-around-after-all-blocks]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-after-each-blocks.md[jest/padding-around-after-each-blocks]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-all.md[jest/padding-around-all]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-before-all-blocks.md[jest/padding-around-before-all-blocks]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-before-each-blocks.md[jest/padding-around-before-each-blocks]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-describe-blocks.md[jest/padding-around-describe-blocks]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-expect-groups.md[jest/padding-around-expect-groups]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/padding-around-test-blocks.md[jest/padding-around-test-blocks]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-jest-rules}/prefer-called-with.md[jest/prefer-called-with]`
 |
 |
