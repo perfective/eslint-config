@@ -402,6 +402,9 @@ Use the '@stylistic/js/indent' and '@stylistic/ts/indent' rules.
 |===
 | Rule | Severity
 
+| `link:{stylistic-plus-rules}/curly-newline[@stylistic/plus/curly-newline]`
+| Warning
+
 | `link:{stylistic-plus-rules}/indent-binary-ops[@stylistic/plus/indent-binary-ops]`
 | Warning
 

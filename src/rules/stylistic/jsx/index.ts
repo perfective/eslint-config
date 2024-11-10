@@ -8,7 +8,7 @@ export = {
             selfClosing: 'after-props',
             nonEmpty: 'after-props',
         }],
-        '@stylistic/jsx/jsx-closing-tag-location': 'warn',
+        '@stylistic/jsx/jsx-closing-tag-location': ['warn', 'tag-aligned'],
         // See the react/jsx-no-comment-textnodes and react/jsx-no-literals rules
         '@stylistic/jsx/jsx-curly-brace-presence': ['warn', {
             props: 'never',
