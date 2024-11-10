@@ -4,7 +4,9 @@ export = {
         // TODO: Research usage
         'import/dynamic-import-chunkname': 'off',
         'import/exports-last': 'off',
-        'import/extensions': ['error', 'never'],
+        'import/extensions': ['error', 'never', {
+            checkTypeImports: true,
+        }],
         'import/first': 'off',
         'import/group-exports': 'off',
         'import/max-dependencies': 'off',
