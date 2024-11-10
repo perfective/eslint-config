@@ -70,6 +70,11 @@ to enforce best practices for JavaScript promises.
 | Error
 
 
+| `link:{eslint-promise-rules}/spec-only.md[promise/spec-only]`
+|
+|
+| Error
+
 | `link:{eslint-promise-rules}/valid-params.md[promise/valid-params]`
 |
 |

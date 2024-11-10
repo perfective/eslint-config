@@ -15,6 +15,9 @@ export = {
         'promise/avoid-new': 'off',
         'promise/no-new-statics': 'warn',
         'promise/no-return-in-finally': 'error',
+        'promise/spec-only': ['error', {
+            allowedMethods: [],
+        }],
         'promise/valid-params': 'error',
         // Promises should always be used instead of async/await.
         'promise/prefer-await-to-then': 'off', // == ES2017 Async/Await
