@@ -130,6 +130,11 @@ as type inferences should be minimized and types must be declared explicitly.
 | Stylistic
 | Off
 
+| `link:{ts-eslint-rules}/no-empty-object-type/[@typescript-eslint/no-empty-object-type]`
+| Recommended
+| Error.
+Empty interfaces are allowed.
+
 | `link:{ts-eslint-rules}/no-explicit-any/[@typescript-eslint/no-explicit-any]`
 | Recommended
 | Error
@@ -198,6 +203,10 @@ as type inferences should be minimized and types must be declared explicitly.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-unnecessary-type-parameters/[@typescript-eslint/no-unnecessary-type-parameters]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/no-require-imports/[@typescript-eslint/no-require-imports]`
 |
 | Error
@@ -217,6 +226,10 @@ as type inferences should be minimized and types must be declared explicitly.
 | `link:{ts-eslint-rules}/no-unnecessary-condition/[@typescript-eslint/no-unnecessary-condition]`
 | Strict
 | Warning
+
+| `link:{ts-eslint-rules}/no-unnecessary-parameter-property-assignment/[@typescript-eslint/no-unnecessary-parameter-property-assignment]`
+|
+| Error
 
 | `link:{ts-eslint-rules}/no-unnecessary-qualifier/[@typescript-eslint/no-unnecessary-qualifier]`
 |
@@ -613,6 +626,7 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | `link:{ts-eslint-rules}/return-await/[@typescript-eslint/return-await]`
 |
 | Warning
+Allowed in error-handling context only.
 
 | `link:{ts-eslint-rules}/semi/[@typescript-eslint/semi]`
 | Deprecated

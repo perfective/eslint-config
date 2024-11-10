@@ -121,7 +121,7 @@ export = {
         'require-await': 'off',
         '@typescript-eslint/require-await': 'error',
         'no-return-await': 'off',
-        '@typescript-eslint/return-await': ['warn', 'never'],
+        '@typescript-eslint/return-await': ['warn', 'error-handling-correctness-only'],
         // Deprecated. Use https://eslint.style/rules/ts/semi.
         'semi': 'off',
         '@typescript-eslint/semi': 'off',

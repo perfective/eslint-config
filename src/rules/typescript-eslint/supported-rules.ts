@@ -139,6 +139,12 @@ export = {
         '@typescript-eslint/no-empty-interface': ['off', {
             allowSingleExtends: true,
         }],
+        '@typescript-eslint/no-empty-object-type': ['error', {
+            // An empty interface can be used as nominal type or a self-documenting placeholder.
+            // See @typescript-eslint/no-empty-interface
+            allowInterfaces: 'always',
+            allowObjectTypes: 'never',
+        }],
         '@typescript-eslint/no-explicit-any': ['error', {
             fixToUnknown: false,
             ignoreRestArgs: false,
@@ -172,6 +178,7 @@ export = {
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/no-redundant-type-constituents': 'error',
+        '@typescript-eslint/no-unnecessary-type-parameters': 'error',
         '@typescript-eslint/no-require-imports': ['error', {
             allow: [],
         }],
@@ -182,6 +189,7 @@ export = {
             allowComparingNullableBooleansToFalse: true,
         }],
         '@typescript-eslint/no-unnecessary-condition': 'warn',
+        '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
         '@typescript-eslint/no-unnecessary-template-expression': 'error',
         '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
