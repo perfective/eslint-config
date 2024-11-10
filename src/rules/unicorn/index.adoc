@@ -27,6 +27,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/consistent-existence-index-check.md[unicorn/consistent-existence-index-check]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/consistent-function-scoping.md[unicorn/consistent-function-scoping]`
 | Yes
 |
@@ -172,6 +177,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 |
 | Off
+
+| `link:{eslint-unicorn-rules}/no-length-as-slice-end.md[unicorn/no-length-as-slice-end]`
+| Yes
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]`
 | Yes
@@ -413,6 +423,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/prefer-global-this.md[unicorn/prefer-global-this]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/prefer-includes.md[unicorn/prefer-includes]`
 | Yes
 | Partially
@@ -432,6 +447,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Suggestion
 | Error
+
+| `link:{eslint-unicorn-rules}/prefer-math-min-max.md[unicorn/prefer-math-min-max]`
+| Yes
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/prefer-math-trunc.md[unicorn/prefer-math-trunc]`
 | Yes
