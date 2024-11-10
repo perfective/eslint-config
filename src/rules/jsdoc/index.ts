@@ -50,15 +50,19 @@ export = {
             definedTags: ['final', 'flags', 'sealed', 'workaround'],
             jsxTags: true,
         }],
+        'jsdoc/check-template-names': 'error',
         'jsdoc/check-types': ['error', {
             noDefaults: false,
         }],
         'jsdoc/check-values': 'error',
+        // Unclear if there is any value in forcing using JSDocs.
+        'jsdoc/convert-to-jsdoc-comments': 'off',
         'jsdoc/empty-tags': ['error', {
             tags: ['final', 'flags', 'sealed'],
         }],
         'jsdoc/implements-on-classes': 'error',
         'jsdoc/imports-as-dependencies': 'error',
+        'jsdoc/lines-before-block': 'off',
         'jsdoc/match-description': 'error',
         'jsdoc/match-name': 'off',
         'jsdoc/multiline-blocks': ['error', {
@@ -93,7 +97,7 @@ export = {
         'jsdoc/require-description-complete-sentence': 'error',
         'jsdoc/require-example': 'off',
         'jsdoc/require-file-overview': 'off',
-        'jsdoc/require-hyphen-before-param-description': ['error', 'always'],
+        'jsdoc/require-hyphen-before-param-description': ['warn', 'always'],
         'jsdoc/require-jsdoc': 'off',
         'jsdoc/require-param': 'off',
         'jsdoc/require-param-description': 'error',
@@ -109,6 +113,9 @@ export = {
         'jsdoc/require-returns-description': 'error',
         // Conflicts with jsdoc/no-types: types are defined in the TypeScript code.
         'jsdoc/require-returns-type': 'off',
+        'jsdoc/require-template': ['error', {
+            requireSeparateTemplates: false,
+        }],
         'jsdoc/require-throws': 'error',
         'jsdoc/require-yields': 'error',
         'jsdoc/require-yields-check': 'error',

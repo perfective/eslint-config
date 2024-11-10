@@ -55,6 +55,11 @@ The `link:{eslint-jsdoc-rules}[eslint-plugin-jsdoc]` provide JSDoc linting rules
 4+| JSX tags (`jsx`, `jsxFrag`, `jsxImportSource`, `jsxRuntime`) are allowed.
 Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 
+| `link:{eslint-jsdoc-rules}/check-template-names.md[jsdoc/check-template-names]`
+|
+|
+| Error
+
 | `link:{eslint-jsdoc-rules}/check-types.md[jsdoc/check-types]`
 | Yes
 |
@@ -64,6 +69,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | Yes
 |
 | Error
+
+| `link:{eslint-jsdoc-rules}/check-values.md[jsdoc/convert-to-jsdoc-comments]`
+|
+|
+| Off
 
 | `link:{eslint-jsdoc-rules}/empty-tags.md[jsdoc/empty-tags]`
 | Yes
@@ -79,6 +89,12 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 |
 | Error
+
+| `link:{eslint-jsdoc-rules}/lines-before-block.md[jsdoc/lines-before-block]`
+|
+|
+| Off
+4+| Use `@stylistic` rules.
 
 | `link:{eslint-jsdoc-rules}/match-description.md[jsdoc/match-description]`
 |
@@ -173,7 +189,7 @@ Off in TypeScript.
 | `link:{eslint-jsdoc-rules}/require-hyphen-before-param-description.md[jsdoc/require-hyphen-before-param-description]`
 |
 |
-| Error
+| Warning
 
 | `link:{eslint-jsdoc-rules}/require-jsdoc.md[jsdoc/require-jsdoc]`
 | Yes
@@ -243,6 +259,11 @@ Off in TypeScript.
 |
 | Off in TypeScript; Error in JavaScript
 4+| In JavaScript, we have to require types to allow better static checks.
+
+| `link:{eslint-jsdoc-rules}/require-template.md[jsdoc/require-template]`
+|
+|
+| Error
 
 | `link:{eslint-jsdoc-rules}/require-throws.md[jsdoc/require-throws]`
 |
