@@ -75,7 +75,6 @@ export = {
             },
             extends: [
                 './rules/typescript-eslint',
-                './rules/typescript-eslint/tslint',
                 './rules/deprecation',
                 './rules/stylistic/ts',
                 optionalRules('rxjs'),

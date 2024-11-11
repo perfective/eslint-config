@@ -47,7 +47,6 @@ npm install --save-dev \
     @babel/eslint-parser \
     @stylistic/eslint-plugin \
     @typescript-eslint/eslint-plugin \
-    @typescript-eslint/eslint-plugin-tslint \
     @typescript-eslint/parser \
     eslint \
     eslint-import-resolver-typescript \
@@ -62,8 +61,7 @@ npm install --save-dev \
     eslint-plugin-security \
     eslint-plugin-simple-import-sort \
     eslint-plugin-sonarjs \
-    eslint-plugin-unicorn \
-    tslint
+    eslint-plugin-unicorn
 ----
 +
 . Install optional peer dependencies that add linting rules for the tools you use.
@@ -142,40 +140,9 @@ So rules should be required from those packages for correct `node_modules` resol
 for the `simple-import-sort/imports` rule.
 * `typescriptEslintNamingConvention(extensions)`
 — extends configuration for the `@typescript-eslint/naming-convention` rule.
-* `typescriptEslintTslintConfig(rules, directories)`
-— overrides `rules` and provides custom `directories`
-for the `@typescript-eslint/tslint/config` rule.
 * `unicornPreventAbbreviations(replacements, options)`
 — extends and overrides the list of `replacements`
 and `options` for the `unicorn/prevent-abbreviation` rule.
-
-
-== TSLint
-
-ESLint and its plugins replace most of the https://palantir.github.io/tslint/[TSLint] rules.
-Yet, a few rules still need to be supported.
-TSLint rules are executed using the
-https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint[ESLint Plugin TSLint].
-
-`eslint-plugin-tslint` provides only one rule `@typescript-eslint/tslint/config`
-that configures all the remaining TSLint rules,
-so in order to override some of them,
-use the `typescriptEslintTslintConfig()` config function from the '@perfective/eslint-config/rules':
-
-[source,typescript]
-----
-import { typescriptEslintTslintConfig } from '@perfective/eslint-config/rules';
-
-export = {
-    rules: {
-        '@typescript-eslint/tslint/config': ['error', typescriptEslintTslintConfig({
-            'no-default-import': false, // <.>
-        })],
-    }
-}
-----
-<1> Overrides only one of the rules
-while keeping all others set by default.
 
 
 == Internals
@@ -195,4 +162,3 @@ The final configuration extends each plugin configuration on a file-type basis.
 == Roadmap
 
 * Add the `@perfective/eslint-plugin` with the rules for working with the `@perfective` packages.
-* Replace all TSLint rules with ESLint rules.

@@ -45,7 +45,6 @@ from issues that will be fixed automatically.
         @babel/eslint-parser \
         @stylistic/eslint-plugin \
         @typescript-eslint/eslint-plugin \
-        @typescript-eslint/eslint-plugin-tslint \
         @typescript-eslint/parser \
         eslint \
         eslint-import-resolver-typescript \
@@ -60,8 +59,7 @@ from issues that will be fixed automatically.
         eslint-plugin-security \
         eslint-plugin-simple-import-sort \
         eslint-plugin-sonarjs \
-        eslint-plugin-unicorn \
-        tslint
+        eslint-plugin-unicorn
     ```
 
 2. Install optional peer dependencies that add linting rules for the tools you use.
@@ -89,13 +87,3 @@ from issues that will be fixed automatically.
         extends: ['@perfective/eslint-config'],
     };
     ```
-
-## TSLint
-
-ESLint and its plugins replace most of the [TSLint](https://palantir.github.io/tslint/) rules.
-Yet, a few rules still need to be supported.
-TSLint rules are executed using the
-[ESLint Plugin TSLint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin-tslint).
-
-Read the [full documentation](https://github.com/perfective/eslint-config/blob/main/README.adoc)
-in the repository.
