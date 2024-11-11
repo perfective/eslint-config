@@ -82,7 +82,7 @@
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
         "@babel/eslint-parser": "^7.25.9",
         "@jest/globals": "~29.7.0",
-        "@perfective/build": "~0.13.1",
+        "@perfective/build": "~0.14.0",
         "@stylistic/eslint-plugin": "2.10.1",
         "@stylistic/eslint-plugin-js": "2.10.1",
         "@stylistic/eslint-plugin-jsx": "2.10.1",
@@ -114,6 +114,6 @@
         "jest": "^29.7.0",
         "prettier": "~3.3.3",
         "ts-jest": "^29.2.5",
-        "typescript": "~5.5.4"
+        "typescript": "~5.6.3"
     }
 }
