@@ -124,7 +124,7 @@ export = {
                     'ts-check': false,
                 }],
                 '@typescript-eslint/init-declarations': 'off',
-                // See "@typescript-eslint/unbound-method"
+                // See "jest/unbound-method"
                 '@typescript-eslint/unbound-method': 'off',
                 'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
                 'import/no-unassigned-import': ['error', {

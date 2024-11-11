@@ -19,12 +19,6 @@ export {
     TypescriptEslintNamingConventionUnderscore,
 } from './rules/typescript-eslint/rules/typescript-eslint-naming-convention';
 export {
-    TsLintRule,
-    TsLintRules,
-    TypescriptEslintTslintConfig,
-    typescriptEslintTslintConfig,
-} from './rules/typescript-eslint/rules/typescript-eslint-tslint-config';
-export {
     UnicornPreventAbbreviationReplacements,
     UnicornPreventAbbreviations,
     unicornPreventAbbreviations,

@@ -317,8 +317,7 @@ export = {
             variableDeclarationIgnoreFunction: false,
         }],
         '@typescript-eslint/unbound-method': ['error', {
-            // See TSLint "static-this"
-            ignoreStatic: true,
+            ignoreStatic: false,
         }],
         // TODO: This rule needs support ignoring functions with JSDocs.
         '@typescript-eslint/unified-signatures': ['error', {
