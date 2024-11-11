@@ -12,7 +12,6 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 
 -   [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
 -   [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress) _(optional)_;
--   [`eslint-plugin-deprecation`](https://github.com/gund/eslint-plugin-deprecation);
 -   [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments/);
 -   [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
 -   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest) _(optional)_;
@@ -47,7 +46,6 @@ from issues that will be fixed automatically.
         eslint \
         eslint-import-resolver-typescript \
         eslint-plugin-array-func \
-        eslint-plugin-deprecation \
         eslint-plugin-eslint-comments \
         eslint-plugin-import \
         eslint-plugin-jsdoc \

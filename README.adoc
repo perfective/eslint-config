@@ -12,7 +12,6 @@ and https://eslint.style[ESLint Stylistic] plugin rules,
 
 * `link:https://github.com/freaktechnik/eslint-plugin-array-func[eslint-plugin-array-func]`;
 * `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]` _(optional)_;
-* `link:https://github.com/gund/eslint-plugin-deprecation[eslint-plugin-deprecation]`;
 * `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/[eslint-plugin-eslint-comments]`;
 * `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]`;
 * `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]` _(optional)_;
@@ -49,7 +48,6 @@ npm install --save-dev \
     eslint \
     eslint-import-resolver-typescript \
     eslint-plugin-array-func \
-    eslint-plugin-deprecation \
     eslint-plugin-eslint-comments \
     eslint-plugin-import \
     eslint-plugin-jsdoc \

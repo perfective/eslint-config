@@ -6,7 +6,6 @@ include::stylistic/index.adoc[leveloffset=+1]
 
 include::array-func/index.adoc[leveloffset=+1]
 include::cypress/index.adoc[leveloffset=+1]
-include::deprecation/index.adoc[leveloffset=+1]
 include::eslint-comments/index.adoc[leveloffset=+1]
 include::import/index.adoc[leveloffset=+1]
 include::jest/index.adoc[leveloffset=+1]
