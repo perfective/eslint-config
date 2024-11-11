@@ -12,6 +12,7 @@ It only works with the `@typescript-eslint/parser`.
 | `deprecation/deprecation`
 | N/A
 |
-| Error
+| Off
+4+| Deprecated. Use `@typescript-eslint/no-deprecated` instead.
 
 |===

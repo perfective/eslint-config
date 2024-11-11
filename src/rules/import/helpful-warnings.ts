@@ -3,6 +3,7 @@ import { importNoExtraneousDependencies } from './rules/no-extraneous-dependenci
 export = {
     rules: {
         'import/export': 'error',
+        // Use @typescript-eslint/no-deprecated instead.
         'import/no-deprecated': 'off',
         'import/no-empty-named-blocks': 'warn',
         'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies()],

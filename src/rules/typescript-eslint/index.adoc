@@ -35,8 +35,11 @@ as it may be required to force an error
 | Warning
 
 | `link:{ts-eslint-rules}/ban-types/[@typescript-eslint/ban-types]`
-| Recommended
-| Error
+| Deprecated
+| Off
+3+| Use `@typescript-eslint/no-restricted-types`, `@typescript-eslint/no-unsafe-function-type`,
+and `@typescript-eslint/no-wrapper-object-types` instead.
+
 
 | `link:{ts-eslint-rules}/class-literal-property-style/[@typescript-eslint/class-literal-property-style]`
 | Stylistic
@@ -113,6 +116,10 @@ as type inferences should be minimized and types must be declared explicitly.
 | `link:{ts-eslint-rules}/no-confusing-void-expression/[@typescript-eslint/no-confusing-void-expression]`
 | Strict
 | Warning
+
+| `link:{ts-eslint-rules}/no-deprecated/[@typescript-eslint/no-deprecated]`
+| Strict
+| Error
 
 | `link:{ts-eslint-rules}/no-duplicate-enum-values/[@typescript-eslint/no-duplicate-enum-values]`
 | Recommended
@@ -203,11 +210,11 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
-| `link:{ts-eslint-rules}/no-unnecessary-type-parameters/[@typescript-eslint/no-unnecessary-type-parameters]`
-| Strict
+| `link:{ts-eslint-rules}/no-require-imports/[@typescript-eslint/no-require-imports]`
+|
 | Error
 
-| `link:{ts-eslint-rules}/no-require-imports/[@typescript-eslint/no-require-imports]`
+| `link:{ts-eslint-rules}/no-restricted-types/[@typescript-eslint/no-restricted-types]`
 |
 | Error
 
@@ -251,6 +258,10 @@ Empty interfaces are allowed.
 | Recommended
 | Warning
 
+| `link:{ts-eslint-rules}/no-unnecessary-type-parameters/[@typescript-eslint/no-unnecessary-type-parameters]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/no-unsafe-argument/[@typescript-eslint/no-unsafe-argument]`
 | Recommended
 | Error
@@ -271,6 +282,10 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-unsafe-function-type/[@typescript-eslint/no-unsafe-function-type]`
+| Recommended
+| Warning
+
 | `link:{ts-eslint-rules}/no-unsafe-member-access/[@typescript-eslint/no-unsafe-member-access]`
 | Recommended
 | Error
@@ -287,14 +302,13 @@ Empty interfaces are allowed.
 |
 | Warning
 
-| `link:{ts-eslint-rules}/no-useless-template-literals/[@typescript-eslint/no-useless-template-literals]`
-|
-| Off
-3+| Renamed into `@typescript-eslint/no-useless-template-expression`.
-
 | `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
 | Recommended
 | Error
+
+| `link:{ts-eslint-rules}/no-wrapper-object-types/[@typescript-eslint/no-wrapper-object-types]`
+| Recommended
+| Warning
 
 | `link:{ts-eslint-rules}/non-nullable-type-assertion-style/[@typescript-eslint/non-nullable-type-assertion-style]`
 | Stylistic
@@ -552,8 +566,9 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Error
 
 | `link:{ts-eslint-rules}/no-loss-of-precision/[@typescript-eslint/no-loss-of-precision]`
-| Recommended
-| Error
+| Deprecated
+| Off
+3+| Use `no-loss-of-precision` instead.
 
 | `link:{ts-eslint-rules}/no-magic-numbers/[@typescript-eslint/no-magic-numbers]`
 |
@@ -570,11 +585,6 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | `link:{ts-eslint-rules}/no-shadow/[@typescript-eslint/no-shadow]`
 |
 | Off
-
-| `link:{ts-eslint-rules}/no-throw-literal/[@typescript-eslint/no-throw-literal]`
-|
-| Off
-3+| Deprecated. Use `@typescript-eslint/only-throw-error` instead.
 
 | `link:{ts-eslint-rules}/no-unused-expressions/[@typescript-eslint/no-unused-expressions]`
 |
@@ -624,7 +634,7 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Error
 
 | `link:{ts-eslint-rules}/return-await/[@typescript-eslint/return-await]`
-|
+| Strict
 | Warning
 Allowed in error-handling context only.
 

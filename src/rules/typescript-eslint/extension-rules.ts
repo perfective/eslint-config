@@ -64,8 +64,8 @@ export = {
         '@typescript-eslint/no-invalid-this': 'error',
         'no-loop-func': 'off',
         '@typescript-eslint/no-loop-func': 'error',
-        'no-loss-of-precision': 'off',
-        '@typescript-eslint/no-loss-of-precision': 'error',
+        // Deprecated. Use `no-loss-of-precision`.
+        '@typescript-eslint/no-loss-of-precision': 'off',
         'no-magic-numbers': 'off',
         '@typescript-eslint/no-magic-numbers': 'off',
         'no-redeclare': 'off',
@@ -75,8 +75,6 @@ export = {
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'off',
         'no-throw-literal': 'off',
-        // Deprecated. Use @typescript-eslint/only-throw-error instead.
-        '@typescript-eslint/no-throw-literal': 'off',
         '@typescript-eslint/only-throw-error': ['error', {
             allowThrowingAny: false,
             allowThrowingUnknown: false,

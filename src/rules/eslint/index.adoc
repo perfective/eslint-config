@@ -35,7 +35,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-class-assign[no-class-assign]`
-| Recommended
+|
 | Error
 
 | `link:{eslint-rules}/no-compare-neg-zero[no-compare-neg-zero]`
@@ -662,6 +662,7 @@ Using `complexity` rule instead to keep the functions simple.
 | `link:{eslint-rules}/no-throw-literal[no-throw-literal]`
 |
 | Error
+3+| Off for TypeScript. Use `@typescript-eslint/only-throw-error` instead.
 
 | `link:{eslint-rules}/no-undef-init[no-undef-init]`
 |

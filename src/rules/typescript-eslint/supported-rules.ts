@@ -10,19 +10,9 @@ export = {
         '@typescript-eslint/await-thenable': 'error',
         '@typescript-eslint/ban-ts-comment': 'error',
         '@typescript-eslint/ban-tslint-comment': 'warn',
-        '@typescript-eslint/ban-types': ['error', {
-            types: {
-                object: {
-                    message: [
-                        'The `object` type is currently hard to use',
-                        '([see this issue](https://github.com/microsoft/TypeScript/issues/21732)).',
-                        'Consider using `Record<string, unknown>` instead,',
-                        'as it allows you to more easily inspect and use the keys.',
-                    ].join('\n'),
-                },
-            },
-            extendDefaults: true,
-        }],
+        // Deprecated. Use @typescript-eslint/no-restricted-types, @typescript-eslint/no-unsafe-function-type, and
+        // @typescript-eslint/no-wrapper-object-types.
+        '@typescript-eslint/ban-types': 'off',
         '@typescript-eslint/class-literal-property-style': 'off',
         '@typescript-eslint/consistent-generic-constructors': ['warn', 'type-annotation'],
         '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
@@ -128,6 +118,7 @@ export = {
             ignoreArrowShorthand: true,
             ignoreVoidOperator: false,
         }],
+        '@typescript-eslint/no-deprecated': 'error',
         '@typescript-eslint/no-duplicate-enum-values': 'error',
         '@typescript-eslint/no-duplicate-type-constituents': ['error', {
             ignoreIntersections: false,
@@ -156,7 +147,14 @@ export = {
             allowStaticOnly: false,
             allowWithDecorator: true,
         }],
-        '@typescript-eslint/no-floating-promises': 'error',
+        '@typescript-eslint/no-floating-promises': ['error', {
+            allowForKnownSafeCalls: [],
+            allowForKnownSafePromises: [],
+            checkThenables: true,
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external property name
+            ignoreIIFE: false,
+            ignoreVoid: true,
+        }],
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-import-type-side-effects': 'warn',
         '@typescript-eslint/no-inferrable-types': 'off',
@@ -182,13 +180,29 @@ export = {
         '@typescript-eslint/no-require-imports': ['error', {
             allow: [],
         }],
+        '@typescript-eslint/no-restricted-types': ['error', {
+            types: {
+                object: {
+                    message: [
+                        'The `object` type is currently hard to use',
+                        '(https://github.com/microsoft/TypeScript/issues/21732).',
+                    ].join(' '),
+                    suggest: ['Record<string, unknown>'],
+                },
+            },
+        }],
         '@typescript-eslint/no-this-alias': 'error',
         '@typescript-eslint/no-type-alias': 'off',
         '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['warn', {
             allowComparingNullableBooleansToTrue: true,
             allowComparingNullableBooleansToFalse: true,
         }],
-        '@typescript-eslint/no-unnecessary-condition': 'warn',
+        '@typescript-eslint/no-unnecessary-condition': ['warn', {
+            allowConstantLoopConditions: false,
+            // eslint-disable-next-line @typescript-eslint/naming-convention -- external property
+            allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
+            checkTypePredicates: true,
+        }],
         '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
         '@typescript-eslint/no-unnecessary-template-expression': 'error',
@@ -200,6 +214,7 @@ export = {
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
         '@typescript-eslint/no-unsafe-enum-comparison': 'error',
+        '@typescript-eslint/no-unsafe-function-type': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
         '@typescript-eslint/no-unsafe-unary-minus': 'error',
@@ -209,6 +224,7 @@ export = {
         '@typescript-eslint/no-var-requires': ['error', {
             allow: [],
         }],
+        '@typescript-eslint/no-wrapper-object-types': 'warn',
         // This rule is fixable, but
         //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
@@ -226,6 +242,7 @@ export = {
         }],
         '@typescript-eslint/prefer-namespace-keyword': 'warn',
         '@typescript-eslint/prefer-nullish-coalescing': ['error', {
+            ignoreBooleanCoercion: false,
             ignoreTernaryTests: false,
             ignoreConditionalTests: true,
             ignoreMixedLogicalExpressions: true,

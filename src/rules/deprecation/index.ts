@@ -3,6 +3,7 @@ export = {
         'deprecation',
     ],
     rules: {
-        'deprecation/deprecation': 'error',
+        // Deprecated. Use @typescript-eslint/no-deprecated instead.
+        'deprecation/deprecation': 'off',
     },
 };
