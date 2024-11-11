@@ -112,7 +112,6 @@ export = {
             extends: [
                 './rules/jest',
                 optionalRules('jest-dom'),
-                './rules/jest-formatting',
                 optionalRules('testing-library'),
             ].filter(Boolean),
             rules: {

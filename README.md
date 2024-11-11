@@ -17,8 +17,6 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 -   [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
 -   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest) _(optional)_;
 -   [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom) _(optional)_;
--   [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
-    _(optional, required if `eslint-plugin-jest` is installed)_;
 -   [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
 -   [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n);
 -   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
@@ -69,13 +67,9 @@ from issues that will be fixed automatically.
         eslint-plugin-cypress \
         eslint-plugin-jest \
         eslint-plugin-jest-dom \
-        eslint-plugin-jest-formatting \
         eslint-plugin-rxjs \
         eslint-plugin-testing-library
     ```
-
-    The `eslint-plugin-jest-formatting` module is required,
-    if the `eslint-plugin-jest` module is installed.
 
     The `@perfective/eslint-config` automatically includes rules for these plugins,
     if the dependency is installed.

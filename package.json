@@ -50,7 +50,6 @@
         "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-jest": "^28.9.0",
         "eslint-plugin-jest-dom": "^5.4.0",
-        "eslint-plugin-jest-formatting": "^3.1.0",
         "eslint-plugin-jsdoc": "^50.4.3",
         "eslint-plugin-n": "^17.13.1",
         "eslint-plugin-prefer-arrow": "^1.2.3",
@@ -70,9 +69,6 @@
             "optional": true
         },
         "eslint-plugin-jest-dom": {
-            "optional": true
-        },
-        "eslint-plugin-jest-formatting": {
             "optional": true
         },
         "eslint-plugin-rxjs": {
@@ -104,7 +100,6 @@
         "eslint-plugin-import": "2.31.0",
         "eslint-plugin-jest": "28.9.0",
         "eslint-plugin-jest-dom": "5.4.0",
-        "eslint-plugin-jest-formatting": "3.1.0",
         "eslint-plugin-jsdoc": "50.4.3",
         "eslint-plugin-n": "17.13.1",
         "eslint-plugin-prefer-arrow": "1.2.3",
