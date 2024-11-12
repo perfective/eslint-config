@@ -113,7 +113,8 @@ export = {
         'jsdoc/require-returns-description': 'error',
         // Conflicts with jsdoc/no-types: types are defined in the TypeScript code.
         'jsdoc/require-returns-type': 'off',
-        'jsdoc/require-template': ['error', {
+        // Types documentation is irrelevant in most places.
+        'jsdoc/require-template': ['off', {
             requireSeparateTemplates: false,
         }],
         'jsdoc/require-throws': 'error',
