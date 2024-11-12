@@ -13,6 +13,8 @@
 
 == v0.27.1
 
+* Updated `eslint-plugin-jsdoc` to `50.5.0`.
++
 * Disabled the `link:{eslint-jsdoc-rules}/require-template.md[jsdoc/require-template]` rule.
 * Updated the `link:{stylistic-rules}/plus/curly-newline[@stylistic/plus/curly-newline] rule to support empty blocks.
 
