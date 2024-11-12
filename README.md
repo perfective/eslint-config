@@ -41,6 +41,10 @@ from issues that will be fixed automatically.
         @perfective/eslint-config \
         @babel/eslint-parser \
         @stylistic/eslint-plugin \
+        @stylistic/eslint-plugin-js \
+        @stylistic/eslint-plugin-jsx \
+        @stylistic/eslint-plugin-ts \
+        @stylistic/eslint-plugin-plus \
         @typescript-eslint/eslint-plugin \
         @typescript-eslint/parser \
         eslint \

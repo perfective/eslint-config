@@ -11,6 +11,142 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.27.0
+
+**Updated all dependencies that do not require ESLint v9.**
+
+* Patched `eslint` to `8.57.1`.
++
+* Upgraded `@typescript-eslint` to `8.13.0`:
+** Supporting **TypeScript v5.6**.
+** Enabled the `link:{ts-eslint-rules}/no-empty-object-type/[@typescript-eslint/no-empty-object-type]`
+rule as an error (empty interfaces allowed).
+** Enabled the
+`link:{ts-eslint-rules}/no-unnecessary-type-parameters/[@typescript-eslint/no-unnecessary-type-parameters]`
+rule as an error.
+** Enabled the
+`link:{ts-eslint-rules}/no-unnecessary-parameter-property-assignment/[@typescript-eslint/no-unnecessary-parameter-property-assignment]`
+rule as an error.
+** Enabled the `link:{ts-eslint-rules}/no-deprecated/[@typescript-eslint/no-deprecated]` rule as an error.
+Disabled the `deprecation/deprecation` rule.
+** Enabled the `link:{ts-eslint-rules}/no-restricted-types/[@typescript-eslint/no-restricted-types]` rule as an error.
+** Enabled the `link:{ts-eslint-rules}/no-unsafe-function-type/[@typescript-eslint/no-unsafe-function-type]`
+rule as a warning.
+** Enabled the `link:{ts-eslint-rules}/no-wrapper-object-types/[@typescript-eslint/no-wrapper-object-types]`
+rule as a warning.
+** Enabled `checkTypePredicates` for
+`link:{ts-eslint-rules}/no-unnecessary-condition[@typescript-eslint/no-unnecessary-condition]`.
+** Enabled `error-handling-correctness-only` for `link:{ts-eslint-rules}/return-await/[@typescript-eslint/return-await]`.
+** Disabled the `@typescript-eslint/ban-types` rule as deprecated.
+Use `@typescript-eslint/no-restricted-types`, `@typescript-eslint/no-unsafe-function-type`, and
+`@typescript-eslint/no-wrapper-object-types` instead.
+** Disabled the `@typescript-eslint/no-loss-of-precision` rule as deprecated.
+Use `no-loss-of-precision` instead
++
+* Updated `@stylistic/eslint-plugin` to `2.10.1`:
+** Enabled the `link:{stylistic-rules}/plus/curly-newline[@stylistic/plus/curly-newline]` rule as a warning.
+** Added `@stylistic/eslint-plugin-js` as a peer dependency.
+** Added `@stylistic/eslint-plugin-jsx` as a peer dependency.
+** Added `@stylistic/eslint-plugin-plus` as a peer dependency.
+** Added `@stylistic/eslint-plugin-ts` as a peer dependency.
++
+* Upgraded `eslint-plugin-unicorn` to `56.0.0`
+** Enabled the
+`link:{eslint-unicorn-rules}/consistent-existence-index-check.md[unicorn/consistent-existence-index-check]`
+rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/no-length-as-slice-end.md[unicorn/no-length-as-slice-end]`
+rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/prefer-global-this.md[unicorn/prefer-global-this]` rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/prefer-math-min-max.md[unicorn/prefer-math-min-max]` rule as a warning.
++
+* Updated `eslint-plugin-cypress` to `3.6.0`:
+** Enabled the `link:{eslint-cypress-rules}/no-debug.md[cypress/no-debug]` rule as an error.
++
+* Upgraded `eslint-plugin-jsdoc` to `50.4.3`:
+** Enabled the `link:{eslint-jsdoc-rules}/check-template-names.md[jsdoc/check-template-names]` rule as an error;
+** Enabled the `link:{eslint-jsdoc-rules}/require-template.md[jsdoc/require-template]` rule as an error;
+** Changed the
+`link:{eslint-jsdoc-rules}/require-hyphen-before-param-description.md[jsdoc/require-hyphen-before-param-description]`
+rule severity from an error to a warning (as it has a fixer).
++
+* Upgraded `eslint-plugin-promise` to `7.1.0`:
+** Enabled the `link:{eslint-promise-rules}/spec-only.md[promise/spec-only]` rule as an error.
++
+* Updated `eslint-plugin-import` to `2.31.0`.
+* Updated `eslint-plugin-n` to `17.13.1`.
+* Updated `eslint-plugin-testing-library` to `6.4.0`.
+* Updated `@babel/eslint-parser` to `7.25.9`.
++
+* Patched `eslint-import-resolver-typescript` to `3.6.3`.
+* Patched `eslint-plugin-simple-import-sort` to `12.1.1`.
+* Patched `eslint-plugin-sonarjs` to `1.0.4`.
++
+* Removed `@typescript-eslint/eslint-plugin-tslint`.
+* Removed `eslint-plugin-jest-formatting`.
+The rules are now supported in `eslint-plugin-jest`.
+* Removed `eslint-plugin-deprecation`.
+The `deprecation/deprecation` rule is replaced by the `@typescript-eslint/no-deprecated` rule.
+
+
+=== Removed TSLint
+
+`@typescript-eslint/eslint-plugin-tslint` does not support ESLint v9,
+and out of the remaining TSLint rules only a few rules do not have a replacement.
+
+The following remaining rules were removed:
+
+* `encoding` - UTF-8 is configured in `tsconfig.json` (the `charset` option).
+* `import-spacing` - covered by the `@stylistic/ts/keyword-spacing` and `@stylistic/ts/object-curly-spacing` rules.
+* `no-default-import` - irrelevant, as it requires a list of modules.
+* `no-inferred-empty-object-type` - the rule is not relevant since TS 3.4.
+* `no-mergeable-namespace` - irrelevant, as `@typescript-eslint/no-namespace` is enabled and namespaces are not allowed.
+* `no-tautology-expression` - covered by the `no-self-compare`, `sonarjs/ no-identical-expressions`,
+and `no-constant-condition` rules.
+* `no-unnecessary-callback-wrapper` - does not have a replacement.
++
+Without this rule the following code will not be flagged:
++
+[source,typescript]
+----
+input.map(x => same(x)) // Instead of `input.map(same)`.
+----
++
+* `prefer-conditional-expression` - the rule is covered by the `unicorn/prefer-ternary` rule if needed,
+but `unicorn/prefer-ternary` is disabled by default.
+* `prefer-switch` - covered by the `unicorn/prefer-switch` rule.
+* `prefer-while` - covered by the `sonarjs/prefer-while` rule.
+* `return-undefined` - partially covered by the `no-useless-return` rule.
+* `static-this` - covered by the `@typescript-eslint/unbound-method` rule.
+* `strict-comparisons` - does not have a replacement.
++
+Without this rule the following code will not be flagged:
++
+[source,typescript]
+----
+const o1 = {};
+const o2 = {};
+if (o1 > o2) { /* Cannot compare two objects, except for === */ }
+----
++
+* `strict-type-predicates` - does not have a replacement, but has already been disabled.
+* `switch-final-break` - does not have a replacement, due to `@typescript-eslint/switch-exhaustiveness-check`,
+the final statement in a `switch` is always `default`, so the issue is non-critical.
++
+Without this rule the following code will not be flagged:
++
+[source,typescript]
+----
+switch (a) {
+    case 'a':
+        r = 1;
+        break;
+    default:
+        r = 2;
+        // Missing break;
+}
+----
+
+
 == v0.26.1
 
 * Updated `@typescript-eslint` to `7.14.1`:

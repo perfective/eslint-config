@@ -9,6 +9,71 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.26.1` to `v0.27.0`
+
+* Add `@stylistic` sub-packages as peer dependencies:
+** `@stylistic/eslint-plugin-js`
+** `@stylistic/eslint-plugin-jsx`
+** `@stylistic/eslint-plugin-ts`
+** `@stylistic/eslint-plugin-plus`
++
+* Remove obsolete peer dependencies:
+** `tslint`
+** `@typescript-eslint/eslint-plugin-tslint`
+** `eslint-plugin-jest-formatting`
+** `eslint-plugin-deprecation`
++
+* Remove deprecated rules, if present in the custom configuration:
+** `@typescript-eslint/ban-types`
+** `@typescript-eslint/no-loss-of-precision`
+** `deprecation/deprecation`
+** `jest-formatting/padding-around-after-all-blocks` (use `jest/padding-around-after-all-blocks`)
+** `jest-formatting/padding-around-after-each-blocks` (use `jest/padding-around-after-each-blocks`)
+** `jest-formatting/padding-around-all` (use `jest/padding-around-all`)
+** `jest-formatting/padding-around-before-all-blocks` (use `jest/padding-around-before-all-blocks`)
+** `jest-formatting/padding-around-before-each-blocks` (use `jest/padding-around-before-each-blocks`)
+** `jest-formatting/padding-around-describe-blocks` (use `jest/padding-around-describe-blocks`)
+** `jest-formatting/padding-around-expect-groups` (use `jest/padding-around-expect-groups`)
+** `jest-formatting/padding-around-test-blocks` (use `jest/padding-around-test-blocks`)
++
+* Disable and gradually enable new rules in the `.eslintrc.js`.
++
+[source,js]
+----
+module.exports = {
+    extends: [
+        '@perfective/eslint-config',
+    ],
+    overrides: [
+        {
+            files: ['*.[jt]s?(x)'],
+            rules: {
+                '@typescript-eslint/no-empty-object-type': 'off',
+                '@typescript-eslint/no-unnecessary-type-parameters': 'off',
+                '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'off',
+                '@typescript-eslint/no-deprecated': 'off',
+                '@typescript-eslint/no-restricted-types': 'off',
+                '@typescript-eslint/no-unsafe-function-type': 'off',
+                '@typescript-eslint/no-wrapper-object-types': 'off',
+                '@stylistic/plus/curly-newline': 'off',
+                'unicorn/consistent-existence-index-check': 'off',
+                'unicorn/no-length-as-slice-end': 'off',
+                'unicorn/prefer-global-this': 'off',
+                'unicorn/prefer-math-min-max': 'off',
+                'jsdoc/check-template-names': 'off',
+                'jsdoc/require-template': 'off',
+                'jsdoc/require-hyphen-before-param-description': 'off',
+                'promise/spec-only': 'off',
+
+                // If eslint-plugin-cypress is installed
+                'cypress/no-debug': 'off',
+            },
+        },
+    ],
+};
+----
+
+
 == From `v0.26.0` to `v0.26.1`
 
 * Disable and gradually enable new rules in the `.eslintrc.js`.
