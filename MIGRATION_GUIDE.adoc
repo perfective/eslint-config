@@ -11,12 +11,6 @@ Migration between minor versions follows the same steps:
 
 == From `v0.26.1` to `v0.27.0`
 
-* Add `@stylistic` sub-packages as peer dependencies:
-** `@stylistic/eslint-plugin-js`
-** `@stylistic/eslint-plugin-jsx`
-** `@stylistic/eslint-plugin-ts`
-** `@stylistic/eslint-plugin-plus`
-+
 * Remove obsolete peer dependencies:
 ** `tslint`
 ** `@typescript-eslint/eslint-plugin-tslint`
