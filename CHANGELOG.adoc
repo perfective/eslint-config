@@ -11,6 +11,12 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.27.1
+
+* Disabled the `link:{eslint-jsdoc-rules}/require-template.md[jsdoc/require-template]` rule.
+* Updated the `link:{stylistic-rules}/plus/curly-newline[@stylistic/plus/curly-newline] rule to support empty blocks.
+
+
 == v0.27.0
 
 **Updated all dependencies that do not require ESLint v9.**

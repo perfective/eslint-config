@@ -9,7 +9,7 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.26.1` to `v0.27.0`
+== From `v0.26.1` to `v0.27.1`
 
 * Remove obsolete peer dependencies:
 ** `tslint`
@@ -55,7 +55,6 @@ module.exports = {
                 'unicorn/prefer-global-this': 'off',
                 'unicorn/prefer-math-min-max': 'off',
                 'jsdoc/check-template-names': 'off',
-                'jsdoc/require-template': 'off',
                 'jsdoc/require-hyphen-before-param-description': 'off',
                 'promise/spec-only': 'off',
 
