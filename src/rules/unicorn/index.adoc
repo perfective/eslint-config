@@ -542,7 +542,7 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Yes
 | Off
-4+| Reduces readability of trivial strings and conflicts with `sonarjs/no-nested-template-literals`.
+4+| Reduces readability of trivial strings.
 
 | `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
 | Yes

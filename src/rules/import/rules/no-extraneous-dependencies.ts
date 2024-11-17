@@ -21,7 +21,6 @@ export function importNoExtraneousDependencies(
     };
 }
 
-/* eslint-disable sonarjs/no-identical-functions -- functions have different default arguments */
 export function jsImportNoExtraneousDependencies(
     devDependencies: boolean | string[] = ['**/.*.js', '**/*.config.js', '**/gulpfile.js'],
 ): ImportNoExtraneousDependencies {
@@ -45,4 +44,3 @@ export function cypressImportNoExtraneousDependencies(
         devDependencies,
     });
 }
-/* eslint-enable sonarjs/no-identical-functions */

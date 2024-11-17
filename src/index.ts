@@ -25,7 +25,6 @@ export = {
                 './rules/promise',
                 './rules/security',
                 './rules/simple-import-sort',
-                './rules/sonarjs',
                 './rules/stylistic/js',
                 './rules/stylistic/plus',
                 './rules/unicorn',
