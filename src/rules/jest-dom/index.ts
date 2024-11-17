@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        'jest-dom',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginJestDom from 'eslint-plugin-jest-dom';
+
+export const jestDomConfig = {
+    plugins: {
+        'jest-dom': eslintPluginJestDom,
+    },
     rules: {
         'jest-dom/prefer-checked': 'warn',
         'jest-dom/prefer-empty': 'warn',

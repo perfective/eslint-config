@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        'rxjs',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginRxjs from 'eslint-plugin-rxjs';
+
+export const rxjsConfig = {
+    plugins: {
+        rxjs: eslintPluginRxjs,
+    },
     rules: {
         'rxjs/ban-observables': 'error',
         'rxjs/ban-operators': ['error', {

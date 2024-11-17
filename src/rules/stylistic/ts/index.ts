@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        '@stylistic/ts',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginStylisticTs from '@stylistic/eslint-plugin-ts';
+
+export const stylisticTsConfig = {
+    plugins: {
+        '@stylistic/ts': eslintPluginStylisticTs,
+    },
     rules: {
         '@stylistic/js/block-spacing': 'off',
         '@stylistic/ts/block-spacing': ['warn', 'always'],

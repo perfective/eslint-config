@@ -1,65 +1,46 @@
-import { optionalOverrides, optionalRules } from './config/plugin';
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
+import * as tsEslint from 'typescript-eslint';
+
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
+import * as babelParser from '@babel/eslint-parser';
+
+import { hasEslintPlugin } from './config/plugin';
+import { arrayFuncConfig as arrayFunctionConfig } from './rules/array-func';
+import { cypressOptionalConfig } from './rules/cypress';
+import { eslintConfig } from './rules/eslint';
+import { eslintCommentsConfig } from './rules/eslint-comments';
+import { importConfig } from './rules/import';
 import {
     cypressImportNoExtraneousDependencies,
     jestImportNoExtraneousDependencies,
     jsImportNoExtraneousDependencies,
 } from './rules/import/rules/no-extraneous-dependencies';
+import { jestConfig } from './rules/jest';
+import { jestDomConfig } from './rules/jest-dom';
+import { jsdocConfig } from './rules/jsdoc';
+import { nConfig } from './rules/n';
+import { preferArrowConfig } from './rules/prefer-arrow';
+import { promiseConfig } from './rules/promise';
+import { rxjsConfig } from './rules/rxjs';
+import { securityConfig } from './rules/security';
+import { simpleImportSortConfig } from './rules/simple-import-sort';
+import { stylisticJsConfig } from './rules/stylistic/js';
+import { stylisticJsxConfig } from './rules/stylistic/jsx';
+import { stylisticPlusConfig } from './rules/stylistic/plus';
+import { stylisticTsConfig } from './rules/stylistic/ts';
+import { testingLibraryConfig } from './rules/testing-library';
+import { typescriptEslintConfig } from './rules/typescript-eslint';
+import { unicornConfig } from './rules/unicorn';
 
-export = {
-    env: {
-        // Overrides only extend this environment, but not other overrides (unlike rules and plugins)
-        es6: true,
+// eslint-disable-next-line import/no-default-export -- ESLint recommended practice.
+export default [
+    {
+        ignores: ['**/*.d.ts', '**/dist'],
     },
-    ignorePatterns: ['**/*.d.ts', '**/dist'],
-    overrides: [
-        {
-            files: ['*.[jt]s?(x)'],
-            extends: [
-                './rules/eslint',
-                './rules/array-func',
-                './rules/eslint-comments',
-                './rules/import',
-                './rules/jsdoc',
-                './rules/n',
-                './rules/prefer-arrow',
-                './rules/promise',
-                './rules/security',
-                './rules/simple-import-sort',
-                './rules/stylistic/js',
-                './rules/stylistic/plus',
-                './rules/unicorn',
-            ],
-        },
-        {
-            files: ['*.js?(x)'],
-            parser: '@babel/eslint-parser',
-            parserOptions: {
-                ecmaVersion: 6,
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                },
-                sourceType: 'module',
-                requireConfigFile: false,
-            },
-            settings: {
-                'import/extensions': ['.js', '.jsx'],
-            },
-            rules: {
-                'import/no-commonjs': 'off',
-                'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
-                'import/unambiguous': 'off',
-                'jsdoc/no-types': 'off',
-                'jsdoc/no-undefined-types': 'off',
-                'jsdoc/require-param': 'error',
-                'jsdoc/require-param-type': 'error',
-                'jsdoc/require-returns': 'error',
-                'jsdoc/require-returns-type': 'error',
-            },
-        },
-        {
-            files: ['*.ts?(x)'],
-            parser: '@typescript-eslint/parser',
+    {
+        files: ['**/*.[jt]s?(x)'],
+        languageOptions: {
+            parser: tsEslint.parser,
             parserOptions: {
                 // Parser options have to be duplicated when the parser is overridden
                 ecmaVersion: 6,
@@ -72,104 +53,192 @@ export = {
                 project: './tsconfig.json',
                 warnOnUnsupportedTypeScriptVersion: true,
             },
-            extends: [
-                './rules/typescript-eslint',
-                './rules/stylistic/ts',
-                optionalRules('rxjs'),
-            ].filter(Boolean),
-            settings: {
-                'import/parsers': {
-                    '@typescript-eslint/parser': [
-                        '.ts',
-                        '.tsx',
-                    ],
+        },
+        plugins: {
+            ...arrayFunctionConfig.plugins,
+            ...eslintCommentsConfig.plugins,
+            ...importConfig.plugins,
+            ...jsdocConfig.plugins,
+            ...nConfig.plugins,
+            ...preferArrowConfig.plugins,
+            ...promiseConfig.plugins,
+            ...securityConfig.plugins,
+            ...simpleImportSortConfig.plugins,
+            ...stylisticJsConfig.plugins,
+            ...stylisticPlusConfig.plugins,
+            ...unicornConfig.plugins,
+        },
+        settings: {
+            jsdoc: jsdocConfig.settings,
+        },
+        rules: {
+            ...arrayFunctionConfig.rules,
+            ...eslintConfig.rules,
+            ...eslintCommentsConfig.rules,
+            ...importConfig.rules,
+            ...jsdocConfig.rules,
+            ...nConfig.rules,
+            ...preferArrowConfig.rules,
+            ...promiseConfig.rules,
+            ...securityConfig.rules,
+            ...simpleImportSortConfig.rules,
+            ...stylisticJsConfig.rules,
+            ...stylisticPlusConfig.rules,
+            ...unicornConfig.rules,
+        },
+    },
+    {
+        files: ['**/*.js?(x)'],
+        languageOptions: {
+            parser: babelParser,
+            parserOptions: {
+                ecmaVersion: 6,
+                ecmaFeatures: {
+                    globalReturn: false,
+                    impliedStrict: true,
                 },
-                'import/resolver': {
-                    typescript: {
-                        alwaysTryTypes: true,
-                        project: './tsconfig.json',
-                    },
+                sourceType: 'module',
+                requireConfigFile: false,
+            },
+        },
+        plugins: {},
+        settings: {
+            'import/extensions': ['.js', '.jsx'],
+        },
+        rules: {
+            'import/no-commonjs': 'off',
+            'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
+            'import/unambiguous': 'off',
+            'jsdoc/no-types': 'off',
+            'jsdoc/no-undefined-types': 'off',
+            'jsdoc/require-param': 'error',
+            'jsdoc/require-param-type': 'error',
+            'jsdoc/require-returns': 'error',
+            'jsdoc/require-returns-type': 'error',
+        },
+    },
+    {
+        files: ['**/*.ts?(x)'],
+        languageOptions: {
+            parser: tsEslint.parser,
+            parserOptions: {
+                // Parser options have to be duplicated when the parser is overridden
+                ecmaVersion: 6,
+                ecmaFeatures: {
+                    globalReturn: false,
+                    impliedStrict: true,
+                },
+                sourceType: 'module',
+                // TypeScript ESLint Parser
+                project: './tsconfig.json',
+                warnOnUnsupportedTypeScriptVersion: true,
+            },
+        },
+        plugins: {
+            ...typescriptEslintConfig.plugins,
+            ...stylisticTsConfig.plugins,
+            ...hasEslintPlugin('rxjs') ? rxjsConfig.plugins : {},
+        },
+        settings: {
+            'import/parsers': {
+                '@typescript-eslint/parser': [
+                    '.ts',
+                    '.tsx',
+                ],
+            },
+            'import/resolver': {
+                typescript: {
+                    alwaysTryTypes: true,
+                    project: './tsconfig.json',
                 },
             },
         },
-        {
-            files: ['*.jsx', '*.tsx'],
-            extends: [
-                './rules/stylistic/jsx',
-            ],
+        rules: {
+            ...typescriptEslintConfig.rules,
+            ...stylisticTsConfig.rules,
+            ...hasEslintPlugin('rxjs') ? rxjsConfig.rules : {},
         },
-        optionalOverrides('jest', {
-            // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
-            files: ['*.@(spec|test).[jt]s?(x)'],
-            // TBD: Should environment be a part of the files overrides?
-            env: {
-                'jest': true,
-                // TBD: Is the above option sufficient and can the below option be removed?
-                'jest/globals': true,
-            },
-            extends: [
-                './rules/jest',
-                optionalRules('jest-dom'),
-                optionalRules('testing-library'),
-            ].filter(Boolean),
-            rules: {
-                '@typescript-eslint/ban-ts-comment': ['error', {
-                    'ts-expect-error': 'allow-with-description',
-                    'ts-ignore': true,
-                    'ts-nocheck': true,
-                    'ts-check': false,
-                }],
-                '@typescript-eslint/init-declarations': 'off',
-                // See "jest/unbound-method"
-                '@typescript-eslint/unbound-method': 'off',
-                'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
-                'import/no-unassigned-import': ['error', {
-                    allow: [
-                        '@testing-library/jest-dom',
-                        '@testing-library/jest-dom/extend-expect',
-                    ],
-                }],
-                // There can be 4 levels of `describe()`: Class -> Method -> Method Signature -> "When...",
-                // followed by a level for `it()`.
-                // The 6th level (inside of `it()`) can be required for a callback to test `toThrow()`.
-                'max-nested-callbacks': ['error', 6],
-                'n/no-unpublished-import': ['error', {
-                    // Required in devDependencies.
-                    allowModules: ['@jest/globals'],
-                }],
-                // Conflicts with func-style inside describe()
-                'prefer-arrow/prefer-arrow-functions': 'off',
-                // In tests the last step of a Promise is to run "expect".
-                // TODO: This rule can be improved by allowing configuring functions when Promise<void> is expected.
-                'promise/always-return': 'off',
-                // Passing promise is required for async testing
-                'rxjs/no-topromise': 'off',
-            },
-        }),
-        optionalOverrides('cypress', {
-            // The /cypress directory is used in the Cypress docs:
-            //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
-            // Integrations for Cypress are shown with ".spec.js",
-            //  but that would conflict with Jest configuration above,
-            //  so skipping them until it's possible to add directory configuration for Jest rules.
-            files: ['cypress/**/*.[jt]s'],
-            env: {
-                'cypress/globals': true,
-            },
-            extends: [
-                './rules/cypress',
-            ],
-            rules: {
-                // Tests may declare variables that are set only by beforeEach/beforeAll functions.
-                'init-declarations': 'off',
-                '@typescript-eslint/init-declarations': 'off',
-                'import/no-extraneous-dependencies': ['error', cypressImportNoExtraneousDependencies()],
-                'max-nested-callbacks': ['error', 4],
-                'new-cap': ['error', {
-                    // These are functions from cypress-cucumber-preprocessor/steps
-                    capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
-                }],
-            },
-        }),
-    ].filter(Boolean),
-};
+    },
+    {
+        files: ['**/*.js?(x)'],
+        plugins: {
+            ...stylisticJsxConfig.plugins,
+        },
+        rules: {
+            ...stylisticJsxConfig.rules,
+        },
+    },
+    // eslint-disable-next-line @stylistic/js/multiline-ternary -- temporary
+    hasEslintPlugin('jest') ? {
+        // Default extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/)
+        files: ['**/*.@(spec|test).[jt]s?(x)'],
+        plugins: {
+            ...jestConfig.plugins,
+            ...hasEslintPlugin('jest-dom') ? jestDomConfig.plugins : {},
+            ...hasEslintPlugin('testing-library') ? testingLibraryConfig.plugins : {},
+        },
+        rules: {
+            ...jestConfig.rules,
+            ...hasEslintPlugin('jest-dom') ? jestDomConfig.rules : {},
+            ...hasEslintPlugin('testing-library') ? testingLibraryConfig.rules : {},
+            '@typescript-eslint/ban-ts-comment': ['error', {
+                'ts-expect-error': 'allow-with-description',
+                'ts-ignore': true,
+                'ts-nocheck': true,
+                'ts-check': false,
+            }],
+            '@typescript-eslint/init-declarations': 'off',
+            // See "jest/unbound-method"
+            '@typescript-eslint/unbound-method': 'off',
+            'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
+            'import/no-unassigned-import': ['error', {
+                allow: [
+                    '@testing-library/jest-dom',
+                    '@testing-library/jest-dom/extend-expect',
+                ],
+            }],
+            // There can be 4 levels of `describe()`: Class -> Method -> Method Signature -> "When...",
+            // followed by a level for `it()`.
+            // The 6th level (inside of `it()`) can be required for a callback to test `toThrow()`.
+            'max-nested-callbacks': ['error', 6],
+            'n/no-unpublished-import': ['error', {
+                // Required in devDependencies.
+                allowModules: ['@jest/globals'],
+            }],
+            // Conflicts with func-style inside describe()
+            'prefer-arrow/prefer-arrow-functions': 'off',
+            // In tests the last step of a Promise is to run "expect".
+            // TODO: This rule can be improved by allowing configuring functions when Promise<void> is expected.
+            'promise/always-return': 'off',
+            // Passing promise is required for async testing
+            'rxjs/no-topromise': 'off',
+        },
+    } : null,
+    // eslint-disable-next-line @stylistic/js/multiline-ternary -- temporary
+    hasEslintPlugin('cypress') ? {
+        // The /cypress directory is used in the Cypress docs:
+        //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
+        // Integrations for Cypress are shown with ".spec.js",
+        //  but that would conflict with Jest configuration above,
+        //  so skipping them until it's possible to add directory configuration for Jest rules.
+        files: ['cypress/**/*.[jt]s'],
+        env: {
+            'cypress/globals': true,
+        },
+        plugins: {
+            ...cypressOptionalConfig.plugins,
+        },
+        rules: {
+            ...cypressOptionalConfig.rules,
+            // Tests may declare variables that are set only by beforeEach/beforeAll functions.
+            'init-declarations': 'off',
+            '@typescript-eslint/init-declarations': 'off',
+            'import/no-extraneous-dependencies': ['error', cypressImportNoExtraneousDependencies()],
+            'max-nested-callbacks': ['error', 4],
+            'new-cap': ['error', {
+                // These are functions from cypress-cucumber-preprocessor/steps
+                capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
+            }],
+        },
+    } : null,
+].filter(Boolean);

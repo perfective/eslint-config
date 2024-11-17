@@ -1,7 +1,11 @@
-export = {
-    plugins: [
-        'array-func',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginArrayFunc from 'eslint-plugin-array-func';
+
+// eslint-disable-next-line unicorn/prevent-abbreviations -- plugin name
+export const arrayFuncConfig = {
+    plugins: {
+        'array-func': eslintPluginArrayFunc,
+    },
     rules: {
         'array-func/from-map': 'warn',
         'array-func/no-unnecessary-this-arg': 'error',

@@ -1,7 +1,13 @@
-export = {
-    plugins: [
-        'jsdoc',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginJsdoc from 'eslint-plugin-jsdoc';
+
+export const jsdocConfig = {
+    plugins: {
+        jsdoc: {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- safe assertion
+            rules: eslintPluginJsdoc.default.configs['flat/recommended'].plugins!['jsdoc'].rules,
+        },
+    },
     settings: {
         jsdoc: {
             tagNamePreference: {

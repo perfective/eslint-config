@@ -1,9 +1,12 @@
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginUnicorn from 'eslint-plugin-unicorn';
+
 import { unicornPreventAbbreviations } from './rules/prevent-abbreviations';
 
-export = {
-    plugins: [
-        'unicorn',
-    ],
+export const unicornConfig = {
+    plugins: {
+        unicorn: eslintPluginUnicorn,
+    },
     rules: {
         'unicorn/better-regex': 'warn',
         'unicorn/catch-error-name': 'warn',

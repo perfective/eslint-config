@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        'n',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginN from 'eslint-plugin-n';
+
+export const nConfig = {
+    plugins: {
+        n: eslintPluginN,
+    },
     rules: {
         'n/callback-return': ['error', ['callback', 'cb', 'next']],
         'n/exports-style': ['warn', 'module.exports', { allowBatchAssign: false }],

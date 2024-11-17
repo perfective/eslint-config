@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        'testing-library',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
+
+export const testingLibraryConfig = {
+    plugins: {
+        'testing-library': eslintPluginTestingLibrary,
+    },
     rules: {
         'testing-library/await-async-events': 'off',
         'testing-library/await-async-queries': 'error',

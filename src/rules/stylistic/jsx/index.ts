@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        '@stylistic/jsx',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginStylisticJsx from '@stylistic/eslint-plugin-jsx';
+
+export const stylisticJsxConfig = {
+    plugins: {
+        '@stylistic/jsx': eslintPluginStylisticJsx,
+    },
     rules: {
         '@stylistic/jsx/jsx-child-element-spacing': 'error',
         '@stylistic/jsx/jsx-closing-bracket-location': ['warn', {
@@ -43,7 +46,7 @@ export = {
         '@stylistic/jsx/jsx-one-expression-per-line': ['warn', {
             allow: 'single-child',
         }],
-        '@stylistic/jsx/pascal-case': ['error', {
+        '@stylistic/jsx/jsx-pascal-case': ['error', {
             allowAllCaps: false,
             allowLeadingUnderscore: false,
             allowNamespace: false,

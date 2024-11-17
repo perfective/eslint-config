@@ -39,8 +39,6 @@
         "@stylistic/eslint-plugin-jsx": "^2.10.1",
         "@stylistic/eslint-plugin-plus": "^2.10.1",
         "@stylistic/eslint-plugin-ts": "^2.10.1",
-        "@typescript-eslint/eslint-plugin": "^8.14.0",
-        "@typescript-eslint/parser": "^8.14.0",
         "eslint": "^8.57.1",
         "eslint-import-resolver-typescript": "^3.6.3",
         "eslint-plugin-array-func": "^4.0.0",
@@ -57,7 +55,8 @@
         "eslint-plugin-security": "^3.0.1",
         "eslint-plugin-simple-import-sort": "^12.1.1",
         "eslint-plugin-testing-library": "^6.4.0",
-        "eslint-plugin-unicorn": "^56.0.0"
+        "eslint-plugin-unicorn": "^56.0.0",
+        "typescript-eslint": "^8.14.0"
     },
     "peerDependenciesMeta": {
         "eslint-plugin-cypress": {
@@ -86,9 +85,8 @@
         "@stylistic/eslint-plugin-jsx": "2.10.1",
         "@stylistic/eslint-plugin-plus": "2.10.1",
         "@stylistic/eslint-plugin-ts": "2.10.1",
+        "@types/eslint": "^8.56.12",
         "@types/jest": "^29.5.14",
-        "@typescript-eslint/eslint-plugin": "8.14.0",
-        "@typescript-eslint/parser": "8.14.0",
         "eslint": "8.57.1",
         "eslint-import-resolver-typescript": "3.6.3",
         "eslint-plugin-array-func": "4.0.0",
@@ -110,6 +108,7 @@
         "jest": "^29.7.0",
         "prettier": "~3.3.3",
         "ts-jest": "^29.2.5",
-        "typescript": "~5.6.3"
+        "typescript": "~5.6.3",
+        "typescript-eslint": "8.14.0"
     }
 }

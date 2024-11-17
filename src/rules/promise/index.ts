@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        'promise',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginPromise from 'eslint-plugin-promise';
+
+export const promiseConfig = {
+    plugins: {
+        promise: eslintPluginPromise,
+    },
     rules: {
         'promise/catch-or-return': 'error',
         'promise/no-return-wrap': 'error',

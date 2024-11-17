@@ -1,7 +1,10 @@
-export = {
-    plugins: [
-        'security',
-    ],
+// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
+import * as eslintPluginSecurity from 'eslint-plugin-security';
+
+export const securityConfig = {
+    plugins: {
+        security: eslintPluginSecurity,
+    },
     rules: {
         'security/detect-bidi-characters': 'error',
         'security/detect-buffer-noassert': 'error',
