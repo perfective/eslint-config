@@ -70,15 +70,11 @@ to enforce best practices for JavaScript promises.
 | Error
 
 
-| `link:{eslint-promise-rules}/spec-only.md[promise/spec-only]`
+| `link:{eslint-promise-rules}/prefer-await-to-callbacks.md[promise/prefer-await-to-callbacks]`
 |
 |
-| Error
-
-| `link:{eslint-promise-rules}/valid-params.md[promise/valid-params]`
-|
-|
-| Error
+| Off
+4+| Requires ES2017 `async`/`await`.
 
 | `link:{eslint-promise-rules}/prefer-await-to-then.md[promise/prefer-await-to-then]`
 |
@@ -88,10 +84,19 @@ to enforce best practices for JavaScript promises.
 and would be turned off either way,
 as Promises should be preferred.
 
-| `link:{eslint-promise-rules}/prefer-await-to-callbacks.md[promise/prefer-await-to-callbacks]`
+| `link:{eslint-promise-rules}/prefer-catch.md[promise/prefer-catch]`
 |
 |
-| Off
-4+| Requires ES2017 `async`/`await`.
+| Warning
+
+| `link:{eslint-promise-rules}/spec-only.md[promise/spec-only]`
+|
+|
+| Error
+
+| `link:{eslint-promise-rules}/valid-params.md[promise/valid-params]`
+|
+|
+| Error
 
 |===

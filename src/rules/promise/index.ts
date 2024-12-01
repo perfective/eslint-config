@@ -6,18 +6,29 @@ export const promiseConfig = {
         promise: eslintPluginPromise,
     },
     rules: {
-        'promise/catch-or-return': 'error',
+        'promise/catch-or-return': ['error', {
+            allowThen: false,
+            allowThenStrict: false,
+            allowFinally: true,
+        }],
         'promise/no-return-wrap': 'error',
         'promise/param-names': 'warn',
-        'promise/always-return': 'error',
+        'promise/always-return': ['error', {
+            ignoreAssignmentVariable: [
+                'globalThis',
+            ],
+        }],
         'promise/no-multiple-resolved': 'error',
         'promise/no-native': 'off',
         'promise/no-nesting': 'error',
         'promise/no-promise-in-callback': 'error',
-        'promise/no-callback-in-promise': 'error',
+        'promise/no-callback-in-promise': ['error', {
+            timeoutsErr: false,
+        }],
         'promise/avoid-new': 'off',
         'promise/no-new-statics': 'warn',
         'promise/no-return-in-finally': 'error',
+        'promise/prefer-catch': 'warn',
         'promise/spec-only': ['error', {
             allowedMethods: [],
         }],
