@@ -294,6 +294,10 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-unsafe-type-assertion/[@typescript-eslint/no-unsafe-type-assertion]`
+| Recommended
+| Error
+
 | `link:{ts-eslint-rules}/no-unsafe-unary-minus/[@typescript-eslint/no-unsafe-unary-minus]`
 |
 | Error
