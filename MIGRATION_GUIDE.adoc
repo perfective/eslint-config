@@ -9,12 +9,21 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.27.1` to `0.28.0`
+== From `v0.27.1` to `v0.28.0`
 
 * Remove obsolete peer dependencies:
 ** `@typescript-eslint/eslint-plugin` (replaced by `typescript-eslint`)
 ** `@typescript-eslint/parser`
 ** `eslint-plugin-sonarjs`
++
+* *Temporarily* install _optional_ dependencies:
++
+** `eslint-plugin-cypress`
+** `eslint-plugin-jest
+** `eslint-plugin-jest-dom`
+** `eslint-plugin-jest-formatting`
+** `eslint-plugin-rxjs`
+** `eslint-plugin-testing-library`
 +
 * Rename `.eslintrc.js` into `eslint.config.js`
 ** Change configuration structure.

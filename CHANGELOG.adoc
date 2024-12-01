@@ -15,6 +15,9 @@
 == v0.28.0
 
 * *Migrated to a flat config*.
+** Temporarily removed support for optional configs.
+All plugins are required.
++
 * *Using `typescript-eslint` package instead of `@typescript-eslint/*`*.
 +
 * Updated `typescript-eslint` to `8.16.0`:
