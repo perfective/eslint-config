@@ -1,9 +1,12 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginCypress from 'eslint-plugin-cypress';
+import * as eslintPluginCypress from 'eslint-plugin-cypress/flat';
 
 export const cypressOptionalConfig = {
     plugins: {
         cypress: eslintPluginCypress,
+    },
+    languageOptions: {
+        globals: eslintPluginCypress.configs.globals.languageOptions.globals,
     },
     rules: {
         'cypress/assertion-before-screenshot': 'error',

@@ -33,6 +33,10 @@ exports.default = gulp.series(
                 require: './config.js',
                 types: './config.d.ts',
             },
+            './cypress': {
+                require: './cypress.js',
+                types: './cypress.d.ts',
+            },
             './rules': {
                 require: './rules.js',
                 types: './rules.d.ts',

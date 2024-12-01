@@ -6,12 +6,10 @@ import * as babelParser from '@babel/eslint-parser';
 
 import { hasEslintPlugin } from './config/plugin';
 import { arrayFuncConfig as arrayFunctionConfig } from './rules/array-func';
-import { cypressOptionalConfig } from './rules/cypress';
 import { eslintConfig } from './rules/eslint';
 import { eslintCommentsConfig } from './rules/eslint-comments';
 import { importConfig } from './rules/import';
 import {
-    cypressImportNoExtraneousDependencies,
     jestImportNoExtraneousDependencies,
     jsImportNoExtraneousDependencies,
 } from './rules/import/rules/no-extraneous-dependencies';
@@ -212,33 +210,6 @@ export default [
             'promise/always-return': 'off',
             // Passing promise is required for async testing
             '@smarttools/rxjs/no-topromise': 'off',
-        },
-    } : null,
-    // eslint-disable-next-line @stylistic/js/multiline-ternary -- temporary
-    hasEslintPlugin('cypress') ? {
-        // The /cypress directory is used in the Cypress docs:
-        //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
-        // Integrations for Cypress are shown with ".spec.js",
-        //  but that would conflict with Jest configuration above,
-        //  so skipping them until it's possible to add directory configuration for Jest rules.
-        files: ['cypress/**/*.[jt]s'],
-        env: {
-            'cypress/globals': true,
-        },
-        plugins: {
-            ...cypressOptionalConfig.plugins,
-        },
-        rules: {
-            ...cypressOptionalConfig.rules,
-            // Tests may declare variables that are set only by beforeEach/beforeAll functions.
-            'init-declarations': 'off',
-            '@typescript-eslint/init-declarations': 'off',
-            'import/no-extraneous-dependencies': ['error', cypressImportNoExtraneousDependencies()],
-            'max-nested-callbacks': ['error', 4],
-            'new-cap': ['error', {
-                // These are functions from cypress-cucumber-preprocessor/steps
-                capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
-            }],
         },
     } : null,
 ].filter(Boolean);
