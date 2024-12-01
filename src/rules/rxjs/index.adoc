@@ -1,212 +1,129 @@
 = `rxjs`
-:eslint-rxjs-rules: https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules
+:eslint-rxjs-rules: https://github.com/DaveMBush/eslint-plugin-rxjs/blob/main/packages/eslint-plugin-rxjs/docs/rules
 
-The `link:https://github.com/cartant/eslint-plugin-rxjs[eslint-plugin-rxjs]` provides
+The `link:https://github.com/DaveMBush/eslint-plugin-rxjs[@smarttools/eslint-plugin-rxjs]` provides
 ESLint rules for https://rxjs.dev[RxJS].
 
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
-| `link:{eslint-rxjs-rules}/ban-observables.md[rxjs/ban-observables]`
-|
-|
+| `link:{eslint-rxjs-rules}/ban-observables.md[@smarttools/rxjs/ban-observables]`
 | Error
 
-| `link:{eslint-rxjs-rules}/ban-operators.md[rxjs/ban-operators]`
-|
-|
+| `link:{eslint-rxjs-rules}/ban-operators.md[@smarttools/rxjs/ban-operators]`
 | Error
 
-| `link:{eslint-rxjs-rules}/finnish.md[rxjs/finnish]`
-|
-|
+| `link:{eslint-rxjs-rules}/finnish.md[@smarttools/rxjs/finnish]`
 | Error
 
-| `link:{eslint-rxjs-rules}/just.md[rxjs/just]`
-|
-| Yes
+| `link:{eslint-rxjs-rules}/just.md[@smarttools/rxjs/just]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-async-subscribe.md[rxjs/no-async-subscribe]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-async-subscribe.md[@smarttools/rxjs/no-async-subscribe]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-compat.md[rxjs/no-compat]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-compat.md[@smarttools/rxjs/no-compat]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-connectable.md[rxjs/no-connectable]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-connectable.md[@smarttools/rxjs/no-connectable]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-create.md[rxjs/no-create]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-create.md[@smarttools/rxjs/no-create]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-cyclic-action.md[rxjs/no-cyclic-action]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-cyclic-action.md[@smarttools/rxjs/no-cyclic-action]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-explicit-generics.md[rxjs/no-explicit-generics]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-explicit-generics.md[@smarttools/rxjs/no-explicit-generics]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-exposed-subjects.md[rxjs/no-exposed-subjects]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-exposed-subjects.md[@smarttools/rxjs/no-exposed-subjects]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-finnish.md[rxjs/no-finnish]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-finnish.md[@smarttools/rxjs/no-finnish]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-ignored-error.md[rxjs/no-ignored-error]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-ignored-error.md[@smarttools/rxjs/no-ignored-error]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-ignored-notifier.md[rxjs/no-ignored-notifier]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-ignored-notifier.md[@smarttools/rxjs/no-ignored-notifier]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-ignored-observable.md[rxjs/no-ignored-observable]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-ignored-observable.md[@smarttools/rxjs/no-ignored-observable]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-ignored-replay-buffer.md[rxjs/no-ignored-replay-buffer]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-ignored-replay-buffer.md[@smarttools/rxjs/no-ignored-replay-buffer]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-ignored-subscribe.md[rxjs/no-ignored-subscribe]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-ignored-subscribe.md[@smarttools/rxjs/no-ignored-subscribe]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-ignored-subscription.md[rxjs/no-ignored-subscription]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-ignored-subscription.md[@smarttools/rxjs/no-ignored-subscription]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-ignored-takewhile-value.md[rxjs/no-ignored-takewhile-value]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-ignored-takewhile-value.md[@smarttools/rxjs/no-ignored-takewhile-value]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-implicit-any-catch.md[rxjs/no-implicit-any-catch]`
-| Yes
-| Yes
+| `link:{eslint-rxjs-rules}/no-implicit-any-catch.md[@smarttools/rxjs/no-implicit-any-catch]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-index.md[rxjs/no-index]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-index.md[@smarttools/rxjs/no-index]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-internal.md[rxjs/no-internal]`
-| Yes
-| Yes
+| `link:{eslint-rxjs-rules}/no-internal.md[@smarttools/rxjs/no-internal]`
 | Warning
 
-| `link:{eslint-rxjs-rules}/no-nested-subscribe.md[rxjs/no-nested-subscribe]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-nested-subscribe.md[@smarttools/rxjs/no-nested-subscribe]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-redundant-notify.md[rxjs/no-redundant-notify]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-redundant-notify.md[@smarttools/rxjs/no-redundant-notify]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-sharereplay.md[rxjs/no-sharereplay]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-sharereplay.md[@smarttools/rxjs/no-sharereplay]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-subclass.md[rxjs/no-subclass]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-subclass.md[@smarttools/rxjs/no-subclass]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-subject-unsubscribe.md[rxjs/no-subject-unsubscribe]`
-| Yes
-|
+| `link:{eslint-rxjs-rules}/no-subject-unsubscribe.md[@smarttools/rxjs/no-subject-unsubscribe]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-subject-value.md[rxjs/no-subject-value]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-subject-value.md[@smarttools/rxjs/no-subject-value]`
 | Error
 
-| `link:{eslint-rxjs-rules}/no-subject-value.md[rxjs/no-subscribe-handlers]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-subscribe-handlers.md[@smarttools/rxjs/no-subscribe-handlers]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-tap.md[rxjs/no-tap]`
-|
-|
+| `link:{eslint-rxjs-rules}/no-topromise.md[@smarttools/rxjs/no-topromise]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unbound-methods.md[@smarttools/rxjs/no-unbound-methods]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unsafe-catch.md[@smarttools/rxjs/no-unsafe-catch]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unsafe-first.md[@smarttools/rxjs/no-unsafe-first]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unsafe-subject-next.md[@smarttools/rxjs/no-unsafe-subject-next]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unsafe-switchmap.md[@smarttools/rxjs/no-unsafe-switchmap]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unsafe-takeuntil.md[@smarttools/rxjs/no-unsafe-takeuntil]`
+| Error
+
+| `link:{eslint-rxjs-rules}/prefer-observer.md[@smarttools/rxjs/prefer-observer]`
 | Off
 
-| `link:{eslint-rxjs-rules}/no-topromise.md[rxjs/no-topromise]`
-|
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/no-unbound-methods.md[rxjs/no-unbound-methods]`
-| Yes
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/no-unsafe-catch.md[rxjs/no-unsafe-catch]`
-|
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/no-unsafe-first.md[rxjs/no-unsafe-first]`
-|
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/no-unsafe-subject-next.md[rxjs/no-unsafe-subject-next]`
-| Yes
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/no-unsafe-switchmap.md[rxjs/no-unsafe-switchmap]`
-|
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/no-unsafe-takeuntil.md[rxjs/no-unsafe-takeuntil]`
-| Yes
-|
-| Error
-
-| `link:{eslint-rxjs-rules}/prefer-observer.md[rxjs/prefer-observer]`
-|
-|
+| `link:{eslint-rxjs-rules}/suffix-subjects.md[@smarttools/rxjs/suffix-subjects]`
 | Off
 
-| `link:{eslint-rxjs-rules}/suffix-subjects.md[rxjs/suffix-subjects]`
-|
-|
-| Off
-
-| `link:{eslint-rxjs-rules}/throw-error.md[rxjs/throw-error]`
-|
-|
+| `link:{eslint-rxjs-rules}/throw-error.md[@smarttools/rxjs/throw-error]`
 | Error
 
 |===

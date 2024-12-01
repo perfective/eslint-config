@@ -1,3 +1,3 @@
-declare module 'eslint-plugin-rxjs' {
+declare module '@smarttools/eslint-plugin-rxjs' {
     const rules: Record<string, unknown>;
 }

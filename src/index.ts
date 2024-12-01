@@ -137,7 +137,7 @@ export default [
         plugins: {
             ...typescriptEslintConfig.plugins,
             ...stylisticTsConfig.plugins,
-            ...hasEslintPlugin('rxjs') ? rxjsConfig.plugins : {},
+            ...hasEslintPlugin('@smarttools/rxjs') ? rxjsConfig.plugins : {},
         },
         settings: {
             'import/parsers': {
@@ -156,7 +156,7 @@ export default [
         rules: {
             ...typescriptEslintConfig.rules,
             ...stylisticTsConfig.rules,
-            ...hasEslintPlugin('rxjs') ? rxjsConfig.rules : {},
+            ...hasEslintPlugin('@smarttools/rxjs') ? rxjsConfig.rules : {},
         },
     },
     {
@@ -211,7 +211,7 @@ export default [
             // TODO: This rule can be improved by allowing configuring functions when Promise<void> is expected.
             'promise/always-return': 'off',
             // Passing promise is required for async testing
-            'rxjs/no-topromise': 'off',
+            '@smarttools/rxjs/no-topromise': 'off',
         },
     } : null,
     // eslint-disable-next-line @stylistic/js/multiline-ternary -- temporary
