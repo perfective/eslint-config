@@ -82,7 +82,9 @@ export const eslintSuggestionsRules = {
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'warn',
-    'no-extra-boolean-cast': 'warn',
+    'no-extra-boolean-cast': ['warn', {
+        enforceForInnerExpressions: true,
+    }],
     'no-extra-label': 'warn',
     // Deprecated. Use https://eslint.style/rules/js/no-extra-semi.
     'no-extra-semi': 'off',

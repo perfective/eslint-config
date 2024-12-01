@@ -30,7 +30,10 @@ export const eslintPossibleProblemsRules = {
     'no-empty-character-class': 'error',
     'no-empty-pattern': 'error',
     'no-ex-assign': 'error',
-    'no-fallthrough': 'error',
+    'no-fallthrough': ['error', {
+        allowEmptyCase: false,
+        reportUnusedFallthroughComment: true,
+    }],
     'no-func-assign': 'error',
     'no-import-assign': 'error',
     'no-inner-declarations': 'error',
@@ -44,7 +47,9 @@ export const eslintPossibleProblemsRules = {
         skipJSXText: false,
     }],
     'no-loss-of-precision': 'error',
-    'no-misleading-character-class': 'error',
+    'no-misleading-character-class': ['error', {
+        allowEscape: false,
+    }],
     'no-new-native-nonconstructor': 'error',
     'no-new-symbol': 'error',
     'no-obj-calls': 'error',
@@ -71,7 +76,9 @@ export const eslintPossibleProblemsRules = {
         argsIgnorePattern: '^_',
         caughtErrors: 'all',
         destructuredArrayIgnorePattern: '^_',
+        ignoreClassWithStaticInitBlock: false,
         ignoreRestSiblings: false,
+        reportUsedIgnorePattern: false,
         vars: 'all',
     }],
     'no-use-before-define': ['error', {
@@ -81,6 +88,7 @@ export const eslintPossibleProblemsRules = {
         allowNamedExports: false,
     }],
     'no-useless-backreference': 'error',
+    'no-useless-assignment': 'error',
     'require-atomic-updates': ['error', {
         allowProperties: false,
     }],
