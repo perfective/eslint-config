@@ -10,22 +10,22 @@ In addition to the core [ESLint rules](https://eslint.org/docs/latest/rules/),
 and [ESlint Stylistic](https://eslint.style) plugin rules,
 `@perfective/eslint-config` includes configurations for the ESLint plugins:
 
--   [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
--   [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress) _(optional)_;
--   [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments/);
--   [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
--   [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest) _(optional)_;
--   [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom) _(optional)_;
--   [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
--   [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n);
--   [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
--   [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
--   [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
--   [`eslint-plugin-security`](https://github.com/eslint-community/eslint-plugin-security);
--   [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
--   [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
--   [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library) _(optional)_;
--   [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn).
+- [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
+- [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress) _(optional)_;
+- [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments/);
+- [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
+- [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest) _(optional)_;
+- [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom) _(optional)_;
+- [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc);
+- [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n);
+- [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
+- [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
+- [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
+- [`eslint-plugin-security`](https://github.com/eslint-community/eslint-plugin-security);
+- [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
+- [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
+- [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library) _(optional)_;
+- [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn).
 
 To simplify configuring ESLint support in the IDEs and editors,
 the severity of all fixable rules is a `warning`.
