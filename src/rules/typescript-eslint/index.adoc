@@ -296,7 +296,9 @@ Empty interfaces are allowed.
 
 | `link:{ts-eslint-rules}/no-unsafe-type-assertion/[@typescript-eslint/no-unsafe-type-assertion]`
 | Recommended
-| Error
+| Off
+3+| Does not handle function overloads,
+and in general, type assertions are only needed when they _are_ unsafe.
 
 | `link:{ts-eslint-rules}/no-unsafe-unary-minus/[@typescript-eslint/no-unsafe-unary-minus]`
 |

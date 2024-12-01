@@ -216,7 +216,8 @@ export const supportedRules = {
     '@typescript-eslint/no-unsafe-function-type': 'warn',
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
-    '@typescript-eslint/no-unsafe-type-assertion': 'error',
+    // Type assertions are only needed when they are unsafe, because they hint the types that compiler cannot deduce.
+    '@typescript-eslint/no-unsafe-type-assertion': 'off',
     '@typescript-eslint/no-unsafe-unary-minus': 'error',
     '@typescript-eslint/no-useless-empty-export': 'warn',
     // Deprecated. Use @typescript-eslint/no-useless-template-expressions instead.
