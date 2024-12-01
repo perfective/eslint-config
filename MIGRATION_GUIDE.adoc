@@ -9,6 +9,51 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.27.1` to `0.28.0`
+
+* Remove obsolete peer dependencies:
+** `@typescript-eslint/eslint-plugin` (replaced by `typescript-eslint`)
+** `@typescript-eslint/parser`
+** `eslint-plugin-sonarjs`
++
+* Rename `.eslintrc.js` into `eslint.config.js`
+** Change configuration structure.
++
+.Before
+[source,javascript]
+----
+module.exports = {
+extends: [
+    '@perfective/eslint-config',
+],
+----
++
+.After
+[source,javascript]
+----
+const perfectiveEslintConfig = require('@perfective/eslint-config');
+
+module.exports = perfectiveEslintConfig.default;
+----
++
+* Disable and gradually enable new rules in the `eslint.config.js`.
++
+[source,javascript]
+----
+const perfectiveEslintConfig = require('@perfective/eslint-config');
+
+module.exports = [
+    ...perfectiveEslintConfig.default,
+    {
+        files: ['**/*.[jt]s?(x)'],
+        rules: {
+            'promise/prefer-catch': 'off',
+        },
+    },
+];
+----
+
+
 == From `v0.26.1` to `v0.27.1`
 
 * Remove obsolete peer dependencies:

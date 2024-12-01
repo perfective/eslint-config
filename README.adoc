@@ -23,7 +23,6 @@ and https://eslint.style[ESLint Stylistic] plugin rules,
 * `link:https://github.com/cartant/eslint-plugin-rxjs[eslint-plugin-rxjs]` _(optional)_;
 * `link:https://github.com/eslint-community/eslint-plugin-security[eslint-plugin-security]`;
 * `link:https://github.com/lydell/eslint-plugin-simple-import-sort[eslint-plugin-simple-import-sort]`;
-* `link:https://github.com/SonarSource/eslint-plugin-sonarjs[eslint-plugin-sonarjs]`;
 * `link:https://github.com/testing-library/eslint-plugin-testing-library[eslint-plugin-testing-library]` _(optional)_;
 * `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-unicorn]`.
 
@@ -47,8 +46,6 @@ npm install --save-dev \
     @stylistic/eslint-plugin-jsx \
     @stylistic/eslint-plugin-ts \
     @stylistic/eslint-plugin-plus \
-    @typescript-eslint/eslint-plugin \
-    @typescript-eslint/parser \
     eslint \
     eslint-import-resolver-typescript \
     eslint-plugin-array-func \
@@ -60,8 +57,8 @@ npm install --save-dev \
     eslint-plugin-promise \
     eslint-plugin-security \
     eslint-plugin-simple-import-sort \
-    eslint-plugin-sonarjs \
-    eslint-plugin-unicorn
+    eslint-plugin-unicorn \
+    typescript-eslint
 ----
 +
 . Install optional peer dependencies that add linting rules for the tools you use.
@@ -79,15 +76,13 @@ npm install --save-dev \
 The `@perfective/eslint-config` automatically includes rules for these plugins,
 if the dependency is installed.
 +
-. Require the configuration in your root `.eslintrc.js`.
+. Require the configuration in your root `eslint.config.js`.
 +
 [source,javascript]
 ----
-module.exports = {
-    extends: [
-        '@perfective/eslint-config',
-    ],
-};
+const perfectiveEslintConfig = require('@perfective/eslint-config');
+
+module.exports = perfectiveEslintConfig.default;
 ----
 +
 . `*.d.ts` files and `dist` directories are ignored by the configuration.
@@ -107,20 +102,24 @@ and is simplified by the custom config functions.
 These functions and related types are exported in `@perfective/eslint-config/rules`
 and match the rule name in `camelCase`.
 If you need an extended configuration,
-you can use these functions in the `.eslintrc.js` file:
+you can use these functions in the `eslint.config.js` file:
 
 [source,javascript]
 ----
+const perfectiveEslintConfig = require('@perfective/eslint-config');
 const rules = require('@perfective/eslint-config/rules'); // <.>
 
-module.exports = {
-    extends: ['@perfective/eslint-config'],
-    rules: {
-        'simple-import-sort/imports': ['warn', rules.simpleImportSortImports([
-            '@perfective',
-        ])],
+module.exports = [
+    ...perfectiveEslintConfig.default,
+    {
+        files: ['**/*.[jt]s?(x)'],
+        rules: {
+            'simple-import-sort/imports': ['warn', rules.simpleImportSortImports([
+                '@perfective',
+            ])],
+        },
     },
-};
+];
 ----
 <1> Framework-specific packages, based on `@perfective/eslint-config`, re-export all the rules.
 So rules should be required from those packages for correct `node_modules` resolution.

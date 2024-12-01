@@ -11,6 +11,29 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+
+== v0.28.0
+
+* *Migrated to a flat config*.
+* *Using `typescript-eslint` package instead of `@typescript-eslint/*`*.
++
+* Updated `typescript-eslint` to `8.16.0`:
+** *Supports TypeScript v5.7.*
++
+* Updated `@stylistic/eslint-plugin` to `2.11.0`.
+* Updated `eslint-plugin-jest-dom` to `5.5.0`.
+* Updated `eslint-plugin-jsdoc` to `50.6.0`.
+* Updated `eslint-plugin-n` to `17.14.0`.
++
+* Updated `eslint-plugin-promise` to `7.2.1`.
+** Enabled the `link:{eslint-promise-rules}/prefer-catch.md[promise/prefer-catch]` rule as a warning.
++
+* Upgraded `eslint-plugin-testing-library` to `7.0.0`.
+* Patched `eslint-plugin-unicorn` to `56.0.1`.
++
+* Removed `eslint-plugin-sonarjs`.
+
+
 == v0.27.1
 
 * Updated `eslint-plugin-jsdoc` to `50.5.0`.

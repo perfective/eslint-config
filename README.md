@@ -23,7 +23,6 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 - [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
 - [`eslint-plugin-security`](https://github.com/eslint-community/eslint-plugin-security);
 - [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
-- [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs);
 - [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library) _(optional)_;
 - [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn).
 
@@ -45,8 +44,6 @@ from issues that will be fixed automatically.
         @stylistic/eslint-plugin-jsx \
         @stylistic/eslint-plugin-ts \
         @stylistic/eslint-plugin-plus \
-        @typescript-eslint/eslint-plugin \
-        @typescript-eslint/parser \
         eslint \
         eslint-import-resolver-typescript \
         eslint-plugin-array-func \
@@ -58,8 +55,8 @@ from issues that will be fixed automatically.
         eslint-plugin-promise \
         eslint-plugin-security \
         eslint-plugin-simple-import-sort \
-        eslint-plugin-sonarjs \
-        eslint-plugin-unicorn
+        eslint-plugin-unicorn \
+        typescript-eslint
     ```
 
 2. Install optional peer dependencies that add linting rules for the tools you use.
@@ -76,10 +73,10 @@ from issues that will be fixed automatically.
     The `@perfective/eslint-config` automatically includes rules for these plugins,
     if the dependency is installed.
 
-3. Require the configuration in your root `.eslintrc.js`.
+3. Require the configuration in your root `eslint.config.js`.
 
     ```javascript
-    module.exports = {
-        extends: ['@perfective/eslint-config'],
-    };
+    const perfectiveEslintConfig = require('@perfective/eslint-config');
+
+    module.exports = perfectiveEslintConfig.default;
     ```
