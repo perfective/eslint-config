@@ -19,7 +19,6 @@ import { jsdocConfig } from './rules/jsdoc';
 import { nConfig } from './rules/n';
 import { preferArrowConfig } from './rules/prefer-arrow';
 import { promiseConfig } from './rules/promise';
-import { rxjsConfig } from './rules/rxjs';
 import { securityConfig } from './rules/security';
 import { simpleImportSortConfig } from './rules/simple-import-sort';
 import { stylisticJsConfig } from './rules/stylistic/js';
@@ -135,7 +134,6 @@ export default [
         plugins: {
             ...typescriptEslintConfig.plugins,
             ...stylisticTsConfig.plugins,
-            ...hasEslintPlugin('@smarttools/rxjs') ? rxjsConfig.plugins : {},
         },
         settings: {
             'import/parsers': {
@@ -154,7 +152,6 @@ export default [
         rules: {
             ...typescriptEslintConfig.rules,
             ...stylisticTsConfig.rules,
-            ...hasEslintPlugin('@smarttools/rxjs') ? rxjsConfig.rules : {},
         },
     },
     {

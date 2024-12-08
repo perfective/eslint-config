@@ -3,7 +3,8 @@ import { describe, expect, it } from '@jest/globals';
 import {
     cypressImportNoExtraneousDependencies,
     ImportNoExtraneousDependencies,
-    importNoExtraneousDependencies, jestImportNoExtraneousDependencies,
+    importNoExtraneousDependencies,
+    jestImportNoExtraneousDependencies,
     jsImportNoExtraneousDependencies,
 } from './no-extraneous-dependencies';
 

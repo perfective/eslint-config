@@ -41,6 +41,10 @@ exports.default = gulp.series(
                 require: './rules.js',
                 types: './rules.d.ts',
             },
+            './rxjs': {
+                require: './rxjs.js',
+                types: './rxjs.d.ts',
+            },
         },
     }),
     build.copy([
