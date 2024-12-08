@@ -33,17 +33,23 @@ exports.default = gulp.series(
                 require: './config.js',
                 types: './config.d.ts',
             },
-            './cypress': {
-                require: './cypress.js',
-                types: './cypress.d.ts',
-            },
             './rules': {
                 require: './rules.js',
                 types: './rules.d.ts',
             },
+            // Optional plugins.
+            // Each plugin must be in a separate export, so it does not fail when the plugin is not installed.
+            './cypress': {
+                require: './cypress.js',
+                types: './cypress.d.ts',
+            },
             './rxjs': {
                 require: './rxjs.js',
                 types: './rxjs.d.ts',
+            },
+            './testing-library': {
+                require: './testing-library.js',
+                types: './testing-library.d.ts',
             },
         },
     }),

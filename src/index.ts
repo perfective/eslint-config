@@ -25,7 +25,6 @@ import { stylisticJsConfig } from './rules/stylistic/js';
 import { stylisticJsxConfig } from './rules/stylistic/jsx';
 import { stylisticPlusConfig } from './rules/stylistic/plus';
 import { stylisticTsConfig } from './rules/stylistic/ts';
-import { testingLibraryConfig } from './rules/testing-library';
 import { typescriptEslintConfig } from './rules/typescript-eslint';
 import { unicornConfig } from './rules/unicorn';
 
@@ -170,12 +169,10 @@ export default [
         plugins: {
             ...jestConfig.plugins,
             ...hasEslintPlugin('jest-dom') ? jestDomConfig.plugins : {},
-            ...hasEslintPlugin('testing-library') ? testingLibraryConfig.plugins : {},
         },
         rules: {
             ...jestConfig.rules,
             ...hasEslintPlugin('jest-dom') ? jestDomConfig.rules : {},
-            ...hasEslintPlugin('testing-library') ? testingLibraryConfig.rules : {},
             '@typescript-eslint/ban-ts-comment': ['error', {
                 'ts-expect-error': 'allow-with-description',
                 'ts-ignore': true,
