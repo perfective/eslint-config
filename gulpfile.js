@@ -43,6 +43,10 @@ exports.default = gulp.series(
                 require: './cypress.js',
                 types: './cypress.d.ts',
             },
+            './jest-dom': {
+                require: './jest-dom.js',
+                types: './jest-dom.d.ts',
+            },
             './rxjs': {
                 require: './rxjs.js',
                 types: './rxjs.d.ts',

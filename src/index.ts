@@ -14,7 +14,6 @@ import {
     jsImportNoExtraneousDependencies,
 } from './rules/import/rules/no-extraneous-dependencies';
 import { jestConfig } from './rules/jest';
-import { jestDomConfig } from './rules/jest-dom';
 import { jsdocConfig } from './rules/jsdoc';
 import { nConfig } from './rules/n';
 import { preferArrowConfig } from './rules/prefer-arrow';
@@ -168,11 +167,9 @@ export default [
         files: ['**/*.@(spec|test).[jt]s?(x)'],
         plugins: {
             ...jestConfig.plugins,
-            ...hasEslintPlugin('jest-dom') ? jestDomConfig.plugins : {},
         },
         rules: {
             ...jestConfig.rules,
-            ...hasEslintPlugin('jest-dom') ? jestDomConfig.rules : {},
             '@typescript-eslint/ban-ts-comment': ['error', {
                 'ts-expect-error': 'allow-with-description',
                 'ts-ignore': true,
