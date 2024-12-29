@@ -61,21 +61,6 @@ npm install --save-dev \
     typescript-eslint
 ----
 +
-. Install optional peer dependencies that add linting rules for the tools you use.
-+
-[source,bash]
-----
-npm install --save-dev \
-    eslint-plugin-cypress \
-    eslint-plugin-jest \
-    eslint-plugin-jest-dom \
-    eslint-plugin-rxjs \
-    eslint-plugin-testing-library
-----
-+
-The `@perfective/eslint-config` automatically includes rules for these plugins,
-if the dependency is installed.
-+
 . Require the configuration in your root `eslint.config.js`.
 +
 [source,javascript]
@@ -89,7 +74,39 @@ module.exports = perfectiveEslintConfig.default;
 `node_modules` and dot-files are ignored by the `eslint`.
 If more directories or file types need to be ignored, see the
 `link:https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file[.eslintignore]` file docs.
++
+. Install optional peer dependencies that add linting rules for the tools you use.
++
+[source,bash]
+----
+npm install --save-dev \
+    @smarttools/eslint-plugin-rxjs \
+    eslint-plugin-cypress \
+    eslint-plugin-jest \
+    eslint-plugin-jest-dom \
+    eslint-plugin-testing-library
+----
++
+. Add optional configurations to your root `eslint.config.js`.
++
+[source,javascript]
+----
+const perfectiveEslintConfig = require('@perfective/eslint-config');
+const perfectiveCypressConfig = require('@perfective/eslint-config/cypress');
+const perfectiveJestConfig = require('@perfective/eslint-config/jest');
+const perfectiveJestDomConfig = require('@perfective/eslint-config/jesd-dom');
+const perfectiveRxjsConfig = require('@perfective/eslint-config/rxjs');
+const perfectiveTestingLibraryConfig = require('@perfective/eslint-config/testing-library');
 
+module.exports = [
+    ...perfectiveEslintConfig.default,
+    perfectiveCypressConfig.cypressConfig(),
+    perfectiveJestConfig.jestConfig(),
+    perfectiveJestDomConfig.jestDomConfig(),
+    perfectiveRxjsConfig.rxjsConfig(),
+    perfectiveTestingLibraryConfig.testingLibrarysConfig(),
+];
+----
 
 == Rules Configuration Extension Functions
 
@@ -135,22 +152,3 @@ for the `simple-import-sort/imports` rule.
 * `unicornPreventAbbreviations(replacements, options)`
 — extends and overrides the list of `replacements`
 and `options` for the `unicorn/prevent-abbreviation` rule.
-
-
-== Internals
-
-The rules for each plugin are described in the `./src/rules/{plugin}` subdirectories,
-where the `{plugin}` is the name of the plugin (after the `eslint-plugin-` prefix).
-Each configuration is exported from the `./index.ts` file
-and is organized as a partial ESLint config.
-It should contain the plugin name and the list of the rules, sorted alphabetically.
-When a plugin's documentation groups rules,
-each group is configured in a separate file
-and then extended in the `./index.ts` file.
-
-The final configuration extends each plugin configuration on a file-type basis.
-
-
-== Roadmap
-
-* Add the `@perfective/eslint-plugin` with the rules for working with the `@perfective` packages.

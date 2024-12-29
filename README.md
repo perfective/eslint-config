@@ -59,24 +59,44 @@ from issues that will be fixed automatically.
         typescript-eslint
     ```
 
-2. Install optional peer dependencies that add linting rules for the tools you use.
+2. Require the configuration in your root `eslint.config.js`.
+
+    ```javascript
+    const perfectiveEslintConfig = require('@perfective/eslint-config');
+
+    module.exports = perfectiveEslintConfig.default;
+    ```
+
+3. Install optional peer dependencies that add linting rules for the tools you use.
 
     ```bash
     npm install --save-dev \
+        @smarttools/eslint-plugin-rxjs \
         eslint-plugin-cypress \
         eslint-plugin-jest \
         eslint-plugin-jest-dom \
-        eslint-plugin-rxjs \
         eslint-plugin-testing-library
     ```
 
     The `@perfective/eslint-config` automatically includes rules for these plugins,
     if the dependency is installed.
 
-3. Require the configuration in your root `eslint.config.js`.
+4. Add optional configurations to your root `eslint.config.js`.
 
     ```javascript
     const perfectiveEslintConfig = require('@perfective/eslint-config');
+    const perfectiveCypressConfig = require('@perfective/eslint-config/cypress');
+    const perfectiveJestConfig = require('@perfective/eslint-config/jest');
+    const perfectiveJestDomConfig = require('@perfective/eslint-config/jesd-dom');
+    const perfectiveRxjsConfig = require('@perfective/eslint-config/rxjs');
+    const perfectiveTestingLibraryConfig = require('@perfective/eslint-config/testing-library');
 
-    module.exports = perfectiveEslintConfig.default;
+    module.exports = [
+        ...perfectiveEslintConfig.default,
+        perfectiveCypressConfig.cypressConfig(),
+        perfectiveJestConfig.jestConfig(),
+        perfectiveJestDomConfig.jestDomConfig(),
+        perfectiveRxjsConfig.rxjsConfig(),
+        perfectiveTestingLibraryConfig.testingLibrarysConfig(),
+    ];
     ```

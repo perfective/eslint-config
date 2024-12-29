@@ -8,9 +8,36 @@
 :eslint-jsdoc-rules: https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules
 :eslint-n-rules: https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules
 :eslint-promise-rules: https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules
+:eslint-rxjs-rules: https://github.com/DaveMBush/eslint-plugin-rxjs/blob/main/packages/eslint-plugin-rxjs/docs/rules
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.29.0
+
+* Replaced `eslint-plugin-rxjs` with `link:https://github.com/DaveMBush/eslint-plugin-rxjs[@smarttools/eslint-plugin-rxjs]` `1.0.9`.
+** Version `1.0.9` is hardcoded, due to compilation error with `@typescript-eslint` types.
++
+* Reinstated support for optional configs:
+** Added optional `cypressConfig()` for `eslint-plugin-cypress`.
+** Added optional `rxjsConfig()` for `@smarttools/eslint-plugin-rxjs`.
+** Added optional `testingLibraryConfig()` for `eslint-plugin-testing-library`.
+** Added optional `jestDomConfig()` for `eslint-plugin-jest-dom`.
+** Added optional `jestConfig` for `eslint-plugin-jest`.
+** Removed `optionalConfig()`, `optionalOverrides()`, and `optionalRules()` functions.
++
+* Upgraded `eslint` to `9.17.0`:
+** Enabled `link:{eslint-rules}/no-useless-assignment[no-useless-assignment]` as an error.
++
+* Updated `typescript-eslint` to `8.18.2`.
+** Required `@typedcript-eslint/utils` as a peer dependency to resolve compilation error.
++
+* Upgraded `eslint-plugin-cypress` to `4.1.0`.
+* Updated `eslint-import-resolver-typescript` to `3.7.0`.
+* Updated `@stylistic` to `2.12.1`.
+* Updated `eslint-plugin-jest` to `28.10.0`.
+* Updated `eslint-plugin-n` to `17.15.1`.
+* Updated `eslint-plugin-testing-library` to `7.1.1`.
+* Patched `eslint-plugin-jsdoc` to `50.6.1`.
 
 == v0.28.0
 
