@@ -19,15 +19,13 @@ exports.default = gulp.series(
         },
         files: [
             '**/*.js',
-            'config.d.ts',
-            'config/**/*.d.ts',
-            'rules.d.ts',
-            'rules/**/rules/*.d.ts',
+            '**/*.d.ts',
         ],
     }, {
         exports: {
             '.': {
                 require: './index.js',
+                types: './index.d.ts',
             },
             './config': {
                 require: './config.js',
