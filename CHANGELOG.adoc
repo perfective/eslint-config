@@ -12,6 +12,14 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.29.1
+
+* Published TypeScript types.
+* Allowed importing configs from ES modules.
+* Updated `typescript-eslint` to `8.19.0`.
+* Patched `@smarttools/eslint-plugin-rxjs` to `1.0.11`.
+
+
 == v0.29.0
 
 * Replaced `eslint-plugin-rxjs` with `link:https://github.com/DaveMBush/eslint-plugin-rxjs[@smarttools/eslint-plugin-rxjs]` `1.0.9`.
