@@ -1,5 +1,8 @@
+/* eslint-disable import/namespace -- external problem */
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import * as eslintPluginRxjs from '@smarttools/eslint-plugin-rxjs';
+
+/* eslint-enable import/namespace */
 
 export const rxjsConfig = {
     plugins: {
