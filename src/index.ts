@@ -1,9 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
 import * as tsEslint from 'typescript-eslint';
 
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
-import * as babelParser from '@babel/eslint-parser';
-
 // eslint-disable-next-line unicorn/prevent-abbreviations -- matches plugin name
 import { arrayFuncConfig } from './rules/array-func';
 import { eslintConfig } from './rules/eslint';
@@ -82,15 +79,13 @@ export default [
     {
         files: ['**/*.js?(x)'],
         languageOptions: {
-            parser: babelParser,
+            sourceType: 'module',
+            ecmaVersion: 'latest',
             parserOptions: {
-                ecmaVersion: 6,
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                 },
-                sourceType: 'module',
-                requireConfigFile: false,
             },
         },
         plugins: {},

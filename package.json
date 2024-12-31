@@ -33,7 +33,6 @@
         "test:build": "jest --clearCache && jest --collectCoverage"
     },
     "peerDependencies": {
-        "@babel/eslint-parser": "^7.25.9",
         "@smarttools/eslint-plugin-rxjs": "^1.0.11",
         "@stylistic/eslint-plugin": "^2.12.1",
         "@stylistic/eslint-plugin-js": "^2.12.1",
@@ -78,7 +77,6 @@
     },
     "devDependencies": {
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
-        "@babel/eslint-parser": "^7.25.9",
         "@jest/globals": "~29.7.0",
         "@perfective/build": "~0.15.1",
         "@smarttools/eslint-plugin-rxjs": "1.0.11",
