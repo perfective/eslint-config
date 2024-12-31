@@ -4,7 +4,8 @@ import * as tsEslint from 'typescript-eslint';
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
 import * as babelParser from '@babel/eslint-parser';
 
-import { arrayFuncConfig as arrayFunctionConfig } from './rules/array-func';
+// eslint-disable-next-line unicorn/prevent-abbreviations -- matches plugin name
+import { arrayFuncConfig } from './rules/array-func';
 import { eslintConfig } from './rules/eslint';
 import { eslintCommentsConfig } from './rules/eslint-comments';
 import { importConfig } from './rules/import';
@@ -45,7 +46,7 @@ export default [
             },
         },
         plugins: {
-            ...arrayFunctionConfig.plugins,
+            ...arrayFuncConfig.plugins,
             ...eslintCommentsConfig.plugins,
             ...importConfig.plugins,
             ...jsdocConfig.plugins,
@@ -62,7 +63,7 @@ export default [
             jsdoc: jsdocConfig.settings,
         },
         rules: {
-            ...arrayFunctionConfig.rules,
+            ...arrayFuncConfig.rules,
             ...eslintConfig.rules,
             ...eslintCommentsConfig.rules,
             ...importConfig.rules,
