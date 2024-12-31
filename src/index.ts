@@ -143,7 +143,7 @@ export default [
         },
     },
     {
-        files: ['**/*.js?(x)'],
+        files: ['**/*.[jt]sx'],
         plugins: {
             ...stylisticJsxConfig.plugins,
         },
