@@ -31,17 +31,18 @@ export default [
     {
         files: ['**/*.[jt]s?(x)'],
         languageOptions: {
+            sourceType: 'module',
+            ecmaVersion: 'latest',
             parser: tsEslint.parser,
             parserOptions: {
-                // Parser options have to be duplicated when the parser is overridden
-                ecmaVersion: 6,
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                 },
-                sourceType: 'module',
-                // TypeScript ESLint Parser
-                project: './tsconfig.json',
+                projectService: {
+                    // Allow parsing JS config files that are not listed in the tsconfig
+                    allowDefaultProject: ['?(.)*.?(m|c)js'],
+                },
                 warnOnUnsupportedTypeScriptVersion: true,
             },
         },
@@ -111,17 +112,15 @@ export default [
     {
         files: ['**/*.ts?(x)'],
         languageOptions: {
+            sourceType: 'module',
+            ecmaVersion: 'latest',
             parser: tsEslint.parser,
             parserOptions: {
-                // Parser options have to be duplicated when the parser is overridden
-                ecmaVersion: 6,
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                 },
-                sourceType: 'module',
-                // TypeScript ESLint Parser
-                project: './tsconfig.json',
+                projectService: true,
                 warnOnUnsupportedTypeScriptVersion: true,
             },
         },

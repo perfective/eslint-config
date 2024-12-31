@@ -12,17 +12,15 @@ export function rxjsConfig(files: string[] = ['**/*.ts?(x)']): Record<string, un
     return {
         files,
         languageOptions: {
+            sourceType: 'module',
+            ecmaVersion: 'latest',
             parser: tsEslint.parser,
             parserOptions: {
-                // Parser options have to be duplicated when the parser is overridden
-                ecmaVersion: 6,
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                 },
-                sourceType: 'module',
-                // TypeScript ESLint Parser
-                project: './tsconfig.json',
+                projectService: true,
                 warnOnUnsupportedTypeScriptVersion: true,
             },
         },

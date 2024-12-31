@@ -18,20 +18,18 @@ export function cypressConfig(files: string[] = ['cypress/**/*.[jt]s']): Record<
         //  so skipping them until it's possible to add directory configuration for Jest rules.
         files,
         languageOptions: {
-            ...cypressOptionalConfig.languageOptions,
+            sourceType: 'module',
+            ecmaVersion: 'latest',
             parser: tsEslint.parser,
             parserOptions: {
-                // Parser options have to be duplicated when the parser is overridden
-                ecmaVersion: 6,
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                 },
-                sourceType: 'module',
-                // TypeScript ESLint Parser
-                project: './tsconfig.json',
+                projectService: true,
                 warnOnUnsupportedTypeScriptVersion: true,
             },
+            ...cypressOptionalConfig.languageOptions,
         },
         plugins: {
             ...cypressOptionalConfig.plugins,
