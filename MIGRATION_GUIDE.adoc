@@ -9,11 +9,13 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.28.0` to `v0.29.1`
+== From `v0.28.0` to `v0.29.2`
 
 * Replace obsolete optional dependency (if used):
 ** Remove `eslint-plugin-rxjs`
 ** Add `@smarttools/eslint-plugin-rxjs`
++
+* Remove `@babel/eslint-parser` dependency.
 +
 * *Remove* unused _optional_ dependencies:
 +

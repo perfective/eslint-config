@@ -12,6 +12,13 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.29.2
+
+* Removed `@babel/eslint-parser`.
+* Updated `@typescript-eslint/parser` options.
+* Applied `@stylistic/eslint-plugin-jsx` rules to `.tsx` files.
+
+
 == v0.29.1
 
 * Published TypeScript types.

@@ -38,7 +38,6 @@ from issues that will be fixed automatically.
     ```bash
     npm install --save-dev \
         @perfective/eslint-config \
-        @babel/eslint-parser \
         @stylistic/eslint-plugin \
         @stylistic/eslint-plugin-js \
         @stylistic/eslint-plugin-jsx \
