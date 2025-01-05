@@ -20,6 +20,7 @@
         "type": "git",
         "url": "git+https://github.com/perfective/eslint-config.git"
     },
+    "type": "module",
     "license": "MIT",
     "scripts": {
         "dist": "gulp",
@@ -78,7 +79,7 @@
     "devDependencies": {
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
         "@jest/globals": "~29.7.0",
-        "@perfective/build": "~0.15.1",
+        "@perfective/build": "~0.17.0",
         "@smarttools/eslint-plugin-rxjs": "1.0.11",
         "@stylistic/eslint-plugin": "2.12.1",
         "@stylistic/eslint-plugin-js": "2.12.1",
