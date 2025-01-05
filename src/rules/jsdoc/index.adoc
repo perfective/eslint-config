@@ -110,7 +110,7 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:{eslint-jsdoc-rules}/multiline-blocks.md[jsdoc/multiline-blocks]`
 | Yes
 |
-| Error
+| Warning
 4+| Allows `@lends`, `@type`, and `@deprecated` tags to be single-line JSDocs.
 
 | `link:{eslint-jsdoc-rules}/no-bad-blocks.md[jsdoc/no-bad-blocks]`

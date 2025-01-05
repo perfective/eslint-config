@@ -71,7 +71,7 @@ export const jsdocConfig = {
         'jsdoc/lines-before-block': 'off',
         'jsdoc/match-description': 'error',
         'jsdoc/match-name': 'off',
-        'jsdoc/multiline-blocks': ['error', {
+        'jsdoc/multiline-blocks': ['warn', {
             noZeroLineText: true,
             noFinalLineText: true,
             noSingleLineBlocks: true,
