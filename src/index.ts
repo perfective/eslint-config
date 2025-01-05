@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
-import * as tsEslint from 'typescript-eslint';
+import { parser } from 'typescript-eslint';
 
 // eslint-disable-next-line unicorn/prevent-abbreviations -- matches plugin name
 import { arrayFuncConfig } from './rules/array-func';
@@ -30,7 +30,7 @@ export default [
         languageOptions: {
             sourceType: 'module',
             ecmaVersion: 'latest',
-            parser: tsEslint.parser,
+            parser,
             parserOptions: {
                 ecmaFeatures: {
                     globalReturn: false,
@@ -109,7 +109,7 @@ export default [
         languageOptions: {
             sourceType: 'module',
             ecmaVersion: 'latest',
-            parser: tsEslint.parser,
+            parser,
             parserOptions: {
                 ecmaFeatures: {
                     globalReturn: false,

@@ -1,12 +1,13 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginCypress from 'eslint-plugin-cypress/flat';
+import eslintPluginCypress from 'eslint-plugin-cypress/flat';
 
 export const cypressOptionalConfig = {
     plugins: {
         cypress: eslintPluginCypress,
     },
     languageOptions: {
-        globals: eslintPluginCypress.configs.globals.languageOptions.globals,
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- TSC fails without the condition
+        globals: eslintPluginCypress.configs.globals.languageOptions?.globals,
     },
     rules: {
         'cypress/assertion-before-screenshot': 'error',

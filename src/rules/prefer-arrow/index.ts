@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginPreferArrow from 'eslint-plugin-prefer-arrow';
+import eslintPluginPreferArrow from 'eslint-plugin-prefer-arrow';
 
 export const preferArrowConfig = {
     plugins: {

@@ -1,3 +1,4 @@
 declare module 'eslint-plugin-prefer-arrow' {
-    const rules: Record<string, unknown>;
+    const plugin: import('@typescript-eslint/utils').TSESLint.FlatConfig.Plugin;
+    export default plugin;
 }

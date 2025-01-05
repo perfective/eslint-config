@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginStylisticJsx from '@stylistic/eslint-plugin-jsx';
+import eslintPluginStylisticJsx from '@stylistic/eslint-plugin-jsx';
 
 export const stylisticJsxConfig = {
     plugins: {

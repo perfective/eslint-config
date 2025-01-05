@@ -1,15 +1,17 @@
-const gulp = require('gulp');
+/* eslint-disable n/no-unpublished-import -- dev-only */
+import gulp from 'gulp';
 
-const build = require('@perfective/build/gulp');
+import * as perfectiveGulp from '@perfective/build/gulp';
 
-exports.clean = build.clean(['./dist', '*.tsbuildinfo']);
-exports.build = build.typescript.tsBuild();
-exports.docs = build.asciidoctor();
+/* eslint-enable n/no-unpublished-import */
 
-exports.default = gulp.series(
-    exports.clean,
-    exports.build,
-    build.packageJson.packageJson({
+export const clean = perfectiveGulp.clean(['./dist', '*.tsbuildinfo']);
+export const docs = perfectiveGulp.asciidoctor();
+const full = gulp.series(
+    clean,
+    perfectiveGulp.typescript.esmBuild(),
+    perfectiveGulp.typescript.tsDeclarations(),
+    perfectiveGulp.packageJson.packageJson({
         main: './index.js',
         module: './index.js',
         types: './index.d.ts',
@@ -66,11 +68,14 @@ exports.default = gulp.series(
             },
         },
     }),
-    build.copy([
+    perfectiveGulp.copy([
         './LICENSE*',
         './CHANGELOG*',
         './README*',
         './src/**/package.json',
     ], './dist'),
-    exports.docs,
+    docs,
 );
+
+// eslint-disable-next-line import/no-default-export -- required for configuration
+export default full;

@@ -1,6 +1,4 @@
 declare module 'eslint-plugin-security' {
-    const meta: Record<string, unknown>;
-    const rules: Record<string, unknown>;
-    const rulesConfig: Record<string, number>;
-    const configs: Record<string, unknown>;
+    const plugin: import('@typescript-eslint/utils').TSESLint.FlatConfig.Plugin;
+    export default plugin;
 }

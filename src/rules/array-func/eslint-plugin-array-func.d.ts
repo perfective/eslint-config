@@ -1,4 +1,4 @@
 declare module 'eslint-plugin-array-func' {
-    const rules: Record<string, unknown>;
-    const configs: Record<string, unknown>;
+    const plugin: import('@typescript-eslint/utils').TSESLint.FlatConfig.Plugin;
+    export default plugin;
 }

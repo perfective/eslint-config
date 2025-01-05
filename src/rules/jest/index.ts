@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginJest from 'eslint-plugin-jest';
+import eslintPluginJest from 'eslint-plugin-jest';
 
 import { typescriptEslintJestRules } from './typescript-eslint';
 
@@ -8,7 +8,6 @@ export const jestConfig = {
         jest: eslintPluginJest,
     },
     languageOptions: {
-        // eslint-disable-next-line import/namespace -- import is correct
         globals: eslintPluginJest.environments.globals.globals,
     },
     rules: {

@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginArrayFunc from 'eslint-plugin-array-func';
+import eslintPluginArrayFunc from 'eslint-plugin-array-func';
 
 // eslint-disable-next-line unicorn/prevent-abbreviations -- plugin name
 export const arrayFuncConfig = {

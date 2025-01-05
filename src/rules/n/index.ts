@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginN from 'eslint-plugin-n';
+import eslintPluginN from 'eslint-plugin-n';
 
 export const nConfig = {
     plugins: {

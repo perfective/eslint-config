@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import * as eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
+import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 
 import { simpleImportSortImports } from './rules/imports';
 

@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
-import * as tsEslint from 'typescript-eslint';
+import { parser } from 'typescript-eslint';
 
 import { cypressOptionalConfig } from './rules/cypress';
 import { cypressImportNoExtraneousDependencies } from './rules/import/rules/no-extraneous-dependencies';
@@ -20,7 +20,7 @@ export function cypressConfig(files: string[] = ['cypress/**/*.[jt]s']): Record<
         languageOptions: {
             sourceType: 'module',
             ecmaVersion: 'latest',
-            parser: tsEslint.parser,
+            parser,
             parserOptions: {
                 ecmaFeatures: {
                     globalReturn: false,
