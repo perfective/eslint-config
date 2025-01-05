@@ -174,7 +174,7 @@ Off in TypeScript.
 | `link:{eslint-jsdoc-rules}/require-description-complete-sentence.md[jsdoc/require-description-complete-sentence]`
 |
 |
-| Error
+| Warning
 
 | `link:{eslint-jsdoc-rules}/require-example.md[jsdoc/require-example]`
 |
