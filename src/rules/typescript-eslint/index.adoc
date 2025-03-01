@@ -186,6 +186,10 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-misused-spread/[@typescript-eslint/no-misused-spread]`
+|
+| Error
+
 | `link:{ts-eslint-rules}/no-namespace/[@typescript-eslint/no-mixed-enums]`
 | Strict
 | Error

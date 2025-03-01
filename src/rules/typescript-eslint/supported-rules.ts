@@ -17,6 +17,7 @@ export const supportedRules = {
     '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
     '@typescript-eslint/consistent-type-assertions': ['error', {
         assertionStyle: 'as',
+        arrayLiteralTypeAssertions: 'allow-as-parameter',
         objectLiteralTypeAssertions: 'allow',
     }],
     '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'],
@@ -169,6 +170,7 @@ export const supportedRules = {
         checksConditionals: true,
         checksVoidReturn: true,
     }],
+    '@typescript-eslint/no-misused-spread': 'error',
     '@typescript-eslint/no-mixed-enums': 'error',
     '@typescript-eslint/no-namespace': 'error',
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
