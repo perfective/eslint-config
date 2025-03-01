@@ -113,6 +113,7 @@ export const stylisticJsConfig = {
             ignoreJSX: 'all',
             // Nested binary expressions may be hard to break down into named functions
             nestedBinaryExpressions: false,
+            nestedConditionalExpressions: false,
             enforceForArrowConditionals: false,
             ternaryOperandBinaryExpressions: false,
         }],
