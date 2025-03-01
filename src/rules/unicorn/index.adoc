@@ -17,6 +17,16 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/consistent-assert.md[unicorn/consistent-assert]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/consistent-date-clone.md[unicorn/consistent-date-clone]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/consistent-destructuring.md[unicorn/consistent-destructuring]`
 | Yes
 | Partially
@@ -93,6 +103,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/no-accessor-recursion.md[unicorn/no-accessor-recursion]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/no-anonymous-default-export.md[unicorn/no-anonymous-default-export]`
 | Yes
 |
@@ -159,6 +174,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:{eslint-unicorn-rules}/no-instanceof-array.md[unicorn/no-instanceof-array]`
+|
+|
+| Off as deprecated.
+
+| `link:{eslint-unicorn-rules}/no-instanceof-builtins.md[unicorn/no-instanceof-builtins]`
 | Yes
 | Yes
 | Warning
@@ -192,6 +212,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/no-named-default.md[unicorn/no-named-default]`
+| Yes
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/no-negated-condition.md[unicorn/no-negated-condition]`
 | Yes

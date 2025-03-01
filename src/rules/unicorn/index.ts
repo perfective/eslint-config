@@ -10,6 +10,8 @@ export const unicornConfig = {
     rules: {
         'unicorn/better-regex': 'warn',
         'unicorn/catch-error-name': 'warn',
+        'unicorn/consistent-assert': 'warn',
+        'unicorn/consistent-date-clone': 'warn',
         'unicorn/consistent-destructuring': 'warn',
         'unicorn/consistent-empty-array-spread': 'warn',
         'unicorn/consistent-existence-index-check': 'warn',
@@ -30,6 +32,7 @@ export const unicornConfig = {
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/no-accessor-recursion': 'error',
         'unicorn/no-anonymous-default-export': 'error',
         'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'off',
@@ -45,7 +48,9 @@ export const unicornConfig = {
         'unicorn/no-empty-file': 'error',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
-        'unicorn/no-instanceof-array': 'warn',
+        // Deprecated since v57.0.0
+        'unicorn/no-instanceof-array': 'off',
+        'unicorn/no-instanceof-builtins': 'warn',
         'unicorn/no-invalid-fetch-options': 'error',
         'unicorn/no-invalid-remove-event-listener': 'error',
         // Benefit of this rule is questionable and it's being overridden all the time.
@@ -57,6 +62,7 @@ export const unicornConfig = {
         'unicorn/no-length-as-slice-end': 'warn',
         'unicorn/no-lonely-if': 'warn',
         'unicorn/no-magic-array-flat-depth': 'error',
+        'unicorn/no-named-default': 'warn',
         'unicorn/no-negated-condition': 'warn',
         'unicorn/no-negation-in-equality-check': 'error',
         'unicorn/no-nested-ternary': 'off',
