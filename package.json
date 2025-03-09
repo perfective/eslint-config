@@ -34,7 +34,7 @@
         "test:build": "jest --clearCache && jest --collectCoverage"
     },
     "peerDependencies": {
-        "@smarttools/eslint-plugin-rxjs": "^1.0.14",
+        "@smarttools/eslint-plugin-rxjs": "1.0.14",
         "@stylistic/eslint-plugin": "^4.2.0",
         "@stylistic/eslint-plugin-js": "^4.2.0",
         "@stylistic/eslint-plugin-jsx": "^4.2.0",
