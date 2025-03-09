@@ -57,7 +57,7 @@
         "eslint-plugin-simple-import-sort": "^12.1.1",
         "eslint-plugin-testing-library": "^7.1.1",
         "eslint-plugin-unicorn": "^57.0.0",
-        "typescript-eslint": "^8.25.0"
+        "typescript-eslint": "^8.26.0"
     },
     "peerDependenciesMeta": {
         "eslint-plugin-cypress": {
@@ -86,7 +86,7 @@
         "@stylistic/eslint-plugin-jsx": "4.1.0",
         "@stylistic/eslint-plugin-plus": "4.1.0",
         "@stylistic/eslint-plugin-ts": "4.1.0",
-        "@typescript-eslint/utils": "^8.25.0",
+        "@typescript-eslint/utils": "^8.26.0",
         "@types/eslint": "^9.6.1",
         "@types/jest": "^29.5.14",
         "eslint": "9.22.0",
@@ -110,6 +110,6 @@
         "prettier": "~3.4.2",
         "ts-jest": "^29.2.5",
         "typescript": "~5.7.3",
-        "typescript-eslint": "8.25.0"
+        "typescript-eslint": "8.26.0"
     }
 }
