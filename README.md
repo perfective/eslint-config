@@ -61,9 +61,9 @@ from issues that will be fixed automatically.
 2. Require the configuration in your root `eslint.config.js`.
 
     ```javascript
-    const perfectiveEslintConfig = require('@perfective/eslint-config');
+    import perfectiveEslintConfig from '@perfective/eslint-config';
 
-    module.exports = perfectiveEslintConfig.default;
+    export default perfectiveEslintConfig;
     ```
 
 3. Install optional peer dependencies that add linting rules for the tools you use.
@@ -83,19 +83,23 @@ from issues that will be fixed automatically.
 4. Add optional configurations to your root `eslint.config.js`.
 
     ```javascript
-    const perfectiveEslintConfig = require('@perfective/eslint-config');
-    const perfectiveCypressConfig = require('@perfective/eslint-config/cypress');
-    const perfectiveJestConfig = require('@perfective/eslint-config/jest');
-    const perfectiveJestDomConfig = require('@perfective/eslint-config/jest-dom');
-    const perfectiveRxjsConfig = require('@perfective/eslint-config/rxjs');
-    const perfectiveTestingLibraryConfig = require('@perfective/eslint-config/testing-library');
+    import perfectiveEslintConfig from '@perfective/eslint-config';
 
-    module.exports = [
-        ...perfectiveEslintConfig.default,
-        perfectiveCypressConfig.cypressConfig(),
-        perfectiveJestConfig.jestConfig(),
-        perfectiveJestDomConfig.jestDomConfig(),
-        perfectiveRxjsConfig.rxjsConfig(),
-        perfectiveTestingLibraryConfig.testingLibrarysConfig(),
+    // Optional dependencies.
+    import { cypressConfig } from '@perfective/eslint-config/cypress';
+    import { jestConfig } from '@perfective/eslint-config/jest';
+    import { jestDomConfig } from '@perfective/eslint-config/jest-dom';
+    import { rxjsConfig } from '@perfective/eslint-config/rxjs';
+    import { testingLibraryConfig } from '@perfective/eslint-config/testing-library';
+
+    const eslintConfig = [
+        ...perfectiveEslintConfig,
+        cypressConfig(),
+        jestConfig(),
+        jestDomConfig(),
+        rxjsConfig(),
+        testingLibraryConfig(),
     ];
+
+    export default eslintConfig;
     ```

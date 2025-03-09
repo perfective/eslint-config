@@ -9,6 +9,65 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.29.2` to `v0.30.0`
+
+* **Migrate to ES modules**:
++
+** (Optional) If your project does not use ESM by default,
+rename `eslint.config.js` into `eslint.config.mjs`.
++
+** Update `eslint.config.js` to use ES `import`.
++
+.`eslint.config.js`
+[source,javascript]
+----
+import perfectiveEslintConfig from '@perfective/eslint-config';
+// Optional dependencies.
+import { cypressConfig } from '@perfective/eslint-config/cypress';
+import { jestConfig } from '@perfective/eslint-config/jest';
+import { jestDomConfig } from '@perfective/eslint-config/jest-dom';
+import { rxjsConfig } from '@perfective/eslint-config/rxjs';
+import { testingLibraryConfig } from '@perfective/eslint-config/testing-library';
+
+const eslintConfig = [
+    ...perfectiveEslintConfig,
+    cypressConfig(),
+    jestConfig(),
+    jestDomConfig(),
+    rxjsConfig(),
+    testingLibraryConfig(),
+];
+
+export default eslintConfig;
+----
++
+* Disable and gradually enable new rules in the `eslint.config.js`.
++
+[source,javascript]
+----
+import perfectiveEslintConfig from '@perfective/eslint-config';
+
+const eslintConfig = [
+    ...perfectiveEslintConfig,
+    // ... optional configurations
+    {
+        files: ['**/*.[jt]s?(x)'],
+        rules: {
+            '@typescript-eslint/no-misused-spread': 'off',
+            'unicorn/consistent-assert': 'off',
+            'unicorn/consistent-date-clone': 'off',
+            'unicorn/no-accessor-recursion': 'off',
+            'unicorn/no-instanceof-builtins': 'off',
+            'unicorn/no-named-default': 'off',
+            'cypress/no-xpath': 'off',
+        },
+    }
+];
+
+export default eslintConfig;
+----
+
+
 == From `v0.28.0` to `v0.29.2`
 
 * Replace obsolete optional dependency (if used):
@@ -27,7 +86,7 @@ Migration between minor versions follows the same steps:
 +
 * Add ESLint configurations for used _optional_ dependencies:
 +
-.`eslintrc.config.js`
+.`eslint.config.js`
 [source,javascript]
 ----
 const perfectiveEslintConfig = require('@perfective/eslint-config');
@@ -89,9 +148,10 @@ module.exports = [
 [source,javascript]
 ----
 module.exports = {
-extends: [
-    '@perfective/eslint-config',
-],
+    extends: [
+        '@perfective/eslint-config',
+    ],
+}
 ----
 +
 .After

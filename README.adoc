@@ -90,21 +90,25 @@ npm install --save-dev \
 +
 [source,javascript]
 ----
-const perfectiveEslintConfig = require('@perfective/eslint-config');
-const perfectiveCypressConfig = require('@perfective/eslint-config/cypress');
-const perfectiveJestConfig = require('@perfective/eslint-config/jest');
-const perfectiveJestDomConfig = require('@perfective/eslint-config/jest-dom');
-const perfectiveRxjsConfig = require('@perfective/eslint-config/rxjs');
-const perfectiveTestingLibraryConfig = require('@perfective/eslint-config/testing-library');
+import perfectiveEslintConfig from '@perfective/eslint-config';
 
-module.exports = [
-    ...perfectiveEslintConfig.default,
-    perfectiveCypressConfig.cypressConfig(),
-    perfectiveJestConfig.jestConfig(),
-    perfectiveJestDomConfig.jestDomConfig(),
-    perfectiveRxjsConfig.rxjsConfig(),
-    perfectiveTestingLibraryConfig.testingLibrarysConfig(),
+// Optional dependencies.
+import { cypressConfig } from '@perfective/eslint-config/cypress';
+import { jestConfig } from '@perfective/eslint-config/jest';
+import { jestDomConfig } from '@perfective/eslint-config/jest-dom';
+import { rxjsConfig } from '@perfective/eslint-config/rxjs';
+import { testingLibraryConfig } from '@perfective/eslint-config/testing-library';
+
+const eslintConfig = [
+    ...perfectiveEslintConfig,
+    cypressConfig(),
+    jestConfig(),
+    jestDomConfig(),
+    rxjsConfig(),
+    testingLibraryConfig(),
 ];
+
+export default eslintConfig;
 ----
 
 == Rules Configuration Extension Functions
@@ -122,11 +126,11 @@ you can use these functions in the `eslint.config.js` file:
 
 [source,javascript]
 ----
-const perfectiveEslintConfig = require('@perfective/eslint-config');
-const rules = require('@perfective/eslint-config/rules'); // <.>
+import perfectiveEslintConfig from '@perfective/eslint-config';
+import { simpleImportSortImports } from '@perfective/eslint-config/rules'; // <.>
 
-module.exports = [
-    ...perfectiveEslintConfig.default,
+const eslintConfig = [
+    ...perfectiveEslintConfig,
     {
         files: ['**/*.[jt]s?(x)'],
         rules: {
@@ -136,6 +140,8 @@ module.exports = [
         },
     },
 ];
+
+export default eslintConfig;
 ----
 <1> Framework-specific packages, based on `@perfective/eslint-config`, re-export all the rules.
 So rules should be required from those packages for correct `node_modules` resolution.

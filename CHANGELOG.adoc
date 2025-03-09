@@ -12,6 +12,44 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.30.0
+
+* **Migrated config files to ES modules**.
++
+* Changed `jsdoc/require-description-complete-sentence` to a warning.
+* Changed `jsdoc/multiline-blocks` to a warning.
++
+* Updated `eslint` to `9.22.0`.
++
+* Updated `typescript-eslint` to `8.26.0`:
+** Supports TypeScript v5.8.
+** Enabled `link:{ts-eslint-rules}/no-misused-spread[@typescript-eslint/no-misused-spread]` as an error.
+** Allowed `arrayLiteralTypeAssertions` only in parameters in
+`link:{ts-eslint-rules}/consistent-type-assertions[@typescript-eslint/consistent-type-assertions]`.
++
+* Upgraded `eslint-plugin-unicorn` to `57.0.0`:
+** Enabled `link:{eslint-unicorn-rules}/consistent-assert.md[unicorn/consistent-assert]` as a warning.
+** Enabled `link:{eslint-unicorn-rules}/consistent-date-clone.md[unicorn/consistent-date-clone]` as a warning.
+** Enabled `link:{eslint-unicorn-rules}/no-accessor-recursion.md[unicorn/no-accessor-recursion]` as an error.
+** Enabled `link:{eslint-unicorn-rules}/no-instanceof-builtins.md[unicorn/no-instanceof-builtins]` as a warning.
+** Enabled `link:{eslint-unicorn-rules}/no-named-default.md[unicorn/no-named-default]` as a warning.
+** Disabled `unicorn/no-instanceof-array` as deprecated.
++
+* Updated `eslint-plugin-cypress` to `4.2.0`.
+** Enabled `link:{eslint-cypress-rules}/no-xpath.md[cypress/no-xpath]` as an error.
++
+* Updated `eslint-plugin-n` to `17.16.2`.
+* Updated `@stylistic/eslint-plugin` to `4.2.0`.
++
+* Upgraded `eslint-plugin-array-func` to `5.0.2`.
+* Updated `eslint-import-resolver-typescript` to `3.8.3`.
+* Updated `eslint-plugin-jest` to `28.11.0`.
+* Patched `eslint-plugin-jsdoc` to `50.6.3`.
++
+* Patched `@smarttools/eslint-plugin-rxjs` to `1.0.14`.
+** Froze at `1.0.14`.
+
+
 == v0.29.2
 
 * Removed `@babel/eslint-parser`.
