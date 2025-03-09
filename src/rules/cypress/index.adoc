@@ -48,6 +48,11 @@ some of the https://docs.cypress.io/guides/references/best-practices.html[best p
 |
 | Error
 
+| `link:{eslint-plugin-cypress-rules}/no-xpath.md[cypress/no-xpath]`
+|
+|
+| Error
+
 | `link:{eslint-plugin-cypress-rules}/require-data-selectors.md[cypress/require-data-selectors]`
 |
 |

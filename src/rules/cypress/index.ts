@@ -18,6 +18,7 @@ export const cypressOptionalConfig = {
         'cypress/no-force': 'error',
         'cypress/no-pause': 'error',
         'cypress/no-unnecessary-waiting': 'error',
+        'cypress/no-xpath': 'error',
         'cypress/require-data-selectors': 'error',
         'cypress/unsafe-to-chain-command': 'error',
     },
