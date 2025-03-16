@@ -4,7 +4,7 @@ import { parser } from 'typescript-eslint';
 import { rxjsConfig as rxjsPluginConfig } from './rules/rxjs';
 
 /**
- * Configuration for @smarttools/eslint-plugin-rxjs.
+ * Configuration for eslint-plugin-rxjs-x.
  *
  * @param files - A list of globs with the files to lint.
  */

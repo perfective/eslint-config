@@ -1,19 +1,16 @@
-/* eslint-disable import/default -- Default export works */
 // eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
-import eslintPluginRxjs from '@smarttools/eslint-plugin-rxjs';
-
-/* eslint-enable import/default */
+import eslintPluginRxjs from 'eslint-plugin-rxjs-x';
 
 export const rxjsConfig = {
     plugins: {
-        '@smarttools/rxjs': eslintPluginRxjs,
+        ...eslintPluginRxjs.configs.recommended.plugins,
     },
     rules: {
-        '@smarttools/rxjs/ban-observables': 'error',
-        '@smarttools/rxjs/ban-operators': ['error', {
+        'rxjs-x/ban-observables': 'error',
+        'rxjs-x/ban-operators': ['error', {
             tap: false,
         }],
-        '@smarttools/rxjs/finnish': ['error', {
+        'rxjs-x/finnish': ['error', {
             functions: true,
             methods: true,
             names: {},
@@ -23,50 +20,52 @@ export const rxjsConfig = {
             types: {},
             variables: true,
         }],
-        '@smarttools/rxjs/just': 'off',
-        '@smarttools/rxjs/no-async-subscribe': 'error',
-        '@smarttools/rxjs/no-compat': 'error',
-        '@smarttools/rxjs/no-connectable': 'error',
-        '@smarttools/rxjs/no-create': 'error',
-        '@smarttools/rxjs/no-cyclic-action': 'error',
+        'rxjs-x/just': 'off',
+        'rxjs-x/no-async-subscribe': 'error',
+        'rxjs-x/no-compat': 'error',
+        'rxjs-x/no-connectable': 'error',
+        'rxjs-x/no-create': 'error',
+        'rxjs-x/no-cyclic-action': 'error',
         // Fails for nullable and optional subjects, e.g.:
         //  new BehaviorSubject(null) != new BehaviorSubject<T | null>(null);
-        '@smarttools/rxjs/no-explicit-generics': 'off',
-        '@smarttools/rxjs/no-exposed-subjects': 'error',
-        '@smarttools/rxjs/no-finnish': 'off',
-        '@smarttools/rxjs/no-ignored-error': 'error',
-        '@smarttools/rxjs/no-ignored-notifier': 'error',
-        '@smarttools/rxjs/no-ignored-observable': 'error',
-        '@smarttools/rxjs/no-ignored-replay-buffer': 'error',
-        '@smarttools/rxjs/no-ignored-subscribe': 'error',
-        '@smarttools/rxjs/no-ignored-subscription': 'error',
-        '@smarttools/rxjs/no-ignored-takewhile-value': 'error',
+        'rxjs-x/no-explicit-generics': 'off',
+        'rxjs-x/no-exposed-subjects': 'error',
+        'rxjs-x/no-finnish': 'off',
+        'rxjs-x/no-floating-observables': 'error',
+        'rxjs-x/no-ignored-error': 'error',
+        'rxjs-x/no-ignored-notifier': 'error',
+        // Deprecated. Use rxjs-x/no-floating-observables.
+        'rxjs-x/no-ignored-observable': 'off',
+        'rxjs-x/no-ignored-replay-buffer': 'error',
+        'rxjs-x/no-ignored-subscribe': 'error',
+        'rxjs-x/no-ignored-subscription': 'error',
+        'rxjs-x/no-ignored-takewhile-value': 'error',
         // TODO: Enable once the autofix bug is fixed.
-        '@smarttools/rxjs/no-implicit-any-catch': ['off', {
+        'rxjs-x/no-implicit-any-catch': ['off', {
             allowExplicitAny: false,
         }],
-        '@smarttools/rxjs/no-index': 'error',
-        '@smarttools/rxjs/no-internal': 'warn',
-        '@smarttools/rxjs/no-nested-subscribe': 'error',
-        '@smarttools/rxjs/no-redundant-notify': 'error',
+        'rxjs-x/no-index': 'error',
+        'rxjs-x/no-internal': 'warn',
+        'rxjs-x/no-nested-subscribe': 'error',
+        'rxjs-x/no-redundant-notify': 'error',
         // Prior to v6.4.0 shareReplay() operator had some surprising behavior:
-        //  https://github.com/ReactiveX/@smarttools/rxjs/pull/4059
-        '@smarttools/rxjs/no-sharereplay': 'off',
-        '@smarttools/rxjs/no-subclass': 'error',
-        '@smarttools/rxjs/no-subject-unsubscribe': 'error',
-        '@smarttools/rxjs/no-subject-value': 'error',
+        //  https://github.com/ReactiveX/rxjs-x/pull/4059
+        'rxjs-x/no-sharereplay': 'off',
+        'rxjs-x/no-subclass': 'error',
+        'rxjs-x/no-subject-unsubscribe': 'error',
+        'rxjs-x/no-subject-value': 'error',
         // Using subscribe is more semantic than using `tap()`
-        '@smarttools/rxjs/no-subscribe-handlers': 'off',
-        '@smarttools/rxjs/no-topromise': 'error',
+        'rxjs-x/no-subscribe-handlers': 'off',
+        'rxjs-x/no-topromise': 'error',
         // See https://ncjamieson.com/avoiding-switchmap-related-bugs/
-        '@smarttools/rxjs/no-unbound-methods': 'error',
-        '@smarttools/rxjs/no-unsafe-catch': 'error',
-        '@smarttools/rxjs/no-unsafe-first': 'error',
-        '@smarttools/rxjs/no-unsafe-subject-next': 'error',
-        '@smarttools/rxjs/no-unsafe-switchmap': 'error',
-        '@smarttools/rxjs/no-unsafe-takeuntil': 'error',
-        '@smarttools/rxjs/prefer-observer': 'off',
-        '@smarttools/rxjs/suffix-subjects': 'off',
-        '@smarttools/rxjs/throw-error': 'error',
+        'rxjs-x/no-unbound-methods': 'error',
+        'rxjs-x/no-unsafe-catch': 'error',
+        'rxjs-x/no-unsafe-first': 'error',
+        'rxjs-x/no-unsafe-subject-next': 'error',
+        'rxjs-x/no-unsafe-switchmap': 'error',
+        'rxjs-x/no-unsafe-takeuntil': 'error',
+        'rxjs-x/prefer-observer': 'off',
+        'rxjs-x/suffix-subjects': 'off',
+        'rxjs-x/throw-error': 'error',
     },
 };
