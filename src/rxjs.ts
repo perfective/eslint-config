@@ -1,6 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
-import { parser } from 'typescript-eslint';
-
+import { typescriptLanguageOptions } from './config/language-options';
 import { rxjsConfig as rxjsPluginConfig } from './rules/rxjs';
 
 /**
@@ -11,19 +9,7 @@ import { rxjsConfig as rxjsPluginConfig } from './rules/rxjs';
 export function rxjsConfig(files: string[] = ['**/*.ts?(x)']): Record<string, unknown> {
     return {
         files,
-        languageOptions: {
-            sourceType: 'module',
-            ecmaVersion: 'latest',
-            parser,
-            parserOptions: {
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                },
-                projectService: true,
-                warnOnUnsupportedTypeScriptVersion: true,
-            },
-        },
+        languageOptions: typescriptLanguageOptions(),
         plugins: {
             ...rxjsPluginConfig.plugins,
         },

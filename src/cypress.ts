@@ -1,6 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
-import { parser } from 'typescript-eslint';
-
+import { typescriptLanguageOptions } from './config/language-options';
 import { cypressOptionalConfig } from './rules/cypress';
 import { cypressImportNoExtraneousDependencies } from './rules/import/rules/no-extraneous-dependencies';
 
@@ -18,17 +16,7 @@ export function cypressConfig(files: string[] = ['cypress/**/*.[jt]s']): Record<
         //  so skipping them until it's possible to add directory configuration for Jest rules.
         files,
         languageOptions: {
-            sourceType: 'module',
-            ecmaVersion: 'latest',
-            parser,
-            parserOptions: {
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                },
-                projectService: true,
-                warnOnUnsupportedTypeScriptVersion: true,
-            },
+            ...typescriptLanguageOptions(),
             ...cypressOptionalConfig.languageOptions,
         },
         plugins: {

@@ -1,6 +1,5 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint parser used only during development
-import { parser } from 'typescript-eslint';
-
+// eslint-disable-next-line import/newline-after-import -- conflicts with import sorting
+import { javascriptLanguageOptions, languageOptions, typescriptLanguageOptions } from './config/language-options';
 // eslint-disable-next-line unicorn/prevent-abbreviations -- matches plugin name
 import { arrayFuncConfig } from './rules/array-func';
 import { eslintConfig } from './rules/eslint';
@@ -30,22 +29,7 @@ export function perfectiveConfig(): Record<string, unknown>[] {
         },
         {
             files: ['**/*.[jt]s?(x)'],
-            languageOptions: {
-                sourceType: 'module',
-                ecmaVersion: 'latest',
-                parser,
-                parserOptions: {
-                    ecmaFeatures: {
-                        globalReturn: false,
-                        impliedStrict: true,
-                    },
-                    projectService: {
-                        // Allow parsing JS config files that are not listed in the tsconfig
-                        allowDefaultProject: ['?(.)*.?(m|c)js'],
-                    },
-                    warnOnUnsupportedTypeScriptVersion: true,
-                },
-            },
+            languageOptions: languageOptions(),
             plugins: {
                 ...arrayFuncConfig.plugins,
                 ...eslintCommentsConfig.plugins,
@@ -81,16 +65,7 @@ export function perfectiveConfig(): Record<string, unknown>[] {
         },
         {
             files: ['**/*.js?(x)'],
-            languageOptions: {
-                sourceType: 'module',
-                ecmaVersion: 'latest',
-                parserOptions: {
-                    ecmaFeatures: {
-                        globalReturn: false,
-                        impliedStrict: true,
-                    },
-                },
-            },
+            languageOptions: javascriptLanguageOptions(),
             plugins: {},
             settings: {
                 'import/extensions': ['.js', '.jsx'],
@@ -109,19 +84,7 @@ export function perfectiveConfig(): Record<string, unknown>[] {
         },
         {
             files: ['**/*.ts?(x)'],
-            languageOptions: {
-                sourceType: 'module',
-                ecmaVersion: 'latest',
-                parser,
-                parserOptions: {
-                    ecmaFeatures: {
-                        globalReturn: false,
-                        impliedStrict: true,
-                    },
-                    projectService: true,
-                    warnOnUnsupportedTypeScriptVersion: true,
-                },
-            },
+            languageOptions: typescriptLanguageOptions(),
             plugins: {
                 ...typescriptEslintConfig.plugins,
                 ...stylisticTsConfig.plugins,
