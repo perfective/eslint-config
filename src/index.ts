@@ -20,135 +20,139 @@ import { stylisticTsConfig } from './rules/stylistic/ts';
 import { typescriptEslintConfig } from './rules/typescript-eslint';
 import { unicornConfig } from './rules/unicorn';
 
-// eslint-disable-next-line import/no-default-export -- ESLint recommended practice.
-export default [
-    {
-        ignores: ['**/*.d.ts', '**/dist'],
-    },
-    {
-        files: ['**/*.[jt]s?(x)'],
-        languageOptions: {
-            sourceType: 'module',
-            ecmaVersion: 'latest',
-            parser,
-            parserOptions: {
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                },
-                projectService: {
-                    // Allow parsing JS config files that are not listed in the tsconfig
-                    allowDefaultProject: ['?(.)*.?(m|c)js'],
-                },
-                warnOnUnsupportedTypeScriptVersion: true,
-            },
+/**
+ * Returns an array with the flat configs.
+ */
+export function perfectiveConfig(): Record<string, unknown>[] {
+    return [
+        {
+            ignores: ['**/*.d.ts', '**/dist'],
         },
-        plugins: {
-            ...arrayFuncConfig.plugins,
-            ...eslintCommentsConfig.plugins,
-            ...importConfig.plugins,
-            ...jsdocConfig.plugins,
-            ...nConfig.plugins,
-            ...preferArrowConfig.plugins,
-            ...promiseConfig.plugins,
-            ...securityConfig.plugins,
-            ...simpleImportSortConfig.plugins,
-            ...stylisticJsConfig.plugins,
-            ...stylisticPlusConfig.plugins,
-            ...unicornConfig.plugins,
-        },
-        settings: {
-            jsdoc: jsdocConfig.settings,
-        },
-        rules: {
-            ...arrayFuncConfig.rules,
-            ...eslintConfig.rules,
-            ...eslintCommentsConfig.rules,
-            ...importConfig.rules,
-            ...jsdocConfig.rules,
-            ...nConfig.rules,
-            ...preferArrowConfig.rules,
-            ...promiseConfig.rules,
-            ...securityConfig.rules,
-            ...simpleImportSortConfig.rules,
-            ...stylisticJsConfig.rules,
-            ...stylisticPlusConfig.rules,
-            ...unicornConfig.rules,
-        },
-    },
-    {
-        files: ['**/*.js?(x)'],
-        languageOptions: {
-            sourceType: 'module',
-            ecmaVersion: 'latest',
-            parserOptions: {
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
+        {
+            files: ['**/*.[jt]s?(x)'],
+            languageOptions: {
+                sourceType: 'module',
+                ecmaVersion: 'latest',
+                parser,
+                parserOptions: {
+                    ecmaFeatures: {
+                        globalReturn: false,
+                        impliedStrict: true,
+                    },
+                    projectService: {
+                        // Allow parsing JS config files that are not listed in the tsconfig
+                        allowDefaultProject: ['?(.)*.?(m|c)js'],
+                    },
+                    warnOnUnsupportedTypeScriptVersion: true,
                 },
             },
-        },
-        plugins: {},
-        settings: {
-            'import/extensions': ['.js', '.jsx'],
-        },
-        rules: {
-            'import/no-commonjs': 'off',
-            'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
-            'import/unambiguous': 'off',
-            'jsdoc/no-types': 'off',
-            'jsdoc/no-undefined-types': 'off',
-            'jsdoc/require-param': 'error',
-            'jsdoc/require-param-type': 'error',
-            'jsdoc/require-returns': 'error',
-            'jsdoc/require-returns-type': 'error',
-        },
-    },
-    {
-        files: ['**/*.ts?(x)'],
-        languageOptions: {
-            sourceType: 'module',
-            ecmaVersion: 'latest',
-            parser,
-            parserOptions: {
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                },
-                projectService: true,
-                warnOnUnsupportedTypeScriptVersion: true,
+            plugins: {
+                ...arrayFuncConfig.plugins,
+                ...eslintCommentsConfig.plugins,
+                ...importConfig.plugins,
+                ...jsdocConfig.plugins,
+                ...nConfig.plugins,
+                ...preferArrowConfig.plugins,
+                ...promiseConfig.plugins,
+                ...securityConfig.plugins,
+                ...simpleImportSortConfig.plugins,
+                ...stylisticJsConfig.plugins,
+                ...stylisticPlusConfig.plugins,
+                ...unicornConfig.plugins,
+            },
+            settings: {
+                jsdoc: jsdocConfig.settings,
+            },
+            rules: {
+                ...arrayFuncConfig.rules,
+                ...eslintConfig.rules,
+                ...eslintCommentsConfig.rules,
+                ...importConfig.rules,
+                ...jsdocConfig.rules,
+                ...nConfig.rules,
+                ...preferArrowConfig.rules,
+                ...promiseConfig.rules,
+                ...securityConfig.rules,
+                ...simpleImportSortConfig.rules,
+                ...stylisticJsConfig.rules,
+                ...stylisticPlusConfig.rules,
+                ...unicornConfig.rules,
             },
         },
-        plugins: {
-            ...typescriptEslintConfig.plugins,
-            ...stylisticTsConfig.plugins,
-        },
-        settings: {
-            'import/parsers': {
-                '@typescript-eslint/parser': [
-                    '.ts',
-                    '.tsx',
-                ],
-            },
-            'import/resolver': {
-                typescript: {
-                    alwaysTryTypes: true,
-                    project: './tsconfig.json',
+        {
+            files: ['**/*.js?(x)'],
+            languageOptions: {
+                sourceType: 'module',
+                ecmaVersion: 'latest',
+                parserOptions: {
+                    ecmaFeatures: {
+                        globalReturn: false,
+                        impliedStrict: true,
+                    },
                 },
             },
+            plugins: {},
+            settings: {
+                'import/extensions': ['.js', '.jsx'],
+            },
+            rules: {
+                'import/no-commonjs': 'off',
+                'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
+                'import/unambiguous': 'off',
+                'jsdoc/no-types': 'off',
+                'jsdoc/no-undefined-types': 'off',
+                'jsdoc/require-param': 'error',
+                'jsdoc/require-param-type': 'error',
+                'jsdoc/require-returns': 'error',
+                'jsdoc/require-returns-type': 'error',
+            },
         },
-        rules: {
-            ...typescriptEslintConfig.rules,
-            ...stylisticTsConfig.rules,
+        {
+            files: ['**/*.ts?(x)'],
+            languageOptions: {
+                sourceType: 'module',
+                ecmaVersion: 'latest',
+                parser,
+                parserOptions: {
+                    ecmaFeatures: {
+                        globalReturn: false,
+                        impliedStrict: true,
+                    },
+                    projectService: true,
+                    warnOnUnsupportedTypeScriptVersion: true,
+                },
+            },
+            plugins: {
+                ...typescriptEslintConfig.plugins,
+                ...stylisticTsConfig.plugins,
+            },
+            settings: {
+                'import/parsers': {
+                    '@typescript-eslint/parser': [
+                        '.ts',
+                        '.tsx',
+                    ],
+                },
+                'import/resolver': {
+                    typescript: {
+                        alwaysTryTypes: true,
+                        project: './tsconfig.json',
+                    },
+                },
+            },
+            rules: {
+                ...typescriptEslintConfig.rules,
+                ...stylisticTsConfig.rules,
+            },
         },
-    },
-    {
-        files: ['**/*.[jt]sx'],
-        plugins: {
-            ...stylisticJsxConfig.plugins,
+        {
+            files: ['**/*.[jt]sx'],
+            plugins: {
+                ...stylisticJsxConfig.plugins,
+            },
+            rules: {
+                ...stylisticJsxConfig.rules,
+            },
         },
-        rules: {
-            ...stylisticJsxConfig.rules,
-        },
-    },
-].filter(Boolean);
+    ];
+}
