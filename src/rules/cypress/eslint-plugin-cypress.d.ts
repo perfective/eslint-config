@@ -1,12 +1,4 @@
 declare module 'eslint-plugin-cypress/flat' {
-    const plugin: import('@typescript-eslint/utils').TSESLint.FlatConfig.Plugin & {
-        configs: {
-            globals: {
-                languageOptions: {
-                    globals: import('@typescript-eslint/utils').TSESLint.FlatConfig.GlobalsConfig;
-                };
-            };
-        }
-    }
+    const plugin: import('eslint').ESLint.Plugin;
     export default plugin;
 }

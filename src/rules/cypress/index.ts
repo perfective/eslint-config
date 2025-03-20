@@ -5,10 +5,6 @@ export const cypressOptionalConfig = {
     plugins: {
         cypress: eslintPluginCypress,
     },
-    languageOptions: {
-        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- TSC fails without the condition
-        globals: eslintPluginCypress.configs.globals.languageOptions?.globals,
-    },
     rules: {
         'cypress/assertion-before-screenshot': 'error',
         'cypress/no-assigning-return-values': 'error',

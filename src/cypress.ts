@@ -13,7 +13,6 @@ export function cypressConfig(files: string[] = cypressFiles): Record<string, un
         files,
         languageOptions: {
             ...typescriptLanguageOptions(),
-            ...cypressOptionalConfig.languageOptions,
         },
         plugins: {
             ...cypressOptionalConfig.plugins,
