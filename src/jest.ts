@@ -1,3 +1,4 @@
+import { jestFiles } from './config/glob';
 import { jestImportNoExtraneousDependencies } from './rules/import/rules/no-extraneous-dependencies';
 import { jestConfig as jestPluginConfig } from './rules/jest';
 
@@ -5,9 +6,11 @@ import { jestConfig as jestPluginConfig } from './rules/jest';
  * Configuration for the Jest plugin.
  *
  * @param files - A list of globs with the Jest test files.
- * Default value is extensions supported by Jest (/\.(spec|test)\.[jt]sx?$/).
+ * The default value is the list of globs used by jest to detect test files.
+ *
+ * @see https://jestjs.io/docs/configuration#testmatch-arraystring
  */
-export function jestConfig(files: string[] = ['**/*.@(spec|test).[jt]s?(x)']): Record<string, unknown> {
+export function jestConfig(files: string[] = jestFiles): Record<string, unknown> {
     return {
         files,
         plugins: jestPluginConfig.plugins,

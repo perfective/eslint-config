@@ -1,4 +1,6 @@
-// eslint-disable-next-line import/newline-after-import -- conflicts with import sorting
+// eslint-disable-next-line import/newline-after-import -- ignore for the comment
+import { javascriptFiles, jsxFiles, tsxFiles, typescriptDeclarationFiles, typescriptFiles } from './config/glob';
+// eslint-disable-next-line import/newline-after-import -- ignore for the comment
 import { javascriptLanguageOptions, languageOptions, typescriptLanguageOptions } from './config/language-options';
 // eslint-disable-next-line unicorn/prevent-abbreviations -- matches plugin name
 import { arrayFuncConfig } from './rules/array-func';
@@ -25,10 +27,16 @@ import { unicornConfig } from './rules/unicorn';
 export function perfectiveConfig(): Record<string, unknown>[] {
     return [
         {
-            ignores: ['**/*.d.ts', '**/dist'],
+            ignores: [
+                '**/dist',
+                ...typescriptDeclarationFiles,
+            ],
         },
         {
-            files: ['**/*.[jt]s?(x)'],
+            files: [
+                ...javascriptFiles,
+                ...typescriptFiles,
+            ],
             languageOptions: languageOptions(),
             plugins: {
                 ...arrayFuncConfig.plugins,
@@ -64,7 +72,7 @@ export function perfectiveConfig(): Record<string, unknown>[] {
             },
         },
         {
-            files: ['**/*.js?(x)'],
+            files: javascriptFiles,
             languageOptions: javascriptLanguageOptions(),
             plugins: {},
             settings: {
@@ -83,7 +91,7 @@ export function perfectiveConfig(): Record<string, unknown>[] {
             },
         },
         {
-            files: ['**/*.ts?(x)'],
+            files: typescriptFiles,
             languageOptions: typescriptLanguageOptions(),
             plugins: {
                 ...typescriptEslintConfig.plugins,
@@ -109,7 +117,10 @@ export function perfectiveConfig(): Record<string, unknown>[] {
             },
         },
         {
-            files: ['**/*.[jt]sx'],
+            files: [
+                ...jsxFiles,
+                ...tsxFiles,
+            ],
             plugins: {
                 ...stylisticJsxConfig.plugins,
             },

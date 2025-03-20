@@ -1,3 +1,4 @@
+import { cypressFiles } from './config/glob';
 import { typescriptLanguageOptions } from './config/language-options';
 import { cypressOptionalConfig } from './rules/cypress';
 import { cypressImportNoExtraneousDependencies } from './rules/import/rules/no-extraneous-dependencies';
@@ -7,13 +8,8 @@ import { cypressImportNoExtraneousDependencies } from './rules/import/rules/no-e
  *
  * @param files - A list of globs with the Cypress test files.
  */
-export function cypressConfig(files: string[] = ['cypress/**/*.[jt]s']): Record<string, unknown> {
+export function cypressConfig(files: string[] = cypressFiles): Record<string, unknown> {
     return {
-        // The /cypress directory is used in the Cypress docs:
-        //  https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
-        // Integrations for Cypress are shown with ".spec.js",
-        //  but that would conflict with Jest configuration above,
-        //  so skipping them until it's possible to add directory configuration for Jest rules.
         files,
         languageOptions: {
             ...typescriptLanguageOptions(),
