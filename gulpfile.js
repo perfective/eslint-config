@@ -1,9 +1,6 @@
-/* eslint-disable n/no-unpublished-import -- dev-only */
 import gulp from 'gulp';
 
 import * as perfectiveGulp from '@perfective/build/gulp';
-
-/* eslint-enable n/no-unpublished-import */
 
 export const clean = perfectiveGulp.clean(['./dist', '*.tsbuildinfo']);
 export const docs = perfectiveGulp.asciidoctor();
@@ -77,5 +74,4 @@ const full = gulp.series(
     docs,
 );
 
-// eslint-disable-next-line import/no-default-export -- required for configuration
 export default full;

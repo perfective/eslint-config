@@ -1,5 +1,3 @@
-/* eslint-disable n/no-unpublished-import -- dev-only */
-/* eslint-disable import/extensions -- ES modules require extensions */
 import { cypressConfig } from './dist/cypress.js';
 import { perfectiveConfig } from './dist/index.js';
 import { jestConfig } from './dist/jest.js';
@@ -8,9 +6,6 @@ import { importNoExtraneousDependencies } from './dist/rules/import/rules/no-ext
 import { unicornPreventAbbreviations } from './dist/rules/unicorn/rules/prevent-abbreviations.js';
 import { rxjsConfig } from './dist/rxjs.js';
 import { testingLibraryConfig } from './dist/testing-library.js';
-
-/* eslint-enable import/extensions */
-/* eslint-enable n/no-unpublished-import */
 
 const eslintConfig = perfectiveConfig().concat([
     cypressConfig(),
@@ -30,7 +25,19 @@ const eslintConfig = perfectiveConfig().concat([
             })],
         },
     },
+    {
+        files: ['*.config.js', '.*.js', 'gulpfile.js'],
+        rules: {
+            'import/extensions': ['error', 'ignorePackages'],
+            'import/no-default-export': ['off'],
+            'n/no-unpublished-import': ['error', {
+                allowModules: ['gulp', '@perfective/build'],
+                convertPath: {
+                    'dist/**/*.js': ['^dist/(.+)?\\.js$', '$1.js'],
+                },
+            }],
+        },
+    },
 ]);
 
-// eslint-disable-next-line import/no-default-export -- required for configuration
 export default eslintConfig;
