@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 
 export const jsdocConfig = {

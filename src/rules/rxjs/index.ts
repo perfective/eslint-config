@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import eslintPluginRxjs from 'eslint-plugin-rxjs-x';
 
 export const rxjsConfig = {

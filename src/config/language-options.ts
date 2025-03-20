@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- dev-only
 import { parser as typescriptEslintParser } from 'typescript-eslint';
 
 export function languageOptions(): Record<string, unknown> {

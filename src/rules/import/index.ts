@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import { flatConfigs } from 'eslint-plugin-import';
 
 import { helpfulWarningsRules } from './helpful-warnings';

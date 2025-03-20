@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import { plugin } from 'typescript-eslint';
 
 import { extensionRules } from './extension-rules';

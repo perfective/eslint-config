@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
 
 export const testingLibraryConfig = {

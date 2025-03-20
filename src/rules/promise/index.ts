@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import eslintPluginPromise from 'eslint-plugin-promise';
 
 export const promiseConfig = {

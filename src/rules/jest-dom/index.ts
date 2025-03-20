@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import eslintPluginJestDom from 'eslint-plugin-jest-dom';
 
 export const jestDomConfig = {

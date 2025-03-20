@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- ESLint plugin used only during development
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 import { unicornPreventAbbreviations } from './rules/prevent-abbreviations';

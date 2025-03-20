@@ -4,6 +4,7 @@ import { cypressConfig } from './dist/cypress.js';
 import { perfectiveConfig } from './dist/index.js';
 import { jestConfig } from './dist/jest.js';
 import { jestDomConfig } from './dist/jest-dom.js';
+import { importNoExtraneousDependencies } from './dist/rules/import/rules/no-extraneous-dependencies.js';
 import { rxjsConfig } from './dist/rxjs.js';
 import { testingLibraryConfig } from './dist/testing-library.js';
 
@@ -16,6 +17,13 @@ const eslintConfig = perfectiveConfig().concat([
     jestDomConfig(),
     rxjsConfig(),
     testingLibraryConfig(),
+    {
+        rules: {
+            'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+                devDependencies: true,
+            })],
+        },
+    },
 ]);
 
 // eslint-disable-next-line import/no-default-export -- required for configuration
