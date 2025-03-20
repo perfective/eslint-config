@@ -1,6 +1,5 @@
 import eslintPluginArrayFunc from 'eslint-plugin-array-func';
 
-// eslint-disable-next-line unicorn/prevent-abbreviations -- plugin name
 export const arrayFuncConfig = {
     plugins: {
         'array-func': eslintPluginArrayFunc,

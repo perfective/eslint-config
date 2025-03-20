@@ -1,8 +1,5 @@
-// eslint-disable-next-line import/newline-after-import -- ignore for the comment
 import { javascriptFiles, jsxFiles, tsxFiles, typescriptDeclarationFiles, typescriptFiles } from './config/glob';
-// eslint-disable-next-line import/newline-after-import -- ignore for the comment
 import { javascriptLanguageOptions, languageOptions, typescriptLanguageOptions } from './config/language-options';
-// eslint-disable-next-line unicorn/prevent-abbreviations -- matches plugin name
 import { arrayFuncConfig } from './rules/array-func';
 import { eslintConfig } from './rules/eslint';
 import { eslintCommentsConfig } from './rules/eslint-comments';
