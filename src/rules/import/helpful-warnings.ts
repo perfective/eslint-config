@@ -1,6 +1,8 @@
+import { Linter } from 'eslint';
+
 import { importNoExtraneousDependencies } from './rules/no-extraneous-dependencies';
 
-export const helpfulWarningsRules = {
+export const helpfulWarningsRules: Linter.RulesRecord = {
     'import/export': 'error',
     // Use @typescript-eslint/no-deprecated instead.
     'import/no-deprecated': 'off',

@@ -1,4 +1,6 @@
-export const eslintSuggestionsRules = {
+import { Linter } from 'eslint';
+
+export const eslintSuggestionsRules: Linter.RulesRecord = {
     'accessor-pairs': 'error',
     // The "never" setting is great to prevent nested callbacks,
     // but it can be addressed by other rules.

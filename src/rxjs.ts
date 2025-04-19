@@ -1,5 +1,6 @@
+import { Linter } from 'eslint';
+
 import { typescriptFiles } from './config/glob';
-import { typescriptLanguageOptions } from './config/language-options';
 import { rxjsConfig as rxjsPluginConfig } from './rules/rxjs';
 
 /**
@@ -7,15 +8,6 @@ import { rxjsConfig as rxjsPluginConfig } from './rules/rxjs';
  *
  * @param files - A list of globs with the files to lint.
  */
-export function rxjsConfig(files: string[] = typescriptFiles): Record<string, unknown> {
-    return {
-        files,
-        languageOptions: typescriptLanguageOptions(),
-        plugins: {
-            ...rxjsPluginConfig.plugins,
-        },
-        rules: {
-            ...rxjsPluginConfig.rules,
-        },
-    };
+export function rxjsConfig(files: string[] = typescriptFiles): Linter.Config {
+    return rxjsPluginConfig(files);
 }

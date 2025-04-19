@@ -1,4 +1,6 @@
-export const moduleSystemsRules = {
+import { Linter } from 'eslint';
+
+export const moduleSystemsRules: Linter.RulesRecord = {
     'import/no-amd': 'error',
     'import/no-commonjs': ['error', {
         allowConditionalRequire: true,

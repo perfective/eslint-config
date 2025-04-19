@@ -1,4 +1,6 @@
-export const eslintPossibleProblemsRules = {
+import { Linter } from 'eslint';
+
+export const eslintPossibleProblemsRules: Linter.RulesRecord = {
     'array-callback-return': ['error', {
         allowImplicit: true,
         checkForEach: false,

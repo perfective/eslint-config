@@ -1,4 +1,6 @@
-export const staticAnalysisRules = {
+import { Linter } from 'eslint';
+
+export const staticAnalysisRules: Linter.RulesRecord = {
     'import/default': 'error',
     'import/named': ['error', {
         // TODO: This setting is reported to cause issues,

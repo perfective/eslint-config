@@ -1,4 +1,6 @@
-export const styleGuideRules = {
+import { Linter } from 'eslint';
+
+export const styleGuideRules: Linter.RulesRecord = {
     'import/consistent-type-specifier-style': ['warn', 'prefer-inline'],
     // TODO: Research usage
     'import/dynamic-import-chunkname': 'off',

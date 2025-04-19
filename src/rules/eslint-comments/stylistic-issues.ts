@@ -1,4 +1,6 @@
-export const stylisticIssuesRules = {
+import { Linter } from 'eslint';
+
+export const stylisticIssuesRules: Linter.RulesRecord = {
     'eslint-comments/no-restricted-disable': 'off',
     'eslint-comments/no-use': ['error', {
         allow: [

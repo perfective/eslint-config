@@ -1,6 +1,8 @@
+import { Linter } from 'eslint';
+
 import { typescriptEslintNamingConvention } from './rules/typescript-eslint-naming-convention';
 
-export const supportedRules = {
+export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/array-type': ['warn', {
         default: 'array',

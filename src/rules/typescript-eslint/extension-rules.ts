@@ -1,4 +1,6 @@
-export const extensionRules = {
+import { Linter } from 'eslint';
+
+export const extensionRules: Linter.RulesRecord = {
     // Deprecated. Use https://eslint.style/rules/ts/block-spacing.
     'block-spacing': 'off',
     '@typescript-eslint/block-spacing': 'off',

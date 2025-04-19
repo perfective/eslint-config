@@ -8,8 +8,8 @@ import { rxjsConfig } from './dist/rxjs.js';
 import { testingLibraryConfig } from './dist/testing-library.js';
 
 const eslintConfig = perfectiveConfig().concat([
-    cypressConfig(),
-    jestConfig(),
+    ...cypressConfig(),
+    ...jestConfig(),
     jestDomConfig(),
     rxjsConfig(),
     testingLibraryConfig(),

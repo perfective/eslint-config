@@ -1,4 +1,6 @@
-export const bestPracticesRules = {
+import { Linter } from 'eslint';
+
+export const bestPracticesRules: Linter.RulesRecord = {
     'eslint-comments/disable-enable-pair': 'error',
     'eslint-comments/no-aggregating-enable': 'error',
     'eslint-comments/no-duplicate-disable': 'error',

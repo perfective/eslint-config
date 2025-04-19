@@ -1,4 +1,6 @@
-export const eslintLayoutFormattingRules = {
+import { Linter } from 'eslint';
+
+export const eslintLayoutFormattingRules: Linter.RulesRecord = {
     // Deprecated. Use https://eslint.style/rules/js/array-bracket-newline.
     'array-bracket-newline': 'off',
     // Deprecated. Use https://eslint.style/rules/js/array-bracket-spacing.
