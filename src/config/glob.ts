@@ -1,31 +1,30 @@
-export const jsxFiles = [
-    '**/*.jsx',
-];
+/**
+ * Nominal type for globs pattern string.
+ */
+export type Glob = string;
 
-export const javascriptFiles = [
+export const jsxFiles: Glob = '**/*.jsx';
+
+export const javascriptFiles: Glob[] = [
     '**/*.{js,cjs,mjs}',
-    ...jsxFiles,
+    jsxFiles,
 ];
 
-export const tsxFiles = [
-    '**/*.tsx',
-];
+export const tsxFiles: Glob = '**/*.tsx';
 
-export const typescriptFiles = [
+export const typescriptFiles: Glob[] = [
     '**/*.{ts,cts,mts}',
-    ...tsxFiles,
+    tsxFiles,
 ];
 
-export const typescriptDeclarationFiles = [
-    '**/*.d.{ts,cts,mts}',
-];
+export const typescriptDeclarationFiles: Glob = '**/*.d.{ts,cts,mts}';
 
 /**
  * The default glob patterns Jest uses to find test files.
  *
  * @see https://jestjs.io/docs/configuration#testmatch-arraystring
  */
-export const jestFiles = [
+export const jestFiles: Glob[] = [
     '**/__tests__/**/*.[jt]s?(x)',
     '**/?(*.)+(spec|test).[jt]s?(x)',
 ];
@@ -36,6 +35,4 @@ export const jestFiles = [
  * @see https://docs.cypress.io/app/references/configuration#e2e
  * @see https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
  */
-export const cypressFiles = [
-    'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-];
+export const cypressFiles: Glob = 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}';

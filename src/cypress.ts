@@ -9,7 +9,7 @@ import { cypressImportNoExtraneousDependencies } from './rules/import/rules/no-e
  *
  * @param files - A list of globs with the Cypress test files.
  */
-export function cypressConfig(files: string[] = cypressFiles): Linter.Config[] {
+export function cypressConfig(files: string[] = [cypressFiles]): Linter.Config[] {
     return [
         cypressPluginConfig(files),
         {

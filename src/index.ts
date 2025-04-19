@@ -26,7 +26,7 @@ export function perfectiveConfig(): Linter.Config[] {
         {
             ignores: [
                 '**/dist',
-                ...typescriptDeclarationFiles,
+                typescriptDeclarationFiles,
             ],
         },
         eslintConfig(),

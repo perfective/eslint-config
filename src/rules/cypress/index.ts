@@ -4,7 +4,7 @@ import eslintPluginCypress from 'eslint-plugin-cypress/flat';
 import { cypressFiles } from '../../config/glob';
 import { typescriptLanguageOptions } from '../../config/language-options';
 
-export function cypressConfig(files: string[] = cypressFiles): Linter.Config {
+export function cypressConfig(files: string[] = [cypressFiles]): Linter.Config {
     return {
         files,
         languageOptions: typescriptLanguageOptions(),

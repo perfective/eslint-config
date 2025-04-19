@@ -8,8 +8,8 @@ import { languageOptions } from '../../../config/language-options';
 export function stylisticJsxConfig(): Linter.Config {
     return {
         files: [
-            ...jsxFiles,
-            ...tsxFiles,
+            jsxFiles,
+            tsxFiles,
         ],
         languageOptions: languageOptions(),
         plugins: {
