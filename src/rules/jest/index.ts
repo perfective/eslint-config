@@ -1,11 +1,22 @@
 import { Linter } from 'eslint';
 import eslintPluginJest from 'eslint-plugin-jest';
 
-import { jestFiles } from '../../config/glob';
+import { Glob } from '../../config/glob';
+import { jestImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
 import { typescriptEslintJestRules } from './typescript-eslint';
 
-export function jestConfig(files: string[] = jestFiles): Linter.Config {
+/**
+ * The default glob patterns Jest uses to find test files.
+ *
+ * @see https://jestjs.io/docs/configuration#testmatch-arraystring
+ */
+export const jestFiles: Glob[] = [
+    '**/__tests__/**/*.[jt]s?(x)',
+    '**/?(*.)+(spec|test).[jt]s?(x)',
+];
+
+export function jestConfig(files: Glob[] = jestFiles): Linter.Config {
     return {
         files,
         plugins: {
@@ -15,6 +26,7 @@ export function jestConfig(files: string[] = jestFiles): Linter.Config {
             globals: eslintPluginJest.environments.globals.globals,
         },
         rules: {
+            ...perfectiveRules(),
             ...typescriptEslintJestRules,
             'jest/consistent-test-it': ['warn', {
                 fn: 'test',
@@ -103,5 +115,41 @@ export function jestConfig(files: string[] = jestFiles): Linter.Config {
                 ignoreSpaces: false,
             }],
         },
+    };
+}
+
+function perfectiveRules(): Linter.RulesRecord {
+    return {
+        '@typescript-eslint/ban-ts-comment': ['error', {
+            'ts-expect-error': 'allow-with-description',
+            'ts-ignore': true,
+            'ts-nocheck': true,
+            'ts-check': false,
+        }],
+        '@typescript-eslint/init-declarations': 'off',
+        // See "jest/unbound-method"
+        '@typescript-eslint/unbound-method': 'off',
+        'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
+        'import/no-unassigned-import': ['error', {
+            allow: [
+                '@testing-library/jest-dom',
+                '@testing-library/jest-dom/extend-expect',
+            ],
+        }],
+        // There can be 4 levels of `describe()`: Class -> Method -> Method Signature -> "When...",
+        // followed by a level for `it()`.
+        // The 6th level (inside of `it()`) can be required for a callback to test `toThrow()`.
+        'max-nested-callbacks': ['error', 6],
+        'n/no-unpublished-import': ['error', {
+            // Required in devDependencies.
+            allowModules: ['@jest/globals'],
+        }],
+        // Conflicts with func-style inside describe()
+        'prefer-arrow/prefer-arrow-functions': 'off',
+        // In tests the last step of a Promise is to run "expect".
+        // TODO: This rule can be improved by allowing configuring functions when Promise<void> is expected.
+        'promise/always-return': 'off',
+        // Passing promise is required for async testing
+        '@smarttools/rxjs/no-topromise': 'off',
     };
 }

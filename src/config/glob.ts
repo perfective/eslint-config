@@ -18,13 +18,3 @@ export const typescriptFiles: Glob[] = [
 ];
 
 export const typescriptDeclarationFiles: Glob = '**/*.d.{ts,cts,mts}';
-
-/**
- * The default glob patterns Jest uses to find test files.
- *
- * @see https://jestjs.io/docs/configuration#testmatch-arraystring
- */
-export const jestFiles: Glob[] = [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[jt]s?(x)',
-];

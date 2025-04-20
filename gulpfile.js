@@ -39,8 +39,8 @@ const full = gulp.series(
                 types: './rules/cypress/index.d.ts',
             },
             './jest': {
-                import: './jest.js',
-                types: './jest.d.ts',
+                import: './rules/jest/index.js',
+                types: './rules/jest/index.d.ts',
             },
             './jest-dom': {
                 import: './jest-dom.js',
