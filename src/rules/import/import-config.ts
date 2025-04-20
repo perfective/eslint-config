@@ -4,10 +4,10 @@ import { flatConfigs } from 'eslint-plugin-import';
 import { javascriptFiles, typescriptFiles } from '../../config/glob';
 import { javascriptLanguageOptions, typescriptLanguageOptions } from '../../config/language-options';
 
-import { helpfulWarningsRules } from './helpful-warnings';
-import { moduleSystemsRules } from './module-systems';
-import { staticAnalysisRules } from './static-analysis';
-import { styleGuideRules } from './style-guide';
+import { helpfulWarningsRules } from './helpful-warnings-rules';
+import { moduleSystemsRules } from './module-systems-rules';
+import { staticAnalysisRules } from './static-analysis-rules';
+import { styleGuideRules } from './style-guide-rules';
 
 export function importConfig(): Linter.Config {
     return {

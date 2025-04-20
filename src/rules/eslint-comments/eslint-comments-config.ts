@@ -1,8 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginEslintComments from 'eslint-plugin-eslint-comments';
 
-import { bestPracticesRules } from './best-practices';
-import { stylisticIssuesRules } from './stylistic-issues';
+import { bestPracticesRules } from './best-practices-rules';
+import { stylisticIssuesRules } from './stylistic-issues-rules';
 
 export function eslintCommentsConfig(): Linter.Config {
     return {

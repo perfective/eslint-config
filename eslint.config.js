@@ -19,7 +19,8 @@ const eslintConfig = perfectiveEslintConfig([
             })],
             'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations({}, {
                 allowList: {
-                    arrayFuncConfig: true,
+                    'arrayFuncConfig': true,
+                    'array-func-config': true,
                 },
             })],
         },

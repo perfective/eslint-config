@@ -3,23 +3,23 @@ import { Linter } from 'eslint';
 import { configurationFiles, typescriptDeclarationFiles } from '../config/glob';
 import { languageOptions } from '../config/language-options';
 
+import { arrayFuncConfig } from './array-func/array-func-config';
+import { eslintConfig } from './eslint/eslint-config';
+import { eslintCommentsConfig } from './eslint-comments/eslint-comments-config';
+import { importConfig, importJavascriptConfig, importTypescriptConfig } from './import/import-config';
 import { configurationImportNoExtraneousDependencies } from './import/rules/no-extraneous-dependencies';
-import { stylisticJsConfig } from './stylistic/js';
-import { stylisticJsxConfig } from './stylistic/jsx';
-import { stylisticPlusConfig } from './stylistic/plus';
-import { stylisticTsConfig } from './stylistic/ts';
-import { arrayFuncConfig } from './array-func';
-import { eslintConfig } from './eslint';
-import { eslintCommentsConfig } from './eslint-comments';
-import { importConfig, importJavascriptConfig, importTypescriptConfig } from './import';
-import { jsdocConfig, jsdocJavascriptConfig } from './jsdoc';
-import { nodeConfig } from './node';
-import { preferArrowConfig } from './prefer-arrow';
-import { promiseConfig } from './promise';
-import { securityConfig } from './security';
-import { simpleImportSortConfig } from './simple-import-sort';
-import { typescriptEslintConfig } from './typescript-eslint';
-import { unicornConfig } from './unicorn';
+import { jsdocConfig, jsdocJavascriptConfig } from './jsdoc/jsdoc-config';
+import { nodeConfig } from './node/node-config';
+import { preferArrowConfig } from './prefer-arrow/prefer-arrow-config';
+import { promiseConfig } from './promise/promise-config';
+import { securityConfig } from './security/security-config';
+import { simpleImportSortConfig } from './simple-import-sort/simple-import-sort-config';
+import { stylisticJsConfig } from './stylistic/js/stylistic-js-config';
+import { stylisticJsxConfig } from './stylistic/jsx/stylistic-jsx-config';
+import { stylisticPlusConfig } from './stylistic/plus/stylistic-plus-config';
+import { stylisticTsConfig } from './stylistic/ts/stylistic-ts-config';
+import { typescriptEslintConfig } from './typescript-eslint/typescript-eslint-config';
+import { unicornConfig } from './unicorn/unicorn-config';
 
 /**
  * An ESLint flat config or a function that returns one.

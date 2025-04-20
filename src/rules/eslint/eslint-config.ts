@@ -1,8 +1,8 @@
 import { Linter } from 'eslint';
 
-import { eslintLayoutFormattingRules } from './layout-formatting';
-import { eslintPossibleProblemsRules } from './possible-problems';
-import { eslintSuggestionsRules } from './suggestions';
+import { eslintLayoutFormattingRules } from './layout-formatting-rules';
+import { eslintPossibleProblemsRules } from './possible-problems-rules';
+import { eslintSuggestionsRules } from './suggestions-rules';
 
 export function eslintConfig(): Linter.Config {
     return {
