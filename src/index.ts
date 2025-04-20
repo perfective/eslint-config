@@ -1,4 +1,1 @@
-export {
-    LinterConfig,
-    perfectiveEslintConfig,
-} from './rules/config';
+export { perfectiveEslintConfig } from './rules/config';

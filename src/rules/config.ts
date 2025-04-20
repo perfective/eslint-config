@@ -2,6 +2,7 @@ import { Linter } from 'eslint';
 
 import { configurationFiles, typescriptDeclarationFiles } from '../config/glob';
 import { languageOptions } from '../config/language-options';
+import { LinterConfig, linterConfig } from '../config/linter-config';
 
 import { arrayFuncConfig } from './array-func/array-func-config';
 import { eslintConfig } from './eslint/eslint-config';
@@ -20,18 +21,6 @@ import { stylisticPlusConfig } from './stylistic/plus/stylistic-plus-config';
 import { stylisticTsConfig } from './stylistic/ts/stylistic-ts-config';
 import { typescriptEslintConfig } from './typescript-eslint/typescript-eslint-config';
 import { unicornConfig } from './unicorn/unicorn-config';
-
-/**
- * An ESLint flat config or a function that returns one.
- */
-export type LinterConfig = Linter.Config | (() => Linter.Config);
-
-function linterConfig(config: LinterConfig): Linter.Config {
-    if (typeof config === 'function') {
-        return config();
-    }
-    return config;
-}
 
 /**
  * Returns an array of flat configs.

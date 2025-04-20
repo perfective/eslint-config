@@ -15,6 +15,10 @@ export {
     typescriptLanguageOptions,
 } from './config/language-options';
 export {
+    LinterConfig,
+    linterConfig,
+} from './config/linter-config';
+export {
     hasEslintPlugin,
     optionalRule,
 } from './config/plugin';
