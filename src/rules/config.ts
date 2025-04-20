@@ -12,7 +12,7 @@ import { eslintConfig } from './eslint';
 import { eslintCommentsConfig } from './eslint-comments';
 import { importConfig, importJavascriptConfig, importTypescriptConfig } from './import';
 import { jsdocConfig, jsdocJavascriptConfig } from './jsdoc';
-import { nConfig } from './n';
+import { nodeConfig } from './node';
 import { preferArrowConfig } from './prefer-arrow';
 import { promiseConfig } from './promise';
 import { securityConfig } from './security';
@@ -53,7 +53,7 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
         importTypescriptConfig(),
         jsdocConfig(),
         jsdocJavascriptConfig(),
-        nConfig(),
+        nodeConfig(),
         preferArrowConfig(),
         promiseConfig(),
         securityConfig(),

@@ -1,4 +1,4 @@
-= `n`
+= `node`
 :eslint-n-rules: https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules
 
 The `link:https://github.com/eslint-community/eslint-plugin-n[eslint-plugin-n]` provides ESLint rules for Node.js.

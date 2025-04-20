@@ -4,7 +4,7 @@ import eslintPluginN from 'eslint-plugin-n';
 import { javascriptFiles, typescriptFiles } from '../../config/glob';
 import { languageOptions } from '../../config/language-options';
 
-export function nConfig(): Linter.Config {
+export function nodeConfig(): Linter.Config {
     return {
         files: [
             ...javascriptFiles,
