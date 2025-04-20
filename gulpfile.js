@@ -35,8 +35,8 @@ const full = gulp.series(
             // Optional plugins.
             // Each plugin must be in a separate export, so it does not fail when the plugin is not installed.
             './cypress': {
-                import: './cypress.js',
-                types: './cypress.d.ts',
+                import: './rules/cypress/index.js',
+                types: './rules/cypress/index.d.ts',
             },
             './jest': {
                 import: './jest.js',

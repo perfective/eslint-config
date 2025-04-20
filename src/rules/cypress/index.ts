@@ -1,10 +1,19 @@
 import { Linter } from 'eslint';
 import eslintPluginCypress from 'eslint-plugin-cypress/flat';
 
-import { cypressFiles } from '../../config/glob';
+import { Glob } from '../../config/glob';
 import { typescriptLanguageOptions } from '../../config/language-options';
+import { cypressImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
-export function cypressConfig(files: string[] = [cypressFiles]): Linter.Config {
+/**
+ * The default glob patterns Cypress uses to load test files.
+ *
+ * @see https://docs.cypress.io/app/references/configuration#e2e
+ * @see https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
+ */
+export const cypressFiles: Glob = 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}';
+
+export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
     return {
         files,
         languageOptions: typescriptLanguageOptions(),
@@ -23,6 +32,21 @@ export function cypressConfig(files: string[] = [cypressFiles]): Linter.Config {
             'cypress/no-xpath': 'error',
             'cypress/require-data-selectors': 'error',
             'cypress/unsafe-to-chain-command': 'error',
+            ...perfectiveRules(),
         },
+    };
+}
+
+function perfectiveRules(): Linter.RulesRecord {
+    return {
+        // Tests may declare variables that are set only by beforeEach/beforeAll functions.
+        'init-declarations': 'off',
+        '@typescript-eslint/init-declarations': 'off',
+        'import/no-extraneous-dependencies': ['error', cypressImportNoExtraneousDependencies()],
+        'max-nested-callbacks': ['error', 4],
+        'new-cap': ['error', {
+            // These are functions from cypress-cucumber-preprocessor/steps
+            capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
+        }],
     };
 }
