@@ -22,7 +22,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/custom-error-definition': 'warn',
             'unicorn/empty-brace-spaces': 'warn',
             'unicorn/error-message': 'error',
-            'unicorn/escape-case': 'warn',
+            'unicorn/escape-case': ['warn', 'uppercase'],
             'unicorn/expiring-todo-comments': 'error',
             'unicorn/explicit-length-check': 'warn',
             'unicorn/filename-case': ['error', {
@@ -94,7 +94,9 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-useless-switch-case': 'error',
             'unicorn/no-useless-undefined': 'off',
             'unicorn/no-zero-fractions': 'off',
-            'unicorn/number-literal-case': 'warn',
+            'unicorn/number-literal-case': ['warn', {
+                hexadecimalValue: 'uppercase',
+            }],
             'unicorn/numeric-separators-style': ['warn', {
                 hexadecimal: {
                     // Keep RGB colors as is
