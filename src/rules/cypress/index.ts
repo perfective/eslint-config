@@ -2,13 +2,11 @@ import { Linter } from 'eslint';
 import eslintPluginCypress from 'eslint-plugin-cypress/flat';
 
 import { cypressFiles, Glob } from '../../config/glob';
-import { typescriptLanguageOptions } from '../../config/language-options';
 import { cypressImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
 export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
     return {
         files,
-        languageOptions: typescriptLanguageOptions(),
         plugins: {
             cypress: eslintPluginCypress,
         },

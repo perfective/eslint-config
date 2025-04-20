@@ -3,7 +3,7 @@ declare module 'eslint-plugin-import' {
         recommended: {
             plugins: {
                 import: Record<string, unknown>;
-            }
-        }
-    }
+            };
+        };
+    };
 }

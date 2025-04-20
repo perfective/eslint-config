@@ -1,16 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginArrayFunc from 'eslint-plugin-array-func';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { languageOptions } from '../../config/language-options';
-
 export function arrayFuncConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             'array-func': eslintPluginArrayFunc,
         },

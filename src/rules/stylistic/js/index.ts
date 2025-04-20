@@ -2,16 +2,8 @@ import { Linter } from 'eslint';
 
 import eslintPluginStylisticJs from '@stylistic/eslint-plugin-js';
 
-import { javascriptFiles, typescriptFiles } from '../../../config/glob';
-import { languageOptions } from '../../../config/language-options';
-
 export function stylisticJsConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             '@stylistic/js': eslintPluginStylisticJs,
         },

@@ -1,16 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginPromise from 'eslint-plugin-promise';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { languageOptions } from '../../config/language-options';
-
 export function promiseConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             promise: eslintPluginPromise,
         },

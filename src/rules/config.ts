@@ -1,6 +1,7 @@
 import { Linter } from 'eslint';
 
 import { configurationFiles, typescriptDeclarationFiles } from '../config/glob';
+import { languageOptions } from '../config/language-options';
 
 import { configurationImportNoExtraneousDependencies } from './import/rules/no-extraneous-dependencies';
 import { stylisticJsConfig } from './stylistic/js';
@@ -37,6 +38,9 @@ function linterConfig(config: LinterConfig): Linter.Config {
  */
 export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Config[] {
     return [
+        {
+            languageOptions: languageOptions(),
+        },
         {
             ignores: [
                 '**/dist',

@@ -1,16 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginSecurity from 'eslint-plugin-security';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { languageOptions } from '../../config/language-options';
-
 export function securityConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             security: eslintPluginSecurity,
         },

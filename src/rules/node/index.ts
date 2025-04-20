@@ -1,16 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginN from 'eslint-plugin-n';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { languageOptions } from '../../config/language-options';
-
 export function nodeConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             n: eslintPluginN,
         },

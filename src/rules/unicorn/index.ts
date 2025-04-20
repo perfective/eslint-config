@@ -1,18 +1,10 @@
 import { Linter } from 'eslint';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { languageOptions } from '../../config/language-options';
-
 import { unicornPreventAbbreviations } from './rules/prevent-abbreviations';
 
 export function unicornConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             unicorn: eslintPluginUnicorn,
         },

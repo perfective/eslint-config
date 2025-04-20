@@ -1,16 +1,11 @@
 import { Linter } from 'eslint';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { javascriptLanguageOptions, languageOptions } from '../../config/language-options';
+import { javascriptFiles } from '../../config/glob';
+import { javascriptLanguageOptions } from '../../config/language-options';
 
 export function jsdocConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             jsdoc: {
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- safe assertion

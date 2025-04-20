@@ -1,16 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginPreferArrow from 'eslint-plugin-prefer-arrow';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { languageOptions } from '../../config/language-options';
-
 export function preferArrowConfig(): Linter.Config {
     return {
-        files: [
-            ...javascriptFiles,
-            ...typescriptFiles,
-        ],
-        languageOptions: languageOptions(),
         plugins: {
             'prefer-arrow': eslintPluginPreferArrow,
         },
