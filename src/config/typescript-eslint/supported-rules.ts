@@ -248,6 +248,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/prefer-namespace-keyword': 'warn',
     '@typescript-eslint/prefer-nullish-coalescing': ['error', {
         ignoreBooleanCoercion: false,
+        ignoreIfStatements: false,
         ignoreTernaryTests: false,
         ignoreConditionalTests: true,
         ignoreMixedLogicalExpressions: true,
