@@ -1,10 +1,10 @@
 import { ESLint, Linter } from 'eslint';
 import eslintPluginRxjs from 'eslint-plugin-rxjs-x';
 
-import { typescriptFiles } from '../../config/glob';
+import { Glob, typescriptFiles } from '../../config/glob';
 import { languageOptions } from '../../config/language-options';
 
-export function rxjsConfig(files: string[] = typescriptFiles): Linter.Config {
+export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
     return {
         files,
         languageOptions: languageOptions(),
@@ -55,7 +55,7 @@ export function rxjsConfig(files: string[] = typescriptFiles): Linter.Config {
             'rxjs-x/no-nested-subscribe': 'error',
             'rxjs-x/no-redundant-notify': 'error',
             // Prior to v6.4.0 shareReplay() operator had some surprising behavior:
-            //  https://github.com/ReactiveX/rxjs-x/pull/4059
+            //  https://github.com/ReactiveX/rxjs/pull/4059
             'rxjs-x/no-sharereplay': 'off',
             'rxjs-x/no-subclass': 'error',
             'rxjs-x/no-subject-unsubscribe': 'error',

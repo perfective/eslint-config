@@ -47,8 +47,8 @@ const full = gulp.series(
                 types: './rules/jest-dom/index.d.ts',
             },
             './rxjs': {
-                import: './rxjs.js',
-                types: './rxjs.d.ts',
+                import: './rules/rxjs/index.js',
+                types: './rules/rxjs/index.d.ts',
             },
             './testing-library': {
                 import: './testing-library.js',

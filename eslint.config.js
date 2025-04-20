@@ -3,8 +3,8 @@ import { cypressConfig } from './dist/rules/cypress/index.js';
 import { importNoExtraneousDependencies } from './dist/rules/import/rules/no-extraneous-dependencies.js';
 import { jestConfig } from './dist/rules/jest/index.js';
 import { jestDomConfig } from './dist/rules/jest-dom/index.js';
+import { rxjsConfig } from './dist/rules/rxjs/index.js';
 import { unicornPreventAbbreviations } from './dist/rules/unicorn/rules/prevent-abbreviations.js';
-import { rxjsConfig } from './dist/rxjs.js';
 import { testingLibraryConfig } from './dist/testing-library.js';
 
 const eslintConfig = perfectiveConfig().concat([
