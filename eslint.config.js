@@ -4,8 +4,8 @@ import { importNoExtraneousDependencies } from './dist/rules/import/rules/no-ext
 import { jestConfig } from './dist/rules/jest/index.js';
 import { jestDomConfig } from './dist/rules/jest-dom/index.js';
 import { rxjsConfig } from './dist/rules/rxjs/index.js';
+import { testingLibraryConfig } from './dist/rules/testing-library/index.js';
 import { unicornPreventAbbreviations } from './dist/rules/unicorn/rules/prevent-abbreviations.js';
-import { testingLibraryConfig } from './dist/testing-library.js';
 
 const eslintConfig = perfectiveConfig().concat([
     cypressConfig(),
