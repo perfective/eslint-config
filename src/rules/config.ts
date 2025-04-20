@@ -1,7 +1,8 @@
 import { Linter } from 'eslint';
 
-import { typescriptDeclarationFiles } from '../config/glob';
+import { configurationFiles, typescriptDeclarationFiles } from '../config/glob';
 
+import { configurationImportNoExtraneousDependencies } from './import/rules/no-extraneous-dependencies';
 import { stylisticJsConfig } from './stylistic/js';
 import { stylisticJsxConfig } from './stylistic/jsx';
 import { stylisticPlusConfig } from './stylistic/plus';
@@ -62,5 +63,27 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
         stylisticPlusConfig(),
         stylisticTsConfig(),
         unicornConfig(),
+        // Overrides
+        configurationFilesConfig(),
     ].concat(configs.map(linterConfig));
+}
+
+/**
+ * Rules overrides for configuration files.
+ */
+function configurationFilesConfig(): Linter.Config {
+    return {
+        files: configurationFiles,
+        rules: {
+            'import/extensions': ['error', 'ignorePackages'],
+            'import/no-default-export': ['off'],
+            'import/no-extraneous-dependencies': ['error', configurationImportNoExtraneousDependencies()],
+            'n/no-unpublished-import': ['error', {
+                allowModules: ['gulp', '@perfective/build'],
+                convertPath: {
+                    'dist/**/*.js': ['^dist/(.+)?\\.js$', '$1.js'],
+                },
+            }],
+        },
+    };
 }

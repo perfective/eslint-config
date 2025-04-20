@@ -1,20 +1,10 @@
 import { Linter } from 'eslint';
 import eslintPluginJest from 'eslint-plugin-jest';
 
-import { Glob } from '../../config/glob';
+import { Glob, jestFiles } from '../../config/glob';
 import { jestImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
 import { typescriptEslintJestRules } from './typescript-eslint';
-
-/**
- * The default glob patterns Jest uses to find test files.
- *
- * @see https://jestjs.io/docs/configuration#testmatch-arraystring
- */
-export const jestFiles: Glob[] = [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[jt]s?(x)',
-];
 
 export function jestConfig(files: Glob[] = jestFiles): Linter.Config {
     return {

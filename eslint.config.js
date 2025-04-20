@@ -24,19 +24,6 @@ const eslintConfig = perfectiveEslintConfig([
             })],
         },
     },
-    {
-        files: ['*.config.js', '.*.js', 'gulpfile.js'],
-        rules: {
-            'import/extensions': ['error', 'ignorePackages'],
-            'import/no-default-export': ['off'],
-            'n/no-unpublished-import': ['error', {
-                allowModules: ['gulp', '@perfective/build'],
-                convertPath: {
-                    'dist/**/*.js': ['^dist/(.+)?\\.js$', '$1.js'],
-                },
-            }],
-        },
-    },
 ]);
 
 export default eslintConfig;

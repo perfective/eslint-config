@@ -1,8 +1,7 @@
 import { Linter } from 'eslint';
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
 
-import { Glob } from '../../config/glob';
-import { jestFiles } from '../jest';
+import { Glob, jestFiles } from '../../config/glob';
 
 export function testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config {
     return {

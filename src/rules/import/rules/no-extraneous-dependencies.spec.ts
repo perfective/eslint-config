@@ -1,11 +1,11 @@
 import { describe, expect, it } from '@jest/globals';
 
 import {
+    configurationImportNoExtraneousDependencies,
     cypressImportNoExtraneousDependencies,
     ImportNoExtraneousDependencies,
     importNoExtraneousDependencies,
     jestImportNoExtraneousDependencies,
-    jsImportNoExtraneousDependencies,
 } from './no-extraneous-dependencies';
 
 describe(importNoExtraneousDependencies, () => {
@@ -36,9 +36,9 @@ describe(importNoExtraneousDependencies, () => {
     });
 });
 
-describe(jsImportNoExtraneousDependencies, () => {
+describe(configurationImportNoExtraneousDependencies, () => {
     it('returns "import/no-extraneous-dependencies" configuration for JS files', () => {
-        expect(jsImportNoExtraneousDependencies())
+        expect(configurationImportNoExtraneousDependencies())
             .toStrictEqual({
                 bundledDependencies: true,
                 devDependencies: ['**/.*.js', '**/*.config.js', '**/gulpfile.js'],
@@ -53,7 +53,7 @@ describe(jestImportNoExtraneousDependencies, () => {
         expect(jestImportNoExtraneousDependencies())
             .toStrictEqual({
                 bundledDependencies: true,
-                devDependencies: ['**/*.@(spec|test).[jt]s?(x)'],
+                devDependencies: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
                 optionalDependencies: false,
                 peerDependencies: false,
             } as ImportNoExtraneousDependencies);
@@ -65,7 +65,7 @@ describe(cypressImportNoExtraneousDependencies, () => {
         expect(cypressImportNoExtraneousDependencies())
             .toStrictEqual({
                 bundledDependencies: true,
-                devDependencies: ['cypress/**/*.[jt]s'],
+                devDependencies: ['cypress/e2e/**/*.cy.{js,jsx,ts,tsx}'],
                 optionalDependencies: false,
                 peerDependencies: false,
             } as ImportNoExtraneousDependencies);

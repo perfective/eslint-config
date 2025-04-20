@@ -1,9 +1,9 @@
 export {
+    configurationImportNoExtraneousDependencies,
     cypressImportNoExtraneousDependencies,
     ImportNoExtraneousDependencies,
     importNoExtraneousDependencies,
     jestImportNoExtraneousDependencies,
-    jsImportNoExtraneousDependencies,
 } from './rules/import/rules/no-extraneous-dependencies';
 export {
     SimpleImportSortImports,

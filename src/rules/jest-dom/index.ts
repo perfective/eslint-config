@@ -1,8 +1,7 @@
 import { Linter } from 'eslint';
 import eslintPluginJestDom from 'eslint-plugin-jest-dom';
 
-import { Glob } from '../../config/glob';
-import { jestFiles } from '../jest';
+import { Glob, jestFiles } from '../../config/glob';
 
 export function jestDomConfig(files: Glob[] = jestFiles): Linter.Config {
     return {

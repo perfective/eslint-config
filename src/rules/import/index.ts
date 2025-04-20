@@ -4,7 +4,7 @@ import { flatConfigs } from 'eslint-plugin-import';
 import { javascriptFiles, typescriptFiles } from '../../config/glob';
 import { javascriptLanguageOptions, languageOptions, typescriptLanguageOptions } from '../../config/language-options';
 
-import { jsImportNoExtraneousDependencies } from './rules/no-extraneous-dependencies';
+import { configurationImportNoExtraneousDependencies } from './rules/no-extraneous-dependencies';
 import { helpfulWarningsRules } from './helpful-warnings';
 import { moduleSystemsRules } from './module-systems';
 import { staticAnalysisRules } from './static-analysis';
@@ -39,7 +39,7 @@ export function importJavascriptConfig(): Linter.Config {
         },
         rules: {
             'import/no-commonjs': 'off',
-            'import/no-extraneous-dependencies': ['error', jsImportNoExtraneousDependencies()],
+            'import/no-extraneous-dependencies': ['error', configurationImportNoExtraneousDependencies()],
             'import/unambiguous': 'off',
         },
     };

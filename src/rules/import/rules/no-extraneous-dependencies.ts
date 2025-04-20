@@ -1,3 +1,5 @@
+import { configurationFiles, cypressFiles, jestFiles } from '../../../config/glob';
+
 export interface ImportNoExtraneousDependencies {
     devDependencies: boolean | string[];
     optionalDependencies: boolean | string[];
@@ -21,8 +23,8 @@ export function importNoExtraneousDependencies(
     };
 }
 
-export function jsImportNoExtraneousDependencies(
-    devDependencies: boolean | string[] = ['**/.*.js', '**/*.config.js', '**/gulpfile.js'],
+export function configurationImportNoExtraneousDependencies(
+    devDependencies: boolean | string[] = configurationFiles,
 ): ImportNoExtraneousDependencies {
     return importNoExtraneousDependencies({
         devDependencies,
@@ -30,7 +32,7 @@ export function jsImportNoExtraneousDependencies(
 }
 
 export function jestImportNoExtraneousDependencies(
-    devDependencies: boolean | string[] = ['**/*.@(spec|test).[jt]s?(x)'],
+    devDependencies: boolean | string[] = jestFiles,
 ): ImportNoExtraneousDependencies {
     return importNoExtraneousDependencies({
         devDependencies,
@@ -38,7 +40,7 @@ export function jestImportNoExtraneousDependencies(
 }
 
 export function cypressImportNoExtraneousDependencies(
-    devDependencies: boolean | string[] = ['cypress/**/*.[jt]s'],
+    devDependencies: boolean | string[] = [cypressFiles],
 ): ImportNoExtraneousDependencies {
     return importNoExtraneousDependencies({
         devDependencies,
