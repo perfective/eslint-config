@@ -2,8 +2,8 @@ import { Linter } from 'eslint';
 
 import eslintPluginStylisticJsx from '@stylistic/eslint-plugin-jsx';
 
-import { jsxFiles, tsxFiles } from '../../../config/glob';
-import { languageOptions } from '../../../config/language-options';
+import { jsxFiles, tsxFiles } from '../../../linter/glob';
+import { languageOptions } from '../../../linter/language-options';
 
 export function stylisticJsxConfig(): Linter.Config {
     return {

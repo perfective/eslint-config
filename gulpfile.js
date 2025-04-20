@@ -24,10 +24,6 @@ const full = gulp.series(
                 import: './index.js',
                 types: './index.d.ts',
             },
-            './config': {
-                import: './config.js',
-                types: './config.d.ts',
-            },
             './rules': {
                 import: './rules.js',
                 types: './rules.d.ts',

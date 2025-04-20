@@ -1,8 +1,8 @@
 import { ESLint, Linter } from 'eslint';
 import eslintPluginRxjs from 'eslint-plugin-rxjs-x';
 
-import { Glob, typescriptFiles } from '../../config/glob';
-import { typescriptLanguageOptions } from '../../config/language-options';
+import { Glob, typescriptFiles } from '../../linter/glob';
+import { typescriptLanguageOptions } from '../../linter/language-options';
 
 export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
     return {

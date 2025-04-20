@@ -2,8 +2,8 @@ import { Linter } from 'eslint';
 
 import eslintPluginStylisticTs from '@stylistic/eslint-plugin-ts';
 
-import { typescriptFiles } from '../../../config/glob';
-import { typescriptLanguageOptions } from '../../../config/language-options';
+import { typescriptFiles } from '../../../linter/glob';
+import { typescriptLanguageOptions } from '../../../linter/language-options';
 
 export function stylisticTsConfig(): Linter.Config {
     return {

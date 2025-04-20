@@ -1,4 +1,4 @@
-import { configurationFiles, cypressFiles, jestFiles } from '../../../config/glob';
+import { configurationFiles, cypressFiles, jestFiles } from '../../../linter/glob';
 
 export interface ImportNoExtraneousDependencies {
     devDependencies: boolean | string[];

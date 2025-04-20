@@ -1,8 +1,8 @@
 import { Linter } from 'eslint';
 import { flatConfigs } from 'eslint-plugin-import';
 
-import { javascriptFiles, typescriptFiles } from '../../config/glob';
-import { javascriptLanguageOptions, typescriptLanguageOptions } from '../../config/language-options';
+import { javascriptFiles, typescriptFiles } from '../../linter/glob';
+import { javascriptLanguageOptions, typescriptLanguageOptions } from '../../linter/language-options';
 
 import { helpfulWarningsRules } from './helpful-warnings-rules';
 import { moduleSystemsRules } from './module-systems-rules';

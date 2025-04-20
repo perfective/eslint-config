@@ -1,8 +1,8 @@
 import { ESLint, Linter } from 'eslint';
 import { plugin } from 'typescript-eslint';
 
-import { typescriptFiles } from '../../config/glob';
-import { typescriptLanguageOptions } from '../../config/language-options';
+import { typescriptFiles } from '../../linter/glob';
+import { typescriptLanguageOptions } from '../../linter/language-options';
 
 import { extensionRules } from './extension-rules';
 import { supportedRules } from './supported-rules';

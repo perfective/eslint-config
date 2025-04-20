@@ -1,8 +1,8 @@
 import { Linter } from 'eslint';
 
-import { configurationFiles, typescriptDeclarationFiles } from '../config/glob';
-import { languageOptions } from '../config/language-options';
-import { LinterConfig, linterConfig } from '../config/linter-config';
+import { configurationFiles, typescriptDeclarationFiles } from '../linter/glob';
+import { languageOptions } from '../linter/language-options';
+import { LinterConfig, linterConfig } from '../linter/linter-config';
 
 import { arrayFuncConfig } from './array-func/array-func-config';
 import { eslintConfig } from './eslint/eslint-config';

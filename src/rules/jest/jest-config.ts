@@ -1,7 +1,7 @@
 import { Linter } from 'eslint';
 import eslintPluginJest from 'eslint-plugin-jest';
 
-import { Glob, jestFiles } from '../../config/glob';
+import { Glob, jestFiles } from '../../linter/glob';
 import { jestImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
 import { typescriptEslintJestRules } from './typescript-eslint-jest-rules';

@@ -1,8 +1,8 @@
 import { Linter } from 'eslint';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 
-import { javascriptFiles } from '../../config/glob';
-import { javascriptLanguageOptions } from '../../config/language-options';
+import { javascriptFiles } from '../../linter/glob';
+import { javascriptLanguageOptions } from '../../linter/language-options';
 
 export function jsdocConfig(): Linter.Config {
     return {
