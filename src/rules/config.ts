@@ -20,9 +20,21 @@ import { typescriptEslintConfig } from './typescript-eslint';
 import { unicornConfig } from './unicorn';
 
 /**
+ * An ESLint flat config or a function that returns one.
+ */
+export type LinterConfig = Linter.Config | (() => Linter.Config);
+
+function linterConfig(config: LinterConfig): Linter.Config {
+    if (typeof config === 'function') {
+        return config();
+    }
+    return config;
+}
+
+/**
  * Returns an array of flat configs.
  */
-export function perfectiveEslintConfig(): Linter.Config[] {
+export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Config[] {
     return [
         {
             ignores: [
@@ -50,5 +62,5 @@ export function perfectiveEslintConfig(): Linter.Config[] {
         stylisticPlusConfig(),
         stylisticTsConfig(),
         unicornConfig(),
-    ];
+    ].concat(configs.map(linterConfig));
 }
