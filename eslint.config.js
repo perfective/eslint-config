@@ -1,13 +1,12 @@
-import { perfectiveConfig } from './dist/index.js';
+import { perfectiveEslintConfig } from './dist/index.js';
+import { importNoExtraneousDependencies, unicornPreventAbbreviations } from './dist/rules.js';
 import { cypressConfig } from './dist/rules/cypress/index.js';
-import { importNoExtraneousDependencies } from './dist/rules/import/rules/no-extraneous-dependencies.js';
 import { jestConfig } from './dist/rules/jest/index.js';
 import { jestDomConfig } from './dist/rules/jest-dom/index.js';
 import { rxjsConfig } from './dist/rules/rxjs/index.js';
 import { testingLibraryConfig } from './dist/rules/testing-library/index.js';
-import { unicornPreventAbbreviations } from './dist/rules/unicorn/rules/prevent-abbreviations.js';
 
-const eslintConfig = perfectiveConfig().concat([
+const eslintConfig = perfectiveEslintConfig().concat([
     cypressConfig(),
     jestConfig(),
     jestDomConfig(),
