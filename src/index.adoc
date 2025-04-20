@@ -21,4 +21,4 @@ and assumes that:
 * Certainty is better than uncertainty.
 * Explicit statements are better than implicit statements.
 
-include::rules/index.adoc[leveloffset=+1]
+include::config/index.adoc[leveloffset=+1]

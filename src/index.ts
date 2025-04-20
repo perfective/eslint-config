@@ -1,4 +1,4 @@
-export { perfectiveEslintConfig } from './rules/config';
+export { perfectiveEslintConfig } from './config/perfective-eslint-config';
 
 // ./linter
 export {

@@ -28,48 +28,48 @@ const full = gulp.series(
             // so it does not fail when the peer dependency is not installed.
             // Optional plugin
             './cypress': {
-                import: './rules/cypress/index.js',
-                types: './rules/cypress/index.d.ts',
+                import: './config/cypress/index.js',
+                types: './config/cypress/index.d.ts',
             },
             // Rules configuration functions
             './import': {
-                import: './rules/import/index.js',
-                types: './rules/import/index.d.ts',
+                import: './config/import/index.js',
+                types: './config/import/index.d.ts',
             },
             // Optional plugin
             './jest': {
-                import: './rules/jest/index.js',
-                types: './rules/jest/index.d.ts',
+                import: './config/jest/index.js',
+                types: './config/jest/index.d.ts',
             },
             // Optional plugin
             './jest-dom': {
-                import: './rules/jest-dom/index.js',
-                types: './rules/jest-dom/index.d.ts',
+                import: './config/jest-dom/index.js',
+                types: './config/jest-dom/index.d.ts',
             },
             // Optional plugin
             './rxjs': {
-                import: './rules/rxjs/index.js',
-                types: './rules/rxjs/index.d.ts',
+                import: './config/rxjs/index.js',
+                types: './config/rxjs/index.d.ts',
             },
             // Rules configuration functions
             './simple-import-sort': {
-                import: './rules/simple-import-sort/index.js',
-                types: './rules/simple-import-sort/index.d.ts',
+                import: './config/simple-import-sort/index.js',
+                types: './config/simple-import-sort/index.d.ts',
             },
             // Optional plugin
             './testing-library': {
-                import: './rules/testing-library/index.js',
-                types: './rules/testing-library/index.d.ts',
+                import: './config/testing-library/index.js',
+                types: './config/testing-library/index.d.ts',
             },
             // Rules configuration functions
             './typescript-eslint': {
-                import: './rules/typescript-eslint/index.js',
-                types: './rules/typescript-eslint/index.d.ts',
+                import: './config/typescript-eslint/index.js',
+                types: './config/typescript-eslint/index.d.ts',
             },
             // Rules configuration functions
             './unicorn': {
-                import: './rules/unicorn/index.js',
-                types: './rules/unicorn/index.d.ts',
+                import: './config/unicorn/index.js',
+                types: './config/unicorn/index.d.ts',
             },
         },
     }),
