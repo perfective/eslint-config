@@ -2,7 +2,7 @@ import { Linter } from 'eslint';
 import eslintPluginJest from 'eslint-plugin-jest';
 
 import { Glob, jestFiles } from '../../linter/glob';
-import { jestImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
+import { importNoExtraneousDependencies } from '../import/index';
 
 import { typescriptEslintJestRules } from './typescript-eslint-jest-rules';
 
@@ -119,7 +119,9 @@ function perfectiveRules(): Linter.RulesRecord {
         '@typescript-eslint/init-declarations': 'off',
         // See "jest/unbound-method"
         '@typescript-eslint/unbound-method': 'off',
-        'import/no-extraneous-dependencies': ['error', jestImportNoExtraneousDependencies()],
+        'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+            devDependencies: jestFiles,
+        })],
         'import/no-unassigned-import': ['error', {
             allow: [
                 '@testing-library/jest-dom',

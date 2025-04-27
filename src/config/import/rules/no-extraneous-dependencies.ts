@@ -1,10 +1,10 @@
-import { configurationFiles, cypressFiles, jestFiles } from '../../../linter/glob';
+import { Glob } from '../../../linter/glob';
 
 export interface ImportNoExtraneousDependencies {
-    devDependencies: boolean | string[];
-    optionalDependencies: boolean | string[];
-    peerDependencies: boolean | string[];
-    bundledDependencies: boolean | string[];
+    devDependencies: boolean | Glob[];
+    optionalDependencies: boolean | Glob[];
+    peerDependencies: boolean | Glob[];
+    bundledDependencies: boolean | Glob[];
     packageDir?: string;
 }
 
@@ -21,28 +21,4 @@ export function importNoExtraneousDependencies(
         peerDependencies: false,
         ...overrides,
     };
-}
-
-export function configurationImportNoExtraneousDependencies(
-    devDependencies: boolean | string[] = configurationFiles,
-): ImportNoExtraneousDependencies {
-    return importNoExtraneousDependencies({
-        devDependencies,
-    });
-}
-
-export function jestImportNoExtraneousDependencies(
-    devDependencies: boolean | string[] = jestFiles,
-): ImportNoExtraneousDependencies {
-    return importNoExtraneousDependencies({
-        devDependencies,
-    });
-}
-
-export function cypressImportNoExtraneousDependencies(
-    devDependencies: boolean | string[] = [cypressFiles],
-): ImportNoExtraneousDependencies {
-    return importNoExtraneousDependencies({
-        devDependencies,
-    });
 }

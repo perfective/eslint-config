@@ -2,7 +2,7 @@ import { Linter } from 'eslint';
 import eslintPluginCypress from 'eslint-plugin-cypress/flat';
 
 import { cypressFiles, Glob } from '../../linter/glob';
-import { cypressImportNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
+import { importNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
 export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
     return {
@@ -32,7 +32,9 @@ function perfectiveRules(): Linter.RulesRecord {
         // Tests may declare variables that are set only by beforeEach/beforeAll functions.
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': 'off',
-        'import/no-extraneous-dependencies': ['error', cypressImportNoExtraneousDependencies()],
+        'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+            devDependencies: [cypressFiles],
+        })],
         'max-nested-callbacks': ['error', 4],
         'new-cap': ['error', {
             // These are functions from cypress-cucumber-preprocessor/steps

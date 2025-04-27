@@ -8,7 +8,7 @@ import { arrayFuncConfig } from './array-func/array-func-config';
 import { eslintConfig } from './eslint/eslint-config';
 import { eslintCommentsConfig } from './eslint-comments/eslint-comments-config';
 import { importConfig, importJavascriptConfig, importTypescriptConfig } from './import/import-config';
-import { configurationImportNoExtraneousDependencies } from './import/rules/no-extraneous-dependencies';
+import { importNoExtraneousDependencies } from './import/index';
 import { jsdocConfig, jsdocJavascriptConfig } from './jsdoc/jsdoc-config';
 import { nodeConfig } from './node/node-config';
 import { preferArrowConfig } from './prefer-arrow/prefer-arrow-config';
@@ -70,7 +70,9 @@ function configurationFilesConfig(): Linter.Config {
         rules: {
             'import/extensions': ['error', 'ignorePackages'],
             'import/no-default-export': ['off'],
-            'import/no-extraneous-dependencies': ['error', configurationImportNoExtraneousDependencies()],
+            'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+                devDependencies: configurationFiles,
+            })],
             'n/no-unpublished-import': ['error', {
                 allowModules: ['gulp', '@perfective/build'],
                 convertPath: {
