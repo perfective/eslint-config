@@ -12,6 +12,61 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.31.0
+
+=== Finalized flat modules structure
+
+* This is the final change related to ESLint v9 migration.
+* All configs are now functions that return flat configs.
+** `perfectiveEslintConfig()` accepts configs and config functions.
+* Configs and rule extension functions are exported from their plugin subpackages
+(for example, `jestConfig` is available from `@perfective/eslint-config/jest`).
+* Added language options: `languageOptions()`, `javascriptLanguageOptions()`, and `typescriptLanguageOptions()`.
+* Added the `Glob` nominal type and predefined glob patterns:
+`javascriptFiles`/`typescriptFiles`, `jsxFiles`/`tsxFiles`,  `typescriptDeclarationFiles`, `configurationFiles`,
+`jestFiles`, `cypressFiles`.
+* Added the `LinterConfig` type and `linterConfig()` function.
+* Updated `link:https://github.com/perfective/eslint-config/blob/main/README.adoc[README.adoc]`.
+* Disabled `import/no-extraneous-dependencies` for dev packages in configuration files.
+
+=== Replaced plugins
+
+* Added `@eslint-community/eslint-plugin-eslint-comments` `4.5.0`.
+** Removed unmaintained `eslint-plugin-eslint-comments`.
++
+* Added `eslint-plugin-rxjs-x` `0.7.2`.
+** Removed `@smarttools/eslint-plugin-rxjs`
+** Enabled the `rxjs-x/no-floating-observables` rule.
+*** Disabled the `rxjs-x/no-ignored-observables` rule as renamed.
+
+=== Updated plugins
+
+* Updated `eslint` to `9.25.1`.
++
+* Updated `typescript-eslint` to `8.31.1`.
+** Changed the `@typescript-eslint/no-unnecessary-boolean-literal-compare` rule from warning to error.
+** Enabled the `checkLiteralConstAssertions` option for the `@typescript-eslint/no-unnecessary-type-assertion` rule.
++
+* Upgraded `eslint-plugin-unicorn` to `59.0.0`.
+** Renamed the `unicorn/no-array-push-push` rule to `unicorn/prefer-single-call`.
+** Renamed the `unicorn/no-length-as-slice-end` rule to `unicorn/no-unnecessary-slice-end`.
+** Added the `link:{eslint-unicorn-rules}/prefer-import-meta-properties.md[unicorn/prefer-import-meta-properties]`
+rule as a warning.
+** Added the `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-depth.md[unicorn/no-unnecessary-array-flat-depth]`
+rule as a warning.
+** Added the
+`link:{eslint-unicorn-rules}/no-unnecessary-array-splice-count.md[unicorn/no-unnecessary-array-splice-count]`
+rule as a warning.
++
+* Updated `eslint-plugin-n` to `17.17.0`.
+* Updated `eslint-import-resolver-typescript` to `3.10.1`.
++
+* Updated `eslint-plugin-cypress` to `4.3.0`.
+** Enabled the `cypress/no-chained-get` rule as an error.
++
+* Patched `eslint-plugin-jsdoc` to `50.6.11`.
+
+
 == v0.30.0
 
 * **Migrated config files to ES modules**.

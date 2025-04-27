@@ -12,7 +12,7 @@ and https://eslint.style[ESLint Stylistic] plugin rules,
 
 * `link:https://github.com/freaktechnik/eslint-plugin-array-func[eslint-plugin-array-func]`;
 * `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]` _(optional)_;
-* `link:https://mysticatea.github.io/eslint-plugin-eslint-comments/[eslint-plugin-eslint-comments]`;
+* `link:https://eslint-community.github.io/eslint-plugin-eslint-comments/[@eslint-community/eslint-plugin-eslint-comments]`;
 * `link:https://github.com/import-js/eslint-plugin-import[eslint-plugin-import]`;
 * `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jest]` _(optional)_;
 * `link:https://github.com/testing-library/eslint-plugin-jest-dom[eslint-plugin-jest-dom]` _(optional)_;
@@ -20,7 +20,7 @@ and https://eslint.style[ESLint Stylistic] plugin rules,
 * `link:https://github.com/eslint-community/eslint-plugin-n[eslint-plugin-n]`;
 * `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow[eslint-plugin-prefer-arrow]`;
 * `link:https://github.com/eslint-community/eslint-plugin-promise[eslint-plugin-promise]`;
-* `link:https://github.com/cartant/eslint-plugin-rxjs[eslint-plugin-rxjs]` _(optional)_;
+* `link:https://github.com/JasonWeinzierl/eslint-plugin-rxjs-x[eslint-plugin-rxjs-x]` _(optional)_;
 * `link:https://github.com/eslint-community/eslint-plugin-security[eslint-plugin-security]`;
 * `link:https://github.com/lydell/eslint-plugin-simple-import-sort[eslint-plugin-simple-import-sort]`;
 * `link:https://github.com/testing-library/eslint-plugin-testing-library[eslint-plugin-testing-library]` _(optional)_;
@@ -34,63 +34,47 @@ from issues that will be fixed automatically.
 
 == Setup
 
-. Require `@perfective/eslint-config` and its peer dependencies as dev dependencies
+IMPORTANT: `@perfective/eslint-config` only support ES module syntax.
+If your project uses CommonJS by default
+you need to use `eslint.config.mjs` file instead of `eslint.config.js` to run it in ESM mode.
+
+. Install `@perfective/eslint-config` as a dev dependency:
 +
 [source,bash]
 ----
-npm install --save-dev \
-    @perfective/eslint-config \
-    @stylistic/eslint-plugin \
-    @stylistic/eslint-plugin-js \
-    @stylistic/eslint-plugin-jsx \
-    @stylistic/eslint-plugin-ts \
-    @stylistic/eslint-plugin-plus \
-    eslint \
-    eslint-import-resolver-typescript \
-    eslint-plugin-array-func \
-    eslint-plugin-eslint-comments \
-    eslint-plugin-import \
-    eslint-plugin-jsdoc \
-    eslint-plugin-n \
-    eslint-plugin-prefer-arrow \
-    eslint-plugin-promise \
-    eslint-plugin-security \
-    eslint-plugin-simple-import-sort \
-    eslint-plugin-unicorn \
-    typescript-eslint
+npm install --save-dev @perfective/eslint-config
 ----
 +
-. Require the configuration in your root `eslint.config.js`.
+Required peer dependencies are installed automatically.
++
+. Import `perfectiveEslintConfig` to `eslint.config.js`.
 +
 [source,javascript]
 ----
-const perfectiveEslintConfig = require('@perfective/eslint-config');
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
 
-module.exports = perfectiveEslintConfig.default;
+const eslintConfig = perfectiveEslintConfig();
+
+export default eslintConfig;
 ----
 +
-. `*.d.ts` files and `dist` directories are ignored by the configuration.
-`node_modules` and dot-files are ignored by the `eslint`.
-If more directories or file types need to be ignored, see the
-`link:https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file[.eslintignore]` file docs.
-+
-. Install optional peer dependencies that add linting rules for the tools you use.
+. _Optional_ Install optional peer dependencies to add tool-specific linting rules.
 +
 [source,bash]
 ----
 npm install --save-dev \
-    @smarttools/eslint-plugin-rxjs \
     eslint-plugin-cypress \
     eslint-plugin-jest \
     eslint-plugin-jest-dom \
+    eslint-plugin-rxjs-x \
     eslint-plugin-testing-library
 ----
 +
-. Add optional configurations to your root `eslint.config.js`.
+Import configurations to `eslint.config.js`.
 +
 [source,javascript]
 ----
-import perfectiveEslintConfig from '@perfective/eslint-config';
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
 
 // Optional dependencies.
 import { cypressConfig } from '@perfective/eslint-config/cypress';
@@ -99,19 +83,51 @@ import { jestDomConfig } from '@perfective/eslint-config/jest-dom';
 import { rxjsConfig } from '@perfective/eslint-config/rxjs';
 import { testingLibraryConfig } from '@perfective/eslint-config/testing-library';
 
-const eslintConfig = [
-    ...perfectiveEslintConfig,
-    cypressConfig(),
-    jestConfig(),
-    jestDomConfig(),
-    rxjsConfig(),
-    testingLibraryConfig(),
-];
+const eslintConfig = perfectiveEslintConfig([
+    cypressConfig,
+    jestConfig,
+    jestDomConfig,
+    rxjsConfig,
+    testingLibraryConfig,
+]);
 
 export default eslintConfig;
 ----
++
+. _Optional_ Customize configuration rules in `eslint.config.js`
++
+[source,javascript]
+----
+import { perfectiveEslintConfig, typescriptFiles } from '@perfective/eslint-config'; // <.>
 
-== Rules Configuration Extension Functions
+const eslintConfig = perfectiveEslintConfig([
+    // ...Optional configurations...
+    {
+        // These rules are overridden to all files
+        rules: {
+            '@stylistic/js/indent': ['warn', 2],
+        },
+    },
+    {
+        // These rules are overridden to TypeScript files only
+        files: typescriptFiles,
+        rules: {
+            '@stylistic/ts/indent': ['warn', 2],
+        },
+    },
+]);
+
+export default eslintConfig;
+----
+<.> See the list of available globs below.
+
+NOTE: `*.d.ts` files and `dist` directories are ignored by the configuration.
+`node_modules` and dot-files are ignored by the `eslint`.
+If more directories or file types need to be ignored, see the
+`link:https://eslint.org/docs/latest/use/configure/ignore#the-eslintignore-file[.eslintignore]` file docs.
+
+
+== Rules configuration functions
 
 Some rules have complex configuration objects or arrays
 that are not merged but are completely overridden by ESLint.
@@ -119,7 +135,7 @@ Therefore, it requires copying and pasting a rule config instead of just extendi
 Maintaining rules updates is challenging
 and is simplified by the custom config functions.
 
-These functions and related types are exported in `@perfective/eslint-config/rules`
+These functions and related types are exported from the link:#_packages[subpackages]
 and match the rule name in `camelCase`.
 If you need an extended configuration,
 you can use these functions in the `eslint.config.js` file:
@@ -127,19 +143,18 @@ you can use these functions in the `eslint.config.js` file:
 [source,javascript]
 ----
 import perfectiveEslintConfig from '@perfective/eslint-config';
-import { simpleImportSortImports } from '@perfective/eslint-config/rules'; // <.>
+import { simpleImportSortImports } from '@perfective/eslint-config/simple-import-sort'; // <.>
 
-const eslintConfig = [
-    ...perfectiveEslintConfig,
+const eslintConfig = perfectiveEslintConfig([
+    // ...Optional configurations...
     {
-        files: ['**/*.[jt]s?(x)'],
         rules: {
-            'simple-import-sort/imports': ['warn', rules.simpleImportSortImports([
+            'simple-import-sort/imports': ['warn', simpleImportSortImports([
                 '@perfective',
             ])],
         },
     },
-];
+]);
 
 export default eslintConfig;
 ----
@@ -147,13 +162,123 @@ export default eslintConfig;
 So rules should be required from those packages for correct `node_modules` resolution.
 
 
-=== Supported Rules
+== Packages [#packages]
 
-* `simpleImportSortImports(internal)`
-— allows to splice `internal` scope packages imports sorting
-for the `simple-import-sort/imports` rule.
-* `typescriptEslintNamingConvention(extensions)`
-— extends configuration for the `@typescript-eslint/naming-convention` rule.
-* `unicornPreventAbbreviations(replacements, options)`
-— extends and overrides the list of `replacements`
-and `options` for the `unicorn/prevent-abbreviation` rule.
+The following is the list of available packages and their exports.
+
+=== `@perfective/eslint-config`
+
+* `perfectiveEslintConfig`
+— a function that creates an array of flat configs.
++
+* `type Glob = string`
+a nominal type for glob patterns.
+** `javascriptFiles: Glob[]`
+— a list of glob patterns for JS and JSX files.
+** `jsxFiles: Glob`
+— a glob pattern for JSX files.
+** `typescriptFiles: Glob[]`
+— a list of glob patterns for TypeScript source files.
+** `tsxFiles: Glob`
+— a glob pattern for TSX files.
+** `typescriptDeclarationFiles: Glob`
+— a glob pattern for TypeScript declaration files.
+** `configurationFiles: Glob`
+— a glob pattern for JavaScript tools configuration files.
+** `jestFiles: Glob[]`
+— the link:https://jestjs.io/docs/configuration#testmatch-arraystring[default] glob patterns
+Jest uses to find test files.
+** `cypressFiles: Glob`
+— the link:https://docs.cypress.io/app/references/configuration#e2e[default] glob pattern
+Cypress uses to load test files.
++
+* ESLint language options:
+** `languageOptions(): Linter.LanguageOptions`
+— creates ESLint `languageOptions` object for all files.
+** `javascriptLanguageOptions(): Linter.LanguageOptions`
+— creates ESLint `languageOptions` object for JavaScript files.
+** `typescriptLanguageOptions(): Linter.LanguageOptions`
+— creates ESLint `languageOptions` object for TypeScript files.
++
+* `type LinterConfig = Linter.Config | (() => Linter.Config)`
+— an ESLint flat config or a function that returns one.
+** `linterConfig(config: LinterConfig): Linter.Config`
+— a function to instantiate ESLint flat config.
++
+* Optional plugins:
+** `hasEslintPlugin`
+— returns true if a given ESLint plugin exists.
+** `optionalRule(rule: string, config: unknown): Record<string, unknown>`
+— returns an object with rule as a key
+and its config as a value,
+if a given rule belongs to an installed ESLint plugin.
+
+=== `@perfective/eslint-config/cypress`
+
+* `cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config`
+— creates a flat config for `eslint-plugin-cypress`
+for a given list of files globs.
+Overrides some rules for `perfectiveEslintConfig` for compatibility with Cypress.
+
+=== `@perfective/eslint-config/import`
+
+* `interface ImportNoExtraneousDependencies`
+— configuration options for the `import/no-extraneous-dependencies` rule.
+** `importNoExtraneousDependencies(overrides: Partial<ImportNoExtraneousDependencies> = {}): ImportNoExtraneousDependencies`
+— returns configuration options for the `import/no-extraneous-dependencies` rule.
+
+=== `@perfective/eslint-config/jest`
+
+* `jestConfig(files: Glob[] = jestFiles): Linter.Config`
+— creates a flat config for `eslint-plugin-jest` for a given list of files globs.
+
+=== `@perfective/eslint-config/jest-dom`
+
+* `jestDomConfig(files: Glob[] = jestFiles): Linter.Config`
+— creates a flat config for `eslint-plugin-jest-dom` for a given list of files globs.
+
+=== `@perfective/eslint-config/rxjs`
+
+* `rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config`
+— creates a flat config for `eslint-plugin-rxjs-x` for a given list of files globs.
+
+=== `@perfective/eslint-config/simple-import-sort`
+
+* `interface SimpleImportSortImports`
+— configuration options for the `simple-import-sort/imports` rule.
+** `simpleImportSortImports(internal: string[] = []): SimpleImportSortImports`
+— creates configuration for the `simple-import-sort/imports` ESLint rule.
+Allows to splice `internal` scope packages imports between the global and relative imports.
+
+=== `@perfective/eslint-config/testing-library`
+
+* `testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config`
+— creates a flat config for `eslint-plugin-testing-library` for a given list of files globs.
+
+=== `@perfective/eslint-config/typescript-eslint`
+
+* `interface TypescriptEslintNamingConvention`
+— configuration options for the
+`link:https://typescript-eslint.io/rules/naming-convention/[@typescript-eslint/naming-convention]` rule.
+** `type TypescriptEslintNamingConventionSelector`
+— values for the `@typescript-eslint/naming-convention` rule `selector` option.
+*** `type TypescriptEslintNamingConventionIndividualSelector`
+— values for individual selectors for the `@typescript-eslint/naming-convention` rule `selector` option.
+*** `type TypescriptEslintNamingConventionGroupSelector`
+— values for grouped of individual selectors for the `@typescript-eslint/naming-convention` rule `selector` option.
+** `type TypescriptEslintNamingConventionFormat`
+— values for the `@typescript-eslint/naming-convention` rule `format` option.
+** `type TypescriptEslintNamingConventionUnderscore`
+— values for the `@typescript-eslint/naming-convention` rule `leadingUnderscore` and `trailingUnderscore` options.
+** `function typescriptEslintNamingConvention(extensions: TypescriptEslintNamingConvention[] = []): TypescriptEslintNamingConvention[]`
+— creates configuration with the given extensions for the `@typescript-eslint/naming-convention` rule.
+
+=== `@perfective/eslint-config/unicorn`
+
+* `interface UnicornPreventAbbreviations`
+— configuration options for the
+`link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md[unicorn/prevent-abbreviation]` rule.
+** `type UnicornPreventAbbreviationReplacements`
+— nominal type for the `replacements` option of the `unicorn/prevent-abbreviation` rule.
+** `function unicornPreventAbbreviations( replacements: UnicornPreventAbbreviationReplacements = {}, options: Partial<Pick<UnicornPreventAbbreviations, 'checkProperties'>> = {}): UnicornPreventAbbreviations`
+— creates configuration for the `unicorn/prevent-abbreviation` rule with the given replacements and options.

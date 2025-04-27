@@ -9,6 +9,84 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.30.0` to `v0.31.0`
+
+* **Update peer dependencies**
++
+_If explicitly configured in `package.json`_
++
+** Remove `eslint-plugin-eslint-comments`
++
+Add `"@eslint-community/eslint-plugin-eslint-comments": "^4.5.0"`
++
+** Remove `@smarttools/eslint-plugin-rxjs`
++
+Add `"eslint-plugin-rxjs-x": "~0.7.2"`
++
+* **Update imports**
++
+** Rules functions from `@perfective/eslint-config/rules` are moved into the corresponding config packages.
+** Types and functions from `@perfective/eslint-config/config` are now exported from `@perfective/eslint-config`.
+** See `README` for the list of exports.
++
+* **Update `eslint.config.js`**
++
+** All configs are now functions.
+** `perfectiveEslintConfig` is now a regular export.
+** Update rules configuration functions imports (see `README.adoc`)
++
+.eslint.config.js
+[source,javascript]
+----
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
+// Optional dependencies.
+import { cypressConfig } from '@perfective/eslint-config/cypress';
+import { jestConfig } from '@perfective/eslint-config/jest';
+import { jestDomConfig } from '@perfective/eslint-config/jest-dom';
+import { rxjsConfig } from '@perfective/eslint-config/rxjs';
+import { testingLibraryConfig } from '@perfective/eslint-config/testing-library';
+
+const eslintConfig = perfectiveEslintConfig([
+    cypressConfig,
+    jestConfig,
+    jestDomConfig,
+    rxjsConfig,
+    testingLibraryConfig,
+]);
+
+export default eslintConfig;
+----
++
+* **Update customized rules** (_if present_):
++
+** Change `rxjs-x/no-ignored-observables` to `rxjs-x/no-floating-observables`.
+** Change `unicorn/no-array-push-push` to `unicorn/prefer-single-call`.
+** Change `unicorn/no-length-as-slice-end` to `unicorn/no-unnecessary-slice-end`.
++
+* **Disable and gradually enable new rules**:
++
+.eslint.config.js
+[source,javascript]
+----
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
+
+const eslintConfig = perfectiveEslintConfig([
+    // ...Optional plugins configs...
+    {
+        rules: {
+            '@typescript-eslint/no-unnecessary-type-assertion': ['warn', {
+                checkLiteralConstAssertions: false,
+            }],
+            'unicorn/prefer-import-meta-properties': 'off',
+            'unicorn/no-unnecessary-array-flat-depth': 'off',
+            'unicorn/no-unnecessary-array-splice-count': 'off',
+        },
+    },
+]);
+
+export default eslintConfig;
+----
+
 == From `v0.29.2` to `v0.30.0`
 
 * **Migrate to ES modules**:

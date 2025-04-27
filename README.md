@@ -12,7 +12,7 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 
 - [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func);
 - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress) _(optional)_;
-- [`eslint-plugin-eslint-comments`](https://mysticatea.github.io/eslint-plugin-eslint-comments/);
+- [`eslint-plugin-eslint-comments`](https://eslint-community.github.io/eslint-plugin-eslint-comments/);
 - [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import);
 - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest) _(optional)_;
 - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom) _(optional)_;
@@ -20,7 +20,7 @@ and [ESlint Stylistic](https://eslint.style) plugin rules,
 - [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n);
 - [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow);
 - [`eslint-plugin-promise`](https://github.com/eslint-community/eslint-plugin-promise);
-- [`eslint-plugin-rxjs`](https://github.com/cartant/eslint-plugin-rxjs) _(optional)_;
+- [`eslint-plugin-rxjs`](https://github.com/JasonWeinzierl/eslint-plugin-rxjs-x) _(optional)_;
 - [`eslint-plugin-security`](https://github.com/eslint-community/eslint-plugin-security);
 - [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort);
 - [`eslint-plugin-testing-library`](https://github.com/testing-library/eslint-plugin-testing-library) _(optional)_;
@@ -33,57 +33,44 @@ from issues that will be fixed automatically.
 
 ## Setup
 
-1. Require `@perfective/eslint-config` and its peer dependencies as dev dependencies.
+`@perfective/eslint-config` only support ES module syntax.
+If your project uses CommonJS by default
+you need to use `eslint.config.mjs` file instead of `eslint.config.js` to run it in ESM mode.
+
+1. Install `@perfective/eslint-config` as a dev dependency:
 
     ```bash
     npm install --save-dev \
-        @perfective/eslint-config \
-        @stylistic/eslint-plugin \
-        @stylistic/eslint-plugin-js \
-        @stylistic/eslint-plugin-jsx \
-        @stylistic/eslint-plugin-ts \
-        @stylistic/eslint-plugin-plus \
-        eslint \
-        eslint-import-resolver-typescript \
-        eslint-plugin-array-func \
-        eslint-plugin-eslint-comments \
-        eslint-plugin-import \
-        eslint-plugin-jsdoc \
-        eslint-plugin-n \
-        eslint-plugin-prefer-arrow \
-        eslint-plugin-promise \
-        eslint-plugin-security \
-        eslint-plugin-simple-import-sort \
-        eslint-plugin-unicorn \
-        typescript-eslint
+        @perfective/eslint-config
     ```
 
-2. Require the configuration in your root `eslint.config.js`.
+    Required peer dependencies are installed automatically.
+
+2. Import `perfectiveEslintConfig` to `eslint.config.js`.
 
     ```javascript
-    import perfectiveEslintConfig from '@perfective/eslint-config';
+    import { perfectiveEslintConfig } from '@perfective/eslint-config';
 
-    export default perfectiveEslintConfig;
+    const eslintConfig = perfectiveEslintConfig();
+
+    export default eslintConfig;
     ```
 
-3. Install optional peer dependencies that add linting rules for the tools you use.
+3. _Optional_ Install optional peer dependencies to add tool-specific linting rules.
 
     ```bash
     npm install --save-dev \
-        @smarttools/eslint-plugin-rxjs \
         eslint-plugin-cypress \
         eslint-plugin-jest \
         eslint-plugin-jest-dom \
+        eslint-plugin-rxjs-x \
         eslint-plugin-testing-library
     ```
 
-    The `@perfective/eslint-config` automatically includes rules for these plugins,
-    if the dependency is installed.
-
-4. Add optional configurations to your root `eslint.config.js`.
+    Import configurations to `eslint.config.js`.
 
     ```javascript
-    import perfectiveEslintConfig from '@perfective/eslint-config';
+    import { perfectiveEslintConfig } from '@perfective/eslint-config';
 
     // Optional dependencies.
     import { cypressConfig } from '@perfective/eslint-config/cypress';
@@ -92,14 +79,40 @@ from issues that will be fixed automatically.
     import { rxjsConfig } from '@perfective/eslint-config/rxjs';
     import { testingLibraryConfig } from '@perfective/eslint-config/testing-library';
 
-    const eslintConfig = [
-        ...perfectiveEslintConfig,
-        cypressConfig(),
-        jestConfig(),
-        jestDomConfig(),
-        rxjsConfig(),
-        testingLibraryConfig(),
-    ];
+    const eslintConfig = perfectiveEslintConfig([
+        cypressConfig,
+        jestConfig,
+        jestDomConfig,
+        rxjsConfig,
+        testingLibraryConfig,
+    ]);
 
     export default eslintConfig;
     ```
+
+4. _Optional_ Customize configuration rules in `eslint.config.js`
+
+    ```javascript
+    import { perfectiveEslintConfig, typescriptFiles } from '@perfective/eslint-config';
+
+    const eslintConfig = perfectiveEslintConfig([
+        // ...Optional configurations...
+        {
+            // These rules are overridden to all files
+            rules: {
+                '@stylistic/js/indent': ['warn', 2],
+            },
+        },
+        {
+            // These rules are overridden to TypeScript files only
+            files: typescriptFiles,
+            rules: {
+                '@stylistic/ts/indent': ['warn', 2],
+            },
+        },
+    ]);
+
+    export default eslintConfig;
+    ```
+
+Read full [`documentation`](https://github.com/perfective/eslint-config/blob/main/README.adoc) in the repo.
