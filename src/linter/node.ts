@@ -3,7 +3,9 @@
  *
  * A module does not have to be required directly by the package.json.
  * The function returns true,
- * even if it is installed as a dependency of another dependency but can be loaded by NodeJS.
+ * even if it is installed as a dependency of another dependency but can be loaded by Node.js.
+ *
+ * @protected
  */
 export function hasNodeModule(module: string): boolean {
     try {

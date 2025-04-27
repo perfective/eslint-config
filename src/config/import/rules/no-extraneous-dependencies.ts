@@ -1,5 +1,8 @@
 import { Glob } from '../../../linter/glob';
 
+/**
+ * Configuration options for the `import/no-extraneous-dependencies` rule.
+ */
 export interface ImportNoExtraneousDependencies {
     devDependencies: boolean | Glob[];
     optionalDependencies: boolean | Glob[];

@@ -3,6 +3,11 @@ import eslintPluginJestDom from 'eslint-plugin-jest-dom';
 
 import { Glob, jestFiles } from '../../linter/glob';
 
+/**
+ * Creates a flat config for `eslint-plugin-jest-dom` for a given list of files globs.
+ *
+ * @since v0.31.0
+ */
 export function jestDomConfig(files: Glob[] = jestFiles): Linter.Config {
     return {
         files,

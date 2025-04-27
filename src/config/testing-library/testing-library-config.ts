@@ -3,6 +3,11 @@ import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
 
 import { Glob, jestFiles } from '../../linter/glob';
 
+/**
+ * Creates a flat config for `eslint-plugin-testing-library` for a given list of files globs.
+ *
+ * @since v0.31.0
+ */
 export function testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config {
     return {
         files,

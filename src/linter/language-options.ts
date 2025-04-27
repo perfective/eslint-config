@@ -1,10 +1,19 @@
+import { Linter } from 'eslint';
 import { parser as typescriptEslintParser } from 'typescript-eslint';
 
-export function languageOptions(): Record<string, unknown> {
+/**
+ * Creates ESLint `languageOptions` object for all files.
+ *
+ * - Uses TypeScript ESLint parser.
+ * - Allows parsing JavaScript files even if they are not allowed by TS config.
+ *
+ * @since v0.31.0
+ */
+export function languageOptions(): Linter.LanguageOptions {
     return {
         sourceType: 'module',
         ecmaVersion: 'latest',
-        parser: typescriptEslintParser,
+        parser: typescriptEslintParser as Linter.Parser,
         parserOptions: {
             ecmaFeatures: {
                 globalReturn: false,
@@ -19,7 +28,12 @@ export function languageOptions(): Record<string, unknown> {
     };
 }
 
-export function javascriptLanguageOptions(): Record<string, unknown> {
+/**
+ * Creates ESLint `languageOptions` object for JavaScript files.
+ *
+ * @since v0.31.0
+ */
+export function javascriptLanguageOptions(): Linter.LanguageOptions {
     return {
         sourceType: 'module',
         ecmaVersion: 'latest',
@@ -32,11 +46,19 @@ export function javascriptLanguageOptions(): Record<string, unknown> {
     };
 }
 
-export function typescriptLanguageOptions(): Record<string, unknown> {
+/**
+ * Creates ESLint `languageOptions` object for TypeScript files.
+ *
+ * - Uses TypeScript ESLint parser.
+ * - Does not allow JavaScript files.
+ *
+ * @since v0.31.0
+ */
+export function typescriptLanguageOptions(): Linter.LanguageOptions {
     return {
         sourceType: 'module',
         ecmaVersion: 'latest',
-        parser: typescriptEslintParser,
+        parser: typescriptEslintParser as Linter.Parser,
         parserOptions: {
             ecmaFeatures: {
                 globalReturn: false,

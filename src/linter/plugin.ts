@@ -1,10 +1,12 @@
 import { hasNodeModule } from './node';
 
 /**
- * If a given rule belongs to an installed ESLint plugin,
- * returns an object with rule as a key and its config as a value.
+ * Returns an object with rule as a key and its config as a value,
+ * if a given rule belongs to an installed ESLint plugin.
  *
  * Otherwise, returns an empty object.
+ *
+ * @since v0.21.0
  */
 export function optionalRule(rule: string, config: unknown): Record<string, unknown> {
     const plugin = pluginOfRule(rule);
@@ -21,6 +23,8 @@ export function optionalRule(rule: string, config: unknown): Record<string, unkn
 
 /**
  * Returns true if a given ESLint plugin exists.
+ *
+ * @since v0.21.0
  */
 export function hasEslintPlugin(plugin: string): boolean {
     if (plugin.startsWith('@')) {

@@ -1,5 +1,15 @@
+/**
+ * Nominal type for the `replacements` option of the `unicorn/prevent-abbreviation` rule.
+ */
 export type UnicornPreventAbbreviationReplacements = Record<string, boolean | Record<string, boolean>>;
 
+/**
+ * Configuration options for the `unicorn/prevent-abbreviation` rule.
+ *
+ * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+ *
+ * @since v0.11.0
+ */
 export interface UnicornPreventAbbreviations {
     replacements: UnicornPreventAbbreviationReplacements;
     extendDefaultReplacements: boolean;
@@ -15,12 +25,14 @@ export interface UnicornPreventAbbreviations {
 }
 
 /**
- * Allows to extend unicorn/prevent-abbreviation rules replacements, instead of overriding them.
+ * Creates configuration for the `unicorn/prevent-abbreviation` rule with the given replacements and options.
  *
  * @param replacements - List of additional replacements.
  * @param options - Additional properties to override.
  *
- * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prevent-abbreviations.md
+ * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+ *
+ * @since v0.11.0
  */
 export function unicornPreventAbbreviations(
     replacements: UnicornPreventAbbreviationReplacements = {},

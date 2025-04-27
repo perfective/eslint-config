@@ -4,6 +4,13 @@ import eslintPluginCypress from 'eslint-plugin-cypress/flat';
 import { cypressFiles, Glob } from '../../linter/glob';
 import { importNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
+/**
+ * Creates a flat config for `eslint-plugin-cypress` for a given list of files globs.
+ *
+ * Overrides some rules for `perfectiveEslintConfig` for compatibility with Cypress.
+ *
+ * @since v0.31.0
+ */
 export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
     return {
         files,

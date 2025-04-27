@@ -1,1 +1,1 @@
-export { jestDomConfig } from './jest-dom';
+export { jestDomConfig } from './jest-dom-config';

@@ -6,6 +6,11 @@ import { importNoExtraneousDependencies } from '../import/index';
 
 import { typescriptEslintJestRules } from './typescript-eslint-jest-rules';
 
+/**
+ * Creates a flat config for `eslint-plugin-jest` for a given list of files globs.
+ *
+ * @since v0.31.0
+ */
 export function jestConfig(files: Glob[] = jestFiles): Linter.Config {
     return {
         files,

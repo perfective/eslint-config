@@ -4,6 +4,11 @@ import eslintPluginRxjs from 'eslint-plugin-rxjs-x';
 import { Glob, typescriptFiles } from '../../linter/glob';
 import { typescriptLanguageOptions } from '../../linter/language-options';
 
+/**
+ * Creates a flat config for `eslint-plugin-rxjs-x` for a given list of files globs.
+ *
+ * @since v0.31.0
+ */
 export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
     return {
         files,

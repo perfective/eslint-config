@@ -1,14 +1,23 @@
 export type Match = string;
 export type Group = Match[];
 
+/**
+ * Configuration options for the `simple-import-sort/imports` rule.
+ *
+ * @since v0.11.0
+ */
 export interface SimpleImportSortImports {
     groups: Group[];
 }
 
 /**
- * Configuration for the "simple-import-sort/imports" ESLint rule.
+ * Creates configuration for the `simple-import-sort/imports` ESLint rule.
  *
- * @param internal - A list of internal scopes. Each scope will sorted in its own group.
+ * Allows to splice `internal` scope packages imports between the global and relative imports.
+ *
+ * @param internal - A list of internal scopes. Each scope is sorted in its own group.
+ *
+ * @since v0.11.0
  */
 export function simpleImportSortImports(internal: string[] = []): SimpleImportSortImports {
     return {

@@ -1,3 +1,8 @@
+/**
+ * Values for the `@typescript-eslint/naming-convention` rule `format` option.
+ *
+ * @since v0.11.0
+ */
 export type TypescriptEslintNamingConventionFormat =
     | 'camelCase'
     | 'strictCamelCase'
@@ -6,6 +11,11 @@ export type TypescriptEslintNamingConventionFormat =
     | 'snake_case'
     | 'UPPER_CASE';
 
+/**
+ * Values for individual selectors for the `@typescript-eslint/naming-convention` rule `selector` option.
+ *
+ * @since v0.11.0
+ */
 export type TypescriptEslintNamingConventionIndividualSelector =
     | 'variable'
     | 'function'
@@ -25,6 +35,11 @@ export type TypescriptEslintNamingConventionIndividualSelector =
     | 'enum'
     | 'typeParameter';
 
+/**
+ * Values for grouped of individual selectors for the `@typescript-eslint/naming-convention` rule `selector` option.
+ *
+ * @since v0.11.0
+ */
 export type TypescriptEslintNamingConventionGroupSelector =
     | 'default'
     | 'variableLike'
@@ -33,10 +48,20 @@ export type TypescriptEslintNamingConventionGroupSelector =
     | 'property'
     | 'method';
 
+/**
+ * Values for the `@typescript-eslint/naming-convention` rule `selector` option.
+ *
+ * @since v0.11.0
+ */
 export type TypescriptEslintNamingConventionSelector =
     | TypescriptEslintNamingConventionIndividualSelector
     | TypescriptEslintNamingConventionGroupSelector;
 
+/**
+ * Values for the `@typescript-eslint/naming-convention` rule `leadingUnderscore` and `trailingUnderscore` options.
+ *
+ * @since v0.11.0
+ */
 export type TypescriptEslintNamingConventionUnderscore =
     | 'forbid'
     | 'require'
@@ -45,6 +70,13 @@ export type TypescriptEslintNamingConventionUnderscore =
     | 'allowDouble'
     | 'allowSingleOrDouble';
 
+/**
+ * Configuration options for the `@typescript-eslint/naming-convention` rule.
+ *
+ * @see https://typescript-eslint.io/rules/naming-convention/
+ *
+ * @since v0.11.0
+ */
 export interface TypescriptEslintNamingConvention {
     selector: TypescriptEslintNamingConventionSelector | TypescriptEslintNamingConventionSelector[];
     format: TypescriptEslintNamingConventionFormat[] | null;
@@ -60,9 +92,11 @@ export interface TypescriptEslintNamingConvention {
 }
 
 /**
- * Provides configuration and extensions for the @typescript-eslint/naming-convention.
+ * Creates configuration with the given extensions for the `@typescript-eslint/naming-convention` rule.
  *
  * @see https://typescript-eslint.io/rules/naming-convention/
+ *
+ * @since v0.11.0
  */
 export function typescriptEslintNamingConvention(
     extensions: TypescriptEslintNamingConvention[] = [],
