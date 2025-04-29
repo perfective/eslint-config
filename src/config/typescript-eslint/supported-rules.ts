@@ -204,7 +204,7 @@ export const supportedRules: Linter.RulesRecord = {
         allowConstantLoopConditions: false,
         // eslint-disable-next-line @typescript-eslint/naming-convention -- external property
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
-        checkTypePredicates: true,
+        checkTypePredicates: false,
     }],
     '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
