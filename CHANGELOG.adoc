@@ -12,6 +12,11 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.31.2
+
+* Included `package.json` files for sub-packages into distribution.
+
+
 == v0.31.1
 
 * Added `package.json` files for sub-packages.
