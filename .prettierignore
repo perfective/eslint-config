@@ -3,6 +3,10 @@ dist
 
 # ESLint
 *.js
+*.cjs
+*.mjs
 *.jsx
 *.ts
+*.cts
+*.mts
 *.tsx

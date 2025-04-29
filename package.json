@@ -79,7 +79,7 @@
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
         "@jest/globals": "~29.7.0",
-        "@perfective/build": "~0.19.1",
+        "@perfective/build": "~0.19.2",
         "@stylistic/eslint-plugin": "4.2.0",
         "@stylistic/eslint-plugin-js": "4.2.0",
         "@stylistic/eslint-plugin-jsx": "4.2.0",
