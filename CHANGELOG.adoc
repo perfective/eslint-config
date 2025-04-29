@@ -12,6 +12,17 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.31.1
+
+* Added `package.json` files for sub-packages.
++
+Node.js resolves sub-packages correctly using `exports`,
+but other tools, including the `eslint-plugin-import`,
+fail without `package.json` files.
++
+* Disabled `checkTypePredicates` in `@typescript-eslint/no-unnecessary-condition`.
+
+
 == v0.31.0
 
 === Finalized flat modules structure
