@@ -22,6 +22,7 @@ export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
             'cypress/no-assigning-return-values': 'error',
             'cypress/no-async-before': 'error',
             'cypress/no-async-tests': 'error',
+            'cypress/no-chained-get': 'error',
             'cypress/no-debug': 'error',
             'cypress/no-force': 'error',
             'cypress/no-pause': 'error',

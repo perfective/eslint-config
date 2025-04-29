@@ -28,7 +28,12 @@ some of the https://docs.cypress.io/guides/references/best-practices.html[best p
 |
 | Error
 
-| `link:{eslint-plugin-cypress-rules}/no-force.md[cypress/no-debug]`
+| `link:{eslint-plugin-cypress-rules}/no-chained-get.md[cypress/no-chained-get]`
+|
+|
+| Error
+
+| `link:{eslint-plugin-cypress-rules}/no-debug.md[cypress/no-debug]`
 |
 |
 | Error
