@@ -33,6 +33,7 @@ const full = gulp.series(
             lib: './',
         },
         files: [
+            '**/package.json',
             '**/*.js',
             '**/*.d.ts',
         ],
