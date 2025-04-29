@@ -128,11 +128,6 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-array-push-push.md[unicorn/no-array-push-push]`
-| Yes
-| Partially
-| Warning
-
 | `link:{eslint-unicorn-rules}/no-array-reduce.md[unicorn/no-array-reduce]`
 | Yes
 |
@@ -197,11 +192,6 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 |
 | Off
-
-| `link:{eslint-unicorn-rules}/no-length-as-slice-end.md[unicorn/no-length-as-slice-end]`
-| Yes
-| Yes
-| Warning
 
 | `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]`
 | Yes
@@ -294,6 +284,16 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-depth.md[unicorn/no-unnecessary-array-flat-depth]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/no-unnecessary-array-splice-count.md[unicorn/no-unnecessary-array-splice-count]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/no-unnecessary-await.md[unicorn/no-unnecessary-await]`
 | Yes
 | Yes
@@ -303,6 +303,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/no-unnecessary-slice-end.md[unicorn/no-unnecessary-slice-end]`
+| Yes
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/no-unsafe-regex.md[unicorn/no-unsafe-regex]`
 |
@@ -458,6 +463,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Partially
 | Warning
 
+| `link:{eslint-unicorn-rules}/prefer-import-meta-properties.md[unicorn/prefer-import-meta-properties]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/prefer-json-parse-buffer.md[unicorn/prefer-json-parse-buffer]`
 |
 | Yes
@@ -556,6 +566,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | `link:{eslint-unicorn-rules}/prefer-set-size.md[unicorn/prefer-set-size]`
 | Yes
 | Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/prefer-single-call.md[unicorn/prefer-single-call]`
+| Yes
+| Partially
 | Warning
 
 | `link:{eslint-unicorn-rules}/prefer-spread.md[unicorn/prefer-spread]`

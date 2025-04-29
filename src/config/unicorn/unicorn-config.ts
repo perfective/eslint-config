@@ -38,9 +38,6 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-array-callback-reference': 'off',
             'unicorn/no-array-for-each': 'off',
             'unicorn/no-array-method-this-argument': 'warn',
-            'unicorn/no-array-push-push': ['warn', {
-                ignore: ['readable', 'this', 'this.stream'],
-            }],
             'unicorn/no-array-reduce': 'off',
             'unicorn/no-await-expression-member': 'error',
             'unicorn/no-await-in-promise-methods': 'error',
@@ -60,7 +57,6 @@ export function unicornConfig(): Linter.Config {
                 checkProperties: true,
                 onlyCamelCase: false,
             }],
-            'unicorn/no-length-as-slice-end': 'warn',
             'unicorn/no-lonely-if': 'warn',
             'unicorn/no-magic-array-flat-depth': 'error',
             'unicorn/no-named-default': 'warn',
@@ -80,8 +76,11 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-typeof-undefined': ['warn', {
                 checkGlobalVariables: true,
             }],
+            'unicorn/no-unnecessary-array-flat-depth': 'warn',
+            'unicorn/no-unnecessary-array-splice-count': 'warn',
             'unicorn/no-unnecessary-await': 'warn',
             'unicorn/no-unnecessary-polyfills': 'error',
+            'unicorn/no-unnecessary-slice-end': 'warn',
             'unicorn/no-unreadable-array-destructuring': 'error',
             'unicorn/no-unreadable-iife': 'error',
             // The rule is deprecated
@@ -141,6 +140,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prefer-export-from': 'warn',
             'unicorn/prefer-global-this': 'warn',
             'unicorn/prefer-includes': 'warn',
+            'unicorn/prefer-import-meta-properties': 'warn',
             'unicorn/prefer-json-parse-buffer': 'warn',
             'unicorn/prefer-keyboard-event-key': 'warn',
             'unicorn/prefer-logical-operator-over-ternary': 'error',
@@ -168,6 +168,9 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prefer-regexp-test': 'off',
             'unicorn/prefer-set-has': 'warn',
             'unicorn/prefer-set-size': 'warn',
+            'unicorn/prefer-single-call': ['warn', {
+                ignore: ['readable', 'this', 'this.stream'],
+            }],
             // Autofix does not always work correctly
             'unicorn/prefer-spread': 'off',
             'unicorn/prefer-string-raw': 'off',
