@@ -236,7 +236,7 @@ Empty interfaces are allowed.
 
 | `link:{ts-eslint-rules}/no-unnecessary-condition/[@typescript-eslint/no-unnecessary-condition]`
 | Strict
-| Warning
+| Error
 
 | `link:{ts-eslint-rules}/no-unnecessary-parameter-property-assignment/[@typescript-eslint/no-unnecessary-parameter-property-assignment]`
 |

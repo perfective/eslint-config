@@ -200,7 +200,7 @@ export const supportedRules: Linter.RulesRecord = {
         allowComparingNullableBooleansToTrue: true,
         allowComparingNullableBooleansToFalse: true,
     }],
-    '@typescript-eslint/no-unnecessary-condition': ['warn', {
+    '@typescript-eslint/no-unnecessary-condition': ['error', {
         allowConstantLoopConditions: false,
         // eslint-disable-next-line @typescript-eslint/naming-convention -- external property
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
@@ -210,7 +210,10 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
     '@typescript-eslint/no-unnecessary-template-expression': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
-    '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+    '@typescript-eslint/no-unnecessary-type-assertion': ['warn', {
+        checkLiteralConstAssertions: true,
+        typesToIgnore: [],
+    }],
     '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
     '@typescript-eslint/no-unsafe-argument': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'error',
