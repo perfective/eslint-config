@@ -33,6 +33,7 @@ export function testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config {
             'testing-library/no-node-access': 'error',
             'testing-library/no-promise-in-fire-event': 'error',
             'testing-library/no-render-in-lifecycle': 'error',
+            'testing-library/no-test-id-queries': 'error',
             // React only
             'testing-library/no-unnecessary-act': 'off',
             'testing-library/no-wait-for-multiple-assertions': 'error',

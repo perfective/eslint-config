@@ -79,6 +79,11 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |
 | Error
 
+| `link:{eslint-testing-library-rules}/no-test-id-queries.md[testing-library/no-test-id-queries]`
+|
+|
+| Error
+
 | `link:{eslint-testing-library-rules}/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
 |
 |
