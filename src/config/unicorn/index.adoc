@@ -133,6 +133,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Off
 
+| `link:{eslint-unicorn-rules}/no-array-reverse.md[unicorn/no-array-reverse]`
+| Yes
+|
+| Off
+
 | `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]`
 | Yes
 |
@@ -320,6 +325,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Off
 
+| `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
 | Yes
 | Yes
@@ -407,6 +417,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/prefer-class-fields.md[unicorn/prefer-class-fields]`
+| Yes
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/prefer-code-point.md[unicorn/prefer-code-point]`
 | Yes
@@ -650,6 +665,11 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 4+| Always use the `./` prefix for the relative URLs for clarity.
 
 | `link:{eslint-unicorn-rules}/require-array-join-separator.md[unicorn/require-array-join-separator]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/require-module-specifiers.md[unicorn/require-module-specifiers]`
 | Yes
 | Yes
 | Warning

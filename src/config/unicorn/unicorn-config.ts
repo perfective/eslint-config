@@ -39,6 +39,8 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-array-for-each': 'off',
             'unicorn/no-array-method-this-argument': 'warn',
             'unicorn/no-array-reduce': 'off',
+            // Requires ECMAScript 2023
+            'unicorn/no-array-reverse': 'off',
             'unicorn/no-await-expression-member': 'error',
             'unicorn/no-await-in-promise-methods': 'error',
             'unicorn/no-console-spaces': 'warn',
@@ -86,6 +88,7 @@ export function unicornConfig(): Linter.Config {
             // The rule is deprecated
             'unicorn/no-unsafe-regex': 'off',
             'unicorn/no-unused-properties': 'off',
+            'unicorn/no-useless-error-capture-stack-trace': 'error',
             'unicorn/no-useless-fallback-in-spread': 'warn',
             'unicorn/no-useless-length-check': 'warn',
             'unicorn/no-useless-promise-resolve-reject': 'warn',
@@ -129,6 +132,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prefer-array-some': 'error',
             'unicorn/prefer-at': 'off',
             'unicorn/prefer-blob-reading-methods': 'error',
+            'unicorn/prefer-class-fields': 'warn',
             'unicorn/prefer-code-point': 'error',
             'unicorn/prefer-date-now': 'warn',
             'unicorn/prefer-default-parameters': 'warn',
@@ -190,6 +194,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
             'unicorn/relative-url-style': ['warn', 'always'],
             'unicorn/require-array-join-separator': 'warn',
+            'unicorn/require-module-specifiers': 'warn',
             'unicorn/require-number-to-fixed-digits-argument': 'warn',
             'unicorn/require-post-message-target-origin': 'error',
             'unicorn/string-content': 'off',
