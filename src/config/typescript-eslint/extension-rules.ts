@@ -77,6 +77,7 @@ export const extensionRules: Linter.RulesRecord = {
     '@typescript-eslint/no-shadow': 'off',
     'no-throw-literal': 'off',
     '@typescript-eslint/only-throw-error': ['error', {
+        allowRethrowing: false,
         allowThrowingAny: false,
         allowThrowingUnknown: false,
     }],

@@ -114,7 +114,9 @@ export const supportedRules: Linter.RulesRecord = {
     // See no-underscore-dangle
     '@typescript-eslint/naming-convention': ['error', ...typescriptEslintNamingConvention()],
     '@typescript-eslint/no-array-delete': 'error',
-    '@typescript-eslint/no-base-to-string': 'error',
+    '@typescript-eslint/no-base-to-string': ['error', {
+        checkUnknown: true,
+    }],
     '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
     '@typescript-eslint/no-confusing-void-expression': ['warn', {
         ignoreArrowShorthand: true,
@@ -214,7 +216,8 @@ export const supportedRules: Linter.RulesRecord = {
         checkLiteralConstAssertions: true,
         typesToIgnore: [],
     }],
-    '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
+    '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+    '@typescript-eslint/no-unnecessary-type-conversion': 'error',
     '@typescript-eslint/no-unsafe-argument': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',

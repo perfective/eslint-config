@@ -260,7 +260,11 @@ Empty interfaces are allowed.
 
 | `link:{ts-eslint-rules}/no-unnecessary-type-constraint/[@typescript-eslint/no-unnecessary-type-constraint]`
 | Recommended
-| Warning
+| Error
+
+| `link:{ts-eslint-rules}/no-unnecessary-type-conversion/[@typescript-eslint/no-unnecessary-type-conversion]`
+| Strict
+| Error
 
 | `link:{ts-eslint-rules}/no-unnecessary-type-parameters/[@typescript-eslint/no-unnecessary-type-parameters]`
 | Strict
