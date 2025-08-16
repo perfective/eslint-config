@@ -106,6 +106,10 @@ since March 2020.
 |
 | Error
 
+| `link:{eslint-n-rules}/no-top-level-await.md[n/no-top-level-await]`
+|
+| Error
+
 | `link:{eslint-n-rules}/no-unpublished-bin.md[n/no-unpublished-bin]`
 | Recommended
 | Error

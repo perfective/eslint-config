@@ -34,6 +34,7 @@ export function nodeConfig(): Linter.Config {
             'n/no-sync': ['error', {
                 allowAtRootLevel: false,
             }],
+            'n/no-top-level-await': 'error',
             'n/no-unpublished-bin': 'error',
             'n/no-unpublished-import': ['error', {
                 ignorePrivate: false,
