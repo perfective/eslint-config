@@ -3,8 +3,7 @@
  *
  * @since v0.11.0
  */
-export type TypescriptEslintNamingConventionFormat =
-    | 'camelCase'
+export type TypescriptEslintNamingConventionFormat = 'camelCase'
     | 'strictCamelCase'
     | 'PascalCase'
     | 'StrictPascalCase'
@@ -16,8 +15,7 @@ export type TypescriptEslintNamingConventionFormat =
  *
  * @since v0.11.0
  */
-export type TypescriptEslintNamingConventionIndividualSelector =
-    | 'variable'
+export type TypescriptEslintNamingConventionIndividualSelector = 'variable'
     | 'function'
     | 'parameter'
     | 'classProperty'
@@ -40,8 +38,7 @@ export type TypescriptEslintNamingConventionIndividualSelector =
  *
  * @since v0.11.0
  */
-export type TypescriptEslintNamingConventionGroupSelector =
-    | 'default'
+export type TypescriptEslintNamingConventionGroupSelector = 'default'
     | 'variableLike'
     | 'memberLike'
     | 'typeLike'
@@ -53,8 +50,7 @@ export type TypescriptEslintNamingConventionGroupSelector =
  *
  * @since v0.11.0
  */
-export type TypescriptEslintNamingConventionSelector =
-    | TypescriptEslintNamingConventionIndividualSelector
+export type TypescriptEslintNamingConventionSelector = TypescriptEslintNamingConventionIndividualSelector
     | TypescriptEslintNamingConventionGroupSelector;
 
 /**
@@ -62,8 +58,7 @@ export type TypescriptEslintNamingConventionSelector =
  *
  * @since v0.11.0
  */
-export type TypescriptEslintNamingConventionUnderscore =
-    | 'forbid'
+export type TypescriptEslintNamingConventionUnderscore = 'forbid'
     | 'require'
     | 'requireDouble'
     | 'allow'

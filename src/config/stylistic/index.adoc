@@ -1,117 +1,176 @@
 = ESLint Stylistic (`@stylistic`)
-:stylistic-js-rules: https://eslint.style/rules/js/
-:stylistic-jsx-rules: https://eslint.style/rules/jsx/
-:stylistic-plus-rules: https://eslint.style/rules/plus/
-:stylistic-ts-rules: https://eslint.style/rules/ts/
+:stylistic-rules: https://eslint.style/rules/
 
 The link:https://eslint.style[ESLint Stylistic] plugin
 provides formatting rules extracted from and deprecated in ESLint, `@typescript-eslint/eslint-plugin`,
 and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 
-== JavaScript
-
 [cols="~,1"]
 |===
 | Rule | Severity
 
-| `link:{stylistic-js-rules}/array-bracket-newline[@stylistic/js/array-bracket-newline]`
+| `link:{stylistic-rules}/array-bracket-newline[@stylistic/array-bracket-newline]`
 | Warning
 
-| `link:{stylistic-js-rules}/array-bracket-spacing[@stylistic/js/array-bracket-spacing]`
+| `link:{stylistic-rules}/array-bracket-spacing[@stylistic/array-bracket-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/array-element-newline[@stylistic/js/array-element-newline]`
+| `link:{stylistic-rules}/array-element-newline[@stylistic/array-element-newline]`
 | Warning
 
-| `link:{stylistic-js-rules}/arrow-parens[@stylistic/js/arrow-parens]`
+| `link:{stylistic-rules}/arrow-parens[@stylistic/arrow-parens]`
 | Warning
 
-| `link:{stylistic-js-rules}/arrow-spacing[@stylistic/js/arrow-spacing]`
+| `link:{stylistic-rules}/arrow-spacing[@stylistic/arrow-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/block-spacing[@stylistic/js/block-spacing]`
+| `link:{stylistic-rules}/block-spacing[@stylistic/block-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/brace-style[@stylistic/js/brace-style]`
+| `link:{stylistic-rules}/brace-style[@stylistic/brace-style]`
 | Warning
 
-| `link:{stylistic-js-rules}/comma-dangle[@stylistic/js/comma-dangle]`
+| `link:{stylistic-rules}/comma-dangle[@stylistic/comma-dangle]`
 | Warning
 
-| `link:{stylistic-js-rules}/comma-spacing[@stylistic/js/comma-spacing]`
+| `link:{stylistic-rules}/comma-spacing[@stylistic/comma-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/comma-style[@stylistic/js/comma-style]`
+| `link:{stylistic-rules}/comma-style[@stylistic/comma-style]`
 | Warning
 
-| `link:{stylistic-js-rules}/computed-property-spacing[@stylistic/js/computed-property-spacing]`
+| `link:{stylistic-rules}/computed-property-spacing[@stylistic/computed-property-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/dot-location[@stylistic/js/dot-location]`
+| `link:{stylistic-rules}/curly-newline[@stylistic/curly-newline]`
 | Warning
 
-| `link:{stylistic-js-rules}/eol-last[@stylistic/js/eol-last]`
+| `link:{stylistic-rules}/dot-location[@stylistic/dot-location]`
 | Warning
 
-| `link:{stylistic-js-rules}/func-call-spacing[@stylistic/js/func-call-spacing]`
+| `link:{stylistic-rules}/eol-last[@stylistic/eol-last]`
+| Warning
+
+| `link:{stylistic-rules}/function-call-argument-newline[@stylistic/function-call-argument-newline]`
+| Warning
+
+| `link:{stylistic-rules}/function-call-spacing[@stylistic/function-call-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/function-paren-newline[@stylistic/function-paren-newline]`
+| Warning
+
+| `link:{stylistic-rules}/generator-star-spacing[@stylistic/generator-star-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/implicit-arrow-linebreak[@stylistic/implicit-arrow-linebreak]`
+| Warning
+
+| `link:{stylistic-rules}/indent-binary-ops[@stylistic/indent-binary-ops]`
+| Warning
+
+| `link:{stylistic-rules}/indent[@stylistic/indent]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-child-element-spacing[@stylistic/jsx-child-element-spacing]`
+| Error
+
+| `link:{stylistic-rules}/jsx-closing-bracket-location[@stylistic/jsx-closing-bracket-location]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-closing-tag-location[@stylistic/jsx-closing-tag-location]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-curly-brace-presence[@stylistic/jsx-curly-brace-presence]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-curly-spacing[@stylistic/jsx-curly-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-equals-spacing[@stylistic/jsx-equals-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-first-prop-new-line[@stylistic/jsx-first-prop-new-line]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-function-call-newline[@stylistic/jsx-function-call-newline]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-indent-props[@stylistic/jsx-indent-props]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-indent[@stylistic/jsx-indent]`
 | Off
-2+| Renamed. Use https://eslint.style/rules/js/function-call-spacing.
+2+| Deprecated since v2.3.0.
+Use the '@stylistic/indent' rule instead.
 
-| `link:{stylistic-js-rules}/function-call-argument-newline[@stylistic/js/function-call-argument-newline]`
+| `link:{stylistic-rules}/jsx-max-props-per-line[@stylistic/jsx-max-props-per-line]`
 | Warning
 
-| `link:{stylistic-js-rules}/function-call-spacing[@stylistic/js/function-call-spacing]`
+| `link:{stylistic-rules}/jsx-newline[@stylistic/jsx-newline]`
+| Off
+
+| `link:{stylistic-rules}/jsx-one-expression-per-line[@stylistic/jsx-one-expression-per-line]`
 | Warning
 
-| `link:{stylistic-js-rules}/function-paren-newline[@stylistic/js/function-paren-newline]`
-| Warning
-
-| `link:{stylistic-js-rules}/generator-star-spacing[@stylistic/js/generator-star-spacing]`
-| Warning
-
-| `link:{stylistic-js-rules}/implicit-arrow-linebreak[@stylistic/js/implicit-arrow-linebreak]`
-| Warning
-
-| `link:{stylistic-js-rules}/indent[@stylistic/js/indent]`
-| Warning
-
-| `link:{stylistic-js-rules}/jsx-quotes[@stylistic/js/jsx-quotes]`
-| Warning
-
-| `link:{stylistic-js-rules}/key-spacing[@stylistic/js/key-spacing]`
-| Warning
-
-| `link:{stylistic-js-rules}/keyword-spacing[@stylistic/js/keyword-spacing]`
-| Warning
-
-| `link:{stylistic-js-rules}/line-comment-position[@stylistic/js/line-comment-position]`
+| `link:{stylistic-rules}/jsx-pascal-case[@stylistic/jsx-pascal-case]`
 | Error
 
-| `link:{stylistic-js-rules}/linebreak-style[@stylistic/js/linebreak-style]`
+| `link:{stylistic-rules}/jsx-props-no-multi-spaces[@stylistic/jsx-props-no-multi-spaces]`
 | Warning
 
-| `link:{stylistic-js-rules}/lines-around-comment[@stylistic/js/lines-around-comment]`
+| `link:{stylistic-rules}/jsx-quotes[@stylistic/jsx-quotes]`
 | Warning
 
-| `link:{stylistic-js-rules}/lines-between-class-members[@stylistic/js/lines-between-class-members]`
+| `link:{stylistic-rules}/jsx-self-closing-comp[@stylistic/jsx-self-closing-comp]`
 | Warning
 
-| `link:{stylistic-js-rules}/max-len[@stylistic/js/max-len]`
+| `link:{stylistic-rules}/jsx-sort-props[@stylistic/jsx-sort-props]`
 | Warning
 
-| `link:{stylistic-js-rules}/max-statements-per-line[@stylistic/js/max-statements-per-line]`
+| `link:{stylistic-rules}/jsx-tag-spacing[@stylistic/jsx-tag-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/jsx-wrap-multilines[@stylistic/jsx-wrap-multilines]`
+| Warning
+
+| `link:{stylistic-rules}/key-spacing[@stylistic/key-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/keyword-spacing[@stylistic/keyword-spacing]`
+| Warning
+
+| `link:{stylistic-rules}/line-comment-position[@stylistic/line-comment-position]`
 | Error
 
-| `link:{stylistic-js-rules}/multiline-comment-style[@stylistic/js/multiline-comment-style]`
+| `link:{stylistic-rules}/linebreak-style[@stylistic/linebreak-style]`
 | Warning
 
-| `link:{stylistic-js-rules}/multiline-ternary[@stylistic/js/multiline-ternary]`
+| `link:{stylistic-rules}/lines-around-comment[@stylistic/lines-around-comment]`
 | Warning
 
-| `link:{stylistic-js-rules}/new-parens[@stylistic/js/new-parens]`
+| `link:{stylistic-rules}/lines-between-class-members[@stylistic/lines-between-class-members]`
 | Warning
 
-| `link:{stylistic-js-rules}/newline-per-chained-call[@stylistic/js/newline-per-chained-call]`
+| `link:{stylistic-rules}/max-len[@stylistic/max-len]`
+| Warning
+
+| `link:{stylistic-rules}/max-statements-per-line[@stylistic/max-statements-per-line]`
+| Error
+
+| `link:{stylistic-rules}/member-delimiter-style[@stylistic/member-delimiter-style]`
+| Warning
+
+| `link:{stylistic-rules}/multiline-comment-style[@stylistic/multiline-comment-style]`
+| Warning
+
+| `link:{stylistic-rules}/multiline-ternary[@stylistic/multiline-ternary]`
+| Warning
+
+| `link:{stylistic-rules}/new-parens[@stylistic/new-parens]`
+| Warning
+
+| `link:{stylistic-rules}/newline-per-chained-call[@stylistic/newline-per-chained-call]`
 | Off
 2+| Readability of the code depends on the different types and situations.
 For example, `Promise.resolve()` is often used to start a vertically-formatted `.then()` statements,
@@ -122,296 +181,126 @@ and sometimes has to go on the new line.
 Additional challenge comes from the problems with `@typescript-eslint/indent` rule,
 that https://github.com/typescript-eslint/typescript-eslint/issues/1824[does not always indent] chained calls correctly.
 
-| `link:{stylistic-js-rules}/no-confusing-arrow[@stylistic/js/no-confusing-arrow]`
+| `link:{stylistic-rules}/no-confusing-arrow[@stylistic/no-confusing-arrow]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-extra-parens[@stylistic/js/no-extra-parens]`
+| `link:{stylistic-rules}/no-extra-parens[@stylistic/no-extra-parens]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-extra-semi[@stylistic/js/no-extra-semi]`
+| `link:{stylistic-rules}/no-extra-semi[@stylistic/no-extra-semi]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-floating-decimal[@stylistic/js/no-floating-decimal]`
+| `link:{stylistic-rules}/no-floating-decimal[@stylistic/no-floating-decimal]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-mixed-operators[@stylistic/js/no-mixed-operators]`
+| `link:{stylistic-rules}/no-mixed-operators[@stylistic/no-mixed-operators]`
 | Error
 
-| `link:{stylistic-js-rules}/no-mixed-spaces-and-tabs[@stylistic/js/no-mixed-spaces-and-tabs]`
+| `link:{stylistic-rules}/no-mixed-spaces-and-tabs[@stylistic/no-mixed-spaces-and-tabs]`
 | Error
 
-| `link:{stylistic-js-rules}/no-multi-spaces[@stylistic/js/no-multi-spaces]`
+| `link:{stylistic-rules}/no-multi-spaces[@stylistic/no-multi-spaces]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-multiple-empty-lines[@stylistic/js/no-multiple-empty-lines]`
+| `link:{stylistic-rules}/no-multiple-empty-lines[@stylistic/no-multiple-empty-lines]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-tabs[@stylistic/js/no-tabs]`
+| `link:{stylistic-rules}/no-tabs[@stylistic/no-tabs]`
 | Error
 
-| `link:{stylistic-js-rules}/no-trailing-spaces[@stylistic/js/no-trailing-spaces]`
+| `link:{stylistic-rules}/no-trailing-spaces[@stylistic/no-trailing-spaces]`
 | Warning
 
-| `link:{stylistic-js-rules}/no-whitespace-before-property[@stylistic/js/no-whitespace-before-property]`
+| `link:{stylistic-rules}/no-whitespace-before-property[@stylistic/no-whitespace-before-property]`
 | Warning
 
-| `link:{stylistic-js-rules}/nonblock-statement-body-position[@stylistic/js/nonblock-statement-body-position]`
+| `link:{stylistic-rules}/nonblock-statement-body-position[@stylistic/nonblock-statement-body-position]`
 |
 
-| `link:{stylistic-js-rules}/object-curly-newline[@stylistic/js/object-curly-newline]`
+| `link:{stylistic-rules}/object-curly-newline[@stylistic/object-curly-newline]`
 | Warning
 2+| For imports and exports this rule may conflict with the "max-len" rule,
 as it is possible to have an import or export declaration that is too long.
 
-| `link:{stylistic-js-rules}/object-curly-spacing[@stylistic/js/object-curly-spacing]`
+| `link:{stylistic-rules}/object-curly-spacing[@stylistic/object-curly-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/object-property-newline[@stylistic/js/object-property-newline]`
+| `link:{stylistic-rules}/object-property-newline[@stylistic/object-property-newline]`
 | Warning
 
-| `link:{stylistic-js-rules}/one-var-declaration-per-line[@stylistic/js/one-var-declaration-per-line]`
+| `link:{stylistic-rules}/one-var-declaration-per-line[@stylistic/one-var-declaration-per-line]`
 | Warning
 
-| `link:{stylistic-js-rules}/operator-linebreak[@stylistic/js/operator-linebreak]`
+| `link:{stylistic-rules}/operator-linebreak[@stylistic/operator-linebreak]`
 | Warning
 
-| `link:{stylistic-js-rules}/padded-blocks[@stylistic/js/padded-blocks]`
+| `link:{stylistic-rules}/padded-blocks[@stylistic/padded-blocks]`
 | Warning
 
-| `link:{stylistic-js-rules}/padding-line-between-statements[@stylistic/js/padding-line-between-statements]`
+| `link:{stylistic-rules}/padding-line-between-statements[@stylistic/padding-line-between-statements]`
 | Warning
 
-| `link:{stylistic-js-rules}/quote-props[@stylistic/js/quote-props]`
+| `link:{stylistic-rules}/quote-props[@stylistic/quote-props]`
 | Warning
 
-| `link:{stylistic-js-rules}/quotes[@stylistic/js/quotes]`
+| `link:{stylistic-rules}/quotes[@stylistic/quotes]`
 | Warning
 
-| `link:{stylistic-js-rules}/rest-spread-spacing[@stylistic/js/rest-spread-spacing]`
+| `link:{stylistic-rules}/rest-spread-spacing[@stylistic/rest-spread-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/semi[@stylistic/js/semi]`
+| `link:{stylistic-rules}/semi-spacing[@stylistic/semi-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/semi-spacing[@stylistic/js/semi-spacing]`
+| `link:{stylistic-rules}/semi-style[@stylistic/semi-style]`
 | Warning
 
-| `link:{stylistic-js-rules}/semi-style[@stylistic/js/semi-style]`
+| `link:{stylistic-rules}/semi[@stylistic/semi]`
 | Warning
 
-| `link:{stylistic-js-rules}/space-before-blocks[@stylistic/js/space-before-blocks]`
+| `link:{stylistic-rules}/space-before-blocks[@stylistic/space-before-blocks]`
 | Warning
 
-| `link:{stylistic-js-rules}/space-before-function-paren[@stylistic/js/space-before-function-paren]`
+| `link:{stylistic-rules}/space-before-function-paren[@stylistic/space-before-function-paren]`
 | Warning
 
-| `link:{stylistic-js-rules}/space-in-parens[@stylistic/js/space-in-parens]`
+| `link:{stylistic-rules}/space-in-parens[@stylistic/space-in-parens]`
 | Warning
 
-| `link:{stylistic-js-rules}/space-infix-ops[@stylistic/js/space-infix-ops]`
+| `link:{stylistic-rules}/space-infix-ops[@stylistic/space-infix-ops]`
 | Warning
 
-| `link:{stylistic-js-rules}/space-unary-ops[@stylistic/js/space-unary-ops]`
+| `link:{stylistic-rules}/space-unary-ops[@stylistic/space-unary-ops]`
 | Warning
 
-| `link:{stylistic-js-rules}/spaced-comment[@stylistic/js/spaced-comment]`
+| `link:{stylistic-rules}/spaced-comment[@stylistic/spaced-comment]`
 | Warning
 
-| `link:{stylistic-js-rules}/switch-colon-spacing[@stylistic/js/switch-colon-spacing]`
+| `link:{stylistic-rules}/switch-colon-spacing[@stylistic/switch-colon-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/template-curly-spacing[@stylistic/js/template-curly-spacing]`
+| `link:{stylistic-rules}/template-curly-spacing[@stylistic/template-curly-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/template-tag-spacing[@stylistic/js/template-tag-spacing]`
+| `link:{stylistic-rules}/template-tag-spacing[@stylistic/template-tag-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/wrap-iife[@stylistic/js/wrap-iife]`
+| `link:{stylistic-rules}/type-annotation-spacing[@stylistic/type-annotation-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/wrap-regex[@stylistic/js/wrap-regex]`
+| `link:{stylistic-rules}/type-generic-spacig[@stylistic/type-generic-spacing]`
 | Warning
 
-| `link:{stylistic-js-rules}/yield-star-spacing[@stylistic/js/yield-star-spacing]`
+| `link:{stylistic-rules}/type-named-tuple-spacing[@stylistic/type-named-tuple-spacing]`
 | Warning
 
-|===
-
-
-== TypeScript
-
-[cols="~,1"]
-|===
-| Rule | Severity
-
-| `link:{stylistic-ts-rules}/block-spacing[@stylistic/ts/block-spacing]`
-| Warning
-
-| `link:{stylistic-ts-rules}/brace-style[@stylistic/ts/brace-style]`
-| Warning
-
-| `link:{stylistic-ts-rules}/comma-dangle[@stylistic/ts/comma-dangle]`
-| Warning
-
-| `link:{stylistic-ts-rules}/comma-spacing[@stylistic/ts/comma-spacing]`
-| Warning
-
-| `link:{stylistic-ts-rules}/func-call-spacing[@stylistic/ts/func-call-spacing]`
-| Off
-2+| Renamed. Use
-
-| `link:{stylistic-ts-rules}/function-call-spacing[@stylistic/ts/function-call-spacing]`
-| Warning
-
-| `link:{stylistic-ts-rules}/indent[@stylistic/ts/indent]`
-| Warning
-
-| `link:{stylistic-ts-rules}/key-spacing[@stylistic/ts/key-spacing]`
-| Warning
-
-| `link:{stylistic-ts-rules}/keyword-spacing[@stylistic/ts/keyword-spacing]`
-| Warning
-
-| `link:{stylistic-ts-rules}/lines-around-comment[@stylistic/ts/lines-around-comment]`
-| Warning
-
-| `link:{stylistic-ts-rules}/lines-between-class-members[@stylistic/ts/lines-between-class-members]`
-| Warning
-
-| `link:{stylistic-ts-rules}/member-delimiter-style[@stylistic/ts/member-delimiter-style]`
-| Warning
-
-| `link:{stylistic-ts-rules}/no-extra-parens[@stylistic/ts/no-extra-parens]`
-| Warning
-
-| `link:{stylistic-ts-rules}/no-extra-semi[@stylistic/ts/no-extra-semi]`
-| Warning
-
-| `link:{stylistic-ts-rules}/object-curly-newline[@stylistic/ts/object-curly-newline]`
-| Warning
-2+| For imports and exports this rule may conflict with the "max-len" rule,
-as it is possible to have an import or export declaration that is too long.
-
-| `link:{stylistic-ts-rules}/object-curly-spacing[@stylistic/ts/object-curly-spacing]`
-| Warning
-
-| `link:{stylistic-ts-rules}/object-property-newline[@stylistic/ts/object-property-newline]`
-| Warning
-
-| `link:{stylistic-ts-rules}/padding-line-between-statements[@stylistic/ts/padding-line-between-statements]`
-| Off
-
-| `link:{stylistic-ts-rules}/quote-props[@stylistic/ts/quote-props]`
-| Warning
-
-| `link:{stylistic-ts-rules}/quotes[@stylistic/ts/quotes]`
-| Warning
-
-| `link:{stylistic-ts-rules}/semi[@stylistic/ts/semi]`
-| Warning
-
-| `link:{stylistic-ts-rules}/space-before-blocks[@stylistic/ts/space-before-blocks]`
-| Warning
-
-| `link:{stylistic-ts-rules}/space-before-function-paren[@stylistic/ts/space-before-function-paren]`
-| Warning
-
-| `link:{stylistic-ts-rules}/space-infix-ops[@stylistic/ts/space-infix-ops]`
-| Warning
-
-| `link:{stylistic-ts-rules}/type-annotation-spacing[@stylistic/ts/type-annotation-spacing]`
-| Warning
-
-|===
-
-
-== JSX
-
-[cols="~,1"]
-|===
-| Rule | Severity
-
-| `link:{stylistic-jsx-rules}/jsx-child-element-spacing[@stylistic/jsx/jsx-child-element-spacing]`
-| Error
-
-| `link:{stylistic-jsx-rules}/jsx-closing-bracket-location[@stylistic/jsx/jsx-closing-bracket-location]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-closing-tag-location[@stylistic/jsx/jsx-closing-tag-location]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-curly-brace-presence[@stylistic/jsx/jsx-curly-brace-presence]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-curly-newline[@stylistic/jsx/jsx-curly-newline]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-curly-spacing[@stylistic/jsx/jsx-curly-spacing]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-equals-spacing[@stylistic/jsx/jsx-equals-spacing]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-first-prop-new-line[@stylistic/jsx/jsx-first-prop-new-line]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-function-call-newline[@stylistic/jsx/jsx-function-call-newline]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-indent[@stylistic/jsx/jsx-indent]`
-| Off
-2+| Deprecated since v2.3.0.
-Use the '@stylistic/js/indent' and '@stylistic/ts/indent' rules.
-
-| `link:{stylistic-jsx-rules}/jsx-indent-props[@stylistic/jsx/jsx-indent-props]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-max-props-per-line[@stylistic/jsx/jsx-max-props-per-line]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-newline[@stylistic/jsx/jsx-newline]`
-| Off
-
-| `link:{stylistic-jsx-rules}/jsx-one-expression-per-line[@stylistic/jsx/jsx-one-expression-per-line]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-pascal-case[@stylistic/jsx/jsx-pascal-case]`
-| Error
-
-| `link:{stylistic-jsx-rules}/jsx-props-no-multi-spaces[@stylistic/jsx/jsx-props-no-multi-spaces]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-self-closing-comp[@stylistic/jsx/jsx-self-closing-comp]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-sort-props[@stylistic/jsx/jsx-sort-props]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-tag-spacing[@stylistic/jsx/jsx-tag-spacing]`
-| Warning
-
-| `link:{stylistic-jsx-rules}/jsx-wrap-multilines[@stylistic/jsx/jsx-wrap-multilines]`
-| Warning
-
-|===
-
-
-== Plus
-
-[cols="~,1"]
-|===
-| Rule | Severity
-
-| `link:{stylistic-plus-rules}/curly-newline[@stylistic/plus/curly-newline]`
-| Warning
-
-| `link:{stylistic-plus-rules}/indent-binary-ops[@stylistic/plus/indent-binary-ops]`
+| `link:{stylistic-rules}/wrap-iife[@stylistic/wrap-iife]`
 | Warning
 
-| `link:{stylistic-plus-rules}/type-generic-spacig[@stylistic/plus/type-generic-spacing]`
+| `link:{stylistic-rules}/wrap-regex[@stylistic/wrap-regex]`
 | Warning
 
-| `link:{stylistic-plus-rules}/type-named-tuple-spacing[@stylistic/plus/type-named-tuple-spacing]`
+| `link:{stylistic-rules}/yield-star-spacing[@stylistic/yield-star-spacing]`
 | Warning
 
 |===

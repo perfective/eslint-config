@@ -15,10 +15,7 @@ import { preferArrowConfig } from './prefer-arrow/prefer-arrow-config';
 import { promiseConfig } from './promise/promise-config';
 import { securityConfig } from './security/security-config';
 import { simpleImportSortConfig } from './simple-import-sort/simple-import-sort-config';
-import { stylisticJsConfig } from './stylistic/js/stylistic-js-config';
-import { stylisticJsxConfig } from './stylistic/jsx/stylistic-jsx-config';
-import { stylisticPlusConfig } from './stylistic/plus/stylistic-plus-config';
-import { stylisticTsConfig } from './stylistic/ts/stylistic-ts-config';
+import { stylisticConfig } from './stylistic/stylistic-config';
 import { typescriptEslintConfig } from './typescript-eslint/typescript-eslint-config';
 import { unicornConfig } from './unicorn/unicorn-config';
 
@@ -51,10 +48,7 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
         promiseConfig(),
         securityConfig(),
         simpleImportSortConfig(),
-        stylisticJsConfig(),
-        stylisticJsxConfig(),
-        stylisticPlusConfig(),
-        stylisticTsConfig(),
+        stylisticConfig(),
         unicornConfig(),
         // Overrides
         configurationFilesConfig(),
@@ -62,7 +56,7 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
 }
 
 /**
- * Rules overrides for configuration files.
+ * Rule overrides for configuration files.
  */
 function configurationFilesConfig(): Linter.Config {
     return {
