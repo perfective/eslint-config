@@ -182,6 +182,10 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Recommended
 | Error
 
+| `link:{eslint-rules}/no-unassigned-vars[no-unassigned-vars]`
+|
+| Error
+
 | `link:{eslint-rules}/no-undef[no-undef]`
 | Recommended
 | Off
@@ -407,7 +411,7 @@ Using `complexity` rule instead to keep the functions simple.
 
 | `link:{eslint-rules}/no-array-constructor[no-array-constructor]`
 |
-| Error
+| Warning
 
 | `link:{eslint-rules}/no-bitwise[no-bitwise]`
 |

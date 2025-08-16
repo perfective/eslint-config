@@ -64,7 +64,7 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
         properties: true,
     }],
     'no-alert': 'error',
-    'no-array-constructor': 'error',
+    'no-array-constructor': 'warn',
     'no-bitwise': 'error',
     'no-caller': 'error',
     'no-case-declarations': 'error',

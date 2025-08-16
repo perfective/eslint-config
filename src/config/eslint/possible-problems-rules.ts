@@ -63,6 +63,7 @@ export const eslintPossibleProblemsRules: Linter.RulesRecord = {
     'no-sparse-arrays': 'error',
     'no-template-curly-in-string': 'error',
     'no-this-before-super': 'error',
+    'no-unassigned-vars': 'error',
     // TypeScript compiler checks defined symbols
     'no-undef': 'off',
     'no-unexpected-multiline': 'error',
@@ -89,8 +90,8 @@ export const eslintPossibleProblemsRules: Linter.RulesRecord = {
         variables: false,
         allowNamedExports: false,
     }],
-    'no-useless-backreference': 'error',
     'no-useless-assignment': 'error',
+    'no-useless-backreference': 'error',
     'require-atomic-updates': ['error', {
         allowProperties: false,
     }],
