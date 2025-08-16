@@ -209,6 +209,11 @@ Class → Method → Method Signature → Precondition ("When").
 |
 | Error
 
+| `link:{eslint-jest-rules}/prefer-ending-with-an-expect.md[jest/prefer-ending-with-an-expect]`
+|
+|
+| Error
+
 | `link:{eslint-jest-rules}/prefer-equality-matcher.md[jest/prefer-equality-matcher]`
 |
 | Suggest
