@@ -100,6 +100,12 @@ to prevent issues with misspelling of file paths and import names.
 |
 | Error
 
+| `link:{eslint-import-rules}/enforce-node-protocol-usage.md[import/ enforce-node-protocol-usage]`
+|
+|
+| Off
+4+| Use `unicorn/prefer-node-protocol` instead.
+
 | `link:{eslint-import-rules}/named.md[import/named]`
 | Yes
 |

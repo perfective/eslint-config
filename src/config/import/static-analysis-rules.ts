@@ -2,6 +2,8 @@ import { Linter } from 'eslint';
 
 export const staticAnalysisRules: Linter.RulesRecord = {
     'import/default': 'error',
+    // Use 'unicorn/prefer-node-protocol' instead.
+    'import/ enforce-node-protocol-usage': 'off',
     'import/named': ['error', {
         // TODO: This setting is reported to cause issues,
         //  and it is not documented.

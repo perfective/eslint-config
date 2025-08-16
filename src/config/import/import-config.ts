@@ -1,5 +1,5 @@
 import { Linter } from 'eslint';
-import { flatConfigs } from 'eslint-plugin-import';
+import eslintPluginImport from 'eslint-plugin-import';
 
 import { javascriptFiles, typescriptFiles } from '../../linter/glob';
 import { javascriptLanguageOptions, typescriptLanguageOptions } from '../../linter/language-options';
@@ -12,7 +12,7 @@ import { styleGuideRules } from './style-guide-rules';
 export function importConfig(): Linter.Config {
     return {
         plugins: {
-            import: flatConfigs.recommended.plugins.import,
+            import: eslintPluginImport,
         },
         rules: {
             ...staticAnalysisRules,
