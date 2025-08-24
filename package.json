@@ -36,7 +36,7 @@
     "peerDependencies": {
         "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
         "@stylistic/eslint-plugin": "^5.2.3",
-        "eslint": "^9.33.0",
+        "eslint": "^9.34.0",
         "eslint-import-resolver-typescript": "^3.10.1",
         "eslint-plugin-array-func": "^5.0.2",
         "eslint-plugin-cypress": "^5.1.1",
@@ -79,7 +79,7 @@
         "@stylistic/eslint-plugin": "5.2.3",
         "@types/eslint": "^9.6.1",
         "@types/jest": "^30.0.0",
-        "eslint": "9.33.0",
+        "eslint": "9.34.0",
         "eslint-import-resolver-typescript": "3.10.1",
         "eslint-plugin-array-func": "5.0.2",
         "eslint-plugin-cypress": "5.1.1",
