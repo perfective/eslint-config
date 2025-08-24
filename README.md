@@ -100,14 +100,14 @@ you need to use `eslint.config.mjs` file instead of `eslint.config.js` to run it
         {
             // These rules are overridden to all files
             rules: {
-                '@stylistic/js/indent': ['warn', 2],
+                '@stylistic/indent': ['warn', 2],
             },
         },
         {
             // These rules are overridden to TypeScript files only
             files: typescriptFiles,
             rules: {
-                '@stylistic/ts/indent': ['warn', 2],
+                '@stylistic/indent': ['warn', 4],
             },
         },
     ]);

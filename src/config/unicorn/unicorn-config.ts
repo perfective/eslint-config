@@ -88,7 +88,7 @@ export function unicornConfig(): Linter.Config {
             // The rule is deprecated
             'unicorn/no-unsafe-regex': 'off',
             'unicorn/no-unused-properties': 'off',
-            'unicorn/no-useless-error-capture-stack-trace': 'error',
+            'unicorn/no-useless-error-capture-stack-trace': 'warn',
             'unicorn/no-useless-fallback-in-spread': 'warn',
             'unicorn/no-useless-length-check': 'warn',
             'unicorn/no-useless-promise-resolve-reject': 'warn',

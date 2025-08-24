@@ -9,9 +9,46 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.31.2` to `v0.32.0`
+
+* _(If explicitly declared)_ *Update @stylistic ESLint plugin dependencies*:
++
+** Add `@stylistic/eslint-plugin` as a dependency.
+** Remove `@stylistic/eslint-plugin-js`, `@stylistic/eslint-plugin-jsx`, `@stylistic/eslint-plugin-ts`,
+and `@stylistic/eslint-plugin-plus` dependencies.
+** Rename customized `@stylistic` rules dependencies:
+remove `/js`, `/jsx`, `/ts`, and `/plus` infixes.
++
+* *Disable and gradually enable new rules**
++
+.eslint.config.js
+[source,javascript]
+----
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
+
+const eslintConfig = perfectiveEslintConfig([
+    // ...Optional plugins configs...
+    {
+        rules: {
+            'no-unassigned-vars': 'off',
+            '@typescript-eslint/no-unnecessary-type-conversion': 'off',
+            'jest/prefer-ending-with-an-expect': 'off',
+            'n/no-top-level-await': 'off',
+            'testing-library/no-test-id-queries': 'off',
+            'unicorn/no-useless-error-capture-stack-trace': 'off',
+            'unicorn/prefer-class-fields': 'off',
+            'unicorn/require-module-specifiers': 'off',
+        },
+    },
+]);
+
+export default eslintConfig;
+----
+
+
 == From `v0.30.0` to `v0.31.0`
 
-* **Update peer dependencies**
+* *Update peer dependencies*
 +
 _If explicitly configured in `package.json`_
 +
@@ -23,13 +60,13 @@ Add `"@eslint-community/eslint-plugin-eslint-comments": "^4.5.0"`
 +
 Add `"eslint-plugin-rxjs-x": "~0.7.2"`
 +
-* **Update imports**
+* *Update imports*
 +
 ** Rules functions from `@perfective/eslint-config/rules` are moved into the corresponding config packages.
 ** Types and functions from `@perfective/eslint-config/config` are now exported from `@perfective/eslint-config`.
 ** See `README` for the list of exports.
 +
-* **Update `eslint.config.js`**
+* *Update `eslint.config.js`*
 +
 ** All configs are now functions.
 ** `perfectiveEslintConfig` is now a regular export.
@@ -57,13 +94,13 @@ const eslintConfig = perfectiveEslintConfig([
 export default eslintConfig;
 ----
 +
-* **Update customized rules** (_if present_):
+* *Update customized rules* (_if present_):
 +
 ** Change `rxjs-x/no-ignored-observables` to `rxjs-x/no-floating-observables`.
 ** Change `unicorn/no-array-push-push` to `unicorn/prefer-single-call`.
 ** Change `unicorn/no-length-as-slice-end` to `unicorn/no-unnecessary-slice-end`.
 +
-* **Disable and gradually enable new rules**:
+* *Disable and gradually enable new rules*:
 +
 .eslint.config.js
 [source,javascript]
@@ -89,7 +126,7 @@ export default eslintConfig;
 
 == From `v0.29.2` to `v0.30.0`
 
-* **Migrate to ES modules**:
+* *Migrate to ES modules*:
 +
 ** (Optional) If your project does not use ESM by default,
 rename `eslint.config.js` into `eslint.config.mjs`.

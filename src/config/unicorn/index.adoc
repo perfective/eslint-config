@@ -330,6 +330,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/no-useless-error-capture-stack-trace.md[unicorn/no-useless-error-capture-stack-trace]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
 | Yes
 | Yes

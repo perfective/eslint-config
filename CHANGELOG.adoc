@@ -12,6 +12,49 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.32.0
+
+* Removed Node.js v18 support, required v20+.
+* Updated `eslint` to `9.34.0`:
+** Enabled the `link:{eslint-rules}/no-unassigned-vars[no-unassigned-vars]` rule as an error.
+** Changed the `link:{eslint-rules}/no-array-constructor[no-array-constructor]` rule severity to a warning,
+as a fixer is now available
++
+* Updated `typescript-eslint` to `8.40.0`:
+** *Supports TypeScript v5.9*.
+** Enable the
+`link:{ts-eslint-rules}/no-unnecessary-type-conversion/[@typescript-eslint/no-unnecessary-type-conversion]`
+rule as an error.
+** Check `unknown` values with the `@typescript-eslint/no-base-to-string` rule.
++
+* Upgraded `@stylistic/eslint-plugin` to `5.2.3`:
+** Merged `@stylistic/eslint-plugin-js`, `@stylistic/eslint-plugin-jsx`, `@stylistic-plugin-plus`,
+and `@stylistic-plugin-ts` into `@stylistic/eslint-plugin`.
++
+* Upgraded `eslint-plugin-unicorn` to `60.0.0`:
+** Enabled the `link:{eslint-unicorn-rules}/no-useless-error-capture-stack-trace.md[unicorn/no-useless-error-capture-stack-trace]`
+rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/prefer-class-fields.md[unicorn/prefer-class-fields]` rule as a warning.
+** Enabled the `link:{eslint-unicorn-rules}/require-module-specifiers.md[unicorn/require-module-specifiers]`
+rule as a warning.
++
+* Upgraded `eslint-plugin-jest` to `29.0.1`:
+** Enable the `link:{eslint-jest-rules}/prefer-ending-with-an-expect.md[jest/prefer-ending-with-an-expect]`
+rule as an error.
++
+* Updated `eslint-plugin-n` to `17.21.3`:
+** Enabled the `link:{eslint-n-rules}/no-top-level-await.md[n/no-top-level-await]` rule as an error.
++
+* Updated `eslint-plugin-testing-library` to `7.6.6`:
+** Enabled the `link:{eslint-testing-library-rules}/no-test-id-queries.md[testing-library/no-test-id-queries]`
+rule as an error.
++
+* Upgraded `eslint-plugin-cypress` to `5.1.1`.
+* Updated `eslint-plugin-jsdoc` to `54.1.1`.
+* Updated `eslint-plugin-import` to `2.32.0`.
+* Updated `eslint-plugin-rxjs-x` to `0.7.7`.
+
+
 == v0.31.2
 
 * Included `package.json` files for sub-packages into distribution.
