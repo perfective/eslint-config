@@ -41,6 +41,8 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-array-reduce': 'off',
             // Requires ECMAScript 2023
             'unicorn/no-array-reverse': 'off',
+            // Requires ECMAScript 2023
+            'unicorn/no-array-sort': 'off',
             'unicorn/no-await-expression-member': 'error',
             'unicorn/no-await-in-promise-methods': 'error',
             'unicorn/no-console-spaces': 'warn',
@@ -48,6 +50,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-empty-file': 'error',
             'unicorn/no-for-loop': 'warn',
             'unicorn/no-hex-escape': 'warn',
+            'unicorn/no-immediate-mutation': 'warn',
             // Deprecated since v57.0.0
             'unicorn/no-instanceof-array': 'off',
             'unicorn/no-instanceof-builtins': 'warn',
@@ -88,6 +91,7 @@ export function unicornConfig(): Linter.Config {
             // The rule is deprecated
             'unicorn/no-unsafe-regex': 'off',
             'unicorn/no-unused-properties': 'off',
+            'unicorn/no-useless-collection-argument': 'warn',
             'unicorn/no-useless-error-capture-stack-trace': 'warn',
             'unicorn/no-useless-fallback-in-spread': 'warn',
             'unicorn/no-useless-length-check': 'warn',
@@ -131,8 +135,10 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prefer-array-index-of': 'warn',
             'unicorn/prefer-array-some': 'error',
             'unicorn/prefer-at': 'off',
+            'unicorn/prefer-bigint-literals': 'warn',
             'unicorn/prefer-blob-reading-methods': 'error',
             'unicorn/prefer-class-fields': 'warn',
+            'unicorn/prefer-classlist-toggle': 'warn',
             'unicorn/prefer-code-point': 'error',
             'unicorn/prefer-date-now': 'warn',
             'unicorn/prefer-default-parameters': 'warn',
@@ -170,6 +176,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prefer-reflect-apply': 'warn',
             // TBD: Conflicts with @typescript-eslint/prefer-regexp-exec
             'unicorn/prefer-regexp-test': 'off',
+            'unicorn/prefer-response-static-json': 'warn',
             'unicorn/prefer-set-has': 'warn',
             'unicorn/prefer-set-size': 'warn',
             'unicorn/prefer-single-call': ['warn', {
@@ -194,6 +201,7 @@ export function unicornConfig(): Linter.Config {
             'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations()],
             'unicorn/relative-url-style': ['warn', 'always'],
             'unicorn/require-array-join-separator': 'warn',
+            'unicorn/require-module-attributes': 'warn',
             'unicorn/require-module-specifiers': 'warn',
             'unicorn/require-number-to-fixed-digits-argument': 'warn',
             'unicorn/require-post-message-target-origin': 'error',

@@ -138,6 +138,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Off
 
+| `link:{eslint-unicorn-rules}/no-array-sort.md[unicorn/no-array-sort]`
+| Yes
+| Yes
+| Off
+
 | `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]`
 | Yes
 |
@@ -169,6 +174,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Warning
 
 | `link:{eslint-unicorn-rules}/no-hex-escape.md[unicorn/no-hex-escape]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/no-immediate-mutation.md[unicorn/no-immediate-mutation]`
 | Yes
 | Yes
 | Warning
@@ -325,10 +335,10 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 | Off
 
-| `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
+| `link:{eslint-unicorn-rules}/no-useless-collection-argument.md[unicorn/no-useless-collection-argument]`
 | Yes
-|
-| Error
+| Yes
+| Warning
 
 | `link:{eslint-unicorn-rules}/no-useless-error-capture-stack-trace.md[unicorn/no-useless-error-capture-stack-trace]`
 | Yes
@@ -418,12 +428,22 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |
 4+| `String#at()` is experimental.
 
+| `link:{eslint-unicorn-rules}/prefer-bigint-literals.md[unicorn/prefer-bigint-literals]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/prefer-blob-reading-methods.md[unicorn/prefer-blob-reading-methods]`
 | Yes
 |
 | Error
 
 | `link:{eslint-unicorn-rules}/prefer-class-fields.md[unicorn/prefer-class-fields]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/prefer-classlist-toggle.md[unicorn/prefer-classlist-toggle]`
 | Yes
 | Yes
 | Warning
@@ -578,6 +598,11 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 | Yes
 | Off
 
+| `link:{eslint-unicorn-rules}/prefer-response-static-json.md[unicorn/prefer-response-static-json]`
+| Yes
+| Yes
+| Warning
+
 | `link:{eslint-unicorn-rules}/prefer-set-has.md[unicorn/prefer-set-has]`
 | Yes
 | Yes
@@ -670,6 +695,11 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 4+| Always use the `./` prefix for the relative URLs for clarity.
 
 | `link:{eslint-unicorn-rules}/require-array-join-separator.md[unicorn/require-array-join-separator]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/require-module-attributes.md[unicorn/require-module-attributes]`
 | Yes
 | Yes
 | Warning
