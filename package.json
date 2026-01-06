@@ -74,8 +74,8 @@
     "devDependencies": {
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
-        "@jest/globals": "~30.0.5",
-        "@perfective/build": "~0.21.0",
+        "@jest/globals": "~30.2.0",
+        "@perfective/build": "~0.22.0",
         "@stylistic/eslint-plugin": "5.2.3",
         "@types/eslint": "^9.6.1",
         "@types/jest": "^30.0.0",
@@ -96,10 +96,10 @@
         "eslint-plugin-testing-library": "7.6.6",
         "eslint-plugin-unicorn": "60.0.0",
         "gulp": "^5.0.1",
-        "jest": "^30.0.5",
-        "prettier": "~3.6.2",
-        "ts-jest": "^29.4.1",
-        "typescript": "~5.9.2",
+        "jest": "^30.2.0",
+        "prettier": "~3.7.4",
+        "ts-jest": "^29.4.6",
+        "typescript": "~5.9.3",
         "typescript-eslint": "8.40.0"
     }
 }
