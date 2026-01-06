@@ -83,6 +83,8 @@ export const extensionRules: Linter.RulesRecord = {
     }],
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': 'error',
+    'no-unused-private-class-members': 'off',
+    '@typescript-eslint/no-unused-private-class-members': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {
         args: 'after-used',

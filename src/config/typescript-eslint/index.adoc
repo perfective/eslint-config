@@ -312,6 +312,10 @@ and in general, type assertions are only needed when they _are_ unsafe.
 |
 | Error
 
+| `link:{ts-eslint-rules}/no-useless-default-assignment/[@typescript-eslint/no-useless-default-assignment]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/no-useless-empty-export/[@typescript-eslint/no-useless-empty-export]`
 |
 | Warning
@@ -601,6 +605,10 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Off
 
 | `link:{ts-eslint-rules}/no-unused-expressions/[@typescript-eslint/no-unused-expressions]`
+|
+| Error
+
+| `link:{ts-eslint-rules}/no-unused-private-class-members/[@typescript-eslint/no-unused-private-class-members]`
 |
 | Error
 

@@ -4,6 +4,7 @@
         "declaration": false,
         "declarationMap": false,
         "exactOptionalPropertyTypes": false,
+        "moduleResolution": "bundler",
         "sourceMap": false
     },
     "exclude": ["dist", "**/*.spec.ts"]
