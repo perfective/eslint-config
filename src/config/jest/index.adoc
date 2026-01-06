@@ -149,6 +149,11 @@ Class → Method → Method Signature → Precondition ("When").
 |
 | Error
 
+| `link:{eslint-jest-rules}/no-unneeded-async-expect-function.md[jest/no-unneeded-async-expect-function]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-jest-rules}/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]`
 |
 | Yes
@@ -260,6 +265,11 @@ Class → Method → Method Signature → Precondition ("When").
 | Yes
 | Warning
 
+| `link:{eslint-jest-rules}/prefer-mock-return-shorthand.md[jest/prefer-mock-return-shorthand]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-jest-rules}/prefer-snapshot-hint.md[jest/prefer-snapshot-hint]`
 |
 |
@@ -281,6 +291,16 @@ Class → Method → Method Signature → Precondition ("When").
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-to-contain.md[jest/prefer-to-contain]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/prefer-to-have-been-called.md[jest/prefer-to-have-been-called]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jest-rules}/prefer-to-have-been-called-times.md[jest/prefer-to-have-been-called-times]`
 |
 | Yes
 | Warning
@@ -325,6 +345,11 @@ Class → Method → Method Signature → Precondition ("When").
 |
 | Error
 
+| `link:{eslint-jest-rules}/valid-mock-module-path.md[jest/valid-mock-module-path]`
+|
+|
+| Error
+
 | `link:{eslint-jest-rules}/valid-title.md[jest/valid-title]`
 | Yes
 | Yes
@@ -339,10 +364,25 @@ Class → Method → Method Signature → Precondition ("When").
 |===
 | Rule | Recommended | Fixable | Config
 
-| `link:{eslint-jest-rules}/unbound-method.md[jest/valid-title]`
+| `link:{eslint-jest-rules}/no-error-equal.md[jest/no-error-equal]`
+|
+|
+| Error
+
+| `link:{eslint-jest-rules}/no-unnecessary-assertion.md[jest/no-unnecessary-assertion]`
+|
+|
+| Error
+
+| `link:{eslint-jest-rules}/unbound-method.md[jest/unbound-method]`
 |
 |
 | Error
 4+| Extends the base `@typescript-eslint/unbound-method` rule to support `expect` calls.
+
+| `link:{eslint-jest-rules}/valid-expect-with-promise.md[jest/valid-expect-with-promise]`
+|
+|
+| Error
 
 |===
