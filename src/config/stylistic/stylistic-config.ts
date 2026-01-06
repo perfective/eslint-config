@@ -109,7 +109,8 @@ export function stylisticConfig(): Linter.Config {
                 allowNamespace: false,
                 ignore: [],
             }],
-            '@stylistic/jsx-props-no-multi-spaces': 'warn',
+            // Deprecated. Use `@stylistic/no-multi-spaces` instead.
+            '@stylistic/jsx-props-no-multi-spaces': 'off',
             '@stylistic/jsx-quotes': ['warn', 'prefer-double'],
             '@stylistic/jsx-self-closing-comp': ['warn', {
                 component: true,
@@ -182,6 +183,8 @@ export function stylisticConfig(): Linter.Config {
                 exceptAfterSingleLine: true,
                 exceptAfterOverload: true,
             }],
+            // TODO: Enable once the rule is not experimental.
+            '@stylistic/exp-list-style': 'off',
             '@stylistic/max-len': ['error', {
                 code: 120,
                 tabWidth: 4,
@@ -224,8 +227,11 @@ export function stylisticConfig(): Linter.Config {
                 // Nested binary expressions may be hard to break down into named functions
                 nestedBinaryExpressions: false,
                 nestedConditionalExpressions: false,
-                enforceForArrowConditionals: false,
                 ternaryOperandBinaryExpressions: false,
+                ignoredNodes: [
+                    // Replaces deprecated "enforceForArrowConditionals: false"
+                    'ArrowFunctionExpression[body.type=ConditionalExpression]',
+                ],
             }],
             '@stylistic/no-extra-semi': 'warn',
             '@stylistic/no-floating-decimal': 'warn',
@@ -263,6 +269,7 @@ export function stylisticConfig(): Linter.Config {
             }],
             '@stylistic/object-curly-spacing': ['warn', 'always', {
                 arraysInObjects: true,
+                emptyObjects: 'never',
                 objectsInObjects: true,
             }],
             '@stylistic/object-property-newline': ['warn', {

@@ -117,7 +117,8 @@ Use the '@stylistic/indent' rule instead.
 | Error
 
 | `link:{stylistic-rules}/jsx-props-no-multi-spaces[@stylistic/jsx-props-no-multi-spaces]`
-| Warning
+| Off
+2+| Deprecated. Use `@stylistic/no-multi-spaces` instead.
 
 | `link:{stylistic-rules}/jsx-quotes[@stylistic/jsx-quotes]`
 | Warning
@@ -151,6 +152,10 @@ Use the '@stylistic/indent' rule instead.
 
 | `link:{stylistic-rules}/lines-between-class-members[@stylistic/lines-between-class-members]`
 | Warning
+
+| `link:{stylistic-rules}/list-style[@stylistic/list-style]`
+| Off
+2+| Experimental
 
 | `link:{stylistic-rules}/max-len[@stylistic/max-len]`
 | Warning
