@@ -80,6 +80,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:{eslint-jsdoc-rules}/escape-inline-tags.md[jsdoc/escape-inline-tags]`
+|
+|
+| Error
+
 | `link:{eslint-jsdoc-rules}/implements-on-classes.md[jsdoc/implements-on-classes]`
 | Yes
 |
@@ -161,6 +166,21 @@ In JavaScript types should be required in the JSDocs.
 | Error in JavaScript.
 Off in TypeScript.
 
+| `link:{eslint-jsdoc-rules}/prefer-import-tag.md[jsdoc/prefer-import-tag]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jsdoc-rules}/reject-any-type.md[jsdoc/reject-any-type]`
+| Yes
+|
+| Error
+
+| `link:{eslint-jsdoc-rules}/reject-function-type.md[jsdoc/reject-function-type]`
+| Yes
+|
+| Error
+
 | `link:{eslint-jsdoc-rules}/require-asterisk-prefix.md[jsdoc/require-asterisk-prefix]`
 |
 |
@@ -195,6 +215,16 @@ Off in TypeScript.
 | Yes
 |
 | Off
+
+| `link:{eslint-jsdoc-rules}/require-next-description.md[jsdoc/require-next-description]`
+|
+|
+| Error
+
+| `link:{eslint-jsdoc-rules}/require-next-type.md[jsdoc/require-next-type]`
+|
+|
+| Error
 
 | `link:{eslint-jsdoc-rules}/require-param.md[jsdoc/require-param]`
 | Yes
@@ -260,13 +290,33 @@ Off in TypeScript.
 | Off in TypeScript; Error in JavaScript
 4+| In JavaScript, we have to require types to allow better static checks.
 
+| `link:{eslint-jsdoc-rules}/require-tags.md[jsdoc/require-tags]`
+|
+|
+| Off
+
 | `link:{eslint-jsdoc-rules}/require-template.md[jsdoc/require-template]`
+|
+|
+| Off
+
+| `link:{eslint-jsdoc-rules}/require-template-description.md[jsdoc/require-template-description]`
+|
+|
+| Off
+
+| `link:{eslint-jsdoc-rules}/require-throws.md[jsdoc/require-throws]`
 |
 |
 | Error
 
-| `link:{eslint-jsdoc-rules}/require-throws.md[jsdoc/require-throws]`
+| `link:{eslint-jsdoc-rules}/require-throws-description.md[jsdoc/require-throws-description]`
 |
+|
+| Error
+
+| `link:{eslint-jsdoc-rules}/require-throws-type.md[jsdoc/require-throws-type]`
+| Yes
 |
 | Error
 
@@ -276,6 +326,16 @@ Off in TypeScript.
 | Error
 
 | `link:{eslint-jsdoc-rules}/require-yields-check.md[jsdoc/require-yields-check]`
+| Yes
+|
+| Error
+
+| `link:{eslint-jsdoc-rules}/require-yields-description.md[jsdoc/require-yields-description]`
+|
+|
+| Error
+
+| `link:{eslint-jsdoc-rules}/require-yields-type.md[jsdoc/require-yields-type]`
 | Yes
 |
 | Error
@@ -290,6 +350,11 @@ Off in TypeScript.
 | Yes
 | Warning
 4+| Use `jsdoc/sort-tags` to configure empty lines between tags.
+
+| `link:{eslint-jsdoc-rules}/type-formatting.md[jsdoc/type-formatting]`
+|
+| Yes
+| Warning
 
 | `link:{eslint-jsdoc-rules}/valid-types.md[jsdoc/valid-types]`
 | Yes

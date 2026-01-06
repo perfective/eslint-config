@@ -1,17 +1,12 @@
 import { Linter } from 'eslint';
-import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
+import { jsdoc } from 'eslint-plugin-jsdoc';
 
 import { javascriptFiles } from '../../linter/glob';
 import { javascriptLanguageOptions } from '../../linter/language-options';
 
 export function jsdocConfig(): Linter.Config {
-    return {
-        plugins: {
-            jsdoc: {
-                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- safe assertion
-                rules: eslintPluginJsdoc.configs['flat/recommended'].plugins!['jsdoc'].rules,
-            },
-        },
+    return jsdoc({
+        config: 'flat/recommended',
         settings: {
             jsdoc: {
                 tagNamePreference: {
@@ -35,7 +30,9 @@ export function jsdocConfig(): Linter.Config {
         rules: {
             // @access should be optional and used only to mark package/private functions
             'jsdoc/check-access': 'off',
-            'jsdoc/check-alignment': 'error',
+            'jsdoc/check-alignment': ['error', {
+                innerIndent: 1,
+            }],
             // TODO: Determine if it can be configured to work with TypeScript
             'jsdoc/check-examples': 'off',
             'jsdoc/check-indentation': 'off',
@@ -70,6 +67,11 @@ export function jsdocConfig(): Linter.Config {
             'jsdoc/empty-tags': ['error', {
                 tags: ['final', 'flags', 'sealed'],
             }],
+            'jsdoc/escape-inline-tags': ['error', {
+                allowedInlineTags: [],
+                enableFixer: false,
+                fixType: 'backticks',
+            }],
             'jsdoc/implements-on-classes': 'error',
             'jsdoc/imports-as-dependencies': 'error',
             'jsdoc/lines-before-block': 'off',
@@ -100,6 +102,9 @@ export function jsdocConfig(): Linter.Config {
             'jsdoc/no-restricted-syntax': 'off',
             'jsdoc/no-types': 'error',
             'jsdoc/no-undefined-types': 'error',
+            'jsdoc/prefer-import-tag': 'warn',
+            'jsdoc/reject-any-type': 'error',
+            'jsdoc/reject-function-type': 'error',
             'jsdoc/require-asterisk-prefix': ['error', 'always'],
             'jsdoc/require-description': ['error', {
                 exemptedBy: ['inheritdoc', 'package', 'private', 'see', 'deprecated'],
@@ -109,6 +114,8 @@ export function jsdocConfig(): Linter.Config {
             'jsdoc/require-file-overview': 'off',
             'jsdoc/require-hyphen-before-param-description': ['warn', 'always'],
             'jsdoc/require-jsdoc': 'off',
+            'jsdoc/require-next-description': 'error',
+            'jsdoc/require-next-type': 'error',
             'jsdoc/require-param': 'off',
             'jsdoc/require-param-description': 'error',
             'jsdoc/require-param-name': 'error',
@@ -123,13 +130,21 @@ export function jsdocConfig(): Linter.Config {
             'jsdoc/require-returns-description': 'error',
             // Conflicts with jsdoc/no-types: types are defined in the TypeScript code.
             'jsdoc/require-returns-type': 'off',
+            // TODO: Configure for the '@since' tag.
+            'jsdoc/require-tags': 'off',
             // Types documentation is irrelevant in most places.
             'jsdoc/require-template': ['off', {
+                exemptedBy: [],
                 requireSeparateTemplates: false,
             }],
+            'jsdoc/require-template-description': 'off',
             'jsdoc/require-throws': 'error',
+            'jsdoc/require-throws-description': 'error',
+            'jsdoc/require-throws-type': 'error',
             'jsdoc/require-yields': 'error',
             'jsdoc/require-yields-check': 'error',
+            'jsdoc/require-yields-description': 'error',
+            'jsdoc/require-yields-type': 'error',
             'jsdoc/sort-tags': ['warn', {
                 tagSequence: [
                     {
@@ -334,11 +349,42 @@ export function jsdocConfig(): Linter.Config {
                 startLines: 1,
                 endLines: 0,
                 applyToEndTag: false,
+                maxBlockLines: null,
                 tags: {},
+            }],
+            'jsdoc/type-formatting': ['warn', {
+                arrayBrackets: 'square',
+                arrowFunctionPostReturnMarkerSpacing: '',
+                arrowFunctionPreReturnMarkerSpacing: '',
+                enableFixer: true,
+                functionOrClassParameterSpacing: '',
+                functionOrClassPostGenericSpacing: '',
+                functionOrClassPostReturnMarkerSpacing: '',
+                functionOrClassPreReturnMarkerSpacing: '',
+                functionOrClassTypeParameterSpacing: '',
+                genericAndTupleElementSpacing: '',
+                genericDot: false,
+                keyValuePostColonSpacing: '',
+                keyValuePostKeySpacing: '',
+                keyValuePostOptionalSpacing: '',
+                keyValuePostVariadicSpacing: '',
+                methodQuotes: 'double',
+                objectFieldIndent: '',
+                objectFieldQuote: null,
+                objectFieldSeparator: 'comma',
+                objectFieldSeparatorOptionalLinebreak: true,
+                objectFieldSeparatorTrailingPunctuation: false,
+                parameterDefaultValueSpacing: ' ',
+                postMethodNameSpacing: '',
+                postNewSpacing: ' ',
+                separatorForSingleObjectField: false,
+                stringQuotes: 'double',
+                typeBracketSpacing: '',
+                unionSpacing: ' ',
             }],
             'jsdoc/valid-types': 'error',
         },
-    };
+    });
 }
 
 export function jsdocJavascriptConfig(): Linter.Config {
