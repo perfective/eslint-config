@@ -1,4 +1,4 @@
-import { ESLint, Linter } from 'eslint';
+import { Linter } from 'eslint';
 import eslintPluginRxjs from 'eslint-plugin-rxjs-x';
 
 import { Glob, typescriptFiles } from '../../linter/glob';
@@ -14,7 +14,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
         files,
         languageOptions: typescriptLanguageOptions(),
         plugins: {
-            'rxjs-x': eslintPluginRxjs.configs.recommended.plugins['rxjs-x'] as ESLint.Plugin,
+            'rxjs-x': eslintPluginRxjs.configs.recommended.plugins['rxjs-x'],
         },
         rules: {
             'rxjs-x/ban-observables': 'error',
@@ -62,6 +62,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             // Prior to v6.4.0 shareReplay() operator had some surprising behavior:
             //  https://github.com/ReactiveX/rxjs/pull/4059
             'rxjs-x/no-sharereplay': 'off',
+            'rxjs-x/no-sharereplay-before-takeuntil': 'error',
             'rxjs-x/no-subclass': 'error',
             'rxjs-x/no-subject-unsubscribe': 'error',
             'rxjs-x/no-subject-value': 'error',
@@ -70,6 +71,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             'rxjs-x/no-topromise': 'error',
             // See https://ncjamieson.com/avoiding-switchmap-related-bugs/
             'rxjs-x/no-unbound-methods': 'error',
+            'rxjs-x/no-unnecessary-collection': 'error',
             'rxjs-x/no-unsafe-catch': 'error',
             'rxjs-x/no-unsafe-first': 'error',
             'rxjs-x/no-unsafe-subject-next': 'error',

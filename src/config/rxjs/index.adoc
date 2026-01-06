@@ -88,6 +88,9 @@ ESLint rules for https://rxjs.dev[RxJS].
 | `link:{eslint-rxjs-rules}/no-sharereplay.md[rxjs-x/no-sharereplay]`
 | Off
 
+| `link:{eslint-rxjs-rules}/no-sharereplay-before-takeuntil.md[rxjs-x/no-sharereplay-before-takeuntil]`
+| Error
+
 | `link:{eslint-rxjs-rules}/no-subclass.md[rxjs-x/no-subclass]`
 | Error
 
@@ -104,6 +107,9 @@ ESLint rules for https://rxjs.dev[RxJS].
 | Error
 
 | `link:{eslint-rxjs-rules}/no-unbound-methods.md[rxjs-x/no-unbound-methods]`
+| Error
+
+| `link:{eslint-rxjs-rules}/no-unnecessary-collection.md[rxjs-x/no-unnecessary-collection]`
 | Error
 
 | `link:{eslint-rxjs-rules}/no-unsafe-catch.md[rxjs-x/no-unsafe-catch]`
