@@ -16,15 +16,15 @@ export function testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config {
         },
         rules: {
             'testing-library/await-async-events': 'off',
-            'testing-library/await-async-queries': 'error',
-            'testing-library/await-async-utils': 'error',
+            'testing-library/await-async-queries': 'warn',
+            'testing-library/await-async-utils': 'warn',
             // Vue.js only
             'testing-library/consistent-data-testid': ['error', {
                 testIdPattern: '^[a-z0-9]+(-[a-z0-9]+)*$',
                 testIdAttribute: 'data-testId',
             }],
             'testing-library/no-await-sync-events': 'error',
-            'testing-library/no-await-sync-queries': 'error',
+            'testing-library/no-await-sync-queries': 'warn',
             'testing-library/no-container': 'error',
             'testing-library/no-debugging-utils': 'error',
             'testing-library/no-dom-import': 'warn',
@@ -36,7 +36,7 @@ export function testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config {
             'testing-library/no-test-id-queries': 'error',
             // React only
             'testing-library/no-unnecessary-act': 'off',
-            'testing-library/no-wait-for-multiple-assertions': 'error',
+            'testing-library/no-wait-for-multiple-assertions': 'warn',
             'testing-library/no-wait-for-side-effects': 'error',
             'testing-library/no-wait-for-snapshot': 'error',
             'testing-library/prefer-explicit-assert': 'off',
@@ -51,6 +51,7 @@ export function testingLibraryConfig(files: Glob[] = jestFiles): Linter.Config {
             'testing-library/prefer-query-matchers': 'off',
             'testing-library/prefer-screen-queries': 'error',
             'testing-library/prefer-user-event': 'error',
+            'testing-library/prefer-user-event-setup': 'error',
             'testing-library/render-result-naming-convention': 'error',
         },
     };

@@ -50,7 +50,7 @@
         "eslint-plugin-rxjs-x": "~0.8.4",
         "eslint-plugin-security": "^3.0.1",
         "eslint-plugin-simple-import-sort": "^12.1.1",
-        "eslint-plugin-testing-library": "^7.6.6",
+        "eslint-plugin-testing-library": "^7.15.4",
         "eslint-plugin-unicorn": "^60.0.0",
         "typescript-eslint": "^8.52.0"
     },
@@ -93,7 +93,7 @@
         "eslint-plugin-rxjs-x": "0.8.4",
         "eslint-plugin-security": "3.0.1",
         "eslint-plugin-simple-import-sort": "12.1.1",
-        "eslint-plugin-testing-library": "7.6.6",
+        "eslint-plugin-testing-library": "7.15.4",
         "eslint-plugin-unicorn": "60.0.0",
         "gulp": "^5.0.1",
         "jest": "^30.2.0",

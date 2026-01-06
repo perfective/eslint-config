@@ -16,13 +16,13 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 
 | `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]`
 | Yes
-|
-| Error
+| Yes
+| Warning
 
 | `link:{eslint-testing-library-rules}/await-async-utils.md[testing-library/await-async-utils]`
 | Yes
-|
-| Error
+| Yes
+| Warning
 
 | `link:{eslint-testing-library-rules}/consistent-data-testid.md[testing-library/consistent-data-testid]`
 |
@@ -36,8 +36,8 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 
 | `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]`
 | Yes
-|
-| Error
+| Yes
+| Warning
 
 | `link:{eslint-testing-library-rules}/no-container.md[testing-library/no-container]`
 | Yes
@@ -91,8 +91,8 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 
 | `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
 | Yes
-|
-| Error
+| Yes
+| Warning
 
 | `link:{eslint-testing-library-rules}/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
 | Yes
@@ -140,6 +140,11 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-user-event.md[testing-library/prefer-user-event]`
+|
+|
+| Error
+
+| `link:{eslint-testing-library-rules}/prefer-user-event-setup.md[testing-library/prefer-user-event-setup]`
 |
 |
 | Error
