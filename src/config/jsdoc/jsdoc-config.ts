@@ -125,6 +125,7 @@ export function jsdocConfig(): Linter.Config {
             'jsdoc/require-property-description': 'error',
             'jsdoc/require-property-name': 'error',
             'jsdoc/require-property-type': 'error',
+            'jsdoc/require-rejects': 'error',
             'jsdoc/require-returns': 'off',
             'jsdoc/require-returns-check': 'error',
             'jsdoc/require-returns-description': 'error',
@@ -352,6 +353,10 @@ export function jsdocConfig(): Linter.Config {
                 maxBlockLines: null,
                 tags: {},
             }],
+            'jsdoc/ts-method-signature-style': 'warn',
+            'jsdoc/ts-no-empty-object-type': 'error',
+            'jsdoc/ts-no-unnecessary-template-expression': 'warn',
+            'jsdoc/ts-prefer-function-type': 'warn',
             'jsdoc/type-formatting': ['warn', {
                 arrayBrackets: 'square',
                 arrowFunctionPostReturnMarkerSpacing: '',

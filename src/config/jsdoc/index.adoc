@@ -268,6 +268,12 @@ Off in TypeScript.
 |
 | Error
 
+| `link:{eslint-jsdoc-rules}/require-rejects.md[jsdoc/require-rejects]`
+|
+|
+| Error
+
+
 | `link:{eslint-jsdoc-rules}/require-returns.md[jsdoc/require-returns]`
 | Yes
 |
@@ -350,6 +356,26 @@ Off in TypeScript.
 | Yes
 | Warning
 4+| Use `jsdoc/sort-tags` to configure empty lines between tags.
+
+| `link:{eslint-jsdoc-rules}/ts-method-signature-style.md[jsdoc/ts-method-signature-style]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jsdoc-rules}/ts-no-empty-object-type.md[jsdoc/ts-no-empty-object-type]`
+| Yes
+|
+| Error
+
+| `link:{eslint-jsdoc-rules}/ts-no-unnecessary-template-expression.md[jsdoc/ts-no-unnecessary-template-expression]`
+|
+| Yes
+| Warning
+
+| `link:{eslint-jsdoc-rules}/ts-prefer-function-type.md[jsdoc/ts-prefer-function-type]`
+|
+| Yes
+| Warning
 
 | `link:{eslint-jsdoc-rules}/type-formatting.md[jsdoc/type-formatting]`
 |
