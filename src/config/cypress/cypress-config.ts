@@ -1,5 +1,5 @@
 import { Linter } from 'eslint';
-import eslintPluginCypress from 'eslint-plugin-cypress/flat';
+import eslintPluginCypress from 'eslint-plugin-cypress';
 
 import { cypressFiles, Glob } from '../../linter/glob';
 import { importNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
