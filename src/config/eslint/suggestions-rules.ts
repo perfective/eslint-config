@@ -193,6 +193,10 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'warn',
+    // Requires ECMAScript 2022 and won't work with @perfective/common/error functions and exceptions.
+    'preserve-caught-error': ['off', {
+        requireCatchParameter: true,
+    }],
     // Deprecated. Use https://eslint.style/rules/js/quote-props.
     'quote-props': 'off',
     'radix': 'error',

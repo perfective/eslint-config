@@ -810,6 +810,11 @@ Using `complexity` rule instead to keep the functions simple.
 |
 | Warning
 
+| `link:{eslint-rules}/preserve-caught-error[preserve-caught-error]`
+|
+| Off
+3+| Requires ECMAScript 2022 and is not compatible with `@perfectice/common/error` `Exception` and functions.
+
 | `link:{eslint-rules}/quote-props[quote-props]`
 | Deprecated
 | Off
