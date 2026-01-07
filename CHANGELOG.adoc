@@ -12,6 +12,78 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.33.0
+
+* Updated `eslint` to `9.39.2`.
++
+* Updated `typescript-eslint` to `8.52.0`:
+** Enabled the `link:{ts-eslint-rules}/no-unused-private-class-members/[@typescript-eslint/no-unused-private-class-members]`
+rule as an error.
+** Enabled the `link:{ts-eslint-rules}/no-useless-default-assignment/[@typescript-eslint/no-useless-default-assignment]`
+rule as an error.
++
+* Updated `@stylistic/eslint-plugin` to `5.6.1`:
+** Disabled `@stylistic/jsx-props-no-multi-spaces` as deprecated.
+Use `@stylistic/no-multi-spaces` instead.
++
+* Upgraded `eslint-plugin-unicorn` to `62.0.0`.
++
+* Upgraded `eslint-plugin-jsdoc` to `61.5.0`:
+** Enabled the `link:{eslint-jsdoc-rules}/escape-inline-tags.md[jsdoc/escape-inline-tags]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/prefer-import-tag.md[jsdoc/prefer-import-tag]` rule as a warning.
+** Enabled the `link:{eslint-jsdoc-rules}/reject-any-type.md[jsdoc/reject-any-type]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/reject-function-type.md[jsdoc/reject-function-type]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-next-description.md[jsdoc/require-next-description]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-next-type.md[jsdoc/require-next-type]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-rejects.md[jsdoc/require-rejects]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-throws-description.md[jsdoc/require-throws-description]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-throws-type.md[jsdoc/require-throws-type]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-yields-description.md[jsdoc/require-yields-description]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/require-yields-type.md[jsdoc/require-yields-type]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/ts-method-signature-style.md[jsdoc/ts-method-signature-style]` rule as a warning.
+** Enabled the `link:{eslint-jsdoc-rules}/ts-no-empty-object-type.md[jsdoc/ts-no-empty-object-type]` rule as an error.
+** Enabled the `link:{eslint-jsdoc-rules}/ts-no-unnecessary-template-expression.md[jsdoc/ts-no-unnecessary-template-expression]`
+rule as a warning.
+** Enabled the `link:{eslint-jsdoc-rules}/ts-prefer-function-type.md[jsdoc/ts-prefer-function-type]` rule as a warning.
+** Enabled the `link:{eslint-jsdoc-rules}/type-formatting.md[jsdoc/type-formatting]` rule as a warning.
++
+* Updated `eslint-plugin-jest` to `29.12.1`:
+** Enabled the `link:{eslint-jest-rules}/no-error-equal.md[jest/no-error-equal]` rule as an error.
+** Enabled the `link:{eslint-jest-rules}/no-unnecessary-assertion.md[jest/no-unnecessary-assertion]` rule as an error.
+** Enabled the `link:{eslint-jest-rules}/no-unneeded-async-expect-function.md[jest/no-unneeded-async-expect-function]`
+rule as a warning.
+** Enabled the `link:{eslint-jest-rules}/prefer-mock-return-shorthand.md[jest/prefer-mock-return-shorthand]`
+rule as a warning.
+** Enabled the `link:{eslint-jest-rules}/prefer-to-have-been-called.md[jest/prefer-to-have-been-called]`
+rule as a warning.
+** Enabled the `link:{eslint-jest-rules}/prefer-to-have-been-called-times.md[jest/prefer-to-have-been-called-times]`
+rule as a warning.
+** Enabled the `link:{eslint-jest-rules}/valid-expect-with-promise.md[jest/valid-expect-with-promise]` rule as an error.
+** Enabled the `link:{eslint-jest-rules}/valid-mock-module-path.md[jest/valid-mock-module-path]` rule as an error.
++
+* Updated `eslint-plugin-testing-library` to `7.15.4`:
+** Enabled the `link:{eslint-testing-library-rules}/prefer-user-event-setup.md[testing-library/prefer-user-event-setup]`
+rule as an error.
+** Changed the `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]`
+rule severity to a warning, as a fixer is now available.
+** Changed the `link:{eslint-testing-library-rules}/await-async-utils.md[testing-library/await-async-utils]`
+rule severity to a warning, as a fixer is now available.
+** Changed the `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]`
+rule severity to a warning, as a fixer is now available.
+** Changed the `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
+rule severity to a warning, as a fixer is now available.
++
+* Updated `eslint-plugin-rxjs-x` to `0.8.4`:
+** Enabled the `link:{eslint-rxjs-rules}/no-sharereplay-before-takeuntil.md[rxjs-x/no-sharereplay-before-takeuntil]`
+rule as an error.
+** Enabled the `link:{eslint-rxjs-rules}/no-unnecessary-collection.md[rxjs-x/no-unnecessary-collection]`
+rule as an error.
++
+* Updated `eslint-plugin-array-func` to `5.1.0`.
+* Updated `eslint-plugin-cypress` to `5.2.1`.
+* Updated `eslint-plugin-n` to `17.23.1`.
+
+
 == v0.32.0
 
 * Removed Node.js v18 support, required v20+.
@@ -700,25 +772,27 @@ It allows to describe a hierarchy: Class → Method → Signature → Preconditi
 +
 * Upgraded `eslint-plugin-jsdoc` to `46.4.5`:
 ** `@link`/`@linkcode` check for types, mark parameter names as missing types.
-** Enabled the `link:{eslint-jsdoc-rules}/no-blank-blocks.md[jsdoc/no-blank-blocks]` rule as a warning.
-** Enabled the `link:{eslint-jsdoc-rules}/tag-lines.md[jsdoc/tag-lines]` rule as a warning.
-** Enabled the `link:{eslint-jsdoc-rules}/imports-as-dependencies.md[jsdoc/imports-as-dependencies]` rule as an error.
-** Configured the `link:{eslint-jsdoc-rules}/sort-tags.md[jsdoc/sort-tags]` rule to group tags.
-*** Moved the `@returns` JSDoc tag to the behavior details sort group.
-** Disabled the `link:{eslint-jsdoc-rules}/no-undefined-types.md[jsdoc/no-undefined-types]` rule for TypeScript configs.
-** Removed the `jsdoc/newline-after-description` rule (removed from `eslint-plugin-jsdoc`).
+** Enabled the `link:{eslint-jsdoc-rules}/no-blank-blocks.md[jsdoc/no-blank-blocks]` rule as an error;
+** Enabled the `link:{eslint-jsdoc-rules}/require-template.md[jsdoc/require-template]` rule as an error;
+** Changed the
+`link:{eslint-jsdoc-rules}/require-hyphen-before-param-description.md[jsdoc/require-hyphen-before-param-description]`
+rule severity from an error to a warning (as it has a fixer).
 +
-* Updated `eslint-plugin-cypress` to `2.13.3`.
-* Updated `eslint-plugin-deprecation` to `1.5.0`.
-* Updated `eslint-plugin-import` to `2.28.0`.
-* Updated `eslint-plugin-sonarjs` to `0.19.0`.
-* Updated `eslint-plugin-testing-library` to `5.11.0`.
+* Upgraded `eslint-plugin-testing-library` to `6.0.1`:
+** Replaced `testing-library/await-async-query` with `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]`.
+** Replaced `testing-library/await-fire-event` with `link:{eslint-testing-library-rules}/await-async-events.md[testing-library/await-async-events]`.
+** Replaced `testing-library/no-await-sync-query` with `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]`.
+** Replaced `testing-library/no-render-in-setup` with `link:{eslint-testing-library-rules}/no-render-in-lifecycle.md[testing-library/no-render-in-lifecycle]`.
+** Removed `testing-library/no-wait-for-empty-callback`.
+** Removed `testing-library/prefer-wait-for`.
 +
-* Patched `eslint-import-resolver-typescript` to `3.5.5`.
-* Patched `eslint-plugin-jest` to `27.2.3`.
-* Patched `eslint-plugin-rxjs` to `5.0.3`.
-+
-* Updated `@babel/eslint-parser` to `7.22.9`.
+* Updated `eslint-import-resolver-typescript` to `3.6.0`.
+* Updated `eslint-plugin-cypress` to `2.14.0`.
+* Updated `eslint-plugin-jest-dom` to `5.1.0`.
+* Updated `eslint-plugin-jsdoc` to `46.5.1`.
+* Updated `eslint-plugin-sonarjs` to `0.21.0`.
+* Patched `eslint-plugin-import` to `2.28.1`.
+* Patched `@babel/eslint-parser` to `7.22.15`.
 
 
 == v0.21.0-beta.3

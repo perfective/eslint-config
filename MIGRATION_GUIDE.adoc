@@ -9,6 +9,61 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
+== From `v0.32.0` to `v0.33.0`
+
+* *Disable and gradually enable new rules*
++
+.eslint.config.js
+[source,javascript]
+----
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
+
+const eslintConfig = perfectiveEslintConfig([
+    // ...Optional plugins configs...
+    {
+        rules: {
+            // typescript-eslint
+            '@typescript-eslint/no-unused-private-class-members': 'off',
+            '@typescript-eslint/no-useless-default-assignment': 'off',
+            // eslint-plugin-jsdoc
+            'jsdoc/escape-inline-tags': 'off',
+            'jsdoc/prefer-import-tag': 'off',
+            'jsdoc/reject-any-type': 'off',
+            'jsdoc/reject-function-type': 'off',
+            'jsdoc/require-next-description': 'off',
+            'jsdoc/require-next-type': 'off',
+            'jsdoc/require-rejects': 'off',
+            'jsdoc/require-throws-description': 'off',
+            'jsdoc/require-throws-type': 'off',
+            'jsdoc/require-yields-description': 'off',
+            'jsdoc/require-yields-type': 'off',
+            'jsdoc/ts-method-signature-style': 'off',
+            'jsdoc/ts-no-empty-object-type': 'off',
+            'jsdoc/ts-no-unnecessary-template-expression': 'off',
+            'jsdoc/ts-prefer-function-type': 'off',
+            'jsdoc/type-formatting': 'off',
+            // eslint-plugin-jest
+            'jest/no-error-equal': 'off',
+            'jest/no-unnecessary-assertion': 'off',
+            'jest/no-unneeded-async-expect-function': 'off',
+            'jest/prefer-mock-return-shorthand': 'off',
+            'jest/prefer-to-have-been-called': 'off',
+            'jest/prefer-to-have-been-called-times': 'off',
+            'jest/valid-expect-with-promise': 'off',
+            'jest/valid-mock-module-path': 'off',
+            // eslint-plugin-testing-library
+            'testing-library/prefer-user-event-setup': 'off',
+            // eslint-plugin-rxjs-x
+            'rxjs-x/no-sharereplay-before-takeuntil': 'off',
+            'rxjs-x/no-unnecessary-collection': 'off',
+        },
+    },
+]);
+
+export default eslintConfig;
+----
+
+
 == From `v0.31.2` to `v0.32.0`
 
 * _(If explicitly declared)_ *Update @stylistic ESLint plugin dependencies*:
