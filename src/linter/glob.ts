@@ -51,7 +51,7 @@ export const typescriptDeclarationFiles: Glob = '**/*.d.{ts,cts,mts}';
  *
  * @since v0.31.0
  */
-export const configurationFiles = ['**/.*.js', '**/*.config.js', '**/gulpfile.js'];
+export const configurationFiles = ['**/.*.{js,cjs,mjs}', '**/*.config.{js,cjs,mjs}', '**/gulpfile.{js,cjs,mjs}'];
 
 /**
  * The default glob patterns Jest uses to find JavaScript test files.
