@@ -54,6 +54,30 @@ export const typescriptDeclarationFiles: Glob = '**/*.d.{ts,cts,mts}';
 export const configurationFiles = ['**/.*.js', '**/*.config.js', '**/gulpfile.js'];
 
 /**
+ * The default glob patterns Jest uses to find JavaScript test files.
+ *
+ * @see https://jestjs.io/docs/configuration#testmatch-arraystring
+ *
+ * @since v0.34.0
+ */
+export const jestJavascriptFiles: Glob[] = [
+    '**/__tests__/**/*.js?(x)',
+    '**/?(*.)+(spec|test).js?(x)',
+];
+
+/**
+ * The default glob patterns Jest uses to find TypeScript test files.
+ *
+ * @see https://jestjs.io/docs/configuration#testmatch-arraystring
+ *
+ * @since v0.34.0
+ */
+export const jestTypescriptFiles: Glob[] = [
+    '**/__tests__/**/*.ts?(x)',
+    '**/?(*.)+(spec|test).ts?(x)',
+];
+
+/**
  * The default glob patterns Jest uses to find test files.
  *
  * @see https://jestjs.io/docs/configuration#testmatch-arraystring
@@ -61,8 +85,8 @@ export const configurationFiles = ['**/.*.js', '**/*.config.js', '**/gulpfile.js
  * @since v0.31.0
  */
 export const jestFiles: Glob[] = [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[jt]s?(x)',
+    ...jestJavascriptFiles,
+    ...jestTypescriptFiles,
 ];
 
 /**

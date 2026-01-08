@@ -2,12 +2,12 @@ import { Linter } from 'eslint';
 import eslintPluginJest from 'eslint-plugin-jest';
 
 import { Glob, jestFiles } from '../../linter/glob';
-import { importNoExtraneousDependencies } from '../import/index';
-
-import { typescriptEslintJestRules } from './typescript-eslint-jest-rules';
+import { importNoExtraneousDependencies } from '../import/rules/no-extraneous-dependencies';
 
 /**
  * Creates a flat config for `eslint-plugin-jest` for a given list of files globs.
+ *
+ * This config excludes the rules that require `@typescript-eslint` plugin.
  *
  * @since v0.31.0
  */
@@ -22,7 +22,6 @@ export function jestConfig(files: Glob[] = jestFiles): Linter.Config {
         },
         rules: {
             ...perfectiveRules(),
-            ...typescriptEslintJestRules,
             'jest/consistent-test-it': ['warn', {
                 fn: 'test',
                 withinDescribe: 'it',
@@ -122,15 +121,6 @@ export function jestConfig(files: Glob[] = jestFiles): Linter.Config {
 
 function perfectiveRules(): Linter.RulesRecord {
     return {
-        '@typescript-eslint/ban-ts-comment': ['error', {
-            'ts-expect-error': 'allow-with-description',
-            'ts-ignore': true,
-            'ts-nocheck': true,
-            'ts-check': false,
-        }],
-        '@typescript-eslint/init-declarations': 'off',
-        // See "jest/unbound-method"
-        '@typescript-eslint/unbound-method': 'off',
         'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
             devDependencies: jestFiles,
         })],

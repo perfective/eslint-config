@@ -188,6 +188,12 @@ a nominal type for glob patterns.
 ** `jestFiles: Glob[]`
 — the link:https://jestjs.io/docs/configuration#testmatch-arraystring[default] glob patterns
 Jest uses to find test files.
+** `jestJavascriptFiles: Glob[]`
+— the link:https://jestjs.io/docs/configuration#testmatch-arraystring[default] glob patterns
+Jest uses to find JavaScript test files.
+** `jestTypescriptFiles: Glob[]`
+— the link:https://jestjs.io/docs/configuration#testmatch-arraystring[default] glob patterns
+Jest uses to find TypeScript test files.
 ** `cypressFiles: Glob`
 — the link:https://docs.cypress.io/app/references/configuration#e2e[default] glob pattern
 Cypress uses to load test files.
@@ -231,6 +237,11 @@ Overrides some rules for `perfectiveEslintConfig` for compatibility with Cypress
 
 * `jestConfig(files: Glob[] = jestFiles): Linter.Config`
 — creates a flat config for `eslint-plugin-jest` for a given list of files globs.
+This config excludes the rules that require `@typescript-eslint` plugin.
++
+* `jestTypescriptConfig(files: Glob[] = jestTypescriptFiles): Linter.Config`
+— creates a flat config for `eslint-plugin-jest` for a given list of TypeScript file globs.
+This config includes only the rules that require `@typescript-eslint` plugin.
 
 === `@perfective/eslint-config/jest-dom`
 
@@ -257,6 +268,9 @@ Allows to splice `internal` scope packages imports between the global and relati
 
 === `@perfective/eslint-config/typescript-eslint`
 
+* `typescriptEslintDependentConfig(plugin: ESLint.Plugin, rules: Linter.RulesRecord, files: Glob[] = typescriptFiles): Linter.Config`
+— a function to create a flat config for a given `plugin` that requires TypeScript ESLint plugin.
++
 * `interface TypescriptEslintNamingConvention`
 — configuration options for the
 `link:https://typescript-eslint.io/rules/naming-convention/[@typescript-eslint/naming-convention]` rule.
@@ -270,7 +284,7 @@ Allows to splice `internal` scope packages imports between the global and relati
 — values for the `@typescript-eslint/naming-convention` rule `format` option.
 ** `type TypescriptEslintNamingConventionUnderscore`
 — values for the `@typescript-eslint/naming-convention` rule `leadingUnderscore` and `trailingUnderscore` options.
-** `function typescriptEslintNamingConvention(extensions: TypescriptEslintNamingConvention[] = []): TypescriptEslintNamingConvention[]`
+** `typescriptEslintNamingConvention(extensions: TypescriptEslintNamingConvention[] = []): TypescriptEslintNamingConvention[]`
 — creates configuration with the given extensions for the `@typescript-eslint/naming-convention` rule.
 
 === `@perfective/eslint-config/unicorn`
@@ -280,5 +294,5 @@ Allows to splice `internal` scope packages imports between the global and relati
 `link:https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md[unicorn/prevent-abbreviation]` rule.
 ** `type UnicornPreventAbbreviationReplacements`
 — nominal type for the `replacements` option of the `unicorn/prevent-abbreviation` rule.
-** `function unicornPreventAbbreviations( replacements: UnicornPreventAbbreviationReplacements = {}, options: Partial<Pick<UnicornPreventAbbreviations, 'checkProperties'>> = {}): UnicornPreventAbbreviations`
+** `unicornPreventAbbreviations(replacements: UnicornPreventAbbreviationReplacements = {}, options: Partial<Pick<UnicornPreventAbbreviations, 'checkProperties'>> = {}): UnicornPreventAbbreviations`
 — creates configuration for the `unicorn/prevent-abbreviation` rule with the given replacements and options.

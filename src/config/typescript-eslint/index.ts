@@ -7,3 +7,4 @@ export {
     TypescriptEslintNamingConventionSelector,
     TypescriptEslintNamingConventionUnderscore,
 } from './rules/typescript-eslint-naming-convention';
+export { typescriptEslintDependentConfig } from './typescript-eslint-config';
