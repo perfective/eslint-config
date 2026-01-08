@@ -9,7 +9,33 @@ Migration between minor versions follows the same steps:
 ** fix errors or check auto-fixes of warnings;
 ** check for the regressions.
 
-== From `v0.32.0` to `v0.33.0`
+== From v0.33.0 to v0.34.0
+
+* *Update ESLint configuration*
++
+If you use Jest with TypeScript test files,
+update your configuration to use the new `jestTypescriptConfig()` for TypeScript-specific rules:
++
+.eslint.config.js
+[source,javascript]
+----
+import { perfectiveEslintConfig } from '@perfective/eslint-config';
+import { jestConfig, jestTypescriptConfig } from '@perfective/eslint-config/jest';
+
+const eslintConfig = perfectiveEslintConfig([
+    jestConfig,
+    jestTypescriptConfig, // Add this for TypeScript Jest tests
+    // ...other optional plugins configs...
+]);
+
+export default eslintConfig;
+----
++
+If you only use JavaScript for Jest tests,
+no changes are required as `jestConfig()` continues to work as before.
+
+
+== From v0.32.0 to v0.33.0
 
 * *Disable and gradually enable new rules*
 +
@@ -64,7 +90,7 @@ export default eslintConfig;
 ----
 
 
-== From `v0.31.2` to `v0.32.0`
+== From v0.31.2 to v0.32.0
 
 * _(If explicitly declared)_ *Update @stylistic ESLint plugin dependencies*:
 +
@@ -101,7 +127,7 @@ export default eslintConfig;
 ----
 
 
-== From `v0.30.0` to `v0.31.0`
+== From v0.30.0 to v0.31.0
 
 * *Update peer dependencies*
 +
@@ -179,7 +205,7 @@ const eslintConfig = perfectiveEslintConfig([
 export default eslintConfig;
 ----
 
-== From `v0.29.2` to `v0.30.0`
+== From v0.29.2 to v0.30.0
 
 * *Migrate to ES modules*:
 +
@@ -238,7 +264,7 @@ export default eslintConfig;
 ----
 
 
-== From `v0.28.0` to `v0.29.2`
+== From v0.28.0 to v0.29.2
 
 * Replace obsolete optional dependency (if used):
 ** Remove `eslint-plugin-rxjs`
@@ -295,7 +321,7 @@ module.exports = [
 ----
 
 
-== From `v0.27.1` to `v0.28.0`
+== From v0.27.1 to v0.28.0
 
 * Remove obsolete peer dependencies:
 ** `@typescript-eslint/eslint-plugin` (replaced by `typescript-eslint`)
@@ -350,7 +376,7 @@ module.exports = [
 ----
 
 
-== From `v0.26.1` to `v0.27.1`
+== From v0.26.1 to v0.27.1
 
 * Remove obsolete peer dependencies:
 ** `tslint`
@@ -408,7 +434,7 @@ module.exports = {
 ----
 
 
-== From `v0.26.0` to `v0.26.1`
+== From v0.26.0 to v0.26.1
 
 * Disable and gradually enable new rules in the `.eslintrc.js`.
 +
@@ -431,7 +457,7 @@ module.exports = {
 ----
 
 
-== From `v0.25.1` to `v0.26.0`
+== From v0.25.1 to v0.26.0
 
 * Remove `eslint-plugin-node` from `devDependencies`, if present.
 +
@@ -469,7 +495,7 @@ module.exports = {
 ----
 
 
-== From `v0.24.0` to `v0.25.1`
+== From v0.24.0 to v0.25.1
 
 * Replace customized `eslint-plugin-node` rules (if any) with `eslint-plugin-n`:
 ** Replace customized `node/` rules with `n/`.
@@ -518,7 +544,7 @@ module.exports = {
 ----
 
 
-== From `v0.23.4` to `v0.24.0`
+== From v0.23.4 to v0.24.0
 
 * Check customizations of the `eslint` and `@typescript-eslint` rules replaced
 by the https://eslint.style/rules[ESLint Stylistic rules].
@@ -547,7 +573,7 @@ module.exports = {
 ----
 
 
-== From `v0.22.0` to `v0.23.4`
+== From v0.22.0 to v0.23.4
 
 * Disable and gradually enable new rules in the `.eslintrc.js`.
 +
@@ -573,7 +599,7 @@ module.exports = {
 ----
 
 
-== From `v0.21.0` to `v0.22.0`
+== From v0.21.0 to v0.22.0
 
 * Update `eslint-plugin-testing-library` rules:
 ** Replace `testing-library/await-async-query` with `testing-library/await-async-queries`.
@@ -601,7 +627,7 @@ module.exports = {
 ----
 
 
-== From `v0.20.0` to `v0.21.0`
+== From v0.20.0 to v0.21.0
 
 * If you do not use `jest`,
 remove `eslint-plugin-jest`, `eslint-plugin-jest-formatting`, `eslint-plugin-jest-dom`,
@@ -647,7 +673,7 @@ module.exports = {
 ----
 
 
-== From `v0.19.0` to `v0.20.0`
+== From v0.19.0 to v0.20.0
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -676,7 +702,7 @@ module.exports = {
 ----
 
 
-== From `v0.18.0` to `v0.19.0`
+== From v0.18.0 to v0.19.0
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -704,7 +730,7 @@ module.exports = {
 ----
 
 
-== From `v0.17.0` to `v0.18.0`
+== From v0.17.0 to v0.18.0
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -739,7 +765,7 @@ module.exports = {
 ----
 
 
-== From `v0.16.0` to `v0.17.0`
+== From v0.16.0 to v0.17.0
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
@@ -779,7 +805,7 @@ update the rules' names:
 * `testing-library/no-debug` into `testing-library/no-debugging-utils`
 
 
-== From `v0.15.1` to `v0.16.0`
+== From v0.15.1 to v0.16.0
 
 .Disable new rules in the `.eslintrc.js`
 [source,js]
