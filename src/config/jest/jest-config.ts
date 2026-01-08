@@ -154,6 +154,6 @@ function perfectiveRules(): Linter.RulesRecord {
         // TODO: This rule can be improved by allowing configuring functions when Promise<void> is expected.
         'promise/always-return': 'off',
         // Passing promise is required for async testing
-        '@smarttools/rxjs/no-topromise': 'off',
+        'rxjs-x/no-topromise': 'off',
     };
 }
