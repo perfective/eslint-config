@@ -14,7 +14,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
         files,
         languageOptions: typescriptLanguageOptions(),
         plugins: {
-            'rxjs-x': eslintPluginRxjs.configs.recommended.plugins['rxjs-x'],
+            'rxjs-x': eslintPluginRxjs,
         },
         rules: {
             'rxjs-x/ban-observables': 'error',
