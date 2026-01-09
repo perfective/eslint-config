@@ -12,6 +12,12 @@
 :eslint-testing-library-rules: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules
 :eslint-unicorn-rules: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules
 
+== v0.34.1
+
+* Upgraded `eslint-plugin-jsdoc` to `62.0.0`.
+* Included `.cjs` and `.mjs` files to the configuration files glob.
+
+
 == v0.34.0
 
 * Updated `eslint-plugin-jsdoc` to `61.7.1`.
