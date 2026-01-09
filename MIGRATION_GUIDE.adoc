@@ -100,7 +100,7 @@ and `@stylistic/eslint-plugin-plus` dependencies.
 ** Rename customized `@stylistic` rules dependencies:
 remove `/js`, `/jsx`, `/ts`, and `/plus` infixes.
 +
-* *Disable and gradually enable new rules**
+* *Disable and gradually enable new rules*:
 +
 .eslint.config.js
 [source,javascript]
@@ -331,7 +331,7 @@ module.exports = [
 * *Temporarily* install _optional_ dependencies:
 +
 ** `eslint-plugin-cypress`
-** `eslint-plugin-jest
+** `eslint-plugin-jest`
 ** `eslint-plugin-jest-dom`
 ** `eslint-plugin-jest-formatting`
 ** `eslint-plugin-rxjs`
