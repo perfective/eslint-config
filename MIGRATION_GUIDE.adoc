@@ -337,7 +337,7 @@ module.exports = [
 ** `eslint-plugin-rxjs`
 ** `eslint-plugin-testing-library`
 +
-* Rename `.eslintrc.js` into `eslint.config.js`
+* Rename `eslint.config.js` into `eslint.config.js`
 ** Change configuration structure.
 +
 .Before
@@ -397,7 +397,7 @@ module.exports = [
 ** `jest-formatting/padding-around-expect-groups` (use `jest/padding-around-expect-groups`)
 ** `jest-formatting/padding-around-test-blocks` (use `jest/padding-around-test-blocks`)
 +
-* Disable and gradually enable new rules in the `.eslintrc.js`.
+* Disable and gradually enable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -436,7 +436,7 @@ module.exports = {
 
 == From v0.26.0 to v0.26.1
 
-* Disable and gradually enable new rules in the `.eslintrc.js`.
+* Disable and gradually enable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -461,7 +461,7 @@ module.exports = {
 
 * Remove `eslint-plugin-node` from `devDependencies`, if present.
 +
-* Disable and gradually enable new rules in the `.eslintrc.js`.
+* Disable and gradually enable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -511,7 +511,7 @@ with `@typescript-eslint/no-unnecessary-template-expression`.
 +
 * Add `@jest/globals` to the `devDependencies` for the `jest/prefer-importing-jest-globals` rule.
 +
-* Disable and gradually enable new rules in the `.eslintrc.js`.
+* Disable and gradually enable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -551,7 +551,7 @@ by the https://eslint.style/rules[ESLint Stylistic rules].
 Replace the name of the customized rules with the new rules.
 See Stylistic https://eslint.style/guide/migration[migration] documentation for details.
 +
-* Disable and gradually enable new rules in the `.eslintrc.js`.
+* Disable and gradually enable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -575,7 +575,7 @@ module.exports = {
 
 == From v0.22.0 to v0.23.4
 
-* Disable and gradually enable new rules in the `.eslintrc.js`.
+* Disable and gradually enable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -607,7 +607,7 @@ module.exports = {
 ** Replace `testing-library/no-await-sync-query` with `testing-library/no-await-sync-queries`.
 ** Replace `testing-library/no-render-in-setup` with `testing-library/no-render-in-lifecycle`.
 +
-* Disable new rules in the `.eslintrc.js`.
+* Disable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
@@ -648,7 +648,7 @@ as these dependencies may remain in it and in the `node_modules`.
 * Remove the `jsdoc/newline-after-description` rule customizations,
 if you have any.
 
-* Disable new rules in the `.eslintrc.js`.
+* Disable new rules in the `eslint.config.js`.
 +
 [source,js]
 ----
