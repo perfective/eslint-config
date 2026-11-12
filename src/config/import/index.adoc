@@ -25,7 +25,7 @@ to prevent issues with misspelling of file paths and import names.
 | `link:{eslint-import-rules}/no-empty-named-blocks.md[import/no-empty-named-blocks]`
 |
 | Yes
-| Error
+| Warning
 
 | `link:{eslint-import-rules}/no-extraneous-dependencies.md[import/no-extraneous-dependencies]`
 |
