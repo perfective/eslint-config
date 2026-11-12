@@ -95,6 +95,11 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 |
 | Error
 
+| `link:{eslint-jsdoc-rules}/informative-docs.md[jsdoc/informative-docs]`
+|
+|
+| Off
+
 | `link:{eslint-jsdoc-rules}/lines-before-block.md[jsdoc/lines-before-block]`
 |
 |
@@ -356,6 +361,11 @@ Off in TypeScript.
 | Yes
 | Warning
 4+| Use `jsdoc/sort-tags` to configure empty lines between tags.
+
+| `link:{eslint-jsdoc-rules}/text-escaping.md[jsdoc/text-escaping]`
+|
+| Yes
+| Off
 
 | `link:{eslint-jsdoc-rules}/ts-method-signature-style.md[jsdoc/ts-method-signature-style]`
 |
