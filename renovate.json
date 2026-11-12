@@ -1,0 +1,43 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:recommended", "security:minimumReleaseAgeNpm"],
+    "ignorePresets": ["group:monorepos", "group:recommended"],
+    "labels": ["dependencies"],
+    "automerge": false,
+    "rangeStrategy": "bump",
+    "dependencyDashboard": true,
+    "prConcurrentLimit": 3,
+    "prHourlyLimit": 2,
+    "rebaseLabel": "renovate-regenerate",
+    "osvVulnerabilityAlerts": true,
+    "vulnerabilityAlerts": {
+        "labels": ["dependencies", "vulnerability"]
+    },
+    "packageRules": [
+        {
+            "description": "Label major updates for careful review",
+            "matchUpdateTypes": ["major"],
+            "addLabels": ["help wanted"]
+        },
+        {
+            "description": "Peer range changes affect consumers of the config",
+            "matchDepTypes": ["peerDependencies"],
+            "addLabels": ["help wanted"]
+        },
+        {
+            "description": "TypeScript updates must stay within the range supported by typescript-eslint",
+            "matchPackageNames": ["typescript"],
+            "addLabels": ["help wanted"]
+        },
+        {
+            "description": "@perfective/build is updated last, after eslint, typescript-eslint, and the plugins",
+            "matchPackageNames": ["@perfective/build"],
+            "dependencyDashboardApproval": true
+        },
+        {
+            "description": "GitHub Actions: low-risk, weekly batch visibility",
+            "matchManagers": ["github-actions"],
+            "extends": ["schedule:weekly"]
+        }
+    ]
+}
