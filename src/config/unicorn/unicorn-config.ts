@@ -28,8 +28,6 @@ export function unicornConfig(): Linter.Config {
             'unicorn/filename-case': ['error', {
                 case: 'kebabCase',
             }],
-            // Deprecated since v43.0.0
-            'unicorn/import-index': 'off',
             'unicorn/import-style': 'off',
             'unicorn/new-for-builtins': 'warn',
             'unicorn/no-abusive-eslint-disable': 'error',
@@ -88,8 +86,6 @@ export function unicornConfig(): Linter.Config {
             'unicorn/no-unnecessary-slice-end': 'warn',
             'unicorn/no-unreadable-array-destructuring': 'error',
             'unicorn/no-unreadable-iife': 'error',
-            // The rule is deprecated
-            'unicorn/no-unsafe-regex': 'off',
             'unicorn/no-unused-properties': 'off',
             'unicorn/no-useless-collection-argument': 'warn',
             'unicorn/no-useless-error-capture-stack-trace': 'warn',
