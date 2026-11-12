@@ -53,6 +53,7 @@ export const eslintPossibleProblemsRules: Linter.RulesRecord = {
         allowEscape: false,
     }],
     'no-new-native-nonconstructor': 'error',
+    // Deprecated since v9.0.0. Use no-new-native-nonconstructor.
     'no-new-symbol': 'error',
     'no-obj-calls': 'error',
     'no-promise-executor-return': 'error',

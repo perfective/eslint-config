@@ -135,6 +135,8 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
     // Rather disallow using loops at all and use filter/map/reduce instead.
     'no-restricted-syntax': ['error', 'ForInStatement'],
     'no-return-assign': 'error',
+    // Deprecated since v8.46.0.
+    'no-return-await': 'off',
     'no-script-url': 'error',
     'no-sequences': ['error', {
         allowInParentheses: false,

@@ -92,7 +92,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 
 | `link:{eslint-rules}/no-duplicate-imports[no-duplicate-imports]`
 |
-| Error
+| Off
 
 | `link:{eslint-rules}/no-empty-character-class[no-empty-character-class]`
 | Recommended
@@ -228,6 +228,10 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-use-before-define[no-use-before-define]`
+|
+| Error
+
+| `link:{eslint-rules}/no-useless-assignment[no-useless-assignment]`
 |
 | Error
 
@@ -578,6 +582,11 @@ Using `complexity` rule instead to keep the functions simple.
 |
 | Error
 
+| `link:{eslint-rules}/no-new-object[no-new-object]`
+| Deprecated
+| Off
+3+| Use `no-object-constructor` instead.
+
 | `link:{eslint-rules}/no-new-wrappers[no-new-wrappers]`
 |
 | Error
@@ -642,6 +651,10 @@ Using `complexity` rule instead to keep the functions simple.
 | `link:{eslint-rules}/no-return-assign[no-return-assign]`
 |
 | Error
+
+| `link:{eslint-rules}/no-return-await[no-return-await]`
+| Deprecated
+| Off
 
 | `link:{eslint-rules}/no-script-url[no-script-url]`
 |
@@ -767,7 +780,7 @@ Using `complexity` rule instead to keep the functions simple.
 
 | `link:{eslint-rules}/prefer-destructuring[prefer-destructuring]`
 |
-| Warning
+| Off
 
 | `link:{eslint-rules}/prefer-exponentiation-operator[prefer-exponentiation-operator]`
 |
