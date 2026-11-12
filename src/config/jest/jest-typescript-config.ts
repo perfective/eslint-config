@@ -33,7 +33,9 @@ const jestTypescriptEslintRulesOverrides: Linter.RulesRecord = {
  * @since v0.34.0
  */
 export function jestTypescriptConfig(files: Glob[] = jestTypescriptFiles): Linter.Config {
-    return typescriptEslintDependentConfig(eslintPluginJest, {
+    return typescriptEslintDependentConfig({
+        jest: eslintPluginJest,
+    }, {
         ...jestTypescriptRules,
         ...jestTypescriptEslintRulesOverrides,
     }, files);

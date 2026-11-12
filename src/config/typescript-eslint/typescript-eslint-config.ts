@@ -22,19 +22,19 @@ export function typescriptEslintConfig(): Linter.Config {
 }
 
 /**
- * A function to create a flat config for a given `plugin` that requires TypeScript ESLint plugin.
+ * A function to create a flat config for given `plugins` that require TypeScript ESLint plugin.
  *
  * This function should be used by other plugin configurations to enable rules that require type information
  * or to change the behavior of the `@typescript-eslint` plugin rules.
  *
- * @param plugin - An ESLint plugin with the rules.
- * @param rules - Rules for the plugin or for the `@typescript-eslint` plugin.
+ * @param plugins - ESLint plugins with the rules, keyed by their namespace (e.g. `{ jest: eslintPluginJest }`).
+ * @param rules - Rules for the plugins or for the `@typescript-eslint` plugin.
  * @param files - An optional list of globs to narrow down the applicable files.
  *
  * @since v0.34.0
  */
 export function typescriptEslintDependentConfig(
-    plugin: ESLint.Plugin,
+    plugins: Record<string, ESLint.Plugin>,
     rules: Linter.RulesRecord,
     files: Glob[] = typescriptFiles,
 ): Linter.Config {
@@ -43,7 +43,7 @@ export function typescriptEslintDependentConfig(
         languageOptions: typescriptLanguageOptions(),
         plugins: {
             '@typescript-eslint': typescriptEslintPlugin,
-            plugin,
+            ...plugins,
         },
         rules,
     };
