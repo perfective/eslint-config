@@ -20,6 +20,7 @@ export function nodeConfig(): Linter.Config {
             // Imports and require are handled by the "eslint-plugin-import"
             'n/no-extraneous-import': 'off',
             'n/no-extraneous-require': 'off',
+            // Deprecated.
             'n/no-hide-core-modules': 'off',
             'n/no-missing-import': 'off',
             'n/no-missing-require': 'off',
@@ -66,7 +67,7 @@ export function nodeConfig(): Linter.Config {
             'n/prefer-promises/dns': 'error',
             'n/prefer-promises/fs': 'error',
             'n/process-exit-as-throw': 'error',
-            // Use n/hashbang instead
+            // Deprecated. Use n/hashbang instead.
             'n/shebang': 'off',
         },
     };
