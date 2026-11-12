@@ -2,7 +2,8 @@
     "extends": "@perfective/build/tsconfig.strict.json",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "rootDir": "./src"
+        "rootDir": "./src",
+        "types": ["node"]
     },
     "exclude": ["dist"]
 }

@@ -1,3 +1,8 @@
+import { createRequire } from 'node:module';
+import { join } from 'node:path';
+
+const nodeRequire = createRequire(join(process.cwd(), 'package.json'));
+
 /**
  * Returns true if a given `module` can be resolved in node_modules.
  *
@@ -9,7 +14,7 @@
  */
 export function hasNodeModule(module: string): boolean {
     try {
-        return Boolean(require.resolve(module));
+        return Boolean(nodeRequire.resolve(module));
     }
     catch {
         return false;
