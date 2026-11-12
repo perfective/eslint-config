@@ -87,7 +87,7 @@ Class → Method → Method Signature → Precondition ("When").
 | `link:{eslint-jest-rules}/no-focused-tests.md[jest/no-focused-tests]`
 | Yes
 |
-| Error
+| Warning
 
 | `link:{eslint-jest-rules}/no-hooks.md[jest/no-hooks]`
 |
@@ -98,11 +98,6 @@ Class → Method → Method Signature → Precondition ("When").
 | Yes
 |
 | Error
-
-| `link:{eslint-jest-rules}/no-if.md[jest/no-if]`
-|
-|
-| Off (Deprecated)
 
 | `link:{eslint-jest-rules}/no-interpolation-in-snapshots.md[jest/no-interpolation-in-snapshots]`
 | Yes
