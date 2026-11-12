@@ -11,9 +11,6 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/ban-tslint-comment': 'warn',
-    // Deprecated. Use @typescript-eslint/no-restricted-types, @typescript-eslint/no-unsafe-function-type, and
-    // @typescript-eslint/no-wrapper-object-types.
-    '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/class-literal-property-style': 'off',
     '@typescript-eslint/consistent-generic-constructors': ['warn', 'type-annotation'],
     '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
@@ -43,8 +40,6 @@ export const supportedRules: Linter.RulesRecord = {
     }],
     '@typescript-eslint/explicit-member-accessibility': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
-    // Deprecated. Use https://eslint.style/rules/ts/member-delimiter-style.
-    '@typescript-eslint/member-delimiter-style': 'off',
     // Do not group readonly fields,
     // because readonly is an implementation detail and when it changes
     // it should not affect the layout of the code.
@@ -129,6 +124,7 @@ export const supportedRules: Linter.RulesRecord = {
         ignoreUnions: false,
     }],
     '@typescript-eslint/no-dynamic-delete': 'warn',
+    // Deprecated since v8.0.0. Use @typescript-eslint/no-empty-object-type.
     // An empty interface can be used as nominal type or a self-documenting placeholder.
     // "@typescript-eslint/consistent-type-definitions" does not allow to do "type A = {}" as a placeholder.
     '@typescript-eslint/no-empty-interface': ['off', {
@@ -197,6 +193,7 @@ export const supportedRules: Linter.RulesRecord = {
         },
     }],
     '@typescript-eslint/no-this-alias': 'error',
+    // Deprecated since v6.0.0. Use @typescript-eslint/consistent-type-definitions.
     '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['warn', {
         allowComparingNullableBooleansToTrue: true,
@@ -233,8 +230,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/no-unsafe-unary-minus': 'error',
     '@typescript-eslint/no-useless-default-assignment': 'error',
     '@typescript-eslint/no-useless-empty-export': 'warn',
-    // Deprecated. Use @typescript-eslint/no-useless-template-expressions instead.
-    '@typescript-eslint/no-useless-template-literal': 'off',
+    // Deprecated since v8.0.0. Use @typescript-eslint/no-require-imports.
     '@typescript-eslint/no-var-requires': ['error', {
         allow: [],
     }],
@@ -296,6 +292,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/promise-function-async': ['warn', {
         checkArrowFunctions: false,
     }],
+    '@typescript-eslint/related-getter-setter-pairs': 'error',
     '@typescript-eslint/require-array-sort-compare': ['error', {
         ignoreStringArrays: true,
     }],
@@ -316,6 +313,8 @@ export const supportedRules: Linter.RulesRecord = {
         allowRegExp: false,
         allowNever: false,
     }],
+    // Deprecated since v7.13.0.
+    // Use perfectionist/sort-intersection-types and perfectionist/sort-union-types.
     '@typescript-eslint/sort-type-constituents': 'off',
     '@typescript-eslint/strict-boolean-expressions': ['error', {
         allowString: false,
@@ -336,8 +335,7 @@ export const supportedRules: Linter.RulesRecord = {
         types: 'always',
         lib: 'never',
     }],
-    // Deprecated. Use https://eslint.style/rules/ts/type-annotation-spacing.
-    '@typescript-eslint/type-annotation-spacing': 'off',
+    // Deprecated since v8.33.0.
     '@typescript-eslint/typedef': ['error', {
         arrayDestructuring: false,
         arrowParameter: false,

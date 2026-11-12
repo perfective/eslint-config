@@ -34,12 +34,6 @@ as it may be required to force an error
 | Stylistic
 | Warning
 
-| `link:{ts-eslint-rules}/ban-types/[@typescript-eslint/ban-types]`
-| Deprecated
-| Off
-3+| Use `@typescript-eslint/no-restricted-types`, `@typescript-eslint/no-unsafe-function-type`,
-and `@typescript-eslint/no-wrapper-object-types` instead.
-
 
 | `link:{ts-eslint-rules}/class-literal-property-style/[@typescript-eslint/class-literal-property-style]`
 | Stylistic
@@ -83,11 +77,6 @@ as type inferences should be minimized and types must be declared explicitly.
 | `link:{ts-eslint-rules}/explicit-module-boundary-types/[@typescript-eslint/explicit-module-boundary-types]`
 |
 | Error
-
-| `link:{ts-eslint-rules}/member-delimiter-style/[@typescript-eslint/member-delimiter-style]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/member-delimiter-style.
 
 | `link:{ts-eslint-rules}/member-ordering/[@typescript-eslint/member-ordering]`
 |
@@ -415,6 +404,10 @@ so `async` keyword can be skipped for brevity.
 If the `func-style` is `expression`,
 not checking arrow functions causes `require-await` to miss async functions.
 
+| `link:{ts-eslint-rules}/related-getter-setter-pairs/[@typescript-eslint/related-getter-setter-pairs]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/require-array-sort-compare/[@typescript-eslint/require-array-sort-compare]`
 |
 | Error
@@ -442,11 +435,6 @@ not checking arrow functions causes `require-await` to miss async functions.
 | `link:{ts-eslint-rules}/triple-slash-reference/[@typescript-eslint/triple-slash-reference]`
 | Recommended
 | Error
-
-| `link:{ts-eslint-rules}/type-annotation-spacing/[@typescript-eslint/type-annotation-spacing]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/type-annotation-spacing.
 
 | `link:{ts-eslint-rules}/typedef/[@typescript-eslint/typedef]`
 |
@@ -477,29 +465,9 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 |===
 | Rule | {ts-eslint-rules}/#supported-rules[Config] | Severity
 
-| `link:{ts-eslint-rules}/block-spacing/[@typescript-eslint/block-spacing]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/block-spacing.
-
-| `link:{ts-eslint-rules}/brace-style/[@typescript-eslint/brace-style]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/brace-style.
-
 | `link:{ts-eslint-rules}/class-methods-use-this/[@typescript-eslint/class-methods-use-this]`
 |
-| Warning
-
-| `link:{ts-eslint-rules}/comma-dangle/[@typescript-eslint/comma-dangle]`
-| Deprecated
 | Off
-3+| Use https://eslint.style/rules/ts/comma-dangle.
-
-| `link:{ts-eslint-rules}/comma-spacing/[@typescript-eslint/comma-spacing]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/comma-spacing.
 
 | `link:{ts-eslint-rules}/consistent-return/[@typescript-eslint/consistent-return]`
 |
@@ -513,39 +481,14 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Stylistic
 | Warning
 
-| `link:{ts-eslint-rules}/func-call-spacing/[@typescript-eslint/func-call-spacing]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/function-call-spacing.
-
-| `link:{ts-eslint-rules}/indent/[@typescript-eslint/indent]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/indent.
-
 | `link:{ts-eslint-rules}/init-declarations/[@typescript-eslint/init-declarations]`
 |
 | Error
 
-| `link:{ts-eslint-rules}/key-spacing/[@typescript-eslint/key-spacing]`
-| Deprecated
+| `link:{ts-eslint-rules}/max-params/[@typescript-eslint/max-params]`
+|
 | Off
-3+| Use https://eslint.style/rules/ts/key-spacing.
-
-| `link:{ts-eslint-rules}/keyword-spacing/[@typescript-eslint/keyword-spacing]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/keyword-spacing.
-
-| `link:{ts-eslint-rules}/lines-around-comment/[@typescript-eslint/lines-around-comment]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/lines-around-comment.
-
-| `link:{ts-eslint-rules}/lines-between-class-members/[@typescript-eslint/lines-between-class-members]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/lines-between-class-members.
+3+| See `max-params`.
 
 | `link:{ts-eslint-rules}/no-array-constructor/[@typescript-eslint/no-array-constructor]`
 | Recommended
@@ -560,16 +503,6 @@ These rules extend and disable the corresponding ESLint core rules for TypeScrip
 | Error
 3+| The `overrideMethods` option is disallowed, as it may change the behavior and needs to be commented.
 The `decoratedFunctions` option is disallowed, as the decorator behavior needs to be commented.
-
-| `link:{ts-eslint-rules}/no-extra-parens/[@typescript-eslint/no-extra-parens]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/no-extra-parens.
-
-| `link:{ts-eslint-rules}/no-extra-semi/[@typescript-eslint/no-extra-semi]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/no-extra-semi.
 
 | `link:{ts-eslint-rules}/no-implied-eval/[@typescript-eslint/no-implied-eval]`
 | Recommended
@@ -624,24 +557,9 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Strict
 | Error
 
-| `link:{ts-eslint-rules}/object-curly-spacing/[@typescript-eslint/object-curly-spacing]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/object-curly-spacing.
-
 | `link:{ts-eslint-rules}/only-throw-error/[@typescript-eslint/only-throw-error]`
 |
 | Error
-
-| `link:{ts-eslint-rules}/padding-line-between-statements/[@typescript-eslint/padding-line-between-statements]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/padding-line-between-statements.
-
-| `link:{ts-eslint-rules}/quotes/[@typescript-eslint/quotes]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/quotes.
 
 | `link:{ts-eslint-rules}/prefer-destructuring/[@typescript-eslint/prefer-destructuring]`
 |
@@ -659,25 +577,5 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Strict
 | Warning
 Allowed in error-handling context only.
-
-| `link:{ts-eslint-rules}/semi/[@typescript-eslint/semi]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/semi.
-
-| `link:{ts-eslint-rules}/space-before-blocks/[@typescript-eslint/space-before-blocks]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/space-before-blocks.
-
-| `link:{ts-eslint-rules}/space-before-function-paren/[@typescript-eslint/space-before-function-paren]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/space-before-function-paren.
-
-| `link:{ts-eslint-rules}/space-infix-ops/[@typescript-eslint/space-infix-ops]`
-| Deprecated
-| Off
-3+| Use https://eslint.style/rules/ts/space-infix-ops.
 
 |===

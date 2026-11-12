@@ -1,20 +1,8 @@
 import { Linter } from 'eslint';
 
 export const extensionRules: Linter.RulesRecord = {
-    // Deprecated. Use https://eslint.style/rules/ts/block-spacing.
-    'block-spacing': 'off',
-    '@typescript-eslint/block-spacing': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/brace-style.
-    'brace-style': 'off',
-    '@typescript-eslint/brace-style': 'off',
     'class-methods-use-this': 'off',
     '@typescript-eslint/class-methods-use-this': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/comma-dangle.
-    'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/comma-spacing.
-    'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': 'off',
     'consistent-return': 'off',
     '@typescript-eslint/consistent-return': 'error',
     'default-param-last': 'off',
@@ -25,26 +13,13 @@ export const extensionRules: Linter.RulesRecord = {
         allowPrivateClassPropertyAccess: false,
         allowProtectedClassPropertyAccess: false,
     }],
-    // Deprecated. Use https://eslint.style/rules/ts/function-call-spacing.
-    'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/indent.
-    'indent': 'off',
-    '@typescript-eslint/indent': 'off',
     'init-declarations': 'off',
     '@typescript-eslint/init-declarations': ['error', 'always'],
-    // Deprecated. Use https://eslint.style/rules/ts/key-spacing.
-    'key-spacing': 'off',
-    '@typescript-eslint/key-spacing': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/keyword-spacing.
-    'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/lines-around-comment.
-    'lines-around-comment': 'off',
-    '@typescript-eslint/lines-around-comment': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/lines-between-class-members.
-    'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': 'off',
+    'max-params': 'off',
+    // See max-params.
+    '@typescript-eslint/max-params': ['off', {
+        max: 3,
+    }],
     'no-array-constructor': 'off',
     '@typescript-eslint/no-array-constructor': 'warn',
     'no-dupe-class-members': 'off',
@@ -53,12 +28,6 @@ export const extensionRules: Linter.RulesRecord = {
     '@typescript-eslint/no-empty-function': ['error', {
         allow: ['protected-constructors', 'private-constructors'],
     }],
-    // Deprecated. Use https://eslint.style/rules/ts/no-extra-parens.
-    'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/no-extra-semi.
-    'no-extra-semi': 'off',
-    '@typescript-eslint/no-extra-semi': 'off',
     'no-implied-eval': 'off',
     '@typescript-eslint/no-implied-eval': 'error',
     'no-invalid-this': 'off',
@@ -107,33 +76,13 @@ export const extensionRules: Linter.RulesRecord = {
     }],
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
-    // Deprecated. Use https://eslint.style/rules/ts/object-curly-spacing.
-    'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/padding-line-between-statements.
-    'padding-line-between-statements': 'off',
-    '@typescript-eslint/padding-line-between-statements': 'off',
     'prefer-destructuring': 'off',
     '@typescript-eslint/prefer-destructuring': 'off',
     'prefer-promise-reject-errors': 'off',
     '@typescript-eslint/prefer-promise-reject-errors': 'error',
-    // Deprecated. Use https://eslint.style/rules/ts/quotes.
-    'quotes': 'off',
-    '@typescript-eslint/quotes': 'off',
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',
+    // Deprecated since ESLint v8.46.0.
     'no-return-await': 'off',
     '@typescript-eslint/return-await': ['warn', 'error-handling-correctness-only'],
-    // Deprecated. Use https://eslint.style/rules/ts/semi.
-    'semi': 'off',
-    '@typescript-eslint/semi': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/space-before-blocks.
-    'space-before-blocks': 'off',
-    '@typescript-eslint/space-before-blocks': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/space-before-function-paren.
-    'space-before-function-paren': 'off',
-    '@typescript-eslint/space-before-function-paren': 'off',
-    // Deprecated. Use https://eslint.style/rules/ts/space-infix-ops.
-    'space-infix-ops': 'off',
-    '@typescript-eslint/space-infix-ops': 'off',
 };
