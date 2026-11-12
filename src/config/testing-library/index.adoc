@@ -87,7 +87,7 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | `link:{eslint-testing-library-rules}/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
 |
 |
-| Error
+| Off
 
 | `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
 | Yes
