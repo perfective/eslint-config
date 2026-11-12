@@ -100,7 +100,7 @@ to prevent issues with misspelling of file paths and import names.
 |
 | Error
 
-| `link:{eslint-import-rules}/enforce-node-protocol-usage.md[import/ enforce-node-protocol-usage]`
+| `link:{eslint-import-rules}/enforce-node-protocol-usage.md[import/enforce-node-protocol-usage]`
 |
 |
 | Off
