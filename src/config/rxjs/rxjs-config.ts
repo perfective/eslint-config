@@ -33,6 +33,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             }],
             'rxjs-x/just': 'off',
             'rxjs-x/no-async-subscribe': 'error',
+            // Deprecated.
             'rxjs-x/no-compat': 'error',
             'rxjs-x/no-connectable': 'error',
             'rxjs-x/no-create': 'error',
@@ -43,10 +44,9 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             'rxjs-x/no-exposed-subjects': 'error',
             'rxjs-x/no-finnish': 'off',
             'rxjs-x/no-floating-observables': 'error',
+            'rxjs-x/no-ignored-default-value': 'error',
             'rxjs-x/no-ignored-error': 'error',
             'rxjs-x/no-ignored-notifier': 'error',
-            // Deprecated. Use rxjs-x/no-floating-observables.
-            'rxjs-x/no-ignored-observable': 'off',
             'rxjs-x/no-ignored-replay-buffer': 'error',
             'rxjs-x/no-ignored-subscribe': 'error',
             'rxjs-x/no-ignored-subscription': 'error',
@@ -57,6 +57,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             }],
             'rxjs-x/no-index': 'error',
             'rxjs-x/no-internal': 'warn',
+            'rxjs-x/no-misused-observables': 'error',
             'rxjs-x/no-nested-subscribe': 'error',
             'rxjs-x/no-redundant-notify': 'error',
             // Prior to v6.4.0 shareReplay() operator had some surprising behavior:
@@ -68,6 +69,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             'rxjs-x/no-subject-value': 'error',
             // Using subscribe is more semantic than using `tap()`
             'rxjs-x/no-subscribe-handlers': 'off',
+            'rxjs-x/no-subscribe-in-pipe': 'error',
             'rxjs-x/no-topromise': 'error',
             // See https://ncjamieson.com/avoiding-switchmap-related-bugs/
             'rxjs-x/no-unbound-methods': 'error',
@@ -78,6 +80,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             'rxjs-x/no-unsafe-switchmap': 'error',
             'rxjs-x/no-unsafe-takeuntil': 'error',
             'rxjs-x/prefer-observer': 'off',
+            'rxjs-x/prefer-root-operators': 'warn',
             'rxjs-x/suffix-subjects': 'off',
             'rxjs-x/throw-error': 'error',
         },

@@ -48,15 +48,14 @@ ESLint rules for https://rxjs.dev[RxJS].
 | `link:{eslint-rxjs-rules}/no-floating-observables.md[rxjs-x/no-floating-observables]`
 | Error
 
+| `link:{eslint-rxjs-rules}/no-ignored-default-value.md[rxjs-x/no-ignored-default-value]`
+| Error
+
 | `link:{eslint-rxjs-rules}/no-ignored-error.md[rxjs-x/no-ignored-error]`
 | Error
 
 | `link:{eslint-rxjs-rules}/no-ignored-notifier.md[rxjs-x/no-ignored-notifier]`
 | Error
-
-| `eslint-plugin-rxjs-x/no-ignored-observables`
-| Off
-2+| Renamed as `eslint-plugin-rxjs-x/no-floating-observable`.
 
 | `link:{eslint-rxjs-rules}/no-ignored-replay-buffer.md[rxjs-x/no-ignored-replay-buffer]`
 | Error
@@ -78,6 +77,9 @@ ESLint rules for https://rxjs.dev[RxJS].
 
 | `link:{eslint-rxjs-rules}/no-internal.md[rxjs-x/no-internal]`
 | Warning
+
+| `link:{eslint-rxjs-rules}/no-misused-observables.md[rxjs-x/no-misused-observables]`
+| Error
 
 | `link:{eslint-rxjs-rules}/no-nested-subscribe.md[rxjs-x/no-nested-subscribe]`
 | Error
@@ -102,6 +104,9 @@ ESLint rules for https://rxjs.dev[RxJS].
 
 | `link:{eslint-rxjs-rules}/no-subscribe-handlers.md[rxjs-x/no-subscribe-handlers]`
 | Off
+
+| `link:{eslint-rxjs-rules}/no-subscribe-in-pipe.md[rxjs-x/no-subscribe-in-pipe]`
+| Error
 
 | `link:{eslint-rxjs-rules}/no-topromise.md[rxjs-x/no-topromise]`
 | Error
@@ -129,6 +134,9 @@ ESLint rules for https://rxjs.dev[RxJS].
 
 | `link:{eslint-rxjs-rules}/prefer-observer.md[rxjs-x/prefer-observer]`
 | Off
+
+| `link:{eslint-rxjs-rules}/prefer-root-operators.md[rxjs-x/prefer-root-operators]`
+| Warning
 
 | `link:{eslint-rxjs-rules}/suffix-subjects.md[rxjs-x/suffix-subjects]`
 | Off
