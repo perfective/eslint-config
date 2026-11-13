@@ -28,6 +28,15 @@ const eslintConfig = perfectiveEslintConfig([
             })],
         },
     },
+    {
+        // The rule audit reads the plugin configs and their documentation from the file system.
+        files: ['src/config/perfective-eslint-config.spec.ts'],
+        rules: {
+            'n/no-process-env': 'off',
+            'n/no-sync': 'off',
+            'security/detect-non-literal-fs-filename': 'off',
+        },
+    },
 ]);
 
 export default eslintConfig;

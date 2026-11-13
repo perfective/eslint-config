@@ -30,8 +30,8 @@
         "lint:eslint:build": "eslint --max-warnings 0 ./",
         "lint:prettier": "prettier --write .",
         "lint:prettier:build": "prettier --check .",
-        "test": "jest",
-        "test:build": "jest --clearCache && jest --collectCoverage"
+        "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+        "test:build": "jest --clearCache && NODE_OPTIONS=--experimental-vm-modules jest --collectCoverage"
     },
     "peerDependencies": {
         "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
