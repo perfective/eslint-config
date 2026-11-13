@@ -168,8 +168,7 @@ In JavaScript types should be required in the JSDocs.
 | `link:{eslint-jsdoc-rules}/no-undefined-types.md[jsdoc/no-undefined-types]`
 | Yes
 |
-| Error in JavaScript.
-Off in TypeScript.
+| Off in TypeScript; Error in JavaScript.
 
 | `link:{eslint-jsdoc-rules}/prefer-import-tag.md[jsdoc/prefer-import-tag]`
 |

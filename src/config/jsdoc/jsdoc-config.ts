@@ -102,7 +102,8 @@ export function jsdocConfig(): Linter.Config {
             }],
             'jsdoc/no-restricted-syntax': 'off',
             'jsdoc/no-types': 'error',
-            'jsdoc/no-undefined-types': 'error',
+            // TypeScript reports undefined types.
+            'jsdoc/no-undefined-types': 'off',
             'jsdoc/prefer-import-tag': 'warn',
             'jsdoc/reject-any-type': 'error',
             'jsdoc/reject-function-type': 'error',
@@ -400,7 +401,7 @@ export function jsdocJavascriptConfig(): Linter.Config {
         languageOptions: javascriptLanguageOptions(),
         rules: {
             'jsdoc/no-types': 'off',
-            'jsdoc/no-undefined-types': 'off',
+            'jsdoc/no-undefined-types': 'error',
             'jsdoc/require-param': 'error',
             'jsdoc/require-param-type': 'error',
             'jsdoc/require-returns': 'error',
