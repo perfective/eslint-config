@@ -1,8 +1,11 @@
 import { Linter } from 'eslint';
 import eslintPluginArrayFunc from 'eslint-plugin-array-func';
 
-export function arrayFuncConfig(): Linter.Config {
+import { ecmaFiles, Glob } from '../../linter/glob';
+
+export function arrayFuncConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             'array-func': eslintPluginArrayFunc,
         },

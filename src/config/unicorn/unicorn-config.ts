@@ -1,10 +1,13 @@
 import { Linter } from 'eslint';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
+import { ecmaFiles, Glob } from '../../linter/glob';
+
 import { unicornPreventAbbreviations } from './rules/prevent-abbreviations';
 
-export function unicornConfig(): Linter.Config {
+export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             unicorn: eslintPluginUnicorn,
         },

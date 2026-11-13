@@ -1,8 +1,11 @@
 import { Linter } from 'eslint';
 import eslintPluginPreferArrow from 'eslint-plugin-prefer-arrow';
 
-export function preferArrowConfig(): Linter.Config {
+import { ecmaFiles, Glob } from '../../linter/glob';
+
+export function preferArrowConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             'prefer-arrow': eslintPluginPreferArrow,
         },

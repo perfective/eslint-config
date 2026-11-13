@@ -1,8 +1,11 @@
 import { Linter } from 'eslint';
 import eslintPluginSecurity from 'eslint-plugin-security';
 
-export function securityConfig(): Linter.Config {
+import { ecmaFiles, Glob } from '../../linter/glob';
+
+export function securityConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             security: eslintPluginSecurity,
         },

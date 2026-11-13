@@ -1,7 +1,7 @@
 import { Linter } from 'eslint';
 import eslintPluginImport from 'eslint-plugin-import';
 
-import { javascriptFiles, typescriptFiles } from '../../linter/glob';
+import { ecmaFiles, Glob, javascriptFiles, typescriptFiles } from '../../linter/glob';
 import { javascriptLanguageOptions, typescriptLanguageOptions } from '../../linter/language-options';
 
 import { helpfulWarningsRules } from './helpful-warnings-rules';
@@ -9,8 +9,9 @@ import { moduleSystemsRules } from './module-systems-rules';
 import { staticAnalysisRules } from './static-analysis-rules';
 import { styleGuideRules } from './style-guide-rules';
 
-export function importConfig(): Linter.Config {
+export function importConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             import: eslintPluginImport,
         },

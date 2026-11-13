@@ -1,8 +1,11 @@
 import { Linter } from 'eslint';
 import eslintPluginPromise from 'eslint-plugin-promise';
 
-export function promiseConfig(): Linter.Config {
+import { ecmaFiles, Glob } from '../../linter/glob';
+
+export function promiseConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             promise: eslintPluginPromise,
         },

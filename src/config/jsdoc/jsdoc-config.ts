@@ -1,12 +1,13 @@
 import { Linter } from 'eslint';
 import { jsdoc } from 'eslint-plugin-jsdoc';
 
-import { javascriptFiles } from '../../linter/glob';
+import { ecmaFiles, Glob, javascriptFiles } from '../../linter/glob';
 import { javascriptLanguageOptions } from '../../linter/language-options';
 
-export function jsdocConfig(): Linter.Config {
+export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return jsdoc({
         config: 'flat/recommended',
+        files,
         settings: {
             tagNamePreference: {
                 augments: {

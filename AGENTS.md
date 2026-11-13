@@ -62,7 +62,9 @@ npm run dist
   (each a `Linter.Config` or a function that returns one, resolved by `linterConfig()`).
 - Each plugin lives in `src/config/<plugin>/`:
     - `<plugin>-config.ts` is a function that returns a `Linter.Config` with `files`, `plugins`, and `rules`.
-      Optional-plugin configs take a `files: Glob[]` parameter with a default value.
+      Plugin configs take a `files: Glob[]` parameter with a default value:
+      `ecmaFiles` (JavaScript and TypeScript files) for the required plugins,
+      so their rules do not apply to other languages (JSON, CSS, Markdown, ...).
     - Large plugins split their rules into `*-rules.ts` files named after the upstream docs categories
       (for example `eslint/possible-problems-rules.ts`
       and `typescript-eslint/supported-rules.ts` / `extension-rules.ts`).

@@ -4,6 +4,7 @@ export { perfectiveEslintConfig } from './config/perfective-eslint-config';
 export {
     configurationFiles,
     cypressFiles,
+    ecmaFiles,
     Glob,
     javascriptFiles,
     jestFiles,

@@ -1,8 +1,11 @@
 import { Linter } from 'eslint';
 import eslintPluginN from 'eslint-plugin-n';
 
-export function nodeConfig(): Linter.Config {
+import { ecmaFiles, Glob } from '../../linter/glob';
+
+export function nodeConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             n: eslintPluginN,
         },

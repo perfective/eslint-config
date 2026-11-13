@@ -47,6 +47,18 @@ export const typescriptFiles: Glob[] = [
 export const typescriptDeclarationFiles: Glob = '**/*.d.{ts,cts,mts}';
 
 /**
+ * A list of glob patterns for JavaScript and TypeScript source files.
+ *
+ * I.e., the files that should be linted by ESLint by default.
+ *
+ * @since v0.35.0
+ */
+export const ecmaFiles: Glob[] = [
+    ...javascriptFiles,
+    ...typescriptFiles,
+];
+
+/**
  * A glob pattern for JavaScript tools configuration files.
  *
  * @since v0.31.0

@@ -2,8 +2,11 @@ import { Linter } from 'eslint';
 
 import eslintPluginStylistic from '@stylistic/eslint-plugin';
 
-export function stylisticConfig(): Linter.Config {
+import { ecmaFiles, Glob } from '../../linter/glob';
+
+export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
     return {
+        files,
         plugins: {
             '@stylistic': eslintPluginStylistic,
         },

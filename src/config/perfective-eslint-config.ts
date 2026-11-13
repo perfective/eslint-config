@@ -1,6 +1,6 @@
 import { Linter } from 'eslint';
 
-import { configurationFiles, typescriptDeclarationFiles } from '../linter/glob';
+import { configurationFiles, ecmaFiles, typescriptDeclarationFiles } from '../linter/glob';
 import { languageOptions } from '../linter/language-options';
 import { LinterConfig, linterConfig } from '../linter/linter-config';
 
@@ -25,6 +25,7 @@ import { unicornConfig } from './unicorn/unicorn-config';
 export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Config[] {
     return [
         {
+            files: ecmaFiles,
             languageOptions: languageOptions(),
         },
         {
