@@ -8,24 +8,20 @@ export function jsdocConfig(): Linter.Config {
     return jsdoc({
         config: 'flat/recommended',
         settings: {
-            jsdoc: {
-                tagNamePreference: {
-                    augments: {
-                        message: 'Use @extends instead of @augments as it is more evocative of classes than @augments',
-                        replacement: 'extends',
-                    },
-                    todo: {
-                        message: 'Use TODO for comments',
-                    },
-                    fires: {
-                        replacement: 'emits',
-                    },
+            tagNamePreference: {
+                augments: {
+                    message: 'Use @extends instead of @augments as it is more evocative of classes than @augments',
+                    replacement: 'extends',
                 },
-                ignoreReplacesDocs: true,
-                overrideReplacesDocs: true,
-                augmentsExtendsReplacesDocs: false,
-                implementsReplacesDoc: false,
+                todo: {
+                    message: 'Use TODO for comments',
+                },
+                fires: 'emits',
             },
+            ignoreReplacesDocs: true,
+            overrideReplacesDocs: true,
+            augmentsExtendsReplacesDocs: false,
+            implementsReplacesDoc: false,
         },
         rules: {
             // @access should be optional and used only to mark package/private functions
