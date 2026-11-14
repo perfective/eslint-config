@@ -23,7 +23,8 @@ Dependencies are updated one per commit, in this order:
 `eslint` → `typescript-eslint` → other ESLint plugins (alphabetical) → `@perfective/build`.
 
 - Run `npm outdated` and confirm that no dependency earlier in the order has a pending update.
-  If one does, stop and report it (update that one first), unless the user said otherwise.
+  If one does, stop and report it (update that one first), unless the user said otherwise
+  or you are running in CI (see "Running in CI").
 - `@perfective/build`: check the TypeScript version it requires
   against the range supported by the installed `typescript-eslint`.
   If it is not supported, stop: **NEEDS HUMAN** (update `typescript-eslint` first).
@@ -120,7 +121,7 @@ If you need to fix the commit later on the agent branch, squash the fix into it 
 
 For a Renovate PR, add a follow-up commit on the PR branch instead,
 and suggest the squash-merge title in the Perfective style (for example `Update eslint-plugin-jest to v29.12.1`).
-Do not push, merge, tag, or publish.
+Do not push (except in CI, see below), merge, tag, or publish.
 
 ## 9. Report
 
@@ -130,3 +131,26 @@ End with a short report:
 - rule changes made (enabled, disabled, severity changes, removed, deprecated);
 - **NEEDS HUMAN** items, each stating exactly what to verify or decide;
 - the commit hash and the verification results.
+
+## Running in CI
+
+The `Dependency Review` workflow (`.github/workflows/dependency-review.yaml`)
+runs this skill on every Renovate PR, when Renovate opens or updates it,
+or when a maintainer adds the `claude-review` label.
+The PR branch is checked out and `npm ci` has run. In that run:
+
+- Do not stop on the order check in step 1.
+  Review the PR anyway, and list the open PRs or pending updates that must be merged first
+  as a **merge order** item in the report.
+- Skip `gh pr checkout`: the PR branch is already checked out.
+- When the PR needs changes (peer range, rule changes, `index.adoc`, the snapshot, the repo's own sources),
+  make them in **one** follow-up commit on top of Renovate's commit and push it to the PR branch.
+  If a previous review already pushed a follow-up commit, add the new changes as another commit:
+  never rewrite or force-push the branch.
+- When the PR needs no changes, do not commit; the report is the review.
+- Never merge, approve, or close the PR, and never edit `.github/`.
+- Post the report from step 9 as the PR comment,
+  starting with the verdict:
+  **Ready to merge** (with the squash-merge title),
+  **Changes pushed** (with the commit hash and the squash-merge title),
+  or **NEEDS HUMAN** (with the items to decide).

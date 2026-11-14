@@ -31,6 +31,8 @@ RULE_AUDIT_UPDATE=true npm test             # Update src/config/rule-metadata.sn
 - Prettier ignores all JS/TS files (see `.prettierignore`),
   so ESLint (`@stylistic`) does the code formatting.
 - CI (`.github/workflows/ci.yaml`) runs `lint:build`, `test:build`, and `dist` on Node 20.x, 22.x, and 24.x.
+- `Dependency Review` (`.github/workflows/dependency-review.yaml`) runs Claude Code with the `update-dependency` skill
+  on Renovate PRs (see "Dependency maintenance").
 
 ### Verifying changes
 
@@ -228,7 +230,17 @@ Other agents should read the `SKILL.md` files directly:
 
 Handling a Renovate PR:
 
-- Review it with `update-dependency` before merging.
+- The `Dependency Review` workflow reviews it with `update-dependency`
+  when Renovate opens or updates the PR
+  (or when a maintainer adds the `claude-review` label to rerun it).
+  Claude pushes the required changes as a follow-up commit to the PR branch
+  and reports the verdict, the rule changes, and the **NEEDS HUMAN** items in a PR comment.
+  Its commits are pushed with the Claude GitHub App token, so CI runs on them.
+  The workflow needs the Claude GitHub App installed and the `CLAUDE_CODE_OAUTH_TOKEN` secret.
+- Once a PR has a follow-up commit, Renovate stops updating the branch.
+  To get a newer version or resolve conflicts, tick the rebase checkbox in the PR:
+  Renovate recreates the branch from scratch (dropping the follow-up commit), and the review runs again.
+- Review it with `update-dependency` before merging (locally, when the workflow did not run).
   Both `package.json` and the lockfile must move;
   a lockfile-only change while the pin stays behind is a defect.
 - Do not amend Renovate's commit; add a follow-up commit on the PR branch.
