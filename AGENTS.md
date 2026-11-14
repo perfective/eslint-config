@@ -113,11 +113,14 @@ npm run dist
 
 - **Severity:** fixable rules are `'warn'`; rules that must be fixed by hand are `'error'`.
   When a plugin adds a fixer to a rule, the rule's severity changes to `'warn'`.
+- **Options:** every option of a rule is written explicitly, including default values,
+  and starts with its strictest value, even when the plugin's default or recommendation is less strict.
+  A less strict value needs a comment with the reason.
 - Every rule a plugin provides is listed explicitly, in alphabetical order, including disabled rules.
   A disabled rule (`'off'`) usually has a comment explaining why
   (for example `// Requires ECMAScript 2023` or `// Use import/no-duplicates.`).
-- **Deprecated rules keep their configuration until the plugin removes them**,
-  so consumers are not broken and have time to migrate.
+- **Deprecated rules are turned off and remain in the config until the plugin removes them.**
+  Their replacement rules are turned on, with options aligned to the deprecated rule's configuration.
   Add a `// Deprecated since vX.Y.Z. Use <replacement>.` comment above the rule.
   Remove the rule (and its `index.adoc` row) only when the plugin removes it.
 - Any rule change must also update that plugin's `index.adoc` table.
@@ -197,7 +200,7 @@ For each plugin update:
 
 - Read the release notes (and security advisories) for every intervening version
   and map new, deprecated, and changed rules to this config.
-- Enable new rules, comment deprecated ones (keeping their configuration), remove removed ones,
+- Enable new rules, turn off deprecated ones (enabling their replacements), remove removed ones,
   and adjust severities when fixers are added.
   `.agents/skills/update-dependency/references/decisions.md` has the conventions distilled from the history.
 - Update `package.json` **and** `package-lock.json`.
