@@ -526,7 +526,7 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 
 | `link:{ts-eslint-rules}/no-loop-func/[@typescript-eslint/no-loop-func]`
 | Deprecated
-| Error
+| Off
 3+| Use `no-loop-func` instead.
 
 | `link:{ts-eslint-rules}/no-loss-of-precision/[@typescript-eslint/no-loss-of-precision]`
@@ -544,7 +544,7 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 
 | `link:{ts-eslint-rules}/no-restricted-imports/[@typescript-eslint/no-restricted-imports]`
 | Deprecated
-| Error
+| Off
 3+| Use `no-restricted-imports` instead.
 
 | `link:{ts-eslint-rules}/no-shadow/[@typescript-eslint/no-shadow]`
