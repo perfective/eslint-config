@@ -178,6 +178,7 @@ Empty interfaces are allowed.
 | `link:{ts-eslint-rules}/no-misused-promises/[@typescript-eslint/no-misused-promises]`
 | Recommended
 | Error
+3+| Conditionals also report union types that contain a Promise (`flagUnions: 'all'`).
 
 | `link:{ts-eslint-rules}/no-misused-spread/[@typescript-eslint/no-misused-spread]`
 |

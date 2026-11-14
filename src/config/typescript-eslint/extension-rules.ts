@@ -79,7 +79,12 @@ export const extensionRules: Linter.RulesRecord = {
     'prefer-destructuring': 'off',
     '@typescript-eslint/prefer-destructuring': 'off',
     'prefer-promise-reject-errors': 'off',
-    '@typescript-eslint/prefer-promise-reject-errors': 'error',
+    '@typescript-eslint/prefer-promise-reject-errors': ['error', {
+        allow: [],
+        allowEmptyReject: false,
+        allowThrowingAny: false,
+        allowThrowingUnknown: false,
+    }],
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',
     // Deprecated since ESLint v8.46.0.

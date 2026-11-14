@@ -129,7 +129,10 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
     'no-regex-spaces': 'warn',
     'no-restricted-exports': 'off',
     'no-restricted-globals': 'error',
-    'no-restricted-imports': 'error',
+    'no-restricted-imports': ['error', {
+        paths: [],
+        patterns: [],
+    }],
     'no-restricted-properties': 'error',
     // Using i++ in the for() loops is a classic pattern.
     // Rather disallow using loops at all and use filter/map/reduce instead.

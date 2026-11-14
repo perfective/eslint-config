@@ -8,7 +8,9 @@ export const supportedRules: Linter.RulesRecord = {
         default: 'array',
         readonly: 'array',
     }],
-    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/await-thenable': ['error', {
+        allowMixedPromiseArrays: false,
+    }],
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/ban-tslint-comment': 'warn',
     '@typescript-eslint/class-literal-property-style': 'off',
@@ -168,8 +170,18 @@ export const supportedRules: Linter.RulesRecord = {
     }],
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': ['error', {
-        checksConditionals: true,
-        checksVoidReturn: true,
+        checksConditionals: {
+            flagUnions: 'all',
+        },
+        checksSpreads: true,
+        checksVoidReturn: {
+            arguments: true,
+            attributes: true,
+            inheritedMethods: true,
+            properties: true,
+            returns: true,
+            variables: true,
+        },
     }],
     '@typescript-eslint/no-misused-spread': 'error',
     '@typescript-eslint/no-mixed-enums': 'error',
