@@ -33,6 +33,7 @@ export const extensionRules: Linter.RulesRecord = {
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'error',
     'no-loop-func': 'off',
+    // Deprecated since v8.64.0. Use `no-loop-func`.
     '@typescript-eslint/no-loop-func': 'error',
     // Deprecated. Use `no-loss-of-precision`.
     '@typescript-eslint/no-loss-of-precision': 'off',
@@ -41,6 +42,7 @@ export const extensionRules: Linter.RulesRecord = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     'no-restricted-imports': 'off',
+    // Deprecated since v8.65.0. Use `no-restricted-imports`.
     '@typescript-eslint/no-restricted-imports': ['error', {}],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'off',
@@ -55,7 +57,7 @@ export const extensionRules: Linter.RulesRecord = {
     'no-unused-private-class-members': 'off',
     '@typescript-eslint/no-unused-private-class-members': 'error',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', {
+    '@typescript-eslint/no-unused-vars': ['warn', {
         args: 'after-used',
         // TypeScript recognizes underscore for unused parameters
         argsIgnorePattern: '^_',

@@ -31,6 +31,7 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 innerIndent: 1,
             }],
             // TODO: Determine if it can be configured to work with TypeScript
+            // eslint-disable-next-line @typescript-eslint/no-deprecated -- Deprecated only in the plugin types.
             'jsdoc/check-examples': 'off',
             'jsdoc/check-indentation': 'off',
             // NOTE: "never" is not implemented yet by the plugin

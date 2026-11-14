@@ -123,11 +123,6 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
     },
     {
-        rule: '@typescript-eslint/no-useless-default-assignment',
-        check: 'severity-convention',
-        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
-    },
-    {
         rule: '@typescript-eslint/non-nullable-type-assertion-style',
         check: 'severity-convention',
         reason: 'The autofix conflicts with @typescript-eslint/no-non-null-assertion.',
@@ -517,7 +512,9 @@ function availableRules(linterConfigs: Linter.Config[]): Map<string, RuleMeta> {
     linterConfigs
         .flatMap(config => Object.entries(config.plugins ?? {}))
         .flatMap(([namespace, plugin]) => namespacedRules(namespace, plugin))
-        .forEach(([name, meta]) => rules.set(name, meta));
+        .forEach(([name, meta]) => {
+            rules.set(name, meta);
+        });
     return rules;
 }
 

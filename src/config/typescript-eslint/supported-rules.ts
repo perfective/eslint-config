@@ -156,6 +156,7 @@ export const supportedRules: Linter.RulesRecord = {
         ignoreVoid: true,
     }],
     '@typescript-eslint/no-for-in-array': 'error',
+    '@typescript-eslint/no-generated-empty-object-type': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'warn',
     '@typescript-eslint/no-inferrable-types': 'off',
     // Allow for generic types like "Nullary<void>" (as "(value: T) => void" declaration is already valid)
@@ -219,6 +220,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/no-unsafe-assignment': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
+    '@typescript-eslint/no-unsafe-enum-assignment': 'error',
     '@typescript-eslint/no-unsafe-enum-comparison': 'error',
     '@typescript-eslint/no-unsafe-function-type': 'warn',
     '@typescript-eslint/no-unsafe-member-access': ['error', {
@@ -325,6 +327,9 @@ export const supportedRules: Linter.RulesRecord = {
         allowNullableString: false,
         allowNullableNumber: false,
         allowAny: false,
+    }],
+    '@typescript-eslint/strict-void-return': ['error', {
+        allowReturnAny: false,
     }],
     '@typescript-eslint/switch-exhaustiveness-check': ['error', {
         allowDefaultCaseForExhaustiveSwitch: false,

@@ -1,9 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 
-import {
-    ImportNoExtraneousDependencies,
-    importNoExtraneousDependencies,
-} from './no-extraneous-dependencies';
+import { importNoExtraneousDependencies } from './no-extraneous-dependencies';
 
 describe(importNoExtraneousDependencies, () => {
     describe('when argument is not provided', () => {
@@ -14,7 +11,7 @@ describe(importNoExtraneousDependencies, () => {
                     devDependencies: false,
                     optionalDependencies: false,
                     peerDependencies: false,
-                } as ImportNoExtraneousDependencies);
+                });
         });
     });
 
@@ -28,7 +25,7 @@ describe(importNoExtraneousDependencies, () => {
                 devDependencies: ['./*.js'],
                 optionalDependencies: false,
                 peerDependencies: true,
-            } as ImportNoExtraneousDependencies);
+            });
         });
     });
 });

@@ -151,6 +151,10 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-generated-empty-object-type/[@typescript-eslint/no-generated-empty-object-type]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]`
 |
 | Warning
@@ -273,6 +277,10 @@ Empty interfaces are allowed.
 
 | `link:{ts-eslint-rules}/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]`
 | Recommended
+| Error
+
+| `link:{ts-eslint-rules}/no-unsafe-enum-assignment/[@typescript-eslint/no-unsafe-enum-assignment]`
+| Strict
 | Error
 
 | `link:{ts-eslint-rules}/no-unsafe-enum-comparison/[@typescript-eslint/no-unsafe-enum-comparison]`
@@ -428,6 +436,10 @@ not checking arrow functions causes `require-await` to miss async functions.
 |
 | Error
 
+| `link:{ts-eslint-rules}/strict-void-return/[@typescript-eslint/strict-void-return]`
+|
+| Error
+
 | `link:{ts-eslint-rules}/switch-exhaustiveness-check/[@typescript-eslint/switch-exhaustiveness-check]`
 |
 | Error
@@ -513,8 +525,9 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Error
 
 | `link:{ts-eslint-rules}/no-loop-func/[@typescript-eslint/no-loop-func]`
-|
+| Deprecated
 | Error
+3+| Use `no-loop-func` instead.
 
 | `link:{ts-eslint-rules}/no-loss-of-precision/[@typescript-eslint/no-loss-of-precision]`
 | Deprecated
@@ -530,8 +543,9 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Error
 
 | `link:{ts-eslint-rules}/no-restricted-imports/[@typescript-eslint/no-restricted-imports]`
-|
+| Deprecated
 | Error
+3+| Use `no-restricted-imports` instead.
 
 | `link:{ts-eslint-rules}/no-shadow/[@typescript-eslint/no-shadow]`
 |
@@ -547,7 +561,7 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 
 | `link:{ts-eslint-rules}/no-unused-vars/[@typescript-eslint/no-unused-vars]`
 | Recommended
-| Error
+| Warning
 
 | `link:{ts-eslint-rules}/no-use-before-define/[@typescript-eslint/no-use-before-define]`
 |
