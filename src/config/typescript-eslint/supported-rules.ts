@@ -233,9 +233,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/no-useless-default-assignment': 'error',
     '@typescript-eslint/no-useless-empty-export': 'warn',
     // Deprecated since v8.0.0. Use @typescript-eslint/no-require-imports.
-    '@typescript-eslint/no-var-requires': ['error', {
-        allow: [],
-    }],
+    '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-wrapper-object-types': 'warn',
     // This rule is fixable, but
     //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
@@ -340,17 +338,8 @@ export const supportedRules: Linter.RulesRecord = {
         types: 'always',
         lib: 'never',
     }],
-    // Deprecated since v8.33.0.
-    '@typescript-eslint/typedef': ['error', {
-        arrayDestructuring: false,
-        arrowParameter: false,
-        memberVariableDeclaration: true,
-        objectDestructuring: false,
-        parameter: true,
-        propertyDeclaration: true,
-        variableDeclaration: false,
-        variableDeclarationIgnoreFunction: false,
-    }],
+    // Deprecated since v8.33.0. No replacement.
+    '@typescript-eslint/typedef': 'off',
     '@typescript-eslint/unbound-method': ['error', {
         ignoreStatic: false,
     }],

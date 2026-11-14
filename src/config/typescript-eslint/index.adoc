@@ -318,8 +318,9 @@ and in general, type assertions are only needed when they _are_ unsafe.
 | Warning
 
 | `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
-| Recommended
-| Error
+| Deprecated
+| Off
+3+| Use `@typescript-eslint/no-require-imports` instead.
 
 | `link:{ts-eslint-rules}/no-wrapper-object-types/[@typescript-eslint/no-wrapper-object-types]`
 | Recommended
@@ -449,8 +450,9 @@ not checking arrow functions causes `require-await` to miss async functions.
 | Error
 
 | `link:{ts-eslint-rules}/typedef/[@typescript-eslint/typedef]`
-|
-| Error
+| Deprecated
+| Off
+3+| The rule has no replacement.
 
 | `link:{ts-eslint-rules}/unbound-method/[@typescript-eslint/unbound-method]`
 | Recommended
