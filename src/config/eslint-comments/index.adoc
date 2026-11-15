@@ -29,8 +29,10 @@ additional ESLint rules for ESLint directive comments
 | Error
 
 | `link:{eslint-comments-rules}/no-unused-disable.html[eslint-comments/no-unused-disable]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use the `linterOptions.reportUnusedDisableDirectives` option
+(https://eslint.org/docs/latest/use/configure/configuration-files#reporting-unused-disable-directives).
 
 | `link:{eslint-comments-rules}/no-unused-enable.html[eslint-comments/no-unused-enable]`
 | Recommended
