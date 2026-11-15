@@ -34,8 +34,11 @@ Dependencies are updated one per commit, in this order:
 - Installed version: `npm ls <package> --depth=0` (the lockfile), not the range in `package.json`.
 - Target version: the user's version, the Renovate PR's version, or `npm view <package> version`.
 - Ignore prereleases unless the user asked for one.
-- For a Renovate PR: `gh pr view <number>` and `gh pr checkout <number>`;
-  work on top of Renovate's commit (do not amend it).
+- For a Renovate PR: `gh pr view <number>`,
+  then work on the PR branch on top of Renovate's commit (do not amend it).
+  Locally, prefer a separate worktree (`git worktree add <dir> <branch>` and `npm ci` there)
+  over `gh pr checkout`, so the maintainer's checkout is not switched under them,
+  and confirm the branch (`git branch --show-current`) before every commit.
 
 ## 3. Review every intervening release
 
@@ -80,6 +83,11 @@ The audit lists exactly what changed (see `src/config/perfective-eslint-config.s
 
 Cross-check the audit against the release notes from step 3:
 options and behavior changes are only in the notes.
+The audit does not check:
+
+- new options of configured rules: compare each touched rule's `meta.schema` keys with its configured options;
+- whether a new fixer is active with the configured options (opt-in fixers such as `enableFixer`);
+- deprecations that are only in `meta.docs.description` (`@deprecated ...`).
 
 ## 6. Decide and apply the changes
 
@@ -112,6 +120,10 @@ All must pass. `test:build` runs the rule audit.
 If the repo's own sources fail a newly enabled rule, fix the sources in the same commit when the fix is small;
 otherwise report it.
 
+`npm run lint` runs `eslint --fix`: improved upstream fixers can change the repo's sources silently.
+Review `git diff` after it, check that the fixes do not change the public API or the emitted `.d.ts`,
+and remove imports that the fixes left unused.
+
 ## 8. Commit
 
 One commit for the dependency, with the verb by the dependency's SemVer level
@@ -121,7 +133,11 @@ If you need to fix the commit later on the agent branch, squash the fix into it 
 
 For a Renovate PR, add a follow-up commit on the PR branch instead,
 and suggest the squash-merge title in the Perfective style (for example `Update eslint-plugin-jest to v29.12.1`).
-Do not push (except in CI, see below), merge, tag, or publish.
+Pushed commits are never rewritten, so later fixes on the PR branch are additional commits.
+When the branch has more than one follow-up commit,
+also prepare the squash commit message from the net diff against `main`
+(see "Squash commit message" in `AGENTS.md`).
+Do not push (except in CI, see below, or when the maintainer asks), merge, tag, or publish.
 
 ## 9. Report
 

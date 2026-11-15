@@ -14,6 +14,13 @@ Most update commits enable every new rule (for example `4e60c61`, `a526dfa`, `be
   `'warn'` when the rule has an autofix (`meta.fixable`),
   `'error'` when it does not (suggestions do not count as a fix).
   A rule whose fix covers only some cases is "Partially" fixable and may be either.
+- A fixer counts only when it is active with the configured options.
+  Some fixers are opt-in (`enableFixer` in `eslint-plugin-jsdoc`,
+  `enableAutofixRemoval` in `@typescript-eslint/no-unused-vars`)
+  or cover only part of what the rule reports.
+  Check the rule's `meta.schema`, its defaults, and its docs before changing the severity.
+  When `eslint --fix` would not fix what the rule reports with our options, keep `'error'`
+  and add a `severity-convention` exception that says so (history: `@typescript-eslint/no-unused-vars` in `fae031c`).
 - Write every option explicitly, including the options left at their default values,
   so the configuration shows the full behavior
   and a change in the plugin's defaults does not change the configuration silently.
@@ -44,10 +51,13 @@ Most update commits enable every new rule (for example `4e60c61`, `a526dfa`, `be
 ## Changed rules
 
 - A rule gained an autofix: change `'error'` to `'warn'`
-  (history: "Change `X` to warning as a fixer is available").
+  (history: "Change `X` to warning as a fixer is available"),
+  unless the fixer is opt-in or partial (see "New rules").
 - A rule lost its autofix: change `'warn'` to `'error'`.
 - New options: set them explicitly, starting with the strictest value (see "New rules").
   A stricter value than the old behavior is a newly enabled check: list it in the commit body.
+  The audit does not detect new options: compare the release notes and the `meta.schema` keys
+  of every rule the update touches with its configured options.
 - A renamed rule: rename the entry and its `index.adoc` row in the same commit (history: "Rename the `X` rule to `Y`").
 
 ## Deprecated rules
@@ -60,15 +70,26 @@ so the configuration does not depend on rules that the plugin no longer maintain
 - Add a comment above the rule: `// Deprecated since vX.Y.Z. Use <replacement>.`
   The audit checks that the comment exists.
   Take the version and the replacement from `meta.deprecated` (`deprecatedSince`, `replacedBy`) or the release notes.
+  When they disagree, use the version that first shipped the deprecation (the release notes).
+- A rule can be deprecated without `meta.deprecated`:
+  some plugins only start `meta.docs.description` with `@deprecated`
+  (for example `jsdoc/check-examples`), and `@typescript-eslint/no-deprecated` then reports its config key.
+  Read the description and the rule docs before describing a deprecation;
+  never call it a types-only deprecation without checking.
 - Turn on the replacement rule with options aligned to the deprecated rule's configuration,
   so the same code is reported.
   The replacement is usually a new rule in the same update,
   or, for a typescript-eslint extension rule, the ESLint core rule:
   remove the core `'off'` entry from `extension-rules.ts` when the core rule is configured globally
-  (history: "Replace deprecated `typescript-eslint` extension rules with core rules").
+  (history: `no-loop-func` and `no-restricted-imports` in `fae031c`).
   Follow the severity convention for the replacement (fixable rules are `'warn'`).
-- When the deprecated rule has no replacement, turn it off only;
-  when the replacement cannot reproduce the deprecated rule's options
+- When the deprecated rule has no replacement, turn it off,
+  and read its docs and deprecation notice for a recommended alternative
+  (for example, compiler options instead of `@typescript-eslint/typedef`).
+  Name the alternative in the comment and the `index.adoc` note
+  (`// Deprecated since vX.Y.Z. No replacement.` followed by `// Use <alternative> instead.`),
+  and list the checks that are no longer enforced in the commit body, for the changelog.
+- When the replacement cannot reproduce the deprecated rule's options
   or belongs to a plugin this config does not require, report it as **NEEDS HUMAN**.
 - Mark the `index.adoc` row as deprecated
   (the "Deprecated" value, the "Off" severity, and a `3+|` note with the replacement),
