@@ -262,6 +262,12 @@ Handling a Renovate PR:
   and reports the verdict, the rule changes, and the **NEEDS HUMAN** items in a PR comment.
   Its commits are pushed with the Claude GitHub App token, so CI runs on them.
   The workflow needs the Claude GitHub App installed and the `CLAUDE_CODE_OAUTH_TOKEN` secret.
+  The Claude GitHub App does not run when the workflow files of the PR's test merge differ from `main`
+  (a PR based on an older `main`), and the action still reports success.
+  So every Claude workflow fails its job when Claude did not run, and comments on the issue or PR;
+  on a Renovate PR it also adds `help wanted`, and the Cursor loop does not start.
+  Tick the rebase checkbox, so Renovate recreates the branch on the current `main`;
+  the `claude-review` label alone reruns on the same outdated test merge.
   When the job succeeds, a following job posts a top-level `cursor review` comment
   (`<!-- perfective-cursor-round: 1 -->`) with the `CURSOR_REVIEW_TOKEN` secret,
   a fine-grained PAT of a user (Pull requests: write).

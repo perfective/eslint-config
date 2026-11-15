@@ -62,6 +62,7 @@ jobs:
               run: npm ci || npm install
 
             - name: Run Claude Code
+              id: claude
               uses: anthropics/claude-code-action@v1
               with:
                   claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -113,3 +114,23 @@ jobs:
                       "Bash(git merge:*)"
                       "Bash(git rebase:*)"
                       "Bash(git pull:*)"
+
+            # The action reports success even when Claude did not run, for example when the workflow files
+            # of a PR's test merge differ from the default branch (the Claude GitHub App refuses to run then).
+            # Claude sets `conclusion` only when it ran: fail the job, so a skipped review is not a green check.
+            - name: Fail when Claude did not run
+              if: steps.claude.outputs.conclusion == ''
+              working-directory: ${{ runner.temp }}
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  GH_REPO: ${{ github.repository }}
+                  NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+                  RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+              run: |
+                  set -euo pipefail
+                  gh issue comment "${NUMBER}" --body "$(printf '%s\n\n%s\n%s\n' \
+                      "Claude did not run (${RUN})." \
+                      'If the log says "Workflow validation failed", the workflow files differ from `main`.' \
+                      'For a PR, update its branch, then ask again.')"
+                  echo "::error::Claude did not run. See the workflow log of the Claude step."
+                  exit 1
