@@ -262,19 +262,29 @@ Handling a Renovate PR:
   and reports the verdict, the rule changes, and the **NEEDS HUMAN** items in a PR comment.
   Its commits are pushed with the Claude GitHub App token, so CI runs on them.
   The workflow needs the Claude GitHub App installed and the `CLAUDE_CODE_OAUTH_TOKEN` secret.
-  When the job succeeds, it posts a top-level `cursor review` comment
+  When the job succeeds, a following job posts a top-level `cursor review` comment
   (`<!-- perfective-cursor-round: 1 -->`) with the `CURSOR_REVIEW_TOKEN` secret,
   a fine-grained PAT of a user (Pull requests: write).
   Bugbot ignores that phrase when a GitHub App posts it.
-  Without the secret, the step only warns, and the Cursor loop does not start.
-  The token goes only to the steps that post that comment,
-  which run `gh` outside the checkout, after Claude, so nothing Claude left in the checkout runs with it.
-- `Cursor Review` then runs on the `Cursor Bugbot` check:
-  a success check (no findings and no unresolved Bugbot threads) ends the loop;
-  otherwise Claude addresses the unresolved threads, pushes one commit, and the workflow requests the next review.
-  Claude replies on each thread it fixes; the workflow resolves the threads with Claude's reply,
-  except the replies with **NEEDS HUMAN**.
-  The loop stops after 3 Bugbot reviews, or when Claude does not push, and adds `help wanted`.
+  Without the secret, that job only warns, and the Cursor loop does not start.
+  That job does not check out the pull request or install its dependencies.
+- `Cursor Review` then runs on the `Cursor Bugbot` check.
+  A check whose commit is no longer the branch tip is ignored.
+  The loop ends when the check succeeded and no Bugbot thread is unresolved.
+  A check that did not succeed, and that leaves no unresolved Bugbot thread,
+  does not start a fix
+  (it can be an internal error or the daily cap on bot pull requests):
+  the workflow comments **NEEDS HUMAN** and adds `help wanted`.
+  Threads that already ask for a decision stay as they are, and Claude is not started again.
+  Otherwise Claude addresses the unresolved threads and pushes one commit,
+  and a following job requests the next review.
+  Claude replies on each thread it fixes and includes the full commit SHA.
+  The workflow resolves that thread only when the new commit descends from the reviewed commit
+  and the reply contains that full SHA and does not contain **NEEDS HUMAN**.
+  The loop stops after 3 Bugbot reviews.
+  If Claude does not push, and an open Bugbot thread does not already ask for a decision,
+  the workflow comments and adds `help wanted`.
+  A `help wanted` label already on the pull request does not hide that comment.
   One loop step runs per PR at a time (job-level concurrency, so the runs of other checks cannot cancel it).
   To restart the loop, add the `claude-review` label: the dependency review runs again and requests round 1.
   When Bugbot cannot run (it posts "Bugbot couldn't run", for example on a GitHub account mismatch,
@@ -291,8 +301,11 @@ Handling a Renovate PR:
   In CI, Claude never merges or rebases (the workflows deny `git merge`, `git rebase`, and `git pull`):
   `main` requires signed commits, and merge commits cannot go through the signed-commit tool.
   When asked to resolve conflicts on a Renovate PR, Claude asks the maintainer to tick the rebase checkbox instead.
-  A review of a recreated branch reads the PR thread first
-  and applies the maintainer's earlier decisions instead of asking again.
+  A review of a recreated branch reads the pull request conversation first
+  and applies a decision only from a maintainer
+  (`OWNER`, `MEMBER`, or `COLLABORATOR`, and not a bot),
+  ignoring `cursor review` requests,
+  instead of asking again.
 - Review it with `update-dependency` before merging (locally, when the workflow did not run).
   Both `package.json` and the lockfile must move;
   a lockfile-only change while the pin stays behind is a defect.
