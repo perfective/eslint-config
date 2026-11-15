@@ -36,6 +36,11 @@ when writing tests with Testing Library `link:https://testing-library.com/docs/e
 4+| This rule will be set to _Warning_ once
 the https://github.com/testing-library/eslint-plugin-jest-dom/pull/107[fix] is published.
 
+| `link:{eslint-jest-dom-rules}/prefer-pressed.md[jest-dom/prefer-pressed]`
+| No
+| Yes
+| Warning
+
 | `link:{eslint-jest-dom-rules}/prefer-required.md[jest-dom/prefer-required]`
 | Yes
 | Yes
