@@ -807,9 +807,11 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
 
     'n/prefer-global/buffer': [],
     'n/prefer-global/console': [],
+    'n/prefer-global/crypto': [],
     'n/prefer-global/process': [],
     'n/prefer-global/text-decoder': [],
     'n/prefer-global/text-encoder': [],
+    'n/prefer-global/timers': [],
     'n/prefer-global/url': [],
     'n/prefer-global/url-search-params': [],
 
