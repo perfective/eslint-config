@@ -10,7 +10,9 @@ const jestTypescriptRules: Linter.RulesRecord = {
     'jest/unbound-method': ['error', {
         ignoreStatic: false,
     }],
-    'jest/valid-expect-with-promise': 'error',
+    'jest/valid-expect-with-promise': ['error', {
+        checkThenables: true,
+    }],
 };
 
 const jestTypescriptEslintRulesOverrides: Linter.RulesRecord = {
