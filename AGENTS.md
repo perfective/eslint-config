@@ -6,6 +6,20 @@ This file is the agent/maintainer guide for this repository.
 The package is published from `./dist` (`npm publish ./dist`), not from the repository root.
 It is built with `@perfective/build` (`ts.build`) using `esmBuild` + `tsDeclarations` (ESLint is ESM-only).
 
+## Starting work
+
+- Check `git status --short` and `git branch --show-current` before editing and before committing.
+  Preserve unrelated local changes.
+- For local Codex work, use the existing `codex` branch only, commit completed changes, and do not push.
+  The Claude CI branch and push instructions below apply to those workflows, not local Codex sessions.
+- Run commands from the repository root; the rule audit reads source and documentation using relative paths.
+  On a fresh checkout, install the lockfile dependencies with `npm ci`.
+- Read [src/AGENTS.md](src/AGENTS.md) before changing source, rule documentation, or the audit.
+  Use [ROADMAP.adoc](ROADMAP.adoc) for all deferred work, observed gaps, and proposed follow-up work;
+  its proposals are not changes to the current policy.
+- Treat `src/`, root build configuration, and `package.json` as inputs.
+  `dist/` and `*.tsbuildinfo` are generated; change their inputs and rebuild instead of editing them.
+
 ## Commands
 
 ```bash
@@ -55,13 +69,18 @@ npm run test:build
 npm run dist
 ```
 
+Run these commands sequentially: the build tasks clean and recreate the same `dist/` directory,
+and `test:build` clears the Jest cache.
+Review `git diff` after `npm run lint`, which can rewrite source and documentation outside the intended edit.
+Before committing, check `git diff --check` and stage only the intended files.
+
 ## Architecture
 
 - `src/index.ts`: the main entry point.
   It exports `perfectiveEslintConfig()` plus the helpers from `src/linter/`
   (file globs, `languageOptions`, `linterConfig`, `optionalRule`, `hasEslintPlugin`).
 - `src/config/perfective-eslint-config.ts` builds the final flat-config array in this order:
-  global language options and ignores,
+  language options scoped to `ecmaFiles`, global linter options and ignores,
   then the core `eslint` and `typescript-eslint` configs,
   then each required plugin config,
   then overrides for configuration files,
@@ -78,7 +97,8 @@ npm run dist
     - `rules/` holds exported functions that build options for configurable rules
       (for example `unicornPreventAbbreviations`, `typescriptEslintNamingConvention`,
       `importNoExtraneousDependencies`).
-      These are the only parts with unit tests (`*.spec.ts` next to the source).
+      These have colocated unit tests (`*.spec.ts`);
+      linter helpers and TypeScript-dependent configuration also have unit tests.
     - `index.adoc` documents every rule of the plugin in a table (`Rule | Recommended | Fixable | Config`).
       `src/config/index.adoc` gathers these into `src/index.adoc`,
       and gulp/asciidoctor renders it into the built docs.
@@ -108,7 +128,8 @@ npm run dist
   unused exceptions fail the audit too.
 - Rules that need type information from another plugin should use `typescriptEslintDependentConfig()`
   (`src/config/typescript-eslint/typescript-eslint-config.ts`), as `jestTypescriptConfig()` does.
-  `optionalRule()` turns a rule on only when its plugin is installed.
+  `optionalRule()` includes a rule setting only when its plugin package can be resolved;
+  it does not register the plugin in ESLint (see `src/AGENTS.md`).
 
 ## Code and tests
 
@@ -175,8 +196,11 @@ npm run dist
 - In the commit body, every rule change is its own list item,
   for example ``- Enable the `jest/no-error-equal` rule as an error.``
   A removed rule states the plugin version that removed it (``- Remove the `x` rule (removed in v8.0.0).``).
-- Keep the agent branch history clean: squash follow-up fixes into the commit they fix
-  instead of adding "fix" commits.
+- Put independent changes in separate commits.
+  Squash related fixes and adjustments into the original commit,
+  even when discovered later during feature development, and update its subject and body to describe the final change.
+  Once changes have been merged to `main` and pushed to `origin`, make a new commit instead.
+  The CI and existing-PR restrictions on rewriting pushed history below still apply to those workflows.
 - Aligning a plugin configuration with the installed version is one commit per plugin
   (``Align `<package>` rules with v<version>``), covering all its new, deprecated, removed, and re-documented rules.
 - Changelog: consumer-relevant changes only

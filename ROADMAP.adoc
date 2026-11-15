@@ -1,0 +1,44 @@
+= Roadmap
+
+These findings come from repository exploration on 2026-11-15.
+They are proposals for separate work, not additional instructions or authorization to change package behavior.
+Recheck the referenced files before acting and remove resolved items.
+
+== Package metadata
+
+`package.json` declares `eslint-plugin-rxjs-x` as a peer and development dependency,
+but `peerDependenciesMeta` marks the old `eslint-plugin-rxjs` name as optional.
+The public sub-path remains `rxjs`, and its plugin namespace is `rxjs-x`.
+The maintainer requested that the metadata mismatch be recorded for a separate fix.
+
+Proposed follow-up: align the optional peer key in the manifest and lockfile,
+then inspect the generated `dist/package.json`.
+Consider a focused packaging check that optional peer metadata keys exist in `peerDependencies`
+and that every declared sub-path points to generated JavaScript and declaration files.
+The existing rule audit checks rules and their docs, not these packaging relationships.
+
+== Release and maintenance policy alignment
+
+The root guide says newly enabled rules require a minor release while on `v0`.
+The `prepare-release` skill distinguishes new error rules from automatically fixable warnings,
+listing the latter as patch changes.
+Resolve this wording before the next release; the root guide currently requires the stricter minor bump.
+
+The release skill also runs an unqualified `npm update` before changing the version.
+Consider limiting release preparation to the version and documentation changes,
+with dependency updates reviewed and committed separately using the dependency skills.
+That would make the release commit easier to review and preserve one dependency change per commit.
+
+The `update-dependencies` skill explicitly places other development tooling before `@perfective/build`,
+while the root guide and single-dependency skill omit that category from their ordering lists.
+Align those lists when revising the maintenance workflow.
+The manifest pins ESLint plugins but still uses ranges for several development tools;
+clarify the scope of the root guide's exact-version requirement before changing those ranges.
+
+== Agent guidance maintenance
+
+Keep shared instructions in the root `AGENTS.md`, source details in `src/AGENTS.md`,
+and task workflows in `.agents/skills/`.
+`.claude/skills` is a symlink to the shared skills, so separate copies would drift.
+When changing a workflow, update its matching guidance in the same commit.
+Keep unapproved proposals in this file rather than presenting them as established policy.
