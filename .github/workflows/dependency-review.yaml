@@ -3,11 +3,6 @@ on:
     pull_request:
         types: [opened, reopened, synchronize, labeled]
 
-# One review per PR at a time; a newer Renovate push cancels the running review.
-concurrency:
-    group: dependency-review-${{ github.event.pull_request.number }}
-    cancel-in-progress: true
-
 jobs:
     review:
         name: Review the dependency update
@@ -20,6 +15,13 @@ jobs:
                 && github.event.label.name == 'claude-review'
                 || github.event.action != 'labeled'
                 && github.event.sender.login == 'renovate[bot]')
+        # One review per PR at a time; a newer review run cancels the running one.
+        # The concurrency is on the job, not on the workflow,
+        # so a skipped run (for example, Renovate adding the `dependencies` label right after opening the PR)
+        # does not cancel the review.
+        concurrency:
+            group: dependency-review-${{ github.event.pull_request.number }}
+            cancel-in-progress: true
         runs-on: ubuntu-latest
         timeout-minutes: 60
 
