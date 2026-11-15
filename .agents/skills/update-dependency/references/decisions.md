@@ -139,7 +139,9 @@ Update eslint-plugin-jest to v29.12.1
 - Every rule change is its own list item. Never group several rules in one item.
 - A removed rule states the plugin version that removed it;
   a deprecated rule states the version that deprecated it and its replacement, when there is one.
-- Wrap rule and package names in backticks.
+- The subject has no backticks: `Patch eslint-plugin-array-func to v5.1.1`,
+  not ``Patch `eslint-plugin-array-func` to v5.1.1``.
+- In the body, wrap rule and package names in backticks.
 
 Aligning a plugin configuration with the installed version without updating it
 (for example, after finding drift with the rule audit) is one commit per plugin,

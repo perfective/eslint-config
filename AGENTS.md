@@ -168,7 +168,8 @@ npm run dist
   the maintainer's request (the label or the `@claude` mention) defines the task.
 - Backports only when needed: remote/local `vX.Y.x` branches (for example `v0.34.x`).
   CI also runs on those branches.
-- Commit subjects are imperative and short; wrap rule and package names in backticks.
+- Commit subjects are imperative and short; wrap rule and package names in backticks,
+  except in dependency update subjects, which have no backticks (`Patch eslint-plugin-array-func to v5.1.1`).
 - In the commit body, every rule change is its own list item,
   for example ``- Enable the `jest/no-error-equal` rule as an error.``
   A removed rule states the plugin version that removed it (``- Remove the `x` rule (removed in v8.0.0).``).
@@ -199,7 +200,9 @@ npm run dist
 
 One dependency change per commit.
 Verbs follow the **dependency** SemVer:
-`Patch X to vA.B.C` (patch), `Update X to vA.B.C` (minor), `Upgrade X to vA.B.C` (major).
+`Patch X to vA.B.C` (patch), `Update X to vA.B.C` (minor), `Upgrade X to vA.B.C` (major),
+with the package name as is, without backticks
+(`Patch eslint-plugin-array-func to v5.1.1`, not ``Patch `eslint-plugin-array-func` to v5.1.1``).
 
 Update dependencies in this order:
 
