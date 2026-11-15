@@ -25,6 +25,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
                 functions: true,
                 methods: true,
                 names: {},
+                objects: true,
                 parameters: true,
                 properties: true,
                 strict: true,
@@ -47,6 +48,8 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             'rxjs-x/no-ignored-default-value': 'error',
             'rxjs-x/no-ignored-error': 'error',
             'rxjs-x/no-ignored-notifier': 'error',
+            // Deprecated since v0.9.0. Use rxjs-x/no-floating-observables.
+            'rxjs-x/no-ignored-observable': 'off',
             'rxjs-x/no-ignored-replay-buffer': 'error',
             'rxjs-x/no-ignored-subscribe': 'error',
             'rxjs-x/no-ignored-subscription': 'error',
@@ -54,6 +57,7 @@ export function rxjsConfig(files: Glob[] = typescriptFiles): Linter.Config {
             // TODO: Enable once the autofix bug is fixed.
             'rxjs-x/no-implicit-any-catch': ['off', {
                 allowExplicitAny: false,
+                allowExplicitError: false,
             }],
             'rxjs-x/no-index': 'error',
             'rxjs-x/no-internal': 'warn',

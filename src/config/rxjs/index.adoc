@@ -57,6 +57,10 @@ ESLint rules for https://rxjs.dev[RxJS].
 | `link:{eslint-rxjs-rules}/no-ignored-notifier.md[rxjs-x/no-ignored-notifier]`
 | Error
 
+| `link:{eslint-rxjs-rules}/no-ignored-observable.md[rxjs-x/no-ignored-observable]`
+| Off
+2+| Deprecated since v0.9.0. Use `rxjs-x/no-floating-observables`.
+
 | `link:{eslint-rxjs-rules}/no-ignored-replay-buffer.md[rxjs-x/no-ignored-replay-buffer]`
 | Error
 
