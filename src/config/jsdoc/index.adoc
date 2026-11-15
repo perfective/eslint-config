@@ -22,6 +22,7 @@ The `link:{eslint-jsdoc-rules}[eslint-plugin-jsdoc]` provide JSDoc linting rules
 |
 |
 | Off
+4+| Deprecated. Use the `getJsdocProcessorPlugin` processor.
 
 | `link:{eslint-jsdoc-rules}/check-indentation.md[jsdoc/check-indentation]`
 |

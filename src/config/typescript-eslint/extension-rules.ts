@@ -55,12 +55,15 @@ export const extensionRules: Linter.RulesRecord = {
     'no-unused-private-class-members': 'off',
     '@typescript-eslint/no-unused-private-class-members': 'error',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', {
+    '@typescript-eslint/no-unused-vars': ['error', {
         args: 'after-used',
         // TypeScript recognizes underscore for unused parameters
         argsIgnorePattern: '^_',
         caughtErrors: 'all',
         destructuredArrayIgnorePattern: '^_',
+        enableAutofixRemoval: {
+            imports: false,
+        },
         ignoreRestSiblings: false,
         vars: 'all',
     }],

@@ -123,6 +123,11 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
     },
     {
+        rule: '@typescript-eslint/no-unused-vars',
+        check: 'severity-convention',
+        reason: 'The autofix is opt-in (enableAutofixRemoval.imports) and removes unused imports only.',
+    },
+    {
         rule: '@typescript-eslint/non-nullable-type-assertion-style',
         check: 'severity-convention',
         reason: 'The autofix conflicts with @typescript-eslint/no-non-null-assertion.',

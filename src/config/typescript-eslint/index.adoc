@@ -564,7 +564,7 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 
 | `link:{ts-eslint-rules}/no-unused-vars/[@typescript-eslint/no-unused-vars]`
 | Recommended
-| Warning
+| Error
 
 | `link:{ts-eslint-rules}/no-use-before-define/[@typescript-eslint/no-use-before-define]`
 |
