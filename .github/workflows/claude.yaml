@@ -44,7 +44,7 @@ jobs:
             # On a Renovate PR, check out its head, so the installed dependencies match the PR's lockfile.
             # Other runs install from the default branch: the PR code of other authors never runs before the action.
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
               with:
                   ref: >-
                       ${{ (github.event.issue.user.login || github.event.pull_request.user.login) == 'renovate[bot]'
