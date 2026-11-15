@@ -32,16 +32,16 @@ export const extensionRules: Linter.RulesRecord = {
     '@typescript-eslint/no-implied-eval': 'error',
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'error',
-    'no-loop-func': 'off',
-    '@typescript-eslint/no-loop-func': 'error',
+    // Deprecated since v8.64.0. Use `no-loop-func`.
+    '@typescript-eslint/no-loop-func': 'off',
     // Deprecated. Use `no-loss-of-precision`.
     '@typescript-eslint/no-loss-of-precision': 'off',
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': 'off',
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
-    'no-restricted-imports': 'off',
-    '@typescript-eslint/no-restricted-imports': ['error', {}],
+    // Deprecated since v8.65.0. Use `no-restricted-imports`.
+    '@typescript-eslint/no-restricted-imports': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'off',
     'no-throw-literal': 'off',
@@ -61,6 +61,9 @@ export const extensionRules: Linter.RulesRecord = {
         argsIgnorePattern: '^_',
         caughtErrors: 'all',
         destructuredArrayIgnorePattern: '^_',
+        enableAutofixRemoval: {
+            imports: false,
+        },
         ignoreRestSiblings: false,
         vars: 'all',
     }],
@@ -79,7 +82,12 @@ export const extensionRules: Linter.RulesRecord = {
     'prefer-destructuring': 'off',
     '@typescript-eslint/prefer-destructuring': 'off',
     'prefer-promise-reject-errors': 'off',
-    '@typescript-eslint/prefer-promise-reject-errors': 'error',
+    '@typescript-eslint/prefer-promise-reject-errors': ['error', {
+        allow: [],
+        allowEmptyReject: false,
+        allowThrowingAny: false,
+        allowThrowingUnknown: false,
+    }],
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',
     // Deprecated since ESLint v8.46.0.

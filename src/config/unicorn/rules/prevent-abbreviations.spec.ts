@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { UnicornPreventAbbreviations, unicornPreventAbbreviations } from './prevent-abbreviations';
+import { unicornPreventAbbreviations } from './prevent-abbreviations';
 
 describe(unicornPreventAbbreviations, () => {
     it('creates a configuration for the unicorn/prevent-abbreviations rule', () => {
@@ -33,7 +33,7 @@ describe(unicornPreventAbbreviations, () => {
                 ignore: [
                     /e2e/u,
                 ],
-            } as UnicornPreventAbbreviations);
+            });
     });
 
     it('extends the default list of replacements and overrides', () => {
@@ -73,6 +73,6 @@ describe(unicornPreventAbbreviations, () => {
                 ignore: [
                     /e2e/u,
                 ],
-            } as UnicornPreventAbbreviations);
+            });
     });
 });

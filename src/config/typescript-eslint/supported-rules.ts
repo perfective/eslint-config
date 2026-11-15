@@ -8,7 +8,9 @@ export const supportedRules: Linter.RulesRecord = {
         default: 'array',
         readonly: 'array',
     }],
-    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/await-thenable': ['error', {
+        allowMixedPromiseArrays: false,
+    }],
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/ban-tslint-comment': 'warn',
     '@typescript-eslint/class-literal-property-style': 'off',
@@ -156,6 +158,7 @@ export const supportedRules: Linter.RulesRecord = {
         ignoreVoid: true,
     }],
     '@typescript-eslint/no-for-in-array': 'error',
+    '@typescript-eslint/no-generated-empty-object-type': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'warn',
     '@typescript-eslint/no-inferrable-types': 'off',
     // Allow for generic types like "Nullary<void>" (as "(value: T) => void" declaration is already valid)
@@ -167,8 +170,18 @@ export const supportedRules: Linter.RulesRecord = {
     }],
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': ['error', {
-        checksConditionals: true,
-        checksVoidReturn: true,
+        checksConditionals: {
+            flagUnions: 'all',
+        },
+        checksSpreads: true,
+        checksVoidReturn: {
+            arguments: true,
+            attributes: true,
+            inheritedMethods: true,
+            properties: true,
+            returns: true,
+            variables: true,
+        },
     }],
     '@typescript-eslint/no-misused-spread': 'error',
     '@typescript-eslint/no-mixed-enums': 'error',
@@ -219,6 +232,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/no-unsafe-assignment': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
+    '@typescript-eslint/no-unsafe-enum-assignment': 'error',
     '@typescript-eslint/no-unsafe-enum-comparison': 'error',
     '@typescript-eslint/no-unsafe-function-type': 'warn',
     '@typescript-eslint/no-unsafe-member-access': ['error', {
@@ -231,9 +245,7 @@ export const supportedRules: Linter.RulesRecord = {
     '@typescript-eslint/no-useless-default-assignment': 'error',
     '@typescript-eslint/no-useless-empty-export': 'warn',
     // Deprecated since v8.0.0. Use @typescript-eslint/no-require-imports.
-    '@typescript-eslint/no-var-requires': ['error', {
-        allow: [],
-    }],
+    '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-wrapper-object-types': 'warn',
     // This rule is fixable, but
     //  an autofix will create a conflict with the @typescript-eslint/no-non-null-assertion rule
@@ -326,6 +338,9 @@ export const supportedRules: Linter.RulesRecord = {
         allowNullableNumber: false,
         allowAny: false,
     }],
+    '@typescript-eslint/strict-void-return': ['error', {
+        allowReturnAny: false,
+    }],
     '@typescript-eslint/switch-exhaustiveness-check': ['error', {
         allowDefaultCaseForExhaustiveSwitch: false,
         requireDefaultForNonUnion: true,
@@ -335,17 +350,9 @@ export const supportedRules: Linter.RulesRecord = {
         types: 'always',
         lib: 'never',
     }],
-    // Deprecated since v8.33.0.
-    '@typescript-eslint/typedef': ['error', {
-        arrayDestructuring: false,
-        arrowParameter: false,
-        memberVariableDeclaration: true,
-        objectDestructuring: false,
-        parameter: true,
-        propertyDeclaration: true,
-        variableDeclaration: false,
-        variableDeclarationIgnoreFunction: false,
-    }],
+    // Deprecated since v8.33.0. No replacement.
+    // Use the noImplicitAny and strictPropertyInitialization compiler options instead.
+    '@typescript-eslint/typedef': 'off',
     '@typescript-eslint/unbound-method': ['error', {
         ignoreStatic: false,
     }],

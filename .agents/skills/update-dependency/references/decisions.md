@@ -14,9 +14,13 @@ Most update commits enable every new rule (for example `4e60c61`, `a526dfa`, `be
   `'warn'` when the rule has an autofix (`meta.fixable`),
   `'error'` when it does not (suggestions do not count as a fix).
   A rule whose fix covers only some cases is "Partially" fixable and may be either.
-- Pick options deliberately.
-  Write every option explicitly when the rule has options, the same as the neighboring rules do,
-  so a change in the plugin's defaults does not change the configuration silently.
+- Write every option explicitly, including the options left at their default values,
+  so the configuration shows the full behavior
+  and a change in the plugin's defaults does not change the configuration silently.
+- Start with the strictest value of every option,
+  even when it is not the default or the value the plugin recommends.
+  Relax an option only for a stated reason, in a comment above it
+  (a conflict with another rule or convention, or a known false positive).
 - Disable a new rule (`'off'` with a comment explaining why) when:
     - it duplicates a rule that is already enabled
       (`// Use unicorn/prefer-node-protocol instead.`, `// See max-params.`);
@@ -42,23 +46,39 @@ Most update commits enable every new rule (for example `4e60c61`, `a526dfa`, `be
 - A rule gained an autofix: change `'error'` to `'warn'`
   (history: "Change `X` to warning as a fixer is available").
 - A rule lost its autofix: change `'warn'` to `'error'`.
-- New options: set them explicitly. Keep the old behavior unless the release notes recommend the new one.
+- New options: set them explicitly, starting with the strictest value (see "New rules").
+  A stricter value than the old behavior is a newly enabled check: list it in the commit body.
 - A renamed rule: rename the entry and its `index.adoc` row in the same commit (history: "Rename the `X` rule to `Y`").
 
 ## Deprecated rules
 
-**Current policy:** a deprecated rule keeps its configuration until the plugin removes it,
-so consumers are not broken and have time to migrate.
+**Current policy:** a deprecated rule is turned off, and its replacement rule is turned on in its place,
+so the configuration does not depend on rules that the plugin no longer maintains.
 
-- Do not change the severity of a rule only because it was deprecated.
+- Turn the deprecated rule `'off'`.
+  Keep its entry until the plugin removes the rule (see "Removed rules").
 - Add a comment above the rule: `// Deprecated since vX.Y.Z. Use <replacement>.`
   The audit checks that the comment exists.
   Take the version and the replacement from `meta.deprecated` (`deprecatedSince`, `replacedBy`) or the release notes.
-- Configure the replacement rule (it is usually a new rule in the same update).
-- Mark the `index.adoc` row as deprecated (the "Deprecated" value or a `3+|` note with the replacement).
+- Turn on the replacement rule with options aligned to the deprecated rule's configuration,
+  so the same code is reported.
+  The replacement is usually a new rule in the same update,
+  or, for a typescript-eslint extension rule, the ESLint core rule:
+  remove the core `'off'` entry from `extension-rules.ts` when the core rule is configured globally
+  (history: "Replace deprecated `typescript-eslint` extension rules with core rules").
+  Follow the severity convention for the replacement (fixable rules are `'warn'`).
+- When the deprecated rule has no replacement, turn it off only;
+  when the replacement cannot reproduce the deprecated rule's options
+  or belongs to a plugin this config does not require, report it as **NEEDS HUMAN**.
+- Mark the `index.adoc` row as deprecated
+  (the "Deprecated" value, the "Off" severity, and a `3+|` note with the replacement),
+  and update the replacement's row.
+- List both changes in the commit body,
+  so the migration guide can tell consumers to move their overrides to the replacement rule.
 
-Earlier commits disabled deprecated rules ("Disable `X` as deprecated.", as recently as `f6affeb` in v0.33.0).
-That practice is superseded; do not follow it.
+Earlier commits also disabled deprecated rules ("Disable `X` as deprecated.", for example `f6affeb` in v0.33.0).
+For a while (since `21327a5`), deprecated rules kept their configuration until the plugin removed them;
+that practice is superseded, so do not follow those commits.
 
 ## Removed rules
 
@@ -89,7 +109,8 @@ Update eslint-plugin-jest to v29.12.1
 - Enable the `jest/no-error-equal` rule as an error.
 - Enable the `jest/prefer-to-have-been-called` rule as a warning.
 - Change the `jest/<rule>` rule severity to a warning, as a fixer is now available.
-- Comment the deprecated `jest/<rule>` rule (since v29.10.0; replaced by `jest/<other-rule>`).
+- Disable the deprecated `jest/<rule>` rule (since v29.10.0; replaced by `jest/<other-rule>`).
+- Enable the `jest/<other-rule>` rule as an error.
 - Remove the `jest/<rule>` rule (removed in v29.12.0).
 ```
 

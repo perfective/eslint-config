@@ -151,6 +151,10 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-generated-empty-object-type/[@typescript-eslint/no-generated-empty-object-type]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/no-import-type-side-effects/[@typescript-eslint/no-import-type-side-effects]`
 |
 | Warning
@@ -174,6 +178,7 @@ Empty interfaces are allowed.
 | `link:{ts-eslint-rules}/no-misused-promises/[@typescript-eslint/no-misused-promises]`
 | Recommended
 | Error
+3+| Conditionals also report union types that contain a Promise (`flagUnions: 'all'`).
 
 | `link:{ts-eslint-rules}/no-misused-spread/[@typescript-eslint/no-misused-spread]`
 |
@@ -275,6 +280,10 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
+| `link:{ts-eslint-rules}/no-unsafe-enum-assignment/[@typescript-eslint/no-unsafe-enum-assignment]`
+| Strict
+| Error
+
 | `link:{ts-eslint-rules}/no-unsafe-enum-comparison/[@typescript-eslint/no-unsafe-enum-comparison]`
 | Recommended
 | Error
@@ -310,8 +319,9 @@ and in general, type assertions are only needed when they _are_ unsafe.
 | Warning
 
 | `link:{ts-eslint-rules}/no-var-requires/[@typescript-eslint/no-var-requires]`
-| Recommended
-| Error
+| Deprecated
+| Off
+3+| Use `@typescript-eslint/no-require-imports` instead.
 
 | `link:{ts-eslint-rules}/no-wrapper-object-types/[@typescript-eslint/no-wrapper-object-types]`
 | Recommended
@@ -428,6 +438,10 @@ not checking arrow functions causes `require-await` to miss async functions.
 |
 | Error
 
+| `link:{ts-eslint-rules}/strict-void-return/[@typescript-eslint/strict-void-return]`
+|
+| Error
+
 | `link:{ts-eslint-rules}/switch-exhaustiveness-check/[@typescript-eslint/switch-exhaustiveness-check]`
 |
 | Error
@@ -437,8 +451,10 @@ not checking arrow functions causes `require-await` to miss async functions.
 | Error
 
 | `link:{ts-eslint-rules}/typedef/[@typescript-eslint/typedef]`
-|
-| Error
+| Deprecated
+| Off
+3+| The rule has no replacement.
+Use the `noImplicitAny` and `strictPropertyInitialization` compiler options instead.
 
 | `link:{ts-eslint-rules}/unbound-method/[@typescript-eslint/unbound-method]`
 | Recommended
@@ -513,8 +529,9 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Error
 
 | `link:{ts-eslint-rules}/no-loop-func/[@typescript-eslint/no-loop-func]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use `no-loop-func` instead.
 
 | `link:{ts-eslint-rules}/no-loss-of-precision/[@typescript-eslint/no-loss-of-precision]`
 | Deprecated
@@ -530,8 +547,9 @@ The `decoratedFunctions` option is disallowed, as the decorator behavior needs t
 | Error
 
 | `link:{ts-eslint-rules}/no-restricted-imports/[@typescript-eslint/no-restricted-imports]`
-|
-| Error
+| Deprecated
+| Off
+3+| Use `no-restricted-imports` instead.
 
 | `link:{ts-eslint-rules}/no-shadow/[@typescript-eslint/no-shadow]`
 |

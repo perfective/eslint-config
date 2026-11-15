@@ -13,7 +13,7 @@ export function languageOptions(): Linter.LanguageOptions {
     return {
         sourceType: 'module',
         ecmaVersion: 'latest',
-        parser: typescriptEslintParser as Linter.Parser,
+        parser: typescriptEslintParser,
         parserOptions: {
             ecmaFeatures: {
                 globalReturn: false,
@@ -58,7 +58,7 @@ export function typescriptLanguageOptions(): Linter.LanguageOptions {
     return {
         sourceType: 'module',
         ecmaVersion: 'latest',
-        parser: typescriptEslintParser as Linter.Parser,
+        parser: typescriptEslintParser,
         parserOptions: {
             ecmaFeatures: {
                 globalReturn: false,

@@ -7,7 +7,7 @@ import { linterConfig } from './linter-config';
 const mockConfig: Linter.Config = {
     rules: {
         'test-rule': 'warn',
-    } as Linter.RulesRecord,
+    },
 };
 
 describe(linterConfig, () => {
