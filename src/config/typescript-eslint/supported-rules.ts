@@ -351,6 +351,7 @@ export const supportedRules: Linter.RulesRecord = {
         lib: 'never',
     }],
     // Deprecated since v8.33.0. No replacement.
+    // Use the noImplicitAny and strictPropertyInitialization compiler options instead.
     '@typescript-eslint/typedef': 'off',
     '@typescript-eslint/unbound-method': ['error', {
         ignoreStatic: false,

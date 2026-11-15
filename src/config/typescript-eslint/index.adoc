@@ -454,6 +454,7 @@ not checking arrow functions causes `require-await` to miss async functions.
 | Deprecated
 | Off
 3+| The rule has no replacement.
+Use the `noImplicitAny` and `strictPropertyInitialization` compiler options instead.
 
 | `link:{ts-eslint-rules}/unbound-method/[@typescript-eslint/unbound-method]`
 | Recommended
