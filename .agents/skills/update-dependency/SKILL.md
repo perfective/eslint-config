@@ -178,3 +178,6 @@ The PR branch is checked out and `npm ci` has run. In that run:
   **Ready to merge** (with the squash-merge title),
   **Changes pushed** (with the commit hash and the squash-merge title),
   or **NEEDS HUMAN** (with the items to decide).
+- Label the PR by the verdict (see "The `help wanted` label" in `AGENTS.md`):
+  add `help wanted` for **NEEDS HUMAN** (`gh pr edit <number> --add-label "help wanted"`),
+  and remove it for any other verdict (`gh pr edit <number> --remove-label "help wanted"`).

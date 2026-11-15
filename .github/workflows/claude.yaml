@@ -99,6 +99,8 @@ jobs:
                       "Bash(gh pr view:*)"
                       "Bash(gh pr diff:*)"
                       "Bash(gh pr list:*)"
+                      "Bash(gh pr edit * --add-label *)"
+                      "Bash(gh pr edit * --remove-label *)"
                       "Bash(gh pr create --draft:*)"
                       "Bash(gh release view:*)"
                       "WebFetch(domain:github.com)"

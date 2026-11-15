@@ -15,21 +15,6 @@
     },
     "packageRules": [
         {
-            "description": "Label major updates for careful review",
-            "matchUpdateTypes": ["major"],
-            "addLabels": ["help wanted"]
-        },
-        {
-            "description": "Peer range changes affect consumers of the config",
-            "matchDepTypes": ["peerDependencies"],
-            "addLabels": ["help wanted"]
-        },
-        {
-            "description": "TypeScript updates must stay within the range supported by typescript-eslint",
-            "matchPackageNames": ["typescript"],
-            "addLabels": ["help wanted"]
-        },
-        {
             "description": "@perfective/build is updated last, after eslint, typescript-eslint, and the plugins",
             "matchPackageNames": ["@perfective/build"],
             "dependencyDashboardApproval": true
