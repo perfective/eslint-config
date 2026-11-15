@@ -31,8 +31,9 @@ additional ESLint rules for ESLint directive comments
 | `link:{eslint-comments-rules}/no-unused-disable.html[eslint-comments/no-unused-disable]`
 | Deprecated
 | Off
-3+| Use the `linterOptions.reportUnusedDisableDirectives` option
-(https://eslint.org/docs/latest/use/configure/configuration-files#reporting-unused-disable-directives).
+3+| Replaced by the `linterOptions.reportUnusedDisableDirectives` option
+(https://eslint.org/docs/latest/use/configure/configuration-files#reporting-unused-disable-directives),
+which `perfectiveEslintConfig()` sets to `'warn'` for all files.
 
 | `link:{eslint-comments-rules}/no-unused-enable.html[eslint-comments/no-unused-enable]`
 | Recommended

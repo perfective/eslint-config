@@ -28,6 +28,7 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
             files: ecmaFiles,
             languageOptions: languageOptions(),
         },
+        linterOptionsConfig(),
         {
             ignores: [
                 '**/dist',
@@ -54,6 +55,19 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
         // Overrides
         configurationFilesConfig(),
     ].concat(configs.map(linterConfig));
+}
+
+/**
+ * Linter options for all files.
+ */
+function linterOptionsConfig(): Linter.Config {
+    return {
+        linterOptions: {
+            // Replaces the deprecated eslint-comments/no-unused-disable rule.
+            // ESLint fixes unused disable directives, so they are reported as warnings.
+            reportUnusedDisableDirectives: 'warn',
+        },
+    };
 }
 
 /**
