@@ -142,6 +142,10 @@ since March 2020.
 |
 | Error
 
+| `link:{eslint-n-rules}/prefer-global/crypto.md[n/prefer-global/crypto]`
+|
+| Error
+
 | `link:{eslint-n-rules}/prefer-global/process.md[n/prefer-global/process]`
 |
 | Error
@@ -151,6 +155,10 @@ since March 2020.
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/text-encoder.md[n/prefer-global/text-encoder]`
+|
+| Error
+
+| `link:{eslint-n-rules}/prefer-global/timers.md[n/prefer-global/timers]`
 |
 | Error
 
