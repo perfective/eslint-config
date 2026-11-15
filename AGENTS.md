@@ -30,7 +30,7 @@ RULE_AUDIT_UPDATE=true npm test             # Update src/config/rule-metadata.sn
   Run Jest through the npm scripts, not `npx jest` directly.
 - Prettier ignores all JS/TS files (see `.prettierignore`),
   so ESLint (`@stylistic`) does the code formatting.
-- CI (`.github/workflows/ci.yaml`) runs `lint:build`, `test:build`, and `dist` on Node 20.x, 22.x, and 24.x.
+- CI (`.github/workflows/ci.yaml`) runs `lint:build`, `test:build`, and `dist` on Node 22.x, 24.x, and 26.x.
 - `Dependency Review` (`.github/workflows/dependency-review.yaml`) runs Claude Code with the `update-dependency` skill
   on Renovate PRs (see "Dependency maintenance").
 - `Claude` (`.github/workflows/claude.yaml`) runs Claude Code on an `@claude` mention
