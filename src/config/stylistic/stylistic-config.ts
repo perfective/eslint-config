@@ -122,7 +122,7 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 html: true,
             }],
             // Deprecated since v5.7.0. Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`).
-            // TODO: Kept enabled, as `eslint-plugin-perfectionist` is not a peer dependency (yet).
+            // TODO: Kept enabled until `perfectionist/sort-jsx-props` is configured (#22).
             '@stylistic/jsx-sort-props': ['warn', {
                 ignoreCase: false,
                 callbacksLast: true,
