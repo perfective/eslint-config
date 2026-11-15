@@ -33,6 +33,8 @@ RULE_AUDIT_UPDATE=true npm test             # Update src/config/rule-metadata.sn
 - CI (`.github/workflows/ci.yaml`) runs `lint:build`, `test:build`, and `dist` on Node 22.x, 24.x, and 26.x.
 - `Dependency Review` (`.github/workflows/dependency-review.yaml`) runs Claude Code with the `update-dependency` skill
   on Renovate PRs (see "Dependency maintenance").
+- `Cursor Review` (`.github/workflows/cursor-review.yaml`) runs after that review.
+  Cursor Bugbot comments, Claude addresses those comments, and Bugbot reviews again until it has no comments.
 - `Claude` (`.github/workflows/claude.yaml`) runs Claude Code on an `@claude` mention
   in an issue, a PR comment, or a PR review, or when a maintainer adds the `claude` label to an issue
   (see "Git and releases").
@@ -260,6 +262,18 @@ Handling a Renovate PR:
   and reports the verdict, the rule changes, and the **NEEDS HUMAN** items in a PR comment.
   Its commits are pushed with the Claude GitHub App token, so CI runs on them.
   The workflow needs the Claude GitHub App installed and the `CLAUDE_CODE_OAUTH_TOKEN` secret.
+  When the job succeeds, it posts a top-level `cursor review` comment
+  (`<!-- perfective-cursor-round: 1 -->`) with the `CURSOR_REVIEW_TOKEN` secret,
+  a fine-grained PAT of a user (Pull requests: write).
+  Bugbot ignores that phrase when a GitHub App posts it.
+- `Cursor Review` then runs on the `Cursor Bugbot` check:
+  a success check (no findings and no unresolved Bugbot threads) ends the loop;
+  otherwise Claude addresses the unresolved threads, pushes one commit, and the workflow requests the next review.
+  The loop stops after 3 Bugbot reviews, or when Claude does not push, and adds `help wanted`.
+  Bugbot must be installed on the repository, set to run only when mentioned
+  (so it does not review the Renovate commit before Claude's dependency review),
+  and left with autofix off. `.cursor/config/bugbot.yaml` disables autofix and the summary comment.
+  `check_run` workflows run from the default branch, so this loop starts only after the workflow file is on `main`.
 - Once a PR has a follow-up commit, Renovate stops updating the branch.
   To get a newer version or resolve conflicts, tick the rebase checkbox in the PR:
   Renovate recreates the branch from scratch (dropping the follow-up commit), and the review runs again.

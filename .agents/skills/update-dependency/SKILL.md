@@ -173,6 +173,8 @@ The PR branch is checked out and `npm ci` has run. In that run:
   never rewrite or force-push the branch.
 - When the PR needs no changes, do not commit; the report is the review.
 - Never merge, approve, or close the PR, and never edit `.github/`.
+- Do not post `cursor review` or `@cursor`.
+  After this job, the workflow asks Cursor Bugbot to review the branch.
 - Post the report from step 9 as the PR comment,
   starting with the verdict:
   **Ready to merge** (with the squash-merge title),
