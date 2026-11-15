@@ -274,6 +274,11 @@ Handling a Renovate PR:
   one list item per consumer-visible change (rules enabled, disabled, severity changes, new options,
   peer dependency ranges), checks no longer enforced, and process changes in one line;
   leave out changes that cancel out and internal changes (the snapshot, audit exceptions, source fixes).
+- **Suggesting the squash commit** (in a report or a PR comment):
+  put the title and the body each in its own fenced code block (` ```text `),
+  so both render as code and can be copied as is.
+  Never put the title in inline backticks or render the body as Markdown.
+  The body inside its block is the plain commit text (`- ` list items, backticks around rule and package names).
 - Addressing review comments on a PR:
   fix and verify, push additional commits (never rewrite the pushed history),
   reply to each thread with what changed and the commit hash,

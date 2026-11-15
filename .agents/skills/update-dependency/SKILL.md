@@ -137,6 +137,8 @@ Pushed commits are never rewritten, so later fixes on the PR branch are addition
 When the branch has more than one follow-up commit,
 also prepare the squash commit message from the net diff against `main`
 (see "Squash commit message" in `AGENTS.md`).
+Give the suggested title and body each in its own ` ```text ` block
+(see "Suggesting the squash commit" in `AGENTS.md`).
 Do not push (except in CI, see below, or when the maintainer asks), merge, tag, or publish.
 
 ## 9. Report
