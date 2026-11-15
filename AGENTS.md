@@ -266,10 +266,17 @@ Handling a Renovate PR:
   (`<!-- perfective-cursor-round: 1 -->`) with the `CURSOR_REVIEW_TOKEN` secret,
   a fine-grained PAT of a user (Pull requests: write).
   Bugbot ignores that phrase when a GitHub App posts it.
+  Without the secret, the step only warns, and the Cursor loop does not start.
+  The token goes only to the steps that post that comment,
+  which run `gh` outside the checkout, after Claude, so nothing Claude left in the checkout runs with it.
 - `Cursor Review` then runs on the `Cursor Bugbot` check:
   a success check (no findings and no unresolved Bugbot threads) ends the loop;
   otherwise Claude addresses the unresolved threads, pushes one commit, and the workflow requests the next review.
+  Claude replies on each thread it fixes; the workflow resolves the threads with Claude's reply,
+  except the replies with **NEEDS HUMAN**.
   The loop stops after 3 Bugbot reviews, or when Claude does not push, and adds `help wanted`.
+  One loop step runs per PR at a time (job-level concurrency, so the runs of other checks cannot cancel it).
+  To restart the loop, add the `claude-review` label: the dependency review runs again and requests round 1.
   Bugbot must be installed on the repository, set to run only when mentioned
   (so it does not review the Renovate commit before Claude's dependency review),
   and left with autofix off. `.cursor/config/bugbot.yaml` disables autofix and the summary comment.
@@ -277,6 +284,11 @@ Handling a Renovate PR:
 - Once a PR has a follow-up commit, Renovate stops updating the branch.
   To get a newer version or resolve conflicts, tick the rebase checkbox in the PR:
   Renovate recreates the branch from scratch (dropping the follow-up commit), and the review runs again.
+  In CI, Claude never merges or rebases (the workflows deny `git merge`, `git rebase`, and `git pull`):
+  `main` requires signed commits, and merge commits cannot go through the signed-commit tool.
+  When asked to resolve conflicts on a Renovate PR, Claude asks the maintainer to tick the rebase checkbox instead.
+  A review of a recreated branch reads the PR thread first
+  and applies the maintainer's earlier decisions instead of asking again.
 - Review it with `update-dependency` before merging (locally, when the workflow did not run).
   Both `package.json` and the lockfile must move;
   a lockfile-only change while the pin stays behind is a defect.

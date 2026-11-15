@@ -77,6 +77,7 @@ jobs:
                   branch_prefix: claude-
                   # `main` requires signed commits: commit through the GitHub API, so GitHub signs the commits.
                   use_commit_signing: true
+                  # No merge or rebase: those commits cannot go through the signed-commit tool.
                   claude_args: |
                       --model claude-opus-5-5
                       --allowedTools
@@ -108,3 +109,7 @@ jobs:
                       "WebFetch(domain:www.npmjs.com)"
                       "WebFetch(domain:eslint.org)"
                       "WebFetch(domain:typescript-eslint.io)"
+                      --disallowedTools
+                      "Bash(git merge:*)"
+                      "Bash(git rebase:*)"
+                      "Bash(git pull:*)"

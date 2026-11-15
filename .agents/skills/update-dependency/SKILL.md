@@ -167,6 +167,11 @@ The PR branch is checked out and `npm ci` has run. In that run:
   List each version with the URL you read in the report.
   If an upstream source cannot be read, report it as **NEEDS HUMAN**.
 - Skip `gh pr checkout`: the PR branch is already checked out.
+- Read the PR thread (`gh pr view <number> --comments`) before deciding:
+  when Renovate recreated the branch, apply the maintainer's earlier decisions from the thread
+  and cite them in the report, instead of raising them as **NEEDS HUMAN** again.
+- Never merge `main` into the branch or rebase it.
+  If the PR has conflicts, report them and ask the maintainer to tick the rebase checkbox.
 - When the PR needs changes (peer range, rule changes, `index.adoc`, the snapshot, the repo's own sources),
   make them in **one** follow-up commit on top of Renovate's commit and push it to the PR branch.
   If a previous review already pushed a follow-up commit, add the new changes as another commit:
