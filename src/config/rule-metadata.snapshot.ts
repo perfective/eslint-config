@@ -558,7 +558,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'eslint-comments/no-duplicate-disable': [],
     'eslint-comments/no-restricted-disable': [],
     'eslint-comments/no-unlimited-disable': [],
-    'eslint-comments/no-unused-disable': [],
+    'eslint-comments/no-unused-disable': ['deprecated'],
     'eslint-comments/no-unused-enable': [],
     'eslint-comments/no-use': [],
     'eslint-comments/require-description': [],

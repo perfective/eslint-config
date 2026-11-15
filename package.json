@@ -34,11 +34,11 @@
         "test:build": "jest --clearCache && NODE_OPTIONS=--experimental-vm-modules jest --collectCoverage"
     },
     "peerDependencies": {
-        "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+        "@eslint-community/eslint-plugin-eslint-comments": "^4.8.1",
         "@stylistic/eslint-plugin": "^5.10.0",
         "eslint": "^9.39.5",
         "eslint-import-resolver-typescript": "^3.10.1",
-        "eslint-plugin-array-func": "^5.1.0",
+        "eslint-plugin-array-func": "^5.1.1",
         "eslint-plugin-cypress": "^5.2.1",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-jest": "^29.12.1",
@@ -73,7 +73,7 @@
     },
     "devDependencies": {
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
-        "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
+        "@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
         "@jest/globals": "~30.5.2",
         "@perfective/build": "~0.22.0",
         "@stylistic/eslint-plugin": "5.10.0",
@@ -82,7 +82,7 @@
         "@types/node": "^24.19.2",
         "eslint": "9.39.5",
         "eslint-import-resolver-typescript": "3.10.1",
-        "eslint-plugin-array-func": "5.1.0",
+        "eslint-plugin-array-func": "5.1.1",
         "eslint-plugin-cypress": "5.2.1",
         "eslint-plugin-import": "2.32.0",
         "eslint-plugin-jest": "29.12.1",
