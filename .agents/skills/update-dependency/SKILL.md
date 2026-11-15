@@ -155,9 +155,15 @@ runs this skill on every Renovate PR, when Renovate opens or updates it,
 or when a maintainer adds the `claude-review` label.
 The PR branch is checked out and `npm ci` has run. In that run:
 
-- Do not stop on the order check in step 1.
-  Review the PR anyway, and list the open PRs or pending updates that must be merged first
-  as a **merge order** item in the report.
+- Run the order check in step 1, but do not stop on it: review the PR anyway.
+  Run `npm outdated` and `gh pr list --author app/renovate --state open`,
+  and list in a **Merge order** section of the report every pending update or open PR
+  that comes earlier in the order (with its PR link), or state that there is none.
+- Step 3 applies in full: read the upstream notes of **every** intervening version
+  (`gh release view`, the package `CHANGELOG.md`, or the compare view), not only the PR body.
+  Renovate's PR body is a summary and may be truncated; do not use it as the only source.
+  List each version with the URL you read in the report.
+  If an upstream source cannot be read, report it as **NEEDS HUMAN**.
 - Skip `gh pr checkout`: the PR branch is already checked out.
 - When the PR needs changes (peer range, rule changes, `index.adoc`, the snapshot, the repo's own sources),
   make them in **one** follow-up commit on top of Renovate's commit and push it to the PR branch.
