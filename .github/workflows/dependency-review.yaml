@@ -42,7 +42,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v7
               with:
-                  node-version: '24.x'
+                  node-version: '26.13.1'
 
             # When the lockfile is out of sync with package.json, `npm ci` fails;
             # `npm install` then fixes the lockfile, and Claude commits the fix.
