@@ -60,6 +60,8 @@ jobs:
                   # Tag mode: a tracking comment on the PR with the report, and the git add/commit/push wrappers
                   # (allowed by the action itself, so `claude_args` does not list them).
                   track_progress: true
+                  # `main` requires signed commits: commit through the GitHub API, so GitHub signs the commits.
+                  use_commit_signing: true
                   prompt: |
                       Review the Renovate pull request #${{ github.event.pull_request.number }}
                       ("${{ github.event.pull_request.title }}")
