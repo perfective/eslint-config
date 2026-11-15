@@ -687,6 +687,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'jest-dom/prefer-enabled-disabled': ['fixable'],
     'jest-dom/prefer-focus': ['fixable'],
     'jest-dom/prefer-in-document': ['fixable', 'suggestions'],
+    'jest-dom/prefer-pressed': ['fixable'],
     'jest-dom/prefer-required': ['fixable'],
     'jest-dom/prefer-to-have-attribute': ['fixable'],
     'jest-dom/prefer-to-have-class': ['fixable'],

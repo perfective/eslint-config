@@ -23,6 +23,7 @@ export function jestDomConfig(files: Glob[] = jestFiles): Linter.Config {
             //  https://github.com/testing-library/eslint-plugin-jest-dom/pull/107
             //  https://github.com/testing-library/eslint-plugin-jest-dom/pull/105
             'jest-dom/prefer-in-document': 'off',
+            'jest-dom/prefer-pressed': 'warn',
             'jest-dom/prefer-required': 'warn',
             'jest-dom/prefer-to-have-attribute': 'warn',
             'jest-dom/prefer-to-have-class': 'warn',
