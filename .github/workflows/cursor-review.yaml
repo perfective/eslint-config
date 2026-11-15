@@ -2,6 +2,9 @@ name: Cursor Review
 on:
     check_run:
         types: [completed]
+    # Bugbot reports that it could not run in a PR comment, without a check run.
+    issue_comment:
+        types: [created]
 
 jobs:
     route:
@@ -9,7 +12,8 @@ jobs:
         # Other checks start a run and skip here. `check_run` cannot be filtered by name.
         # There is no workflow-level concurrency: a skipped run would cancel a pending Bugbot run in the same group.
         if: >-
-            github.event.check_run.name == 'Cursor Bugbot'
+            github.event_name == 'check_run'
+            && github.event.check_run.name == 'Cursor Bugbot'
             && github.event.check_run.conclusion != 'cancelled'
             && github.event.check_run.conclusion != 'skipped'
         runs-on: ubuntu-latest
@@ -111,6 +115,36 @@ jobs:
                           '**NEEDS HUMAN**')"
                       gh pr edit "${PR}" --add-label "help wanted"
                   fi
+
+    blocked:
+        name: Flag a Bugbot run that could not start
+        # Bugbot posts "Bugbot couldn't run" (for example, a GitHub account mismatch) and creates no check run,
+        # so nothing else in this workflow runs and the loop would stop without a trace.
+        if: >-
+            github.event_name == 'issue_comment'
+            && github.event.issue.pull_request
+            && github.event.issue.user.login == 'renovate[bot]'
+            && github.event.comment.user.login == 'cursor[bot]'
+            && contains(github.event.comment.body, 'Bugbot couldn')
+        runs-on: ubuntu-latest
+        permissions:
+            pull-requests: write
+            issues: write # The help wanted label
+
+        steps:
+            - name: Flag the PR
+              working-directory: ${{ runner.temp }}
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  GH_REPO: ${{ github.repository }}
+                  PR: ${{ github.event.issue.number }}
+                  COMMENT: ${{ github.event.comment.html_url }}
+              run: |
+                  set -euo pipefail
+                  gh pr comment "${PR}" --body "$(printf '%s\n\n%s\n' \
+                      "Cursor Bugbot could not run (${COMMENT}), so the Cursor review loop stopped." \
+                      '**NEEDS HUMAN**: fix the Cursor setup, then add the `claude-review` label to restart the loop.')"
+                  gh pr edit "${PR}" --add-label "help wanted"
 
     fix:
         name: Address the Cursor comments

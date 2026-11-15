@@ -277,6 +277,10 @@ Handling a Renovate PR:
   The loop stops after 3 Bugbot reviews, or when Claude does not push, and adds `help wanted`.
   One loop step runs per PR at a time (job-level concurrency, so the runs of other checks cannot cancel it).
   To restart the loop, add the `claude-review` label: the dependency review runs again and requests round 1.
+  When Bugbot cannot run (it posts "Bugbot couldn't run", for example on a GitHub account mismatch,
+  and creates no check run), the workflow comments **NEEDS HUMAN** and adds `help wanted`.
+  Bugbot must run from a Cursor team that covers this repository:
+  a personal Cursor account only reviews the PRs of its own GitHub account, not Renovate's.
   Bugbot must be installed on the repository, set to run only when mentioned
   (so it does not review the Renovate commit before Claude's dependency review),
   and left with autofix off. `.cursor/config/bugbot.yaml` disables autofix and the summary comment.
