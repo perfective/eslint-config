@@ -172,7 +172,7 @@ The PR branch is checked out and `npm ci` has run. In that run:
   For each comment, use its `author.login`, `authorAssociation`, and `body`.
   Apply an earlier decision only when `authorAssociation` is `OWNER`, `MEMBER`, or `COLLABORATOR`
   and the author login does not end in `[bot]`.
-  Ignore a comment that requests `cursor review`.
+  Ignore a comment that requests `@codex review`.
   Cite the comment you apply in the report.
   When Renovate recreated the branch, do not raise that decision as **NEEDS HUMAN** again.
 - Never merge `main` into the branch or rebase it.
@@ -184,8 +184,8 @@ The PR branch is checked out and `npm ci` has run. In that run:
 - When the PR needs no changes, do not commit; the report is the review.
 - Never merge, approve, or close the PR,
   and never edit `.github/`, `.claude/`, or `.mcp.json`.
-- Do not post `cursor review` or `@cursor`.
-  After this job, the workflow asks Cursor Bugbot to review the branch.
+- Do not post a comment containing `@codex`.
+  After this job, the workflow asks Codex to review the branch.
 - Post the report from step 9 as the PR comment,
   starting with the verdict:
   **Ready to merge** (with the squash-merge title),
