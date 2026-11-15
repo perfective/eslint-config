@@ -114,11 +114,15 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             }],
             // Deprecated. Use `@stylistic/no-multi-spaces` instead.
             '@stylistic/jsx-props-no-multi-spaces': 'off',
+            // TODO: Enable once the rule is not experimental.
+            '@stylistic/exp-jsx-props-style': 'off',
             '@stylistic/jsx-quotes': ['warn', 'prefer-double'],
             '@stylistic/jsx-self-closing-comp': ['warn', {
                 component: true,
                 html: true,
             }],
+            // Deprecated since v5.7.0. Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`).
+            // TODO: Kept enabled, as `eslint-plugin-perfectionist` is not a peer dependency (yet).
             '@stylistic/jsx-sort-props': ['warn', {
                 ignoreCase: false,
                 callbacksLast: true,

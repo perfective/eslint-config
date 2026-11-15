@@ -51,6 +51,10 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 | `link:{stylistic-rules}/eol-last[@stylistic/eol-last]`
 | Warning
 
+| `link:{stylistic-rules}/exp-jsx-props-style[@stylistic/exp-jsx-props-style]`
+| Off
+2+| Experimental
+
 | `link:{stylistic-rules}/exp-list-style[@stylistic/exp-list-style]`
 | Off
 2+| Experimental
@@ -135,6 +139,8 @@ Use the '@stylistic/indent' rule instead.
 
 | `link:{stylistic-rules}/jsx-sort-props[@stylistic/jsx-sort-props]`
 | Warning
+2+| Deprecated since v5.7.0.
+Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`) instead.
 
 | `link:{stylistic-rules}/jsx-tag-spacing[@stylistic/jsx-tag-spacing]`
 | Warning
