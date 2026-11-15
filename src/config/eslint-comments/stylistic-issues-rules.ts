@@ -3,6 +3,7 @@ import { Linter } from 'eslint';
 export const stylisticIssuesRules: Linter.RulesRecord = {
     'eslint-comments/no-restricted-disable': 'off',
     'eslint-comments/no-use': ['error', {
+        additionalDirectives: [],
         allow: [
             'eslint-disable',
             'eslint-disable-next-line',
@@ -10,6 +11,7 @@ export const stylisticIssuesRules: Linter.RulesRecord = {
         ],
     }],
     'eslint-comments/require-description': ['error', {
+        additionalDirectives: [],
         ignore: [
             'eslint-enable',
         ],
