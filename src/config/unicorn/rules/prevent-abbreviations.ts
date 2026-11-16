@@ -6,7 +6,7 @@ export type UnicornPreventAbbreviationReplacements = Record<string, boolean | Re
 /**
  * Configuration options for the `unicorn/prevent-abbreviation` rule.
  *
- * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+ * @see {@link https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md}
  *
  * @since v0.11.0
  */
@@ -30,7 +30,7 @@ export interface UnicornPreventAbbreviations {
  * @param replacements - List of additional replacements.
  * @param options - Additional properties to override.
  *
- * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+ * @see {@link https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md}
  *
  * @since v0.11.0
  */

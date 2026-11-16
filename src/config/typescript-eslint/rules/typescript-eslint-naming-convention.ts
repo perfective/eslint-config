@@ -68,7 +68,7 @@ export type TypescriptEslintNamingConventionUnderscore = 'forbid'
 /**
  * Configuration options for the `@typescript-eslint/naming-convention` rule.
  *
- * @see https://typescript-eslint.io/rules/naming-convention/
+ * @see {@link https://typescript-eslint.io/rules/naming-convention/}
  *
  * @since v0.11.0
  */
@@ -89,7 +89,7 @@ export interface TypescriptEslintNamingConvention {
 /**
  * Creates configuration with the given extensions for the `@typescript-eslint/naming-convention` rule.
  *
- * @see https://typescript-eslint.io/rules/naming-convention/
+ * @see {@link https://typescript-eslint.io/rules/naming-convention/}
  *
  * @since v0.11.0
  */

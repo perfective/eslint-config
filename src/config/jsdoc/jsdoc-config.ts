@@ -28,6 +28,7 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             // @access should be optional and used only to mark package/private functions
             'jsdoc/check-access': 'off',
             'jsdoc/check-alignment': ['error', {
+                ignoreEmptyLines: false,
                 innerIndent: 1,
             }],
             // Deprecated. Use the getJsdocProcessorPlugin processor.
@@ -38,18 +39,26 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'jsdoc/check-line-alignment': ['off', 'never'],
             'jsdoc/check-param-names': ['error', {
                 allowExtraTrailingParamDocs: false,
+                // The fixer would rename a @param without updating its description.
+                badParamNames: false,
+                badParamOrder: true,
                 checkDestructured: true,
                 checkRestProperty: false,
                 disableExtraPropertyReporting: false,
                 disableMissingParamChecks: false,
+                duplicateParams: true,
                 enableFixer: true,
+                // The fixer would remove the documentation of a parameter that may have been renamed.
+                extraParams: false,
                 // TBD
                 useDefaultObjectProperties: false,
             }],
             'jsdoc/check-property-names': ['error', {
                 enableFixer: true,
             }],
-            'jsdoc/check-syntax': 'error',
+            'jsdoc/check-syntax': ['warn', {
+                enableFixer: true,
+            }],
             // TODO: Check if tags like @abstract, @async, etc. that have keywords in TypeScript are removed.
             'jsdoc/check-tag-names': ['error', {
                 definedTags: ['final', 'flags', 'sealed', 'workaround'],
@@ -102,6 +111,21 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'jsdoc/no-types': 'error',
             // TypeScript reports undefined types.
             'jsdoc/no-undefined-types': 'off',
+            'jsdoc/no-unnecessary-type-assertion': ['warn', {
+                // Aligned with @typescript-eslint/no-unnecessary-type-assertion.
+                checkLiteralConstAssertions: true,
+                enableFixer: true,
+                // Removing a broader assertion changes the declared, exported, or returned type.
+                fixTypeChangingCasts: false,
+                preferConstToLiteralTuples: true,
+                treatAnyAsRedundant: true,
+                typesToIgnore: [],
+            }],
+            'jsdoc/normalize-see-links': ['warn', {
+                canonicalForm: 'pipe',
+                enableFixer: true,
+                wrapBareUrls: true,
+            }],
             'jsdoc/prefer-import-tag': 'warn',
             'jsdoc/reject-any-type': 'error',
             'jsdoc/reject-function-type': 'error',
@@ -355,6 +379,8 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 tags: {},
             }],
             'jsdoc/text-escaping': 'off',
+            // Use @typescript-eslint/ban-ts-comment.
+            'jsdoc/ts-ban-ts-comment': 'off',
             'jsdoc/ts-method-signature-style': 'warn',
             'jsdoc/ts-no-empty-object-type': 'error',
             'jsdoc/ts-no-unnecessary-template-expression': 'warn',

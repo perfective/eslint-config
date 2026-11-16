@@ -68,7 +68,7 @@ export const configurationFiles = ['**/.*.{js,cjs,mjs}', '**/*.config.{js,cjs,mj
 /**
  * The default glob patterns Jest uses to find JavaScript test files.
  *
- * @see https://jestjs.io/docs/configuration#testmatch-arraystring
+ * @see {@link https://jestjs.io/docs/configuration#testmatch-arraystring}
  *
  * @since v0.34.0
  */
@@ -80,7 +80,7 @@ export const jestJavascriptFiles: Glob[] = [
 /**
  * The default glob patterns Jest uses to find TypeScript test files.
  *
- * @see https://jestjs.io/docs/configuration#testmatch-arraystring
+ * @see {@link https://jestjs.io/docs/configuration#testmatch-arraystring}
  *
  * @since v0.34.0
  */
@@ -92,7 +92,7 @@ export const jestTypescriptFiles: Glob[] = [
 /**
  * The default glob patterns Jest uses to find test files.
  *
- * @see https://jestjs.io/docs/configuration#testmatch-arraystring
+ * @see {@link https://jestjs.io/docs/configuration#testmatch-arraystring}
  *
  * @since v0.31.0
  */
@@ -104,8 +104,8 @@ export const jestFiles: Glob[] = [
 /**
  * The default glob pattern Cypress uses to load test files.
  *
- * @see https://docs.cypress.io/app/references/configuration#e2e
- * @see https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html
+ * @see {@link https://docs.cypress.io/app/references/configuration#e2e}
+ * @see {@link https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html}
  *
  * @since v0.31.0
  */

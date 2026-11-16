@@ -46,8 +46,8 @@ The `link:{eslint-jsdoc-rules}[eslint-plugin-jsdoc]` provide JSDoc linting rules
 
 | `link:{eslint-jsdoc-rules}/check-syntax.md[jsdoc/check-syntax]`
 |
-|
-| Error
+| Yes
+| Warning
 
 | `link:{eslint-jsdoc-rules}/check-tag-names.md[jsdoc/check-tag-names]`
 | Yes
@@ -170,6 +170,19 @@ In JavaScript types should be required in the JSDocs.
 | Yes
 |
 | Off in TypeScript; Error in JavaScript.
+
+| `link:{eslint-jsdoc-rules}/no-unnecessary-type-assertion.md[jsdoc/no-unnecessary-type-assertion]`
+|
+| Yes
+| Warning
+4+| Assertions broader than the inferred type are reported but not fixed,
+as removing them changes the declared, exported, or returned type.
+
+| `link:{eslint-jsdoc-rules}/normalize-see-links.md[jsdoc/normalize-see-links]`
+|
+| Yes
+| Warning
+4+| Bare `http:` and `https:` URLs in `@see` tags are wrapped in `{@link}`.
 
 | `link:{eslint-jsdoc-rules}/prefer-import-tag.md[jsdoc/prefer-import-tag]`
 |
@@ -366,6 +379,12 @@ In JavaScript types should be required in the JSDocs.
 |
 | Yes
 | Off
+
+| `link:{eslint-jsdoc-rules}/ts-ban-ts-comment.md[jsdoc/ts-ban-ts-comment]`
+|
+|
+| Off
+4+| Use `@typescript-eslint/ban-ts-comment`.
 
 | `link:{eslint-jsdoc-rules}/ts-method-signature-style.md[jsdoc/ts-method-signature-style]`
 |
