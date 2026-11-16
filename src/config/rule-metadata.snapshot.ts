@@ -892,6 +892,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'security/detect-child-process': [],
     'security/detect-disable-mustache-escape': [],
     'security/detect-eval-with-expression': [],
+    'security/detect-invisible-characters': [],
     'security/detect-new-buffer': [],
     'security/detect-no-csrf-before-method-override': [],
     'security/detect-non-literal-fs-filename': [],

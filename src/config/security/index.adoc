@@ -28,6 +28,10 @@ to identify potential security issues.
 | Recommended
 | Error
 
+| `link:{eslint-security-rules}/detect-invisible-characters.md[security/detect-invisible-characters]`
+| Recommended
+| Error
+
 | `link:{eslint-security-rules}/detect-new-buffer.md[security/detect-new-buffer]`
 | Recommended
 | Error
