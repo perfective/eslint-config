@@ -443,7 +443,11 @@ jobs:
                   BASE: ${{ github.event.repository.default_branch }}
               run: |
                   set -euo pipefail
-                  git -c "http.extraheader=AUTHORIZATION: bearer ${TOKEN}" \
+                  # Git over HTTPS on GitHub takes the token as basic auth (as actions/checkout sends it);
+                  # it rejects a bearer header.
+                  auth="$(printf 'x-access-token:%s' "${TOKEN}" | base64 | tr -d '\n')"
+                  echo "::add-mask::${auth}"
+                  git -c "http.extraheader=AUTHORIZATION: basic ${auth}" \
                       fetch --no-tags --depth=1 origin \
                       "+refs/heads/${BASE}:refs/remotes/origin/${BASE}"
                   rm -rf .claude .mcp.json
