@@ -10,8 +10,11 @@ on:
         types: [submitted]
 
 jobs:
-    claude:
-        name: Work on the issue or PR
+    # The lock for this work: the issue number for an issue, or for a PR that Claude opened for an issue
+    # (its branch is `claude-issue-<number>-...`); the PR number for any other PR.
+    # Codex Review uses the same `claude-<number>` group, so one Claude run at a time pushes to a branch.
+    resolve:
+        name: Find the work to lock
         # Start on an `@claude` mention or the `claude` label from a maintainer.
         # The job checks the author's role itself, before any step runs repository code;
         # the action checks write access again.
@@ -26,12 +29,53 @@ jobs:
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
             || (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association))
-        # One run per issue or PR at a time; a newer request waits for the running one.
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        outputs:
+            lock: ${{ steps.lock.outputs.lock }}
+        permissions:
+            pull-requests: read
+
+        steps:
+            - name: Find the lock
+              id: lock
+              working-directory: ${{ runner.temp }}
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  REPO: ${{ github.repository }}
+                  NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+                  IS_PR: >-
+                      ${{ (github.event.issue.pull_request || github.event.pull_request) && 'true' || 'false' }}
+              run: |
+                  set -euo pipefail
+                  lock="${NUMBER}"
+                  if [ "${IS_PR}" = "true" ]; then
+                      issue="$(gh api "/repos/${REPO}/pulls/${NUMBER}" \
+                          | jq -r --arg repo "${REPO}" '
+                              select(.user.login == "claude[bot]" and .head.repo.full_name == $repo)
+                              | .head.ref
+                              | capture("^claude-issue-(?<issue>[0-9]+)-").issue')"
+                      if [ -n "${issue}" ]; then
+                          lock="${issue}"
+                      fi
+                  fi
+                  echo "lock=${lock}" >> "${GITHUB_OUTPUT}"
+
+    claude:
+        name: Work on the issue or PR
+        needs: resolve
+        # One run per issue at a time (with the PR that Claude opened for it); a newer request waits.
         concurrency:
-            group: claude-${{ github.event.issue.number || github.event.pull_request.number }}
+            group: claude-${{ needs.resolve.outputs.lock }}
             cancel-in-progress: false
+            # Keep every pending job (up to 100, in the order they started waiting).
+            # The default queue keeps one, so a third job in the group would cancel the waiting one.
+            # Every job in a `claude-<number>` group needs it: a job with the default queue cancels the pending ones.
+            queue: max
         runs-on: ubuntu-latest
         timeout-minutes: 60
+        outputs:
+            codex-pr: ${{ steps.codex.outputs.pr }}
 
         permissions:
             contents: write # Push the work branch
@@ -134,3 +178,97 @@ jobs:
                       'For a PR, update its branch, then ask again.')"
                   echo "::error::Claude did not run. See the workflow log of the Claude step."
                   exit 1
+
+            # The first Codex review of a PR that Claude opened for an issue.
+            # Later `@claude` requests on the PR do not start another loop: its round marker already exists.
+            - name: Find the PR for the first Codex review
+              if: steps.claude.outputs.conclusion == 'success'
+              id: codex
+              working-directory: ${{ runner.temp }}
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  REPO: ${{ github.repository }}
+                  NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+                  IS_PR: >-
+                      ${{ (github.event.issue.pull_request || github.event.pull_request) && 'true' || 'false' }}
+              run: |
+                  set -euo pipefail
+                  # The PR itself, or the open PR from the issue branch (`claude-issue-<number>-...`).
+                  # Only PRs that Claude opened from a branch in this repository.
+                  if [ "${IS_PR}" = "true" ]; then
+                      pr="$(gh api "/repos/${REPO}/pulls/${NUMBER}" \
+                          | jq -r --arg repo "${REPO}" '
+                              select(.state == "open"
+                                  and .user.login == "claude[bot]"
+                                  and .head.repo.full_name == $repo
+                                  and (.head.ref | startswith("claude-issue-")))
+                              | .number')"
+                  else
+                      pr="$(gh api --paginate "/repos/${REPO}/pulls?state=open&per_page=100" \
+                          | jq -rs --arg repo "${REPO}" --arg prefix "claude-issue-${NUMBER}-" '
+                              [.[][]
+                                  | select(.user.login == "claude[bot]"
+                                      and .head.repo.full_name == $repo
+                                      and (.head.ref | startswith($prefix)))
+                                  | .number]
+                              | max // empty')"
+                  fi
+                  if [ -z "${pr}" ]; then
+                      echo "No PR that Claude opened for an issue."
+                      exit 0
+                  fi
+                  # Through a file, not a pipe: `grep -q` can close the pipe early (a broken pipe fails it),
+                  # and a failed request must fail the step, not look like a PR without a marker.
+                  comment_file="${RUNNER_TEMP}/claude-pr-comments.txt"
+                  gh api --paginate "/repos/${REPO}/issues/${pr}/comments" --jq '.[].body' > "${comment_file}"
+                  if grep -q '<!-- perfective-codex-round: [0-9][0-9]* -->' "${comment_file}"; then
+                      echo "PR #${pr} already has a Codex review loop."
+                      exit 0
+                  fi
+                  echo "pr=${pr}" >> "${GITHUB_OUTPUT}"
+
+    # Fresh runner: the Claude job cannot change the PATH or environment that uses the token.
+    request:
+        name: Request a Codex review
+        needs: [resolve, claude]
+        if: needs.claude.outputs.codex-pr != ''
+        # In the lock, so two runs for the same issue cannot both post round 1:
+        # the second one sees the marker of the first.
+        concurrency:
+            group: claude-${{ needs.resolve.outputs.lock }}
+            cancel-in-progress: false
+            # Keep every pending job (up to 100, in the order they started waiting).
+            # The default queue keeps one, so a third job in the group would cancel the waiting one.
+            # Every job in a `claude-<number>` group needs it: a job with the default queue cancels the pending ones.
+            queue: max
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        permissions:
+            pull-requests: read # Check the round marker with the job token
+
+        steps:
+            # Posted as a user: Codex documents `@codex review` from people, not from GitHub Apps.
+            # The round marker is how Codex Review knows the review belongs to its loop.
+            - name: Request a Codex review
+              working-directory: ${{ runner.temp }}
+              env:
+                  JOB_TOKEN: ${{ github.token }}
+                  CODEX_TOKEN: ${{ secrets.CODEX_REVIEW_TOKEN }}
+                  GH_REPO: ${{ github.repository }}
+                  PR: ${{ needs.claude.outputs.codex-pr }}
+              run: |
+                  set -euo pipefail
+                  if [ -z "${CODEX_TOKEN}" ]; then
+                      echo "::warning::CODEX_REVIEW_TOKEN is not set, so the Codex review is not requested."
+                      exit 0
+                  fi
+                  comment_file="${RUNNER_TEMP}/claude-pr-comments.txt"
+                  GH_TOKEN="${JOB_TOKEN}" gh api --paginate "/repos/${GH_REPO}/issues/${PR}/comments" \
+                      --jq '.[].body' > "${comment_file}"
+                  if grep -q '<!-- perfective-codex-round: [0-9][0-9]* -->' "${comment_file}"; then
+                      echo "PR #${PR} already has a Codex review loop."
+                      exit 0
+                  fi
+                  GH_TOKEN="${CODEX_TOKEN}" gh pr comment "${PR}" --body "$(printf '%s\n\n%s\n' \
+                      '@codex review' \
+                      '<!-- perfective-codex-round: 1 -->')"
