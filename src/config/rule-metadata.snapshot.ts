@@ -798,6 +798,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'n/no-unpublished-import': [],
     'n/no-unpublished-require': [],
     'n/prefer-node-protocol': ['fixable'],
+    'n/prefer-process-get-builtin-module': [],
     'n/process-exit-as-throw': [],
     'n/shebang': ['deprecated', 'fixable'],
 
@@ -814,6 +815,8 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'n/prefer-global/timers': [],
     'n/prefer-global/url': [],
     'n/prefer-global/url-search-params': [],
+
+    'n/prefer-import/assert-strict': [],
 
     'n/prefer-promises/dns': [],
     'n/prefer-promises/fs': [],

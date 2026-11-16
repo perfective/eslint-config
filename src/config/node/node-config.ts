@@ -67,8 +67,14 @@ export function nodeConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'n/prefer-global/timers': ['error', 'always'],
             'n/prefer-global/url': ['error', 'always'],
             'n/prefer-global/url-search-params': ['error', 'always'],
+            'n/prefer-import/assert-strict': 'error',
             // Use unicorn/prefer-node-protocol
             'n/prefer-node-protocol': 'off',
+            // The rule reports only when the version range is within ^20.16.0 || >=22.3.0.
+            // Uses the same version as the n/no-unsupported-features/* rules.
+            'n/prefer-process-get-builtin-module': ['error', {
+                version: '>=18.0.0',
+            }],
             'n/prefer-promises/dns': 'error',
             'n/prefer-promises/fs': 'error',
             'n/process-exit-as-throw': 'error',
