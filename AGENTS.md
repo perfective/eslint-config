@@ -187,6 +187,11 @@ Before committing, check `git diff --check` and stage only the intended files.
   the title in the commit subject style, and a body that links the issue (`Closes #<number>`),
   summarizes the changes (one list item per rule change), and lists the **NEEDS HUMAN** items.
   On an existing PR, push follow-up commits to its branch and answer in the PR.
+  Once Claude has opened a PR for an issue, ask for follow-ups with `@claude` on the PR, not on the issue:
+  on the issue, the action checks out `main` and starts a new branch, so Claude does not commit there
+  and asks for the request on the PR instead.
+  Claude commits only through the signed-commit tool: the workflows deny `git commit` and `git push`,
+  as `main` requires signed commits.
   After the run that opens the PR, a following job requests the first Codex review
   (see "Codex review of issue PRs").
   On a Renovate PR, follow the `update-dependency` skill for any rule or dependency change.

@@ -33,6 +33,7 @@ jobs:
         timeout-minutes: 5
         outputs:
             lock: ${{ steps.lock.outputs.lock }}
+            claude-args: ${{ steps.lock.outputs.claude-args }}
         permissions:
             pull-requests: read
 
@@ -49,6 +50,7 @@ jobs:
               run: |
                   set -euo pipefail
                   lock="${NUMBER}"
+                  claude_args=
                   if [ "${IS_PR}" = "true" ]; then
                       issue="$(gh api "/repos/${REPO}/pulls/${NUMBER}" \
                           | jq -r --arg repo "${REPO}" '
@@ -58,8 +60,33 @@ jobs:
                       if [ -n "${issue}" ]; then
                           lock="${issue}"
                       fi
+                  else
+                      # On an issue, the action checks out `main` and starts a new branch:
+                      # it cannot work on the branch of a PR that Claude already opened for the issue.
+                      # Then Claude does not commit, and asks for the request on the PR instead.
+                      pr="$(gh api --paginate "/repos/${REPO}/pulls?state=open&per_page=100" \
+                          | jq -rs --arg repo "${REPO}" --arg prefix "claude-issue-${NUMBER}-" '
+                              [.[][]
+                                  | select(.user.login == "claude[bot]"
+                                      and .head.repo.full_name == $repo
+                                      and (.head.ref | startswith($prefix)))
+                                  | .number]
+                              | max // empty')"
+                      if [ -n "${pr}" ]; then
+                          note="Issue #${NUMBER} already has an open PR, #${pr}, and this run is on the issue,"
+                          note="${note} so it cannot work on that PR branch. Do not commit or push."
+                          note="${note} Answer on the issue, and ask the maintainer to repeat the request"
+                          note="${note} as an @claude comment on PR #${pr}, where the workflow checks out its branch."
+                          # Single quotes: the note has no single quotes.
+                          claude_args="--disallowedTools mcp__github_file_ops__commit_files"
+                          claude_args="${claude_args} mcp__github_file_ops__delete_files"
+                          claude_args="${claude_args} --append-system-prompt '${note}'"
+                      fi
                   fi
-                  echo "lock=${lock}" >> "${GITHUB_OUTPUT}"
+                  {
+                      echo "lock=${lock}"
+                      echo "claude-args=${claude_args}"
+                  } >> "${GITHUB_OUTPUT}"
 
     claude:
         name: Work on the issue or PR
@@ -123,8 +150,11 @@ jobs:
                   # `main` requires signed commits: commit through the GitHub API, so GitHub signs the commits.
                   use_commit_signing: true
                   # No merge or rebase: those commits cannot go through the signed-commit tool.
+                  # No local commit or push either: they are unsigned, and `main` requires signed commits.
+                  # On an issue with an open Claude PR, `resolve` also takes away the commit tools.
                   claude_args: |
                       --model claude-opus-5-5
+                      ${{ needs.resolve.outputs.claude-args }}
                       --allowedTools
                       "Bash(npm install)"
                       "Bash(npm outdated)"
@@ -158,6 +188,8 @@ jobs:
                       "Bash(git merge:*)"
                       "Bash(git rebase:*)"
                       "Bash(git pull:*)"
+                      "Bash(git commit:*)"
+                      "Bash(git push:*)"
 
             # The action reports success even when Claude did not run, for example when the workflow files
             # of a PR's test merge differ from the default branch (the Claude GitHub App refuses to run then).
