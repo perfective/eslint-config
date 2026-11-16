@@ -9,6 +9,7 @@ export interface ImportNoExtraneousDependencies {
     peerDependencies: boolean | Glob[];
     bundledDependencies: boolean | Glob[];
     packageDir?: string;
+    whitelist: string[];
 }
 
 /**
@@ -22,6 +23,7 @@ export function importNoExtraneousDependencies(
         devDependencies: false,
         optionalDependencies: false,
         peerDependencies: false,
+        whitelist: [],
         ...overrides,
     };
 }
