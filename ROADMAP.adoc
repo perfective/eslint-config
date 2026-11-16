@@ -17,6 +17,17 @@ Consider a focused packaging check that optional peer metadata keys exist in `pe
 and that every declared sub-path points to generated JavaScript and declaration files.
 The existing rule audit checks rules and their docs, not these packaging relationships.
 
+== Import resolver
+
+`eslint-plugin-import-x` replaced `eslint-plugin-import` (issue #48),
+but `eslint-import-resolver-typescript` stays on v3.10.1
+and `src/config/import/import-config.ts` uses the legacy `import-x/resolver` setting.
+The maintainer requested a separate pull request for the resolver update, if possible.
+
+Proposed follow-up: upgrade `eslint-import-resolver-typescript` to v4
+and move the setting to `import-x/resolver-next` (`createTypeScriptImportResolver()`),
+updating the peer dependency range, the lockfile, and the import rule documentation.
+
 == Release and maintenance policy alignment
 
 The root guide says newly enabled rules require a minor release while on `v0`.
