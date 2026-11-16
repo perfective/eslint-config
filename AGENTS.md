@@ -192,6 +192,8 @@ Before committing, check `git diff --check` and stage only the intended files.
   and asks for the request on the PR instead.
   Claude commits only through the signed-commit tool: the workflows deny `git commit` and `git push`,
   as `main` requires signed commits.
+  In every Claude workflow, when both `npm ci` and `npm install` fail, Claude runs without the commit tools:
+  it reports the error as **NEEDS HUMAN** and leaves the requested change uncommitted.
   After the run that opens the PR, a following job requests the first Codex review
   (see "Codex review of issue PRs").
   On a Renovate PR, follow the `update-dependency` skill for any rule or dependency change.
@@ -298,6 +300,12 @@ Handling a Renovate PR:
   (a PR based on an older `main`), and the action still reports success.
   So every Claude workflow fails its job when Claude did not run, and comments on the issue or PR;
   on a Renovate PR it also adds `help wanted`, and the Codex loop does not start.
+  The same report follows any earlier failed step.
+  A failed dependency install does not stop the job:
+  when both `npm ci` and `npm install` fail (for example, a peer dependency conflict),
+  Claude runs without the dependencies and without the commit tools,
+  and reports the error and what has to land first (see "Git and releases").
+  A failed Claude step itself fails the job without that report.
   Tick the rebase checkbox, so Renovate recreates the branch on the current `main`;
   the `claude-review` label alone reruns on the same outdated test merge.
   When the job succeeds, a following job posts a top-level `@codex review` comment

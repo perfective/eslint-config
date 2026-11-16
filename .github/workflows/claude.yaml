@@ -129,8 +129,34 @@ jobs:
                   node-version: '26.13.1'
 
             # Renovate can push a lockfile that `npm ci` rejects; `npm install` then fixes it.
+            # When both fail (for example, a peer dependency conflict), the job goes on,
+            # so Claude reports the error instead of the job stopping before Claude starts.
             - name: Install dependencies
-              run: npm ci || npm install
+              id: install
+              run: |
+                  if npm ci || npm install; then
+                      echo "note=The dependencies are installed." >> "${GITHUB_OUTPUT}"
+                      echo "failed=false" >> "${GITHUB_OUTPUT}"
+                  else
+                      echo "::warning::npm could not install the dependencies. Claude reports the error."
+                      note="Both \`npm ci\` and \`npm install\` failed, so the dependencies are not installed,"
+                      note="${note} and the build and tests cannot run."
+                      note="${note} Do not commit anything in this run, \`package-lock.json\` included:"
+                      note="${note} the commit tools are off, and any other instruction to commit does not apply."
+                      note="${note} Run \`npm install\` to see the error, and report it as **NEEDS HUMAN**"
+                      note="${note} with what has to change first"
+                      note="${note} (for example, a peer dependency that needs another update to land first)."
+                      note="${note} Do not work around it with \`--force\` or \`--legacy-peer-deps\`."
+                      {
+                          echo "note=${note}"
+                          echo "failed=true"
+                          # Without the commit tools, no instruction in the prompt or the skill can commit.
+                          # The note also goes into the system prompt (the Claude workflow has no prompt input).
+                          # Single quotes: the note has backticks and no single quotes.
+                          echo "claude-args=--disallowedTools mcp__github_file_ops__commit_files" \
+                              "mcp__github_file_ops__delete_files --append-system-prompt '${note}'"
+                      } >> "${GITHUB_OUTPUT}"
+                  fi
 
             - name: Run Claude Code
               id: claude
@@ -152,9 +178,11 @@ jobs:
                   # No merge or rebase: those commits cannot go through the signed-commit tool.
                   # No local commit or push either: they are unsigned, and `main` requires signed commits.
                   # On an issue with an open Claude PR, `resolve` also takes away the commit tools.
+                  # An install failure takes away the commit tools and says what to report (empty otherwise).
                   claude_args: |
                       --model claude-opus-5-5
                       ${{ needs.resolve.outputs.claude-args }}
+                      ${{ steps.install.outputs.claude-args }}
                       --allowedTools
                       "Bash(npm install)"
                       "Bash(npm outdated)"
@@ -194,8 +222,11 @@ jobs:
             # The action reports success even when Claude did not run, for example when the workflow files
             # of a PR's test merge differ from the default branch (the Claude GitHub App refuses to run then).
             # Claude sets `conclusion` only when it ran: fail the job, so a skipped review is not a green check.
+            # `!cancelled()`: an earlier failed step also skips Claude, and it needs the same report.
+            # `steps.claude.conclusion` is the step result: a failed Claude step (for example, a failed token setup
+            # or CLI install) is a red job, not a "did not run" report with `help wanted`.
             - name: Fail when Claude did not run
-              if: steps.claude.outputs.conclusion == ''
+              if: ${{ !cancelled() && steps.claude.conclusion != 'failure' && steps.claude.outputs.conclusion == '' }}
               working-directory: ${{ runner.temp }}
               env:
                   GH_TOKEN: ${{ github.token }}
@@ -204,10 +235,11 @@ jobs:
                   RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
               run: |
                   set -euo pipefail
-                  gh issue comment "${NUMBER}" --body "$(printf '%s\n\n%s\n%s\n' \
+                  gh issue comment "${NUMBER}" --body "$(printf '%s\n\n%s\n%s\n%s\n' \
                       "Claude did not run (${RUN})." \
                       'If the log says "Workflow validation failed", the workflow files differ from `main`.' \
-                      'For a PR, update its branch, then ask again.')"
+                      'For a PR, update its branch, then ask again.' \
+                      'Otherwise, check the first failed step in the log.')"
                   echo "::error::Claude did not run. See the workflow log of the Claude step."
                   exit 1
 

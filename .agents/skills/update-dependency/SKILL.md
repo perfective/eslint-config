@@ -155,7 +155,13 @@ End with a short report:
 The `Dependency Review` workflow (`.github/workflows/dependency-review.yaml`)
 runs this skill on every Renovate PR, when Renovate opens or updates it,
 or when a maintainer adds the `claude-review` label.
-The PR branch is checked out and `npm ci` has run. In that run:
+The PR branch is checked out and `npm ci` (or `npm install`) has run.
+When both failed, the prompt says so, the dependencies are not installed, and the commit tools are off:
+run `npm install` to see the error, and report it as **NEEDS HUMAN** with the update that has to land first
+(the order check below names it).
+Do not commit anything in that run, and do not work around the error (`--force` or `--legacy-peer-deps`);
+the steps below that commit or verify do not apply, and the report says which checks did not run.
+In that run:
 
 - Run the order check in step 1, but do not stop on it: review the PR anyway.
   Run `npm outdated` and `gh pr list --author app/renovate --state open`,
