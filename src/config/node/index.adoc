@@ -170,10 +170,20 @@ since March 2020.
 |
 | Error
 
+| `link:{eslint-n-rules}/prefer-import/assert-strict.md[n/prefer-import/assert-strict]`
+|
+| Error
+
 | `link:{eslint-n-rules}/prefer-node-protocol.md[n/prefer-node-protocol]`
 |
 | Off
 3+| Use `unicorn/prefer-node-protocol` instead.
+
+| `link:{eslint-n-rules}/prefer-process-get-builtin-module.md[n/prefer-process-get-builtin-module]`
+|
+| Error
+3+| Reports only when the configured Node.js version range is within Node.js `^20.16.0` or `>=22.3.0`
+(the configuration uses `>=18.0.0`, as the `n/no-unsupported-features/*` rules).
 
 | `link:{eslint-n-rules}/prefer-promises/dns.md[n/prefer-promises/dns]`
 |
