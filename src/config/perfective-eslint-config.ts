@@ -77,9 +77,9 @@ function configurationFilesConfig(): Linter.Config {
     return {
         files: configurationFiles,
         rules: {
-            'import/extensions': ['error', 'ignorePackages'],
-            'import/no-default-export': ['off'],
-            'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+            'import-x/extensions': ['error', 'ignorePackages'],
+            'import-x/no-default-export': ['off'],
+            'import-x/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
                 devDependencies: configurationFiles,
             })],
             'n/no-unpublished-import': ['error', {

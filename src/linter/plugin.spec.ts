@@ -34,7 +34,7 @@ describe(optionalRule, () => {
 describe(hasEslintPlugin, () => {
     describe('when a given plugin is installed', () => {
         it('returns true', () => {
-            expect(hasEslintPlugin('import')).toBe(true);
+            expect(hasEslintPlugin('import-x')).toBe(true);
             expect(hasEslintPlugin('@typescript-eslint')).toBe(true);
         });
     });

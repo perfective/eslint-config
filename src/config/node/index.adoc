@@ -54,12 +54,12 @@ since March 2020.
 | `link:{eslint-n-rules}/no-extraneous-import.md[n/no-extraneous-import]`
 | Recommended
 | Off
-3+| Use `import/no-extraneous-dependencies` instead.
+3+| Use `import-x/no-extraneous-dependencies` instead.
 
 | `link:{eslint-n-rules}/no-extraneous-require.md[n/no-extraneous-require]`
 | Recommended
 | Off
-3+| Use `import/no-extraneous-dependencies` instead.
+3+| Use `import-x/no-extraneous-dependencies` instead.
 
 | `link:{eslint-n-rules}/no-hide-core-modules.md[n/no-hide-core-modules]`
 | Deprecated

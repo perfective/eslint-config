@@ -1,32 +1,35 @@
 import { Linter } from 'eslint';
 
 export const styleGuideRules: Linter.RulesRecord = {
-    'import/consistent-type-specifier-style': ['warn', 'prefer-inline'],
+    'import-x/consistent-type-specifier-style': ['warn', 'prefer-inline'],
     // TODO: Research usage
-    'import/dynamic-import-chunkname': 'off',
-    'import/exports-last': 'off',
-    'import/extensions': ['error', 'never', {
+    'import-x/dynamic-import-chunkname': 'off',
+    'import-x/exports-last': 'off',
+    'import-x/extensions': ['error', 'never', {
+        checkSelfReference: true,
         checkTypeImports: true,
+        // The fixer is opt-in. Keep reporting imports for a manual fix.
+        fix: false,
     }],
-    'import/first': 'off',
-    'import/group-exports': 'off',
-    'import/max-dependencies': 'off',
-    'import/newline-after-import': ['warn', {
+    'import-x/first': 'off',
+    'import-x/group-exports': 'off',
+    'import-x/max-dependencies': 'off',
+    'import-x/newline-after-import': ['warn', {
         considerComments: true,
     }],
-    'import/no-anonymous-default-export': 'error',
-    'import/no-default-export': 'error',
+    'import-x/no-anonymous-default-export': 'error',
+    'import-x/no-default-export': 'error',
     // TODO: This rule now has the "ignore" option.
     //  Should this rule be enabled by default?
-    'import/no-duplicates': ['warn', {
+    'import-x/no-duplicates': ['warn', {
         'considerQueryString': true,
         'prefer-inline': true,
     }],
-    'import/no-named-default': 'error',
-    'import/no-named-export': 'off',
-    'import/no-namespace': 'off',
-    'import/no-unassigned-import': 'error',
-    'import/order': ['off', {
+    'import-x/no-named-default': 'error',
+    'import-x/no-named-export': 'off',
+    'import-x/no-namespace': 'off',
+    'import-x/no-unassigned-import': 'error',
+    'import-x/order': ['off', {
         'groups': ['unknown', 'builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
         'newlines-between': 'always',
         'alphabetize': {
@@ -34,5 +37,8 @@ export const styleGuideRules: Linter.RulesRecord = {
             caseInsensitive: false,
         },
     }],
-    'import/prefer-default-export': 'off',
+    'import-x/prefer-default-export': 'off',
+    'import-x/prefer-namespace-import': ['warn', {
+        patterns: [],
+    }],
 };

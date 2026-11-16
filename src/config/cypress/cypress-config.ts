@@ -40,7 +40,7 @@ function perfectiveRules(): Linter.RulesRecord {
         // Tests may declare variables that are set only by beforeEach/beforeAll functions.
         'init-declarations': 'off',
         '@typescript-eslint/init-declarations': 'off',
-        'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+        'import-x/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
             devDependencies: [cypressFiles],
         })],
         'max-nested-callbacks': ['error', 4],

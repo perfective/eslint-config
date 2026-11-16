@@ -25,7 +25,7 @@ export const eslintPossibleProblemsRules: Linter.RulesRecord = {
     'no-dupe-else-if': 'error',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
-    // Use `import/no-duplicates`.
+    // Use `import-x/no-duplicates`.
     'no-duplicate-imports': ['off', {
         includeExports: true,
     }],

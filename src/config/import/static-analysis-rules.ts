@@ -1,35 +1,33 @@
 import { Linter } from 'eslint';
 
 export const staticAnalysisRules: Linter.RulesRecord = {
-    'import/default': 'error',
-    // Use 'unicorn/prefer-node-protocol' instead.
-    'import/enforce-node-protocol-usage': 'off',
-    'import/named': ['error', {
+    'import-x/default': 'error',
+    'import-x/named': ['error', {
         // TODO: This setting is reported to cause issues,
         //  and it is not documented.
         // See https://github.com/import-js/eslint-plugin-import/pull/1222
         commonjs: false,
     }],
-    'import/namespace': 'error',
-    'import/no-absolute-path': 'error',
-    'import/no-cycle': ['error', {
+    'import-x/namespace': 'error',
+    'import-x/no-absolute-path': 'warn',
+    'import-x/no-cycle': ['error', {
         ignoreExternal: true,
         allowUnsafeDynamicCyclicDependency: false,
     }],
-    'import/no-dynamic-require': ['error', {
+    'import-x/no-dynamic-require': ['error', {
         esmodule: true,
     }],
     // TODO: Research usage
-    'import/no-internal-modules': 'off',
-    'import/no-relative-packages': 'warn',
-    'import/no-relative-parent-imports': 'off',
+    'import-x/no-internal-modules': 'off',
+    'import-x/no-relative-packages': 'warn',
+    'import-x/no-relative-parent-imports': 'off',
     // TODO: Research usage
-    'import/no-restricted-paths': 'off',
-    'import/no-self-import': 'error',
-    'import/no-unresolved': ['error', {
+    'import-x/no-restricted-paths': 'off',
+    'import-x/no-self-import': 'error',
+    'import-x/no-unresolved': ['error', {
         caseSensitive: true,
         caseSensitiveStrict: true,
     }],
-    'import/no-useless-path-segments': 'warn',
-    'import/no-webpack-loader-syntax': 'error',
+    'import-x/no-useless-path-segments': 'warn',
+    'import-x/no-webpack-loader-syntax': 'error',
 };
