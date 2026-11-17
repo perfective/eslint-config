@@ -149,6 +149,8 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-array-from-fill': 'error',
             'unicorn/no-array-front-mutation': 'error',
             'unicorn/no-array-method-this-argument': 'warn',
+            // Deprecated since v59.0.0. Use unicorn/prefer-single-call.
+            'unicorn/no-array-push-push': 'off',
             'unicorn/no-array-reduce': 'off',
             // Requires ECMAScript 2023
             'unicorn/no-array-reverse': 'off',
@@ -180,8 +182,17 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-console-spaces': 'warn',
             'unicorn/no-constant-zero-expression': 'error',
             'unicorn/no-declarations-before-early-exit': 'warn',
+            // Deprecated since v77.0.0. Use cssicorn/no-deprecated-features (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-deprecated-css-features': 'off',
             'unicorn/no-document-cookie': 'error',
             'unicorn/no-double-comparison': 'error',
+            // Deprecated since v77.0.0. Use cssicorn/no-duplicate-selectors (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-duplicate-css-selectors': 'off',
+            // Deprecated since v77.0.0. Use cssicorn/no-duplicate-font-family-names (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-duplicate-font-family-names': 'off',
             'unicorn/no-duplicate-if-branches': 'error',
             'unicorn/no-duplicate-logical-operands': 'warn',
             'unicorn/no-duplicate-loops': 'error',
@@ -217,6 +228,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-invalid-file-input-accept': 'warn',
             'unicorn/no-invalid-integrity': 'error',
             'unicorn/no-invalid-intl-options': 'error',
+            // Deprecated since v77.0.0. Use cssicorn/no-invalid-media-features (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-invalid-media-features': 'off',
             'unicorn/no-invalid-property-descriptor': 'error',
             'unicorn/no-invalid-remove-event-listener': 'error',
             'unicorn/no-invalid-response-options': 'error',
@@ -236,6 +250,8 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-late-event-control': 'error',
             // Use @stylistic/no-multiple-empty-lines.
             'unicorn/no-leading-empty-lines': 'off',
+            // Deprecated since v59.0.0. Use unicorn/no-unnecessary-slice-end.
+            'unicorn/no-length-as-slice-end': 'off',
             'unicorn/no-lonely-if': 'warn',
             'unicorn/no-loop-iterable-mutation': 'error',
             // Applies only to CSS, JSON, TOML, and SOML files.
@@ -257,6 +273,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-negated-condition': 'warn',
             'unicorn/no-negation-in-equality-check': 'error',
             'unicorn/no-nested-ternary': 'off',
+            // Deprecated since v77.0.0. Use cssicorn/no-nesting-with-mixed-specificity (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-nesting-with-mixed-specificity': 'off',
             'unicorn/no-new-array': 'warn',
             'unicorn/no-new-buffer': 'warn',
             'unicorn/no-non-function-verb-prefix': ['error', {
@@ -272,6 +291,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-prevent-default-in-passive-listener': 'error',
             'unicorn/no-process-exit': 'error',
             'unicorn/no-redundant-comparison': 'warn',
+            // Deprecated since v77.0.0. Use cssicorn/no-redundant-nested-style-rules (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-redundant-nested-style-rules': 'off',
             'unicorn/no-repeated-call-wrappers': 'error',
             'unicorn/no-return-array-push': 'error',
             'unicorn/no-selector-as-dom-name': 'warn',
@@ -294,6 +316,12 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             }],
             'unicorn/no-uncalled-method': 'error',
             'unicorn/no-undeclared-class-members': 'error',
+            // Deprecated since v77.0.0. Use cssicorn/no-unknown-annotations (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-unknown-css-annotations': 'off',
+            // Deprecated since v77.0.0. Use cssicorn/no-unknown-pseudo-selectors (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-unknown-pseudo-selectors': 'off',
             'unicorn/no-unnecessary-array-flat-depth': 'warn',
             'unicorn/no-unnecessary-array-flat-map': 'warn',
             'unicorn/no-unnecessary-array-splice-count': 'warn',
@@ -327,6 +355,11 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-unsafe-property-key': 'error',
             'unicorn/no-unsafe-sqlite-interpolation': 'error',
             'unicorn/no-unsafe-string-replacement': 'error',
+            // Deprecated since v77.0.0. Use cssicorn/no-unscoped-nesting-selector (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/no-unscoped-css-nesting-selector': 'off',
+            // Deprecated since v75.0.0. Use unicorn/no-unused-builtin-method-return.
+            'unicorn/no-unused-array-method-return': 'off',
             'unicorn/no-unused-builtin-method-return': 'error',
             'unicorn/no-unused-iterator-helper': 'error',
             'unicorn/no-unused-properties': 'off',
@@ -451,6 +484,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-error-is-error': 'off',
             'unicorn/prefer-escaped-irregular-whitespace': 'warn',
             'unicorn/prefer-event-target': 'error',
+            // Deprecated since v77.0.0. Use cssicorn/prefer-explicit-viewport-units (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/prefer-explicit-viewport-units': 'off',
             'unicorn/prefer-export-from': ['warn', {
                 checkUsedVariables: true,
             }],
@@ -496,6 +532,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-math-constants': 'error',
             'unicorn/prefer-math-min-max': 'error',
             'unicorn/prefer-math-trunc': 'error',
+            // Deprecated since v77.0.0. Use cssicorn/prefer-media-feature-range-syntax (eslint-cssicorn).
+            // Applies only to CSS files.
+            'unicorn/prefer-media-feature-range-syntax': 'off',
             'unicorn/prefer-minimal-ternary': ['warn', {
                 checkVaryingBase: true,
                 checkComputedMemberAccess: true,

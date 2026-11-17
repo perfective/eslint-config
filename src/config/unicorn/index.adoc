@@ -297,6 +297,12 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/no-array-push-push.md[unicorn/no-array-push-push]`
+| Deprecated
+|
+| Off
+4+| Replaced by `unicorn/prefer-single-call`.
+
 | `link:{eslint-unicorn-rules}/no-array-reduce.md[unicorn/no-array-reduce]`
 | Yes
 | Yes
@@ -420,6 +426,13 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/no-deprecated-css-features.md[unicorn/no-deprecated-css-features]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-deprecated-features`.
+Applies only to CSS files.
+
 | `link:{eslint-unicorn-rules}/no-document-cookie.md[unicorn/no-document-cookie]`
 | Yes
 |
@@ -429,6 +442,20 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/no-duplicate-css-selectors.md[unicorn/no-duplicate-css-selectors]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-duplicate-selectors`.
+Applies only to CSS files.
+
+| `link:{eslint-unicorn-rules}/no-duplicate-font-family-names.md[unicorn/no-duplicate-font-family-names]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-duplicate-font-family-names`.
+Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/no-duplicate-if-branches.md[unicorn/no-duplicate-if-branches]`
 | Yes
@@ -573,6 +600,13 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/no-invalid-media-features.md[unicorn/no-invalid-media-features]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-invalid-media-features`.
+Applies only to CSS files.
+
 | `link:{eslint-unicorn-rules}/no-invalid-property-descriptor.md[unicorn/no-invalid-property-descriptor]`
 | Yes
 |
@@ -634,6 +668,12 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Yes
 | Off
 4+| Use @stylistic/no-multiple-empty-lines.
+
+| `link:{eslint-unicorn-rules}/no-length-as-slice-end.md[unicorn/no-length-as-slice-end]`
+| Deprecated
+|
+| Off
+4+| Replaced by `unicorn/no-unnecessary-slice-end`.
 
 | `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]`
 | Yes
@@ -714,6 +754,13 @@ Use no-loss-of-precision.
 | Partially
 | Off
 
+| `link:{eslint-unicorn-rules}/no-nesting-with-mixed-specificity.md[unicorn/no-nesting-with-mixed-specificity]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-nesting-with-mixed-specificity`.
+Applies only to CSS files.
+
 | `link:{eslint-unicorn-rules}/no-new-array.md[unicorn/no-new-array]`
 | Yes
 | Partially
@@ -768,6 +815,13 @@ Use no-loss-of-precision.
 | Yes
 | Yes
 | Warning
+
+| `link:{eslint-unicorn-rules}/no-redundant-nested-style-rules.md[unicorn/no-redundant-nested-style-rules]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-redundant-nested-style-rules`.
+Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/no-repeated-call-wrappers.md[unicorn/no-repeated-call-wrappers]`
 |
@@ -851,6 +905,20 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/no-unknown-css-annotations.md[unicorn/no-unknown-css-annotations]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-unknown-annotations`.
+Applies only to CSS files.
+
+| `link:{eslint-unicorn-rules}/no-unknown-pseudo-selectors.md[unicorn/no-unknown-pseudo-selectors]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-unknown-pseudo-selectors`.
+Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-depth.md[unicorn/no-unnecessary-array-flat-depth]`
 | Yes
@@ -983,6 +1051,19 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/no-unscoped-css-nesting-selector.md[unicorn/no-unscoped-css-nesting-selector]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/no-unscoped-nesting-selector`.
+Applies only to CSS files.
+
+| `link:{eslint-unicorn-rules}/no-unused-array-method-return.md[unicorn/no-unused-array-method-return]`
+| Deprecated
+|
+| Off
+4+| Replaced by `unicorn/no-unused-builtin-method-return`.
 
 | `link:{eslint-unicorn-rules}/no-unused-builtin-method-return.md[unicorn/no-unused-builtin-method-return]`
 | Yes
@@ -1372,6 +1453,13 @@ as they include pure helpers that build exported constants (for example, rule op
 |
 | Error
 
+| `link:{eslint-unicorn-rules}/prefer-explicit-viewport-units.md[unicorn/prefer-explicit-viewport-units]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/prefer-explicit-viewport-units`.
+Applies only to CSS files.
+
 | `link:{eslint-unicorn-rules}/prefer-export-from.md[unicorn/prefer-export-from]`
 | Yes
 | Yes
@@ -1530,6 +1618,13 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 |
 | Error
+
+| `link:{eslint-unicorn-rules}/prefer-media-feature-range-syntax.md[unicorn/prefer-media-feature-range-syntax]`
+| Deprecated
+|
+| Off
+4+| Moved to `eslint-cssicorn` as `cssicorn/prefer-media-feature-range-syntax`.
+Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/prefer-minimal-ternary.md[unicorn/prefer-minimal-ternary]`
 | Yes
