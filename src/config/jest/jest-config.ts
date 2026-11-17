@@ -135,7 +135,10 @@ function perfectiveRules(): Linter.RulesRecord {
         // There can be 4 levels of `describe()`: Class -> Method -> Method Signature -> "When...",
         // followed by a level for `it()`.
         // The 6th level (inside of `it()`) can be required for a callback to test `toThrow()`.
-        'max-nested-callbacks': ['error', 6],
+        'max-nested-callbacks': ['error', {
+            max: 6,
+            checkConstructorCallCallbacks: true,
+        }],
         'n/no-unpublished-import': ['error', {
             // Required in devDependencies.
             allowModules: ['@jest/globals'],

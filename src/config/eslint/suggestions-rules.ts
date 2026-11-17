@@ -44,13 +44,17 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
     // Business object may have many properties and even with basic logic will have many lines of code.
     'max-lines': 'off',
     'max-lines-per-function': 'off',
-    'max-nested-callbacks': ['error', 2],
+    'max-nested-callbacks': ['error', {
+        max: 2,
+        checkConstructorCallCallbacks: true,
+    }],
     // This rule does not allow separating functions and constructors.
     // Constructors may have properties declarations,
     // and be used for dependency injections,
     // making it impossible to limit parameters count.
     'max-params': ['off', {
         max: 3,
+        countThis: 'always',
     }],
     // Checking for function complexity is enough, while this rule is overridden for test files anyway
     'max-statements': ['off', {
@@ -145,7 +149,9 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
         allowInParentheses: false,
     }],
     'no-shadow': 'off',
-    'no-shadow-restricted-names': 'error',
+    'no-shadow-restricted-names': ['error', {
+        reportGlobalThis: true,
+    }],
     'no-ternary': 'off',
     'no-throw-literal': 'error',
     'no-undef-init': 'warn',
@@ -201,6 +207,7 @@ export const eslintSuggestionsRules: Linter.RulesRecord = {
     // Requires ECMAScript 2022 and won't work with @perfective/common/error functions and exceptions.
     'preserve-caught-error': ['off', {
         requireCatchParameter: true,
+        errorClassNames: [],
     }],
     // Deprecated. Use https://eslint.style/rules/js/quote-props.
     'quote-props': 'off',
