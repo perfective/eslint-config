@@ -13,6 +13,11 @@ some of the https://docs.cypress.io/guides/references/best-practices.html[best p
 |
 | Error
 
+| `link:{eslint-plugin-cypress-rules}/no-and.md[cypress/no-and]`
+|
+| Yes
+| Warning
+
 | `link:{eslint-plugin-cypress-rules}/no-assigning-return-values.md[cypress/no-assigning-return-values]`
 |
 |
@@ -54,9 +59,11 @@ some of the https://docs.cypress.io/guides/references/best-practices.html[best p
 | Error
 
 | `link:{eslint-plugin-cypress-rules}/no-xpath.md[cypress/no-xpath]`
+| Deprecated
 |
-|
-| Error
+| Off
+4+| The rule has no replacement, as `cy.xpath()` is no longer supported.
+Use `cy.get()` with data selectors (`cypress/require-data-selectors`) instead.
 
 | `link:{eslint-plugin-cypress-rules}/require-data-selectors.md[cypress/require-data-selectors]`
 |
