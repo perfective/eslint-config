@@ -19,6 +19,7 @@ export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
         },
         rules: {
             'cypress/assertion-before-screenshot': 'error',
+            'cypress/no-and': 'warn',
             'cypress/no-assigning-return-values': 'error',
             'cypress/no-async-before': 'error',
             'cypress/no-async-tests': 'error',
@@ -27,7 +28,9 @@ export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
             'cypress/no-force': 'error',
             'cypress/no-pause': 'error',
             'cypress/no-unnecessary-waiting': 'error',
-            'cypress/no-xpath': 'error',
+            // Deprecated since v6.2.0. No replacement.
+            // Use cy.get() with data selectors (cypress/require-data-selectors) instead.
+            'cypress/no-xpath': 'off',
             'cypress/require-data-selectors': 'error',
             'cypress/unsafe-to-chain-command': 'error',
             ...perfectiveRules(),

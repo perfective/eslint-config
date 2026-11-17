@@ -541,6 +541,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'array-func/prefer-flat-map': ['fixable'],
 
     'cypress/assertion-before-screenshot': [],
+    'cypress/no-and': ['fixable'],
     'cypress/no-assigning-return-values': [],
     'cypress/no-async-before': [],
     'cypress/no-async-tests': [],
@@ -549,7 +550,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'cypress/no-force': [],
     'cypress/no-pause': [],
     'cypress/no-unnecessary-waiting': [],
-    'cypress/no-xpath': [],
+    'cypress/no-xpath': ['deprecated'],
     'cypress/require-data-selectors': [],
     'cypress/unsafe-to-chain-command': [],
 
