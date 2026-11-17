@@ -16,7 +16,7 @@ const eslintConfig = perfectiveEslintConfig([
     testingLibraryConfig,
     {
         rules: {
-            'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+            'import-x/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
                 devDependencies: [...jestFiles, ...configurationFiles],
                 peerDependencies: true,
             })],

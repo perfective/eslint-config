@@ -11,6 +11,7 @@ describe(importNoExtraneousDependencies, () => {
                     devDependencies: false,
                     optionalDependencies: false,
                     peerDependencies: false,
+                    whitelist: [],
                 });
         });
     });
@@ -25,6 +26,7 @@ describe(importNoExtraneousDependencies, () => {
                 devDependencies: ['./*.js'],
                 optionalDependencies: false,
                 peerDependencies: true,
+                whitelist: [],
             });
         });
     });

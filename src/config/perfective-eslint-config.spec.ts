@@ -138,6 +138,11 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
+        rule: 'import-x/extensions',
+        check: 'severity-convention',
+        reason: 'The fixer is opt-in (fix) and is not enabled.',
+    },
+    {
         rule: 'jest/no-focused-tests',
         check: 'severity-convention',
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',

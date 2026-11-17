@@ -149,7 +149,7 @@ Before committing, check `git diff --check` and stage only the intended files.
   A less strict value needs a comment with the reason.
 - Every rule a plugin provides is listed explicitly, in alphabetical order, including disabled rules.
   A disabled rule (`'off'`) usually has a comment explaining why
-  (for example `// Requires ECMAScript 2023` or `// Use import/no-duplicates.`).
+  (for example `// Requires ECMAScript 2023` or `// Use import-x/no-duplicates.`).
 - **Deprecated rules are turned off and remain in the config until the plugin removes them.**
   Their replacement rules are turned on, with options aligned to the deprecated rule's configuration.
   Add a `// Deprecated since vX.Y.Z. Use <replacement>.` comment above the rule.

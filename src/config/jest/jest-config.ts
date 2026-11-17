@@ -123,10 +123,10 @@ export function jestConfig(files: Glob[] = jestFiles): Linter.Config {
 
 function perfectiveRules(): Linter.RulesRecord {
     return {
-        'import/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
+        'import-x/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
             devDependencies: jestFiles,
         })],
-        'import/no-unassigned-import': ['error', {
+        'import-x/no-unassigned-import': ['error', {
             allow: [
                 '@testing-library/jest-dom',
                 '@testing-library/jest-dom/extend-expect',

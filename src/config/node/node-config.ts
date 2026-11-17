@@ -20,7 +20,7 @@ export function nodeConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'n/no-callback-literal': 'error',
             'n/no-deprecated-api': 'error',
             'n/no-exports-assign': 'error',
-            // Imports and require are handled by the "eslint-plugin-import"
+            // Imports and require are handled by the "eslint-plugin-import-x"
             'n/no-extraneous-import': 'off',
             'n/no-extraneous-require': 'off',
             // Deprecated.
