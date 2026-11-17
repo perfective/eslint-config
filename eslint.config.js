@@ -20,10 +20,12 @@ const eslintConfig = perfectiveEslintConfig([
                 devDependencies: [...jestFiles, ...configurationFiles],
                 peerDependencies: true,
             })],
-            'unicorn/prevent-abbreviations': ['warn', unicornPreventAbbreviations({}, {
+            'unicorn/name-replacements': ['warn', unicornPreventAbbreviations({}, {
                 allowList: {
                     'arrayFuncConfig': true,
                     'array-func-config': true,
+                    'configurationFiles': true,
+                    'configurationFilesConfig': true,
                 },
             })],
         },
