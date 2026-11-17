@@ -51,6 +51,8 @@ RULE_AUDIT_UPDATE=true npm test             # Update src/config/rule-metadata.sn
   Codex reviews every push to a pull request.
   Claude addresses the findings, and the next push is reviewed again,
   until Codex has no unresolved findings or the review cap is reached.
+- `Codex Review Watchdog` (`.github/workflows/codex-watchdog.yaml`) runs hourly.
+  It flags a Renovate PR or a Claude issue PR whose head has had no Codex review for 2 hours.
 - `Claude` (`.github/workflows/claude.yaml`) runs Claude Code on an `@claude` mention
   in an issue, a PR comment, or a PR review, or when a maintainer adds the `claude` label to an issue
   (see "Git and releases").
@@ -312,7 +314,8 @@ Handling a Renovate PR:
   the `claude-review` label alone reruns on the same outdated test merge.
   When the job succeeds, Codex reviews the branch on its own.
   The workflows do not post `@codex review` and do not use a personal access token.
-  `CODEX_REVIEW_TOKEN` is unused after this change is on `main` and can be deleted.
+  After this change is on `main`, delete the `CODEX_REVIEW_TOKEN` secret
+  and revoke the personal access token it holds.
 - `Codex Review` then runs on the Codex summary comment.
   Codex (the ChatGPT Codex GitHub App, `chatgpt-codex-connector[bot]`) posts one summary comment per PR
   and edits it as reviews start and finish.
@@ -325,17 +328,21 @@ Handling a Renovate PR:
   only on Renovate PRs and Claude's issue PRs,
   and only when the reviewed commit is the branch tip.
   On a Renovate PR it waits until Dependency Review has finished on that branch,
-  and it starts the loop only after a successful Dependency Review run,
-  so it handles the commit that run left.
+  and it starts the loop only when the latest completed run succeeded
+  and that run's commit is still on the pull request.
   The round is how many distinct commits on the pull request
   `chatgpt-codex-connector[bot]` has reviewed, up to the reviewed commit.
   Only that app's pull request reviews and its own issue comments count
   (the summary's `code_review.commit_sha`, a review's `commit_id`, and a receipt's reviewed commit).
   A marker in anyone else's comment cannot change the round.
-  On a Renovate PR, commits reviewed at or before the end of the latest successful
-  Dependency Review run count together as round 1,
-  so the Renovate commit and that run's follow-up are not two rounds.
+  On a Renovate PR, round 1 is the commits Codex reviewed
+  at or before the end of the latest completed Dependency Review run,
+  and only when that run succeeded and its commit is still on the pull request.
+  A failed or cancelled run does not fall back to an older success.
+  The Renovate commit and that run's follow-up therefore count as one round.
   Each reviewed commit after that run is another round.
+  A fix that pushes more than one commit can use one round per push,
+  because Codex reviews every push.
   A null or still-running `code_review.status` waits for the edit that finishes the review.
   A null or `skipped` `security_review.status` means that review did not run,
   and a security review of another commit is ignored.
@@ -364,15 +371,24 @@ Handling a Renovate PR:
   so a later request does not cancel a waiting one, such as a loop step.
   To restart the loop on a Renovate PR, add the `claude-review` label.
   Dependency Review runs again, and a commit it pushes is reviewed as round 1.
-  Codex code review must be turned on for this repository in ChatGPT (Codex settings, Code review):
-  review all pull requests, trigger "On every push".
+  Codex automatic review must be on for this repository.
+  In ChatGPT, open Codex settings, Code review:
+  automatic review "Review all PRs", and the review trigger "On every push".
+  Either value may be a personal preference, a per-repository override, or both.
   Drafts are not reviewed.
   The workflows do not request a review.
-  Its review rules are in "Code Review Rules" below.
+  Codex's review rules are in "Code Review Rules" below.
+  `Codex Review Watchdog` runs every hour.
+  It adds `help wanted` and one **NEEDS HUMAN** comment
+  when an open Renovate PR, or a Claude issue PR,
+  has a head commit at least 2 hours old with no review from `chatgpt-codex-connector[bot]`.
+  It comments once per head commit, with `GITHUB_TOKEN`, and it does not post `@codex review`.
   `issue_comment` workflows run from the default branch, so this loop starts only after the workflow file is on `main`.
 - Once a PR has a follow-up commit, Renovate stops updating the branch.
   To get a newer version or resolve conflicts, tick the rebase checkbox in the PR:
   Renovate recreates the branch from scratch (dropping the follow-up commit), and the review runs again.
+  Recreating the branch resets the round count: the old commits are gone,
+  and the loop waits for a successful Dependency Review run whose commit is on the new branch.
   In CI, Claude never merges or rebases (the workflows deny `git merge`, `git rebase`, and `git pull`):
   `main` requires signed commits, and merge commits cannot go through the signed-commit tool.
   When asked to resolve conflicts on a Renovate PR, Claude asks the maintainer to tick the rebase checkbox instead.
@@ -411,13 +427,17 @@ Renovate does not add it.
 Claude adds it when its review or follow-up ends with **NEEDS HUMAN** items,
 and removes it once a later run leaves none
 (for example, after applying the maintainer's decisions from the PR thread).
+The Codex review watchdog adds it when a loop PR's head has no Codex review for 2 hours.
 
 ## Codex review of issue PRs
 
 The Codex loop above also runs on a PR that the `Claude` workflow opened for an issue
 (author `claude[bot]`, branch `claude-issue-<number>-...` in this repository).
 Open that PR ready for review, not as a draft: Codex does not review drafts.
-If a run leaves one as a draft, the workflow marks it ready.
+The tool rule blocks `gh pr create --draft` only as a prefix,
+so `gh pr create --title ... --draft` can still create a draft.
+The workflow then runs `gh pr ready` with the job token,
+including when the Claude step did not succeed.
 
 - Codex reviews the PR on its own when it is opened and on every later push.
   The workflow does not post `@codex review`.

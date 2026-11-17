@@ -17,6 +17,8 @@ jobs:
             && github.event.comment.user.login == 'chatgpt-codex-connector[bot]'
             && contains(github.event.comment.body, 'codex-review-state:v1')
         runs-on: ubuntu-latest
+        # The Dependency Review wait below is 90 minutes.
+        timeout-minutes: 100
         outputs:
             action: ${{ steps.decide.outputs.action }}
             pr: ${{ steps.decide.outputs.pr }}
@@ -159,16 +161,44 @@ jobs:
                       return 1
                   }
 
-                  # The end of the latest successful Dependency Review run, or nothing.
+                  # updated_at of the latest completed Dependency Review run on the branch,
+                  # or nothing. Skipped runs did not review (a follow-up push, for example).
+                  # A failed or cancelled run does not fall back to an older success.
+                  # The run's commit must still be on this pull request:
+                  # after Renovate recreates the branch, an older run is not round 1.
                   dependency_review_baseline() {
                       local branch="$1"
-                      gh api --paginate -X GET \
+                      local latest updated conclusion head
+                      latest="$(gh api --paginate -X GET \
                           "/repos/${REPO}/actions/workflows/dependency-review.yaml/runs" \
                           -f "branch=${branch}" \
                           -f per_page=100 \
-                          --jq '.workflow_runs[] | select(.conclusion == "success") | .updated_at' \
+                          --jq '.workflow_runs[]
+                              | select(.status == "completed"
+                                  and .conclusion != null
+                                  and .conclusion != "skipped")
+                              | [.updated_at, .conclusion, .head_sha] | @tsv' \
                           | sort \
-                          | tail -n 1
+                          | tail -n 1)"
+                      if [ -z "${latest}" ]; then
+                          echo "Dependency Review has no completed run on ${branch}." >&2
+                          return 0
+                      fi
+                      IFS=$'\t' read -r updated conclusion head <<< "${latest}"
+                      if [ "${conclusion}" != "success" ]; then
+                          echo "The latest Dependency Review run on ${branch} finished as ${conclusion}." >&2
+                          return 0
+                      fi
+                      if ! [[ "${head}" =~ ^[0-9a-f]{40}$ ]]; then
+                          echo "The latest Dependency Review run has no commit id." >&2
+                          return 0
+                      fi
+                      if ! gh api --paginate "/repos/${REPO}/pulls/${PR}/commits" --jq '.[].sha' \
+                          | grep -qx "${head}"; then
+                          echo "The latest Dependency Review run (${head}) is not a commit on this pull request." >&2
+                          return 0
+                      fi
+                      printf '%s\n' "${updated}"
                   }
 
                   # Prints the round for a commit Codex has reviewed.
@@ -302,7 +332,8 @@ jobs:
 
                           # Codex reviews the Renovate commit on its own, while Dependency Review
                           # may still push a follow-up. Wait for that run, then read the tip again.
-                          # The loop starts only after a successful Dependency Review run.
+                          # The loop starts only when the latest completed Dependency Review run
+                          # succeeded and its commit is still on the pull request.
                           if [ "${kind}" = "dependency" ] \
                               && [ "${code_outcome}" != "pending" ] \
                               && [ "${code_outcome}" != "absent" ] \
