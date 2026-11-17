@@ -179,6 +179,7 @@ In that run:
   Apply an earlier decision only when `authorAssociation` is `OWNER`, `MEMBER`, or `COLLABORATOR`
   and the author login does not end in `[bot]`.
   Ignore a comment that requests `@codex review`.
+  The review loop does not use those comments.
   Cite the comment you apply in the report.
   When Renovate recreated the branch, do not raise that decision as **NEEDS HUMAN** again.
 - Never merge `main` into the branch or rebase it.
@@ -191,7 +192,7 @@ In that run:
 - Never merge, approve, or close the PR,
   and never edit `.github/`, `.claude/`, or `.mcp.json`.
 - Do not post a comment containing `@codex`.
-  After this job, the workflow asks Codex to review the branch.
+  Codex reviews the branch on its own; this job does not request a review.
 - Post the report from step 9 as the PR comment,
   starting with the verdict:
   **Ready to merge** (with the squash-merge title),
