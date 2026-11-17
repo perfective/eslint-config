@@ -12,7 +12,8 @@ provides rules for Array functions and methods.
 | `link:{eslint-plugin-array-func}#from-map[array-func/from-map]`
 | Yes
 | Yes
-| Warning
+| Off
+4+| Use unicorn/prefer-array-from-map.
 
 | `link:{eslint-plugin-array-func}#no-unnecessary-this-arg[array-func/no-unnecessary-this-arg]`
 | Yes

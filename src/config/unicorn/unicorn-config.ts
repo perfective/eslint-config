@@ -26,7 +26,11 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/comment-content': ['warn', {
                 checkUniformCase: true,
                 extendDefaultReplacements: true,
-                replacements: {},
+                replacements: {
+                    // Conflicts with unicorn/name-replacements.
+                    '\\bapplication\\b(?!/)': false,
+                    '\\bapplications\\b': false,
+                },
                 ignore: [],
             }],
             // Conflicts with arrow-body-style.
@@ -36,9 +40,24 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 checkVariables: 'always',
                 checkArguments: 'always',
                 checkFunctions: 'always',
-                // Methods and fields often implement external APIs (for example, ESLint rule options).
-                checkMethods: 'never',
-                checkFields: 'never',
+                // Methods and fields often implement external APIs (for example, ESLint rule options),
+                // so they are not required to have a prefix, but a prefix must still be correct.
+                checkMethods: 'prohibit',
+                checkFields: 'prohibit',
+                prefixes: {
+                    is: true,
+                    are: true,
+                    has: true,
+                    have: true,
+                    can: true,
+                    should: true,
+                    was: true,
+                    were: true,
+                    does: true,
+                    did: true,
+                    will: true,
+                    requires: true,
+                },
                 wrappers: {},
                 ignore: [],
             }],
@@ -81,11 +100,21 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/empty-brace-spaces': 'warn',
             'unicorn/error-message': 'error',
             'unicorn/escape-case': ['warn', 'uppercase'],
-            'unicorn/expiring-todo-comments': 'error',
+            'unicorn/expiring-todo-comments': ['error', {
+                terms: ['todo', 'fixme', 'xxx'],
+                ignore: [],
+                checkDates: true,
+                // A passed date must not fail unrelated pull requests.
+                checkDatesOnPullRequests: false,
+                // TODO comments without an expiration condition are allowed.
+                allowWarningComments: true,
+            }],
             'unicorn/explicit-length-check': 'warn',
             'unicorn/explicit-timer-delay': ['warn', 'always'],
             'unicorn/filename-case': ['error', {
                 case: 'kebabCase',
+                checkDirectories: true,
+                directoryRoots: [],
             }],
             // Extends id-match, which is off.
             'unicorn/id-match': 'off',
@@ -104,6 +133,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             // Use logical-assignment-operators.
             'unicorn/logical-assignment-operators': 'off',
             'unicorn/max-nested-calls': ['error', {
+                // 1 bans even foo(bar()). 3 matches the complexity: 3 limit.
                 max: 3,
             }],
             'unicorn/name-replacements': ['warn', unicornPreventAbbreviations()],
@@ -156,7 +186,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-duplicate-logical-operands': 'warn',
             'unicorn/no-duplicate-loops': 'error',
             'unicorn/no-duplicate-set-values': 'error',
-            'unicorn/no-empty-file': 'error',
+            'unicorn/no-empty-file': ['error', {
+                allowComments: false,
+            }],
             // Applies only to Markdown files.
             'unicorn/no-empty-link-text': 'off',
             'unicorn/no-error-property-assignment': 'error',
@@ -202,7 +234,8 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             }],
             'unicorn/no-late-current-target-access': 'error',
             'unicorn/no-late-event-control': 'error',
-            'unicorn/no-leading-empty-lines': 'warn',
+            // Use @stylistic/no-multiple-empty-lines.
+            'unicorn/no-leading-empty-lines': 'off',
             'unicorn/no-lonely-if': 'warn',
             'unicorn/no-loop-iterable-mutation': 'error',
             // Applies only to CSS, JSON, TOML, and SOML files.
@@ -279,7 +312,10 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-unnecessary-slice-end': 'warn',
             'unicorn/no-unnecessary-splice': 'warn',
             'unicorn/no-unnecessary-string-trim': 'warn',
-            'unicorn/no-unreadable-array-destructuring': 'error',
+            'unicorn/no-unreadable-array-destructuring': ['error', {
+                // 0 also bans a single skipped element, as in Object.entries() callbacks ([, value]).
+                maximumIgnoredElements: 1,
+            }],
             'unicorn/no-unreadable-for-of-expression': 'error',
             'unicorn/no-unreadable-iife': 'error',
             'unicorn/no-unreadable-new-expression': 'error',
@@ -295,7 +331,8 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-unused-iterator-helper': 'error',
             'unicorn/no-unused-properties': 'off',
             'unicorn/no-url-in-search-params': 'error',
-            'unicorn/no-useless-boolean-cast': 'warn',
+            // Conflicts with @typescript-eslint/strict-boolean-expressions.
+            'unicorn/no-useless-boolean-cast': 'off',
             // Use @typescript-eslint/no-unnecessary-type-conversion.
             'unicorn/no-useless-coercion': 'off',
             'unicorn/no-useless-collection-argument': 'warn',
@@ -304,8 +341,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-useless-concat': 'off',
             'unicorn/no-useless-continue': 'warn',
             'unicorn/no-useless-delete-check': 'warn',
-            // Use no-else-return.
-            'unicorn/no-useless-else': 'off',
+            'unicorn/no-useless-else': 'warn',
             'unicorn/no-useless-error-capture-stack-trace': 'warn',
             'unicorn/no-useless-fallback-in-spread': 'warn',
             'unicorn/no-useless-iterator-to-array': 'warn',
@@ -345,6 +381,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 number: {
                     minimumDigits: 6,
                     groupLength: 3,
+                    fractionGroupLength: 3,
                 },
             }],
             // Use operator-assignment.
@@ -367,8 +404,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-array-flat-map': 'off',
             // Requires ECMAScript 2024
             'unicorn/prefer-array-from-async': 'off',
-            // Use array-func/from-map.
-            'unicorn/prefer-array-from-map': 'off',
+            'unicorn/prefer-array-from-map': 'warn',
             'unicorn/prefer-array-from-range': 'warn',
             'unicorn/prefer-array-index-of': 'warn',
             'unicorn/prefer-array-iterable-methods': 'warn',
@@ -376,7 +412,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-array-slice': 'error',
             'unicorn/prefer-array-some': 'error',
             'unicorn/prefer-at': 'off',
-            // See promise/prefer-await-to-then.
+            // Conflicts with the Promises-over-async/await convention.
             'unicorn/prefer-await': 'off',
             'unicorn/prefer-bigint-literals': 'warn',
             'unicorn/prefer-blob-reading-methods': 'error',
@@ -392,7 +428,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             // Conflicts with no-continue.
             'unicorn/prefer-continue': 'off',
             'unicorn/prefer-date-now': 'warn',
-            'unicorn/prefer-default-parameters': ['warn', {
+            'unicorn/prefer-default-parameters': ['error', {
                 checkFallbackExpressions: true,
             }],
             'unicorn/prefer-direct-iteration': 'warn',
@@ -405,7 +441,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-dom-node-html-methods': 'off',
             'unicorn/prefer-dom-node-remove': 'warn',
             'unicorn/prefer-dom-node-replace-children': 'warn',
-            'unicorn/prefer-dom-node-text-content': 'warn',
+            'unicorn/prefer-dom-node-text-content': 'error',
             'unicorn/prefer-early-return': ['warn', {
                 maximumStatements: 0,
                 checkShortBodies: true,
@@ -415,7 +451,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-error-is-error': 'off',
             'unicorn/prefer-escaped-irregular-whitespace': 'warn',
             'unicorn/prefer-event-target': 'error',
-            'unicorn/prefer-export-from': 'warn',
+            'unicorn/prefer-export-from': ['warn', {
+                checkUsedVariables: true,
+            }],
             'unicorn/prefer-flat-math-min-max': 'warn',
             // Requires ECMAScript 2026
             'unicorn/prefer-get-or-insert-computed': 'off',
@@ -491,10 +529,13 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             // Requires ECMAScript 2024
             'unicorn/prefer-promise-with-resolvers': 'off',
             'unicorn/prefer-prototype-methods': 'warn',
-            'unicorn/prefer-query-selector': 'warn',
+            'unicorn/prefer-query-selector': ['warn', {
+                allowWithVariables: false,
+            }],
             'unicorn/prefer-queue-microtask': ['warn', {
-                checkSetImmediate: true,
-                checkSetTimeout: true,
+                // The fix moves a macrotask to a microtask, which changes the execution order.
+                checkSetImmediate: false,
+                checkSetTimeout: false,
             }],
             'unicorn/prefer-reflect-apply': 'warn',
             // Requires ECMAScript 2025
@@ -503,7 +544,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-regexp-test': 'off',
             'unicorn/prefer-response-static-json': 'warn',
             'unicorn/prefer-scoped-selector': 'error',
-            'unicorn/prefer-set-has': 'warn',
+            'unicorn/prefer-set-has': ['warn', {
+                minimumItems: 0,
+            }],
             // Requires ECMAScript 2025
             'unicorn/prefer-set-methods': 'off',
             'unicorn/prefer-set-size': 'warn',
@@ -513,6 +556,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-simple-condition-first': 'warn',
             'unicorn/prefer-simple-sort-comparator': 'error',
             'unicorn/prefer-simplified-conditions': ['warn', {
+                // 'expand' overlaps unicorn/no-negated-comparison with checkLogicalExpressions.
                 negatedConditions: 'simplify',
             }],
             'unicorn/prefer-single-array-predicate': 'error',
@@ -581,9 +625,8 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/require-post-message-target-origin': 'error',
             'unicorn/require-proxy-trap-boolean-return': 'warn',
             'unicorn/require-text-decoder-streaming': 'error',
-            'unicorn/single-line-block-comment-style': ['warn', 'multiline', {
-                ignore: [],
-            }],
+            // Use @stylistic/multiline-comment-style and jsdoc/multiline-blocks.
+            'unicorn/single-line-block-comment-style': 'off',
             'unicorn/string-content': 'off',
             'unicorn/switch-case-braces': 'off',
             'unicorn/switch-case-break-position': 'warn',

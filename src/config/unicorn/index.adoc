@@ -39,6 +39,8 @@ Use `eslint-plugin-regexp` instead.
 |
 | Yes
 | Warning
+4+| The `application` and `applications` shortenings are disabled,
+as they conflict with `unicorn/name-replacements`.
 
 | `link:{eslint-unicorn-rules}/consistent-arrow-return-style.md[unicorn/consistent-arrow-return-style]`
 |
@@ -55,8 +57,9 @@ Use `eslint-plugin-regexp` instead.
 | Yes
 | Yes
 | Warning
-4+| Methods and fields are not checked,
-as they often implement external APIs (for example, ESLint rule options).
+4+| Methods and fields are not required to have a prefix,
+as they often implement external APIs (for example, ESLint rule options),
+but a boolean prefix on them must be correct.
 
 | `link:{eslint-unicorn-rules}/consistent-class-member-order.md[unicorn/consistent-class-member-order]`
 | Yes
@@ -164,6 +167,9 @@ as they often implement external APIs (for example, ESLint rule options).
 | Yes
 |
 | Error
+4+| Expiration dates are not checked on pull requests,
+so a passed date does not fail unrelated pull requests.
+TODO comments without an expiration condition are allowed.
 
 | `link:{eslint-unicorn-rules}/explicit-length-check.md[unicorn/explicit-length-check]`
 | Yes
@@ -223,6 +229,7 @@ as they often implement external APIs (for example, ESLint rule options).
 | Yes
 |
 | Error
+4+| Allows up to 3 nested calls (`1` bans even `foo(bar())`), matching the `complexity: 3` limit.
 
 | `link:{eslint-unicorn-rules}/name-replacements.md[unicorn/name-replacements]`
 | Yes
@@ -625,7 +632,8 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | `link:{eslint-unicorn-rules}/no-leading-empty-lines.md[unicorn/no-leading-empty-lines]`
 | Yes
 | Yes
-| Warning
+| Off
+4+| Use @stylistic/no-multiple-empty-lines.
 
 | `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]`
 | Yes
@@ -919,6 +927,7 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 | Partially
 | Error
+4+| Allows one skipped element, as in `Object.entries()` callbacks (`[, value]`).
 
 | `link:{eslint-unicorn-rules}/no-unreadable-for-of-expression.md[unicorn/no-unreadable-for-of-expression]`
 | Yes
@@ -998,7 +1007,8 @@ as they include pure helpers that build exported constants (for example, rule op
 | `link:{eslint-unicorn-rules}/no-useless-boolean-cast.md[unicorn/no-useless-boolean-cast]`
 | Yes
 | Yes
-| Warning
+| Off
+4+| Conflicts with @typescript-eslint/strict-boolean-expressions.
 
 | `link:{eslint-unicorn-rules}/no-useless-coercion.md[unicorn/no-useless-coercion]`
 | Yes
@@ -1035,8 +1045,7 @@ as they include pure helpers that build exported constants (for example, rule op
 | `link:{eslint-unicorn-rules}/no-useless-else.md[unicorn/no-useless-else]`
 | Yes
 | Yes
-| Off
-4+| Use no-else-return.
+| Warning
 
 | `link:{eslint-unicorn-rules}/no-useless-error-capture-stack-trace.md[unicorn/no-useless-error-capture-stack-trace]`
 | Yes
@@ -1194,8 +1203,7 @@ as they include pure helpers that build exported constants (for example, rule op
 | `link:{eslint-unicorn-rules}/prefer-array-from-map.md[unicorn/prefer-array-from-map]`
 | Yes
 | Yes
-| Off
-4+| Use array-func/from-map.
+| Warning
 
 | `link:{eslint-unicorn-rules}/prefer-array-from-range.md[unicorn/prefer-array-from-range]`
 | Yes
@@ -1237,7 +1245,7 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 |
 | Off
-4+| See promise/prefer-await-to-then.
+4+| Conflicts with the Promises-over-async/await convention.
 
 | `link:{eslint-unicorn-rules}/prefer-bigint-literals.md[unicorn/prefer-bigint-literals]`
 | Yes
@@ -1292,8 +1300,8 @@ as they include pure helpers that build exported constants (for example, rule op
 
 | `link:{eslint-unicorn-rules}/prefer-default-parameters.md[unicorn/prefer-default-parameters]`
 | Yes
-| Yes
-| Warning
+|
+| Error
 
 | `link:{eslint-unicorn-rules}/prefer-direct-iteration.md[unicorn/prefer-direct-iteration]`
 | Yes
@@ -1335,8 +1343,8 @@ as they include pure helpers that build exported constants (for example, rule op
 
 | `link:{eslint-unicorn-rules}/prefer-dom-node-text-content.md[unicorn/prefer-dom-node-text-content]`
 | Yes
-| Yes
-| Warning
+|
+| Error
 
 | `link:{eslint-unicorn-rules}/prefer-early-return.md[unicorn/prefer-early-return]`
 | Yes
@@ -1644,6 +1652,8 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 | Yes
 | Warning
+4+| `setTimeout()` and `setImmediate()` are not checked,
+as the fix moves a macrotask to a microtask, which changes the execution order.
 
 | `link:{eslint-unicorn-rules}/prefer-reflect-apply.md[unicorn/prefer-reflect-apply]`
 | Yes
@@ -1712,6 +1722,8 @@ as they include pure helpers that build exported constants (for example, rule op
 | Yes
 | Yes
 | Warning
+4+| Uses `simplify` for negated conditions,
+as `expand` overlaps `unicorn/no-negated-comparison` with `checkLogicalExpressions`.
 
 | `link:{eslint-unicorn-rules}/prefer-single-array-predicate.md[unicorn/prefer-single-array-predicate]`
 | Yes
@@ -1960,7 +1972,8 @@ is only supported by the latest browsers.
 | `link:{eslint-unicorn-rules}/single-line-block-comment-style.md[unicorn/single-line-block-comment-style]`
 | Yes
 | Yes
-| Warning
+| Off
+4+| Use @stylistic/multiline-comment-style and jsdoc/multiline-blocks.
 
 | `link:{eslint-unicorn-rules}/string-content.md[unicorn/string-content]`
 |

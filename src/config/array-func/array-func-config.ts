@@ -10,7 +10,8 @@ export function arrayFuncConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'array-func': eslintPluginArrayFunc,
         },
         rules: {
-            'array-func/from-map': 'warn',
+            // Use unicorn/prefer-array-from-map.
+            'array-func/from-map': 'off',
             'array-func/no-unnecessary-this-arg': 'error',
             'array-func/prefer-array-from': 'warn',
             'array-func/avoid-reverse': 'warn',
