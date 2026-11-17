@@ -15,7 +15,9 @@ export const eslintPossibleProblemsRules: Linter.RulesRecord = {
     'no-compare-neg-zero': 'error',
     'no-cond-assign': ['error', 'always'],
     'no-const-assign': 'error',
-    'no-constant-binary-expression': 'error',
+    'no-constant-binary-expression': ['error', {
+        checkRelationalComparisons: true,
+    }],
     'no-constant-condition': 'error',
     'no-constructor-return': 'error',
     'no-control-regex': 'error',
@@ -68,7 +70,9 @@ export const eslintPossibleProblemsRules: Linter.RulesRecord = {
     // TypeScript compiler checks defined symbols
     'no-undef': 'off',
     'no-unexpected-multiline': 'error',
-    'no-unmodified-loop-condition': 'error',
+    'no-unmodified-loop-condition': ['error', {
+        checkConditionalExpressions: true,
+    }],
     'no-unreachable': 'error',
     'no-unreachable-loop': 'error',
     'no-unsafe-finally': 'error',

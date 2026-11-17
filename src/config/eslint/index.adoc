@@ -35,7 +35,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-class-assign[no-class-assign]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-compare-neg-zero[no-compare-neg-zero]`
@@ -51,7 +51,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-constant-binary-expression[no-constant-binary-expression]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-constant-condition[no-constant-condition]`
@@ -119,7 +119,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-inner-declarations[no-inner-declarations]`
-| Recommended
+|
 | Error
 
 | `link:{eslint-rules}/no-invalid-regexp[no-invalid-regexp]`
@@ -139,11 +139,11 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-new-native-nonconstructor[no-new-native-nonconstructor]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-new-symbol[no-new-symbol]`
-| Recommended
+|
 | Error
 
 | `link:{eslint-rules}/no-obj-calls[no-obj-calls]`
@@ -183,7 +183,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-unassigned-vars[no-unassigned-vars]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-undef[no-undef]`
@@ -220,7 +220,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-unused-private-class-members[no-unused-private-class-members]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-unused-vars[no-unused-vars]`
@@ -232,7 +232,7 @@ The link:{eslint-rules}[rules] provided by ESLint.
 | Error
 
 | `link:{eslint-rules}/no-useless-assignment[no-useless-assignment]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-useless-backreference[no-useless-backreference]`
@@ -463,7 +463,7 @@ Using `complexity` rule instead to keep the functions simple.
 | Error
 
 | `link:{eslint-rules}/no-empty-static-block[no-empty-static-block]`
-|
+| Recommended
 | Error
 
 | `link:{eslint-rules}/no-eq-null[no-eq-null]`
@@ -824,7 +824,7 @@ Using `complexity` rule instead to keep the functions simple.
 | Warning
 
 | `link:{eslint-rules}/preserve-caught-error[preserve-caught-error]`
-|
+| Recommended
 | Off
 3+| Requires ECMAScript 2022 and is not compatible with `@perfectice/common/error` `Exception` and functions.
 

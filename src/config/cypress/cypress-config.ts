@@ -43,7 +43,10 @@ function perfectiveRules(): Linter.RulesRecord {
         'import-x/no-extraneous-dependencies': ['error', importNoExtraneousDependencies({
             devDependencies: [cypressFiles],
         })],
-        'max-nested-callbacks': ['error', 4],
+        'max-nested-callbacks': ['error', {
+            max: 4,
+            checkConstructorCallCallbacks: true,
+        }],
         'new-cap': ['error', {
             // These are functions from cypress-cucumber-preprocessor/steps
             capIsNewExceptions: ['Given', 'When', 'Then', 'And', 'But', 'Before', 'After'],
