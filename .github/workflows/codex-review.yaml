@@ -13,13 +13,13 @@ on:
         types: [completed]
 
 jobs:
-    route:
-        name: Decide whether Claude should respond
-        # Every PR comment starts a run; only the Codex summary on a Renovate PR
-        # or on a PR that Claude opened for an issue gets past this condition.
-        # A Dependency Review run gets past it when it succeeded on a branch of this repository
-        # (a run whose review job was skipped, for example after Claude's follow-up push, does not).
-        # There is no workflow-level concurrency: a skipped run would cancel a pending Codex run in the same group.
+    # Resolves the pull request number before `route` takes the concurrency group.
+    # A `workflow_run` payload often has no pull request, so the number comes from the branch.
+    # Both events then use `codex-review-route-<number>`. A branch-name fallback would not match
+    # the issue comment's group, so the two would not cancel each other.
+    # The condition is here, not on the workflow: a skipped run must not cancel a pending route.
+    route-key:
+        name: Name the route
         if: >-
             github.event_name == 'issue_comment'
             && github.event.issue.pull_request
@@ -30,6 +30,57 @@ jobs:
             && github.event.workflow_run.event == 'pull_request'
             && github.event.workflow_run.conclusion == 'success'
             && github.event.workflow_run.head_repository.full_name == github.repository
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        outputs:
+            group: ${{ steps.key.outputs.group }}
+            pr: ${{ steps.key.outputs.pr }}
+        permissions:
+            pull-requests: read
+
+        steps:
+            - name: Use the pull request number
+              id: key
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  REPO: ${{ github.repository }}
+                  OWNER: ${{ github.repository_owner }}
+                  EVENT: ${{ github.event_name }}
+                  PR: ${{ github.event.issue.number }}
+                  RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+                  RUN_BRANCH: ${{ github.event.workflow_run.head_branch }}
+              run: |
+                  set -euo pipefail
+                  number="${PR}"
+                  if [ "${EVENT}" = "workflow_run" ]; then
+                      number="${RUN_PR}"
+                      if [ -z "${number}" ] && [ -n "${RUN_BRANCH}" ]; then
+                          number="$(gh api -X GET "/repos/${REPO}/pulls" \
+                              -f state=open -f "head=${OWNER}:${RUN_BRANCH}" --jq '.[0].number // ""')"
+                      fi
+                  fi
+                  if ! [[ "${number}" =~ ^[0-9]+$ ]]; then
+                      echo "No pull request number for this event."
+                      echo "group=codex-review-route-none" >> "${GITHUB_OUTPUT}"
+                      echo "pr=" >> "${GITHUB_OUTPUT}"
+                      exit 0
+                  fi
+                  echo "group=codex-review-route-${number}" >> "${GITHUB_OUTPUT}"
+                  echo "pr=${number}" >> "${GITHUB_OUTPUT}"
+
+    route:
+        name: Decide whether Claude should respond
+        needs: route-key
+        # A skipped `route-key` (any other comment, or a skipped Dependency Review run) does not run this job,
+        # so it does not cancel the route for this pull request.
+        if: >-
+            needs.route-key.result == 'success'
+            && needs.route-key.outputs.group != 'codex-review-route-none'
+        # One route per PR: Codex edits its summary several times per review,
+        # and only the latest edit (or the latest finished Dependency Review run) matters.
+        concurrency:
+            group: ${{ needs.route-key.outputs.group }}
+            cancel-in-progress: true
         runs-on: ubuntu-latest
         timeout-minutes: 10
         outputs:
@@ -58,14 +109,15 @@ jobs:
                   OWNER: ${{ github.repository_owner }}
                   NAME: ${{ github.event.repository.name }}
                   EVENT: ${{ github.event_name }}
+                  # The same number `route-key` put in the concurrency group, for both event types.
+                  KEY_PR: ${{ needs.route-key.outputs.pr }}
                   # issue_comment: the Codex summary that changed.
                   PR: ${{ github.event.issue.number }}
                   BODY: ${{ github.event.comment.body }}
                   # Empty for a new comment; the previous body for an edited one.
                   PREVIOUS: ${{ github.event.changes.body.from }}
                   COMMENT: ${{ github.event.comment.html_url }}
-                  # workflow_run: the Dependency Review run that finished.
-                  RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+                  # workflow_run: the branch, when the summary has not been posted yet.
                   RUN_BRANCH: ${{ github.event.workflow_run.head_branch }}
               run: |
                   set -euo pipefail
@@ -73,11 +125,8 @@ jobs:
                   # There is no previous body, so the result is never "already handled":
                   # a hold or a skip on an earlier summary edit is decided again here.
                   if [ "${EVENT}" = "workflow_run" ]; then
-                      PR="${RUN_PR}"
-                      if [ -z "${PR}" ]; then
-                          PR="$(gh api -X GET "/repos/${REPO}/pulls" \
-                              -f state=open -f "head=${OWNER}:${RUN_BRANCH}" --jq '.[0].number // ""')"
-                      fi
+                      # `route-key` already resolved this, including when the payload has no pull request.
+                      PR="${KEY_PR}"
                       BODY=
                       PREVIOUS=
                       COMMENT=

@@ -331,6 +331,10 @@ Handling a Renovate PR:
   Instead, a successful Dependency Review run starts `Codex Review` again (`workflow_run`)
   with the latest Codex summary on the pull request, with or without a new commit,
   and that run is never treated as already handled.
+  One route job runs per pull request (`codex-review-route-<number>`, `cancel-in-progress`),
+  so a later summary edit replaces a route job that has not finished.
+  A `workflow_run` payload with no pull request number uses that same number,
+  found from the branch, not the branch name.
   It starts the loop only when the latest completed run succeeded
   and that run's commit is still on the pull request.
   The round is how many distinct commits on the pull request
