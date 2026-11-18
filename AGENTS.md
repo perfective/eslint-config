@@ -362,6 +362,12 @@ Handling a Renovate PR:
   Claude replies on each thread it fixes and includes the full commit SHA.
   The workflow resolves that thread only when the new commit descends from the reviewed commit
   and the reply contains that full SHA and does not contain **NEEDS HUMAN**.
+  Codex threads can stay open on earlier commits, for example on the Renovate commit
+  that Dependency Review's follow-up already fixed.
+  Claude replies "Already fixed in `<sha>`" on such a thread, with the full reviewed commit SHA,
+  and changes nothing for it; the workflow resolves that thread too.
+  When every open finding was already fixed, Claude does not commit,
+  and the workflow comments that the loop is finished.
   The loop stops after 3 rounds, which stops the on-every-push cycle.
   If Claude does not push, and an open Codex thread does not already ask for a decision,
   the workflow comments and adds `help wanted`.
