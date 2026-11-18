@@ -314,8 +314,6 @@ Handling a Renovate PR:
   the `claude-review` label alone reruns on the same outdated test merge.
   When the job succeeds, Codex reviews the branch on its own.
   The workflows do not post `@codex review` and do not use a personal access token.
-  After this change is on `main`, delete the `CODEX_REVIEW_TOKEN` secret
-  and revoke the personal access token it holds.
 - `Codex Review` then runs on the Codex summary comment.
   Codex (the ChatGPT Codex GitHub App, `chatgpt-codex-connector[bot]`) posts one summary comment per PR
   and edits it as reviews start and finish.
