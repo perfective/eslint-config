@@ -343,14 +343,14 @@ function unusedExceptions(checks: Map<Check, string[]>): string[] {
  * Returns the rule name of a violation message.
  */
 function ruleOf(violation: string): string {
-    return violation.split(':')[0];
+    return violation.split(':', 1)[0];
 }
 
 /**
  * Returns non-deprecated rules of the plugins that are not configured.
  */
 function missingRules(audit: Audit): string[] {
-    return Array.from(audit.pluginRules.entries())
+    return Array.from(audit.pluginRules)
         .filter(([rule, meta]) => !isDeprecated(meta) && !audit.configuredRules.has(rule))
         .map(([rule]) => `${rule}: add it to the plugin config and its index.adoc table`);
 }
@@ -486,12 +486,12 @@ function hasDifferentSeverity(documented: DocumentedRule, severities: Set<Severi
  * Returns rules with severities that do not follow the convention for their fixability.
  */
 function severityConventionViolations(audit: Audit): string[] {
-    return Array.from(audit.configuredRules.entries(), ([rule, severities]): [string, Severity[], string] => [
+    return Array.from(audit.configuredRules, ([rule, severities]): [string, Severity[], string] => [
         rule,
         Array.from(severities).filter(level => level !== 'off'),
         fixability(audit, rule),
     ])
-        .filter(([, levels, fixable]) => !levels.every(level => isConventionalSeverity(level, fixable)))
+        .filter(([, levels, fixable]) => levels.some(level => !isConventionalSeverity(level, fixable)))
         .map(([rule, levels, fixable]) => `${rule}: configured as "${levels.join('", "')}", `
             + `but its fixability is "${fixable}"`);
 }
@@ -516,7 +516,7 @@ function metadataViolations(audit: Audit): string[] {
 function availableRules(linterConfigs: Linter.Config[]): Map<string, RuleMeta> {
     const rules: Map<string, RuleMeta> = new Map(Array.from(
         // eslint-disable-next-line @typescript-eslint/no-deprecated -- The only API to read the core rules metadata.
-        builtinRules.entries(),
+        builtinRules,
         ([name, rule]): [string, RuleMeta] => [name, (rule.meta ?? {}) as RuleMeta],
     ));
     linterConfigs
@@ -685,7 +685,7 @@ function tableRows(file: string, content: string): DocumentedRule[] {
  * Updates the table parsing state with a given line.
  */
 function tableLine(file: string, state: TableState, line: string): void {
-    if (closesRow(line)) {
+    if (isRowEnd(line)) {
         completeRow(file, state);
         readHeader(state, line);
         return;
@@ -702,7 +702,7 @@ function tableLine(file: string, state: TableState, line: string): void {
 /**
  * Returns true when a line ends the current row: a table boundary, a header, or a span.
  */
-function closesRow(line: string): boolean {
+function isRowEnd(line: string): boolean {
     return line.startsWith('|===') || line.startsWith('| Rule |') || isSpan(line);
 }
 
@@ -839,7 +839,7 @@ function documentedSeverity(cell: string): Severity | null {
  * Returns the first word of a severity cell, with punctuation removed.
  */
 function severityWord(cell: string): string {
-    return (cell.split(/\s/u)[0] ?? '').toLowerCase().replace(/[^a-z]/gu, '');
+    return (cell.split(/\s/u, 1)[0] ?? '').toLowerCase().replace(/[^a-z]/gu, '');
 }
 
 /**
@@ -935,7 +935,7 @@ function precedingComments(lines: string[], index: number): string {
  * The ESLint core rules go first, then the rules of each plugin, sorted by name.
  */
 function metadataSnapshot(rules: Map<string, RuleMeta>): MetadataSnapshot {
-    return Object.fromEntries(Array.from(rules.entries())
+    return Object.fromEntries(Array.from(rules)
         .sort(([a], [b]) => (snapshotOrder(a) < snapshotOrder(b) ? -1 : 1))
         .map(([rule, meta]) => [rule, metadataFlags(meta)]));
 }
@@ -945,7 +945,7 @@ function metadataSnapshot(rules: Map<string, RuleMeta>): MetadataSnapshot {
  */
 function snapshotOrder(rule: string): string {
     const plugin = rulePlugin(rule);
-    return `${plugin === '' ? '0' : '1'}\u0000${plugin}\u0000${rule}`;
+    return `${plugin === '' ? '0' : '1'}\0${plugin}\0${rule}`;
 }
 
 /**
@@ -1005,7 +1005,7 @@ function snapshotComments(source: string): Map<string, string> {
  */
 function snapshotRule(line: string): string | null {
     const trimmed = line.trimStart();
-    return trimmed.startsWith('\'') ? (trimmed.split('\'')[1] ?? null) : null;
+    return trimmed.startsWith('\'') ? (trimmed.split('\'', 2)[1] ?? null) : null;
 }
 
 /**
@@ -1015,7 +1015,7 @@ function metadataChanges(reviewed: MetadataSnapshot, current: MetadataSnapshot):
     const reviewedRules = new Map(Object.entries(reviewed));
     const currentRules = new Map(Object.entries(current));
     return [
-        ...Array.from(currentRules.entries(), ([rule, flags]) => metadataChange(rule, reviewedRules.get(rule), flags))
+        ...Array.from(currentRules, ([rule, flags]) => metadataChange(rule, reviewedRules.get(rule), flags))
             .filter(change => change !== null),
         ...Array.from(reviewedRules.keys())
             .filter(rule => !currentRules.has(rule))
