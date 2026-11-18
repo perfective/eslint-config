@@ -247,7 +247,6 @@ jobs:
                       "Bash(git pull:*)"
                       "Bash(git commit:*)"
                       "Bash(git push:*)"
-                      "Bash(gh pr create --draft:*)"
 
             # The action reports success even when Claude did not run, for example when the workflow files
             # of a PR's test merge differ from the default branch (the Claude GitHub App refuses to run then).
@@ -273,10 +272,8 @@ jobs:
                   echo "::error::Claude did not run. See the workflow log of the Claude step."
                   exit 1
 
-            # `Bash(gh pr create --draft:*)` only blocks a command that starts with that prefix.
-            # `gh pr create --title … --draft` is still allowed by `Bash(gh pr create:*)`.
-            # This step marks a draft ready anyway, including when the Claude step did not succeed.
-            # Codex does not review drafts. `gh pr ready` uses this job's token.
+            # Codex does not review drafts: whatever `gh pr create` made, this step marks the PR ready,
+            # including when the Claude step did not succeed. `gh pr ready` uses this job's token.
             # Threads are resolved only when this run pushed commits onto an existing issue PR.
             - name: Prepare the issue PR for Codex
               if: ${{ !cancelled() }}

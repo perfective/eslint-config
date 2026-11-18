@@ -455,9 +455,7 @@ and removes it once Codex reviews the head.
 The Codex loop above also runs on a PR that the `Claude` workflow opened for an issue
 (author `claude[bot]`, branch `claude-issue-<number>-...` in this repository).
 Open that PR ready for review, not as a draft: Codex does not review drafts.
-The tool rule blocks `gh pr create --draft` only as a prefix,
-so `gh pr create --title ... --draft` can still create a draft.
-The workflow then runs `gh pr ready` with the job token,
+After the Claude step, the workflow runs `gh pr ready` on a draft with the job token,
 including when the Claude step did not succeed.
 
 - Codex reviews the PR on its own when it is opened and on every later push.
