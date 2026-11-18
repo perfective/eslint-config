@@ -4,21 +4,34 @@ on:
     # Its hidden `codex-review-state:v1` line names the reviewed commit and whether findings are unresolved.
     issue_comment:
         types: [created, edited]
+    # A Dependency Review run that finishes is a new result for a Renovate PR even without a new commit
+    # (for example, a rerun with the `claude-review` label that ends with "Ready to merge"),
+    # so it reads the latest Codex summary again.
+    # `workflow_run` runs from the default branch, like `issue_comment`.
+    workflow_run:
+        workflows: [Dependency Review]
+        types: [completed]
 
 jobs:
     route:
         name: Decide whether Claude should respond
         # Every PR comment starts a run; only the Codex summary on a Renovate PR
         # or on a PR that Claude opened for an issue gets past this condition.
+        # A Dependency Review run gets past it when it succeeded on a branch of this repository
+        # (a run whose review job was skipped, for example after Claude's follow-up push, does not).
         # There is no workflow-level concurrency: a skipped run would cancel a pending Codex run in the same group.
         if: >-
-            github.event.issue.pull_request
+            github.event_name == 'issue_comment'
+            && github.event.issue.pull_request
             && (github.event.issue.user.login == 'renovate[bot]' || github.event.issue.user.login == 'claude[bot]')
             && github.event.comment.user.login == 'chatgpt-codex-connector[bot]'
             && contains(github.event.comment.body, 'codex-review-state:v1')
+            || github.event_name == 'workflow_run'
+            && github.event.workflow_run.event == 'pull_request'
+            && github.event.workflow_run.conclusion == 'success'
+            && github.event.workflow_run.head_repository.full_name == github.repository
         runs-on: ubuntu-latest
-        # The Dependency Review wait below is 90 minutes.
-        timeout-minutes: 100
+        timeout-minutes: 10
         outputs:
             action: ${{ steps.decide.outputs.action }}
             pr: ${{ steps.decide.outputs.pr }}
@@ -29,6 +42,7 @@ jobs:
             kind: ${{ steps.decide.outputs.kind }}
             issue: ${{ steps.decide.outputs.issue }}
             lock: ${{ steps.decide.outputs.lock }}
+            comment: ${{ steps.decide.outputs.comment }}
         permissions:
             contents: read
             pull-requests: read
@@ -43,12 +57,49 @@ jobs:
                   REPO: ${{ github.repository }}
                   OWNER: ${{ github.repository_owner }}
                   NAME: ${{ github.event.repository.name }}
+                  EVENT: ${{ github.event_name }}
+                  # issue_comment: the Codex summary that changed.
                   PR: ${{ github.event.issue.number }}
                   BODY: ${{ github.event.comment.body }}
                   # Empty for a new comment; the previous body for an edited one.
                   PREVIOUS: ${{ github.event.changes.body.from }}
+                  COMMENT: ${{ github.event.comment.html_url }}
+                  # workflow_run: the Dependency Review run that finished.
+                  RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+                  RUN_BRANCH: ${{ github.event.workflow_run.head_branch }}
               run: |
                   set -euo pipefail
+                  # A finished Dependency Review run reads the latest Codex summary on its PR.
+                  # There is no previous body, so the result is never "already handled":
+                  # a hold or a skip on an earlier summary edit is decided again here.
+                  if [ "${EVENT}" = "workflow_run" ]; then
+                      PR="${RUN_PR}"
+                      if [ -z "${PR}" ]; then
+                          PR="$(gh api -X GET "/repos/${REPO}/pulls" \
+                              -f state=open -f "head=${OWNER}:${RUN_BRANCH}" --jq '.[0].number // ""')"
+                      fi
+                      BODY=
+                      PREVIOUS=
+                      COMMENT=
+                      if [[ "${PR}" =~ ^[0-9]+$ ]]; then
+                          summary="$(gh api --paginate "/repos/${REPO}/issues/${PR}/comments" \
+                              --jq '.[] | select(.user.login == "chatgpt-codex-connector[bot]")
+                                  | select(.body | contains("codex-review-state:v1"))
+                                  | {url: .html_url, body}' \
+                              | jq -s -c 'last // {}')"
+                          BODY="$(jq -r '.body // ""' <<<"${summary}")"
+                          COMMENT="$(jq -r '.url // ""' <<<"${summary}")"
+                      fi
+                      if [ -z "${BODY}" ]; then
+                          echo "No Codex summary on the pull request of ${RUN_BRANCH} yet."
+                          {
+                              echo "action=skip"
+                              echo "pr=${PR}"
+                              echo "lock=${PR}"
+                          } >> "${GITHUB_OUTPUT}"
+                          exit 0
+                      fi
+                  fi
                   # Codex reviews at most this many distinct commits.
                   # Claude addresses every review except the last.
                   max_reviews=3
@@ -132,13 +183,16 @@ jobs:
                       jq -r --arg slot "$2" --arg key "$3" '.[$slot][$key] // ""' <<<"${1:-null}"
                   }
 
-                  # 90 minutes: Dependency Review runs for up to 60, plus time spent queued.
-                  # A later Codex summary edit retries this job if the wait runs out.
-                  wait_for_dependency_review() {
+                  # Succeeds when no Dependency Review run is active on the branch.
+                  # It waits up to 2 minutes, for a run whose review job is skipped
+                  # (Claude's follow-up push, a label other than `claude-review`): those finish in seconds.
+                  # A run that is still reviewing makes this fail at once after that:
+                  # its completion starts this workflow again (`workflow_run`), so nothing waits for it here.
+                  dependency_review_idle() {
                       local branch="$1"
                       local attempt=0
                       local active
-                      while [ "${attempt}" -lt 180 ]; do
+                      while [ "${attempt}" -lt 8 ]; do
                           active="$(gh api --paginate -X GET \
                               "/repos/${REPO}/actions/workflows/dependency-review.yaml/runs" \
                               -f "branch=${branch}" \
@@ -155,9 +209,8 @@ jobs:
                           fi
                           echo "Dependency Review still has ${active} run(s) on ${branch}."
                           attempt=$((attempt + 1))
-                          sleep 30
+                          sleep 15
                       done
-                      echo "Dependency Review did not finish on ${branch}." >&2
                       return 1
                   }
 
@@ -331,22 +384,30 @@ jobs:
                           fi
 
                           # Codex reviews the Renovate commit on its own, while Dependency Review
-                          # may still push a follow-up. Wait for that run, then read the tip again.
+                          # may still push a follow-up. While a run is active, this waits for nothing:
+                          # the run's completion starts this workflow again with the latest summary.
                           # The loop starts only when the latest completed Dependency Review run
                           # succeeded and its commit is still on the pull request.
+                          # A failed run reports **NEEDS HUMAN** itself; the `claude-review` label reruns it,
+                          # and a successful rerun starts this workflow again, with or without a new commit.
                           if [ "${kind}" = "dependency" ] \
                               && [ "${code_outcome}" != "pending" ] \
                               && [ "${code_outcome}" != "absent" ] \
                               && [ "${code_outcome}" != "invalid" ] \
                               && [ "${sec_outcome}" != "pending" ] \
                               && [ "${sec_outcome}" != "invalid" ]; then
-                              echo "Waiting until Dependency Review has finished on ${branch}."
-                              wait_for_dependency_review "${branch}"
-                              pull="$(gh api "/repos/${REPO}/pulls/${PR}")"
-                              tip="$(jq -r '.head.sha' <<<"${pull}")"
-                              state="$(jq -r '.state' <<<"${pull}")"
-                              baseline="$(dependency_review_baseline "${branch}")"
-                              if [ "${state}" != "open" ]; then
+                              if ! dependency_review_idle "${branch}"; then
+                                  echo "Dependency Review is still running. Its completion reads this summary again."
+                                  hold=true
+                              else
+                                  pull="$(gh api "/repos/${REPO}/pulls/${PR}")"
+                                  tip="$(jq -r '.head.sha' <<<"${pull}")"
+                                  state="$(jq -r '.state' <<<"${pull}")"
+                                  baseline="$(dependency_review_baseline "${branch}")"
+                              fi
+                              if [ "${hold}" = "true" ]; then
+                                  :
+                              elif [ "${state}" != "open" ]; then
                                   echo "The pull request is no longer open."
                                   hold=true
                               elif [ -z "${baseline}" ]; then
@@ -464,6 +525,7 @@ jobs:
                       echo "kind=${kind}"
                       echo "issue=${issue}"
                       echo "lock=${lock}"
+                      echo "comment=${COMMENT}"
                   } >> "${GITHUB_OUTPUT}"
 
     report:
@@ -502,16 +564,13 @@ jobs:
                   ROUND: ${{ needs.route.outputs.round }}
                   STATUS: ${{ needs.route.outputs.status }}
                   KIND: ${{ needs.route.outputs.kind }}
-                  COMMENT: ${{ github.event.comment.html_url }}
+                  COMMENT: ${{ needs.route.outputs.comment }}
               run: |
                   set -euo pipefail
-                  # A Renovate PR restarts with Dependency Review, whose push Codex reviews.
-                  # An issue PR restarts when a new commit is pushed: Codex reviews every push.
-                  if [ "${KIND}" = "dependency" ]; then
-                      restart='add the `claude-review` label to restart the loop'
-                  else
-                      restart='push a commit to review again'
-                  fi
+                  # Codex reviews again on a new push or on a maintainer's review request.
+                  # The `claude-review` label alone does not help here:
+                  # the summary of this commit stays the same, so a rerun reads the same failed result.
+                  restart='ask Codex to review again (a new push, or a review request in a comment)'
                   if [ -n "${SHA}" ] && [ -n "${BRANCH}" ]; then
                       tip="$(gh api "/repos/${GH_REPO}/git/ref/heads/${BRANCH}" --jq '.object.sha')"
                       if [ "${tip}" != "${SHA}" ]; then
@@ -715,7 +774,8 @@ jobs:
               with:
                   claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
                   # The triggering comment is edited by the Codex GitHub App.
-                  allowed_bots: 'chatgpt-codex-connector[bot]'
+                  # A finished Dependency Review run that Renovate started has Renovate as its actor.
+                  allowed_bots: 'chatgpt-codex-connector[bot],renovate[bot]'
                   # The branch is already in this repository, and CI has run on it.
                   restrict_untrusted_prs: 'false'
                   use_commit_signing: true

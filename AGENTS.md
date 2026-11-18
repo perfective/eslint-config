@@ -47,7 +47,8 @@ RULE_AUDIT_UPDATE=true npm test             # Update src/config/rule-metadata.sn
 - CI (`.github/workflows/ci.yaml`) runs `lint:build`, `test:build`, and `dist` on Node 22.x, 24.x, and 26.x.
 - `Dependency Review` (`.github/workflows/dependency-review.yaml`) runs Claude Code with the `update-dependency` skill
   on Renovate PRs (see "Dependency maintenance").
-- `Codex Review` (`.github/workflows/codex-review.yaml`) runs on Codex's summary comment.
+- `Codex Review` (`.github/workflows/codex-review.yaml`) runs on Codex's summary comment,
+  and when a Dependency Review run succeeds.
   Codex reviews every push to a pull request.
   Claude addresses the findings, and the next push is reviewed again,
   until Codex has no unresolved findings or the review cap is reached.
@@ -325,8 +326,12 @@ Handling a Renovate PR:
   unless the security review on that summary starts or finishes; resolving threads does not count),
   only on Renovate PRs and Claude's issue PRs,
   and only when the reviewed commit is the branch tip.
-  On a Renovate PR it waits until Dependency Review has finished on that branch,
-  and it starts the loop only when the latest completed run succeeded
+  On a Renovate PR it does not act while Dependency Review is running on that branch
+  (it gives a run up to 2 minutes, so a run whose job is skipped can finish).
+  Instead, a successful Dependency Review run starts `Codex Review` again (`workflow_run`)
+  with the latest Codex summary on the pull request, with or without a new commit,
+  and that run is never treated as already handled.
+  It starts the loop only when the latest completed run succeeded
   and that run's commit is still on the pull request.
   The round is how many distinct commits on the pull request
   `chatgpt-codex-connector[bot]` has reviewed, up to the reviewed commit.
@@ -368,7 +373,10 @@ Handling a Renovate PR:
   The jobs in that group use `queue: max`: pending jobs wait in the order they started waiting (up to 100),
   so a later request does not cancel a waiting one, such as a loop step.
   To restart the loop on a Renovate PR, add the `claude-review` label.
-  Dependency Review runs again, and a commit it pushes is reviewed as round 1.
+  Dependency Review runs again; when it succeeds, `Codex Review` reads the latest summary again,
+  and a commit it pushes is reviewed as round 1.
+  After a failed Codex review, the summary does not change until Codex reviews again:
+  push a commit or ask Codex for a review in a comment.
   Codex automatic review must be on for this repository.
   In ChatGPT, open Codex settings, Code review:
   automatic review "Review all PRs", and the review trigger "On every push".
@@ -381,7 +389,8 @@ Handling a Renovate PR:
   when an open Renovate PR, or a Claude issue PR,
   has a head commit at least 2 hours old with no review from `chatgpt-codex-connector[bot]`.
   It comments once per head commit, with `GITHUB_TOKEN`, and it does not post `@codex review`.
-  `issue_comment` workflows run from the default branch, so this loop starts only after the workflow file is on `main`.
+  `issue_comment` and `workflow_run` workflows run from the default branch,
+  so this loop starts only after the workflow file is on `main`.
 - Once a PR has a follow-up commit, Renovate stops updating the branch.
   To get a newer version or resolve conflicts, tick the rebase checkbox in the PR:
   Renovate recreates the branch from scratch (dropping the follow-up commit), and the review runs again.
