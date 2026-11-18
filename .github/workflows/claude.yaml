@@ -112,7 +112,6 @@ jobs:
         timeout-minutes: 60
         outputs:
             codex-pr: ${{ steps.codex.outputs.pr }}
-            codex-round: ${{ steps.codex.outputs.round }}
             before: ${{ steps.codex.outputs.before }}
             after: ${{ steps.codex.outputs.after }}
 
@@ -171,7 +170,7 @@ jobs:
                   fi
 
             # The commits Claude pushes in this run come after this head.
-            # They decide whether the run asks Codex for the next review.
+            # They decide whether this run resolves Codex review threads.
             - name: Record the PR branch head
               if: needs.resolve.outputs.claude-pr != ''
               id: before
@@ -233,7 +232,7 @@ jobs:
                       "Bash(gh pr list:*)"
                       "Bash(gh pr edit * --add-label *)"
                       "Bash(gh pr edit * --remove-label *)"
-                      "Bash(gh pr create --draft:*)"
+                      "Bash(gh pr create:*)"
                       "Bash(gh release view:*)"
                       "Bash(gh api repos/*/pulls/*/comments*)"
                       "Bash(gh api repos/*/pulls/*/reviews*)"
@@ -273,23 +272,22 @@ jobs:
                   echo "::error::Claude did not run. See the workflow log of the Claude step."
                   exit 1
 
-            # The Codex review of a PR that Claude opened for an issue:
-            # round 1 when the PR has no round marker yet,
-            # and the next round when an `@claude` request on the PR pushed commits, up to the cap.
-            - name: Find the PR for the next Codex review
-              if: steps.claude.outputs.conclusion == 'success'
+            # Codex does not review drafts: whatever `gh pr create` made, this step marks the PR ready,
+            # including when the Claude step did not succeed. `gh pr ready` uses this job's token.
+            # Threads are resolved only when this run pushed commits onto an existing issue PR.
+            - name: Prepare the issue PR for Codex
+              if: ${{ !cancelled() }}
               id: codex
               working-directory: ${{ runner.temp }}
               env:
                   GH_TOKEN: ${{ github.token }}
+                  GH_REPO: ${{ github.repository }}
                   REPO: ${{ github.repository }}
                   NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
                   IS_PR: >-
                       ${{ (github.event.issue.pull_request || github.event.pull_request) && 'true' || 'false' }}
                   BRANCH: ${{ needs.resolve.outputs.branch }}
                   BEFORE: ${{ steps.before.outputs.sha }}
-                  # The same cap as `max_reviews` in the Codex Review workflow.
-                  MAX_REVIEWS: 3
               run: |
                   set -euo pipefail
                   # The PR itself, or the open PR from the issue branch (`claude-issue-<number>-...`).
@@ -316,24 +314,12 @@ jobs:
                       echo "No PR that Claude opened for an issue."
                       exit 0
                   fi
-                  # Through a file, not a pipe: `grep -q` can close the pipe early (a broken pipe fails it),
-                  # and a failed request must fail the step, not look like a PR without a marker.
-                  comment_file="${RUNNER_TEMP}/claude-pr-comments.txt"
-                  gh api --paginate "/repos/${REPO}/issues/${pr}/comments" --jq '.[].body' > "${comment_file}"
-                  # The round is the highest marker, as in the Codex Review workflow.
-                  round="$(grep -o '<!-- perfective-codex-round: [0-9][0-9]* -->' "${comment_file}" \
-                      | grep -o '[0-9][0-9]*' \
-                      | sort -n \
-                      | tail -1 \
-                      | sed 's/^0*//' || true)"
-                  if [ -z "${round}" ]; then
-                      echo "pr=${pr}" >> "${GITHUB_OUTPUT}"
-                      echo "round=1" >> "${GITHUB_OUTPUT}"
-                      exit 0
+                  if [ "$(gh api "/repos/${REPO}/pulls/${pr}" --jq '.draft')" = "true" ]; then
+                      gh pr ready "${pr}"
+                      echo "Marked PR #${pr} ready for review so Codex can review it."
                   fi
-                  # The loop already runs. Only a request on the PR itself can push to its branch.
+                  # A new PR has no Codex threads yet. Codex reviews it when it is opened.
                   if [ -z "${BEFORE}" ]; then
-                      echo "PR #${pr} already has a Codex review loop, and this run did not work on its branch."
                       exit 0
                   fi
                   after="$(gh api "/repos/${REPO}/git/ref/heads/${BRANCH}" --jq '.object.sha')"
@@ -342,24 +328,18 @@ jobs:
                       echo "Claude did not push commits to PR #${pr}."
                       exit 0
                   fi
-                  if [ "${round}" -ge "${MAX_REVIEWS}" ]; then
-                      echo "::notice::PR #${pr} had ${round} Codex reviews. Comment \`@codex review\` to review again."
-                      exit 0
-                  fi
                   {
                       echo "pr=${pr}"
-                      echo "round=$((round + 1))"
                       echo "before=${BEFORE}"
                       echo "after=${after}"
                   } >> "${GITHUB_OUTPUT}"
 
-    # Fresh runner: the Claude job cannot change the PATH or environment that uses the token.
-    request:
-        name: Request a Codex review
+    # Fresh runner: the Claude job cannot change the environment that resolves threads.
+    threads:
+        name: Resolve the threads Claude fixed
         needs: [resolve, claude]
         if: needs.claude.outputs.codex-pr != ''
-        # In the lock, so two runs for the same issue cannot both post the same round:
-        # the second one sees the marker of the first.
+        # In the same lock as the Claude job, so this does not overlap another writer on the branch.
         concurrency:
             group: claude-${{ needs.resolve.outputs.lock }}
             cancel-in-progress: false
@@ -371,39 +351,13 @@ jobs:
         timeout-minutes: 5
         permissions:
             contents: read # Compare the commits Claude pushed
-            pull-requests: write # Check the round marker, and resolve the threads Claude fixed
+            pull-requests: write # Resolve the threads Claude fixed
 
         steps:
-            # Another run in the lock may have posted this round already.
-            - name: Check the round marker
-              id: check
-              working-directory: ${{ runner.temp }}
-              env:
-                  GH_TOKEN: ${{ github.token }}
-                  GH_REPO: ${{ github.repository }}
-                  PR: ${{ needs.claude.outputs.codex-pr }}
-                  ROUND: ${{ needs.claude.outputs.codex-round }}
-              run: |
-                  set -euo pipefail
-                  comment_file="${RUNNER_TEMP}/claude-pr-comments.txt"
-                  gh api --paginate "/repos/${GH_REPO}/issues/${PR}/comments" --jq '.[].body' > "${comment_file}"
-                  round="$(grep -o '<!-- perfective-codex-round: [0-9][0-9]* -->' "${comment_file}" \
-                      | grep -o '[0-9][0-9]*' \
-                      | sort -n \
-                      | tail -1 \
-                      | sed 's/^0*//' || true)"
-                  if [ "${round:-0}" -ne $((ROUND - 1)) ]; then
-                      echo "PR #${PR} already has round ${round} of the Codex review loop."
-                      echo "current=false" >> "${GITHUB_OUTPUT}"
-                  else
-                      echo "current=true" >> "${GITHUB_OUTPUT}"
-                  fi
-
             # As in the Codex Review workflow: a thread is resolved only when Claude's last reply
             # names the full SHA of a commit it pushed in this run and does not ask for a decision.
-            # `continue-on-error` keeps a GraphQL failure from stopping the review request.
+            # `continue-on-error` keeps a GraphQL failure from failing the job.
             - name: Resolve the threads Claude fixed
-              if: steps.check.outputs.current == 'true' && needs.claude.outputs.before != ''
               continue-on-error: true
               working-directory: ${{ runner.temp }}
               env:
@@ -452,24 +406,3 @@ jobs:
                                   resolveReviewThread(input: {threadId: $thread}) { thread { id } }
                               }' > /dev/null
                       done
-
-            # Posted as a user: Codex documents `@codex review` from people, not from GitHub Apps.
-            # The round marker is how Codex Review knows the review belongs to its loop.
-            # In this job, so the request stays in the lock with the marker check.
-            - name: Request a Codex review
-              if: steps.check.outputs.current == 'true'
-              working-directory: ${{ runner.temp }}
-              env:
-                  GH_TOKEN: ${{ secrets.CODEX_REVIEW_TOKEN }}
-                  GH_REPO: ${{ github.repository }}
-                  PR: ${{ needs.claude.outputs.codex-pr }}
-                  ROUND: ${{ needs.claude.outputs.codex-round }}
-              run: |
-                  set -euo pipefail
-                  if [ -z "${GH_TOKEN}" ]; then
-                      echo "::warning::CODEX_REVIEW_TOKEN is not set, so the Codex review is not requested."
-                      exit 0
-                  fi
-                  gh pr comment "${PR}" --body "$(printf '%s\n\n%s\n' \
-                      '@codex review' \
-                      "<!-- perfective-codex-round: ${ROUND} -->")"
