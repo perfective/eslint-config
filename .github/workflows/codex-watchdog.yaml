@@ -20,7 +20,10 @@ jobs:
 
         steps:
             # GITHUB_TOKEN only. No personal token and no `@codex` mention.
-            # One comment per head: a later commit is flagged again, the same head is not.
+            # One comment and one `help wanted` per head: a later commit is flagged again, the same head is not,
+            # so a maintainer who removes the label does not get it back on the next run.
+            # Once Codex reviews the head, the watchdog removes the label it added,
+            # unless a later comment asks for a decision.
             - name: Flag unreviewed heads
               working-directory: ${{ runner.temp }}
               env:
@@ -68,17 +71,44 @@ jobs:
                                       or (.body | contains("Reviewed commit:** `" + "'"${prefix}"'")))
                                   | .id')"
                       fi
+                      # Only this workflow's comments count. Another person's comment cannot silence it.
+                      # The latest watchdog marker, as "flag <sha> <time>" or "clear <sha> <time>".
+                      last="$(gh api --paginate "/repos/${REPO}/issues/${number}/comments" \
+                          --jq '.[] | select(.user.login == "github-actions[bot]")
+                              | select(.body | test("<!-- perfective-codex-watchdog"))
+                              | [(if (.body | test("perfective-codex-watchdog-cleared:")) then "clear" else "flag" end),
+                                  (.body | match("[0-9a-f]{40}") | .string),
+                                  .created_at] | @tsv' \
+                          | tail -n 1)"
+                      IFS=$'\t' read -r last_kind last_sha last_at <<< "${last:-}"
                       if [ -n "${reviewed}" ]; then
                           echo "PR #${number} head ${sha} has a Codex review."
+                          if [ "${last_kind:-}" != "flag" ]; then
+                              continue
+                          fi
+                          # Keep the label when someone asked for a decision after the watchdog flagged the PR.
+                          later="$( {
+                              gh api --paginate "/repos/${REPO}/issues/${number}/comments" \
+                                  --jq '.[] | select(.created_at > "'"${last_at}"'")
+                                      | select(.body | contains("NEEDS HUMAN")) | .id'
+                              gh api --paginate "/repos/${REPO}/pulls/${number}/comments" \
+                                  --jq '.[] | select(.created_at > "'"${last_at}"'")
+                                      | select(.body | contains("NEEDS HUMAN")) | .id'
+                          } )"
+                          # Removing a label that is already gone fails the step, so check first.
+                          if [ -z "${later}" ] && gh api "/repos/${REPO}/issues/${number}/labels" \
+                              --jq '.[].name' | grep -qx 'help wanted'; then
+                              gh pr edit "${number}" --remove-label "help wanted"
+                          fi
+                          gh pr comment "${number}" --body "$(printf '%s\n%s\n\n%s\n' \
+                              "Codex reviewed the head commit \`${sha}\`," \
+                              "so the watchdog flag on \`${last_sha}\` is cleared." \
+                              "<!-- perfective-codex-watchdog-cleared: ${sha} -->")"
+                          echo "Cleared the flag on PR #${number}."
                           continue
                       fi
-                      # Idempotent when the label is already present.
-                      gh pr edit "${number}" --add-label "help wanted"
                       marker="<!-- perfective-codex-watchdog: ${sha} -->"
-                      # Only this workflow's comments count. Another person's comment cannot silence it.
-                      bodies="$(gh api --paginate "/repos/${REPO}/issues/${number}/comments" \
-                          --jq '.[] | select(.user.login == "github-actions[bot]") | .body')"
-                      if printf '%s\n' "${bodies}" | grep -F -q "${marker}"; then
+                      if [ "${last_kind:-}" = "flag" ] && [ "${last_sha:-}" = "${sha}" ]; then
                           echo "PR #${number} was already flagged for ${sha}."
                           continue
                       fi
@@ -88,5 +118,6 @@ jobs:
                           '**NEEDS HUMAN**: check Codex automatic reviews for this repository' \
                           '(Review all PRs, and the review trigger On every push). Drafts are not reviewed.' \
                           "${marker}")"
+                      gh pr edit "${number}" --add-label "help wanted"
                       echo "Flagged PR #${number} (${sha})."
                   done < "${pulls}"
