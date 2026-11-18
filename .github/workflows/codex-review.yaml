@@ -76,11 +76,14 @@ jobs:
         if: >-
             needs.route-key.result == 'success'
             && needs.route-key.outputs.group != 'codex-review-route-none'
-        # One route per PR: Codex edits its summary several times per review,
-        # and only the latest edit (or the latest finished Dependency Review run) matters.
+        # One route per pull request. A later summary edit waits.
+        # Cancelling the in-progress route would drop a review the next edit then
+        # treats as already handled, because that edit's previous body is the completed review.
+        # `queue: max` keeps every waiting edit: the default queue keeps one and cancels the rest.
         concurrency:
             group: ${{ needs.route-key.outputs.group }}
-            cancel-in-progress: true
+            cancel-in-progress: false
+            queue: max
         runs-on: ubuntu-latest
         timeout-minutes: 10
         outputs:
