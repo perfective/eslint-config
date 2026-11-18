@@ -22,8 +22,8 @@ jobs:
             # GITHUB_TOKEN only. No personal token and no `@codex` mention.
             # One comment and one `help wanted` per head: a later commit is flagged again, the same head is not,
             # so a maintainer who removes the label does not get it back on the next run.
-            # Once Codex reviews the head, the watchdog removes the label it added,
-            # unless a later comment asks for a decision.
+            # Once Codex reviews the head, the watchdog removes the label only when it added that label
+            # after the flag. A label from Dependency Review or Claude stays. The cleared comment is still posted.
             - name: Flag unreviewed heads
               working-directory: ${{ runner.temp }}
               env:
@@ -86,18 +86,17 @@ jobs:
                           if [ "${last_kind:-}" != "flag" ]; then
                               continue
                           fi
-                          # Keep the label when someone asked for a decision after the watchdog flagged the PR.
-                          later="$( {
-                              gh api --paginate "/repos/${REPO}/issues/${number}/comments" \
-                                  --jq '.[] | select(.created_at > "'"${last_at}"'")
-                                      | select(.body | contains("NEEDS HUMAN")) | .id'
-                              gh api --paginate "/repos/${REPO}/pulls/${number}/comments" \
-                                  --jq '.[] | select(.created_at > "'"${last_at}"'")
-                                      | select(.body | contains("NEEDS HUMAN")) | .id'
-                          } )"
-                          # Removing a label that is already gone fails the step, so check first.
-                          if [ -z "${later}" ] && gh api "/repos/${REPO}/issues/${number}/labels" \
-                              --jq '.[].name' | grep -qx 'help wanted'; then
+                          # Remove the label only when this workflow added it after the flag.
+                          # An earlier `help wanted` from Dependency Review or Claude stays.
+                          labeled="$(gh api --paginate "/repos/${REPO}/issues/${number}/timeline" \
+                              --jq '.[] | select(.event == "labeled" and (.label.name // "") == "help wanted")
+                                  | [(.actor.login // ""), .created_at] | @tsv' \
+                              | tail -n 1)"
+                          IFS=$'\t' read -r label_actor label_at <<< "${labeled:-}"
+                          if [ "${label_actor:-}" = "github-actions[bot]" ] \
+                              && [ -n "${label_at:-}" ] && [[ "${label_at}" > "${last_at}" ]] \
+                              && gh api "/repos/${REPO}/issues/${number}/labels" --jq '.[].name' \
+                              | grep -qx 'help wanted'; then
                               gh pr edit "${number}" --remove-label "help wanted"
                           fi
                           gh pr comment "${number}" --body "$(printf '%s\n%s\n\n%s\n' \

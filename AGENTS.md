@@ -402,8 +402,9 @@ Handling a Renovate PR:
   has a head commit at least 2 hours old with no review from `chatgpt-codex-connector[bot]`.
   It comments and adds the label once per head commit, with `GITHUB_TOKEN`, and it does not post `@codex review`,
   so a maintainer who removes the label does not get it back for the same head.
-  Once Codex reviews the head of a flagged PR, it comments that the flag is cleared
-  and removes `help wanted`, unless a later comment asks for a decision (**NEEDS HUMAN**).
+  Once Codex reviews the head of a flagged PR, it comments that the flag is cleared.
+  It removes `help wanted` only when the latest `labeled` event for that label
+  is `github-actions[bot]` and is after the flag, so a label someone else added stays.
   `issue_comment` and `workflow_run` workflows run from the default branch,
   so this loop starts only after the workflow file is on `main`.
 - Once a PR has a follow-up commit, Renovate stops updating the branch.
@@ -450,7 +451,7 @@ Claude adds it when its review or follow-up ends with **NEEDS HUMAN** items,
 and removes it once a later run leaves none
 (for example, after applying the maintainer's decisions from the PR thread).
 The Codex review watchdog adds it when a loop PR's head has no Codex review for 2 hours,
-and removes it once Codex reviews the head.
+and removes it once Codex reviews the head only if the watchdog itself added that label.
 
 ## Codex review of issue PRs
 
