@@ -438,6 +438,8 @@ Handling a Renovate PR:
   Under a `Commit message` heading, put the title in a fenced code block (` ```text `);
   the title ends with the PR number, ` (#<number>)`.
   Under an `Extended description` heading, put the body in its own ` ```text ` block.
+  GitHub does not wrap text in that block, so its prose uses semantic line breaks (one sentence per line);
+  list items, in that block and in the review summary, stay on one line each.
   The body ends with one `Co-authored-by: <name> <email>` trailer per commit author
   (for example `claude[bot]` on a Renovate PR),
   in the order of their first commit, without duplicates (compare the emails case-insensitively).

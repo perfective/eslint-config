@@ -138,7 +138,7 @@ Pushed commits are never rewritten, so later fixes on the PR branch are addition
 Prepare the squash commit message from the net diff against `main`
 (see "Squash commit message" in `AGENTS.md`).
 Make it paste-ready: the `Commit message` block with the title ending in ` (#<number>)`,
-and the `Extended description` block with the body,
+and the `Extended description` block with the body in semantic line breaks (one sentence per line),
 ending with the deduplicated `Co-authored-by` trailers of the commit authors
 from `gh pr view <number> --json author,commits`,
 never the maintainer or the PR author, who is already the commit author
