@@ -75,7 +75,7 @@
         "@asciidoctor/gulp-asciidoctor": "^2.2.5",
         "@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
         "@jest/globals": "~30.5.2",
-        "@perfective/build": "~0.22.0",
+        "@perfective/build": "~0.23.0",
         "@stylistic/eslint-plugin": "5.10.0",
         "@types/eslint": "^9.6.1",
         "@types/jest": "^30.0.0",
