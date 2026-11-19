@@ -21,4 +21,31 @@ and assumes that:
 * Certainty is better than uncertainty.
 * Explicit statements are better than implicit statements.
 
+== Language options
+
+The `languageOptions()`, `javascriptLanguageOptions()`, and `typescriptLanguageOptions()` functions
+set the same global variables (`languageOptions.globals`),
+so rules that depend on the environment
+(for example, `unicorn/prefer-global-this` or `n/prefer-global/*`)
+recognize browser and Node.js global variables.
+`perfectiveEslintConfig()` applies `languageOptions()` to `ecmaFiles`.
+
+[cols="1,2,1"]
+|===
+| Globals | Source | Value
+
+| Browser
+| `globals.browser` from the link:https://github.com/sindresorhus/globals[`globals`] package
+| `'readonly'`, except the `on*` event handlers and `location`, which are `'writable'`
+
+| Node.js (ES module)
+| `globals.nodeBuiltin` from the link:https://github.com/sindresorhus/globals[`globals`] package
+| `'readonly'`
+|===
+
+The CommonJS variables (`require`, `module`, `exports`, `__dirname`, and `__filename`) are not defined,
+as the configuration lints ES modules (`sourceType: 'module'`).
+Code that runs only in one environment or needs other globals (for example, workers)
+can override `languageOptions.globals` in its own config.
+
 include::config/index.adoc[leveloffset=+1]

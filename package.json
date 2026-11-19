@@ -103,5 +103,8 @@
         "type-fest": "5.10.0",
         "typescript": "~5.9.3",
         "typescript-eslint": "8.72.2"
+    },
+    "dependencies": {
+        "globals": "^17.14.0"
     }
 }
