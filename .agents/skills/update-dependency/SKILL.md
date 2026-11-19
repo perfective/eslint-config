@@ -139,8 +139,9 @@ Prepare the squash commit message from the net diff against `main`
 (see "Squash commit message" in `AGENTS.md`).
 Make it paste-ready: the `Commit message` block with the title ending in ` (#<number>)`,
 and the `Extended description` block with the body,
-ending with the deduplicated `Co-authored-by` trailers of every commit author who is not a maintainer,
-from `gh pr view <number> --json commits`
+ending with the deduplicated `Co-authored-by` trailers of the commit authors
+from `gh pr view <number> --json author,commits`,
+never the maintainer or the PR author, who is already the commit author
 (see "Suggesting the squash commit" in `AGENTS.md`).
 Do not push (except in CI, see below, or when the maintainer asks), merge, tag, or publish.
 

@@ -439,13 +439,13 @@ Handling a Renovate PR:
   the title ends with the PR number, ` (#<number>)`.
   Under an `Extended description` heading, put the body in its own ` ```text ` block.
   The body ends with one `Co-authored-by: <name> <email>` trailer per commit author
-  who is not a maintainer (for example `renovate[bot]` or `claude[bot]`),
+  (for example `claude[bot]` on a Renovate PR),
   in the order of their first commit, without duplicates (compare the emails case-insensitively).
-  Take the names and emails from `gh pr view <number> --json commits`
-  (`.commits[].authors[]`, which also lists the co-authors of each commit),
-  and leave out the authors whose login has write access to the repository
-  (`gh api repos/<owner>/<repo>/collaborators/<login>/permission --jq .permission`
-  is `admin`, `maintain`, or `write`).
+  Take the names and emails from `gh pr view <number> --json author,commits`
+  (`.commits[].authors[]`, which also lists the co-authors of each commit).
+  The trailers never list the maintainer (`amikheychik`) or the PR author (`.author.login`;
+  compare the logins without an `app/` prefix or a `[bot]` suffix):
+  the squash commit's author is the PR author, so a trailer would credit it twice.
   Separate the trailers from the list items with a blank line;
   a body without list items has only the trailers.
   Never put the title in inline backticks or render the body as Markdown.
