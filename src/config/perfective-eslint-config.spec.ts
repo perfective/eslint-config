@@ -183,6 +183,11 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
     },
     {
+        rule: 'unicorn/consistent-destructuring',
+        check: 'severity-convention',
+        reason: 'Pending review: the rule has suggestions only, but kept as "warn" since before the audit.',
+    },
+    {
         rule: 'unicorn/prefer-switch',
         check: 'severity-convention',
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',

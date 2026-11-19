@@ -16,7 +16,10 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             // Deprecated since v65.0.0. No replacement.
             // Use eslint-plugin-regexp instead.
             'unicorn/better-regex': 'off',
-            'unicorn/catch-error-name': 'warn',
+            'unicorn/catch-error-name': ['warn', {
+                name: 'error',
+                ignore: [],
+            }],
             'unicorn/class-reference-in-static-methods': ['error', {
                 preferThis: true,
                 preferSuper: true,
@@ -109,7 +112,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 // TODO comments without an expiration condition are allowed.
                 allowWarningComments: true,
             }],
-            'unicorn/explicit-length-check': 'warn',
+            'unicorn/explicit-length-check': ['warn', {
+                'non-zero': 'greater-than',
+            }],
             'unicorn/explicit-timer-delay': ['warn', 'always'],
             'unicorn/filename-case': ['error', {
                 case: 'kebabCase',
@@ -219,7 +224,15 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/no-ineffective-csp-directives': 'error',
             // Deprecated since v57.0.0
             'unicorn/no-instanceof-array': 'off',
-            'unicorn/no-instanceof-builtins': 'warn',
+            'unicorn/no-instanceof-builtins': ['warn', {
+                // Error.isError() requires ECMAScript 2026.
+                useErrorIsError: false,
+                // The strict strategy also reports built-ins without a reliable alternative to instanceof
+                // (for example, Error, Map, Date, and Promise).
+                strategy: 'loose',
+                include: [],
+                exclude: [],
+            }],
             'unicorn/no-invalid-argument-count': ['error', {}],
             'unicorn/no-invalid-boolean-attribute-value': 'error',
             'unicorn/no-invalid-character-comparison': 'error',
@@ -336,7 +349,10 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 // A function with a single call site often takes its arguments for readability.
                 minimumCallCount: 2,
             }],
-            'unicorn/no-unnecessary-polyfills': 'error',
+            'unicorn/no-unnecessary-polyfills': ['error', {
+                // The targets option is not set,
+                // so the rule uses the project's Browserslist config or package.json engines.
+            }],
             'unicorn/no-unnecessary-slice-end': 'warn',
             'unicorn/no-unnecessary-splice': 'warn',
             'unicorn/no-unnecessary-string-trim': 'warn',
@@ -423,7 +439,10 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-abort-signal-any': 'off',
             // Requires a polyfill for older browsers.
             'unicorn/prefer-abort-signal-timeout': 'off',
-            'unicorn/prefer-add-event-listener': 'warn',
+            'unicorn/prefer-add-event-listener': ['warn', {
+                // These packages use on-functions (for example, onerror) as their API.
+                excludedPackages: ['koa', 'sax'],
+            }],
             'unicorn/prefer-add-event-listener-options': 'warn',
             'unicorn/prefer-aggregate-error': 'warn',
             'unicorn/prefer-array-find': ['warn', {
@@ -669,8 +688,17 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/string-content': 'off',
             'unicorn/switch-case-braces': 'off',
             'unicorn/switch-case-break-position': 'warn',
-            'unicorn/template-indent': 'warn',
-            'unicorn/text-encoding-identifier-case': 'error',
+            'unicorn/template-indent': ['warn', {
+                // The indent option is not set, so the indentation is inferred from the template literal.
+                tags: ['outdent', 'dedent', 'gql', 'sql', 'html', 'styled'],
+                functions: ['dedent', 'stripIndent'],
+                selectors: [],
+                comments: ['HTML', 'indent'],
+            }],
+            'unicorn/text-encoding-identifier-case': ['error', {
+                // Prefers the Node.js spelling (UTF-8) over the WHATWG one (UTF-8).
+                withDash: false,
+            }],
             'unicorn/throw-new-error': 'warn',
             'unicorn/try-complexity': ['error', {
                 max: 1,
