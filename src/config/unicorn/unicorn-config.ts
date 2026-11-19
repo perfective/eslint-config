@@ -696,7 +696,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 comments: ['HTML', 'indent'],
             }],
             'unicorn/text-encoding-identifier-case': ['error', {
-                // Prefers the Node.js spelling (UTF-8) over the WHATWG one (UTF-8).
+                // Prefers the Node.js spelling (`utf8`) over the WHATWG one (`utf-8`).
                 withDash: false,
             }],
             'unicorn/throw-new-error': 'warn',

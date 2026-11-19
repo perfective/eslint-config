@@ -84,7 +84,7 @@ but a boolean prefix on them must be correct.
 
 | `link:{eslint-unicorn-rules}/consistent-destructuring.md[unicorn/consistent-destructuring]`
 | Yes
-|
+| Partially
 | Warning
 
 | `link:{eslint-unicorn-rules}/consistent-empty-array-spread.md[unicorn/consistent-empty-array-spread]`
@@ -315,7 +315,7 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 
 | `link:{eslint-unicorn-rules}/no-array-sort.md[unicorn/no-array-sort]`
 | Yes
-|
+| Yes
 | Off
 
 | `link:{eslint-unicorn-rules}/no-array-sort-for-min-max.md[unicorn/no-array-sort-for-min-max]`
@@ -347,7 +347,7 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 
 | `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]`
 | Yes
-| Partially
+|
 | Error
 
 | `link:{eslint-unicorn-rules}/no-await-in-promise-methods.md[unicorn/no-await-in-promise-methods]`
@@ -783,7 +783,7 @@ Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/no-null.md[unicorn/no-null]`
 | Yes
-| Partially
+|
 | Off
 
 | `link:{eslint-unicorn-rules}/no-object-as-default-parameter.md[unicorn/no-object-as-default-parameter]`
@@ -1313,7 +1313,7 @@ Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/prefer-array-some.md[unicorn/prefer-array-some]`
 | Yes
-| Partially
+|
 | Error
 
 | `link:{eslint-unicorn-rules}/prefer-at.md[unicorn/prefer-at]`
@@ -2092,7 +2092,7 @@ is only supported by the latest browsers.
 
 | `link:{eslint-unicorn-rules}/text-encoding-identifier-case.md[unicorn/text-encoding-identifier-case]`
 | Yes
-| Partially
+|
 | Error
 
 | `link:{eslint-unicorn-rules}/throw-new-error.md[unicorn/throw-new-error]`
