@@ -132,12 +132,15 @@ One commit for the dependency, with the verb by the dependency's SemVer level
 If you need to fix the commit later on the agent branch, squash the fix into it instead of adding a new commit.
 
 For a Renovate PR, add a follow-up commit on the PR branch instead,
-and suggest the squash-merge title in the Perfective style (for example `Update eslint-plugin-jest to v29.12.1`).
+and suggest the squash commit in the Perfective style (for example `Update eslint-plugin-jest to v29.12.1 (#61)`).
+Squash-merge is the only merge method; merge commits and rebase merges are never used.
 Pushed commits are never rewritten, so later fixes on the PR branch are additional commits.
-When the branch has more than one follow-up commit,
-also prepare the squash commit message from the net diff against `main`
+Prepare the squash commit message from the net diff against `main`
 (see "Squash commit message" in `AGENTS.md`).
-Give the suggested title and body each in its own ` ```text ` block
+Make it paste-ready: the `Commit message` block with the title ending in ` (#<number>)`,
+and the `Extended description` block with the body,
+ending with the deduplicated `Co-authored-by` trailers of every commit author who is not a maintainer,
+from `gh pr view <number> --json commits`
 (see "Suggesting the squash commit" in `AGENTS.md`).
 Do not push (except in CI, see below, or when the maintainer asks), merge, tag, or publish.
 
@@ -193,11 +196,15 @@ In that run:
   and never edit `.github/`, `.claude/`, or `.mcp.json`.
 - Do not post a comment containing `@codex`.
   Codex reviews the branch on its own; this job does not request a review.
-- Post the report from step 9 as the PR comment,
-  starting with the verdict:
-  **Ready to merge** (with the squash-merge title),
-  **Changes pushed** (with the commit hash and the squash-merge title),
-  or **NEEDS HUMAN** (with the items to decide).
+- Post the report from step 9 as the PR comment.
+  Lead with one line: the verdict, a one-sentence summary, and whether maintainer input is needed,
+  for example "**Ready to merge**. Low-risk patch update. No maintainer input needed."
+  The verdict is one of:
+  **Ready to merge**,
+  **Changes pushed** (with the full commit hash),
+  or **NEEDS HUMAN** (with the number of items to decide, listed in the report).
+  Follow it with the paste-ready `Commit message` and `Extended description` blocks from step 8,
+  then the rest of the report.
 - Label the PR by the verdict (see "The `help wanted` label" in `AGENTS.md`):
   add `help wanted` for **NEEDS HUMAN** (`gh pr edit <number> --add-label "help wanted"`),
   and remove it for any other verdict (`gh pr edit <number> --remove-label "help wanted"`).
