@@ -496,6 +496,20 @@ including when the Claude step did not succeed.
   A person can also comment `@codex review`; the workflows never do.
   After 3 rounds the workflow only reports the findings.
 
+## Reviewer signatures
+
+Other agents (for example Codex, Grok Bot, or Opus) sometimes write reviews and comments
+from the maintainer's account.
+To attribute them during triage:
+
+- Write the review or comment in plain Markdown.
+  Do not wrap the body in a quote block,
+  and do not start it with the reviewer's name as the first line.
+- End it with an italic signature line that identifies the writer,
+  for example `*Written by Grok Bot*`, `*Written by Codex*`, or `*Written by Opus*`.
+- A Codex review trigger starts with `@codex review` as the first line,
+  followed by the rest of the comment, and ends with the signature.
+
 ## Code Review Rules
 
 Codex reads this section when it reviews a pull request.
