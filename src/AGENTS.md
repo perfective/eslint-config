@@ -34,6 +34,10 @@ This guide records implementation details to check when changing `src/`.
 - Check both the source entry points and `gulpfile.js` when changing exports.
   The build excludes `*.spec.ts` and `*.snapshot.ts` through `tsconfig.build.json`.
   Build output and declarations must be regenerated, never patched by hand.
+- A package that both the source and its specs import, and that consumers do not configure themselves,
+  is a regular `dependency` with a `^` range, not a peer dependency
+  (for example, `globals` in `linter/language-options.ts`).
+  Renovate's `rangeStrategy: bump` updates it without a package rule.
 
 ## Working with the rule audit
 
