@@ -69,3 +69,8 @@ npm test -- src/config/perfective-eslint-config.spec.ts
 
 Tests also cover `linter/`, rule-option builders, and the TypeScript-dependent config helper.
 Use colocated Jest specs and the npm scripts; complete the root guide's full verification before committing.
+
+- Each `it()` checks one behavior, and its name states that behavior.
+  Split a test that checks independent behaviors into one test per behavior,
+  for example `defines browser globals` and `defines Node.js ES modules globals`,
+  not one `defines browser and Node.js ES module globals` test.

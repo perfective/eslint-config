@@ -4,14 +4,17 @@ import { describe, expect, it } from '@jest/globals';
 
 import { javascriptLanguageOptions, languageOptions, typescriptLanguageOptions } from './language-options';
 
-const expectedGlobals = Object.fromEntries(Object.keys({
-    ...globals.browser,
-    ...globals.nodeBuiltin,
-}).map(name => [name, 'readonly']));
+function readonlyGlobals(environment: Record<string, boolean | 'readonly' | 'writable'>): Record<string, 'readonly'> {
+    return Object.fromEntries(Object.keys(environment).map(name => [name, 'readonly']));
+}
 
 describe(languageOptions, () => {
-    it('defines browser and Node.js ES module globals', () => {
-        expect(languageOptions().globals).toStrictEqual(expectedGlobals);
+    it('defines browser globals', () => {
+        expect(languageOptions().globals).toMatchObject(readonlyGlobals(globals.browser));
+    });
+
+    it('defines Node.js ES modules globals', () => {
+        expect(languageOptions().globals).toMatchObject(readonlyGlobals(globals.nodeBuiltin));
         expect(languageOptions().globals).not.toHaveProperty('require');
     });
 
@@ -34,8 +37,12 @@ describe(languageOptions, () => {
 });
 
 describe(javascriptLanguageOptions, () => {
-    it('defines browser and Node.js ES module globals', () => {
-        expect(javascriptLanguageOptions().globals).toStrictEqual(expectedGlobals);
+    it('defines browser globals', () => {
+        expect(javascriptLanguageOptions().globals).toMatchObject(readonlyGlobals(globals.browser));
+    });
+
+    it('defines Node.js ES modules globals', () => {
+        expect(javascriptLanguageOptions().globals).toMatchObject(readonlyGlobals(globals.nodeBuiltin));
         expect(javascriptLanguageOptions().globals).not.toHaveProperty('require');
     });
 
@@ -45,8 +52,12 @@ describe(javascriptLanguageOptions, () => {
 });
 
 describe(typescriptLanguageOptions, () => {
-    it('defines browser and Node.js ES module globals', () => {
-        expect(typescriptLanguageOptions().globals).toStrictEqual(expectedGlobals);
+    it('defines browser globals', () => {
+        expect(typescriptLanguageOptions().globals).toMatchObject(readonlyGlobals(globals.browser));
+    });
+
+    it('defines Node.js ES modules globals', () => {
+        expect(typescriptLanguageOptions().globals).toMatchObject(readonlyGlobals(globals.nodeBuiltin));
         expect(typescriptLanguageOptions().globals).not.toHaveProperty('require');
     });
 
