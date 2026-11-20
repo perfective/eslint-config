@@ -4,15 +4,20 @@ import { describe, expect, it } from '@jest/globals';
 
 import { javascriptLanguageOptions, languageOptions, typescriptLanguageOptions } from './language-options';
 
-const expectedGlobals = {
+const expectedGlobals = Object.fromEntries(Object.keys({
     ...globals.browser,
     ...globals.nodeBuiltin,
-};
+}).map(name => [name, 'readonly']));
 
 describe(languageOptions, () => {
     it('defines browser and Node.js ES module globals', () => {
         expect(languageOptions().globals).toStrictEqual(expectedGlobals);
         expect(languageOptions().globals).not.toHaveProperty('require');
+    });
+
+    it('defines all globals as readonly', () => {
+        expect(languageOptions().globals).toHaveProperty('location', 'readonly');
+        expect(languageOptions().globals).toHaveProperty('onclick', 'readonly');
     });
 
     it('uses the TypeScript parser and allows default project for JS config files', () => {

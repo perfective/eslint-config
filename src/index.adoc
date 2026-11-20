@@ -30,18 +30,20 @@ so rules that depend on the environment
 recognize browser and Node.js global variables.
 `perfectiveEslintConfig()` applies `languageOptions()` to `ecmaFiles`.
 
-[cols="1,2,1"]
+[cols="1,2"]
 |===
-| Globals | Source | Value
+| Globals | Source
 
 | Browser
 | `globals.browser` from the link:https://github.com/sindresorhus/globals[`globals`] package
-| `'readonly'`, except the `on*` event handlers and `location`, which are `'writable'`
 
 | Node.js (ES module)
 | `globals.nodeBuiltin` from the link:https://github.com/sindresorhus/globals[`globals`] package
-| `'readonly'`
 |===
+
+All these globals are `'readonly'`,
+including the browser `on*` event handlers and `location`, which the `globals` package marks as `'writable'`,
+so the `no-global-assign` rule reports assignments to any of them.
 
 The CommonJS variables (`require`, `module`, `exports`, `__dirname`, and `__filename`) are not defined,
 as the configuration lints ES modules (`sourceType: 'module'`).
