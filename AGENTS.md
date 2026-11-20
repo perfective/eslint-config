@@ -498,17 +498,25 @@ including when the Claude step did not succeed.
 
 ## Reviewer signatures
 
-Other agents (for example Codex, Grok Bot, or Opus) sometimes write reviews and comments
-from the maintainer's account.
-To attribute them during triage:
+Every AI agent that creates or edits a GitHub issue, pull request description, comment, or review
+under the maintainer's account signs that text,
+so triage can attribute it.
+This covers Claude Code, Cursor, Codex, Grok Bot, and any other agent,
+including text posted with `gh`, an MCP connector, or a personal token.
 
-- Write the review or comment in plain Markdown.
-  Do not wrap the body in a quote block,
-  and do not start it with the reviewer's name as the first line.
-- End it with an italic signature line that identifies the writer,
-  for example `*Written by Grok Bot*`, `*Written by Codex*`, or `*Written by Opus*`.
-- A Codex review trigger starts with `@codex review` as the first line,
-  followed by the rest of the comment, and ends with the signature.
+- Write plain Markdown.
+  Do not add a bot header, wrap the body in a quote block,
+  or start with the agent's name as the first line.
+- End with a blank line, then an italic signature that names the agent,
+  for example `*Written by Claude*`, `*Written by Cursor*`, `*Written by Codex*`,
+  or `*Written by Grok Bot*`.
+- A Codex review trigger under the maintainer's account
+  starts with `@codex review` on the first line,
+  followed by a blank line and the italic signature line.
+- Never write a bare `@codex` or `@claude` mention anywhere else
+  in a GitHub comment, review, or issue.
+  Wrap it in backticks (for example `` `@codex review` ``)
+  so it does not trigger a bot run.
 
 ## Code Review Rules
 
