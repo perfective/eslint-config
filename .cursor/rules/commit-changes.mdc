@@ -1,0 +1,25 @@
+---
+description: When you make code changes, create a commit
+alwaysApply: true
+---
+
+# Commit code changes
+
+When you change files in this repository, commit those changes before finishing the task.
+
+- Commit on the agent's dev branch (for example `cursor`).
+  Never commit to `main`.
+- Stage the changes from the task.
+  Leave unrelated files and secrets unstaged.
+  Do not commit generated `dist/` or `*.tsbuildinfo` files.
+- Use a short imperative commit title with no trailing period.
+  Wrap rule and package names in backticks,
+  except in a dependency update subject, which has no backticks.
+  Put each rule change in its own list item in the body.
+- Do not push, force-push, tag, release, or publish unless the user asks.
+- If a hook fails, fix the problem and create a new commit.
+- If there is nothing to commit, do not create an empty commit.
+
+```text
+Enable the `jest/no-error-equal` rule
+```

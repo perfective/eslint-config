@@ -1,0 +1,26 @@
+---
+description: When asked to review a pull request, comment on the PR before summarizing in chat
+alwaysApply: true
+---
+
+# Pull request reviews
+
+When the user asks to review a pull request, comment on the PR first, then summarize in chat.
+Follow the Code Review Rules in `AGENTS.md`.
+
+1. Post the review on the pull request.
+   - Put each finding as an inline comment on the line it refers to.
+   - Add a short summary review comment.
+   - If there are no findings, post that summary anyway.
+2. After those comments are on the pull request, summarize the same findings in the chat.
+   - Lead with the findings.
+   - Include the review link.
+
+Do not finish a review in chat only.
+
+```markdown
+# Review order
+
+1. https://github.com/perfective/eslint-config/pull/1#pullrequestreview-… (inline comments posted)
+2. Chat summary of the same findings, with that link
+```
