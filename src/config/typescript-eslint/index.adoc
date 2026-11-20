@@ -276,10 +276,6 @@ Empty interfaces are allowed.
 | Recommended
 | Error
 
-| `link:{ts-eslint-rules}/no-unsafe-class-instance-assignment/[@typescript-eslint/no-unsafe-class-instance-assignment]`
-| Strict
-| Error
-
 | `link:{ts-eslint-rules}/no-unsafe-declaration-merging/[@typescript-eslint/no-unsafe-declaration-merging]`
 | Recommended
 | Error

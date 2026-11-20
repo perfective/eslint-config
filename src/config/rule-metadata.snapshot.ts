@@ -477,7 +477,6 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     '@typescript-eslint/no-unsafe-argument': ['type-checking'],
     '@typescript-eslint/no-unsafe-assignment': ['type-checking'],
     '@typescript-eslint/no-unsafe-call': ['type-checking'],
-    '@typescript-eslint/no-unsafe-class-instance-assignment': ['type-checking'],
     '@typescript-eslint/no-unsafe-declaration-merging': [],
     '@typescript-eslint/no-unsafe-enum-assignment': ['type-checking'],
     '@typescript-eslint/no-unsafe-enum-comparison': ['suggestions', 'type-checking'],
