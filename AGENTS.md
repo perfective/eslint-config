@@ -214,7 +214,8 @@ Before committing, check `git diff --check` and stage only the intended files.
 - The general `Claude` workflow does not run on a release issue
   (an issue labeled `release`, or titled `Release @perfective/eslint-config v...`).
   Adding `claude` to that issue runs `publish-pr.yaml` only.
-  `@claude` on the Publish PR still uses the general workflow.
+  `@claude` on the Publish PR still uses the general workflow,
+  and it may run the npm scripts: that branch is in this repository.
 - Backports only when needed: remote/local `vX.Y.x` branches (for example `v0.34.x`).
   CI also runs on those branches.
 - Commit subjects are imperative and short; wrap rule and package names in backticks,
