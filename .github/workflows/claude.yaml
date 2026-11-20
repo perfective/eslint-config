@@ -18,12 +18,20 @@ jobs:
         # Start on an `@claude` mention or the `claude` label from a maintainer.
         # The job checks the author's role itself, before any step runs repository code;
         # the action checks write access again.
+        # Release issues are handled by `publish-pr.yaml` when `claude` is added.
+        # Skip an issue labeled `release`, or titled `Release @perfective/eslint-config v...`,
+        # so the two workflows do not both start. `@claude` on the Publish PR still runs here.
         if: >-
             (github.event_name == 'issues'
+                && !contains(github.event.issue.labels.*.name, 'release')
+                && !startsWith(github.event.issue.title, 'Release @perfective/eslint-config v')
                 && (github.event.action == 'labeled' && github.event.label.name == 'claude'
                     || contains(github.event.issue.body, '@claude')
                     && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)))
-            || (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')
+            || (github.event_name == 'issue_comment'
+                && !contains(github.event.issue.labels.*.name, 'release')
+                && !startsWith(github.event.issue.title, 'Release @perfective/eslint-config v')
+                && contains(github.event.comment.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
             || (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
