@@ -11,9 +11,12 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             '@stylistic': eslintPluginStylistic,
         },
         rules: {
-            '@stylistic/array-bracket-newline': ['warn', 'consistent'],
-            '@stylistic/array-bracket-spacing': ['warn', 'never'],
-            '@stylistic/array-element-newline': ['warn', 'consistent'],
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/array-bracket-newline': 'off',
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/array-bracket-spacing': 'off',
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/array-element-newline': 'off',
             '@stylistic/arrow-parens': ['warn', 'as-needed'],
             '@stylistic/arrow-spacing': ['warn', {
                 before: true,
@@ -45,9 +48,11 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             }],
             '@stylistic/dot-location': ['warn', 'property'],
             '@stylistic/eol-last': ['warn', 'always'],
-            '@stylistic/function-call-argument-newline': ['warn', 'consistent'],
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/function-call-argument-newline': 'off',
             '@stylistic/function-call-spacing': ['warn', 'never'],
-            '@stylistic/function-paren-newline': ['warn', 'consistent'],
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/function-paren-newline': 'off',
             '@stylistic/generator-star-spacing': ['warn', {
                 before: true,
                 after: false,
@@ -91,9 +96,6 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             '@stylistic/jsx-equals-spacing': ['warn', 'never'],
             '@stylistic/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
             '@stylistic/jsx-function-call-newline': ['warn', 'multiline'],
-            // Deprecated since v2.3.0.
-            // Use the '@stylistic/indent' rule instead.
-            '@stylistic/jsx-indent': 'off',
             '@stylistic/jsx-indent-props': ['warn', {
                 indentMode: 1,
                 ignoreTernaryOperator: false,
@@ -112,8 +114,6 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 allowNamespace: false,
                 ignore: [],
             }],
-            // Deprecated. Use `@stylistic/no-multi-spaces` instead.
-            '@stylistic/jsx-props-no-multi-spaces': 'off',
             // TODO: Enable once the rule is not experimental.
             '@stylistic/exp-jsx-props-style': 'off',
             '@stylistic/jsx-quotes': ['warn', 'prefer-double'],
@@ -121,18 +121,8 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 component: true,
                 html: true,
             }],
-            // Deprecated since v5.7.0. Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`).
-            // TODO: Kept enabled until `perfectionist/sort-jsx-props` is configured (#22).
-            '@stylistic/jsx-sort-props': ['warn', {
-                ignoreCase: false,
-                callbacksLast: true,
-                shorthandFirst: true,
-                shorthandLast: false,
-                multiline: 'ignore',
-                noSortAlphabetically: false,
-                reservedFirst: true,
-                locale: 'auto',
-            }],
+            '@stylistic/jsx-shorthand-boolean': 'warn',
+            '@stylistic/jsx-shorthand-fragment': 'warn',
             '@stylistic/jsx-tag-spacing': ['warn', {
                 closingSlash: 'never',
                 beforeSelfClosing: 'always',
@@ -190,16 +180,36 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 exceptAfterSingleLine: true,
                 exceptAfterOverload: true,
             }],
-            // TODO: Enable once the rule is not experimental.
-            '@stylistic/exp-list-style': 'off',
+            '@stylistic/list-style': ['warn', {
+                empty: 'never',
+                singleLine: {
+                    spacing: 'never',
+                    // In some cases, like object spread, or "re-structuring",
+                    // having all items on the same line is more readable
+                    // (e.g. it allows to see the whole object in the search/grep).
+                    // The default is unlimited (Infinity), which the integer option schema does not accept.
+                    maxItems: Number.MAX_SAFE_INTEGER,
+                },
+                multiLine: {
+                    minItems: 0,
+                },
+                overrides: {
+                    '{}': {
+                        singleLine: {
+                            spacing: 'always',
+                        },
+                    },
+                },
+            }],
             '@stylistic/max-len': ['error', {
                 code: 120,
                 tabWidth: 4,
                 ignoreRegExpLiterals: true,
                 ignoreUrls: true,
             }],
-            '@stylistic/max-statements-per-line': ['error', {
+            '@stylistic/max-statements-per-line': ['warn', {
                 max: 1,
+                ignoredNodes: [],
             }],
             '@stylistic/member-delimiter-style': ['warn', {
                 multiline: {
@@ -254,7 +264,12 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 allowSamePrecedence: true,
             }],
             '@stylistic/no-mixed-spaces-and-tabs': 'error',
-            '@stylistic/no-multi-spaces': 'warn',
+            '@stylistic/no-multi-spaces': ['warn', {
+                exceptions: {},
+                // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
+                ignoreEOLComments: false,
+                includeTabs: true,
+            }],
             '@stylistic/no-multiple-empty-lines': ['warn', {
                 max: 1,
                 // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
@@ -268,25 +283,12 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             '@stylistic/no-trailing-spaces': 'warn',
             '@stylistic/no-whitespace-before-property': 'warn',
             '@stylistic/nonblock-statement-body-position': ['warn', 'below'],
-            '@stylistic/object-curly-newline': ['warn', {
-                // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
-                ImportDeclaration: { multiline: true },
-                // eslint-disable-next-line @typescript-eslint/naming-convention -- option name
-                ExportDeclaration: { multiline: true },
-            }],
-            '@stylistic/object-curly-spacing': ['warn', 'always', {
-                arraysInObjects: true,
-                emptyObjects: 'never',
-                objectsInObjects: true,
-            }],
-            '@stylistic/object-property-newline': ['warn', {
-                // In some cases, like object spread, or "re-structuring",
-                // having properties on the same line is more readable
-                // (e.g. it allows to see the whole object in the search/grep).
-                // TODO: This rule can be improved if it can require consistency
-                //  and limit inlined properties only to basic expressions (no function calls, ternaries, etc.)
-                allowAllPropertiesOnSameLine: true,
-            }],
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/object-curly-newline': 'off',
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/object-curly-spacing': 'off',
+            // Deprecated since v6.0.0. Use `@stylistic/list-style`.
+            '@stylistic/object-property-newline': 'off',
             '@stylistic/one-var-declaration-per-line': ['warn', 'always'],
             '@stylistic/operator-linebreak': ['warn', 'before', {
                 overrides: {
@@ -323,6 +325,8 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             '@stylistic/space-in-parens': ['warn', 'never'],
             '@stylistic/space-infix-ops': ['warn', {
                 int32Hint: false,
+                ignoreOperators: [],
+                ignoreTypes: false,
             }],
             '@stylistic/space-unary-ops': ['warn', {
                 words: true,
@@ -340,8 +344,20 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
             }],
             '@stylistic/template-curly-spacing': ['warn', 'never'],
             '@stylistic/template-tag-spacing': ['warn', 'never'],
-            '@stylistic/type-annotation-spacing': 'warn',
-            '@stylistic/type-generic-spacing': 'warn',
+            '@stylistic/type-annotation-spacing': ['warn', {
+                before: false,
+                after: true,
+                overrides: {
+                    questionMark: {
+                        before: false,
+                        after: false,
+                    },
+                },
+            }],
+            '@stylistic/type-generic-spacing': ['warn', {
+                before: false,
+                after: false,
+            }],
             '@stylistic/type-named-tuple-spacing': 'warn',
             '@stylistic/wrap-iife': ['warn', 'outside'],
             '@stylistic/wrap-regex': 'warn',

@@ -10,13 +10,19 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 | Rule | Severity
 
 | `link:{stylistic-rules}/array-bracket-newline[@stylistic/array-bracket-newline]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/array-bracket-spacing[@stylistic/array-bracket-spacing]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/array-element-newline[@stylistic/array-element-newline]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/arrow-parens[@stylistic/arrow-parens]`
 | Warning
@@ -55,18 +61,18 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 | Off
 2+| Experimental
 
-| `link:{stylistic-rules}/exp-list-style[@stylistic/exp-list-style]`
-| Off
-2+| Experimental
-
 | `link:{stylistic-rules}/function-call-argument-newline[@stylistic/function-call-argument-newline]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/function-call-spacing[@stylistic/function-call-spacing]`
 | Warning
 
 | `link:{stylistic-rules}/function-paren-newline[@stylistic/function-paren-newline]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/generator-star-spacing[@stylistic/generator-star-spacing]`
 | Warning
@@ -110,11 +116,6 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 | `link:{stylistic-rules}/jsx-indent-props[@stylistic/jsx-indent-props]`
 | Warning
 
-| `link:{stylistic-rules}/jsx-indent[@stylistic/jsx-indent]`
-| Off
-2+| Deprecated since v2.3.0.
-Use the '@stylistic/indent' rule instead.
-
 | `link:{stylistic-rules}/jsx-max-props-per-line[@stylistic/jsx-max-props-per-line]`
 | Warning
 
@@ -127,20 +128,17 @@ Use the '@stylistic/indent' rule instead.
 | `link:{stylistic-rules}/jsx-pascal-case[@stylistic/jsx-pascal-case]`
 | Error
 
-| `link:{stylistic-rules}/jsx-props-no-multi-spaces[@stylistic/jsx-props-no-multi-spaces]`
-| Off
-2+| Deprecated. Use `@stylistic/no-multi-spaces` instead.
-
 | `link:{stylistic-rules}/jsx-quotes[@stylistic/jsx-quotes]`
 | Warning
 
 | `link:{stylistic-rules}/jsx-self-closing-comp[@stylistic/jsx-self-closing-comp]`
 | Warning
 
-| `link:{stylistic-rules}/jsx-sort-props[@stylistic/jsx-sort-props]`
+| `link:{stylistic-rules}/jsx-shorthand-boolean[@stylistic/jsx-shorthand-boolean]`
 | Warning
-2+| Deprecated since v5.7.0.
-Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`) instead.
+
+| `link:{stylistic-rules}/jsx-shorthand-fragment[@stylistic/jsx-shorthand-fragment]`
+| Warning
 
 | `link:{stylistic-rules}/jsx-tag-spacing[@stylistic/jsx-tag-spacing]`
 | Warning
@@ -166,11 +164,14 @@ Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`) instead.
 | `link:{stylistic-rules}/lines-between-class-members[@stylistic/lines-between-class-members]`
 | Warning
 
+| `link:{stylistic-rules}/list-style[@stylistic/list-style]`
+| Warning
+
 | `link:{stylistic-rules}/max-len[@stylistic/max-len]`
 | Error
 
 | `link:{stylistic-rules}/max-statements-per-line[@stylistic/max-statements-per-line]`
-| Error
+| Warning
 
 | `link:{stylistic-rules}/member-delimiter-style[@stylistic/member-delimiter-style]`
 | Warning
@@ -232,15 +233,19 @@ that https://github.com/typescript-eslint/typescript-eslint/issues/1824[does not
 |
 
 | `link:{stylistic-rules}/object-curly-newline[@stylistic/object-curly-newline]`
-| Warning
-2+| For imports and exports this rule may conflict with the "max-len" rule,
-as it is possible to have an import or export declaration that is too long.
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/object-curly-spacing[@stylistic/object-curly-spacing]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/object-property-newline[@stylistic/object-property-newline]`
-| Warning
+| Off
+2+| Deprecated since v6.0.0.
+Use `@stylistic/list-style` instead.
 
 | `link:{stylistic-rules}/one-var-declaration-per-line[@stylistic/one-var-declaration-per-line]`
 | Warning
