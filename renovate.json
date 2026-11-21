@@ -20,21 +20,6 @@
             "dependencyDashboardApproval": true
         },
         {
-            "description": "Label major updates for careful review",
-            "matchUpdateTypes": ["major"],
-            "addLabels": ["help wanted"]
-        },
-        {
-            "description": "Peer range changes need maintainer judgment",
-            "matchDepTypes": ["peerDependencies"],
-            "addLabels": ["help wanted"]
-        },
-        {
-            "description": "TypeScript updates often need config migration",
-            "matchPackageNames": ["typescript"],
-            "addLabels": ["help wanted"]
-        },
-        {
             "description": "GitHub Actions: low-risk, weekly batch visibility",
             "matchManagers": ["github-actions"],
             "extends": ["schedule:weekly"]

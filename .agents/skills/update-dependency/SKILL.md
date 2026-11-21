@@ -207,7 +207,5 @@ In that run:
   Follow it with the paste-ready `Commit message` and `Extended description` blocks from step 8,
   then the rest of the report.
 - Label the PR by the verdict (see "The `help wanted` label" in `AGENTS.md`):
-  add `help wanted` for **NEEDS HUMAN** (`gh pr edit <number> --add-label "help wanted"`).
-  Remove it for any other verdict (`gh pr edit <number> --remove-label "help wanted"`),
-  except when Renovate added it for a major update, a peer dependency update, or a TypeScript update.
-  Leave that label in place and say so in the report.
+  add `help wanted` for **NEEDS HUMAN** (`gh pr edit <number> --add-label "help wanted"`),
+  and remove it for any other verdict (`gh pr edit <number> --remove-label "help wanted"`).
