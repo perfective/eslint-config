@@ -11,6 +11,7 @@ import { importConfig, importJavascriptConfig, importTypescriptConfig } from './
 import { importNoExtraneousDependencies } from './import/index';
 import { jsdocConfig, jsdocJavascriptConfig } from './jsdoc/jsdoc-config';
 import { nodeConfig } from './node/node-config';
+import { perfectionistConfig } from './perfectionist/perfectionist-config';
 import { preferArrowConfig } from './prefer-arrow/prefer-arrow-config';
 import { promiseConfig } from './promise/promise-config';
 import { securityConfig } from './security/security-config';
@@ -46,6 +47,7 @@ export function perfectiveEslintConfig(configs: LinterConfig[] = []): Linter.Con
         jsdocConfig(),
         jsdocJavascriptConfig(),
         nodeConfig(),
+        perfectionistConfig(),
         preferArrowConfig(),
         promiseConfig(),
         securityConfig(),

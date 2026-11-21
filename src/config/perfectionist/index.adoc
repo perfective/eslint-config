@@ -1,0 +1,139 @@
+= `perfectionist`
+:perfectionist-rules: https://perfectionist.dev/rules
+
+The `link:https://perfectionist.dev[eslint-plugin-perfectionist]` provides
+rules to sort objects, imports, types, JSX props, and other code elements.
+
+Only the `perfectionist/sort-jsx-props` rule is enabled.
+It replaces the deprecated `@stylistic/jsx-sort-props` rule.
+
+
+[cols="~,1,1,1"]
+|===
+| Rule | link:https://perfectionist.dev/configs/recommended-alphabetical[Recommended] | Fixable | Config
+
+| `link:{perfectionist-rules}/sort-array-includes[perfectionist/sort-array-includes]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-arrays[perfectionist/sort-arrays]`
+|
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-classes[perfectionist/sort-classes]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-constructor-parameters[perfectionist/sort-constructor-parameters]`
+|
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-decorators[perfectionist/sort-decorators]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-enums[perfectionist/sort-enums]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-export-attributes[perfectionist/sort-export-attributes]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-exports[perfectionist/sort-exports]`
+| Yes
+| Yes
+| Off
+4+| Use `simple-import-sort/exports`.
+
+| `link:{perfectionist-rules}/sort-heritage-clauses[perfectionist/sort-heritage-clauses]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-import-attributes[perfectionist/sort-import-attributes]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-imports[perfectionist/sort-imports]`
+| Yes
+| Yes
+| Off
+4+| Use `simple-import-sort/imports`.
+
+| `link:{perfectionist-rules}/sort-interfaces[perfectionist/sort-interfaces]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-intersection-types[perfectionist/sort-intersection-types]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-jsx-props[perfectionist/sort-jsx-props]`
+| Yes
+| Yes
+| Warning
+
+| `link:{perfectionist-rules}/sort-maps[perfectionist/sort-maps]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-modules[perfectionist/sort-modules]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-named-exports[perfectionist/sort-named-exports]`
+| Yes
+| Yes
+| Off
+4+| Use `simple-import-sort/exports`.
+
+| `link:{perfectionist-rules}/sort-named-imports[perfectionist/sort-named-imports]`
+| Yes
+| Yes
+| Off
+4+| Use `simple-import-sort/imports`.
+
+| `link:{perfectionist-rules}/sort-object-types[perfectionist/sort-object-types]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-objects[perfectionist/sort-objects]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-sets[perfectionist/sort-sets]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-switch-case[perfectionist/sort-switch-case]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-union-types[perfectionist/sort-union-types]`
+| Yes
+| Yes
+| Off
+
+| `link:{perfectionist-rules}/sort-variable-declarations[perfectionist/sort-variable-declarations]`
+| Yes
+| Yes
+| Off
+
+|===

@@ -138,9 +138,9 @@ Use the '@stylistic/indent' rule instead.
 | Warning
 
 | `link:{stylistic-rules}/jsx-sort-props[@stylistic/jsx-sort-props]`
-| Warning
+| Off
 2+| Deprecated since v5.7.0.
-Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`) instead.
+Use `perfectionist/sort-jsx-props` instead.
 
 | `link:{stylistic-rules}/jsx-tag-spacing[@stylistic/jsx-tag-spacing]`
 | Warning

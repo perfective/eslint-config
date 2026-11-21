@@ -121,18 +121,8 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 component: true,
                 html: true,
             }],
-            // Deprecated since v5.7.0. Use `perfectionist/sort-jsx-props` (`eslint-plugin-perfectionist`).
-            // TODO: Kept enabled until `perfectionist/sort-jsx-props` is configured (#22).
-            '@stylistic/jsx-sort-props': ['warn', {
-                ignoreCase: false,
-                callbacksLast: true,
-                shorthandFirst: true,
-                shorthandLast: false,
-                multiline: 'ignore',
-                noSortAlphabetically: false,
-                reservedFirst: true,
-                locale: 'auto',
-            }],
+            // Deprecated since v5.7.0. Use `perfectionist/sort-jsx-props`.
+            '@stylistic/jsx-sort-props': 'off',
             '@stylistic/jsx-tag-spacing': ['warn', {
                 closingSlash: 'never',
                 beforeSelfClosing: 'always',

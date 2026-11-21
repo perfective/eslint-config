@@ -28,6 +28,16 @@ Proposed follow-up: upgrade `eslint-import-resolver-typescript` to v4
 and move the setting to `import-x/resolver-next` (`createTypeScriptImportResolver()`),
 updating the peer dependency range, the lockfile, and the import rule documentation.
 
+== Perfectionist rules
+
+`eslint-plugin-perfectionist` was added (issue #22) to replace the deprecated `@stylistic/jsx-sort-props` rule.
+Only `perfectionist/sort-jsx-props` is enabled;
+the other rules are off with a `TODO` comment in `src/config/perfectionist/perfectionist-config.ts`,
+except the import and export sorting rules, which `simple-import-sort` covers.
+
+Proposed follow-up: review each remaining rule and its options,
+and enable the rules the maintainer approves, updating `src/config/perfectionist/index.adoc`.
+
 == Release and maintenance policy alignment
 
 The root guide says newly enabled rules require a minor release while on `v0`.
