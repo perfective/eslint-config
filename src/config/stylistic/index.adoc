@@ -7,7 +7,7 @@ and `eslint-plugin-react` (framework-agnostic JSX formatting only).
 
 [cols="~,1"]
 |===
-| Rule | Severity
+| Rule | Config
 
 | `link:{stylistic-rules}/array-bracket-newline[@stylistic/array-bracket-newline]`
 | Warning

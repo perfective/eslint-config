@@ -95,7 +95,7 @@ Use `references/decisions.md` and the precedent in `git log -- src/config/<plugi
 
 - Edit `src/config/<plugin>/<plugin>-config.ts` (or its `*-rules.ts` files),
   keeping rules in alphabetical order with explicit options.
-- Update the `src/config/<plugin>/index.adoc` table in the same commit (`Rule | ... | Config` rows).
+- Update the `src/config/<plugin>/index.adoc` table in the same commit (`Rule | Config` rows).
 - Check coherence with other plugins: overlapping rules, `extension-rules.ts`, and the overrides for tests
   and configuration files.
 - After the review, update the snapshot: `RULE_AUDIT_UPDATE=true npm test`.
