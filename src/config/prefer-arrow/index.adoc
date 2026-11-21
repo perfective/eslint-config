@@ -4,13 +4,11 @@ The `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow[eslint-plugin-p
 rule to prefer arrow functions.
 
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow#configuration[prefer-arrow/prefer-arrow-functions]`
-|
-| Yes
 | Error
 
 |===

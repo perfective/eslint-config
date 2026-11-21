@@ -5,153 +5,95 @@ The `link:https://github.com/testing-library/eslint-plugin-testing-library[eslin
 provides rules to follow best practices
 and anticipate common mistakes when writing tests with https://testing-library.com[Testing Library].
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | https://github.com/testing-library/eslint-plugin-testing-library#supported-rules[Recommended] | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-testing-library-rules}/await-async-events.md[testing-library/await-async-events]`
-|
-|
 | Off
 
 | `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/await-async-utils.md[testing-library/await-async-utils]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/consistent-data-testid.md[testing-library/consistent-data-testid]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-await-sync-events.md[testing-library/no-await-sync-events]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/no-container.md[testing-library/no-container]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-debugging-utils.md[testing-library/no-debugging-utils]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-dom-import.md[testing-library/no-dom-import]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/no-manual-cleanup.md[testing-library/no-manual-cleanup]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-node-access.md[testing-library/no-node-access]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-render-in-lifecycle.md[testing-library/no-render-in-lifecycle]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-test-id-queries.md[testing-library/no-test-id-queries]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
-|
-|
 | Off
 
 | `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]`
-|
-|
 | Off
 
 | `link:{eslint-testing-library-rules}/prefer-find-by.md[testing-library/prefer-find-by]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-testing-library-rules}/prefer-implicit-assert.md[testing-library/prefer-implicit-assert]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-query-matchers.md[testing-library/prefer-query-matchers]`
-|
-|
 | Off
 
 | `link:{eslint-testing-library-rules}/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
-| Yes
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-user-event.md[testing-library/prefer-user-event]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-user-event-setup.md[testing-library/prefer-user-event-setup]`
-|
-|
 | Error
 
 | `link:{eslint-testing-library-rules}/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
-| Yes
-|
 | Error
 
 |===

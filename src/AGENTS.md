@@ -53,7 +53,8 @@ npm test -- src/config/perfective-eslint-config.spec.ts
   When introducing a new file scope, check whether `representativeFiles` exercises it.
 - The audit reads rule tables from each plugin's `index.adoc` and deprecation comments from configuration sources.
   Update the rule settings and their documentation together.
-  Tables can distinguish JavaScript and TypeScript severities and mark fixability as partial.
+  Each table has two columns (`Rule | Config`); the Config cell can distinguish JavaScript and TypeScript severities.
+  Fixability comes from the plugin metadata; a partially fixable rule needs a `severity-convention` exception.
 - The metadata snapshot tracks rule presence and the flags `deprecated`, `fixable`, `suggestions`,
   and `type-checking`.
   It does not capture option schemas, default changes, or rule behavior;

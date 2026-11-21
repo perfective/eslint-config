@@ -5,349 +5,215 @@ The `link:https://github.com/jest-community/eslint-plugin-jest[eslint-plugin-jes
 for https://jestjs.io[Jest].
 
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-jest-rules}/consistent-test-it.md[jest/consistent-test-it]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/expect-expect.md[jest/expect-expect]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/max-expects.md[jest/max-expects]`
-|
-|
 | Error
-4+| Using the default maximum of `5`, but may reduce it later.
+2+| Using the default maximum of `5`, but may reduce it later.
 
 For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtablename-fn-timeout[it.each]`.
 
 | `link:{eslint-jest-rules}/max-nested-describe.md[jest/max-nested-describe]`
-|
-|
 | Error
-4+| The maximum of `4` nested `describe` should be enough for a hierarchy:
+2+| The maximum of `4` nested `describe` should be enough for a hierarchy:
 Class → Method → Method Signature → Precondition ("When").
 
 | `link:{eslint-jest-rules}/no-alias-methods.md[jest/no-alias-methods]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/no-commented-out-tests.md[jest/no-commented-out-tests]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-conditional-expect.md[jest/no-conditional-expect]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-conditional-in-test.md[jest/no-conditional-in-test]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-confusing-set-timeout.md[jest/no-confusing-set-timeout]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-deprecated-functions.md[jest/no-deprecated-functions]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/no-disabled-tests.md[jest/no-disabled-tests]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-done-callback.md[jest/no-done-callback]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-duplicate-hooks.md[jest/no-duplicate-hooks]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-export.md[jest/no-export]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-focused-tests.md[jest/no-focused-tests]`
-| Yes
-|
 | Warning
 
 | `link:{eslint-jest-rules}/no-hooks.md[jest/no-hooks]`
-|
-|
 | Off
 
 | `link:{eslint-jest-rules}/no-identical-title.md[jest/no-identical-title]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-interpolation-in-snapshots.md[jest/no-interpolation-in-snapshots]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-jasmine-globals.md[jest/no-jasmine-globals]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/no-large-snapshots.md[jest/no-large-snapshots]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-mocks-import.md[jest/no-mocks-import]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-restricted-jest-methods.md[jest/no-restricted-jest-methods]`
-|
-|
 | Off
 
 | `link:{eslint-jest-rules}/no-restricted-matchers.md[jest/no-restricted-matchers]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-standalone-expect.md[jest/no-standalone-expect]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-test-prefixes.md[jest/no-test-prefixes]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/no-test-return-statement.md[jest/no-test-return-statement]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-unneeded-async-expect-function.md[jest/no-unneeded-async-expect-function]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-after-all-blocks.md[jest/padding-around-after-all-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-after-each-blocks.md[jest/padding-around-after-each-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-all.md[jest/padding-around-all]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-before-all-blocks.md[jest/padding-around-before-all-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-before-each-blocks.md[jest/padding-around-before-each-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-describe-blocks.md[jest/padding-around-describe-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-expect-groups.md[jest/padding-around-expect-groups]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/padding-around-test-blocks.md[jest/padding-around-test-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-called-with.md[jest/prefer-called-with]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/prefer-comparison-matcher.md[jest/prefer-comparison-matcher]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-each.md[jest/prefer-each]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/prefer-ending-with-an-expect.md[jest/prefer-ending-with-an-expect]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/prefer-equality-matcher.md[jest/prefer-equality-matcher]`
-|
-| Suggest
 | Error
 
 | `link:{eslint-jest-rules}/prefer-expect-assertions.md[jest/prefer-expect-assertions]`
-|
-|
 | Off
 
 | `link:{eslint-jest-rules}/prefer-expect-resolves.md[jest/prefer-expect-resolves]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-hooks-in-order.md[jest/prefer-hooks-in-order]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/prefer-hooks-on-top.md[jest/prefer-hooks-on-top]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/prefer-importing-jest-globals.md[jest/prefer-importing-jest-globals]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-jest-mocked.md[jest/prefer-jest-mocked]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-lowercase-title.md[jest/prefer-lowercase-title]`
-|
-| Yes
 | Error
-4+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
+2+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
 
 | `link:{eslint-jest-rules}/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-mock-return-shorthand.md[jest/prefer-mock-return-shorthand]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-snapshot-hint.md[jest/prefer-snapshot-hint]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/prefer-spy-on.md[jest/prefer-spy-on]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-strict-equal.md[jest/prefer-strict-equal]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-to-be.md[jest/prefer-to-be]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-to-contain.md[jest/prefer-to-contain]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-to-have-been-called.md[jest/prefer-to-have-been-called]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-to-have-been-called-times.md[jest/prefer-to-have-been-called-times]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-to-have-length.md[jest/prefer-to-have-length]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-todo.md[jest/prefer-todo]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-jest-rules}/require-hook.md[jest/require-hook]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/require-to-throw-message.md[jest/require-to-throw-message]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/require-top-level-describe.md[jest/require-top-level-describe]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/valid-describe-callback.md[jest/valid-describe-callback]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/valid-expect-in-promise.md[jest/valid-expect-in-promise]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/valid-expect.md[jest/valid-expect]`
-| Yes
-|
 | Error
 
 | `link:{eslint-jest-rules}/valid-mock-module-path.md[jest/valid-mock-module-path]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/valid-title.md[jest/valid-title]`
-| Yes
-| Yes
 | Warning
 
 |===
@@ -355,29 +221,21 @@ Class → Method → Method Signature → Precondition ("When").
 
 == TypeScript Rules
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-jest-rules}/no-error-equal.md[jest/no-error-equal]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/no-unnecessary-assertion.md[jest/no-unnecessary-assertion]`
-|
-|
 | Error
 
 | `link:{eslint-jest-rules}/unbound-method.md[jest/unbound-method]`
-|
-|
 | Error
-4+| Extends the base `@typescript-eslint/unbound-method` rule to support `expect` calls.
+2+| Extends the base `@typescript-eslint/unbound-method` rule to support `expect` calls.
 
 | `link:{eslint-jest-rules}/valid-expect-with-promise.md[jest/valid-expect-with-promise]`
-|
-|
 | Error
 
 |===

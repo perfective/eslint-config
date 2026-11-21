@@ -8,55 +8,37 @@ to prevent issues with misspelling of file paths and import names.
 
 == Helpful Warnings
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-import-x-rules}/export.md[import-x/export]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-deprecated.md[import-x/no-deprecated]`
-|
-|
 | Off
-4+| Use `@typescript-eslint/no-deprecated` instead.
+2+| Use `@typescript-eslint/no-deprecated` instead.
 
 | `link:{eslint-import-x-rules}/no-empty-named-blocks.md[import-x/no-empty-named-blocks]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-import-x-rules}/no-extraneous-dependencies.md[import-x/no-extraneous-dependencies]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-mutable-exports.md[import-x/no-mutable-exports]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-named-as-default.md[import-x/no-named-as-default]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-named-as-default-member.md[import-x/no-named-as-default-member]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-rename-default.md[import-x/no-rename-default]`
-|
-|
 | Off
-4+| Conflicts with naming default imports after their package (for example, `eslintPluginStylistic`).
+2+| Conflicts with naming default imports after their package (for example, `eslintPluginStylistic`).
 
 | `link:{eslint-import-x-rules}/no-unused-modules.md[import-x/no-unused-modules]`
-|
-|
 | Error
 
 |===
@@ -64,33 +46,23 @@ to prevent issues with misspelling of file paths and import names.
 
 == Module Systems
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-import-x-rules}/no-amd.md[import-x/no-amd]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-commonjs.md[import-x/no-commonjs]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-import-module-exports.md[import-x/no-import-module-exports]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-nodejs-modules.md[import-x/no-nodejs-modules]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/unambiguous.md[import-x/unambiguous]`
-|
-|
 | Error
 
 |===
@@ -98,31 +70,23 @@ to prevent issues with misspelling of file paths and import names.
 
 == Performance
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-import-x-rules}/avoid-barrel-files.md[import-x/avoid-barrel-files]`
-|
-|
 | Off
-4+| Package entry points (`index.ts`) are barrel files.
+2+| Package entry points (`index.ts`) are barrel files.
 
 | `link:{eslint-import-x-rules}/avoid-importing-barrel-files.md[import-x/avoid-importing-barrel-files]`
-|
-|
 | Off
-4+| Reports imports of most packages (including ESLint plugins), as their entry points are barrel files.
+2+| Reports imports of most packages (including ESLint plugins), as their entry points are barrel files.
 
 | `link:{eslint-import-x-rules}/avoid-namespace-import.md[import-x/avoid-namespace-import]`
-|
-|
 | Off
-4+| Namespace imports are allowed. See `import-x/no-namespace`.
+2+| Namespace imports are allowed. See `import-x/no-namespace`.
 
 | `link:{eslint-import-x-rules}/avoid-re-export-all.md[import-x/avoid-re-export-all]`
-|
-|
 | Error
 
 |===
@@ -130,80 +94,52 @@ to prevent issues with misspelling of file paths and import names.
 
 == Static Analysis
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-import-x-rules}/default.md[import-x/default]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/named.md[import-x/named]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/namespace.md[import-x/namespace]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-absolute-path.md[import-x/no-absolute-path]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-import-x-rules}/no-cycle.md[import-x/no-cycle]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-dynamic-require.md[import-x/no-dynamic-require]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-internal-modules.md[import-x/no-internal-modules]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/no-relative-packages.md[import-x/no-relative-packages]`
-|
-| Yes
 | Warning
-4+| Safety measure for monorepos where packages are published separately.
+2+| Safety measure for monorepos where packages are published separately.
 It should not affect "namespaced" packages with `package.json` generated during the build.
 
 | `link:{eslint-import-x-rules}/no-relative-parent-imports.md[import-x/no-relative-parent-imports]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/no-restricted-paths.md[import-x/no-restricted-paths]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/no-self-import.md[import-x/no-self-import]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-unresolved.md[import-x/no-unresolved]`
-| Yes
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-useless-path-segments.md[import-x/no-useless-path-segments]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-import-x-rules}/no-webpack-loader-syntax.md[import-x/no-webpack-loader-syntax]`
-|
-|
 | Error
 
 |===
@@ -211,99 +147,63 @@ It should not affect "namespaced" packages with `package.json` generated during 
 
 == Style Guide
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-import-x-rules}/consistent-type-specifier-style.md[import-x/consistent-type-specifier-style]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-import-x-rules}/dynamic-import-chunkname.md[import-x/dynamic-import-chunkname]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/exports-last.md[import-x/exports-last]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/extensions.md[import-x/extensions]`
-|
-| Yes
 | Error
-4+| The fixer is opt-in and is not enabled.
+2+| The fixer is opt-in and is not enabled.
 
 | `link:{eslint-import-x-rules}/first.md[import-x/first]`
-|
-| Yes
 | Off
 
 | `link:{eslint-import-x-rules}/group-exports.md[import-x/group-exports]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/max-dependencies.md[import-x/max-dependencies]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/newline-after-import.md[import-x/newline-after-import]`
-|
-| Yes
 | Warning
 
 | `link:{eslint-import-x-rules}/no-anonymous-default-export.md[import-x/no-anonymous-default-export]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-default-export.md[import-x/no-default-export]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-duplicates.md[import-x/no-duplicates]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-import-x-rules}/no-named-default.md[import-x/no-named-default]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/no-named-export.md[import-x/no-named-export]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/no-namespace.md[import-x/no-namespace]`
-|
-| Yes
 | Off
 
 | `link:{eslint-import-x-rules}/no-unassigned-import.md[import-x/no-unassigned-import]`
-|
-|
 | Error
 
 | `link:{eslint-import-x-rules}/order.md[import-x/order]`
-|
-| Yes
 | Off
 
 | `link:{eslint-import-x-rules}/prefer-default-export.md[import-x/prefer-default-export]`
-|
-|
 | Off
 
 | `link:{eslint-import-x-rules}/prefer-namespace-import.md[import-x/prefer-namespace-import]`
-|
-| Yes
 | Warning
 
 |===

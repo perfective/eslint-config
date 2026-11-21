@@ -5,41 +5,29 @@ The `link:{eslint-plugin-array-func}[eslint-plugin-array-func]`
 provides rules for Array functions and methods.
 
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | {eslint-plugin-array-func}#array-funcrecommended-configuration[Recommended] | Fixable | Config
+| Rule | Config
 
 | `link:{eslint-plugin-array-func}#from-map[array-func/from-map]`
-| Yes
-| Yes
 | Off
-4+| Use unicorn/prefer-array-from-map.
+2+| Use unicorn/prefer-array-from-map.
 
 | `link:{eslint-plugin-array-func}#no-unnecessary-this-arg[array-func/no-unnecessary-this-arg]`
-| Yes
-| Partially
 | Error
 
 | `link:{eslint-plugin-array-func}#prefer-array-from[array-func/prefer-array-from]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-plugin-array-func}#avoid-reverse[array-func/avoid-reverse]`
-| Yes
-| Yes
 | Warning
 
 | `link:{eslint-plugin-array-func}#prefer-flat-map[array-func/prefer-flat-map]`
-|
-|
 | Off
-4+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
+2+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
 
 | `link:{eslint-plugin-array-func}#prefer-flat[array-func/prefer-flat]`
-|
-|
 | Off
-4+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
+2+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
 
 |===

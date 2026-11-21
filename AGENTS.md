@@ -111,11 +111,11 @@ Before committing, check `git diff --check` and stage only the intended files.
       `importNoExtraneousDependencies`).
       These have colocated unit tests (`*.spec.ts`);
       linter helpers and TypeScript-dependent configuration also have unit tests.
-    - `index.adoc` documents every rule of the plugin in a table (`Rule | Recommended | Fixable | Config`).
-      Every plugin uses these four columns.
-      Recommended is `Yes`, `Deprecated`, or empty;
-      a plugin with several presets names the preset instead (`Recommended`, `Strict`, `Stylistic`).
-      Fixable is `Yes`, `Partially`, or empty; Config is the severity, with an optional comment.
+    - `index.adoc` documents every rule of the plugin in a two-column table (`Rule | Config`).
+      Config is the severity (`Error`, `Warning`, or `Off`),
+      followed by an optional `2+|` comment row (for example, `Deprecated. Use <replacement> instead.`).
+      The audit takes fixability from the plugin metadata,
+      so a rule that is only partially fixable needs a `severity-convention` audit exception.
       `src/config/index.adoc` gathers these into `src/index.adoc`,
       and gulp/asciidoctor renders it into the built docs.
     - `eslint-plugin-*.d.ts` are hand-written module declarations for plugins that ship no types.
