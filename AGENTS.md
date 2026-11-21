@@ -112,6 +112,10 @@ Before committing, check `git diff --check` and stage only the intended files.
       These have colocated unit tests (`*.spec.ts`);
       linter helpers and TypeScript-dependent configuration also have unit tests.
     - `index.adoc` documents every rule of the plugin in a table (`Rule | Recommended | Fixable | Config`).
+      Every plugin uses these four columns.
+      Recommended is `Yes`, `Deprecated`, or empty;
+      a plugin with several presets names the preset instead (`Recommended`, `Strict`, `Stylistic`).
+      Fixable is `Yes`, `Partially`, or empty; Config is the severity, with an optional comment.
       `src/config/index.adoc` gathers these into `src/index.adoc`,
       and gulp/asciidoctor renders it into the built docs.
     - `eslint-plugin-*.d.ts` are hand-written module declarations for plugins that ship no types.

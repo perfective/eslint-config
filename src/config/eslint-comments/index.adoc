@@ -8,35 +8,41 @@ additional ESLint rules for ESLint directive comments
 
 == Best Practices
 
-[cols="~,1,1"]
+[cols="~,1,1,1"]
 |===
-| Rule | Config | Severity
+| Rule | Recommended | Fixable | Config
 
 | `link:{eslint-comments-rules}/disable-enable-pair.html[eslint-comments/disable-enable-pair]`
-| Recommended
+| Yes
+|
 | Error
 
 | `link:{eslint-comments-rules}/no-aggregating-enable.html[eslint-comments/no-aggregating-enable]`
-| Recommended
+| Yes
+|
 | Error
 
 | `link:{eslint-comments-rules}/no-duplicate-disable.html[eslint-comments/no-duplicate-disable]`
-| Recommended
+| Yes
+|
 | Error
 
 | `link:{eslint-comments-rules}/no-unlimited-disable.html[eslint-comments/no-unlimited-disable]`
-| Recommended
+| Yes
+|
 | Error
 
 | `link:{eslint-comments-rules}/no-unused-disable.html[eslint-comments/no-unused-disable]`
 | Deprecated
+|
 | Off
-3+| Replaced by the `linterOptions.reportUnusedDisableDirectives` option
+4+| Replaced by the `linterOptions.reportUnusedDisableDirectives` option
 (https://eslint.org/docs/latest/use/configure/configuration-files#reporting-unused-disable-directives),
 which `perfectiveEslintConfig()` sets to `'warn'` for all files.
 
 | `link:{eslint-comments-rules}/no-unused-enable.html[eslint-comments/no-unused-enable]`
-| Recommended
+| Yes
+|
 | Error
 
 |===
@@ -44,19 +50,22 @@ which `perfectiveEslintConfig()` sets to `'warn'` for all files.
 
 == Stylistic Issues
 
-[cols="~,1,1"]
+[cols="~,1,1,1"]
 |===
-| Rule | Config | Severity
+| Rule | Recommended | Fixable | Config
 
 | `link:{eslint-comments-rules}/no-restricted-disable[eslint-comments/no-restricted-disable]`
+|
 |
 | Off
 
 | `link:{eslint-comments-rules}/no-use[eslint-comments/no-use]`
 |
+|
 | Error
 
 | `link:{eslint-comments-rules}/require-description.html[eslint-comments/require-description]`
+|
 |
 | Error
 
