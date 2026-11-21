@@ -9,24 +9,24 @@ provides rules for Array functions and methods.
 |===
 | Rule | Config
 
-| `link:{eslint-plugin-array-func}#from-map[array-func/from-map]`
+| `link:{eslint-plugin-array-func}#from-map[array-func/from-map]` [recommended] [fixable]
 | Off
 2+| Use unicorn/prefer-array-from-map.
 
-| `link:{eslint-plugin-array-func}#no-unnecessary-this-arg[array-func/no-unnecessary-this-arg]`
+| `link:{eslint-plugin-array-func}#no-unnecessary-this-arg[array-func/no-unnecessary-this-arg]` [recommended] [partially fixable]
 | Error
 
-| `link:{eslint-plugin-array-func}#prefer-array-from[array-func/prefer-array-from]`
+| `link:{eslint-plugin-array-func}#prefer-array-from[array-func/prefer-array-from]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-plugin-array-func}#avoid-reverse[array-func/avoid-reverse]`
+| `link:{eslint-plugin-array-func}#avoid-reverse[array-func/avoid-reverse]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-plugin-array-func}#prefer-flat-map[array-func/prefer-flat-map]`
+| `link:{eslint-plugin-array-func}#prefer-flat-map[array-func/prefer-flat-map]` [fixable]
 | Off
 2+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
 
-| `link:{eslint-plugin-array-func}#prefer-flat[array-func/prefer-flat]`
+| `link:{eslint-plugin-array-func}#prefer-flat[array-func/prefer-flat]` [fixable]
 | Off
 2+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
 

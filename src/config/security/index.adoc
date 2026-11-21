@@ -8,49 +8,49 @@ to identify potential security issues.
 |===
 | Rule | Config
 
-| `link:{eslint-security-rules}/detect-bidi-characters.md[security/detect-bidi-characters]`
+| `link:{eslint-security-rules}/detect-bidi-characters.md[security/detect-bidi-characters]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-buffer-noassert.md[security/detect-buffer-noassert]`
+| `link:{eslint-security-rules}/detect-buffer-noassert.md[security/detect-buffer-noassert]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-child-process.md[security/detect-child-process]`
+| `link:{eslint-security-rules}/detect-child-process.md[security/detect-child-process]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-disable-mustache-escape.md[security/detect-disable-mustache-escape]`
+| `link:{eslint-security-rules}/detect-disable-mustache-escape.md[security/detect-disable-mustache-escape]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-eval-with-expression.md[security/detect-eval-with-expression]`
+| `link:{eslint-security-rules}/detect-eval-with-expression.md[security/detect-eval-with-expression]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-invisible-characters.md[security/detect-invisible-characters]`
+| `link:{eslint-security-rules}/detect-invisible-characters.md[security/detect-invisible-characters]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-new-buffer.md[security/detect-new-buffer]`
+| `link:{eslint-security-rules}/detect-new-buffer.md[security/detect-new-buffer]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-no-csrf-before-method-override.md[security/detect-no-csrf-before-method-override]`
+| `link:{eslint-security-rules}/detect-no-csrf-before-method-override.md[security/detect-no-csrf-before-method-override]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-non-literal-fs-filename.md[security/detect-non-literal-fs-filename]`
+| `link:{eslint-security-rules}/detect-non-literal-fs-filename.md[security/detect-non-literal-fs-filename]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-non-literal-regexp.md[security/detect-non-literal-regexp]`
+| `link:{eslint-security-rules}/detect-non-literal-regexp.md[security/detect-non-literal-regexp]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-non-literal-require.md[security/detect-non-literal-require]`
+| `link:{eslint-security-rules}/detect-non-literal-require.md[security/detect-non-literal-require]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-object-injection.md[security/detect-object-injection]`
+| `link:{eslint-security-rules}/detect-object-injection.md[security/detect-object-injection]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-possible-timing-attacks.md[security/detect-possible-timing-attacks]`
+| `link:{eslint-security-rules}/detect-possible-timing-attacks.md[security/detect-possible-timing-attacks]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-pseudoRandomBytes.md[security/detect-pseudoRandomBytes]`
+| `link:{eslint-security-rules}/detect-pseudoRandomBytes.md[security/detect-pseudoRandomBytes]` [recommended]
 | Error
 
-| `link:{eslint-security-rules}/detect-unsafe-regex.md[security/detect-unsafe-regex]`
+| `link:{eslint-security-rules}/detect-unsafe-regex.md[security/detect-unsafe-regex]` [recommended]
 | Error
 
 |===

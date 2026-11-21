@@ -8,7 +8,7 @@ rule to prefer arrow functions.
 |===
 | Rule | Config
 
-| `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow#configuration[prefer-arrow/prefer-arrow-functions]`
+| `link:https://github.com/TristonJ/eslint-plugin-prefer-arrow#configuration[prefer-arrow/prefer-arrow-functions]` [fixable]
 | Error
 
 |===

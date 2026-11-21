@@ -9,10 +9,10 @@ for https://jestjs.io[Jest].
 |===
 | Rule | Config
 
-| `link:{eslint-jest-rules}/consistent-test-it.md[jest/consistent-test-it]`
+| `link:{eslint-jest-rules}/consistent-test-it.md[jest/consistent-test-it]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/expect-expect.md[jest/expect-expect]`
+| `link:{eslint-jest-rules}/expect-expect.md[jest/expect-expect]` [recommended]
 | Error
 
 | `link:{eslint-jest-rules}/max-expects.md[jest/max-expects]`
@@ -26,13 +26,13 @@ For parameterized tests in Jest use `link:https://jestjs.io/docs/api#testeachtab
 2+| The maximum of `4` nested `describe` should be enough for a hierarchy:
 Class → Method → Method Signature → Precondition ("When").
 
-| `link:{eslint-jest-rules}/no-alias-methods.md[jest/no-alias-methods]`
+| `link:{eslint-jest-rules}/no-alias-methods.md[jest/no-alias-methods]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/no-commented-out-tests.md[jest/no-commented-out-tests]`
+| `link:{eslint-jest-rules}/no-commented-out-tests.md[jest/no-commented-out-tests]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/no-conditional-expect.md[jest/no-conditional-expect]`
+| `link:{eslint-jest-rules}/no-conditional-expect.md[jest/no-conditional-expect]` [recommended]
 | Error
 
 | `link:{eslint-jest-rules}/no-conditional-in-test.md[jest/no-conditional-in-test]`
@@ -41,40 +41,40 @@ Class → Method → Method Signature → Precondition ("When").
 | `link:{eslint-jest-rules}/no-confusing-set-timeout.md[jest/no-confusing-set-timeout]`
 | Error
 
-| `link:{eslint-jest-rules}/no-deprecated-functions.md[jest/no-deprecated-functions]`
+| `link:{eslint-jest-rules}/no-deprecated-functions.md[jest/no-deprecated-functions]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/no-disabled-tests.md[jest/no-disabled-tests]`
+| `link:{eslint-jest-rules}/no-disabled-tests.md[jest/no-disabled-tests]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/no-done-callback.md[jest/no-done-callback]`
+| `link:{eslint-jest-rules}/no-done-callback.md[jest/no-done-callback]` [recommended]
 | Error
 
 | `link:{eslint-jest-rules}/no-duplicate-hooks.md[jest/no-duplicate-hooks]`
 | Error
 
-| `link:{eslint-jest-rules}/no-export.md[jest/no-export]`
+| `link:{eslint-jest-rules}/no-export.md[jest/no-export]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/no-focused-tests.md[jest/no-focused-tests]`
+| `link:{eslint-jest-rules}/no-focused-tests.md[jest/no-focused-tests]` [recommended]
 | Warning
 
 | `link:{eslint-jest-rules}/no-hooks.md[jest/no-hooks]`
 | Off
 
-| `link:{eslint-jest-rules}/no-identical-title.md[jest/no-identical-title]`
+| `link:{eslint-jest-rules}/no-identical-title.md[jest/no-identical-title]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/no-interpolation-in-snapshots.md[jest/no-interpolation-in-snapshots]`
+| `link:{eslint-jest-rules}/no-interpolation-in-snapshots.md[jest/no-interpolation-in-snapshots]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/no-jasmine-globals.md[jest/no-jasmine-globals]`
+| `link:{eslint-jest-rules}/no-jasmine-globals.md[jest/no-jasmine-globals]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/no-large-snapshots.md[jest/no-large-snapshots]`
 | Error
 
-| `link:{eslint-jest-rules}/no-mocks-import.md[jest/no-mocks-import]`
+| `link:{eslint-jest-rules}/no-mocks-import.md[jest/no-mocks-import]` [recommended]
 | Error
 
 | `link:{eslint-jest-rules}/no-restricted-jest-methods.md[jest/no-restricted-jest-methods]`
@@ -83,49 +83,49 @@ Class → Method → Method Signature → Precondition ("When").
 | `link:{eslint-jest-rules}/no-restricted-matchers.md[jest/no-restricted-matchers]`
 | Error
 
-| `link:{eslint-jest-rules}/no-standalone-expect.md[jest/no-standalone-expect]`
+| `link:{eslint-jest-rules}/no-standalone-expect.md[jest/no-standalone-expect]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/no-test-prefixes.md[jest/no-test-prefixes]`
+| `link:{eslint-jest-rules}/no-test-prefixes.md[jest/no-test-prefixes]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/no-test-return-statement.md[jest/no-test-return-statement]`
 | Error
 
-| `link:{eslint-jest-rules}/no-unneeded-async-expect-function.md[jest/no-unneeded-async-expect-function]`
+| `link:{eslint-jest-rules}/no-unneeded-async-expect-function.md[jest/no-unneeded-async-expect-function]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]`
+| `link:{eslint-jest-rules}/no-untyped-mock-factory.md[jest/no-untyped-mock-factory]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-after-all-blocks.md[jest/padding-around-after-all-blocks]`
+| `link:{eslint-jest-rules}/padding-around-after-all-blocks.md[jest/padding-around-after-all-blocks]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-after-each-blocks.md[jest/padding-around-after-each-blocks]`
+| `link:{eslint-jest-rules}/padding-around-after-each-blocks.md[jest/padding-around-after-each-blocks]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-all.md[jest/padding-around-all]`
+| `link:{eslint-jest-rules}/padding-around-all.md[jest/padding-around-all]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-before-all-blocks.md[jest/padding-around-before-all-blocks]`
+| `link:{eslint-jest-rules}/padding-around-before-all-blocks.md[jest/padding-around-before-all-blocks]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-before-each-blocks.md[jest/padding-around-before-each-blocks]`
+| `link:{eslint-jest-rules}/padding-around-before-each-blocks.md[jest/padding-around-before-each-blocks]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-describe-blocks.md[jest/padding-around-describe-blocks]`
+| `link:{eslint-jest-rules}/padding-around-describe-blocks.md[jest/padding-around-describe-blocks]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-expect-groups.md[jest/padding-around-expect-groups]`
+| `link:{eslint-jest-rules}/padding-around-expect-groups.md[jest/padding-around-expect-groups]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/padding-around-test-blocks.md[jest/padding-around-test-blocks]`
+| `link:{eslint-jest-rules}/padding-around-test-blocks.md[jest/padding-around-test-blocks]` [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-called-with.md[jest/prefer-called-with]`
 | Error
 
-| `link:{eslint-jest-rules}/prefer-comparison-matcher.md[jest/prefer-comparison-matcher]`
+| `link:{eslint-jest-rules}/prefer-comparison-matcher.md[jest/prefer-comparison-matcher]` [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-each.md[jest/prefer-each]`
@@ -140,7 +140,7 @@ Class → Method → Method Signature → Precondition ("When").
 | `link:{eslint-jest-rules}/prefer-expect-assertions.md[jest/prefer-expect-assertions]`
 | Off
 
-| `link:{eslint-jest-rules}/prefer-expect-resolves.md[jest/prefer-expect-resolves]`
+| `link:{eslint-jest-rules}/prefer-expect-resolves.md[jest/prefer-expect-resolves]` [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-hooks-in-order.md[jest/prefer-hooks-in-order]`
@@ -149,47 +149,47 @@ Class → Method → Method Signature → Precondition ("When").
 | `link:{eslint-jest-rules}/prefer-hooks-on-top.md[jest/prefer-hooks-on-top]`
 | Error
 
-| `link:{eslint-jest-rules}/prefer-importing-jest-globals.md[jest/prefer-importing-jest-globals]`
+| `link:{eslint-jest-rules}/prefer-importing-jest-globals.md[jest/prefer-importing-jest-globals]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-jest-mocked.md[jest/prefer-jest-mocked]`
+| `link:{eslint-jest-rules}/prefer-jest-mocked.md[jest/prefer-jest-mocked]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-lowercase-title.md[jest/prefer-lowercase-title]`
+| `link:{eslint-jest-rules}/prefer-lowercase-title.md[jest/prefer-lowercase-title]` [fixable]
 | Error
 2+| Allow uppercase in `describe()` as it can be used for the class names in PascalCase.
 
-| `link:{eslint-jest-rules}/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]`
+| `link:{eslint-jest-rules}/prefer-mock-promise-shorthand.md[jest/prefer-mock-promise-shorthand]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-mock-return-shorthand.md[jest/prefer-mock-return-shorthand]`
+| `link:{eslint-jest-rules}/prefer-mock-return-shorthand.md[jest/prefer-mock-return-shorthand]` [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-snapshot-hint.md[jest/prefer-snapshot-hint]`
 | Error
 
-| `link:{eslint-jest-rules}/prefer-spy-on.md[jest/prefer-spy-on]`
+| `link:{eslint-jest-rules}/prefer-spy-on.md[jest/prefer-spy-on]` [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/prefer-strict-equal.md[jest/prefer-strict-equal]`
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-to-be.md[jest/prefer-to-be]`
+| `link:{eslint-jest-rules}/prefer-to-be.md[jest/prefer-to-be]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-to-contain.md[jest/prefer-to-contain]`
+| `link:{eslint-jest-rules}/prefer-to-contain.md[jest/prefer-to-contain]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-to-have-been-called.md[jest/prefer-to-have-been-called]`
+| `link:{eslint-jest-rules}/prefer-to-have-been-called.md[jest/prefer-to-have-been-called]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-to-have-been-called-times.md[jest/prefer-to-have-been-called-times]`
+| `link:{eslint-jest-rules}/prefer-to-have-been-called-times.md[jest/prefer-to-have-been-called-times]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-to-have-length.md[jest/prefer-to-have-length]`
+| `link:{eslint-jest-rules}/prefer-to-have-length.md[jest/prefer-to-have-length]` [fixable]
 | Warning
 
-| `link:{eslint-jest-rules}/prefer-todo.md[jest/prefer-todo]`
+| `link:{eslint-jest-rules}/prefer-todo.md[jest/prefer-todo]` [fixable]
 | Warning
 
 | `link:{eslint-jest-rules}/require-hook.md[jest/require-hook]`
@@ -201,19 +201,19 @@ Class → Method → Method Signature → Precondition ("When").
 | `link:{eslint-jest-rules}/require-top-level-describe.md[jest/require-top-level-describe]`
 | Error
 
-| `link:{eslint-jest-rules}/valid-describe-callback.md[jest/valid-describe-callback]`
+| `link:{eslint-jest-rules}/valid-describe-callback.md[jest/valid-describe-callback]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/valid-expect-in-promise.md[jest/valid-expect-in-promise]`
+| `link:{eslint-jest-rules}/valid-expect-in-promise.md[jest/valid-expect-in-promise]` [recommended]
 | Error
 
-| `link:{eslint-jest-rules}/valid-expect.md[jest/valid-expect]`
+| `link:{eslint-jest-rules}/valid-expect.md[jest/valid-expect]` [recommended] [fixable]
 | Error
 
 | `link:{eslint-jest-rules}/valid-mock-module-path.md[jest/valid-mock-module-path]`
 | Error
 
-| `link:{eslint-jest-rules}/valid-title.md[jest/valid-title]`
+| `link:{eslint-jest-rules}/valid-title.md[jest/valid-title]` [recommended] [fixable]
 | Warning
 
 |===

@@ -7,149 +7,149 @@ The `link:https://github.com/sindresorhus/eslint-plugin-unicorn[eslint-plugin-un
 |===
 | Rule | Config
 
-| `link:{eslint-unicorn-rules}/better-dom-traversing.md[unicorn/better-dom-traversing]`
+| `link:{eslint-unicorn-rules}/better-dom-traversing.md[unicorn/better-dom-traversing]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/better-regex.md[unicorn/better-regex]`
+| `link:{eslint-unicorn-rules}/better-regex.md[unicorn/better-regex]` [deprecated]
 | Off
-2+| Deprecated. The rule has no replacement.
+2+| The rule has no replacement.
 Use `eslint-plugin-regexp` instead.
 
-| `link:{eslint-unicorn-rules}/catch-error-name.md[unicorn/catch-error-name]`
+| `link:{eslint-unicorn-rules}/catch-error-name.md[unicorn/catch-error-name]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/class-reference-in-static-methods.md[unicorn/class-reference-in-static-methods]`
+| `link:{eslint-unicorn-rules}/class-reference-in-static-methods.md[unicorn/class-reference-in-static-methods]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/comma-spacing.md[unicorn/comma-spacing]`
+| `link:{eslint-unicorn-rules}/comma-spacing.md[unicorn/comma-spacing]` [fixable]
 | Off
 2+| Applies only to JSON and SOML files.
 
-| `link:{eslint-unicorn-rules}/comment-content.md[unicorn/comment-content]`
+| `link:{eslint-unicorn-rules}/comment-content.md[unicorn/comment-content]` [fixable]
 | Warning
 2+| The `application` and `applications` shortenings are disabled,
 as they conflict with `unicorn/name-replacements`.
 
-| `link:{eslint-unicorn-rules}/consistent-arrow-return-style.md[unicorn/consistent-arrow-return-style]`
+| `link:{eslint-unicorn-rules}/consistent-arrow-return-style.md[unicorn/consistent-arrow-return-style]` [fixable]
 | Off
 2+| Conflicts with arrow-body-style.
 
-| `link:{eslint-unicorn-rules}/consistent-assert.md[unicorn/consistent-assert]`
+| `link:{eslint-unicorn-rules}/consistent-assert.md[unicorn/consistent-assert]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-boolean-name.md[unicorn/consistent-boolean-name]`
+| `link:{eslint-unicorn-rules}/consistent-boolean-name.md[unicorn/consistent-boolean-name]` [recommended] [fixable]
 | Warning
 2+| Methods and fields are not required to have a prefix,
 as they often implement external APIs (for example, ESLint rule options),
 but a boolean prefix on them must be correct.
 
-| `link:{eslint-unicorn-rules}/consistent-class-member-order.md[unicorn/consistent-class-member-order]`
+| `link:{eslint-unicorn-rules}/consistent-class-member-order.md[unicorn/consistent-class-member-order]` [recommended]
 | Off
 2+| Use @typescript-eslint/member-ordering.
 
-| `link:{eslint-unicorn-rules}/consistent-compound-words.md[unicorn/consistent-compound-words]`
+| `link:{eslint-unicorn-rules}/consistent-compound-words.md[unicorn/consistent-compound-words]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/consistent-conditional-object-spread.md[unicorn/consistent-conditional-object-spread]`
+| `link:{eslint-unicorn-rules}/consistent-conditional-object-spread.md[unicorn/consistent-conditional-object-spread]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-date-clone.md[unicorn/consistent-date-clone]`
+| `link:{eslint-unicorn-rules}/consistent-date-clone.md[unicorn/consistent-date-clone]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-destructuring.md[unicorn/consistent-destructuring]`
+| `link:{eslint-unicorn-rules}/consistent-destructuring.md[unicorn/consistent-destructuring]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-empty-array-spread.md[unicorn/consistent-empty-array-spread]`
+| `link:{eslint-unicorn-rules}/consistent-empty-array-spread.md[unicorn/consistent-empty-array-spread]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-existence-index-check.md[unicorn/consistent-existence-index-check]`
+| `link:{eslint-unicorn-rules}/consistent-existence-index-check.md[unicorn/consistent-existence-index-check]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-export-decorator-position.md[unicorn/consistent-export-decorator-position]`
+| `link:{eslint-unicorn-rules}/consistent-export-decorator-position.md[unicorn/consistent-export-decorator-position]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-function-scoping.md[unicorn/consistent-function-scoping]`
+| `link:{eslint-unicorn-rules}/consistent-function-scoping.md[unicorn/consistent-function-scoping]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/consistent-function-style.md[unicorn/consistent-function-style]`
 | Off
 2+| Use func-style.
 
-| `link:{eslint-unicorn-rules}/consistent-json-file-read.md[unicorn/consistent-json-file-read]`
+| `link:{eslint-unicorn-rules}/consistent-json-file-read.md[unicorn/consistent-json-file-read]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-optional-chaining.md[unicorn/consistent-optional-chaining]`
+| `link:{eslint-unicorn-rules}/consistent-optional-chaining.md[unicorn/consistent-optional-chaining]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/consistent-template-literal-escape.md[unicorn/consistent-template-literal-escape]`
+| `link:{eslint-unicorn-rules}/consistent-template-literal-escape.md[unicorn/consistent-template-literal-escape]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/consistent-tuple-labels.md[unicorn/consistent-tuple-labels]`
+| `link:{eslint-unicorn-rules}/consistent-tuple-labels.md[unicorn/consistent-tuple-labels]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/custom-error-definition.md[unicorn/custom-error-definition]`
+| `link:{eslint-unicorn-rules}/custom-error-definition.md[unicorn/custom-error-definition]` [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/default-export-style.md[unicorn/default-export-style]`
+| `link:{eslint-unicorn-rules}/default-export-style.md[unicorn/default-export-style]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/dom-node-dataset.md[unicorn/dom-node-dataset]`
+| `link:{eslint-unicorn-rules}/dom-node-dataset.md[unicorn/dom-node-dataset]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/empty-brace-spaces.md[unicorn/empty-brace-spaces]`
+| `link:{eslint-unicorn-rules}/empty-brace-spaces.md[unicorn/empty-brace-spaces]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/error-message.md[unicorn/error-message]`
+| `link:{eslint-unicorn-rules}/error-message.md[unicorn/error-message]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/escape-case.md[unicorn/escape-case]`
+| `link:{eslint-unicorn-rules}/escape-case.md[unicorn/escape-case]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/expiring-todo-comments.md[unicorn/expiring-todo-comments]`
+| `link:{eslint-unicorn-rules}/expiring-todo-comments.md[unicorn/expiring-todo-comments]` [recommended]
 | Error
 2+| Expiration dates are not checked on pull requests,
 so a passed date does not fail unrelated pull requests.
 TODO comments without an expiration condition are allowed.
 
-| `link:{eslint-unicorn-rules}/explicit-length-check.md[unicorn/explicit-length-check]`
+| `link:{eslint-unicorn-rules}/explicit-length-check.md[unicorn/explicit-length-check]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/explicit-timer-delay.md[unicorn/explicit-timer-delay]`
+| `link:{eslint-unicorn-rules}/explicit-timer-delay.md[unicorn/explicit-timer-delay]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/filename-case.md[unicorn/filename-case]`
+| `link:{eslint-unicorn-rules}/filename-case.md[unicorn/filename-case]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/id-match.md[unicorn/id-match]`
 | Off
 2+| Extends id-match, which is off.
 
-| `link:{eslint-unicorn-rules}/import-style.md[unicorn/import-style]`
+| `link:{eslint-unicorn-rules}/import-style.md[unicorn/import-style]` [recommended]
 | Off
 
-| `link:{eslint-unicorn-rules}/indent.md[unicorn/indent]`
+| `link:{eslint-unicorn-rules}/indent.md[unicorn/indent]` [fixable]
 | Off
 2+| Applies only to CSS and JSON files.
 
-| `link:{eslint-unicorn-rules}/isolated-functions.md[unicorn/isolated-functions]`
+| `link:{eslint-unicorn-rules}/isolated-functions.md[unicorn/isolated-functions]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/iteration-fallback-style.md[unicorn/iteration-fallback-style]`
+| `link:{eslint-unicorn-rules}/iteration-fallback-style.md[unicorn/iteration-fallback-style]` [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/key-name-casing.md[unicorn/key-name-casing]`
 | Off
 2+| Applies only to JSON, SOML, YAML, and TOML files.
 
-| `link:{eslint-unicorn-rules}/logical-assignment-operators.md[unicorn/logical-assignment-operators]`
+| `link:{eslint-unicorn-rules}/logical-assignment-operators.md[unicorn/logical-assignment-operators]` [recommended] [fixable]
 | Off
 2+| Use logical-assignment-operators.
 
-| `link:{eslint-unicorn-rules}/max-nested-calls.md[unicorn/max-nested-calls]`
+| `link:{eslint-unicorn-rules}/max-nested-calls.md[unicorn/max-nested-calls]` [recommended]
 | Error
 2+| Allows up to 3 nested calls (`1` bans even `foo(bar())`), matching the `complexity: 3` limit.
 
-| `link:{eslint-unicorn-rules}/name-replacements.md[unicorn/name-replacements]`
+| `link:{eslint-unicorn-rules}/name-replacements.md[unicorn/name-replacements]` [recommended] [fixable]
 | Warning
 2+| The https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/rules/name-replacements.js[default config]
 is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`, `ctx`, `cur`/`curr`, `dest`,
@@ -157,251 +157,251 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 `num`, `obj`, `opts`, `pkg`, `prev`, `prod`, `prop`/`props`, `ref`/`refs`, `rel`, `req`, `res`, `ret`, `retval`,
 `sep`, `src`, `stdDev`, `str`, `tbl`, `temp`, `tit`, `tmp`, `val`, `var`/`vars`, `ver`.
 
-| `link:{eslint-unicorn-rules}/new-for-builtins.md[unicorn/new-for-builtins]`
+| `link:{eslint-unicorn-rules}/new-for-builtins.md[unicorn/new-for-builtins]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-abusive-eslint-disable.md[unicorn/no-abusive-eslint-disable]`
+| `link:{eslint-unicorn-rules}/no-abusive-eslint-disable.md[unicorn/no-abusive-eslint-disable]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-accessor-recursion.md[unicorn/no-accessor-recursion]`
+| `link:{eslint-unicorn-rules}/no-accessor-recursion.md[unicorn/no-accessor-recursion]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-accidental-bitwise-operator.md[unicorn/no-accidental-bitwise-operator]`
+| `link:{eslint-unicorn-rules}/no-accidental-bitwise-operator.md[unicorn/no-accidental-bitwise-operator]` [recommended]
 | Off
 2+| See no-bitwise.
 
-| `link:{eslint-unicorn-rules}/no-anonymous-default-export.md[unicorn/no-anonymous-default-export]`
+| `link:{eslint-unicorn-rules}/no-anonymous-default-export.md[unicorn/no-anonymous-default-export]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-array-callback-reference.md[unicorn/no-array-callback-reference]`
+| `link:{eslint-unicorn-rules}/no-array-callback-reference.md[unicorn/no-array-callback-reference]` [recommended]
 | Off
 
-| `link:{eslint-unicorn-rules}/no-array-concat-in-loop.md[unicorn/no-array-concat-in-loop]`
+| `link:{eslint-unicorn-rules}/no-array-concat-in-loop.md[unicorn/no-array-concat-in-loop]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-array-fill-with-reference-type.md[unicorn/no-array-fill-with-reference-type]`
+| `link:{eslint-unicorn-rules}/no-array-fill-with-reference-type.md[unicorn/no-array-fill-with-reference-type]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-array-from-fill.md[unicorn/no-array-from-fill]`
+| `link:{eslint-unicorn-rules}/no-array-from-fill.md[unicorn/no-array-from-fill]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-array-front-mutation.md[unicorn/no-array-front-mutation]`
 | Error
 
-| `link:{eslint-unicorn-rules}/no-array-method-this-argument.md[unicorn/no-array-method-this-argument]`
+| `link:{eslint-unicorn-rules}/no-array-method-this-argument.md[unicorn/no-array-method-this-argument]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-array-push-push.md[unicorn/no-array-push-push]`
+| `link:{eslint-unicorn-rules}/no-array-push-push.md[unicorn/no-array-push-push]` [deprecated]
 | Off
-2+| Deprecated. Replaced by `unicorn/prefer-single-call`.
+2+| Replaced by `unicorn/prefer-single-call`.
 
-| `link:{eslint-unicorn-rules}/no-array-reduce.md[unicorn/no-array-reduce]`
-| Off
-
-| `link:{eslint-unicorn-rules}/no-array-reverse.md[unicorn/no-array-reverse]`
+| `link:{eslint-unicorn-rules}/no-array-reduce.md[unicorn/no-array-reduce]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/no-array-sort.md[unicorn/no-array-sort]`
+| `link:{eslint-unicorn-rules}/no-array-reverse.md[unicorn/no-array-reverse]` [recommended]
 | Off
 
-| `link:{eslint-unicorn-rules}/no-array-sort-for-min-max.md[unicorn/no-array-sort-for-min-max]`
+| `link:{eslint-unicorn-rules}/no-array-sort.md[unicorn/no-array-sort]` [recommended]
+| Off
+
+| `link:{eslint-unicorn-rules}/no-array-sort-for-min-max.md[unicorn/no-array-sort-for-min-max]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-array-splice.md[unicorn/no-array-splice]`
+| `link:{eslint-unicorn-rules}/no-array-splice.md[unicorn/no-array-splice]` [recommended]
 | Off
 2+| Requires ECMAScript 2023
 
-| `link:{eslint-unicorn-rules}/no-asterisk-prefix-in-documentation-comments.md[unicorn/no-asterisk-prefix-in-documentation-comments]`
+| `link:{eslint-unicorn-rules}/no-asterisk-prefix-in-documentation-comments.md[unicorn/no-asterisk-prefix-in-documentation-comments]` [recommended] [fixable]
 | Off
 2+| Conflicts with jsdoc/require-asterisk-prefix.
 
-| `link:{eslint-unicorn-rules}/no-async-iterator-callback.md[unicorn/no-async-iterator-callback]`
+| `link:{eslint-unicorn-rules}/no-async-iterator-callback.md[unicorn/no-async-iterator-callback]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-async-promise-finally.md[unicorn/no-async-promise-finally]`
 | Error
 
-| `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]`
+| `link:{eslint-unicorn-rules}/no-await-expression-member.md[unicorn/no-await-expression-member]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-await-in-promise-methods.md[unicorn/no-await-in-promise-methods]`
+| `link:{eslint-unicorn-rules}/no-await-in-promise-methods.md[unicorn/no-await-in-promise-methods]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-barrel-files.md[unicorn/no-barrel-files]`
 | Off
 2+| Conflicts with index.ts entry points of packages.
 
-| `link:{eslint-unicorn-rules}/no-blob-to-file.md[unicorn/no-blob-to-file]`
+| `link:{eslint-unicorn-rules}/no-blob-to-file.md[unicorn/no-blob-to-file]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-boolean-sort-comparator.md[unicorn/no-boolean-sort-comparator]`
+| `link:{eslint-unicorn-rules}/no-boolean-sort-comparator.md[unicorn/no-boolean-sort-comparator]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-break-in-nested-loop.md[unicorn/no-break-in-nested-loop]`
+| `link:{eslint-unicorn-rules}/no-break-in-nested-loop.md[unicorn/no-break-in-nested-loop]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-canvas-to-image.md[unicorn/no-canvas-to-image]`
+| `link:{eslint-unicorn-rules}/no-canvas-to-image.md[unicorn/no-canvas-to-image]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-chained-comparison.md[unicorn/no-chained-comparison]`
+| `link:{eslint-unicorn-rules}/no-chained-comparison.md[unicorn/no-chained-comparison]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-collection-bracket-access.md[unicorn/no-collection-bracket-access]`
+| `link:{eslint-unicorn-rules}/no-collection-bracket-access.md[unicorn/no-collection-bracket-access]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-computed-property-existence-check.md[unicorn/no-computed-property-existence-check]`
+| `link:{eslint-unicorn-rules}/no-computed-property-existence-check.md[unicorn/no-computed-property-existence-check]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-conflicting-constraints.md[unicorn/no-conflicting-constraints]`
+| `link:{eslint-unicorn-rules}/no-conflicting-constraints.md[unicorn/no-conflicting-constraints]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-confusing-array-splice.md[unicorn/no-confusing-array-splice]`
+| `link:{eslint-unicorn-rules}/no-confusing-array-splice.md[unicorn/no-confusing-array-splice]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-confusing-array-with.md[unicorn/no-confusing-array-with]`
+| `link:{eslint-unicorn-rules}/no-confusing-array-with.md[unicorn/no-confusing-array-with]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-console-spaces.md[unicorn/no-console-spaces]`
+| `link:{eslint-unicorn-rules}/no-console-spaces.md[unicorn/no-console-spaces]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-constant-zero-expression.md[unicorn/no-constant-zero-expression]`
+| `link:{eslint-unicorn-rules}/no-constant-zero-expression.md[unicorn/no-constant-zero-expression]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-declarations-before-early-exit.md[unicorn/no-declarations-before-early-exit]`
+| `link:{eslint-unicorn-rules}/no-declarations-before-early-exit.md[unicorn/no-declarations-before-early-exit]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-deprecated-css-features.md[unicorn/no-deprecated-css-features]`
+| `link:{eslint-unicorn-rules}/no-deprecated-css-features.md[unicorn/no-deprecated-css-features]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-deprecated-features`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-deprecated-features`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-document-cookie.md[unicorn/no-document-cookie]`
+| `link:{eslint-unicorn-rules}/no-document-cookie.md[unicorn/no-document-cookie]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-double-comparison.md[unicorn/no-double-comparison]`
+| `link:{eslint-unicorn-rules}/no-double-comparison.md[unicorn/no-double-comparison]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-duplicate-css-selectors.md[unicorn/no-duplicate-css-selectors]`
+| `link:{eslint-unicorn-rules}/no-duplicate-css-selectors.md[unicorn/no-duplicate-css-selectors]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-duplicate-selectors`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-duplicate-selectors`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-duplicate-font-family-names.md[unicorn/no-duplicate-font-family-names]`
+| `link:{eslint-unicorn-rules}/no-duplicate-font-family-names.md[unicorn/no-duplicate-font-family-names]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-duplicate-font-family-names`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-duplicate-font-family-names`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-duplicate-if-branches.md[unicorn/no-duplicate-if-branches]`
+| `link:{eslint-unicorn-rules}/no-duplicate-if-branches.md[unicorn/no-duplicate-if-branches]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-duplicate-logical-operands.md[unicorn/no-duplicate-logical-operands]`
+| `link:{eslint-unicorn-rules}/no-duplicate-logical-operands.md[unicorn/no-duplicate-logical-operands]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-duplicate-loops.md[unicorn/no-duplicate-loops]`
+| `link:{eslint-unicorn-rules}/no-duplicate-loops.md[unicorn/no-duplicate-loops]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-duplicate-set-values.md[unicorn/no-duplicate-set-values]`
+| `link:{eslint-unicorn-rules}/no-duplicate-set-values.md[unicorn/no-duplicate-set-values]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-empty-file.md[unicorn/no-empty-file]`
+| `link:{eslint-unicorn-rules}/no-empty-file.md[unicorn/no-empty-file]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-empty-link-text.md[unicorn/no-empty-link-text]`
 | Off
 2+| Applies only to Markdown files.
 
-| `link:{eslint-unicorn-rules}/no-error-property-assignment.md[unicorn/no-error-property-assignment]`
+| `link:{eslint-unicorn-rules}/no-error-property-assignment.md[unicorn/no-error-property-assignment]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-exports-in-scripts.md[unicorn/no-exports-in-scripts]`
+| `link:{eslint-unicorn-rules}/no-exports-in-scripts.md[unicorn/no-exports-in-scripts]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-for-each.md[unicorn/no-for-each]`
+| `link:{eslint-unicorn-rules}/no-for-each.md[unicorn/no-for-each]` [recommended] [fixable]
 | Off
 2+| Renamed from `unicorn/no-array-for-each`.
 
-| `link:{eslint-unicorn-rules}/no-for-loop.md[unicorn/no-for-loop]`
+| `link:{eslint-unicorn-rules}/no-for-loop.md[unicorn/no-for-loop]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-global-object-property-assignment.md[unicorn/no-global-object-property-assignment]`
+| `link:{eslint-unicorn-rules}/no-global-object-property-assignment.md[unicorn/no-global-object-property-assignment]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-hex-escape.md[unicorn/no-hex-escape]`
+| `link:{eslint-unicorn-rules}/no-hex-escape.md[unicorn/no-hex-escape]` [deprecated]
 | Off
-2+| Deprecated. Replaced by `unicorn/prefer-literal-ascii` and `unicorn/prefer-unicode-code-point-escapes`.
+2+| Replaced by `unicorn/prefer-literal-ascii` and `unicorn/prefer-unicode-code-point-escapes`.
 
-| `link:{eslint-unicorn-rules}/no-immediate-mutation.md[unicorn/no-immediate-mutation]`
+| `link:{eslint-unicorn-rules}/no-immediate-mutation.md[unicorn/no-immediate-mutation]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-impossible-length-comparison.md[unicorn/no-impossible-length-comparison]`
+| `link:{eslint-unicorn-rules}/no-impossible-length-comparison.md[unicorn/no-impossible-length-comparison]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-incomplete-accessor-override.md[unicorn/no-incomplete-accessor-override]`
+| `link:{eslint-unicorn-rules}/no-incomplete-accessor-override.md[unicorn/no-incomplete-accessor-override]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-incorrect-query-selector.md[unicorn/no-incorrect-query-selector]`
+| `link:{eslint-unicorn-rules}/no-incorrect-query-selector.md[unicorn/no-incorrect-query-selector]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-incorrect-template-string-interpolation.md[unicorn/no-incorrect-template-string-interpolation]`
+| `link:{eslint-unicorn-rules}/no-incorrect-template-string-interpolation.md[unicorn/no-incorrect-template-string-interpolation]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-ineffective-csp-directives.md[unicorn/no-ineffective-csp-directives]`
+| `link:{eslint-unicorn-rules}/no-ineffective-csp-directives.md[unicorn/no-ineffective-csp-directives]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-instanceof-array.md[unicorn/no-instanceof-array]`
+| `link:{eslint-unicorn-rules}/no-instanceof-array.md[unicorn/no-instanceof-array]` [deprecated]
 | Off as deprecated.
 
-| `link:{eslint-unicorn-rules}/no-instanceof-builtins.md[unicorn/no-instanceof-builtins]`
+| `link:{eslint-unicorn-rules}/no-instanceof-builtins.md[unicorn/no-instanceof-builtins]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-invalid-argument-count.md[unicorn/no-invalid-argument-count]`
+| `link:{eslint-unicorn-rules}/no-invalid-argument-count.md[unicorn/no-invalid-argument-count]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-boolean-attribute-value.md[unicorn/no-invalid-boolean-attribute-value]`
+| `link:{eslint-unicorn-rules}/no-invalid-boolean-attribute-value.md[unicorn/no-invalid-boolean-attribute-value]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-character-comparison.md[unicorn/no-invalid-character-comparison]`
+| `link:{eslint-unicorn-rules}/no-invalid-character-comparison.md[unicorn/no-invalid-character-comparison]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-dom-token.md[unicorn/no-invalid-dom-token]`
+| `link:{eslint-unicorn-rules}/no-invalid-dom-token.md[unicorn/no-invalid-dom-token]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-fetch-options.md[unicorn/no-invalid-fetch-options]`
+| `link:{eslint-unicorn-rules}/no-invalid-fetch-options.md[unicorn/no-invalid-fetch-options]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-file-input-accept.md[unicorn/no-invalid-file-input-accept]`
+| `link:{eslint-unicorn-rules}/no-invalid-file-input-accept.md[unicorn/no-invalid-file-input-accept]` [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-invalid-integrity.md[unicorn/no-invalid-integrity]`
+| `link:{eslint-unicorn-rules}/no-invalid-integrity.md[unicorn/no-invalid-integrity]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-intl-options.md[unicorn/no-invalid-intl-options]`
+| `link:{eslint-unicorn-rules}/no-invalid-intl-options.md[unicorn/no-invalid-intl-options]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-media-features.md[unicorn/no-invalid-media-features]`
+| `link:{eslint-unicorn-rules}/no-invalid-media-features.md[unicorn/no-invalid-media-features]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-invalid-media-features`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-invalid-media-features`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-invalid-property-descriptor.md[unicorn/no-invalid-property-descriptor]`
+| `link:{eslint-unicorn-rules}/no-invalid-property-descriptor.md[unicorn/no-invalid-property-descriptor]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-remove-event-listener.md[unicorn/no-invalid-remove-event-listener]`
+| `link:{eslint-unicorn-rules}/no-invalid-remove-event-listener.md[unicorn/no-invalid-remove-event-listener]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-response-options.md[unicorn/no-invalid-response-options]`
+| `link:{eslint-unicorn-rules}/no-invalid-response-options.md[unicorn/no-invalid-response-options]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-style-set-property.md[unicorn/no-invalid-style-set-property]`
+| `link:{eslint-unicorn-rules}/no-invalid-style-set-property.md[unicorn/no-invalid-style-set-property]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-temporal-arithmetic.md[unicorn/no-invalid-temporal-arithmetic]`
+| `link:{eslint-unicorn-rules}/no-invalid-temporal-arithmetic.md[unicorn/no-invalid-temporal-arithmetic]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-invalid-url-protocol-comparison.md[unicorn/no-invalid-url-protocol-comparison]`
+| `link:{eslint-unicorn-rules}/no-invalid-url-protocol-comparison.md[unicorn/no-invalid-url-protocol-comparison]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-invalid-well-known-symbol-methods.md[unicorn/no-invalid-well-known-symbol-methods]`
+| `link:{eslint-unicorn-rules}/no-invalid-well-known-symbol-methods.md[unicorn/no-invalid-well-known-symbol-methods]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/no-javascript-url.md[unicorn/no-javascript-url]`
@@ -411,24 +411,24 @@ Applies only to CSS files.
 | `link:{eslint-unicorn-rules}/no-keyword-prefix.md[unicorn/no-keyword-prefix]`
 | Off
 
-| `link:{eslint-unicorn-rules}/no-late-current-target-access.md[unicorn/no-late-current-target-access]`
+| `link:{eslint-unicorn-rules}/no-late-current-target-access.md[unicorn/no-late-current-target-access]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-late-event-control.md[unicorn/no-late-event-control]`
+| `link:{eslint-unicorn-rules}/no-late-event-control.md[unicorn/no-late-event-control]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-leading-empty-lines.md[unicorn/no-leading-empty-lines]`
+| `link:{eslint-unicorn-rules}/no-leading-empty-lines.md[unicorn/no-leading-empty-lines]` [recommended] [fixable]
 | Off
 2+| Use @stylistic/no-multiple-empty-lines.
 
-| `link:{eslint-unicorn-rules}/no-length-as-slice-end.md[unicorn/no-length-as-slice-end]`
+| `link:{eslint-unicorn-rules}/no-length-as-slice-end.md[unicorn/no-length-as-slice-end]` [deprecated]
 | Off
-2+| Deprecated. Replaced by `unicorn/no-unnecessary-slice-end`.
+2+| Replaced by `unicorn/no-unnecessary-slice-end`.
 
-| `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]`
+| `link:{eslint-unicorn-rules}/no-lonely-if.md[unicorn/no-lonely-if]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-loop-iterable-mutation.md[unicorn/no-loop-iterable-mutation]`
+| `link:{eslint-unicorn-rules}/no-loop-iterable-mutation.md[unicorn/no-loop-iterable-mutation]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-loss-of-precision.md[unicorn/no-loss-of-precision]`
@@ -436,782 +436,782 @@ Applies only to CSS files.
 2+| Applies only to CSS, JSON, TOML, and SOML files.
 Use no-loss-of-precision.
 
-| `link:{eslint-unicorn-rules}/no-magic-array-flat-depth.md[unicorn/no-magic-array-flat-depth]`
+| `link:{eslint-unicorn-rules}/no-magic-array-flat-depth.md[unicorn/no-magic-array-flat-depth]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-manually-wrapped-comments.md[unicorn/no-manually-wrapped-comments]`
+| `link:{eslint-unicorn-rules}/no-manually-wrapped-comments.md[unicorn/no-manually-wrapped-comments]` [fixable]
 | Off
 2+| Conflicts with semantic line breaks in comments.
 
-| `link:{eslint-unicorn-rules}/no-mismatched-map-key.md[unicorn/no-mismatched-map-key]`
+| `link:{eslint-unicorn-rules}/no-mismatched-map-key.md[unicorn/no-mismatched-map-key]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-misrefactored-assignment.md[unicorn/no-misrefactored-assignment]`
+| `link:{eslint-unicorn-rules}/no-misrefactored-assignment.md[unicorn/no-misrefactored-assignment]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-missing-local-resource.md[unicorn/no-missing-local-resource]`
+| `link:{eslint-unicorn-rules}/no-missing-local-resource.md[unicorn/no-missing-local-resource]` [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-multiple-promise-resolver-calls.md[unicorn/no-multiple-promise-resolver-calls]`
+| `link:{eslint-unicorn-rules}/no-multiple-promise-resolver-calls.md[unicorn/no-multiple-promise-resolver-calls]` [recommended]
 | Off
 2+| Use promise/no-multiple-resolved.
 
-| `link:{eslint-unicorn-rules}/no-named-default.md[unicorn/no-named-default]`
+| `link:{eslint-unicorn-rules}/no-named-default.md[unicorn/no-named-default]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-negated-array-predicate.md[unicorn/no-negated-array-predicate]`
+| `link:{eslint-unicorn-rules}/no-negated-array-predicate.md[unicorn/no-negated-array-predicate]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-negated-comparison.md[unicorn/no-negated-comparison]`
+| `link:{eslint-unicorn-rules}/no-negated-comparison.md[unicorn/no-negated-comparison]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-negated-condition.md[unicorn/no-negated-condition]`
+| `link:{eslint-unicorn-rules}/no-negated-condition.md[unicorn/no-negated-condition]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-negation-in-equality-check.md[unicorn/no-negation-in-equality-check]`
+| `link:{eslint-unicorn-rules}/no-negation-in-equality-check.md[unicorn/no-negation-in-equality-check]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-nested-ternary.md[unicorn/no-nested-ternary]`
+| `link:{eslint-unicorn-rules}/no-nested-ternary.md[unicorn/no-nested-ternary]` [recommended] [partially fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/no-nesting-with-mixed-specificity.md[unicorn/no-nesting-with-mixed-specificity]`
+| `link:{eslint-unicorn-rules}/no-nesting-with-mixed-specificity.md[unicorn/no-nesting-with-mixed-specificity]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-nesting-with-mixed-specificity`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-nesting-with-mixed-specificity`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-new-array.md[unicorn/no-new-array]`
+| `link:{eslint-unicorn-rules}/no-new-array.md[unicorn/no-new-array]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-new-buffer.md[unicorn/no-new-buffer]`
+| `link:{eslint-unicorn-rules}/no-new-buffer.md[unicorn/no-new-buffer]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-non-function-verb-prefix.md[unicorn/no-non-function-verb-prefix]`
+| `link:{eslint-unicorn-rules}/no-non-function-verb-prefix.md[unicorn/no-non-function-verb-prefix]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-nonstandard-builtin-properties.md[unicorn/no-nonstandard-builtin-properties]`
+| `link:{eslint-unicorn-rules}/no-nonstandard-builtin-properties.md[unicorn/no-nonstandard-builtin-properties]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-null.md[unicorn/no-null]`
+| `link:{eslint-unicorn-rules}/no-null.md[unicorn/no-null]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/no-object-as-default-parameter.md[unicorn/no-object-as-default-parameter]`
+| `link:{eslint-unicorn-rules}/no-object-as-default-parameter.md[unicorn/no-object-as-default-parameter]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-object-methods-with-collections.md[unicorn/no-object-methods-with-collections]`
+| `link:{eslint-unicorn-rules}/no-object-methods-with-collections.md[unicorn/no-object-methods-with-collections]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-optional-chaining-on-undeclared-variable.md[unicorn/no-optional-chaining-on-undeclared-variable]`
+| `link:{eslint-unicorn-rules}/no-optional-chaining-on-undeclared-variable.md[unicorn/no-optional-chaining-on-undeclared-variable]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-prevent-default-in-passive-listener.md[unicorn/no-prevent-default-in-passive-listener]`
+| `link:{eslint-unicorn-rules}/no-prevent-default-in-passive-listener.md[unicorn/no-prevent-default-in-passive-listener]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-process-exit.md[unicorn/no-process-exit]`
+| `link:{eslint-unicorn-rules}/no-process-exit.md[unicorn/no-process-exit]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-redundant-comparison.md[unicorn/no-redundant-comparison]`
+| `link:{eslint-unicorn-rules}/no-redundant-comparison.md[unicorn/no-redundant-comparison]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-redundant-nested-style-rules.md[unicorn/no-redundant-nested-style-rules]`
+| `link:{eslint-unicorn-rules}/no-redundant-nested-style-rules.md[unicorn/no-redundant-nested-style-rules]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-redundant-nested-style-rules`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-redundant-nested-style-rules`.
 Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/no-repeated-call-wrappers.md[unicorn/no-repeated-call-wrappers]`
 | Error
 
-| `link:{eslint-unicorn-rules}/no-return-array-push.md[unicorn/no-return-array-push]`
+| `link:{eslint-unicorn-rules}/no-return-array-push.md[unicorn/no-return-array-push]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-selector-as-dom-name.md[unicorn/no-selector-as-dom-name]`
+| `link:{eslint-unicorn-rules}/no-selector-as-dom-name.md[unicorn/no-selector-as-dom-name]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-shorthand-property-overrides.md[unicorn/no-shorthand-property-overrides]`
+| `link:{eslint-unicorn-rules}/no-shorthand-property-overrides.md[unicorn/no-shorthand-property-overrides]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-single-promise-in-promise-methods.md[unicorn/no-single-promise-in-promise-methods]`
+| `link:{eslint-unicorn-rules}/no-single-promise-in-promise-methods.md[unicorn/no-single-promise-in-promise-methods]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-static-only-class.md[unicorn/no-static-only-class]`
+| `link:{eslint-unicorn-rules}/no-static-only-class.md[unicorn/no-static-only-class]` [recommended] [partially fixable]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-subtraction-comparison.md[unicorn/no-subtraction-comparison]`
+| `link:{eslint-unicorn-rules}/no-subtraction-comparison.md[unicorn/no-subtraction-comparison]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-thenable.md[unicorn/no-thenable]`
+| `link:{eslint-unicorn-rules}/no-thenable.md[unicorn/no-thenable]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-this-assignment.md[unicorn/no-this-assignment]`
+| `link:{eslint-unicorn-rules}/no-this-assignment.md[unicorn/no-this-assignment]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-this-outside-of-class.md[unicorn/no-this-outside-of-class]`
+| `link:{eslint-unicorn-rules}/no-this-outside-of-class.md[unicorn/no-this-outside-of-class]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-top-level-assignment-in-function.md[unicorn/no-top-level-assignment-in-function]`
+| `link:{eslint-unicorn-rules}/no-top-level-assignment-in-function.md[unicorn/no-top-level-assignment-in-function]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-top-level-side-effects.md[unicorn/no-top-level-side-effects]`
+| `link:{eslint-unicorn-rules}/no-top-level-side-effects.md[unicorn/no-top-level-side-effects]` [recommended]
 | Error
 2+| Unknown calls are not checked,
 as they include pure helpers that build exported constants (for example, rule options).
 
-| `link:{eslint-unicorn-rules}/no-transition-all.md[unicorn/no-transition-all]`
+| `link:{eslint-unicorn-rules}/no-transition-all.md[unicorn/no-transition-all]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-typeof-undefined.md[unicorn/no-typeof-undefined]`
+| `link:{eslint-unicorn-rules}/no-typeof-undefined.md[unicorn/no-typeof-undefined]` [recommended] [fixable]
 | Warning
 2+| Checks global variables
 
-| `link:{eslint-unicorn-rules}/no-uncalled-method.md[unicorn/no-uncalled-method]`
+| `link:{eslint-unicorn-rules}/no-uncalled-method.md[unicorn/no-uncalled-method]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-undeclared-class-members.md[unicorn/no-undeclared-class-members]`
+| `link:{eslint-unicorn-rules}/no-undeclared-class-members.md[unicorn/no-undeclared-class-members]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unknown-css-annotations.md[unicorn/no-unknown-css-annotations]`
+| `link:{eslint-unicorn-rules}/no-unknown-css-annotations.md[unicorn/no-unknown-css-annotations]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-unknown-annotations`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-unknown-annotations`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-unknown-pseudo-selectors.md[unicorn/no-unknown-pseudo-selectors]`
+| `link:{eslint-unicorn-rules}/no-unknown-pseudo-selectors.md[unicorn/no-unknown-pseudo-selectors]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-unknown-pseudo-selectors`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-unknown-pseudo-selectors`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-depth.md[unicorn/no-unnecessary-array-flat-depth]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-depth.md[unicorn/no-unnecessary-array-flat-depth]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-map.md[unicorn/no-unnecessary-array-flat-map]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-array-flat-map.md[unicorn/no-unnecessary-array-flat-map]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-array-splice-count.md[unicorn/no-unnecessary-array-splice-count]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-array-splice-count.md[unicorn/no-unnecessary-array-splice-count]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-await.md[unicorn/no-unnecessary-await]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-await.md[unicorn/no-unnecessary-await]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-boolean-comparison.md[unicorn/no-unnecessary-boolean-comparison]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-boolean-comparison.md[unicorn/no-unnecessary-boolean-comparison]` [recommended] [fixable]
 | Off
 2+| Use @typescript-eslint/no-unnecessary-boolean-literal-compare.
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-default-arguments.md[unicorn/no-unnecessary-default-arguments]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-default-arguments.md[unicorn/no-unnecessary-default-arguments]` [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-fetch-options.md[unicorn/no-unnecessary-fetch-options]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-fetch-options.md[unicorn/no-unnecessary-fetch-options]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-global-this.md[unicorn/no-unnecessary-global-this]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-global-this.md[unicorn/no-unnecessary-global-this]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-nested-ternary.md[unicorn/no-unnecessary-nested-ternary]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-nested-ternary.md[unicorn/no-unnecessary-nested-ternary]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-parameters.md[unicorn/no-unnecessary-parameters]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-parameters.md[unicorn/no-unnecessary-parameters]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-polyfills.md[unicorn/no-unnecessary-polyfills]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-polyfills.md[unicorn/no-unnecessary-polyfills]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-slice-end.md[unicorn/no-unnecessary-slice-end]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-slice-end.md[unicorn/no-unnecessary-slice-end]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-splice.md[unicorn/no-unnecessary-splice]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-splice.md[unicorn/no-unnecessary-splice]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unnecessary-string-trim.md[unicorn/no-unnecessary-string-trim]`
+| `link:{eslint-unicorn-rules}/no-unnecessary-string-trim.md[unicorn/no-unnecessary-string-trim]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-unreadable-array-destructuring.md[unicorn/no-unreadable-array-destructuring]`
+| `link:{eslint-unicorn-rules}/no-unreadable-array-destructuring.md[unicorn/no-unreadable-array-destructuring]` [recommended] [partially fixable]
 | Error
 2+| Allows one skipped element, as in `Object.entries()` callbacks (`[, value]`).
 
-| `link:{eslint-unicorn-rules}/no-unreadable-for-of-expression.md[unicorn/no-unreadable-for-of-expression]`
+| `link:{eslint-unicorn-rules}/no-unreadable-for-of-expression.md[unicorn/no-unreadable-for-of-expression]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unreadable-iife.md[unicorn/no-unreadable-iife]`
+| `link:{eslint-unicorn-rules}/no-unreadable-iife.md[unicorn/no-unreadable-iife]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-unreadable-new-expression.md[unicorn/no-unreadable-new-expression]`
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unreadable-object-destructuring.md[unicorn/no-unreadable-object-destructuring]`
+| `link:{eslint-unicorn-rules}/no-unreadable-object-destructuring.md[unicorn/no-unreadable-object-destructuring]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unsafe-buffer-conversion.md[unicorn/no-unsafe-buffer-conversion]`
+| `link:{eslint-unicorn-rules}/no-unsafe-buffer-conversion.md[unicorn/no-unsafe-buffer-conversion]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-unsafe-dom-html.md[unicorn/no-unsafe-dom-html]`
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unsafe-json-serialization.md[unicorn/no-unsafe-json-serialization]`
+| `link:{eslint-unicorn-rules}/no-unsafe-json-serialization.md[unicorn/no-unsafe-json-serialization]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unsafe-promise-all-settled-values.md[unicorn/no-unsafe-promise-all-settled-values]`
+| `link:{eslint-unicorn-rules}/no-unsafe-promise-all-settled-values.md[unicorn/no-unsafe-promise-all-settled-values]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unsafe-property-key.md[unicorn/no-unsafe-property-key]`
+| `link:{eslint-unicorn-rules}/no-unsafe-property-key.md[unicorn/no-unsafe-property-key]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unsafe-sqlite-interpolation.md[unicorn/no-unsafe-sqlite-interpolation]`
+| `link:{eslint-unicorn-rules}/no-unsafe-sqlite-interpolation.md[unicorn/no-unsafe-sqlite-interpolation]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unsafe-string-replacement.md[unicorn/no-unsafe-string-replacement]`
+| `link:{eslint-unicorn-rules}/no-unsafe-string-replacement.md[unicorn/no-unsafe-string-replacement]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unscoped-css-nesting-selector.md[unicorn/no-unscoped-css-nesting-selector]`
+| `link:{eslint-unicorn-rules}/no-unscoped-css-nesting-selector.md[unicorn/no-unscoped-css-nesting-selector]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/no-unscoped-nesting-selector`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/no-unscoped-nesting-selector`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/no-unused-array-method-return.md[unicorn/no-unused-array-method-return]`
+| `link:{eslint-unicorn-rules}/no-unused-array-method-return.md[unicorn/no-unused-array-method-return]` [deprecated]
 | Off
-2+| Deprecated. Replaced by `unicorn/no-unused-builtin-method-return`.
+2+| Replaced by `unicorn/no-unused-builtin-method-return`.
 
-| `link:{eslint-unicorn-rules}/no-unused-builtin-method-return.md[unicorn/no-unused-builtin-method-return]`
+| `link:{eslint-unicorn-rules}/no-unused-builtin-method-return.md[unicorn/no-unused-builtin-method-return]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-unused-iterator-helper.md[unicorn/no-unused-iterator-helper]`
+| `link:{eslint-unicorn-rules}/no-unused-iterator-helper.md[unicorn/no-unused-iterator-helper]` [recommended]
 | Error
 
 | `link:{eslint-unicorn-rules}/no-unused-properties.md[unicorn/no-unused-properties]`
 | Off
 
-| `link:{eslint-unicorn-rules}/no-url-in-search-params.md[unicorn/no-url-in-search-params]`
+| `link:{eslint-unicorn-rules}/no-url-in-search-params.md[unicorn/no-url-in-search-params]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-useless-boolean-cast.md[unicorn/no-useless-boolean-cast]`
+| `link:{eslint-unicorn-rules}/no-useless-boolean-cast.md[unicorn/no-useless-boolean-cast]` [recommended] [fixable]
 | Off
 2+| Conflicts with @typescript-eslint/strict-boolean-expressions.
 
-| `link:{eslint-unicorn-rules}/no-useless-coercion.md[unicorn/no-useless-coercion]`
+| `link:{eslint-unicorn-rules}/no-useless-coercion.md[unicorn/no-useless-coercion]` [recommended] [fixable]
 | Off
 2+| Use @typescript-eslint/no-unnecessary-type-conversion.
 
-| `link:{eslint-unicorn-rules}/no-useless-collection-argument.md[unicorn/no-useless-collection-argument]`
+| `link:{eslint-unicorn-rules}/no-useless-collection-argument.md[unicorn/no-useless-collection-argument]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-compound-assignment.md[unicorn/no-useless-compound-assignment]`
+| `link:{eslint-unicorn-rules}/no-useless-compound-assignment.md[unicorn/no-useless-compound-assignment]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-useless-concat.md[unicorn/no-useless-concat]`
+| `link:{eslint-unicorn-rules}/no-useless-concat.md[unicorn/no-useless-concat]` [recommended] [fixable]
 | Off
 2+| Use no-useless-concat.
 
-| `link:{eslint-unicorn-rules}/no-useless-continue.md[unicorn/no-useless-continue]`
+| `link:{eslint-unicorn-rules}/no-useless-continue.md[unicorn/no-useless-continue]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-delete-check.md[unicorn/no-useless-delete-check]`
+| `link:{eslint-unicorn-rules}/no-useless-delete-check.md[unicorn/no-useless-delete-check]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-else.md[unicorn/no-useless-else]`
+| `link:{eslint-unicorn-rules}/no-useless-else.md[unicorn/no-useless-else]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-error-capture-stack-trace.md[unicorn/no-useless-error-capture-stack-trace]`
+| `link:{eslint-unicorn-rules}/no-useless-error-capture-stack-trace.md[unicorn/no-useless-error-capture-stack-trace]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]`
+| `link:{eslint-unicorn-rules}/no-useless-fallback-in-spread.md[unicorn/no-useless-fallback-in-spread]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-iterator-to-array.md[unicorn/no-useless-iterator-to-array]`
+| `link:{eslint-unicorn-rules}/no-useless-iterator-to-array.md[unicorn/no-useless-iterator-to-array]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-length-check.md[unicorn/no-useless-length-check]`
+| `link:{eslint-unicorn-rules}/no-useless-length-check.md[unicorn/no-useless-length-check]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-logical-operand.md[unicorn/no-useless-logical-operand]`
+| `link:{eslint-unicorn-rules}/no-useless-logical-operand.md[unicorn/no-useless-logical-operand]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-override.md[unicorn/no-useless-override]`
+| `link:{eslint-unicorn-rules}/no-useless-override.md[unicorn/no-useless-override]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-promise-resolve-reject.md[unicorn/no-useless-promise-resolve-reject]`
+| `link:{eslint-unicorn-rules}/no-useless-promise-resolve-reject.md[unicorn/no-useless-promise-resolve-reject]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-re-export.md[unicorn/no-useless-re-export]`
+| `link:{eslint-unicorn-rules}/no-useless-re-export.md[unicorn/no-useless-re-export]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-useless-recursion.md[unicorn/no-useless-recursion]`
+| `link:{eslint-unicorn-rules}/no-useless-recursion.md[unicorn/no-useless-recursion]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-useless-set-construction.md[unicorn/no-useless-set-construction]`
+| `link:{eslint-unicorn-rules}/no-useless-set-construction.md[unicorn/no-useless-set-construction]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-spread.md[unicorn/no-useless-spread]`
+| `link:{eslint-unicorn-rules}/no-useless-spread.md[unicorn/no-useless-spread]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/no-useless-switch-case.md[unicorn/no-useless-switch-case]`
+| `link:{eslint-unicorn-rules}/no-useless-switch-case.md[unicorn/no-useless-switch-case]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-useless-template-literals.md[unicorn/no-useless-template-literals]`
+| `link:{eslint-unicorn-rules}/no-useless-template-literals.md[unicorn/no-useless-template-literals]` [recommended] [fixable]
 | Off
 2+| Use @typescript-eslint/no-unnecessary-template-expression.
 
-| `link:{eslint-unicorn-rules}/no-useless-undefined.md[unicorn/no-useless-undefined]`
+| `link:{eslint-unicorn-rules}/no-useless-undefined.md[unicorn/no-useless-undefined]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/no-using-resource-escape.md[unicorn/no-using-resource-escape]`
+| `link:{eslint-unicorn-rules}/no-using-resource-escape.md[unicorn/no-using-resource-escape]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/no-xor-as-exponentiation.md[unicorn/no-xor-as-exponentiation]`
+| `link:{eslint-unicorn-rules}/no-xor-as-exponentiation.md[unicorn/no-xor-as-exponentiation]` [recommended]
 | Off
 2+| See no-bitwise.
 
-| `link:{eslint-unicorn-rules}/no-zero-fractions.md[unicorn/no-zero-fractions]`
+| `link:{eslint-unicorn-rules}/no-zero-fractions.md[unicorn/no-zero-fractions]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/number-literal-case.md[unicorn/number-literal-case]`
+| `link:{eslint-unicorn-rules}/number-literal-case.md[unicorn/number-literal-case]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/numeric-separators-style.md[unicorn/numeric-separators-style]`
+| `link:{eslint-unicorn-rules}/numeric-separators-style.md[unicorn/numeric-separators-style]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/operator-assignment.md[unicorn/operator-assignment]`
+| `link:{eslint-unicorn-rules}/operator-assignment.md[unicorn/operator-assignment]` [recommended] [fixable]
 | Off
 2+| Use operator-assignment.
 
-| `link:{eslint-unicorn-rules}/prefer-abort-signal-any.md[unicorn/prefer-abort-signal-any]`
+| `link:{eslint-unicorn-rules}/prefer-abort-signal-any.md[unicorn/prefer-abort-signal-any]` [recommended]
 | Off
 2+| Requires a polyfill for older browsers.
 
-| `link:{eslint-unicorn-rules}/prefer-abort-signal-timeout.md[unicorn/prefer-abort-signal-timeout]`
+| `link:{eslint-unicorn-rules}/prefer-abort-signal-timeout.md[unicorn/prefer-abort-signal-timeout]` [recommended]
 | Off
 2+| Requires a polyfill for older browsers.
 
-| `link:{eslint-unicorn-rules}/prefer-add-event-listener.md[unicorn/prefer-add-event-listener]`
+| `link:{eslint-unicorn-rules}/prefer-add-event-listener.md[unicorn/prefer-add-event-listener]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-add-event-listener-options.md[unicorn/prefer-add-event-listener-options]`
+| `link:{eslint-unicorn-rules}/prefer-add-event-listener-options.md[unicorn/prefer-add-event-listener-options]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-aggregate-error.md[unicorn/prefer-aggregate-error]`
+| `link:{eslint-unicorn-rules}/prefer-aggregate-error.md[unicorn/prefer-aggregate-error]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-array-find.md[unicorn/prefer-array-find]`
+| `link:{eslint-unicorn-rules}/prefer-array-find.md[unicorn/prefer-array-find]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-array-flat.md[unicorn/prefer-array-flat]`
+| `link:{eslint-unicorn-rules}/prefer-array-flat.md[unicorn/prefer-array-flat]` [recommended] [fixable]
 | Off
 2+| `Array.prototype.flat()` is not supported in the ES6 library for TypeScript.
 
-| `link:{eslint-unicorn-rules}/prefer-array-flat-map.md[unicorn/prefer-array-flat-map]`
+| `link:{eslint-unicorn-rules}/prefer-array-flat-map.md[unicorn/prefer-array-flat-map]` [recommended] [fixable]
 | Off
 2+| `Array.prototype.flatMap()` is not supported in the ES6 library for TypeScript.
 
-| `link:{eslint-unicorn-rules}/prefer-array-from-async.md[unicorn/prefer-array-from-async]`
+| `link:{eslint-unicorn-rules}/prefer-array-from-async.md[unicorn/prefer-array-from-async]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2024
 
-| `link:{eslint-unicorn-rules}/prefer-array-from-map.md[unicorn/prefer-array-from-map]`
+| `link:{eslint-unicorn-rules}/prefer-array-from-map.md[unicorn/prefer-array-from-map]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-array-from-range.md[unicorn/prefer-array-from-range]`
+| `link:{eslint-unicorn-rules}/prefer-array-from-range.md[unicorn/prefer-array-from-range]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-array-index-of.md[unicorn/prefer-array-index-of]`
+| `link:{eslint-unicorn-rules}/prefer-array-index-of.md[unicorn/prefer-array-index-of]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-array-iterable-methods.md[unicorn/prefer-array-iterable-methods]`
+| `link:{eslint-unicorn-rules}/prefer-array-iterable-methods.md[unicorn/prefer-array-iterable-methods]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-array-last-methods.md[unicorn/prefer-array-last-methods]`
+| `link:{eslint-unicorn-rules}/prefer-array-last-methods.md[unicorn/prefer-array-last-methods]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-array-slice.md[unicorn/prefer-array-slice]`
+| `link:{eslint-unicorn-rules}/prefer-array-slice.md[unicorn/prefer-array-slice]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-array-some.md[unicorn/prefer-array-some]`
+| `link:{eslint-unicorn-rules}/prefer-array-some.md[unicorn/prefer-array-some]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-at.md[unicorn/prefer-at]`
+| `link:{eslint-unicorn-rules}/prefer-at.md[unicorn/prefer-at]` [recommended] [fixable]
 |
 2+| `String#at()` is experimental.
 
-| `link:{eslint-unicorn-rules}/prefer-await.md[unicorn/prefer-await]`
+| `link:{eslint-unicorn-rules}/prefer-await.md[unicorn/prefer-await]` [recommended]
 | Off
 2+| Conflicts with the Promises-over-async/await convention.
 
-| `link:{eslint-unicorn-rules}/prefer-bigint-literals.md[unicorn/prefer-bigint-literals]`
+| `link:{eslint-unicorn-rules}/prefer-bigint-literals.md[unicorn/prefer-bigint-literals]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-blob-reading-methods.md[unicorn/prefer-blob-reading-methods]`
+| `link:{eslint-unicorn-rules}/prefer-blob-reading-methods.md[unicorn/prefer-blob-reading-methods]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-block-statement-over-iife.md[unicorn/prefer-block-statement-over-iife]`
+| `link:{eslint-unicorn-rules}/prefer-block-statement-over-iife.md[unicorn/prefer-block-statement-over-iife]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-boolean-return.md[unicorn/prefer-boolean-return]`
+| `link:{eslint-unicorn-rules}/prefer-boolean-return.md[unicorn/prefer-boolean-return]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-class-fields.md[unicorn/prefer-class-fields]`
+| `link:{eslint-unicorn-rules}/prefer-class-fields.md[unicorn/prefer-class-fields]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-classlist-toggle.md[unicorn/prefer-classlist-toggle]`
+| `link:{eslint-unicorn-rules}/prefer-classlist-toggle.md[unicorn/prefer-classlist-toggle]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-code-point.md[unicorn/prefer-code-point]`
+| `link:{eslint-unicorn-rules}/prefer-code-point.md[unicorn/prefer-code-point]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-combined-guards.md[unicorn/prefer-combined-guards]`
+| `link:{eslint-unicorn-rules}/prefer-combined-guards.md[unicorn/prefer-combined-guards]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-continue.md[unicorn/prefer-continue]`
+| `link:{eslint-unicorn-rules}/prefer-continue.md[unicorn/prefer-continue]` [recommended] [fixable]
 | Off
 2+| Conflicts with no-continue.
 
-| `link:{eslint-unicorn-rules}/prefer-date-now.md[unicorn/prefer-date-now]`
+| `link:{eslint-unicorn-rules}/prefer-date-now.md[unicorn/prefer-date-now]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-default-parameters.md[unicorn/prefer-default-parameters]`
+| `link:{eslint-unicorn-rules}/prefer-default-parameters.md[unicorn/prefer-default-parameters]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-direct-iteration.md[unicorn/prefer-direct-iteration]`
+| `link:{eslint-unicorn-rules}/prefer-direct-iteration.md[unicorn/prefer-direct-iteration]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/prefer-dispose.md[unicorn/prefer-dispose]`
 | Off
 2+| Requires explicit resource management (`using` declarations).
 
-| `link:{eslint-unicorn-rules}/prefer-dom-node-append.md[unicorn/prefer-dom-node-append]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-append.md[unicorn/prefer-dom-node-append]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-dom-node-dataset.md[unicorn/prefer-dom-node-dataset]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-dataset.md[unicorn/prefer-dom-node-dataset]` [deprecated]
 | Off
-2+| Deprecated. Renamed to `unicorn/dom-node-dataset`.
+2+| Renamed to `unicorn/dom-node-dataset`.
 
-| `link:{eslint-unicorn-rules}/prefer-dom-node-html-methods.md[unicorn/prefer-dom-node-html-methods]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-html-methods.md[unicorn/prefer-dom-node-html-methods]` [recommended] [fixable]
 | Off
 2+| Requires a polyfill for older browsers.
 
-| `link:{eslint-unicorn-rules}/prefer-dom-node-remove.md[unicorn/prefer-dom-node-remove]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-remove.md[unicorn/prefer-dom-node-remove]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-dom-node-replace-children.md[unicorn/prefer-dom-node-replace-children]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-replace-children.md[unicorn/prefer-dom-node-replace-children]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-dom-node-text-content.md[unicorn/prefer-dom-node-text-content]`
+| `link:{eslint-unicorn-rules}/prefer-dom-node-text-content.md[unicorn/prefer-dom-node-text-content]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-early-return.md[unicorn/prefer-early-return]`
+| `link:{eslint-unicorn-rules}/prefer-early-return.md[unicorn/prefer-early-return]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-else-if.md[unicorn/prefer-else-if]`
+| `link:{eslint-unicorn-rules}/prefer-else-if.md[unicorn/prefer-else-if]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-error-is-error.md[unicorn/prefer-error-is-error]`
+| `link:{eslint-unicorn-rules}/prefer-error-is-error.md[unicorn/prefer-error-is-error]` [fixable]
 | Off
 2+| Requires ECMAScript 2026
 
-| `link:{eslint-unicorn-rules}/prefer-escaped-irregular-whitespace.md[unicorn/prefer-escaped-irregular-whitespace]`
+| `link:{eslint-unicorn-rules}/prefer-escaped-irregular-whitespace.md[unicorn/prefer-escaped-irregular-whitespace]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-event-target.md[unicorn/prefer-event-target]`
+| `link:{eslint-unicorn-rules}/prefer-event-target.md[unicorn/prefer-event-target]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-explicit-viewport-units.md[unicorn/prefer-explicit-viewport-units]`
+| `link:{eslint-unicorn-rules}/prefer-explicit-viewport-units.md[unicorn/prefer-explicit-viewport-units]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/prefer-explicit-viewport-units`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/prefer-explicit-viewport-units`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/prefer-export-from.md[unicorn/prefer-export-from]`
+| `link:{eslint-unicorn-rules}/prefer-export-from.md[unicorn/prefer-export-from]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-flat-math-min-max.md[unicorn/prefer-flat-math-min-max]`
+| `link:{eslint-unicorn-rules}/prefer-flat-math-min-max.md[unicorn/prefer-flat-math-min-max]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-get-or-insert-computed.md[unicorn/prefer-get-or-insert-computed]`
+| `link:{eslint-unicorn-rules}/prefer-get-or-insert-computed.md[unicorn/prefer-get-or-insert-computed]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2026
 
-| `link:{eslint-unicorn-rules}/prefer-global-number-constants.md[unicorn/prefer-global-number-constants]`
+| `link:{eslint-unicorn-rules}/prefer-global-number-constants.md[unicorn/prefer-global-number-constants]` [recommended] [fixable]
 | Off
 2+| Conflicts with unicorn/prefer-number-properties.
 
-| `link:{eslint-unicorn-rules}/prefer-global-this.md[unicorn/prefer-global-this]`
+| `link:{eslint-unicorn-rules}/prefer-global-this.md[unicorn/prefer-global-this]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-group-by.md[unicorn/prefer-group-by]`
+| `link:{eslint-unicorn-rules}/prefer-group-by.md[unicorn/prefer-group-by]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2024
 
-| `link:{eslint-unicorn-rules}/prefer-has-check.md[unicorn/prefer-has-check]`
+| `link:{eslint-unicorn-rules}/prefer-has-check.md[unicorn/prefer-has-check]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-hoisting-branch-code.md[unicorn/prefer-hoisting-branch-code]`
+| `link:{eslint-unicorn-rules}/prefer-hoisting-branch-code.md[unicorn/prefer-hoisting-branch-code]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-https.md[unicorn/prefer-https]`
+| `link:{eslint-unicorn-rules}/prefer-https.md[unicorn/prefer-https]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-identifier-import-export-specifiers.md[unicorn/prefer-identifier-import-export-specifiers]`
+| `link:{eslint-unicorn-rules}/prefer-identifier-import-export-specifiers.md[unicorn/prefer-identifier-import-export-specifiers]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-import-meta-properties.md[unicorn/prefer-import-meta-properties]`
+| `link:{eslint-unicorn-rules}/prefer-import-meta-properties.md[unicorn/prefer-import-meta-properties]` [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-includes.md[unicorn/prefer-includes]`
+| `link:{eslint-unicorn-rules}/prefer-includes.md[unicorn/prefer-includes]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-includes-over-repeated-comparisons.md[unicorn/prefer-includes-over-repeated-comparisons]`
+| `link:{eslint-unicorn-rules}/prefer-includes-over-repeated-comparisons.md[unicorn/prefer-includes-over-repeated-comparisons]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-iterable-in-constructor.md[unicorn/prefer-iterable-in-constructor]`
+| `link:{eslint-unicorn-rules}/prefer-iterable-in-constructor.md[unicorn/prefer-iterable-in-constructor]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-iterator-concat.md[unicorn/prefer-iterator-concat]`
+| `link:{eslint-unicorn-rules}/prefer-iterator-concat.md[unicorn/prefer-iterator-concat]` [fixable]
 | Off
 2+| Requires ECMAScript 2026
 
-| `link:{eslint-unicorn-rules}/prefer-iterator-helpers.md[unicorn/prefer-iterator-helpers]`
+| `link:{eslint-unicorn-rules}/prefer-iterator-helpers.md[unicorn/prefer-iterator-helpers]` [recommended]
 | Off
 2+| Requires ECMAScript 2025
 
-| `link:{eslint-unicorn-rules}/prefer-iterator-to-array.md[unicorn/prefer-iterator-to-array]`
+| `link:{eslint-unicorn-rules}/prefer-iterator-to-array.md[unicorn/prefer-iterator-to-array]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2025
 
-| `link:{eslint-unicorn-rules}/prefer-iterator-to-array-at-end.md[unicorn/prefer-iterator-to-array-at-end]`
+| `link:{eslint-unicorn-rules}/prefer-iterator-to-array-at-end.md[unicorn/prefer-iterator-to-array-at-end]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-iterator-zip.md[unicorn/prefer-iterator-zip]`
+| `link:{eslint-unicorn-rules}/prefer-iterator-zip.md[unicorn/prefer-iterator-zip]` [recommended]
 | Off
 2+| Requires a polyfill for Iterator.zip().
 
-| `link:{eslint-unicorn-rules}/prefer-json-import.md[unicorn/prefer-json-import]`
+| `link:{eslint-unicorn-rules}/prefer-json-import.md[unicorn/prefer-json-import]` [fixable]
 | Off
 2+| Requires ECMAScript 2025
 
-| `link:{eslint-unicorn-rules}/prefer-json-parse-buffer.md[unicorn/prefer-json-parse-buffer]`
+| `link:{eslint-unicorn-rules}/prefer-json-parse-buffer.md[unicorn/prefer-json-parse-buffer]` [deprecated]
 | Off
-2+| Deprecated. Renamed to `unicorn/consistent-json-file-read`, configured with the `'buffer'` option.
+2+| Renamed to `unicorn/consistent-json-file-read`, configured with the `'buffer'` option.
 
-| `link:{eslint-unicorn-rules}/prefer-keyboard-event-key.md[unicorn/prefer-keyboard-event-key]`
+| `link:{eslint-unicorn-rules}/prefer-keyboard-event-key.md[unicorn/prefer-keyboard-event-key]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-literal-ascii.md[unicorn/prefer-literal-ascii]`
+| `link:{eslint-unicorn-rules}/prefer-literal-ascii.md[unicorn/prefer-literal-ascii]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-location-assign.md[unicorn/prefer-location-assign]`
+| `link:{eslint-unicorn-rules}/prefer-location-assign.md[unicorn/prefer-location-assign]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]`
+| `link:{eslint-unicorn-rules}/prefer-logical-operator-over-ternary.md[unicorn/prefer-logical-operator-over-ternary]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-map-from-entries.md[unicorn/prefer-map-from-entries]`
+| `link:{eslint-unicorn-rules}/prefer-map-from-entries.md[unicorn/prefer-map-from-entries]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-math-abs.md[unicorn/prefer-math-abs]`
+| `link:{eslint-unicorn-rules}/prefer-math-abs.md[unicorn/prefer-math-abs]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-math-constants.md[unicorn/prefer-math-constants]`
+| `link:{eslint-unicorn-rules}/prefer-math-constants.md[unicorn/prefer-math-constants]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-math-min-max.md[unicorn/prefer-math-min-max]`
+| `link:{eslint-unicorn-rules}/prefer-math-min-max.md[unicorn/prefer-math-min-max]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-math-trunc.md[unicorn/prefer-math-trunc]`
+| `link:{eslint-unicorn-rules}/prefer-math-trunc.md[unicorn/prefer-math-trunc]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-media-feature-range-syntax.md[unicorn/prefer-media-feature-range-syntax]`
+| `link:{eslint-unicorn-rules}/prefer-media-feature-range-syntax.md[unicorn/prefer-media-feature-range-syntax]` [deprecated]
 | Off
-2+| Deprecated. Moved to `eslint-cssicorn` as `cssicorn/prefer-media-feature-range-syntax`.
+2+| Moved to `eslint-cssicorn` as `cssicorn/prefer-media-feature-range-syntax`.
 Applies only to CSS files.
 
-| `link:{eslint-unicorn-rules}/prefer-minimal-ternary.md[unicorn/prefer-minimal-ternary]`
+| `link:{eslint-unicorn-rules}/prefer-minimal-ternary.md[unicorn/prefer-minimal-ternary]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-modern-dom-apis.md[unicorn/prefer-modern-dom-apis]`
+| `link:{eslint-unicorn-rules}/prefer-modern-dom-apis.md[unicorn/prefer-modern-dom-apis]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]`
+| `link:{eslint-unicorn-rules}/prefer-modern-math-apis.md[unicorn/prefer-modern-math-apis]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-module.md[unicorn/prefer-module]`
+| `link:{eslint-unicorn-rules}/prefer-module.md[unicorn/prefer-module]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]`
+| `link:{eslint-unicorn-rules}/prefer-native-coercion-functions.md[unicorn/prefer-native-coercion-functions]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-negative-index.md[unicorn/prefer-negative-index]`
+| `link:{eslint-unicorn-rules}/prefer-negative-index.md[unicorn/prefer-negative-index]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-node-protocol.md[unicorn/prefer-node-protocol]`
+| `link:{eslint-unicorn-rules}/prefer-node-protocol.md[unicorn/prefer-node-protocol]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-number-coercion.md[unicorn/prefer-number-coercion]`
+| `link:{eslint-unicorn-rules}/prefer-number-coercion.md[unicorn/prefer-number-coercion]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-number-is-safe-integer.md[unicorn/prefer-number-is-safe-integer]`
+| `link:{eslint-unicorn-rules}/prefer-number-is-safe-integer.md[unicorn/prefer-number-is-safe-integer]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-number-properties.md[unicorn/prefer-number-properties]`
+| `link:{eslint-unicorn-rules}/prefer-number-properties.md[unicorn/prefer-number-properties]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-object-define-properties.md[unicorn/prefer-object-define-properties]`
+| `link:{eslint-unicorn-rules}/prefer-object-define-properties.md[unicorn/prefer-object-define-properties]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-object-destructuring-defaults.md[unicorn/prefer-object-destructuring-defaults]`
+| `link:{eslint-unicorn-rules}/prefer-object-destructuring-defaults.md[unicorn/prefer-object-destructuring-defaults]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-object-from-entries.md[unicorn/prefer-object-from-entries]`
+| `link:{eslint-unicorn-rules}/prefer-object-from-entries.md[unicorn/prefer-object-from-entries]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/prefer-object-iterable-methods.md[unicorn/prefer-object-iterable-methods]`
+| `link:{eslint-unicorn-rules}/prefer-object-iterable-methods.md[unicorn/prefer-object-iterable-methods]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-observer-apis.md[unicorn/prefer-observer-apis]`
+| `link:{eslint-unicorn-rules}/prefer-observer-apis.md[unicorn/prefer-observer-apis]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-optional-catch-binding.md[unicorn/prefer-optional-catch-binding]`
+| `link:{eslint-unicorn-rules}/prefer-optional-catch-binding.md[unicorn/prefer-optional-catch-binding]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-options-parameter.md[unicorn/prefer-options-parameter]`
+| `link:{eslint-unicorn-rules}/prefer-options-parameter.md[unicorn/prefer-options-parameter]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-path2d.md[unicorn/prefer-path2d]`
+| `link:{eslint-unicorn-rules}/prefer-path2d.md[unicorn/prefer-path2d]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-private-class-fields.md[unicorn/prefer-private-class-fields]`
+| `link:{eslint-unicorn-rules}/prefer-private-class-fields.md[unicorn/prefer-private-class-fields]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-promise-static-methods.md[unicorn/prefer-promise-static-methods]`
+| `link:{eslint-unicorn-rules}/prefer-promise-static-methods.md[unicorn/prefer-promise-static-methods]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-promise-try.md[unicorn/prefer-promise-try]`
+| `link:{eslint-unicorn-rules}/prefer-promise-try.md[unicorn/prefer-promise-try]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2025
 
-| `link:{eslint-unicorn-rules}/prefer-promise-with-resolvers.md[unicorn/prefer-promise-with-resolvers]`
+| `link:{eslint-unicorn-rules}/prefer-promise-with-resolvers.md[unicorn/prefer-promise-with-resolvers]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2024
 
-| `link:{eslint-unicorn-rules}/prefer-prototype-methods.md[unicorn/prefer-prototype-methods]`
+| `link:{eslint-unicorn-rules}/prefer-prototype-methods.md[unicorn/prefer-prototype-methods]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-query-selector.md[unicorn/prefer-query-selector]`
+| `link:{eslint-unicorn-rules}/prefer-query-selector.md[unicorn/prefer-query-selector]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-queue-microtask.md[unicorn/prefer-queue-microtask]`
+| `link:{eslint-unicorn-rules}/prefer-queue-microtask.md[unicorn/prefer-queue-microtask]` [recommended] [fixable]
 | Warning
 2+| `setTimeout()` and `setImmediate()` are not checked,
 as the fix moves a macrotask to a microtask, which changes the execution order.
 
-| `link:{eslint-unicorn-rules}/prefer-reflect-apply.md[unicorn/prefer-reflect-apply]`
+| `link:{eslint-unicorn-rules}/prefer-reflect-apply.md[unicorn/prefer-reflect-apply]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-regexp-escape.md[unicorn/prefer-regexp-escape]`
+| `link:{eslint-unicorn-rules}/prefer-regexp-escape.md[unicorn/prefer-regexp-escape]` [fixable]
 | Off
 2+| Requires ECMAScript 2025
 
-| `link:{eslint-unicorn-rules}/prefer-regexp-exec.md[unicorn/prefer-regexp-exec]`
+| `link:{eslint-unicorn-rules}/prefer-regexp-exec.md[unicorn/prefer-regexp-exec]` [recommended] [fixable]
 | Off
 2+| Use @typescript-eslint/prefer-regexp-exec.
 
-| `link:{eslint-unicorn-rules}/prefer-regexp-test.md[unicorn/prefer-regexp-test]`
+| `link:{eslint-unicorn-rules}/prefer-regexp-test.md[unicorn/prefer-regexp-test]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/prefer-response-static-json.md[unicorn/prefer-response-static-json]`
+| `link:{eslint-unicorn-rules}/prefer-response-static-json.md[unicorn/prefer-response-static-json]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-scoped-selector.md[unicorn/prefer-scoped-selector]`
+| `link:{eslint-unicorn-rules}/prefer-scoped-selector.md[unicorn/prefer-scoped-selector]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-set-has.md[unicorn/prefer-set-has]`
+| `link:{eslint-unicorn-rules}/prefer-set-has.md[unicorn/prefer-set-has]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-set-methods.md[unicorn/prefer-set-methods]`
+| `link:{eslint-unicorn-rules}/prefer-set-methods.md[unicorn/prefer-set-methods]` [recommended] [fixable]
 | Off
 2+| Requires ECMAScript 2025
 
-| `link:{eslint-unicorn-rules}/prefer-set-size.md[unicorn/prefer-set-size]`
+| `link:{eslint-unicorn-rules}/prefer-set-size.md[unicorn/prefer-set-size]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-short-arrow-method.md[unicorn/prefer-short-arrow-method]`
+| `link:{eslint-unicorn-rules}/prefer-short-arrow-method.md[unicorn/prefer-short-arrow-method]` [fixable]
 | Off
 2+| Conflicts with object-shorthand.
 
-| `link:{eslint-unicorn-rules}/prefer-short-escape-sequences.md[unicorn/prefer-short-escape-sequences]`
+| `link:{eslint-unicorn-rules}/prefer-short-escape-sequences.md[unicorn/prefer-short-escape-sequences]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-simple-condition-first.md[unicorn/prefer-simple-condition-first]`
+| `link:{eslint-unicorn-rules}/prefer-simple-condition-first.md[unicorn/prefer-simple-condition-first]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-simple-sort-comparator.md[unicorn/prefer-simple-sort-comparator]`
+| `link:{eslint-unicorn-rules}/prefer-simple-sort-comparator.md[unicorn/prefer-simple-sort-comparator]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-simplified-conditions.md[unicorn/prefer-simplified-conditions]`
+| `link:{eslint-unicorn-rules}/prefer-simplified-conditions.md[unicorn/prefer-simplified-conditions]` [recommended] [fixable]
 | Warning
 2+| Uses `simplify` for negated conditions,
 as `expand` overlaps `unicorn/no-negated-comparison` with `checkLogicalExpressions`.
 
-| `link:{eslint-unicorn-rules}/prefer-single-array-predicate.md[unicorn/prefer-single-array-predicate]`
+| `link:{eslint-unicorn-rules}/prefer-single-array-predicate.md[unicorn/prefer-single-array-predicate]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-single-call.md[unicorn/prefer-single-call]`
+| `link:{eslint-unicorn-rules}/prefer-single-call.md[unicorn/prefer-single-call]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-single-object-destructuring.md[unicorn/prefer-single-object-destructuring]`
+| `link:{eslint-unicorn-rules}/prefer-single-object-destructuring.md[unicorn/prefer-single-object-destructuring]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-single-replace.md[unicorn/prefer-single-replace]`
+| `link:{eslint-unicorn-rules}/prefer-single-replace.md[unicorn/prefer-single-replace]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-smaller-scope.md[unicorn/prefer-smaller-scope]`
+| `link:{eslint-unicorn-rules}/prefer-smaller-scope.md[unicorn/prefer-smaller-scope]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-split-limit.md[unicorn/prefer-split-limit]`
+| `link:{eslint-unicorn-rules}/prefer-split-limit.md[unicorn/prefer-split-limit]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-spread.md[unicorn/prefer-spread]`
+| `link:{eslint-unicorn-rules}/prefer-spread.md[unicorn/prefer-spread]` [recommended] [partially fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/prefer-string-match-all.md[unicorn/prefer-string-match-all]`
+| `link:{eslint-unicorn-rules}/prefer-string-match-all.md[unicorn/prefer-string-match-all]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-string-pad-start-end.md[unicorn/prefer-string-pad-start-end]`
+| `link:{eslint-unicorn-rules}/prefer-string-pad-start-end.md[unicorn/prefer-string-pad-start-end]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-string-raw.md[unicorn/prefer-string-raw]`
+| `link:{eslint-unicorn-rules}/prefer-string-raw.md[unicorn/prefer-string-raw]` [recommended] [fixable]
 | Off
 2+| Reduces readability of trivial strings.
 
-| `link:{eslint-unicorn-rules}/prefer-string-repeat.md[unicorn/prefer-string-repeat]`
+| `link:{eslint-unicorn-rules}/prefer-string-repeat.md[unicorn/prefer-string-repeat]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]`
+| `link:{eslint-unicorn-rules}/prefer-string-replace-all.md[unicorn/prefer-string-replace-all]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/prefer-string-slice.md[unicorn/prefer-string-slice]`
+| `link:{eslint-unicorn-rules}/prefer-string-slice.md[unicorn/prefer-string-slice]` [recommended] [partially fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-string-starts-ends-with.md[unicorn/prefer-string-starts-ends-with]`
+| `link:{eslint-unicorn-rules}/prefer-string-starts-ends-with.md[unicorn/prefer-string-starts-ends-with]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-string-trim-start-end.md[unicorn/prefer-string-trim-start-end]`
+| `link:{eslint-unicorn-rules}/prefer-string-trim-start-end.md[unicorn/prefer-string-trim-start-end]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-structured-clone.md[unicorn/prefer-structured-clone]`
+| `link:{eslint-unicorn-rules}/prefer-structured-clone.md[unicorn/prefer-structured-clone]` [recommended]
 | Off
 2+| Requires polyfill for older browsers.
 
-| `link:{eslint-unicorn-rules}/prefer-switch.md[unicorn/prefer-switch]`
+| `link:{eslint-unicorn-rules}/prefer-switch.md[unicorn/prefer-switch]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-temporal.md[unicorn/prefer-temporal]`
+| `link:{eslint-unicorn-rules}/prefer-temporal.md[unicorn/prefer-temporal]` [fixable]
 | Off
 2+| Requires a polyfill for the Temporal API.
 
-| `link:{eslint-unicorn-rules}/prefer-temporal-conversion.md[unicorn/prefer-temporal-conversion]`
+| `link:{eslint-unicorn-rules}/prefer-temporal-conversion.md[unicorn/prefer-temporal-conversion]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-ternary.md[unicorn/prefer-ternary]`
+| `link:{eslint-unicorn-rules}/prefer-ternary.md[unicorn/prefer-ternary]` [recommended] [fixable]
 | Off
 2+| Reduces readability for `yield`, `await`, `throw` statements.
 
-| `link:{eslint-unicorn-rules}/prefer-then-catch.md[unicorn/prefer-then-catch]`
+| `link:{eslint-unicorn-rules}/prefer-then-catch.md[unicorn/prefer-then-catch]` [recommended]
 | Off
 2+| Use promise/prefer-catch.
 
-| `link:{eslint-unicorn-rules}/prefer-toggle-attribute.md[unicorn/prefer-toggle-attribute]`
+| `link:{eslint-unicorn-rules}/prefer-toggle-attribute.md[unicorn/prefer-toggle-attribute]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/prefer-ternary.md[unicorn/prefer-top-level-await]`
@@ -1219,105 +1219,105 @@ as `expand` overlaps `unicorn/no-negated-comparison` with `checkLogicalExpressio
 2+| https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level-await[Top level]
 is only supported by the latest browsers.
 
-| `link:{eslint-unicorn-rules}/prefer-type-error.md[unicorn/prefer-type-error]`
+| `link:{eslint-unicorn-rules}/prefer-type-error.md[unicorn/prefer-type-error]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-type-literal-last.md[unicorn/prefer-type-literal-last]`
+| `link:{eslint-unicorn-rules}/prefer-type-literal-last.md[unicorn/prefer-type-literal-last]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-uint8array-base64.md[unicorn/prefer-uint8array-base64]`
+| `link:{eslint-unicorn-rules}/prefer-uint8array-base64.md[unicorn/prefer-uint8array-base64]` [fixable]
 | Off
 2+| Requires ECMAScript 2026
 
-| `link:{eslint-unicorn-rules}/prefer-uint8array-hex.md[unicorn/prefer-uint8array-hex]`
+| `link:{eslint-unicorn-rules}/prefer-uint8array-hex.md[unicorn/prefer-uint8array-hex]` [fixable]
 | Off
 2+| Requires ECMAScript 2026
 
-| `link:{eslint-unicorn-rules}/prefer-unary-minus.md[unicorn/prefer-unary-minus]`
+| `link:{eslint-unicorn-rules}/prefer-unary-minus.md[unicorn/prefer-unary-minus]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-unicode-code-point-escapes.md[unicorn/prefer-unicode-code-point-escapes]`
+| `link:{eslint-unicorn-rules}/prefer-unicode-code-point-escapes.md[unicorn/prefer-unicode-code-point-escapes]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-url-can-parse.md[unicorn/prefer-url-can-parse]`
+| `link:{eslint-unicorn-rules}/prefer-url-can-parse.md[unicorn/prefer-url-can-parse]` [recommended] [fixable]
 | Off
 2+| Requires a polyfill for older browsers.
 
-| `link:{eslint-unicorn-rules}/prefer-url-href.md[unicorn/prefer-url-href]`
+| `link:{eslint-unicorn-rules}/prefer-url-href.md[unicorn/prefer-url-href]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prefer-url-search-parameters.md[unicorn/prefer-url-search-parameters]`
+| `link:{eslint-unicorn-rules}/prefer-url-search-parameters.md[unicorn/prefer-url-search-parameters]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/prefer-while-loop-condition.md[unicorn/prefer-while-loop-condition]`
+| `link:{eslint-unicorn-rules}/prefer-while-loop-condition.md[unicorn/prefer-while-loop-condition]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/prevent-abbreviations.md[unicorn/prevent-abbreviations]`
+| `link:{eslint-unicorn-rules}/prevent-abbreviations.md[unicorn/prevent-abbreviations]` [deprecated]
 | Off
-2+| Deprecated. Renamed to `unicorn/name-replacements`.
+2+| Renamed to `unicorn/name-replacements`.
 
-| `link:{eslint-unicorn-rules}/relative-url-style.md[unicorn/relative-url-style]`
+| `link:{eslint-unicorn-rules}/relative-url-style.md[unicorn/relative-url-style]` [recommended] [fixable]
 | Warning
 2+| Always use the `./` prefix for the relative URLs for clarity.
 
-| `link:{eslint-unicorn-rules}/require-array-join-separator.md[unicorn/require-array-join-separator]`
+| `link:{eslint-unicorn-rules}/require-array-join-separator.md[unicorn/require-array-join-separator]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/require-array-sort-compare.md[unicorn/require-array-sort-compare]`
+| `link:{eslint-unicorn-rules}/require-array-sort-compare.md[unicorn/require-array-sort-compare]` [recommended]
 | Off
 2+| Use @typescript-eslint/require-array-sort-compare.
 
-| `link:{eslint-unicorn-rules}/require-css-escape.md[unicorn/require-css-escape]`
+| `link:{eslint-unicorn-rules}/require-css-escape.md[unicorn/require-css-escape]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/require-frontmatter-fields.md[unicorn/require-frontmatter-fields]`
 | Off
 2+| Applies only to Markdown files.
 
-| `link:{eslint-unicorn-rules}/require-module-attributes.md[unicorn/require-module-attributes]`
+| `link:{eslint-unicorn-rules}/require-module-attributes.md[unicorn/require-module-attributes]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/require-module-specifiers.md[unicorn/require-module-specifiers]`
+| `link:{eslint-unicorn-rules}/require-module-specifiers.md[unicorn/require-module-specifiers]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/require-number-to-fixed-digits-argument.md[unicorn/require-number-to-fixed-digits-argument]`
+| `link:{eslint-unicorn-rules}/require-number-to-fixed-digits-argument.md[unicorn/require-number-to-fixed-digits-argument]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/require-passive-events.md[unicorn/require-passive-events]`
+| `link:{eslint-unicorn-rules}/require-passive-events.md[unicorn/require-passive-events]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/require-post-message-target-origin.md[unicorn/require-post-message-target-origin]`
 | Error
 
-| `link:{eslint-unicorn-rules}/require-proxy-trap-boolean-return.md[unicorn/require-proxy-trap-boolean-return]`
+| `link:{eslint-unicorn-rules}/require-proxy-trap-boolean-return.md[unicorn/require-proxy-trap-boolean-return]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/require-spread-parentheses.md[unicorn/require-spread-parentheses]`
+| `link:{eslint-unicorn-rules}/require-spread-parentheses.md[unicorn/require-spread-parentheses]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/require-text-decoder-streaming.md[unicorn/require-text-decoder-streaming]`
+| `link:{eslint-unicorn-rules}/require-text-decoder-streaming.md[unicorn/require-text-decoder-streaming]` [recommended]
 | Error
 
-| `link:{eslint-unicorn-rules}/single-line-block-comment-style.md[unicorn/single-line-block-comment-style]`
+| `link:{eslint-unicorn-rules}/single-line-block-comment-style.md[unicorn/single-line-block-comment-style]` [recommended] [fixable]
 | Off
 2+| Use @stylistic/multiline-comment-style and jsdoc/multiline-blocks.
 
-| `link:{eslint-unicorn-rules}/string-content.md[unicorn/string-content]`
+| `link:{eslint-unicorn-rules}/string-content.md[unicorn/string-content]` [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/switch-case-braces.md[unicorn/switch-case-braces]`
+| `link:{eslint-unicorn-rules}/switch-case-braces.md[unicorn/switch-case-braces]` [recommended] [fixable]
 | Off
 
-| `link:{eslint-unicorn-rules}/switch-case-break-position.md[unicorn/switch-case-break-position]`
+| `link:{eslint-unicorn-rules}/switch-case-break-position.md[unicorn/switch-case-break-position]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/template-indent.md[unicorn/template-indent]`
+| `link:{eslint-unicorn-rules}/template-indent.md[unicorn/template-indent]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-unicorn-rules}/text-encoding-identifier-case.md[unicorn/text-encoding-identifier-case]`
+| `link:{eslint-unicorn-rules}/text-encoding-identifier-case.md[unicorn/text-encoding-identifier-case]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-unicorn-rules}/throw-new-error.md[unicorn/throw-new-error]`
+| `link:{eslint-unicorn-rules}/throw-new-error.md[unicorn/throw-new-error]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-unicorn-rules}/try-complexity.md[unicorn/try-complexity]`

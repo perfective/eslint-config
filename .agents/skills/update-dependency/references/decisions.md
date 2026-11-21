@@ -13,8 +13,8 @@ Most update commits enable every new rule (for example `4e60c61`, `a526dfa`, `be
 - Severity follows fixability:
   `'warn'` when the rule has an autofix (`meta.fixable`),
   `'error'` when it does not (suggestions do not count as a fix).
-  A rule whose fix covers only some cases is partially fixable and may be either,
-  with a `severity-convention` audit exception that says so.
+  A rule whose fix covers only some cases is partially fixable and may be either;
+  mark it `[partially fixable]` (instead of `[fixable]`) in `index.adoc`.
 - A fixer counts only when it is active with the configured options.
   Some fixers are opt-in (`enableFixer` in `eslint-plugin-jsdoc`,
   `enableAutofixRemoval` in `@typescript-eslint/no-unused-vars`)
@@ -93,7 +93,8 @@ so the configuration does not depend on rules that the plugin no longer maintain
 - When the replacement cannot reproduce the deprecated rule's options
   or belongs to a plugin this config does not require, report it as **NEEDS HUMAN**.
 - Mark the `index.adoc` row as deprecated
-  (the "Off" severity and a `2+| Deprecated ...` note with the replacement),
+  (the `[deprecated]` note instead of the preset, the "Off" severity,
+  and a `2+|` comment row with the replacement),
   and update the replacement's row.
 - List both changes in the commit body,
   so the migration guide can tell consumers to move their overrides to the replacement rule.

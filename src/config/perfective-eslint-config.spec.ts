@@ -31,6 +31,7 @@ type Check = 'missing'
     | 'undocumented'
     | 'stale-doc'
     | 'doc-severity'
+    | 'doc-notes'
     | 'severity-convention'
     | 'metadata';
 
@@ -54,11 +55,18 @@ interface DocumentedRule {
     readonly rule: string;
     readonly severity: Severity | null;
     readonly languages: Map<Language, Severity> | null;
+    readonly notes: string[];
+}
+
+interface RuleCell {
+    readonly rule: string;
+    readonly notes: string[];
 }
 
 interface TableState {
     columns: string[];
     row: string[] | null;
+    notes: string[];
     readonly rows: DocumentedRule[];
 }
 
@@ -135,11 +143,6 @@ const ruleAuditExceptions: RuleAuditException[] = [
         rule: '@typescript-eslint/prefer-optional-chain',
         check: 'severity-convention',
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
-    },
-    {
-        rule: 'array-func/no-unnecessary-this-arg',
-        check: 'severity-convention',
-        reason: 'Partially fixable: the fixer covers only some of the reported cases.',
     },
     {
         rule: 'import-x/extensions',
@@ -277,24 +280,9 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
-        rule: 'unicorn/consistent-destructuring',
-        check: 'severity-convention',
-        reason: 'Partially fixable: the fixer covers only some of the reported cases.',
-    },
-    {
         rule: 'unicorn/no-await-expression-member',
         check: 'severity-convention',
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
-    },
-    {
-        rule: 'unicorn/no-static-only-class',
-        check: 'severity-convention',
-        reason: 'Partially fixable: the fixer covers only some of the reported cases.',
-    },
-    {
-        rule: 'unicorn/no-unreadable-array-destructuring',
-        check: 'severity-convention',
-        reason: 'Partially fixable: the fixer covers only some of the reported cases.',
     },
     {
         rule: 'unicorn/prefer-array-some',
@@ -364,6 +352,7 @@ const languageSeverityPatterns: [Language, RegExp][] = [
 
 const conventionalSeverities: Map<string, Severity[]> = new Map([
     ['no', ['error']],
+    ['partially', ['warn', 'error']],
     ['yes', ['warn']],
 ]);
 
@@ -396,6 +385,10 @@ describe(perfectiveEslintConfig, () => {
 
     it('documents the configured severity of every rule', async () => {
         expect(unexpected('doc-severity', await violations)).toStrictEqual([]);
+    });
+
+    it('documents the deprecation and fixability of every rule', async () => {
+        expect(unexpected('doc-notes', await violations)).toStrictEqual([]);
     });
 
     it('configures fixable rules as warnings and other rules as errors', async () => {
@@ -438,6 +431,7 @@ async function auditViolations(): Promise<Map<Check, string[]>> {
         ['undocumented', undocumentedRules(audit)],
         ['stale-doc', staleDocumentedRules(audit)],
         ['doc-severity', documentedSeverityViolations(audit)],
+        ['doc-notes', documentedNoteViolations(audit)],
         ['severity-convention', severityConventionViolations(audit)],
         ['metadata', metadataViolations(audit)],
     ]);
@@ -603,6 +597,41 @@ function languageMismatchMessage(
  */
 function hasDifferentSeverity(documented: DocumentedRule, severities: Set<Severity> | undefined): boolean {
     return documented.severity !== null && severities !== undefined && !severities.has(documented.severity);
+}
+
+/**
+ * Returns rules whose "[deprecated]" and "[fixable]" notes differ from the plugin metadata.
+ * A "[partially fixable]" note records the maintainer's judgment and replaces the "[fixable]" note.
+ */
+function documentedNoteViolations(audit: Audit): string[] {
+    return Array.from(audit.documentedRules.values())
+        .filter(documented => audit.pluginRules.has(documented.rule))
+        .flatMap(documented => noteMismatches(documented, ruleMeta(audit, documented.rule)));
+}
+
+/**
+ * Returns the notes a documented rule is missing or has in excess, compared to its metadata.
+ */
+function noteMismatches(documented: DocumentedRule, meta: RuleMeta): string[] {
+    const expected: [string, boolean][] = [
+        ['deprecated', isDeprecated(meta)],
+        ...fixableNote(documented, meta),
+    ];
+    return expected
+        .filter(([note, flag]) => documented.notes.includes(note) !== flag)
+        .map(([note, flag]) => `${documented.rule}: ${documented.file} `
+            + `${flag ? 'misses' : 'has'} the [${note}] note`);
+}
+
+/**
+ * Returns the expected "[fixable]" note of a documented rule,
+ * or an empty list when the rule is documented as "[partially fixable]".
+ */
+function fixableNote(documented: DocumentedRule, meta: RuleMeta): [string, boolean][] {
+    if (documented.notes.includes('partially fixable')) {
+        return [];
+    }
+    return [['fixable', isFixable(meta)]];
 }
 
 /**
@@ -790,13 +819,15 @@ function pluginDirectories(directory: string): string[] {
 /**
  * Parses the rule rows of AsciiDoc tables.
  *
- * Each row starts with a "| `link:...[rule]`" (or "| `rule`") line followed by one line per remaining column.
+ * Each row starts with a "| `link:...[rule]`" (or "| `rule`") line,
+ * optionally followed by notes (e.g. "[recommended]"), and then one line per remaining column.
  * A cell continues on the following lines until the next cell.
  */
 function tableRows(file: string, content: string): DocumentedRule[] {
     const state: TableState = {
         columns: [],
         row: null,
+        notes: [],
         rows: [],
     };
     content.split('\n').forEach(line => tableLine(file, state, line));
@@ -816,7 +847,8 @@ function tableLine(file: string, state: TableState, line: string): void {
     const started = ruleRow(line);
     if (started !== null) {
         completeRow(file, state);
-        state.row = started;
+        state.row = [started.rule];
+        state.notes = started.notes;
         return;
     }
     extendRow(state, line);
@@ -859,7 +891,7 @@ function extendRow(state: TableState, line: string): void {
 function completeRow(file: string, state: TableState): void {
     const row = state.row;
     if (row !== null && row.length === state.columns.length) {
-        state.rows.push(documentedRow(file, row));
+        state.rows.push(documentedRow(file, row, state.notes));
     }
     state.row = null;
 }
@@ -902,17 +934,35 @@ function continuedText(row: string[], line: string): string | null {
 }
 
 /**
- * Starts a new row if a given line is the first cell of a rule row.
+ * Returns the rule name and the notes (e.g. "[recommended] [fixable]")
+ * if a given line is the first cell of a rule row.
  */
-function ruleRow(line: string): string[] | null {
-    const match = (/^\| `link:.*\[([^\]]+)\]`$/u).exec(line) ?? (/^\| `([^`]+)`$/u).exec(line);
-    return match === null ? null : match.slice(1, 2);
+function ruleRow(line: string): RuleCell | null {
+    const notesStart = line.indexOf('` [');
+    const cell = notesStart === -1 ? line : line.slice(0, notesStart + 1);
+    const rule = ruleName(cell);
+    return rule === null ? null : { rule, notes: ruleNotes(line.slice(cell.length)) };
+}
+
+/**
+ * Returns the rule name of a "| `link:...[rule]`" or "| `rule`" cell, or `null` for any other line.
+ */
+function ruleName(cell: string): string | null {
+    const match = (/^\| `link:.*\[([^\]]+)\]`$/u).exec(cell) ?? (/^\| `([^`]+)`$/u).exec(cell);
+    return match === null ? null : match.slice(1, 2).join('');
+}
+
+/**
+ * Returns the notes in square brackets that follow the rule name (e.g. " [recommended] [fixable]").
+ */
+function ruleNotes(text: string): string[] {
+    return Array.from(text.matchAll(/ \[([a-z ]+)\]/gu), note => note.slice(1, 2).join(''));
 }
 
 /**
  * Returns the documented rule properties of a given table row.
  */
-function documentedRow(file: string, cells: string[]): DocumentedRule {
+function documentedRow(file: string, cells: string[], notes: string[]): DocumentedRule {
     const cell = cells.slice(-1).join('');
     const cellLanguages = documentedLanguageSeverities(cell);
     return {
@@ -920,6 +970,7 @@ function documentedRow(file: string, cells: string[]): DocumentedRule {
         rule: cells[0],
         severity: cellLanguages === null ? documentedSeverity(cell) : null,
         languages: cellLanguages,
+        notes,
     };
 }
 
@@ -979,10 +1030,25 @@ function isFixable(meta: RuleMeta): boolean {
 }
 
 /**
- * Returns "yes" if a given rule declares an autofix in its metadata, and "no" otherwise.
+ * Returns "partially" if a given rule is documented as partially fixable,
+ * and otherwise "yes" if it declares an autofix in its metadata, and "no" if it does not.
  */
 function fixability(audit: Audit, rule: string): string {
-    return isFixable(ruleMeta(audit, rule)) ? 'yes' : 'no';
+    return isPartiallyFixable(audit, rule) ? 'partially' : metadataFixability(ruleMeta(audit, rule));
+}
+
+/**
+ * Returns true if a given rule is documented as "[partially fixable]".
+ */
+function isPartiallyFixable(audit: Audit, rule: string): boolean {
+    return audit.documentedRules.get(rule)?.notes.includes('partially fixable') ?? false;
+}
+
+/**
+ * Returns "yes" if a given rule metadata declares an autofix, and "no" otherwise.
+ */
+function metadataFixability(meta: RuleMeta): string {
+    return isFixable(meta) ? 'yes' : 'no';
 }
 
 /**

@@ -8,10 +8,10 @@ rules for auto-fixable import and export sorting.
 |===
 | Rule | Config
 
-| `simple-import-sort/exports`
+| `simple-import-sort/exports` [fixable]
 | Warning
 
-| `simple-import-sort/imports`
+| `simple-import-sort/imports` [fixable]
 | Warning
 
 |===

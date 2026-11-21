@@ -9,16 +9,16 @@ to enforce best practices for JavaScript promises.
 |===
 | Rule | Config
 
-| `link:{eslint-promise-rules}/catch-or-return.md[promise/catch-or-return]`
+| `link:{eslint-promise-rules}/catch-or-return.md[promise/catch-or-return]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/no-return-wrap.md[promise/no-return-wrap]`
+| `link:{eslint-promise-rules}/no-return-wrap.md[promise/no-return-wrap]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/param-names.md[promise/param-names]`
+| `link:{eslint-promise-rules}/param-names.md[promise/param-names]` [recommended]
 | Warning
 
-| `link:{eslint-promise-rules}/always-return.md[promise/always-return]`
+| `link:{eslint-promise-rules}/always-return.md[promise/always-return]` [recommended]
 | Error
 
 | `link:{eslint-promise-rules}/no-multiple-resolved.md[promise/no-multiple-resolved]`
@@ -27,22 +27,22 @@ to enforce best practices for JavaScript promises.
 | `link:{eslint-promise-rules}/no-native.md[promise/no-native]`
 | Off
 
-| `link:{eslint-promise-rules}/no-nesting.md[promise/no-nesting]`
+| `link:{eslint-promise-rules}/no-nesting.md[promise/no-nesting]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/no-promise-in-callback.md[promise/no-promise-in-callback]`
+| `link:{eslint-promise-rules}/no-promise-in-callback.md[promise/no-promise-in-callback]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/no-callback-in-promise.md[promise/no-callback-in-promise]`
+| `link:{eslint-promise-rules}/no-callback-in-promise.md[promise/no-callback-in-promise]` [recommended]
 | Error
 
 | `link:{eslint-promise-rules}/avoid-new.md[promise/avoid-new]`
 | Off
 
-| `link:{eslint-promise-rules}/no-new-statics.md[promise/no-new-statics]`
+| `link:{eslint-promise-rules}/no-new-statics.md[promise/no-new-statics]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-promise-rules}/no-return-in-finally.md[promise/no-return-in-finally]`
+| `link:{eslint-promise-rules}/no-return-in-finally.md[promise/no-return-in-finally]` [recommended]
 | Error
 
 
@@ -56,7 +56,7 @@ to enforce best practices for JavaScript promises.
 and would be turned off either way,
 as Promises should be preferred.
 
-| `link:{eslint-promise-rules}/prefer-catch.md[promise/prefer-catch]`
+| `link:{eslint-promise-rules}/prefer-catch.md[promise/prefer-catch]` [fixable]
 | Warning
 
 | `link:{eslint-promise-rules}/spec-only.md[promise/spec-only]`

@@ -9,13 +9,13 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 |===
 | Rule | Config
 
-| `link:{eslint-testing-library-rules}/await-async-events.md[testing-library/await-async-events]`
+| `link:{eslint-testing-library-rules}/await-async-events.md[testing-library/await-async-events]` [fixable]
 | Off
 
-| `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]`
+| `link:{eslint-testing-library-rules}/await-async-queries.md[testing-library/await-async-queries]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-testing-library-rules}/await-async-utils.md[testing-library/await-async-utils]`
+| `link:{eslint-testing-library-rules}/await-async-utils.md[testing-library/await-async-utils]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-testing-library-rules}/consistent-data-testid.md[testing-library/consistent-data-testid]`
@@ -24,31 +24,31 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | `link:{eslint-testing-library-rules}/no-await-sync-events.md[testing-library/no-await-sync-events]`
 | Error
 
-| `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]`
+| `link:{eslint-testing-library-rules}/no-await-sync-queries.md[testing-library/no-await-sync-queries]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-testing-library-rules}/no-container.md[testing-library/no-container]`
+| `link:{eslint-testing-library-rules}/no-container.md[testing-library/no-container]` [recommended]
 | Error
 
-| `link:{eslint-testing-library-rules}/no-debugging-utils.md[testing-library/no-debugging-utils]`
+| `link:{eslint-testing-library-rules}/no-debugging-utils.md[testing-library/no-debugging-utils]` [recommended]
 | Error
 
-| `link:{eslint-testing-library-rules}/no-dom-import.md[testing-library/no-dom-import]`
+| `link:{eslint-testing-library-rules}/no-dom-import.md[testing-library/no-dom-import]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-testing-library-rules}/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]`
+| `link:{eslint-testing-library-rules}/no-global-regexp-flag-in-query.md[testing-library/no-global-regexp-flag-in-query]` [fixable]
 | Warning
 
 | `link:{eslint-testing-library-rules}/no-manual-cleanup.md[testing-library/no-manual-cleanup]`
 | Error
 
-| `link:{eslint-testing-library-rules}/no-node-access.md[testing-library/no-node-access]`
+| `link:{eslint-testing-library-rules}/no-node-access.md[testing-library/no-node-access]` [recommended]
 | Error
 
-| `link:{eslint-testing-library-rules}/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]`
+| `link:{eslint-testing-library-rules}/no-promise-in-fire-event.md[testing-library/no-promise-in-fire-event]` [recommended]
 | Error
 
-| `link:{eslint-testing-library-rules}/no-render-in-lifecycle.md[testing-library/no-render-in-lifecycle]`
+| `link:{eslint-testing-library-rules}/no-render-in-lifecycle.md[testing-library/no-render-in-lifecycle]` [recommended]
 | Error
 
 | `link:{eslint-testing-library-rules}/no-test-id-queries.md[testing-library/no-test-id-queries]`
@@ -57,34 +57,34 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | `link:{eslint-testing-library-rules}/no-unnecessary-act.md[testing-library/no-unnecessary-act]`
 | Off
 
-| `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]`
+| `link:{eslint-testing-library-rules}/no-wait-for-multiple-assertions.md[testing-library/no-wait-for-multiple-assertions]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-testing-library-rules}/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]`
+| `link:{eslint-testing-library-rules}/no-wait-for-side-effects.md[testing-library/no-wait-for-side-effects]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-testing-library-rules}/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]`
+| `link:{eslint-testing-library-rules}/no-wait-for-snapshot.md[testing-library/no-wait-for-snapshot]` [recommended]
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-explicit-assert.md[testing-library/prefer-explicit-assert]`
 | Off
 
-| `link:{eslint-testing-library-rules}/prefer-find-by.md[testing-library/prefer-find-by]`
+| `link:{eslint-testing-library-rules}/prefer-find-by.md[testing-library/prefer-find-by]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-testing-library-rules}/prefer-implicit-assert.md[testing-library/prefer-implicit-assert]`
 | Error
 
-| `link:{eslint-testing-library-rules}/prefer-presence-queries.md[testing-library/prefer-presence-queries]`
+| `link:{eslint-testing-library-rules}/prefer-presence-queries.md[testing-library/prefer-presence-queries]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-testing-library-rules}/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]`
+| `link:{eslint-testing-library-rules}/prefer-query-by-disappearance.md[testing-library/prefer-query-by-disappearance]` [recommended]
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-query-matchers.md[testing-library/prefer-query-matchers]`
 | Off
 
-| `link:{eslint-testing-library-rules}/prefer-screen-queries.md[testing-library/prefer-screen-queries]`
+| `link:{eslint-testing-library-rules}/prefer-screen-queries.md[testing-library/prefer-screen-queries]` [recommended]
 | Error
 
 | `link:{eslint-testing-library-rules}/prefer-user-event.md[testing-library/prefer-user-event]`
@@ -93,7 +93,7 @@ and anticipate common mistakes when writing tests with https://testing-library.c
 | `link:{eslint-testing-library-rules}/prefer-user-event-setup.md[testing-library/prefer-user-event-setup]`
 | Error
 
-| `link:{eslint-testing-library-rules}/render-result-naming-convention.md[testing-library/render-result-naming-convention]`
+| `link:{eslint-testing-library-rules}/render-result-naming-convention.md[testing-library/render-result-naming-convention]` [recommended]
 | Error
 
 |===
