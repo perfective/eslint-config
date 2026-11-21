@@ -324,6 +324,10 @@ For each plugin update:
   Update both together.
 - The commit usually touches `package.json`, `package-lock.json`, `<plugin>-config.ts`, and `index.adoc`.
 
+Keep `type-fest` as a direct dev dependency (`skipLibCheck` is false; removal fails with `TS2307`).
+`eslint-import-context` 0.1.9 `lib/types.d.ts` imports it without declaring it; `eslint-plugin-import-x` re-exports it.
+Remove it once `eslint-import-context` declares `type-fest`, or `eslint-plugin-import-x` stops re-exporting its types.
+
 ## Dependency maintenance
 
 Renovate (`renovate.json`) discovers updates and opens one PR per dependency (no automerge),
