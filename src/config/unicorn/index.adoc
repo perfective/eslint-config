@@ -341,7 +341,7 @@ is overridden and errors for: `acc`, `arr`, `attr`/`attrs`, `btn`, `cb`, `conf`,
 | Error
 
 | `link:{eslint-unicorn-rules}/no-async-promise-finally.md[unicorn/no-async-promise-finally]`
-| Yes
+|
 |
 | Error
 
@@ -1564,7 +1564,7 @@ Applies only to CSS files.
 
 | `link:{eslint-unicorn-rules}/prefer-json-import.md[unicorn/prefer-json-import]`
 |
-|
+| Yes
 | Off
 4+| Requires ECMAScript 2025
 
@@ -1706,6 +1706,11 @@ Applies only to CSS files.
 | Yes
 | Warning
 
+| `link:{eslint-unicorn-rules}/prefer-options-parameter.md[unicorn/prefer-options-parameter]`
+| Yes
+|
+| Error
+
 | `link:{eslint-unicorn-rules}/prefer-path2d.md[unicorn/prefer-path2d]`
 | Yes
 |
@@ -1760,6 +1765,12 @@ as the fix moves a macrotask to a microtask, which changes the execution order.
 | Yes
 | Off
 4+| Requires ECMAScript 2025
+
+| `link:{eslint-unicorn-rules}/prefer-regexp-exec.md[unicorn/prefer-regexp-exec]`
+| Yes
+| Yes
+| Off
+4+| Use @typescript-eslint/prefer-regexp-exec.
 
 | `link:{eslint-unicorn-rules}/prefer-regexp-test.md[unicorn/prefer-regexp-test]`
 | Yes
@@ -2055,6 +2066,11 @@ is only supported by the latest browsers.
 | Error
 
 | `link:{eslint-unicorn-rules}/require-proxy-trap-boolean-return.md[unicorn/require-proxy-trap-boolean-return]`
+| Yes
+| Yes
+| Warning
+
+| `link:{eslint-unicorn-rules}/require-spread-parentheses.md[unicorn/require-spread-parentheses]`
 | Yes
 | Yes
 | Warning
