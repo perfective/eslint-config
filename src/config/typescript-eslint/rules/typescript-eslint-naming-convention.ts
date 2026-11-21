@@ -105,20 +105,24 @@ function typescriptEslintNamingConventionDefaults(): TypescriptEslintNamingConve
         {
             selector: ['enumMember', 'typeLike'],
             format: ['StrictPascalCase'],
-        }, {
+        },
+        {
             selector: ['memberLike', 'variableLike'],
             format: ['strictCamelCase'],
-        }, {
+        },
+        {
             selector: ['objectLiteralProperty'],
             modifiers: ['requiresQuotes'],
             format: null,
-        }, {
+        },
+        {
             selector: ['parameter'],
             modifiers: ['unused'],
             format: ['strictCamelCase'],
             // Allow underscore for unused parameters, as they can be used as part of an interface
             leadingUnderscore: 'allow',
-        }, {
+        },
+        {
             selector: ['classProperty'],
             modifiers: ['private'],
             format: ['strictCamelCase'],
