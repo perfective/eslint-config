@@ -4,75 +4,49 @@
 The `link:https://github.com/cypress-io/eslint-plugin-cypress[eslint-plugin-cypress]` allows to enforce
 some of the https://docs.cypress.io/guides/references/best-practices.html[best practices] for Cypress tests.
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | https://github.com/cypress-io/eslint-plugin-cypress#rules[Recommended] | Fixable | Config
+| Rule | Config
 
-| `link:{eslint-plugin-cypress-rules}/assertion-before-screenshot.md[cypress/assertion-before-screenshot]`
-| Yes
-|
+| `link:{eslint-plugin-cypress-rules}/assertion-before-screenshot.md[cypress/assertion-before-screenshot]` [recommended]
 | Error
 
-| `link:{eslint-plugin-cypress-rules}/no-and.md[cypress/no-and]`
-|
-| Yes
+| `link:{eslint-plugin-cypress-rules}/no-and.md[cypress/no-and]` [fixable]
 | Warning
 
 | `link:{eslint-plugin-cypress-rules}/no-assigning-return-values.md[cypress/no-assigning-return-values]`
-|
-|
 | Error
 
-| `link:{eslint-plugin-cypress-rules}/no-async-before.md[cypress/no-async-before]`
-| Yes
-|
+| `link:{eslint-plugin-cypress-rules}/no-async-before.md[cypress/no-async-before]` [recommended]
 | Error
 
-| `link:{eslint-plugin-cypress-rules}/no-async-tests.md[cypress/no-async-tests]`
-| Yes
-|
+| `link:{eslint-plugin-cypress-rules}/no-async-tests.md[cypress/no-async-tests]` [recommended]
 | Error
 
 | `link:{eslint-plugin-cypress-rules}/no-chained-get.md[cypress/no-chained-get]`
-|
-|
 | Error
 
 | `link:{eslint-plugin-cypress-rules}/no-debug.md[cypress/no-debug]`
-|
-|
 | Error
 
 | `link:{eslint-plugin-cypress-rules}/no-force.md[cypress/no-force]`
-|
-|
 | Error
 
 | `link:{eslint-plugin-cypress-rules}/no-pause.md[cypress/no-pause]`
-|
-|
 | Error
 
 | `link:{eslint-plugin-cypress-rules}/no-unnecessary-waiting.md[cypress/no-unnecessary-waiting]`
-|
-|
 | Error
 
-| `link:{eslint-plugin-cypress-rules}/no-xpath.md[cypress/no-xpath]`
-| Deprecated
-|
+| `link:{eslint-plugin-cypress-rules}/no-xpath.md[cypress/no-xpath]` [deprecated]
 | Off
-4+| The rule has no replacement, as `cy.xpath()` is no longer supported.
+2+| The rule has no replacement, as `cy.xpath()` is no longer supported.
 Use `cy.get()` with data selectors (`cypress/require-data-selectors`) instead.
 
 | `link:{eslint-plugin-cypress-rules}/require-data-selectors.md[cypress/require-data-selectors]`
-|
-|
 | Error
 
-| `link:{eslint-plugin-cypress-rules}/unsafe-to-chain-command.md[cypress/unsafe-to-chain-command]`
-| Yes
-|
+| `link:{eslint-plugin-cypress-rules}/unsafe-to-chain-command.md[cypress/unsafe-to-chain-command]` [recommended]
 | Error
 
 |===

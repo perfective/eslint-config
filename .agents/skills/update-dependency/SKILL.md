@@ -79,6 +79,7 @@ The audit lists exactly what changed (see `src/config/perfective-eslint-config.s
 - `unknown`: configured rules that the plugin removed;
 - `deprecated-comment`: deprecated rules without a deprecation comment;
 - `undocumented`, `stale-doc`, `doc-severity`: `index.adoc` tables out of sync with the config;
+- `doc-notes`: `[deprecated]` or `[fixable]` notes in `index.adoc` out of sync with the rule metadata;
 - `severity-convention`: fixable rules that are not warnings, or other rules that are not errors.
 
 Cross-check the audit against the release notes from step 3:
@@ -95,7 +96,8 @@ Use `references/decisions.md` and the precedent in `git log -- src/config/<plugi
 
 - Edit `src/config/<plugin>/<plugin>-config.ts` (or its `*-rules.ts` files),
   keeping rules in alphabetical order with explicit options.
-- Update the `src/config/<plugin>/index.adoc` table in the same commit (`Rule | ... | Config` rows).
+- Update the `src/config/<plugin>/index.adoc` table in the same commit (`Rule | Config` rows),
+  including the notes after the rule link (preset, `[deprecated]`, `[fixable]` or `[partially fixable]`).
 - Check coherence with other plugins: overlapping rules, `extension-rules.ts`, and the overrides for tests
   and configuration files.
 - After the review, update the snapshot: `RULE_AUDIT_UPDATE=true npm test`.

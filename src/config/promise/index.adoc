@@ -5,98 +5,64 @@ The `link:https://github.com/eslint-community/eslint-plugin-promise[eslint-plugi
 to enforce best practices for JavaScript promises.
 
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | Recommended | Fixable | Config
+| Rule | Config
 
-| `link:{eslint-promise-rules}/catch-or-return.md[promise/catch-or-return]`
-| Yes
-|
+| `link:{eslint-promise-rules}/catch-or-return.md[promise/catch-or-return]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/no-return-wrap.md[promise/no-return-wrap]`
-| Yes
-|
+| `link:{eslint-promise-rules}/no-return-wrap.md[promise/no-return-wrap]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/param-names.md[promise/param-names]`
-| Yes
-| Yes
+| `link:{eslint-promise-rules}/param-names.md[promise/param-names]` [recommended]
 | Warning
 
-| `link:{eslint-promise-rules}/always-return.md[promise/always-return]`
-| Yes
-|
+| `link:{eslint-promise-rules}/always-return.md[promise/always-return]` [recommended]
 | Error
 
 | `link:{eslint-promise-rules}/no-multiple-resolved.md[promise/no-multiple-resolved]`
-|
-|
 | Error
 
 | `link:{eslint-promise-rules}/no-native.md[promise/no-native]`
-|
-|
 | Off
 
-| `link:{eslint-promise-rules}/no-nesting.md[promise/no-nesting]`
-| Yes
-|
+| `link:{eslint-promise-rules}/no-nesting.md[promise/no-nesting]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/no-promise-in-callback.md[promise/no-promise-in-callback]`
-| Yes
-|
+| `link:{eslint-promise-rules}/no-promise-in-callback.md[promise/no-promise-in-callback]` [recommended]
 | Error
 
-| `link:{eslint-promise-rules}/no-callback-in-promise.md[promise/no-callback-in-promise]`
-| Yes
-|
+| `link:{eslint-promise-rules}/no-callback-in-promise.md[promise/no-callback-in-promise]` [recommended]
 | Error
 
 | `link:{eslint-promise-rules}/avoid-new.md[promise/avoid-new]`
-|
-|
 | Off
 
-| `link:{eslint-promise-rules}/no-new-statics.md[promise/no-new-statics]`
-| Yes
-| Yes
+| `link:{eslint-promise-rules}/no-new-statics.md[promise/no-new-statics]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-promise-rules}/no-return-in-finally.md[promise/no-return-in-finally]`
-| Yes
-|
+| `link:{eslint-promise-rules}/no-return-in-finally.md[promise/no-return-in-finally]` [recommended]
 | Error
 
 
 | `link:{eslint-promise-rules}/prefer-await-to-callbacks.md[promise/prefer-await-to-callbacks]`
-|
-|
 | Off
-4+| Requires ES2017 `async`/`await`.
+2+| Requires ES2017 `async`/`await`.
 
 | `link:{eslint-promise-rules}/prefer-await-to-then.md[promise/prefer-await-to-then]`
-|
-|
 | Off
-4+| Requires ES2017 `async`/`await`
+2+| Requires ES2017 `async`/`await`
 and would be turned off either way,
 as Promises should be preferred.
 
-| `link:{eslint-promise-rules}/prefer-catch.md[promise/prefer-catch]`
-|
-|
+| `link:{eslint-promise-rules}/prefer-catch.md[promise/prefer-catch]` [fixable]
 | Warning
 
 | `link:{eslint-promise-rules}/spec-only.md[promise/spec-only]`
-|
-|
 | Error
 
 | `link:{eslint-promise-rules}/valid-params.md[promise/valid-params]`
-|
-|
 | Error
 
 |===
