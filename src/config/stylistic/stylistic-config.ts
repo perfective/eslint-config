@@ -69,6 +69,7 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                      */
                     'TSTypeParameterInstantiation',
                 ],
+                jsx: 4,
             }],
             '@stylistic/indent-binary-ops': ['warn', 4],
             '@stylistic/jsx-child-element-spacing': 'error',
