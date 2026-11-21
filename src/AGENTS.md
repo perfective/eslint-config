@@ -34,6 +34,10 @@ This guide records implementation details to check when changing `src/`.
 - Check both the source entry points and `gulpfile.js` when changing exports.
   The build excludes `*.spec.ts` and `*.snapshot.ts` through `tsconfig.build.json`.
   Build output and declarations must be regenerated, never patched by hand.
+- A package that both the source and its specs import, and that consumers do not configure themselves,
+  is a regular `dependency` with a `^` range, not a peer dependency
+  (for example, `globals` in `linter/language-options.ts`).
+  Renovate's `rangeStrategy: bump` updates it without a package rule.
 
 ## Working with the rule audit
 
@@ -69,3 +73,8 @@ npm test -- src/config/perfective-eslint-config.spec.ts
 
 Tests also cover `linter/`, rule-option builders, and the TypeScript-dependent config helper.
 Use colocated Jest specs and the npm scripts; complete the root guide's full verification before committing.
+
+- Each `it()` checks one behavior, and its name states that behavior.
+  Split a test that checks independent behaviors into one test per behavior,
+  for example `defines browser globals` and `defines Node.js ES modules globals`,
+  not one `defines browser and Node.js ES module globals` test.
