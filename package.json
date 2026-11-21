@@ -52,7 +52,7 @@
         "eslint-plugin-simple-import-sort": "^14.0.0",
         "eslint-plugin-testing-library": "^7.16.2",
         "eslint-plugin-unicorn": "^79.0.0",
-        "typescript-eslint": "^8.72.2"
+        "typescript-eslint": "^8.73.0"
     },
     "peerDependenciesMeta": {
         "eslint-plugin-cypress": {
@@ -102,6 +102,6 @@
         "ts-jest": "^29.4.15",
         "type-fest": "5.10.0",
         "typescript": "~6.0.3",
-        "typescript-eslint": "8.72.2"
+        "typescript-eslint": "8.73.0"
     }
 }
