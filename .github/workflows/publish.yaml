@@ -1,19 +1,148 @@
 name: Publish
 on:
-    release:
-        types: [prereleased, released]
+    push:
+        tags:
+            - 'v*'
 
-permissions:
-    id-token: write # Required for OIDC
-    contents: read
+# npm trusted publishing is bound to this file name (`publish.yaml`), not to the trigger.
+# The maintainer creates the GitHub Release manually. This workflow does not
+# (an Actions-created release is the wrong trigger; see perfective/ts.build#41).
+permissions: {}
+
+concurrency:
+    group: publish-${{ github.ref }}
+    cancel-in-progress: false
 
 jobs:
+    verify:
+        name: Verify the tag
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        permissions:
+            contents: read
+        outputs:
+            sha: ${{ steps.tag.outputs.sha }}
+            version: ${{ steps.tag.outputs.version }}
+            dist_tag: ${{ steps.tag.outputs.dist_tag }}
+
+        steps:
+            # The tag is checked through the GitHub API:
+            # `actions/checkout` does not keep the annotated tag object, and GitHub verifies the signature.
+            - name: Check the tag
+              id: tag
+              working-directory: ${{ runner.temp }}
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  REPO: ${{ github.repository }}
+                  TAG: ${{ github.ref_name }}
+              run: |
+                  set -euo pipefail
+                  if [[ ! "${TAG}" =~ ^v([0-9]+)\.([0-9]+)\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+                      echo "::error::${TAG} is not a vX.Y.Z or vX.Y.Z-<prerelease> tag."
+                      exit 1
+                  fi
+                  major="${BASH_REMATCH[1]}"
+                  minor="${BASH_REMATCH[2]}"
+                  backport="v${major}.${minor}.x"
+                  version="${TAG#v}"
+
+                  ref="$(gh api "repos/${REPO}/git/ref/tags/${TAG}")"
+                  if [ "$(jq -r '.object.type' <<<"${ref}")" != "tag" ]; then
+                      echo "::error::${TAG} is a lightweight tag. Push a signed annotated tag: git tag -s ${TAG}."
+                      exit 1
+                  fi
+                  tag="$(gh api "repos/${REPO}/git/tags/$(jq -r '.object.sha' <<<"${ref}")")"
+                  if [ "$(jq -r '.verification.verified' <<<"${tag}")" != "true" ]; then
+                      echo "::error::GitHub does not verify the signature of ${TAG}:" \
+                          "$(jq -r '.verification.reason' <<<"${tag}")."
+                      exit 1
+                  fi
+                  if [ "$(jq -r '.object.type' <<<"${tag}")" != "commit" ]; then
+                      echo "::error::${TAG} does not point to a commit."
+                      exit 1
+                  fi
+                  sha="$(jq -r '.object.sha' <<<"${tag}")"
+
+                  # Publish only commits that are on `main` or on the backport branch of this version.
+                  # The npm dist-tag `latest` is for a non-prerelease on `main` only.
+                  # A backport release uses `backport-X.Y`, which is not a semver range.
+                  latest=
+                  dist_tag=
+                  for branch in main "${backport}"; do
+                      status="$(gh api "repos/${REPO}/compare/${branch}...${sha}" --jq '.status' 2>/dev/null || true)"
+                      if [ "${status}" = "identical" ] || [ "${status}" = "behind" ]; then
+                          if [ "${branch}" = main ]; then
+                              latest=true
+                              dist_tag=latest
+                          else
+                              latest=false
+                              dist_tag="backport-${major}.${minor}"
+                          fi
+                          break
+                      fi
+                  done
+                  if [ -z "${latest}" ]; then
+                      echo "::error::${TAG} points to ${sha}, which is not on main or ${backport}."
+                      exit 1
+                  fi
+
+                  package="$(gh api "repos/${REPO}/contents/package.json?ref=${sha}" \
+                      -H 'Accept: application/vnd.github.raw')"
+                  if [ "$(jq -r '.version' <<<"${package}")" != "${version}" ]; then
+                      echo "::error::package.json has version $(jq -r '.version' <<<"${package}"), not ${version}."
+                      exit 1
+                  fi
+
+                  prerelease="$([[ "${version}" == *-* ]] && echo true || echo false)"
+                  if [ "${prerelease}" = "true" ]; then
+                      dist_tag=next
+                  fi
+                  {
+                      echo "sha=${sha}"
+                      echo "version=${version}"
+                      echo "dist_tag=${dist_tag}"
+                  } >> "${GITHUB_OUTPUT}"
+
+            # Fails before publishing when the changelog has no section for this version.
+            # The maintainer copies that section into the GitHub Release.
+            - name: Check CHANGELOG.adoc for this version
+              working-directory: ${{ runner.temp }}
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  REPO: ${{ github.repository }}
+                  SHA: ${{ steps.tag.outputs.sha }}
+                  VERSION: ${{ steps.tag.outputs.version }}
+              run: |
+                  set -euo pipefail
+                  gh api "repos/${REPO}/contents/CHANGELOG.adoc?ref=${SHA}" \
+                      -H 'Accept: application/vnd.github.raw' > CHANGELOG.adoc
+                  # The `== vX.Y.Z` section, with AsciiDoc list items (`*`, `**`) as Markdown list items.
+                  # `sed` drops the leading blank lines; `$(...)` drops the trailing ones.
+                  notes="$(awk -v heading="== v${VERSION}" '
+                      $0 == heading { found = 1; next }
+                      found && /^== / { exit }
+                      found' CHANGELOG.adoc \
+                      | sed -E -e 's/^\*\* /  - /' -e 's/^\* /- /' \
+                      | sed -e '/./,$!d')"
+                  if [ -z "${notes}" ]; then
+                      echo "::error::CHANGELOG.adoc has no == v${VERSION} section."
+                      exit 1
+                  fi
+
     npm:
         name: Publish NPM package
+        needs: verify
         runs-on: ubuntu-latest
+        timeout-minutes: 15
+        permissions:
+            id-token: write # Required for OIDC (npm trusted publishing and provenance)
+            contents: read
+
         steps:
             - name: Checkout repository
               uses: actions/checkout@v7
+              with:
+                  ref: ${{ needs.verify.outputs.sha }}
 
             - name: Setup Node.js
               uses: actions/setup-node@v7
@@ -33,5 +162,16 @@ jobs:
             - name: Build package
               run: npm run dist
 
+            # A rerun skips the version npm already has.
             - name: Publish package
-              run: npm publish ${{ github.event.action == 'prereleased' && '--tag next' || '' }} ./dist
+              env:
+                  VERSION: ${{ needs.verify.outputs.version }}
+                  DIST_TAG: ${{ needs.verify.outputs.dist_tag }}
+              run: |
+                  set -euo pipefail
+                  name="$(jq -r '.name' package.json)"
+                  if npm view "${name}@${VERSION}" version > /dev/null 2>&1; then
+                      echo "::notice::${name}@${VERSION} is already on npm."
+                      exit 0
+                  fi
+                  npm publish --provenance --tag "${DIST_TAG}" ./dist
