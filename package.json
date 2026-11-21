@@ -100,7 +100,6 @@
         "jest": "^30.5.2",
         "prettier": "~3.10.1",
         "ts-jest": "^29.4.15",
-        "type-fest": "6.0.1",
         "typescript": "~6.0.3",
         "typescript-eslint": "8.73.0"
     },
