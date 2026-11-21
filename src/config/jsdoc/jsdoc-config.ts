@@ -419,6 +419,7 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 // @stylistic/member-delimiter-style requires semicolons,
                 // but in eslint-plugin-jsdoc v65.4.11 the "semicolon" separators with trailing punctuation
                 // drop the objectTypeBracketSpacing (and the "comma" separator joins multiline types into one line).
+                // See https://github.com/perfective/eslint-config/issues/80.
                 objectFieldSeparator: 'comma-and-linebreak',
                 // As @stylistic/object-property-newline with allowAllPropertiesOnSameLine.
                 objectFieldSeparatorOptionalLinebreak: true,

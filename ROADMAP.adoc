@@ -28,20 +28,6 @@ Proposed follow-up: upgrade `eslint-import-resolver-typescript` to v4
 and move the setting to `import-x/resolver-next` (`createTypeScriptImportResolver()`),
 updating the peer dependency range, the lockfile, and the import rule documentation.
 
-== JSDoc object type separators
-
-`jsdoc/type-formatting` follows the `@stylistic` rules (issue #33),
-except for the object field separator:
-JSDoc object types use commas, while `@stylistic/member-delimiter-style` requires semicolons in TypeScript types.
-In `eslint-plugin-jsdoc` v65.4.11, the `semicolon` separators with trailing punctuation
-drop the `objectTypeBracketSpacing` when the fixer rewrites an object type
-(`{ a: string; }` becomes `{a: string;}`).
-
-Proposed follow-up: report the issue upstream,
-and switch `objectFieldSeparator` to `semicolon-and-linebreak`
-with `separatorForSingleObjectField: true` and `trailingPunctuationMultilineOnly: false`
-once the plugin keeps the bracket spacing.
-
 == Release and maintenance policy alignment
 
 The root guide says newly enabled rules require a minor release while on `v0`.
