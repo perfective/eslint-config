@@ -385,36 +385,62 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'jsdoc/ts-no-empty-object-type': 'error',
             'jsdoc/ts-no-unnecessary-template-expression': 'warn',
             'jsdoc/ts-prefer-function-type': 'warn',
+            // Options align the JSDoc types with the @stylistic and typescript-eslint rules for the code.
             'jsdoc/type-formatting': ['warn', {
+                // As @typescript-eslint/array-type.
                 arrayBrackets: 'square',
-                arrowFunctionPostReturnMarkerSpacing: '',
-                arrowFunctionPreReturnMarkerSpacing: '',
+                // As @stylistic/arrow-spacing.
+                arrowFunctionPostReturnMarkerSpacing: ' ',
+                arrowFunctionPreReturnMarkerSpacing: ' ',
                 enableFixer: true,
-                functionOrClassParameterSpacing: '',
+                // As @stylistic/comma-spacing.
+                functionOrClassParameterSpacing: ' ',
+                // As @stylistic/function-call-spacing.
                 functionOrClassPostGenericSpacing: '',
-                functionOrClassPostReturnMarkerSpacing: '',
+                // As @stylistic/type-annotation-spacing.
+                functionOrClassPostReturnMarkerSpacing: ' ',
                 functionOrClassPreReturnMarkerSpacing: '',
-                functionOrClassTypeParameterSpacing: '',
-                genericAndTupleElementSpacing: '',
+                // As @stylistic/comma-spacing.
+                functionOrClassTypeParameterSpacing: ' ',
+                genericAndTupleElementSpacing: ' ',
                 genericDot: false,
-                keyValuePostColonSpacing: '',
+                // As @stylistic/key-spacing and @stylistic/type-annotation-spacing.
+                keyValuePostColonSpacing: ' ',
                 keyValuePostKeySpacing: '',
                 keyValuePostOptionalSpacing: '',
+                // As @stylistic/rest-spread-spacing.
                 keyValuePostVariadicSpacing: '',
-                methodQuotes: 'double',
-                objectFieldIndent: '',
+                // As @stylistic/quotes.
+                methodQuotes: 'single',
+                // As @stylistic/indent.
+                objectFieldIndent: ' '.repeat(4),
+                // As @stylistic/quote-props.
                 objectFieldQuote: null,
-                objectFieldSeparator: 'comma',
+                // @stylistic/member-delimiter-style requires semicolons,
+                // but in eslint-plugin-jsdoc v65.4.11 the "semicolon" separators with trailing punctuation
+                // drop the objectTypeBracketSpacing (and the "comma" separator joins multiline types into one line).
+                // See https://github.com/perfective/eslint-config/issues/80.
+                objectFieldSeparator: 'comma-and-linebreak',
+                // As @stylistic/object-property-newline with allowAllPropertiesOnSameLine.
                 objectFieldSeparatorOptionalLinebreak: true,
-                objectFieldSeparatorTrailingPunctuation: false,
-                objectTypeBracketSpacing: '',
+                // As @stylistic/comma-dangle.
+                objectFieldSeparatorTrailingPunctuation: true,
+                // As @stylistic/object-curly-spacing.
+                objectTypeBracketSpacing: ' ',
+                // As @stylistic/space-infix-ops.
                 parameterDefaultValueSpacing: ' ',
+                // As @stylistic/space-before-function-paren.
                 postMethodNameSpacing: '',
+                // As @stylistic/keyword-spacing.
                 postNewSpacing: ' ',
+                // As @stylistic/comma-dangle.
                 separatorForSingleObjectField: false,
-                stringQuotes: 'double',
-                trailingPunctuationMultilineOnly: false,
+                // As @stylistic/quotes.
+                stringQuotes: 'single',
+                // As @stylistic/comma-dangle.
+                trailingPunctuationMultilineOnly: true,
                 typeBracketSpacing: '',
+                // As @stylistic/space-infix-ops.
                 unionSpacing: ' ',
             }],
             'jsdoc/valid-types': 'error',
