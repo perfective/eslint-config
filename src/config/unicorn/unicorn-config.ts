@@ -215,6 +215,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             // Deprecated since v66.0.0. Use unicorn/prefer-literal-ascii and unicorn/prefer-unicode-code-point-escapes.
             'unicorn/no-hex-escape': 'off',
             'unicorn/no-immediate-mutation': ['warn', {
+                checkCollections: true,
                 checkConditionals: true,
             }],
             'unicorn/no-impossible-length-comparison': 'error',
@@ -579,6 +580,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-object-iterable-methods': 'warn',
             'unicorn/prefer-observer-apis': 'error',
             'unicorn/prefer-optional-catch-binding': 'warn',
+            'unicorn/prefer-options-parameter': ['error', {
+                checkWithoutOptionsObject: true,
+            }],
             'unicorn/prefer-path2d': 'error',
             'unicorn/prefer-private-class-fields': 'warn',
             'unicorn/prefer-promise-static-methods': 'warn',
@@ -598,6 +602,8 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/prefer-reflect-apply': 'warn',
             // Requires ECMAScript 2025
             'unicorn/prefer-regexp-escape': 'off',
+            // Use @typescript-eslint/prefer-regexp-exec.
+            'unicorn/prefer-regexp-exec': 'off',
             // TBD: Conflicts with @typescript-eslint/prefer-regexp-exec
             'unicorn/prefer-regexp-test': 'off',
             'unicorn/prefer-response-static-json': 'warn',
@@ -623,7 +629,9 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             }],
             'unicorn/prefer-single-object-destructuring': 'warn',
             'unicorn/prefer-single-replace': 'warn',
-            'unicorn/prefer-smaller-scope': 'warn',
+            'unicorn/prefer-smaller-scope': ['warn', {
+                checkTypeAliases: true,
+            }],
             'unicorn/prefer-split-limit': 'warn',
             // Autofix does not always work correctly
             'unicorn/prefer-spread': 'off',
@@ -682,6 +690,7 @@ export function unicornConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'unicorn/require-passive-events': 'warn',
             'unicorn/require-post-message-target-origin': 'error',
             'unicorn/require-proxy-trap-boolean-return': 'warn',
+            'unicorn/require-spread-parentheses': 'warn',
             'unicorn/require-text-decoder-streaming': 'error',
             // Use @stylistic/multiline-comment-style and jsdoc/multiline-blocks.
             'unicorn/single-line-block-comment-style': 'off',

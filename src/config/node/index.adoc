@@ -10,196 +10,151 @@ the `link:https://github.com/mysticatea/eslint-plugin-node[eslint-plugin-node]` 
 since March 2020.
 ====
 
-[cols="~,1,1"]
+[cols="~,1"]
 |===
-| Rule | Configuration | Severity
+| Rule | Config
 
 | `link:{eslint-n-rules}/callback-return.md[n/callback-return]`
-|
 | Error
 
-| `link:{eslint-n-rules}/exports-style.md[n/exports-style]`
-|
+| `link:{eslint-n-rules}/exports-style.md[n/exports-style]` [fixable]
 | Warning
 
-| `link:{eslint-n-rules}/file-extension-in-import.md[n/file-extension-in-import]`
-|
+| `link:{eslint-n-rules}/file-extension-in-import.md[n/file-extension-in-import]` [fixable]
 | Off
-3+| Conflicts with the file suffixes like: `.module.ts`, `.component.ts`, `.mock.ts`, etc.
+2+| Conflicts with the file suffixes like: `.module.ts`, `.component.ts`, `.mock.ts`, etc.
 
 | `link:{eslint-n-rules}/global-require.md[n/global-require]`
-|
 | Error
 
 | `link:{eslint-n-rules}/handle-callback-err.md[n/handle-callback-err]`
-|
 | Error
 
-| `link:{eslint-n-rules}/hashbang.md[n/hashbang]`
-| Recommended
+| `link:{eslint-n-rules}/hashbang.md[n/hashbang]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-n-rules}/no-callback-literal.md[n/no-callback-literal]`
-|
 | Error
 
-| `link:{eslint-n-rules}/no-deprecated-api.md[n/no-deprecated-api]`
-| Recommended
+| `link:{eslint-n-rules}/no-deprecated-api.md[n/no-deprecated-api]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/no-exports-assign.md[n/no-exports-assign]`
-| Recommended
+| `link:{eslint-n-rules}/no-exports-assign.md[n/no-exports-assign]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/no-extraneous-import.md[n/no-extraneous-import]`
-| Recommended
+| `link:{eslint-n-rules}/no-extraneous-import.md[n/no-extraneous-import]` [recommended]
 | Off
-3+| Use `import-x/no-extraneous-dependencies` instead.
+2+| Use `import-x/no-extraneous-dependencies` instead.
 
-| `link:{eslint-n-rules}/no-extraneous-require.md[n/no-extraneous-require]`
-| Recommended
+| `link:{eslint-n-rules}/no-extraneous-require.md[n/no-extraneous-require]` [recommended]
 | Off
-3+| Use `import-x/no-extraneous-dependencies` instead.
+2+| Use `import-x/no-extraneous-dependencies` instead.
 
-| `link:{eslint-n-rules}/no-hide-core-modules.md[n/no-hide-core-modules]`
-| Deprecated
+| `link:{eslint-n-rules}/no-hide-core-modules.md[n/no-hide-core-modules]` [deprecated]
 | Off
 
-| `link:{eslint-n-rules}/no-missing-import.md[n/no-missing-import]`
-| Recommended
+| `link:{eslint-n-rules}/no-missing-import.md[n/no-missing-import]` [recommended]
 | Off
 
-| `link:{eslint-n-rules}/no-missing-require.md[n/no-missing-require]`
-| Recommended
+| `link:{eslint-n-rules}/no-missing-require.md[n/no-missing-require]` [recommended]
 | Off
 
 | `link:{eslint-n-rules}/no-mixed-requires.md[n/no-mixed-requires]`
-|
 | Error
 
 | `link:{eslint-n-rules}/no-new-require.md[n/no-new-require]`
-|
 | Error
 
 | `link:{eslint-n-rules}/no-path-concat.md[n/no-path-concat]`
-|
 | Error
 
 | `link:{eslint-n-rules}/no-process-env.md[n/no-process-env]`
-|
 | Error
 
-| `link:{eslint-n-rules}/no-process-exit.md[n/no-process-exit]`
-| Recommended
+| `link:{eslint-n-rules}/no-process-exit.md[n/no-process-exit]` [recommended]
 | Off
-3+| Use `unicorn/no-process-exit` as more flexible.
+2+| Use `unicorn/no-process-exit` as more flexible.
 
 | `link:{eslint-n-rules}/no-restricted-import.md[n/no-restricted-import]`
-|
 | Error
 
 | `link:{eslint-n-rules}/no-restricted-require.md[n/no-restricted-require]`
-|
 | Error
 
 | `link:{eslint-n-rules}/no-sync.md[n/no-sync]`
-|
 | Error
 
 | `link:{eslint-n-rules}/no-top-level-await.md[n/no-top-level-await]`
-|
 | Error
 
-| `link:{eslint-n-rules}/no-unpublished-bin.md[n/no-unpublished-bin]`
-| Recommended
+| `link:{eslint-n-rules}/no-unpublished-bin.md[n/no-unpublished-bin]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/no-unpublished-import.md[n/no-unpublished-import]`
-| Recommended
+| `link:{eslint-n-rules}/no-unpublished-import.md[n/no-unpublished-import]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/no-unpublished-require.md[n/no-unpublished-require]`
-| Recommended
+| `link:{eslint-n-rules}/no-unpublished-require.md[n/no-unpublished-require]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/no-unsupported-features/es-builtins.md[n/no-unsupported-features/es-builtins]`
-| Recommended
+| `link:{eslint-n-rules}/no-unsupported-features/es-builtins.md[n/no-unsupported-features/es-builtins]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/no-unsupported-features/es-syntax.md[n/no-unsupported-features/es-syntax]`
-| Recommended
+| `link:{eslint-n-rules}/no-unsupported-features/es-syntax.md[n/no-unsupported-features/es-syntax]` [recommended]
 | Off
 
-| `link:{eslint-n-rules}/no-unsupported-features/node-builtins.md[n/no-unsupported-features/node-builtins]`
-| Recommended
+| `link:{eslint-n-rules}/no-unsupported-features/node-builtins.md[n/no-unsupported-features/node-builtins]` [recommended]
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/buffer.md[n/prefer-global/buffer]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/console.md[n/prefer-global/console]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/crypto.md[n/prefer-global/crypto]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/process.md[n/prefer-global/process]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/text-decoder.md[n/prefer-global/text-decoder]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/text-encoder.md[n/prefer-global/text-encoder]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/timers.md[n/prefer-global/timers]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/url.md[n/prefer-global/url]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-global/url-search-params.md[n/prefer-global/url-search-params]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-import/assert-strict.md[n/prefer-import/assert-strict]`
-|
 | Error
 
-| `link:{eslint-n-rules}/prefer-node-protocol.md[n/prefer-node-protocol]`
-|
+| `link:{eslint-n-rules}/prefer-node-protocol.md[n/prefer-node-protocol]` [fixable]
 | Off
-3+| Use `unicorn/prefer-node-protocol` instead.
+2+| Use `unicorn/prefer-node-protocol` instead.
 
 | `link:{eslint-n-rules}/prefer-process-get-builtin-module.md[n/prefer-process-get-builtin-module]`
-|
 | Error
-3+| Reports only when the configured Node.js version range is within Node.js `^20.16.0` or `>=22.3.0`
+2+| Reports only when the configured Node.js version range is within Node.js `^20.16.0` or `>=22.3.0`
 (the configuration uses `>=18.0.0`, as the `n/no-unsupported-features/*` rules).
 
 | `link:{eslint-n-rules}/prefer-promises/dns.md[n/prefer-promises/dns]`
-|
 | Error
 
 | `link:{eslint-n-rules}/prefer-promises/fs.md[n/prefer-promises/fs]`
-|
 | Error
 
-| `link:{eslint-n-rules}/process-exit-as-throw.md[n/process-exit-as-throw]`
-| Recommended
+| `link:{eslint-n-rules}/process-exit-as-throw.md[n/process-exit-as-throw]` [recommended]
 | Error
 
-| `link:{eslint-n-rules}/shebang.md[n/shebang]`
-| Deprecated
+| `link:{eslint-n-rules}/shebang.md[n/shebang]` [deprecated] [fixable]
 | Off
-3+| Use `n/hashbang` instead.
+2+| Use `n/hashbang` instead.
 
 |===

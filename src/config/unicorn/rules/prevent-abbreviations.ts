@@ -35,6 +35,7 @@ export interface UnicornPreventAbbreviations {
  * @since v0.11.0
  */
 export function unicornPreventAbbreviations(
+    // eslint-disable-next-line unicorn/prefer-options-parameter -- public API since v0.11.0
     replacements: UnicornPreventAbbreviationReplacements = {},
     options: Partial<Pick<UnicornPreventAbbreviations, 'checkProperties'>> = {},
 ): UnicornPreventAbbreviations {

@@ -249,6 +249,8 @@ export function stylisticConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 ignoredNodes: [
                     // Replaces deprecated "enforceForArrowConditionals: false"
                     'ArrowFunctionExpression[body.type=ConditionalExpression]',
+                    // Parentheses around complex spread arguments are required by unicorn/require-spread-parentheses.
+                    'SpreadElement',
                 ],
             }],
             '@stylistic/no-extra-semi': 'warn',

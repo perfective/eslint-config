@@ -141,6 +141,8 @@ jobs:
                       "WebFetch(domain:github.com)"
                       "WebFetch(domain:raw.githubusercontent.com)"
                       "WebFetch(domain:www.npmjs.com)"
+                      "WebFetch(domain:eslint.org)"
+                      "WebFetch(domain:typescript-eslint.io)"
                       --disallowedTools
                       "Bash(git merge:*)"
                       "Bash(git rebase:*)"

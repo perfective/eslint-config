@@ -31,6 +31,7 @@ type Check = 'missing'
     | 'undocumented'
     | 'stale-doc'
     | 'doc-severity'
+    | 'doc-notes'
     | 'severity-convention'
     | 'metadata';
 
@@ -54,12 +55,18 @@ interface DocumentedRule {
     readonly rule: string;
     readonly severity: Severity | null;
     readonly languages: Map<Language, Severity> | null;
-    readonly fixable: string | null;
+    readonly notes: string[];
+}
+
+interface RuleCell {
+    readonly rule: string;
+    readonly notes: string[];
 }
 
 interface TableState {
     columns: string[];
     row: string[] | null;
+    notes: string[];
     readonly rows: DocumentedRule[];
 }
 
@@ -143,6 +150,11 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'The fixer is opt-in (fix) and is not enabled.',
     },
     {
+        rule: 'import-x/no-import-module-exports',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
         rule: 'jest/no-focused-tests',
         check: 'severity-convention',
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
@@ -153,9 +165,59 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
-        rule: 'jsdoc/multiline-blocks',
+        rule: 'jest/prefer-strict-equal',
         check: 'severity-convention',
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
+    },
+    {
+        rule: 'jest/valid-expect',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/check-alignment',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/check-param-names',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/check-property-names',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/check-tag-names',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/check-types',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/empty-tags',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/escape-inline-tags',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/no-bad-blocks',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/no-defaults',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
         rule: 'jsdoc/no-multi-asterisks',
@@ -163,14 +225,39 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
-        rule: 'jsdoc/require-description-complete-sentence',
+        rule: 'jsdoc/no-types',
         check: 'severity-convention',
-        reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
-        rule: 'jsdoc/require-hyphen-before-param-description',
+        rule: 'jsdoc/require-asterisk-prefix',
         check: 'severity-convention',
-        reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/require-param',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/require-param-description',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/require-param-type',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/require-property',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'jsdoc/require-returns',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
         rule: 'prefer-arrow/prefer-arrow-functions',
@@ -178,12 +265,37 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
-        rule: 'promise/prefer-catch',
+        rule: 'promise/param-names',
         check: 'severity-convention',
         reason: 'Pending review: not fixable, but kept as "warn" since before the audit.',
     },
     {
+        rule: 'testing-library/no-wait-for-side-effects',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'testing-library/prefer-presence-queries',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'unicorn/no-await-expression-member',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'unicorn/prefer-array-some',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
         rule: 'unicorn/prefer-switch',
+        check: 'severity-convention',
+        reason: 'Pending review: fixable, but kept as "error" since before the audit.',
+    },
+    {
+        rule: 'unicorn/text-encoding-identifier-case',
         check: 'severity-convention',
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
@@ -275,6 +387,10 @@ describe(perfectiveEslintConfig, () => {
         expect(unexpected('doc-severity', await violations)).toStrictEqual([]);
     });
 
+    it('documents the deprecation and fixability of every rule', async () => {
+        expect(unexpected('doc-notes', await violations)).toStrictEqual([]);
+    });
+
     it('configures fixable rules as warnings and other rules as errors', async () => {
         expect(unexpected('severity-convention', await violations)).toStrictEqual([]);
     });
@@ -315,6 +431,7 @@ async function auditViolations(): Promise<Map<Check, string[]>> {
         ['undocumented', undocumentedRules(audit)],
         ['stale-doc', staleDocumentedRules(audit)],
         ['doc-severity', documentedSeverityViolations(audit)],
+        ['doc-notes', documentedNoteViolations(audit)],
         ['severity-convention', severityConventionViolations(audit)],
         ['metadata', metadataViolations(audit)],
     ]);
@@ -480,6 +597,41 @@ function languageMismatchMessage(
  */
 function hasDifferentSeverity(documented: DocumentedRule, severities: Set<Severity> | undefined): boolean {
     return documented.severity !== null && severities !== undefined && !severities.has(documented.severity);
+}
+
+/**
+ * Returns rules whose "[deprecated]" and "[fixable]" notes differ from the plugin metadata.
+ * A "[partially fixable]" note records the maintainer's judgment and replaces the "[fixable]" note.
+ */
+function documentedNoteViolations(audit: Audit): string[] {
+    return Array.from(audit.documentedRules.values())
+        .filter(documented => audit.pluginRules.has(documented.rule))
+        .flatMap(documented => noteMismatches(documented, ruleMeta(audit, documented.rule)));
+}
+
+/**
+ * Returns the notes a documented rule is missing or has in excess, compared to its metadata.
+ */
+function noteMismatches(documented: DocumentedRule, meta: RuleMeta): string[] {
+    const expected: [string, boolean][] = [
+        ['deprecated', isDeprecated(meta)],
+        ...fixableNote(documented, meta),
+    ];
+    return expected
+        .filter(([note, flag]) => documented.notes.includes(note) !== flag)
+        .map(([note, flag]) => `${documented.rule}: ${documented.file} `
+            + `${flag ? 'misses' : 'has'} the [${note}] note`);
+}
+
+/**
+ * Returns the expected "[fixable]" note of a documented rule,
+ * or an empty list when the rule is documented as "[partially fixable]".
+ */
+function fixableNote(documented: DocumentedRule, meta: RuleMeta): [string, boolean][] {
+    if (documented.notes.includes('partially fixable')) {
+        return [];
+    }
+    return [['fixable', isFixable(meta)]];
 }
 
 /**
@@ -667,13 +819,15 @@ function pluginDirectories(directory: string): string[] {
 /**
  * Parses the rule rows of AsciiDoc tables.
  *
- * Each row starts with a "| `link:...[rule]`" (or "| `rule`") line followed by one line per remaining column.
+ * Each row starts with a "| `link:...[rule]`" (or "| `rule`") line,
+ * optionally followed by notes (e.g. "[recommended]"), and then one line per remaining column.
  * A cell continues on the following lines until the next cell.
  */
 function tableRows(file: string, content: string): DocumentedRule[] {
     const state: TableState = {
         columns: [],
         row: null,
+        notes: [],
         rows: [],
     };
     content.split('\n').forEach(line => tableLine(file, state, line));
@@ -693,7 +847,8 @@ function tableLine(file: string, state: TableState, line: string): void {
     const started = ruleRow(line);
     if (started !== null) {
         completeRow(file, state);
-        state.row = started;
+        state.row = [started.rule];
+        state.notes = started.notes;
         return;
     }
     extendRow(state, line);
@@ -713,7 +868,7 @@ function readHeader(state: TableState, line: string): void {
     if (!line.startsWith('| Rule |')) {
         return;
     }
-    state.columns = line.split(' | ').map(column => column.replace(/^.*\[(.+)\]$/u, '$1'));
+    state.columns = line.split(' | ');
 }
 
 /**
@@ -736,7 +891,7 @@ function extendRow(state: TableState, line: string): void {
 function completeRow(file: string, state: TableState): void {
     const row = state.row;
     if (row !== null && row.length === state.columns.length) {
-        state.rows.push(documentedRow(file, row, state.columns));
+        state.rows.push(documentedRow(file, row, state.notes));
     }
     state.row = null;
 }
@@ -779,17 +934,35 @@ function continuedText(row: string[], line: string): string | null {
 }
 
 /**
- * Starts a new row if a given line is the first cell of a rule row.
+ * Returns the rule name and the notes (e.g. "[recommended] [fixable]")
+ * if a given line is the first cell of a rule row.
  */
-function ruleRow(line: string): string[] | null {
-    const match = (/^\| `link:.*\[([^\]]+)\]`$/u).exec(line) ?? (/^\| `([^`]+)`$/u).exec(line);
-    return match === null ? null : match.slice(1, 2);
+function ruleRow(line: string): RuleCell | null {
+    const notesStart = line.indexOf('` [');
+    const cell = notesStart === -1 ? line : line.slice(0, notesStart + 1);
+    const rule = ruleName(cell);
+    return rule === null ? null : { rule, notes: ruleNotes(line.slice(cell.length)) };
+}
+
+/**
+ * Returns the rule name of a "| `link:...[rule]`" or "| `rule`" cell, or `null` for any other line.
+ */
+function ruleName(cell: string): string | null {
+    const match = (/^\| `link:.*\[([^\]]+)\]`$/u).exec(cell) ?? (/^\| `([^`]+)`$/u).exec(cell);
+    return match === null ? null : match.slice(1, 2).join('');
+}
+
+/**
+ * Returns the notes in square brackets that follow the rule name (e.g. " [recommended] [fixable]").
+ */
+function ruleNotes(text: string): string[] {
+    return Array.from(text.matchAll(/ \[([a-z ]+)\]/gu), note => note.slice(1, 2).join(''));
 }
 
 /**
  * Returns the documented rule properties of a given table row.
  */
-function documentedRow(file: string, cells: string[], columns: string[]): DocumentedRule {
+function documentedRow(file: string, cells: string[], notes: string[]): DocumentedRule {
     const cell = cells.slice(-1).join('');
     const cellLanguages = documentedLanguageSeverities(cell);
     return {
@@ -797,7 +970,7 @@ function documentedRow(file: string, cells: string[], columns: string[]): Docume
         rule: cells[0],
         severity: cellLanguages === null ? documentedSeverity(cell) : null,
         languages: cellLanguages,
-        fixable: documentedFixable(cells, columns.indexOf('Fixable')),
+        notes,
     };
 }
 
@@ -843,18 +1016,6 @@ function severityWord(cell: string): string {
 }
 
 /**
- * Returns a normalized documented fixability, where "no" stands for an empty cell,
- * or `null` when the table has no "Fixable" column.
- */
-function documentedFixable(cells: string[], index: number): string | null {
-    if (index === -1) {
-        return null;
-    }
-    const cell = cells.slice(index, index + 1).join('');
-    return cell === '' ? 'no' : cell.toLowerCase();
-}
-
-/**
  * Returns true if a given rule metadata has the deprecated flag.
  */
 function isDeprecated(meta: RuleMeta): boolean {
@@ -869,13 +1030,18 @@ function isFixable(meta: RuleMeta): boolean {
 }
 
 /**
- * Returns fixability of a given rule.
- *
- * Uses the documented fixability when available, as it records the maintainer's judgment,
- * and the plugin metadata otherwise.
+ * Returns "partially" if a given rule is documented as partially fixable,
+ * and otherwise "yes" if it declares an autofix in its metadata, and "no" if it does not.
  */
 function fixability(audit: Audit, rule: string): string {
-    return audit.documentedRules.get(rule)?.fixable ?? metadataFixability(ruleMeta(audit, rule));
+    return isPartiallyFixable(audit, rule) ? 'partially' : metadataFixability(ruleMeta(audit, rule));
+}
+
+/**
+ * Returns true if a given rule is documented as "[partially fixable]".
+ */
+function isPartiallyFixable(audit: Audit, rule: string): boolean {
+    return audit.documentedRules.get(rule)?.notes.includes('partially fixable') ?? false;
 }
 
 /**
