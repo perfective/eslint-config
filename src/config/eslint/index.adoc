@@ -6,1198 +6,927 @@ The link:{eslint-rules}[rules] provided by ESLint.
 
 == Possible Problems
 
-[cols="~,1,1"]
+[cols="~,1"]
 |===
-| Rule | https://eslint.org/docs/latest/rules/#possible-problems[ESLint] | Severity
+| Rule | Config
 
 | `link:{eslint-rules}/array-callback-return[array-callback-return]`
-|
 | Error
 
-| `link:{eslint-rules}/constructor-super[constructor-super]`
-| Recommended
+| `link:{eslint-rules}/constructor-super[constructor-super]` [recommended]
 | Error
 
-| `link:{eslint-rules}/for-direction[for-direction]`
-| Recommended
+| `link:{eslint-rules}/for-direction[for-direction]` [recommended]
 | Error
 
-| `link:{eslint-rules}/getter-return[getter-return]`
-| Recommended
+| `link:{eslint-rules}/getter-return[getter-return]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-async-promise-executor[no-async-promise-executor]`
-| Recommended
+| `link:{eslint-rules}/no-async-promise-executor[no-async-promise-executor]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-await-in-loop[no-await-in-loop]`
-|
 | Error
 
-| `link:{eslint-rules}/no-class-assign[no-class-assign]`
-| Recommended
+| `link:{eslint-rules}/no-class-assign[no-class-assign]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-compare-neg-zero[no-compare-neg-zero]`
-| Recommended
+| `link:{eslint-rules}/no-compare-neg-zero[no-compare-neg-zero]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-cond-assign[no-cond-assign]`
-| Recommended
+| `link:{eslint-rules}/no-cond-assign[no-cond-assign]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-const-assign[no-const-assign]`
-| Recommended
+| `link:{eslint-rules}/no-const-assign[no-const-assign]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-constant-binary-expression[no-constant-binary-expression]`
-| Recommended
+| `link:{eslint-rules}/no-constant-binary-expression[no-constant-binary-expression]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-constant-condition[no-constant-condition]`
-| Recommended
+| `link:{eslint-rules}/no-constant-condition[no-constant-condition]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-constructor-return[no-constructor-return]`
-|
 | Error
 
-| `link:{eslint-rules}/no-control-regex[no-control-regex]`
-| Recommended
+| `link:{eslint-rules}/no-control-regex[no-control-regex]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-debugger[no-debugger]`
-| Recommended
+| `link:{eslint-rules}/no-debugger[no-debugger]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-dupe-args[no-dupe-args]`
-| Recommended
+| `link:{eslint-rules}/no-dupe-args[no-dupe-args]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-dupe-class-members[no-dupe-class-members]`
-| Recommended
+| `link:{eslint-rules}/no-dupe-class-members[no-dupe-class-members]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-dupe-else-if[no-dupe-else-if]`
-| Recommended
+| `link:{eslint-rules}/no-dupe-else-if[no-dupe-else-if]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-dupe-keys[no-dupe-keys]`
-| Recommended
+| `link:{eslint-rules}/no-dupe-keys[no-dupe-keys]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-duplicate-case[no-duplicate-case]`
-| Recommended
+| `link:{eslint-rules}/no-duplicate-case[no-duplicate-case]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-duplicate-imports[no-duplicate-imports]`
-|
 | Off
 
-| `link:{eslint-rules}/no-empty-character-class[no-empty-character-class]`
-| Recommended
+| `link:{eslint-rules}/no-empty-character-class[no-empty-character-class]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-empty-pattern[no-empty-pattern]`
-| Recommended
+| `link:{eslint-rules}/no-empty-pattern[no-empty-pattern]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-ex-assign[no-ex-assign]`
-| Recommended
+| `link:{eslint-rules}/no-ex-assign[no-ex-assign]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-fallthrough[no-fallthrough]`
-| Recommended
+| `link:{eslint-rules}/no-fallthrough[no-fallthrough]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-func-assign[no-func-assign]`
-| Recommended
+| `link:{eslint-rules}/no-func-assign[no-func-assign]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-import-assign[no-import-assign]`
-| Recommended
+| `link:{eslint-rules}/no-import-assign[no-import-assign]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-inner-declarations[no-inner-declarations]`
-|
 | Error
 
-| `link:{eslint-rules}/no-invalid-regexp[no-invalid-regexp]`
-| Recommended
+| `link:{eslint-rules}/no-invalid-regexp[no-invalid-regexp]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-irregular-whitespace[no-irregular-whitespace]`
-| Recommended
+| `link:{eslint-rules}/no-irregular-whitespace[no-irregular-whitespace]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-loss-of-precision[no-loss-of-precision]`
-| Recommended
+| `link:{eslint-rules}/no-loss-of-precision[no-loss-of-precision]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-misleading-character-class[no-misleading-character-class]`
-| Recommended
+| `link:{eslint-rules}/no-misleading-character-class[no-misleading-character-class]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-new-native-nonconstructor[no-new-native-nonconstructor]`
-| Recommended
+| `link:{eslint-rules}/no-new-native-nonconstructor[no-new-native-nonconstructor]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-new-symbol[no-new-symbol]`
-|
+| `link:{eslint-rules}/no-new-symbol[no-new-symbol]` [deprecated]
 | Error
 
-| `link:{eslint-rules}/no-obj-calls[no-obj-calls]`
-| Recommended
+| `link:{eslint-rules}/no-obj-calls[no-obj-calls]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-promise-executor-return[no-promise-executor-return]`
-|
 | Error
 
-| `link:{eslint-rules}/no-prototype-builtins[no-prototype-builtins]`
-| Recommended
+| `link:{eslint-rules}/no-prototype-builtins[no-prototype-builtins]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-self-assign[no-self-assign]`
-| Recommended
+| `link:{eslint-rules}/no-self-assign[no-self-assign]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-self-compare[no-self-compare]`
-|
 | Error
 
-| `link:{eslint-rules}/no-setter-return[no-setter-return]`
-| Recommended
+| `link:{eslint-rules}/no-setter-return[no-setter-return]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-sparse-arrays[no-sparse-arrays]`
-| Recommended
+| `link:{eslint-rules}/no-sparse-arrays[no-sparse-arrays]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-template-curly-in-string[no-template-curly-in-string]`
-|
 | Error
 
-| `link:{eslint-rules}/no-this-before-super[no-this-before-super]`
-| Recommended
+| `link:{eslint-rules}/no-this-before-super[no-this-before-super]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-unassigned-vars[no-unassigned-vars]`
-| Recommended
+| `link:{eslint-rules}/no-unassigned-vars[no-unassigned-vars]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-undef[no-undef]`
-| Recommended
+| `link:{eslint-rules}/no-undef[no-undef]` [recommended]
 | Off
-3+| TypeScript compiler checks defined symbols.
+2+| TypeScript compiler checks defined symbols.
 
-| `link:{eslint-rules}/no-unexpected-multiline[no-unexpected-multiline]`
-| Recommended
+| `link:{eslint-rules}/no-unexpected-multiline[no-unexpected-multiline]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-unmodified-loop-condition[no-unmodified-loop-condition]`
-|
 | Error
 
-| `link:{eslint-rules}/no-unreachable[no-unreachable]`
-| Recommended
+| `link:{eslint-rules}/no-unreachable[no-unreachable]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-unreachable-loop[no-unreachable-loop]`
-|
 | Error
 
-| `link:{eslint-rules}/no-unsafe-finally[no-unsafe-finally]`
-| Recommended
+| `link:{eslint-rules}/no-unsafe-finally[no-unsafe-finally]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-unsafe-negation[no-unsafe-negation]`
-| Recommended
+| `link:{eslint-rules}/no-unsafe-negation[no-unsafe-negation]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-unsafe-optional-chaining[no-unsafe-optional-chaining]`
-| Recommended
+| `link:{eslint-rules}/no-unsafe-optional-chaining[no-unsafe-optional-chaining]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-unused-private-class-members[no-unused-private-class-members]`
-| Recommended
+| `link:{eslint-rules}/no-unused-private-class-members[no-unused-private-class-members]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-unused-vars[no-unused-vars]`
-| Recommended
+| `link:{eslint-rules}/no-unused-vars[no-unused-vars]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-use-before-define[no-use-before-define]`
-|
 | Error
 
-| `link:{eslint-rules}/no-useless-assignment[no-useless-assignment]`
-| Recommended
+| `link:{eslint-rules}/no-useless-assignment[no-useless-assignment]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-useless-backreference[no-useless-backreference]`
-| Recommended
+| `link:{eslint-rules}/no-useless-backreference[no-useless-backreference]` [recommended]
 | Error
 
 | `link:{eslint-rules}/require-atomic-updates[require-atomic-updates]`
-|
 | Error
 
-| `link:{eslint-rules}/use-isnan[use-isnan]`
-| Recommended
+| `link:{eslint-rules}/use-isnan[use-isnan]` [recommended]
 | Error
 
-| `link:{eslint-rules}/valid-typeof[valid-typeof]`
-| Recommended
+| `link:{eslint-rules}/valid-typeof[valid-typeof]` [recommended]
 | Error
 
 |===
 
 == Suggestions
 
-[cols="~,1,1"]
+[cols="~,1"]
 |===
-| Rule | https://eslint.org/docs/latest/rules/#suggestions[ESLint] | Severity
+| Rule | Config
 
 | `link:{eslint-rules}/accessor-pairs[accessor-pairs]`
-|
 | Error
 
-| `link:{eslint-rules}/arrow-body-style[arrow-body-style]`
-|
+| `link:{eslint-rules}/arrow-body-style[arrow-body-style]` [fixable]
 | Warning
-3+| This rule does not handle higher-order functions,
+2+| This rule does not handle higher-order functions,
 where the whole body may be located inside the inner function.
 This rule is always disabled in tests.
 
 | `link:{eslint-rules}/block-scoped-var[block-scoped-var]`
-|
 | Error
 
 | `link:{eslint-rules}/camelcase[camelcase]`
-|
 | Off
-3+| The `@typescript-eslint/naming-convention` rule is used instead.
+2+| The `@typescript-eslint/naming-convention` rule is used instead.
 
-| `link:{eslint-rules}/capitalized-comments[capitalized-comments]`
-|
+| `link:{eslint-rules}/capitalized-comments[capitalized-comments]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/class-methods-use-this[class-methods-use-this]`
-|
 | Off
 
 | `link:{eslint-rules}/complexity[complexity]`
-|
 | Error
-3+| Maximum complexity is `3`
+2+| Maximum complexity is `3`
 
 | `link:{eslint-rules}/consistent-return[consistent-return]`
-|
 | Error
 
 | `link:{eslint-rules}/consistent-this[consistent-this]`
-|
 | Error
 
-| `link:{eslint-rules}/curly[curly]`
-|
+| `link:{eslint-rules}/curly[curly]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/default-case[default-case]`
-|
 | Error
 
 | `link:{eslint-rules}/default-case-last[default-case-last]`
-|
 | Error
 
 | `link:{eslint-rules}/default-param-last[default-param-last]`
-|
 | Error
 
-| `link:{eslint-rules}/dot-notation[dot-notation]`
-|
+| `link:{eslint-rules}/dot-notation[dot-notation]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/eqeqeq[eqeqeq]`
-|
+| `link:{eslint-rules}/eqeqeq[eqeqeq]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/func-name-matching[func-name-matching]`
-|
 | Error
 
 | `link:{eslint-rules}/func-names[func-names]`
-|
 | Error
 
 | `link:{eslint-rules}/func-style[func-style]`
-|
 | Error
 
 | `link:{eslint-rules}/grouped-accessor-pairs[grouped-accessor-pairs]`
-|
 | Error
 
 | `link:{eslint-rules}/guard-for-in[guard-for-in]`
-|
 | Error
 
 | `link:{eslint-rules}/id-denylist[id-denylist]`
-|
 | Error
 
 | `link:{eslint-rules}/id-length[id-length]`
-|
 | Off
 
 | `link:{eslint-rules}/id-match[id-match]`
-|
 | Off
 
 | `link:{eslint-rules}/init-declarations[init-declarations]`
-|
 | Error
 
-| `link:{eslint-rules}/logical-assignment-operators[logical-assignment-operators]`
-|
+| `link:{eslint-rules}/logical-assignment-operators[logical-assignment-operators]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/max-classes-per-file[max-classes-per-file]`
-|
 | Error
 
 | `link:{eslint-rules}/max-depth[max-depth]`
-|
 | Error
 
 | `link:{eslint-rules}/max-lines[max-lines]`
-|
 | Off
-3+| Business objects may have many properties
+2+| Business objects may have many properties
 and even with basic logic will have many lines of code.
 
 | `link:{eslint-rules}/max-lines-per-function[max-lines-per-function]`
-|
 | Off
 
 | `link:{eslint-rules}/max-nested-callbacks[max-nested-callbacks]`
-|
 | Error
 
 | `link:{eslint-rules}/max-params[max-params]`
-|
 | Off
-3+| This rule does not allow separating functions and constructors.
+2+| This rule does not allow separating functions and constructors.
 Constructors may have properties declarations,
 and be used for dependency injections,
 making it impossible to limit parameters count.
 
 | `link:{eslint-rules}/max-statements[max-statements]`
-|
 | Off
-3+| Linear statements do not contribute to complexity and do not reduce readability.
+2+| Linear statements do not contribute to complexity and do not reduce readability.
 Using `complexity` rule instead to keep the functions simple.
 
-| `link:{eslint-rules}/multiline-comment-style[multiline-comment-style]`
-|
+| `link:{eslint-rules}/multiline-comment-style[multiline-comment-style]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/multiline-comment-style.
+2+| Use https://eslint.style/rules/js/multiline-comment-style.
 
 | `link:{eslint-rules}/new-cap[new-cap]`
-|
 | Error
 
 | `link:{eslint-rules}/no-alert[no-alert]`
-|
 | Error
 
-| `link:{eslint-rules}/no-array-constructor[no-array-constructor]`
-|
+| `link:{eslint-rules}/no-array-constructor[no-array-constructor]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-bitwise[no-bitwise]`
-|
 | Error
 
 | `link:{eslint-rules}/no-caller[no-caller]`
-|
 | Error
 
-| `link:{eslint-rules}/no-case-declarations[no-case-declarations]`
-| Recommended
+| `link:{eslint-rules}/no-case-declarations[no-case-declarations]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-confusing-arrow[no-confusing-arrow]`
-| Deprecated
+| `link:{eslint-rules}/no-confusing-arrow[no-confusing-arrow]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-confusing-arrow.
+2+| Use https://eslint.style/rules/js/no-confusing-arrow.
 
 | `link:{eslint-rules}/no-console[no-console]`
-|
 | Error
 
 | `link:{eslint-rules}/no-continue[no-continue]`
-|
 | Error
 
-| `link:{eslint-rules}/no-delete-var[no-delete-var]`
-| Recommended
+| `link:{eslint-rules}/no-delete-var[no-delete-var]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-div-regex[no-div-regex]`
-|
+| `link:{eslint-rules}/no-div-regex[no-div-regex]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-else-return[no-else-return]`
-|
+| `link:{eslint-rules}/no-else-return[no-else-return]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-empty[no-empty]`
-| Recommended
+| `link:{eslint-rules}/no-empty[no-empty]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-empty-function[no-empty-function]`
-|
 | Error
 
-| `link:{eslint-rules}/no-empty-static-block[no-empty-static-block]`
-| Recommended
+| `link:{eslint-rules}/no-empty-static-block[no-empty-static-block]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-eq-null[no-eq-null]`
-|
 | Error
 
 | `link:{eslint-rules}/no-eval[no-eval]`
-|
 | Error
 
 | `link:{eslint-rules}/no-extend-native[no-extend-native]`
-|
 | Error
 
-| `link:{eslint-rules}/no-extra-bind[no-extra-bind]`
-|
+| `link:{eslint-rules}/no-extra-bind[no-extra-bind]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-extra-boolean-cast[no-extra-boolean-cast]`
-| Recommended
+| `link:{eslint-rules}/no-extra-boolean-cast[no-extra-boolean-cast]` [recommended] [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-extra-label[no-extra-label]`
-|
+| `link:{eslint-rules}/no-extra-label[no-extra-label]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-extra-semi[no-extra-semi]`
-| Deprecated
+| `link:{eslint-rules}/no-extra-semi[no-extra-semi]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-extra-semi.
+2+| Use https://eslint.style/rules/js/no-extra-semi.
 
-| `link:{eslint-rules}/no-floating-decimal[no-floating-decimal]`
-| Deprecated
+| `link:{eslint-rules}/no-floating-decimal[no-floating-decimal]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-floating-decimal.
+2+| Use https://eslint.style/rules/js/no-floating-decimal.
 
-| `link:{eslint-rules}/no-global-assign[no-global-assign]`
-| Recommended
+| `link:{eslint-rules}/no-global-assign[no-global-assign]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-implicit-coercion[no-implicit-coercion]`
-|
+| `link:{eslint-rules}/no-implicit-coercion[no-implicit-coercion]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-implicit-globals[no-implicit-globals]`
-|
 | Error
 
 | `link:{eslint-rules}/no-implied-eval[no-implied-eval]`
-|
 | Error
 
 | `link:{eslint-rules}/no-inline-comments[no-inline-comments]`
-|
 | Error
 
 | `link:{eslint-rules}/no-invalid-this[no-invalid-this]`
-|
 | Error
 
 | `link:{eslint-rules}/no-iterator[no-iterator]`
-|
 | Error
 
 | `link:{eslint-rules}/no-label-var[no-label-var]`
-|
 | Error
 
 | `link:{eslint-rules}/no-labels[no-labels]`
-|
 | Error
 
 | `link:{eslint-rules}/no-lone-blocks[no-lone-blocks]`
-|
 | Error
 
-| `link:{eslint-rules}/no-lonely-if[no-lonely-if]`
-|
+| `link:{eslint-rules}/no-lonely-if[no-lonely-if]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-loop-func[no-loop-func]`
-|
 | Error
 
 | `link:{eslint-rules}/no-magic-numbers[no-magic-numbers]`
-|
 | Off
 
-| `link:{eslint-rules}/no-mixed-operators[no-mixed-operators]`
-| Deprecated
+| `link:{eslint-rules}/no-mixed-operators[no-mixed-operators]` [deprecated]
 | Off
-3+| Use https://eslint.style/rules/js/no-mixed-operators.
+2+| Use https://eslint.style/rules/js/no-mixed-operators.
 
 | `link:{eslint-rules}/no-multi-assign[no-multi-assign]`
-|
 | Error
 
 | `link:{eslint-rules}/no-multi-str[no-multi-str]`
-|
 | Error
 
 | `link:{eslint-rules}/no-negated-condition[no-negated-condition]`
-|
 | Off
-3+| Using `unicorn/no-negated-condition` instead, as it provides an auto-fix.
+2+| Using `unicorn/no-negated-condition` instead, as it provides an auto-fix.
 
 | `link:{eslint-rules}/no-nested-ternary[no-nested-ternary]`
-|
 | Error
 
 | `link:{eslint-rules}/no-new[no-new]`
-|
 | Error
 
 | `link:{eslint-rules}/no-new-func[no-new-func]`
-|
 | Error
 
-| `link:{eslint-rules}/no-new-object[no-new-object]`
-| Deprecated
+| `link:{eslint-rules}/no-new-object[no-new-object]` [deprecated]
 | Off
-3+| Use `no-object-constructor` instead.
+2+| Use `no-object-constructor` instead.
 
 | `link:{eslint-rules}/no-new-wrappers[no-new-wrappers]`
-|
 | Error
 
-| `link:{eslint-rules}/no-nonoctal-decimal-escape[no-nonoctal-decimal-escape]`
-| Recommended
+| `link:{eslint-rules}/no-nonoctal-decimal-escape[no-nonoctal-decimal-escape]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-object-constructor[no-object-constructor]`
-|
 | Error
 
-| `link:{eslint-rules}/no-octal[no-octal]`
-| Recommended
+| `link:{eslint-rules}/no-octal[no-octal]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-octal-escape[no-octal-escape]`
-|
 | Error
 
 | `link:{eslint-rules}/no-param-reassign[no-param-reassign]`
-|
 | Error
 
 | `link:{eslint-rules}/no-plusplus[no-plusplus]`
-|
 | Error
 
 | `link:{eslint-rules}/no-proto[no-proto]`
-|
 | Error
 
-| `link:{eslint-rules}/no-redeclare[no-redeclare]`
-| Recommended
+| `link:{eslint-rules}/no-redeclare[no-redeclare]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-regex-spaces[no-regex-spaces]`
-| Recommended
+| `link:{eslint-rules}/no-regex-spaces[no-regex-spaces]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-restricted-exports[no-restricted-exports]`
-|
 | Off
 
 | `link:{eslint-rules}/no-restricted-globals[no-restricted-globals]`
-|
 | Error
 
 | `link:{eslint-rules}/no-restricted-properties[no-restricted-properties]`
-|
 | Error
 
 
 | `link:{eslint-rules}/no-restricted-imports[no-restricted-imports]`
-|
 | Error
 
 | `link:{eslint-rules}/no-restricted-syntax[no-restricted-syntax]`
-|
 | Error
 
 | `link:{eslint-rules}/no-return-assign[no-return-assign]`
-|
 | Error
 
-| `link:{eslint-rules}/no-return-await[no-return-await]`
-| Deprecated
+| `link:{eslint-rules}/no-return-await[no-return-await]` [deprecated]
 | Off
 
 | `link:{eslint-rules}/no-script-url[no-script-url]`
-|
 | Error
 
 | `link:{eslint-rules}/no-sequences[no-sequences]`
-|
 | Error
 
 | `link:{eslint-rules}/no-shadow[no-shadow]`
-|
 | Off
 
-| `link:{eslint-rules}/no-shadow-restricted-names[no-shadow-restricted-names]`
-| Recommended
+| `link:{eslint-rules}/no-shadow-restricted-names[no-shadow-restricted-names]` [recommended]
 | Error
 
 | `link:{eslint-rules}/no-ternary[no-ternary]`
-|
 | Off
 
 | `link:{eslint-rules}/no-throw-literal[no-throw-literal]`
-|
 | Error
-3+| Off for TypeScript. Use `@typescript-eslint/only-throw-error` instead.
+2+| Off for TypeScript. Use `@typescript-eslint/only-throw-error` instead.
 
-| `link:{eslint-rules}/no-undef-init[no-undef-init]`
-|
+| `link:{eslint-rules}/no-undef-init[no-undef-init]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-undefined[no-undefined]`
-|
 | Off
 
 | `link:{eslint-rules}/no-underscore-dangle[no-underscore-dangle]`
-|
 | Error
 
-| `link:{eslint-rules}/no-unneeded-ternary[no-unneeded-ternary]`
-|
+| `link:{eslint-rules}/no-unneeded-ternary[no-unneeded-ternary]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-unused-expressions[no-unused-expressions]`
-|
 | Error
 
-| `link:{eslint-rules}/no-unused-labels[no-unused-labels]`
-| Recommended
+| `link:{eslint-rules}/no-unused-labels[no-unused-labels]` [recommended] [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-useless-call[no-useless-call]`
-|
 | Error
 
-| `link:{eslint-rules}/no-useless-catch[no-useless-catch]`
-| Recommended
+| `link:{eslint-rules}/no-useless-catch[no-useless-catch]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-useless-computed-key[no-useless-computed-key]`
-|
+| `link:{eslint-rules}/no-useless-computed-key[no-useless-computed-key]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-useless-concat[no-useless-concat]`
-|
 | Error
 
 | `link:{eslint-rules}/no-useless-constructor[no-useless-constructor]`
-|
 | Error
 
-| `link:{eslint-rules}/no-useless-escape[no-useless-escape]`
-| Recommended
+| `link:{eslint-rules}/no-useless-escape[no-useless-escape]` [recommended]
 | Error
 
-| `link:{eslint-rules}/no-useless-rename[no-useless-rename]`
-|
+| `link:{eslint-rules}/no-useless-rename[no-useless-rename]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-useless-return[no-useless-return]`
-|
+| `link:{eslint-rules}/no-useless-return[no-useless-return]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/no-var[no-var]`
-|
+| `link:{eslint-rules}/no-var[no-var]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/no-void[no-void]`
-|
 | Error
 
 | `link:{eslint-rules}/no-warning-comments[no-warning-comments]`
-|
 | Off
 
-| `link:{eslint-rules}/no-with[no-with]`
-| Recommended
+| `link:{eslint-rules}/no-with[no-with]` [recommended]
 | Error
 
-| `link:{eslint-rules}/object-shorthand[object-shorthand]`
-|
+| `link:{eslint-rules}/object-shorthand[object-shorthand]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/one-var[one-var]`
-|
+| `link:{eslint-rules}/one-var[one-var]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/one-var-declaration-per-line[one-var-declaration-per-line]`
-| Deprecated
+| `link:{eslint-rules}/one-var-declaration-per-line[one-var-declaration-per-line]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/one-var-declaration-per-line.
+2+| Use https://eslint.style/rules/js/one-var-declaration-per-line.
 
-| `link:{eslint-rules}/operator-assignment[operator-assignment]`
-|
+| `link:{eslint-rules}/operator-assignment[operator-assignment]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/prefer-arrow-callback[prefer-arrow-callback]`
-|
+| `link:{eslint-rules}/prefer-arrow-callback[prefer-arrow-callback]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/prefer-const[prefer-const]`
-|
+| `link:{eslint-rules}/prefer-const[prefer-const]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/prefer-destructuring[prefer-destructuring]`
-|
+| `link:{eslint-rules}/prefer-destructuring[prefer-destructuring]` [fixable]
 | Off
 
-| `link:{eslint-rules}/prefer-exponentiation-operator[prefer-exponentiation-operator]`
-|
+| `link:{eslint-rules}/prefer-exponentiation-operator[prefer-exponentiation-operator]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/prefer-named-capture-group[prefer-named-capture-group]`
-|
 | Off
-3+| Requires ECMAScript 2018
+2+| Requires ECMAScript 2018
 
-| `link:{eslint-rules}/prefer-numeric-literals[prefer-numeric-literals]`
-|
+| `link:{eslint-rules}/prefer-numeric-literals[prefer-numeric-literals]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/prefer-object-has-own[prefer-object-has-own]`
-|
+| `link:{eslint-rules}/prefer-object-has-own[prefer-object-has-own]` [fixable]
 | Off
 
-| `link:{eslint-rules}/prefer-object-spread[prefer-object-spread]`
-|
+| `link:{eslint-rules}/prefer-object-spread[prefer-object-spread]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/prefer-promise-reject-errors[prefer-promise-reject-errors]`
-|
 | Error
 
 | `link:{eslint-rules}/prefer-regex-literals[prefer-regex-literals]`
-|
 | Off
 
 | `link:{eslint-rules}/prefer-rest-params[prefer-rest-params]`
-|
 | Error
 
 | `link:{eslint-rules}/prefer-spread[prefer-spread]`
-|
 | Error
 
-| `link:{eslint-rules}/prefer-template[prefer-template]`
-|
+| `link:{eslint-rules}/prefer-template[prefer-template]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/preserve-caught-error[preserve-caught-error]`
-| Recommended
+| `link:{eslint-rules}/preserve-caught-error[preserve-caught-error]` [recommended]
 | Off
-3+| Requires ECMAScript 2022 and is not compatible with `@perfectice/common/error` `Exception` and functions.
+2+| Requires ECMAScript 2022 and is not compatible with `@perfectice/common/error` `Exception` and functions.
 
-| `link:{eslint-rules}/quote-props[quote-props]`
-| Deprecated
+| `link:{eslint-rules}/quote-props[quote-props]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/quote-props.
+2+| Use https://eslint.style/rules/js/quote-props.
 
 | `link:{eslint-rules}/radix[radix]`
-|
 | Error
 
 | `link:{eslint-rules}/require-await[require-await]`
-|
 | Error
 
 | `link:{eslint-rules}/require-unicode-regexp[require-unicode-regexp]`
-|
 | Error
 
-| `link:{eslint-rules}/require-yield[require-yield]`
-| Recommended
+| `link:{eslint-rules}/require-yield[require-yield]` [recommended]
 | Error
 
-| `link:{eslint-rules}/sort-imports[sort-imports]`
-|
+| `link:{eslint-rules}/sort-imports[sort-imports]` [fixable]
 | Off
 
 | `link:{eslint-rules}/sort-keys[sort-keys]`
-|
 | Off
 
-| `link:{eslint-rules}/sort-vars[sort-vars]`
-|
+| `link:{eslint-rules}/sort-vars[sort-vars]` [fixable]
 | Off
 
-| `link:{eslint-rules}/spaced-comment[spaced-comment]`
-| Deprecated
+| `link:{eslint-rules}/spaced-comment[spaced-comment]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/spaced-comment.
+2+| Use https://eslint.style/rules/js/spaced-comment.
 
-| `link:{eslint-rules}/strict[strict]`
-|
+| `link:{eslint-rules}/strict[strict]` [fixable]
 | Warning
 
 | `link:{eslint-rules}/symbol-description[symbol-description]`
-|
 | Error
 
 | `link:{eslint-rules}/vars-on-top[vars-on-top]`
-|
 | Error
 
-| `link:{eslint-rules}/yoda[yoda]`
-|
+| `link:{eslint-rules}/yoda[yoda]` [fixable]
 | Warning
-3+| Disallows "Yoda" conditions
+2+| Disallows "Yoda" conditions
 
 |===
 
 == Layout & Formatting
 
-[cols="~,1,1"]
+[cols="~,1"]
 |===
-| Rule | https://eslint.org/docs/latest/rules/#layout--formatting[ESLint] | Severity
+| Rule | Config
 
-| `link:{eslint-rules}/array-bracket-newline[array-bracket-newline]`
-| Deprecated
+| `link:{eslint-rules}/array-bracket-newline[array-bracket-newline]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/array-bracket-newline.
+2+| Use https://eslint.style/rules/js/array-bracket-newline.
 
-| `link:{eslint-rules}/array-bracket-spacing[array-bracket-spacing]`
-| Deprecated
+| `link:{eslint-rules}/array-bracket-spacing[array-bracket-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/array-bracket-spacing.
+2+| Use https://eslint.style/rules/js/array-bracket-spacing.
 
-| `link:{eslint-rules}/array-element-newline[array-element-newline]`
-| Deprecated
+| `link:{eslint-rules}/array-element-newline[array-element-newline]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/array-element-newline.
+2+| Use https://eslint.style/rules/js/array-element-newline.
 
-| `link:{eslint-rules}/arrow-parens[arrow-parens]`
-| Deprecated
+| `link:{eslint-rules}/arrow-parens[arrow-parens]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/arrow-parens.
+2+| Use https://eslint.style/rules/js/arrow-parens.
 
-| `link:{eslint-rules}/arrow-spacing[arrow-spacing]`
-| Deprecated
+| `link:{eslint-rules}/arrow-spacing[arrow-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/arrow-spacing.
+2+| Use https://eslint.style/rules/js/arrow-spacing.
 
-| `link:{eslint-rules}/block-spacing[block-spacing]`
-| Deprecated
+| `link:{eslint-rules}/block-spacing[block-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/block-spacing.
+2+| Use https://eslint.style/rules/js/block-spacing.
 
-| `link:{eslint-rules}/brace-style[brace-style]`
-| Deprecated
+| `link:{eslint-rules}/brace-style[brace-style]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/brace-style.
+2+| Use https://eslint.style/rules/js/brace-style.
 
-| `link:{eslint-rules}/comma-dangle[comma-dangle]`
-| Deprecated
+| `link:{eslint-rules}/comma-dangle[comma-dangle]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/comma-dangle.
+2+| Use https://eslint.style/rules/js/comma-dangle.
 
-| `link:{eslint-rules}/comma-spacing[comma-spacing]`
-| Deprecated
+| `link:{eslint-rules}/comma-spacing[comma-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/comma-spacing.
+2+| Use https://eslint.style/rules/js/comma-spacing.
 
-| `link:{eslint-rules}/comma-style[comma-style]`
-| Deprecated
+| `link:{eslint-rules}/comma-style[comma-style]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/comma-style.
+2+| Use https://eslint.style/rules/js/comma-style.
 
-| `link:{eslint-rules}/computed-property-spacing[computed-property-spacing]`
-| Deprecated
+| `link:{eslint-rules}/computed-property-spacing[computed-property-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/computed-property-spacing.
+2+| Use https://eslint.style/rules/js/computed-property-spacing.
 
-| `link:{eslint-rules}/dot-location[dot-location]`
-| Deprecated
+| `link:{eslint-rules}/dot-location[dot-location]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/dot-location.
+2+| Use https://eslint.style/rules/js/dot-location.
 
-| `link:{eslint-rules}/eol-last[eol-last]`
-| Deprecated
+| `link:{eslint-rules}/eol-last[eol-last]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/eol-last.
+2+| Use https://eslint.style/rules/js/eol-last.
 
-| `link:{eslint-rules}/func-call-spacing[func-call-spacing]`
-| Deprecated
+| `link:{eslint-rules}/func-call-spacing[func-call-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/function-call-spacing.
+2+| Use https://eslint.style/rules/js/function-call-spacing.
 
-| `link:{eslint-rules}/function-call-argument-newline[function-call-argument-newline]`
-| Deprecated
+| `link:{eslint-rules}/function-call-argument-newline[function-call-argument-newline]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/function-call-argument-newline.
+2+| Use https://eslint.style/rules/js/function-call-argument-newline.
 
-| `link:{eslint-rules}/function-paren-newline[function-paren-newline]`
-| Deprecated
+| `link:{eslint-rules}/function-paren-newline[function-paren-newline]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/function-paren-newline.
+2+| Use https://eslint.style/rules/js/function-paren-newline.
 
-| `link:{eslint-rules}/generator-star-spacing[generator-star-spacing]`
-| Deprecated
+| `link:{eslint-rules}/generator-star-spacing[generator-star-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/generator-star-spacing.
+2+| Use https://eslint.style/rules/js/generator-star-spacing.
 
-| `link:{eslint-rules}/implicit-arrow-linebreak[implicit-arrow-linebreak]`
-| Deprecated
+| `link:{eslint-rules}/implicit-arrow-linebreak[implicit-arrow-linebreak]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/implicit-arrow-linebreak.
+2+| Use https://eslint.style/rules/js/implicit-arrow-linebreak.
 
-| `link:{eslint-rules}/indent[indent]`
-| Deprecated
+| `link:{eslint-rules}/indent[indent]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/indent.
+2+| Use https://eslint.style/rules/js/indent.
 
-| `link:{eslint-rules}/jsx-quotes[jsx-quotes]`
-| Deprecated
+| `link:{eslint-rules}/jsx-quotes[jsx-quotes]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/jsx-quotes.
+2+| Use https://eslint.style/rules/js/jsx-quotes.
 
-| `link:{eslint-rules}/key-spacing[key-spacing]`
-| Deprecated
+| `link:{eslint-rules}/key-spacing[key-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/key-spacing.
+2+| Use https://eslint.style/rules/js/key-spacing.
 
-| `link:{eslint-rules}/keyword-spacing[keyword-spacing]`
-| Deprecated
+| `link:{eslint-rules}/keyword-spacing[keyword-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/keyword-spacing.
+2+| Use https://eslint.style/rules/js/keyword-spacing.
 
-| `link:{eslint-rules}/line-comment-position[line-comment-position]`
-|
+| `link:{eslint-rules}/line-comment-position[line-comment-position]` [deprecated]
 | Off
-3+| Use https://eslint.style/rules/js/line-comment-position.
+2+| Use https://eslint.style/rules/js/line-comment-position.
 
-| `link:{eslint-rules}/linebreak-style[linebreak-style]`
-| Deprecated
+| `link:{eslint-rules}/linebreak-style[linebreak-style]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/linebreak-style.
+2+| Use https://eslint.style/rules/js/linebreak-style.
 
-| `link:{eslint-rules}/lines-around-comment[lines-around-comment]`
-| Deprecated
+| `link:{eslint-rules}/lines-around-comment[lines-around-comment]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/lines-around-comment.
+2+| Use https://eslint.style/rules/js/lines-around-comment.
 
-| `link:{eslint-rules}/lines-between-class-members[lines-between-class-members]`
-| Deprecated
+| `link:{eslint-rules}/lines-between-class-members[lines-between-class-members]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/lines-between-class-members.
+2+| Use https://eslint.style/rules/js/lines-between-class-members.
 
-| `link:{eslint-rules}/max-len[max-len]`
-| Deprecated
+| `link:{eslint-rules}/max-len[max-len]` [deprecated]
 | Off
-3+| Use https://eslint.style/rules/js/max-len.
+2+| Use https://eslint.style/rules/js/max-len.
 
-| `link:{eslint-rules}/max-statements-per-line[max-statements-per-line]`
-| Deprecated
+| `link:{eslint-rules}/max-statements-per-line[max-statements-per-line]` [deprecated]
 | Off
-3+| Use https://eslint.style/rules/js/max-statements-per-line.
+2+| Use https://eslint.style/rules/js/max-statements-per-line.
 
-| `link:{eslint-rules}/multiline-ternary[multiline-ternary]`
-| Deprecated
+| `link:{eslint-rules}/multiline-ternary[multiline-ternary]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/multiline-ternary.
+2+| Use https://eslint.style/rules/js/multiline-ternary.
 
-| `link:{eslint-rules}/new-parens[new-parens]`
-| Deprecated
+| `link:{eslint-rules}/new-parens[new-parens]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/new-parens.
+2+| Use https://eslint.style/rules/js/new-parens.
 
-| `link:{eslint-rules}/newline-per-chained-call[newline-per-chained-call]`
-| Deprecated
+| `link:{eslint-rules}/newline-per-chained-call[newline-per-chained-call]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/newline-per-chained-call.
+2+| Use https://eslint.style/rules/js/newline-per-chained-call.
 
-| `link:{eslint-rules}/no-extra-parens[no-extra-parens]`
-| Deprecated
+| `link:{eslint-rules}/no-extra-parens[no-extra-parens]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-extra-parens.
+2+| Use https://eslint.style/rules/js/no-extra-parens.
 
-| `link:{eslint-rules}/no-mixed-spaces-and-tabs[no-mixed-spaces-and-tabs]`
-| Deprecated
+| `link:{eslint-rules}/no-mixed-spaces-and-tabs[no-mixed-spaces-and-tabs]` [deprecated]
 | Off
-3+| Use https://eslint.style/rules/js/no-mixed-spaces-and-tabs.
+2+| Use https://eslint.style/rules/js/no-mixed-spaces-and-tabs.
 
-| `link:{eslint-rules}/no-multi-spaces[no-multi-spaces]`
-| Deprecated
+| `link:{eslint-rules}/no-multi-spaces[no-multi-spaces]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-multi-spaces.
+2+| Use https://eslint.style/rules/js/no-multi-spaces.
 
-| `link:{eslint-rules}/no-multiple-empty-lines[no-multiple-empty-lines]`
-| Deprecated
+| `link:{eslint-rules}/no-multiple-empty-lines[no-multiple-empty-lines]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-multiple-empty-lines.
+2+| Use https://eslint.style/rules/js/no-multiple-empty-lines.
 
-| `link:{eslint-rules}/no-tabs[no-tabs]`
-| Deprecated
+| `link:{eslint-rules}/no-tabs[no-tabs]` [deprecated]
 | Off
-3+| Use https://eslint.style/rules/js/no-tabs.
+2+| Use https://eslint.style/rules/js/no-tabs.
 
-| `link:{eslint-rules}/no-trailing-spaces[no-trailing-spaces]`
-| Deprecated
+| `link:{eslint-rules}/no-trailing-spaces[no-trailing-spaces]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-trailing-spaces.
+2+| Use https://eslint.style/rules/js/no-trailing-spaces.
 
-| `link:{eslint-rules}/no-whitespace-before-property[no-whitespace-before-property]`
-| Deprecated
+| `link:{eslint-rules}/no-whitespace-before-property[no-whitespace-before-property]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/no-whitespace-before-property.
+2+| Use https://eslint.style/rules/js/no-whitespace-before-property.
 
-| `link:{eslint-rules}/nonblock-statement-body-position[nonblock-statement-body-position]`
-| Deprecated
+| `link:{eslint-rules}/nonblock-statement-body-position[nonblock-statement-body-position]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/nonblock-statement-body-position.
+2+| Use https://eslint.style/rules/js/nonblock-statement-body-position.
 
-| `link:{eslint-rules}/object-curly-newline[object-curly-newline]`
-| Deprecated
+| `link:{eslint-rules}/object-curly-newline[object-curly-newline]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/object-curly-newline.
+2+| Use https://eslint.style/rules/js/object-curly-newline.
 
-| `link:{eslint-rules}/object-curly-spacing[object-curly-spacing]`
-| Deprecated
+| `link:{eslint-rules}/object-curly-spacing[object-curly-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/object-curly-spacing.
+2+| Use https://eslint.style/rules/js/object-curly-spacing.
 
-| `link:{eslint-rules}/object-property-newline[object-property-newline]`
-| Deprecated
+| `link:{eslint-rules}/object-property-newline[object-property-newline]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/object-property-newline.
+2+| Use https://eslint.style/rules/js/object-property-newline.
 
-| `link:{eslint-rules}/operator-linebreak[operator-linebreak]`
-| Deprecated
+| `link:{eslint-rules}/operator-linebreak[operator-linebreak]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/operator-linebreak.
+2+| Use https://eslint.style/rules/js/operator-linebreak.
 
-| `link:{eslint-rules}/padded-blocks[padded-blocks]`
-| Deprecated
+| `link:{eslint-rules}/padded-blocks[padded-blocks]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/padded-blocks.
+2+| Use https://eslint.style/rules/js/padded-blocks.
 
-| `link:{eslint-rules}/padding-line-between-statements[padding-line-between-statements]`
-| Deprecated
+| `link:{eslint-rules}/padding-line-between-statements[padding-line-between-statements]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/padding-line-between-statements.
+2+| Use https://eslint.style/rules/js/padding-line-between-statements.
 
-| `link:{eslint-rules}/quotes[quotes]`
-| Deprecated
+| `link:{eslint-rules}/quotes[quotes]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/quotes.
+2+| Use https://eslint.style/rules/js/quotes.
 
-| `link:{eslint-rules}/rest-spread-spacing[rest-spread-spacing]`
-| Deprecated
+| `link:{eslint-rules}/rest-spread-spacing[rest-spread-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/rest-spread-spacing.
+2+| Use https://eslint.style/rules/js/rest-spread-spacing.
 
-| `link:{eslint-rules}/semi[semi]`
-| Deprecated
+| `link:{eslint-rules}/semi[semi]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/semi.
+2+| Use https://eslint.style/rules/js/semi.
 
-| `link:{eslint-rules}/semi-spacing[semi-spacing]`
-| Deprecated
+| `link:{eslint-rules}/semi-spacing[semi-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/semi-spacing.
+2+| Use https://eslint.style/rules/js/semi-spacing.
 
-| `link:{eslint-rules}/semi-style[semi-style]`
-| Deprecated
+| `link:{eslint-rules}/semi-style[semi-style]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/semi-style.
+2+| Use https://eslint.style/rules/js/semi-style.
 
-| `link:{eslint-rules}/space-before-blocks[space-before-blocks]`
-| Deprecated
+| `link:{eslint-rules}/space-before-blocks[space-before-blocks]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/space-before-blocks.
+2+| Use https://eslint.style/rules/js/space-before-blocks.
 
-| `link:{eslint-rules}/space-before-function-paren[space-before-function-paren]`
-| Deprecated
+| `link:{eslint-rules}/space-before-function-paren[space-before-function-paren]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/space-before-function-paren.
+2+| Use https://eslint.style/rules/js/space-before-function-paren.
 
-| `link:{eslint-rules}/space-in-parens[space-in-parens]`
-| Deprecated
+| `link:{eslint-rules}/space-in-parens[space-in-parens]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/space-in-parens.
+2+| Use https://eslint.style/rules/js/space-in-parens.
 
-| `link:{eslint-rules}/space-infix-ops[space-infix-ops]`
-| Deprecated
+| `link:{eslint-rules}/space-infix-ops[space-infix-ops]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/space-infix-ops.
+2+| Use https://eslint.style/rules/js/space-infix-ops.
 
-| `link:{eslint-rules}/space-unary-ops[space-unary-ops]`
-| Deprecated
+| `link:{eslint-rules}/space-unary-ops[space-unary-ops]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/space-unary-ops.
+2+| Use https://eslint.style/rules/js/space-unary-ops.
 
-| `link:{eslint-rules}/switch-colon-spacing[switch-colon-spacing]`
-| Deprecated
+| `link:{eslint-rules}/switch-colon-spacing[switch-colon-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/switch-colon-spacing.
+2+| Use https://eslint.style/rules/js/switch-colon-spacing.
 
-| `link:{eslint-rules}/template-curly-spacing[template-curly-spacing]`
-| Deprecated
+| `link:{eslint-rules}/template-curly-spacing[template-curly-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/template-curly-spacing.
+2+| Use https://eslint.style/rules/js/template-curly-spacing.
 
-| `link:{eslint-rules}/template-tag-spacing[template-tag-spacing]`
-| Deprecated
+| `link:{eslint-rules}/template-tag-spacing[template-tag-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/template-tag-spacing.
+2+| Use https://eslint.style/rules/js/template-tag-spacing.
 
-| `link:{eslint-rules}/unicode-bom[unicode-bom]`
-|
+| `link:{eslint-rules}/unicode-bom[unicode-bom]` [fixable]
 | Warning
 
-| `link:{eslint-rules}/wrap-iife[wrap-iife]`
-| Deprecated
+| `link:{eslint-rules}/wrap-iife[wrap-iife]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/wrap-iife.
+2+| Use https://eslint.style/rules/js/wrap-iife.
 
-| `link:{eslint-rules}/wrap-regex[wrap-regex]`
-| Deprecated
+| `link:{eslint-rules}/wrap-regex[wrap-regex]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/wrap-regex.
+2+| Use https://eslint.style/rules/js/wrap-regex.
 
-| `link:{eslint-rules}/yield-star-spacing[yield-star-spacing]`
-| Deprecated
+| `link:{eslint-rules}/yield-star-spacing[yield-star-spacing]` [deprecated] [fixable]
 | Off
-3+| Use https://eslint.style/rules/js/yield-star-spacing.
+2+| Use https://eslint.style/rules/js/yield-star-spacing.
 
 |===

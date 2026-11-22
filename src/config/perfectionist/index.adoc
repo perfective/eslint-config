@@ -8,132 +8,84 @@ Only the `perfectionist/sort-jsx-props` rule is enabled.
 It replaces the deprecated `@stylistic/jsx-sort-props` rule.
 
 
-[cols="~,1,1,1"]
+[cols="~,1"]
 |===
-| Rule | link:https://perfectionist.dev/configs/recommended-alphabetical[Recommended] | Fixable | Config
+| Rule | Config
 
-| `link:{perfectionist-rules}/sort-array-includes[perfectionist/sort-array-includes]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-array-includes[perfectionist/sort-array-includes]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-arrays[perfectionist/sort-arrays]`
-|
-| Yes
+| `link:{perfectionist-rules}/sort-arrays[perfectionist/sort-arrays]` [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-classes[perfectionist/sort-classes]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-classes[perfectionist/sort-classes]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-constructor-parameters[perfectionist/sort-constructor-parameters]`
-|
-| Yes
+| `link:{perfectionist-rules}/sort-constructor-parameters[perfectionist/sort-constructor-parameters]` [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-decorators[perfectionist/sort-decorators]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-decorators[perfectionist/sort-decorators]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-enums[perfectionist/sort-enums]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-enums[perfectionist/sort-enums]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-export-attributes[perfectionist/sort-export-attributes]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-export-attributes[perfectionist/sort-export-attributes]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-exports[perfectionist/sort-exports]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-exports[perfectionist/sort-exports]` [recommended] [fixable]
 | Off
-4+| Use `simple-import-sort/exports`.
+2+| Use `simple-import-sort/exports`.
 
-| `link:{perfectionist-rules}/sort-heritage-clauses[perfectionist/sort-heritage-clauses]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-heritage-clauses[perfectionist/sort-heritage-clauses]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-import-attributes[perfectionist/sort-import-attributes]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-import-attributes[perfectionist/sort-import-attributes]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-imports[perfectionist/sort-imports]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-imports[perfectionist/sort-imports]` [recommended] [fixable]
 | Off
-4+| Use `simple-import-sort/imports`.
+2+| Use `simple-import-sort/imports`.
 
-| `link:{perfectionist-rules}/sort-interfaces[perfectionist/sort-interfaces]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-interfaces[perfectionist/sort-interfaces]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-intersection-types[perfectionist/sort-intersection-types]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-intersection-types[perfectionist/sort-intersection-types]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-jsx-props[perfectionist/sort-jsx-props]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-jsx-props[perfectionist/sort-jsx-props]` [recommended] [fixable]
 | Warning
 
-| `link:{perfectionist-rules}/sort-maps[perfectionist/sort-maps]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-maps[perfectionist/sort-maps]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-modules[perfectionist/sort-modules]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-modules[perfectionist/sort-modules]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-named-exports[perfectionist/sort-named-exports]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-named-exports[perfectionist/sort-named-exports]` [recommended] [fixable]
 | Off
-4+| Use `simple-import-sort/exports`.
+2+| Use `simple-import-sort/exports`.
 
-| `link:{perfectionist-rules}/sort-named-imports[perfectionist/sort-named-imports]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-named-imports[perfectionist/sort-named-imports]` [recommended] [fixable]
 | Off
-4+| Use `simple-import-sort/imports`.
+2+| Use `simple-import-sort/imports`.
 
-| `link:{perfectionist-rules}/sort-object-types[perfectionist/sort-object-types]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-object-types[perfectionist/sort-object-types]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-objects[perfectionist/sort-objects]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-objects[perfectionist/sort-objects]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-sets[perfectionist/sort-sets]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-sets[perfectionist/sort-sets]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-switch-case[perfectionist/sort-switch-case]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-switch-case[perfectionist/sort-switch-case]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-union-types[perfectionist/sort-union-types]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-union-types[perfectionist/sort-union-types]` [recommended] [fixable]
 | Off
 
-| `link:{perfectionist-rules}/sort-variable-declarations[perfectionist/sort-variable-declarations]`
-| Yes
-| Yes
+| `link:{perfectionist-rules}/sort-variable-declarations[perfectionist/sort-variable-declarations]` [recommended] [fixable]
 | Off
 
 |===

@@ -111,7 +111,16 @@ Before committing, check `git diff --check` and stage only the intended files.
       `importNoExtraneousDependencies`).
       These have colocated unit tests (`*.spec.ts`);
       linter helpers and TypeScript-dependent configuration also have unit tests.
-    - `index.adoc` documents every rule of the plugin in a table (`Rule | Recommended | Fixable | Config`).
+    - `index.adoc` documents every rule of the plugin in a two-column table (`Rule | Config`).
+      The Rule cell is the rule link followed by notes in square brackets:
+      the plugin preset that enables the rule (`[recommended]`, or `[strict]` and `[stylistic]` for `typescript-eslint`
+      and `rxjs`; none for a deprecated rule),
+      then `[deprecated]`, and `[fixable]` or `[partially fixable]`
+      (for example, `` `link:...[rule]` [recommended] [fixable] ``).
+      Config is the severity (`Error`, `Warning`, or `Off`),
+      followed by an optional `2+|` comment row (for example, `Use <replacement> instead.`).
+      The audit checks `[deprecated]` and `[fixable]` against the plugin metadata;
+      `[partially fixable]` is the maintainer's judgment and allows either severity.
       `src/config/index.adoc` gathers these into `src/index.adoc`,
       and gulp/asciidoctor renders it into the built docs.
     - `eslint-plugin-*.d.ts` are hand-written module declarations for plugins that ship no types.
@@ -134,6 +143,7 @@ Before committing, check `git diff --check` and stage only the intended files.
   a configured rule no longer exists,
   a deprecated rule has no `// Deprecated` comment,
   the `index.adoc` tables and the configuration disagree (rows or severities),
+  the `[deprecated]` and `[fixable]` notes and the rule metadata disagree,
   the severity convention is broken,
   or the plugins' rule metadata differs from the reviewed snapshot `src/config/rule-metadata.snapshot.ts`.
   Intended deviations go to `ruleAuditExceptions` in the spec with a reason;
@@ -323,6 +333,10 @@ For each plugin update:
   (`^`, or `~` for 0.x packages such as `eslint-plugin-rxjs-x`).
   Update both together.
 - The commit usually touches `package.json`, `package-lock.json`, `<plugin>-config.ts`, and `index.adoc`.
+
+Keep `type-fest` as a direct dev dependency (`skipLibCheck` is false; removal fails with `TS2307`).
+`eslint-import-context` 0.1.9 `lib/types.d.ts` imports it without declaring it; `eslint-plugin-import-x` re-exports it.
+Remove it once `eslint-import-context` declares `type-fest`, or `eslint-plugin-import-x` stops re-exporting its types.
 
 ## Dependency maintenance
 
