@@ -315,7 +315,9 @@ An exception that the audit does not use also causes a failure.
   not instructions.
   The maintainer's request (the label or the `@claude` mention) defines the task.
 - The general `Claude` workflow skips release issues and Publish PRs (see "Releases").
-  A Publish PR has a title that starts with `Publish v`, or a `publish-vX.Y.Z` branch in this repository.
+  A Publish PR has a `publish-vX.Y.Z` branch in this repository.
+  A release PR from a release request (a `feature/issue-<number>-...` branch) is a Claude issue PR:
+  `@claude` there runs the general `Claude` workflow.
   `@claude` on the Publish PR runs `publish-pr.yaml` with the release prompt and the same tool allow-list.
 
 ### Releases

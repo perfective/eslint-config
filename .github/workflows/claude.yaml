@@ -19,8 +19,9 @@ jobs:
         # the action checks write access again.
         # Release issues and Publish PRs are handled by `publish-pr.yaml`.
         # Skip an issue labeled `release`, or titled `Release @perfective/eslint-config v...`,
-        # and a PR titled `Publish v...` or from a `publish-v...` branch in this repository,
-        # so the two workflows do not both start.
+        # and a review on a `publish-v...` branch in this repository, so the two workflows do not both start.
+        # An issue comment has no head ref: the step below skips a comment on a `publish-v...` branch.
+        # A PR titled `Publish v...` from a `feature/issue-<number>-...` branch (a release request) stays here.
         if: >-
             (github.event_name == 'issues'
                 && !contains(github.event.issue.labels.*.name, 'release')
@@ -31,7 +32,6 @@ jobs:
             || (github.event_name == 'issue_comment'
                 && !contains(github.event.issue.labels.*.name, 'release')
                 && !startsWith(github.event.issue.title, 'Release @perfective/eslint-config v')
-                && !(github.event.issue.pull_request && startsWith(github.event.issue.title, 'Publish v'))
                 && contains(github.event.comment.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
             || (github.event_name == 'pull_request_review_comment'
@@ -51,6 +51,8 @@ jobs:
             claude-args: ${{ steps.lock.outputs.claude-args }}
             # A PR that Claude opened for an issue, from a branch in this repository (empty otherwise).
             claude-pr: ${{ steps.lock.outputs.claude-pr }}
+            # `true` for a comment on a Publish PR (`publish-vX.Y.Z`): `publish-pr.yaml` handles it.
+            skip: ${{ steps.lock.outputs.skip }}
         permissions:
             pull-requests: read
 
@@ -69,8 +71,15 @@ jobs:
                   lock="${NUMBER}"
                   claude_args=
                   claude_pr=
+                  skip=false
                   if [ "${IS_PR}" = "true" ]; then
                       pull="$(gh api "/repos/${REPO}/pulls/${NUMBER}")"
+                      if jq -e --arg repo "${REPO}" \
+                          '.head.repo.full_name == $repo and (.head.ref | startswith("publish-v"))' \
+                          <<<"${pull}" > /dev/null; then
+                          echo "::notice::PR #${NUMBER} is a Publish PR: publish-pr.yaml handles the request."
+                          skip=true
+                      fi
                       issue="$(jq -r --arg repo "${REPO}" '
                           select(.user.login == "claude[bot]" and .head.repo.full_name == $repo)
                           | .head.ref
@@ -106,11 +115,13 @@ jobs:
                       echo "lock=${lock}"
                       echo "claude-args=${claude_args}"
                       echo "claude-pr=${claude_pr}"
+                      echo "skip=${skip}"
                   } >> "${GITHUB_OUTPUT}"
 
     claude:
         name: Work on the issue or PR
         needs: resolve
+        if: needs.resolve.outputs.skip != 'true'
         # One run per issue at a time (with the PR that Claude opened for it); a newer request waits.
         concurrency:
             group: claude-${{ needs.resolve.outputs.lock }}
