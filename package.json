@@ -64,7 +64,7 @@
         "eslint-plugin-jest-dom": {
             "optional": true
         },
-        "eslint-plugin-rxjs": {
+        "eslint-plugin-rxjs-x": {
             "optional": true
         },
         "eslint-plugin-testing-library": {
