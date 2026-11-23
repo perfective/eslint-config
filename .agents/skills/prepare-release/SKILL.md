@@ -136,7 +136,7 @@ In the `Claude` workflow, commit through the signed-commit tool.
 This section is the agent path: a local request, or the general `Claude` workflow.
 `publish-pr.yaml` opens and fixes the pull request for a release issue, and this skill does not run there.
 
-Open a pull request from the agent branch to `main` (not a draft: Codex does not review drafts):
+Open a pull request from the agent branch to `main` (not a draft):
 
 ```bash
 gh pr create --base main --title 'Publish vX.Y.Z' --body '...'
@@ -155,9 +155,8 @@ An agent that may not push or open pull requests (for example, a local Codex ses
 commits on its branch and reports the same body instead.
 
 Stop after opening the pull request. Do not tag, create a GitHub Release, or publish to npm.
-On a Claude issue PR, Codex reviews it like any other Claude issue PR;
+The maintainer reviews the release pull request;
 follow-up requests come with `@claude` on the pull request.
-A Publish PR on `publish-vX.Y.Z` is not in that loop: the maintainer reviews it.
 
 The maintainer's next steps:
 

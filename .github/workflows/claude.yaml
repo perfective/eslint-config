@@ -12,7 +12,6 @@ on:
 jobs:
     # The lock for this work: the issue number for an issue, or for a PR that Claude opened for an issue
     # (its branch is `feature/issue-<number>-...`); the PR number for any other PR.
-    # Codex Review uses the same `claude-<number>` group, so one Claude run at a time pushes to a branch.
     resolve:
         name: Find the work to lock
         # Start on an `@claude` mention or the `claude` label from a maintainer.
@@ -52,7 +51,6 @@ jobs:
             claude-args: ${{ steps.lock.outputs.claude-args }}
             # A PR that Claude opened for an issue, from a branch in this repository (empty otherwise).
             claude-pr: ${{ steps.lock.outputs.claude-pr }}
-            branch: ${{ steps.lock.outputs.branch }}
         permissions:
             pull-requests: read
 
@@ -71,7 +69,6 @@ jobs:
                   lock="${NUMBER}"
                   claude_args=
                   claude_pr=
-                  branch=
                   if [ "${IS_PR}" = "true" ]; then
                       pull="$(gh api "/repos/${REPO}/pulls/${NUMBER}")"
                       issue="$(jq -r --arg repo "${REPO}" '
@@ -81,7 +78,6 @@ jobs:
                       if [ -n "${issue}" ]; then
                           lock="${issue}"
                           claude_pr="${NUMBER}"
-                          branch="$(jq -r '.head.ref' <<<"${pull}")"
                       fi
                   else
                       # On an issue, the action checks out `main` and starts a new branch:
@@ -110,7 +106,6 @@ jobs:
                       echo "lock=${lock}"
                       echo "claude-args=${claude_args}"
                       echo "claude-pr=${claude_pr}"
-                      echo "branch=${branch}"
                   } >> "${GITHUB_OUTPUT}"
 
     claude:
@@ -126,11 +121,6 @@ jobs:
             queue: max
         runs-on: ubuntu-latest
         timeout-minutes: 60
-        outputs:
-            codex-pr: ${{ steps.codex.outputs.pr }}
-            before: ${{ steps.codex.outputs.before }}
-            after: ${{ steps.codex.outputs.after }}
-
         permissions:
             contents: write # Push the work branch
             pull-requests: write # Open and update the PR
@@ -184,21 +174,6 @@ jobs:
                               "mcp__github_file_ops__delete_files --append-system-prompt '${note}'"
                       } >> "${GITHUB_OUTPUT}"
                   fi
-
-            # The commits Claude pushes in this run come after this head.
-            # They decide whether this run resolves Codex review threads.
-            - name: Record the PR branch head
-              if: needs.resolve.outputs.claude-pr != ''
-              id: before
-              working-directory: ${{ runner.temp }}
-              env:
-                  GH_TOKEN: ${{ github.token }}
-                  REPO: ${{ github.repository }}
-                  BRANCH: ${{ needs.resolve.outputs.branch }}
-              run: |
-                  set -euo pipefail
-                  sha="$(gh api "/repos/${REPO}/git/ref/heads/${BRANCH}" --jq '.object.sha')"
-                  echo "sha=${sha}" >> "${GITHUB_OUTPUT}"
 
             - name: Run Claude Code
               id: claude
@@ -290,12 +265,10 @@ jobs:
                   echo "::error::Claude did not run. See the workflow log of the Claude step."
                   exit 1
 
-            # Codex does not review drafts: whatever `gh pr create` made, this step marks the PR ready,
+            # Issue PRs are ready for review: whatever `gh pr create` made, this step marks the PR ready,
             # including when the Claude step did not succeed. `gh pr ready` uses this job's token.
-            # Threads are resolved only when this run pushed commits onto an existing issue PR.
-            - name: Prepare the issue PR for Codex
+            - name: Mark the issue PR ready for review
               if: ${{ !cancelled() }}
-              id: codex
               working-directory: ${{ runner.temp }}
               env:
                   GH_TOKEN: ${{ github.token }}
@@ -304,8 +277,6 @@ jobs:
                   NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
                   IS_PR: >-
                       ${{ (github.event.issue.pull_request || github.event.pull_request) && 'true' || 'false' }}
-                  BRANCH: ${{ needs.resolve.outputs.branch }}
-                  BEFORE: ${{ steps.before.outputs.sha }}
               run: |
                   set -euo pipefail
                   # The PR itself, or the open PR from the issue branch (`feature/issue-<number>-...`).
@@ -334,93 +305,5 @@ jobs:
                   fi
                   if [ "$(gh api "/repos/${REPO}/pulls/${pr}" --jq '.draft')" = "true" ]; then
                       gh pr ready "${pr}"
-                      echo "Marked PR #${pr} ready for review so Codex can review it."
+                      echo "Marked PR #${pr} ready for review."
                   fi
-                  # A new PR has no Codex threads yet. Codex reviews it when it is opened.
-                  if [ -z "${BEFORE}" ]; then
-                      exit 0
-                  fi
-                  after="$(gh api "/repos/${REPO}/git/ref/heads/${BRANCH}" --jq '.object.sha')"
-                  if [ "${after}" = "${BEFORE}" ] \
-                      || [ "$(gh api "/repos/${REPO}/compare/${BEFORE}...${after}" --jq '.status')" != "ahead" ]; then
-                      echo "Claude did not push commits to PR #${pr}."
-                      exit 0
-                  fi
-                  {
-                      echo "pr=${pr}"
-                      echo "before=${BEFORE}"
-                      echo "after=${after}"
-                  } >> "${GITHUB_OUTPUT}"
-
-    # Fresh runner: the Claude job cannot change the environment that resolves threads.
-    threads:
-        name: Resolve the threads Claude fixed
-        needs: [resolve, claude]
-        if: needs.claude.outputs.codex-pr != ''
-        # In the same lock as the Claude job, so this does not overlap another writer on the branch.
-        concurrency:
-            group: claude-${{ needs.resolve.outputs.lock }}
-            cancel-in-progress: false
-            # Keep every pending job (up to 100, in the order they started waiting).
-            # The default queue keeps one, so a third job in the group would cancel the waiting one.
-            # Every job in a `claude-<number>` group needs it: a job with the default queue cancels the pending ones.
-            queue: max
-        runs-on: ubuntu-latest
-        timeout-minutes: 5
-        permissions:
-            contents: read # Compare the commits Claude pushed
-            pull-requests: write # Resolve the threads Claude fixed
-
-        steps:
-            # As in the Codex Review workflow: a thread is resolved only when Claude's last reply
-            # names the full SHA of a commit it pushed in this run and does not ask for a decision.
-            # `continue-on-error` keeps a GraphQL failure from failing the job.
-            - name: Resolve the threads Claude fixed
-              continue-on-error: true
-              working-directory: ${{ runner.temp }}
-              env:
-                  GH_TOKEN: ${{ github.token }}
-                  REPO: ${{ github.repository }}
-                  OWNER: ${{ github.repository_owner }}
-                  NAME: ${{ github.event.repository.name }}
-                  PR: ${{ needs.claude.outputs.codex-pr }}
-                  BEFORE: ${{ needs.claude.outputs.before }}
-                  AFTER: ${{ needs.claude.outputs.after }}
-              run: |
-                  set -euo pipefail
-                  shas="$(gh api "/repos/${REPO}/compare/${BEFORE}...${AFTER}" --jq '[.commits[].sha]')"
-                  gh api graphql -F owner="${OWNER}" -F name="${NAME}" -F pr="${PR}" -f query='
-                      query($owner: String!, $name: String!, $pr: Int!) {
-                          repository(owner: $owner, name: $name) {
-                              pullRequest(number: $pr) {
-                                  reviewThreads(first: 100) {
-                                      nodes {
-                                          id
-                                          isResolved
-                                          firstComment: comments(first: 1) {
-                                              nodes { author { login } }
-                                          }
-                                          lastComment: comments(last: 1) {
-                                              nodes { author { login } body }
-                                          }
-                                      }
-                                  }
-                              }
-                          }
-                      }' \
-                      | jq -r --argjson shas "${shas}" '
-                          def who: (.author.login // "") | sub("\\[bot\\]$"; "");
-                          .data.repository.pullRequest.reviewThreads.nodes[]
-                          | select(.isResolved | not)
-                          | select(.firstComment.nodes[0] | who == "chatgpt-codex-connector")
-                          | select(.lastComment.nodes[0] | who == "claude")
-                          | .lastComment.nodes[0].body as $body
-                          | select($body | contains("NEEDS HUMAN") | not)
-                          | select(any($shas[]; . as $sha | $body | contains($sha)))
-                          | .id' \
-                      | while read -r thread; do
-                          gh api graphql -f thread="${thread}" -f query='
-                              mutation($thread: ID!) {
-                                  resolveReviewThread(input: {threadId: $thread}) { thread { id } }
-                              }' > /dev/null
-                      done

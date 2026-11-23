@@ -184,8 +184,6 @@ In that run:
   For each comment, use its `author.login`, `authorAssociation`, and `body`.
   Apply an earlier decision only when `authorAssociation` is `OWNER`, `MEMBER`, or `COLLABORATOR`
   and the author login does not end in `[bot]`.
-  Ignore a comment that requests `@codex review`.
-  The review loop does not use those comments.
   Cite the comment you apply in the report.
   When Renovate recreated the branch, do not raise that decision as **NEEDS HUMAN** again.
 - Never merge `main` into the branch or rebase it.
@@ -197,8 +195,6 @@ In that run:
 - When the PR needs no changes, do not commit; the report is the review.
 - Never merge, approve, or close the PR,
   and never edit `.github/`, `.claude/`, or `.mcp.json`.
-- Do not post a comment containing `@codex`.
-  Codex reviews the branch on its own; this job does not request a review.
 - Post the report from step 9 as the PR comment.
   Lead with one line: the verdict, a one-sentence summary, and whether maintainer input is needed,
   for example "**Ready to merge**. Low-risk patch update. No maintainer input needed."
