@@ -79,8 +79,15 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
                 enableFixer: false,
                 fixType: 'backticks',
             }],
+            // The fixer is opt-in (fix): both fixes ("remove" and "type") change the documentation,
+            // so the rule only reports.
             'jsdoc/implements-on-classes': 'error',
-            'jsdoc/imports-as-dependencies': 'error',
+            'jsdoc/imports-as-dependencies': ['error', {
+                dependencies: true,
+                // JSDoc type imports can use types from the dev dependencies.
+                devDependencies: true,
+                peerDependencies: false,
+            }],
             'jsdoc/informative-docs': 'off',
             'jsdoc/lines-before-block': 'off',
             'jsdoc/match-description': 'error',
@@ -132,6 +139,7 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'jsdoc/require-asterisk-prefix': ['error', 'always'],
             'jsdoc/require-description': ['error', {
                 exemptedBy: ['inheritdoc', 'package', 'private', 'see', 'deprecated'],
+                publicOnly: false,
             }],
             'jsdoc/require-description-complete-sentence': 'warn',
             'jsdoc/require-example': 'off',
@@ -141,8 +149,10 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'jsdoc/require-next-description': 'error',
             'jsdoc/require-next-type': 'error',
             'jsdoc/require-param': 'off',
-            'jsdoc/require-param-description': 'error',
-            'jsdoc/require-param-name': 'error',
+            'jsdoc/require-param-description': ['error', {
+                publicOnly: false,
+            }],
+            'jsdoc/require-param-name': 'warn',
             // Conflicts with jsdoc/no-types: types are defined in the TypeScript code.
             'jsdoc/require-param-type': 'off',
             'jsdoc/require-property': 'error',
@@ -152,7 +162,9 @@ export function jsdocConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'jsdoc/require-rejects': 'error',
             'jsdoc/require-returns': 'off',
             'jsdoc/require-returns-check': 'error',
-            'jsdoc/require-returns-description': 'error',
+            'jsdoc/require-returns-description': ['error', {
+                publicOnly: false,
+            }],
             // Conflicts with jsdoc/no-types: types are defined in the TypeScript code.
             'jsdoc/require-returns-type': 'off',
             // TODO: Configure for the '@since' tag.

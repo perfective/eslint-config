@@ -56,8 +56,9 @@ Additional tags defined: `final`, `flags`, `sealed`, `workaround`.
 | `link:{eslint-jsdoc-rules}/escape-inline-tags.md[jsdoc/escape-inline-tags]` [fixable]
 | Error
 
-| `link:{eslint-jsdoc-rules}/implements-on-classes.md[jsdoc/implements-on-classes]` [recommended]
+| `link:{eslint-jsdoc-rules}/implements-on-classes.md[jsdoc/implements-on-classes]` [recommended] [fixable]
 | Error
+2+| The fixer is opt-in and is not enabled, as it removes or changes the `@implements` tag.
 
 | `link:{eslint-jsdoc-rules}/imports-as-dependencies.md[jsdoc/imports-as-dependencies]`
 | Error
@@ -161,8 +162,9 @@ as removing them changes the declared, exported, or returned type.
 | `link:{eslint-jsdoc-rules}/require-param-description.md[jsdoc/require-param-description]` [recommended] [fixable]
 | Error
 
-| `link:{eslint-jsdoc-rules}/require-param-name.md[jsdoc/require-param-name]` [recommended]
-| Error
+| `link:{eslint-jsdoc-rules}/require-param-name.md[jsdoc/require-param-name]` [recommended] [partially fixable]
+| Warning
+2+| The fixer adds a missing name only when the parameters can be matched to the `@param` tags by position.
 
 | `link:{eslint-jsdoc-rules}/require-param-type.md[jsdoc/require-param-type]` [recommended] [fixable]
 | Off for TypeScript; Error for JavaScript
