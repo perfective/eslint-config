@@ -18,9 +18,10 @@ jobs:
         # Start on an `@claude` mention or the `claude` label from a maintainer.
         # The job checks the author's role itself, before any step runs repository code;
         # the action checks write access again.
-        # Release issues are handled by `publish-pr.yaml` when `claude` is added.
+        # Release issues and Publish PRs are handled by `publish-pr.yaml`.
         # Skip an issue labeled `release`, or titled `Release @perfective/eslint-config v...`,
-        # so the two workflows do not both start. `@claude` on the Publish PR still runs here.
+        # and a PR titled `Publish v...` or from a `publish-v...` branch in this repository,
+        # so the two workflows do not both start.
         if: >-
             (github.event_name == 'issues'
                 && !contains(github.event.issue.labels.*.name, 'release')
@@ -31,11 +32,18 @@ jobs:
             || (github.event_name == 'issue_comment'
                 && !contains(github.event.issue.labels.*.name, 'release')
                 && !startsWith(github.event.issue.title, 'Release @perfective/eslint-config v')
+                && !(github.event.issue.pull_request && startsWith(github.event.issue.title, 'Publish v'))
                 && contains(github.event.comment.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
-            || (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')
+            || (github.event_name == 'pull_request_review_comment'
+                && !(github.event.pull_request.head.repo.full_name == github.repository
+                    && startsWith(github.event.pull_request.head.ref, 'publish-v'))
+                && contains(github.event.comment.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
-            || (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')
+            || (github.event_name == 'pull_request_review'
+                && !(github.event.pull_request.head.repo.full_name == github.repository
+                    && startsWith(github.event.pull_request.head.ref, 'publish-v'))
+                && contains(github.event.review.body, '@claude')
                 && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association))
         runs-on: ubuntu-latest
         timeout-minutes: 5
@@ -44,8 +52,6 @@ jobs:
             claude-args: ${{ steps.lock.outputs.claude-args }}
             # A PR that Claude opened for an issue, from a branch in this repository (empty otherwise).
             claude-pr: ${{ steps.lock.outputs.claude-pr }}
-            # A Publish PR (`publish-vX.Y.Z`) that Claude opened in this repository (empty otherwise).
-            publish-pr: ${{ steps.lock.outputs.publish-pr }}
             branch: ${{ steps.lock.outputs.branch }}
         permissions:
             pull-requests: read
@@ -65,24 +71,16 @@ jobs:
                   lock="${NUMBER}"
                   claude_args=
                   claude_pr=
-                  publish_pr=
                   branch=
                   if [ "${IS_PR}" = "true" ]; then
                       pull="$(gh api "/repos/${REPO}/pulls/${NUMBER}")"
-                      # `issue`: Claude's issue PR. `publish`: the Publish PR.
-                      # Both are branches Claude opened in this repository.
-                      kind="$(jq -r --arg repo "${REPO}" '
+                      issue="$(jq -r --arg repo "${REPO}" '
                           select(.user.login == "claude[bot]" and .head.repo.full_name == $repo)
-                          | .head.ref as $ref
-                          | if ($ref | test("^claude-issue-[0-9]+-")) then "issue"
-                            elif ($ref | test("^publish-v[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9A-Za-z.-]+)?$")) then "publish"
-                            else "" end' <<<"${pull}")"
-                      if [ "${kind}" = "issue" ]; then
-                          lock="$(jq -r '.head.ref | capture("^claude-issue-(?<issue>[0-9]+)-").issue' <<<"${pull}")"
+                          | .head.ref
+                          | capture("^claude-issue-(?<issue>[0-9]+)-").issue' <<<"${pull}")"
+                      if [ -n "${issue}" ]; then
+                          lock="${issue}"
                           claude_pr="${NUMBER}"
-                          branch="$(jq -r '.head.ref' <<<"${pull}")"
-                      elif [ "${kind}" = "publish" ]; then
-                          publish_pr="${NUMBER}"
                           branch="$(jq -r '.head.ref' <<<"${pull}")"
                       fi
                   else
@@ -112,7 +110,6 @@ jobs:
                       echo "lock=${lock}"
                       echo "claude-args=${claude_args}"
                       echo "claude-pr=${claude_pr}"
-                      echo "publish-pr=${publish_pr}"
                       echo "branch=${branch}"
                   } >> "${GITHUB_OUTPUT}"
 
@@ -142,8 +139,7 @@ jobs:
             actions: read # Read the CI results of the PR
 
         steps:
-            # On a Renovate PR or a Publish PR, check out its head,
-            # so the installed dependencies match the PR's lockfile.
+            # On a Renovate PR, check out its head, so the installed dependencies match the PR's lockfile.
             # Other runs install from the default branch: the PR code of other authors never runs before the action.
             - name: Checkout repository
               uses: actions/checkout@v7
@@ -151,8 +147,6 @@ jobs:
                   ref: >-
                       ${{ (github.event.issue.user.login || github.event.pull_request.user.login) == 'renovate[bot]'
                       && (github.event.pull_request.head.sha || format('refs/pull/{0}/head', github.event.issue.number))
-                      || needs.resolve.outputs.publish-pr != ''
-                      && format('refs/pull/{0}/head', needs.resolve.outputs.publish-pr)
                       || '' }}
                   fetch-depth: 0
 
@@ -213,14 +207,12 @@ jobs:
                   claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
                   label_trigger: claude
                   # The action denies npm commands on PRs whose author has no write access, bots included.
-                  # Allow them on Renovate PRs, on the PRs Claude opened for issues,
-                  # and on Publish PRs (`publish-vX.Y.Z`):
+                  # Allow them on Renovate PRs and on the PRs Claude opened for issues:
                   # their branches live in this repository, and CI already runs `npm ci` and the tests on them.
                   # PRs from outside contributors keep the restriction.
                   restrict_untrusted_prs: >-
                       ${{ ((github.event.issue.user.login || github.event.pull_request.user.login) == 'renovate[bot]'
-                      || needs.resolve.outputs.claude-pr != ''
-                      || needs.resolve.outputs.publish-pr != '')
+                      || needs.resolve.outputs.claude-pr != '')
                       && 'false' || 'true' }}
                   # `claude/...` branches cannot coexist with the `claude` dev branch in git.
                   branch_prefix: claude-
