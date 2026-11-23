@@ -405,14 +405,14 @@ jobs:
                       head_repo="$(jq -r '.head.repo.full_name // ""' <<<"${pull}")"
 
                       # dependency: a Renovate PR. issue: a PR that Claude opened for an issue
-                      # (the Claude workflow names its branches `claude-issue-<number>-...`).
+                      # (the Claude workflow names its branches `feature/issue-<number>-...`).
                       # The issue number comes from the branch, not from the PR body:
                       # the Claude workflow locks that issue (`claude-<issue>`), and the body can be edited.
                       if [ "${author}" = "renovate[bot]" ]; then
                           kind=dependency
                       elif [ "${author}" = "claude[bot]" ] \
                           && [ "${head_repo}" = "${REPO}" ] \
-                          && [[ "${branch}" =~ ^claude-issue-([0-9]+)- ]]; then
+                          && [[ "${branch}" =~ ^feature/issue-([0-9]+)- ]]; then
                           kind=issue
                           issue="${BASH_REMATCH[1]}"
                           lock="${issue}"

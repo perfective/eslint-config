@@ -291,8 +291,8 @@ An exception that the audit does not use also causes a failure.
 ### Claude workflows
 
 - In the `Claude` workflow, the agent's branch is the branch that the action makes for the issue
-  (`claude-issue-<number>-...`).
-  A `claude/...` branch cannot exist together with the `claude` branch.
+  (`feature/issue-<number>-...`).
+  Do not make a branch named `feature`: it cannot exist together with the `feature/...` branches.
 - On an issue:
     1. Commit the work on that branch.
     2. Run the full verification.
@@ -606,7 +606,7 @@ Concurrency:
   so a loop step and an `@claude` request do not push at the same time.
   `Dependency Review` uses `dependency-review-<number>` and can overlap an `@claude` run on a Renovate PR.
   In that group, a new review run cancels the run that is in progress (`cancel-in-progress: true`).
-- For Claude issue PRs, the number is the issue number (from the `claude-issue-<number>-...` branch),
+- For Claude issue PRs, the number is the issue number (from the `feature/issue-<number>-...` branch),
   for requests on the issue and on the PR.
   For other PRs, the number is the PR number.
 - The group is on the jobs, so the skipped runs for other comments cannot cancel a loop step.
@@ -704,7 +704,7 @@ The `help wanted` label shows that a PR waits for a maintainer decision, and has
 ## Codex review of issue PRs
 
 The Codex loop also runs on a PR that the `Claude` workflow opened for an issue
-(the author is `claude[bot]`, and the branch is `claude-issue-<number>-...` in this repository).
+(the author is `claude[bot]`, and the branch is `feature/issue-<number>-...` in this repository).
 It does not run on the Publish PR (`publish-vX.Y.Z`).
 
 - Open the PR ready for review, not as a draft.

@@ -44,7 +44,7 @@ jobs:
                       fi
                       if [ "${author}" = "renovate[bot]" ]; then
                           :
-                      elif [ "${author}" = "claude[bot]" ] && [[ "${ref}" =~ ^claude-issue-[0-9]+- ]]; then
+                      elif [ "${author}" = "claude[bot]" ] && [[ "${ref}" =~ ^feature/issue-[0-9]+- ]]; then
                           :
                       else
                           continue
