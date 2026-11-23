@@ -6,7 +6,8 @@ description: >-
     from the commits since the last release, and open it as a release pull request.
     Use only when the maintainer asks to prepare a release.
     On GitHub, a release issue titled `Release @perfective/eslint-config vX.Y.Z`
-    runs publish-pr.yaml instead.
+    runs publish-pr.yaml instead,
+    including a later fix on the existing publish branch.
     It never tags, releases, or publishes.
 ---
 
@@ -24,7 +25,9 @@ In the `Claude` workflow, the action creates the `claude-issue-<number>-...` bra
 
 A release issue is an open issue titled `Release @perfective/eslint-config vX.Y.Z` with the `release` label.
 Adding the `claude` label runs `.github/workflows/publish-pr.yaml`, which opens that Publish PR.
-The general Claude workflow skips that issue, so do not run this skill on it.
+It also continues on an existing `publish-vX.Y.Z` branch
+(re-adding the label, or `@claude` on the Publish PR) with a fix-up commit on that PR.
+The general Claude workflow skips the release issue and the Publish PR, so do not run this skill on either.
 The maintainer signs and pushes the tag, then creates the GitHub Release manually.
 `publish.yaml` publishes the package when that signed `v*` tag is pushed.
 It does not create the GitHub Release.
@@ -131,7 +134,7 @@ In the `Claude` workflow, commit through the signed-commit tool.
 ## 9. Open the release pull request
 
 This section is the agent path: a local request, or the general `Claude` workflow.
-`publish-pr.yaml` opens the pull request for a release issue, and this skill does not run there.
+`publish-pr.yaml` opens and fixes the pull request for a release issue, and this skill does not run there.
 
 Open a pull request from the agent branch to `main` (not a draft: Codex does not review drafts):
 
