@@ -11,7 +11,7 @@ on:
 
 jobs:
     # The lock for this work: the issue number for an issue, or for a PR that Claude opened for an issue
-    # (its branch is `claude-issue-<number>-...`); the PR number for any other PR.
+    # (its branch is `feature/issue-<number>-...`); the PR number for any other PR.
     # Codex Review uses the same `claude-<number>` group, so one Claude run at a time pushes to a branch.
     resolve:
         name: Find the work to lock
@@ -77,7 +77,7 @@ jobs:
                       issue="$(jq -r --arg repo "${REPO}" '
                           select(.user.login == "claude[bot]" and .head.repo.full_name == $repo)
                           | .head.ref
-                          | capture("^claude-issue-(?<issue>[0-9]+)-").issue' <<<"${pull}")"
+                          | capture("^feature/issue-(?<issue>[0-9]+)-").issue' <<<"${pull}")"
                       if [ -n "${issue}" ]; then
                           lock="${issue}"
                           claude_pr="${NUMBER}"
@@ -88,7 +88,7 @@ jobs:
                       # it cannot work on the branch of a PR that Claude already opened for the issue.
                       # Then Claude does not commit, and asks for the request on the PR instead.
                       pr="$(gh api --paginate "/repos/${REPO}/pulls?state=open&per_page=100" \
-                          | jq -rs --arg repo "${REPO}" --arg prefix "claude-issue-${NUMBER}-" '
+                          | jq -rs --arg repo "${REPO}" --arg prefix "feature/issue-${NUMBER}-" '
                               [.[][]
                                   | select(.user.login == "claude[bot]"
                                       and .head.repo.full_name == $repo
@@ -214,8 +214,10 @@ jobs:
                       ${{ ((github.event.issue.user.login || github.event.pull_request.user.login) == 'renovate[bot]'
                       || needs.resolve.outputs.claude-pr != '')
                       && 'false' || 'true' }}
-                  # `claude/...` branches cannot coexist with the `claude` dev branch in git.
-                  branch_prefix: claude-
+                  # Issue branches are feature branches:
+                  # the action appends `issue-<number>-<timestamp>`, so they are `feature/issue-<number>-...`.
+                  # Do not make a branch named `feature`: git cannot keep it next to `feature/...` branches.
+                  branch_prefix: feature/
                   # `main` requires signed commits: commit through the GitHub API, so GitHub signs the commits.
                   use_commit_signing: true
                   # No merge or rebase: those commits cannot go through the signed-commit tool.
@@ -306,7 +308,7 @@ jobs:
                   BEFORE: ${{ steps.before.outputs.sha }}
               run: |
                   set -euo pipefail
-                  # The PR itself, or the open PR from the issue branch (`claude-issue-<number>-...`).
+                  # The PR itself, or the open PR from the issue branch (`feature/issue-<number>-...`).
                   # Only PRs that Claude opened from a branch in this repository.
                   if [ "${IS_PR}" = "true" ]; then
                       pr="$(gh api "/repos/${REPO}/pulls/${NUMBER}" \
@@ -314,11 +316,11 @@ jobs:
                               select(.state == "open"
                                   and .user.login == "claude[bot]"
                                   and .head.repo.full_name == $repo
-                                  and (.head.ref | startswith("claude-issue-")))
+                                  and (.head.ref | startswith("feature/issue-")))
                               | .number')"
                   else
                       pr="$(gh api --paginate "/repos/${REPO}/pulls?state=open&per_page=100" \
-                          | jq -rs --arg repo "${REPO}" --arg prefix "claude-issue-${NUMBER}-" '
+                          | jq -rs --arg repo "${REPO}" --arg prefix "feature/issue-${NUMBER}-" '
                               [.[][]
                                   | select(.user.login == "claude[bot]"
                                       and .head.repo.full_name == $repo

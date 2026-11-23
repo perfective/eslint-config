@@ -21,7 +21,7 @@ merging the pull request, the signed tag, the GitHub Release, and `npm publish` 
 Never run `git tag`, `gh release create`, or `npm publish`, and never push to `main`.
 
 Start from the current `main`, so the release covers every merged change.
-In the `Claude` workflow, the action creates the `claude-issue-<number>-...` branch from `main` for the issue.
+In the `Claude` workflow, the action creates the `feature/issue-<number>-...` branch from `main` for the issue.
 
 A release issue is an open issue titled `Release @perfective/eslint-config vX.Y.Z` with the `release` label.
 Adding the `claude` label runs `.github/workflows/publish-pr.yaml`, which opens that Publish PR.
