@@ -5,8 +5,6 @@ on:
             - 'v*'
 
 # npm trusted publishing is bound to this file name (`publish.yaml`), not to the trigger.
-# The maintainer creates the GitHub Release manually. This workflow does not
-# (an Actions-created release is the wrong trigger; see perfective/ts.build#41).
 permissions: {}
 
 concurrency:
@@ -66,22 +64,19 @@ jobs:
                   # Publish only commits that are on `main` or on the backport branch of this version.
                   # The npm dist-tag `latest` is for a non-prerelease on `main` only.
                   # A backport release uses `backport-X.Y`, which is not a semver range.
-                  latest=
                   dist_tag=
                   for branch in main "${backport}"; do
                       status="$(gh api "repos/${REPO}/compare/${branch}...${sha}" --jq '.status' 2>/dev/null || true)"
                       if [ "${status}" = "identical" ] || [ "${status}" = "behind" ]; then
                           if [ "${branch}" = main ]; then
-                              latest=true
                               dist_tag=latest
                           else
-                              latest=false
                               dist_tag="backport-${major}.${minor}"
                           fi
                           break
                       fi
                   done
-                  if [ -z "${latest}" ]; then
+                  if [ -z "${dist_tag}" ]; then
                       echo "::error::${TAG} points to ${sha}, which is not on main or ${backport}."
                       exit 1
                   fi
@@ -93,8 +88,7 @@ jobs:
                       exit 1
                   fi
 
-                  prerelease="$([[ "${version}" == *-* ]] && echo true || echo false)"
-                  if [ "${prerelease}" = "true" ]; then
+                  if [[ "${version}" == *-* ]]; then
                       dist_tag=next
                   fi
                   {
@@ -104,8 +98,7 @@ jobs:
                   } >> "${GITHUB_OUTPUT}"
 
             # Fails before publishing when the changelog has no section for this version.
-            # The maintainer copies that section into the GitHub Release.
-            - name: Check CHANGELOG.adoc for this version
+            - name: Check the CHANGELOG.adoc section
               working-directory: ${{ runner.temp }}
               env:
                   GH_TOKEN: ${{ github.token }}
@@ -116,13 +109,12 @@ jobs:
                   set -euo pipefail
                   gh api "repos/${REPO}/contents/CHANGELOG.adoc?ref=${SHA}" \
                       -H 'Accept: application/vnd.github.raw' > CHANGELOG.adoc
-                  # The `== vX.Y.Z` section, with AsciiDoc list items (`*`, `**`) as Markdown list items.
+                  # The `== vX.Y.Z` section, without leading blank lines.
                   # `sed` drops the leading blank lines; `$(...)` drops the trailing ones.
                   notes="$(awk -v heading="== v${VERSION}" '
                       $0 == heading { found = 1; next }
                       found && /^== / { exit }
                       found' CHANGELOG.adoc \
-                      | sed -E -e 's/^\*\* /  - /' -e 's/^\* /- /' \
                       | sed -e '/./,$!d')"
                   if [ -z "${notes}" ]; then
                       echo "::error::CHANGELOG.adoc has no == v${VERSION} section."
