@@ -24,7 +24,8 @@ jobs:
         # The label on an open release issue, or an `@claude` mention from a maintainer
         # on a Publish PR (a `publish-vX.Y.Z` branch in this repository).
         # An issue comment has no head ref, so the title `Publish v...` selects it;
-        # the step then checks the branch.
+        # the step then checks the branch, and skips a release request PR (`feature/issue-<number>-...`),
+        # which the general `Claude` workflow handles.
         if: >-
             (github.event_name == 'issues'
                 && github.event.label.name == 'claude'
@@ -57,6 +58,7 @@ jobs:
             issue: ${{ steps.release.outputs.issue }}
             pr: ${{ steps.release.outputs.pr }}
             resume: ${{ steps.release.outputs.resume }}
+            skip: ${{ steps.release.outputs.skip }}
 
         steps:
             - name: Find the version, the release issue, and the Publish PR
@@ -85,8 +87,9 @@ jobs:
                       head_ref="$(jq -r --arg repo "${REPO}" \
                           'select(.head.repo.full_name == $repo) | .head.ref' <<<"${pull}")"
                       if [[ ! "${head_ref}" =~ ^publish-v([0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?)$ ]]; then
-                          echo "::error::PR #${NUMBER} is not a Publish PR (a publish-vX.Y.Z branch in ${REPO})."
-                          exit 1
+                          echo "::notice::PR #${NUMBER} is not a Publish PR: the Claude workflow handles the request."
+                          echo "skip=true" >> "${GITHUB_OUTPUT}"
+                          exit 0
                       fi
                       if [ "$(jq -r '.state' <<<"${pull}")" != "open" ]; then
                           echo "::error::PR #${NUMBER} is not open."
@@ -139,6 +142,7 @@ jobs:
     publish-pr:
         name: Open or fix the Publish PR
         needs: prepare
+        if: needs.prepare.outputs.skip != 'true'
         concurrency:
             group: publish-pr-${{ needs.prepare.outputs.version }}
             cancel-in-progress: false
