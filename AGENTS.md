@@ -86,13 +86,6 @@ This list shows which workflow runs for each event.
   or when a maintainer adds the `claude-review` label.
   Claude reviews the update and can push one follow-up commit.
   See "Renovate PRs".
-- `Codex Review` (`codex-review.yaml`) runs when Codex posts or edits its summary comment,
-  and when `Dependency Review` succeeds.
-  The workflow can send findings to Claude in the first 2 review rounds.
-  Codex can still review later pushes after the workflow stops sending fixes to Claude.
-  See "Codex review loop".
-- `Codex Review Watchdog` (`codex-watchdog.yaml`) runs each hour, or when a maintainer starts it.
-  It flags a loop PR when Codex does not review its head commit in 2 hours.
 - `Publish PR` (`publish-pr.yaml`) runs when a maintainer adds the `claude` label
   to an open issue with the title `Release @perfective/eslint-config vX.Y.Z`,
   or writes `@claude` on a Publish PR (a `publish-vX.Y.Z` branch in this repository).
@@ -110,13 +103,13 @@ Common setup:
 - `main` requires signed commits.
   Claude commits only with the signed-commit tool (through the GitHub API).
   The Claude workflows disallow `git commit` and `git push` in Claude's Bash tool.
-  `Claude`, `Dependency Review`, and `Codex Review` also disallow `git merge`, `git rebase`, and `git pull`.
+  `Claude` and `Dependency Review` also disallow `git merge`, `git rebase`, and `git pull`.
   A merge commit cannot go through the signed-commit tool, so Claude does not merge or rebase in CI.
-- The workflows do not post `@codex review`, and they do not use a personal access token.
+- The workflows do not use a personal access token.
 - Workflows that `issues`, `issue_comment`, `workflow_run`, `schedule`, or `workflow_dispatch` events start
   run from the default branch.
   A change to them has an effect on these events only after it is on `main`
-  (`claude.yaml`, `codex-review.yaml`, `codex-watchdog.yaml`, and `publish-pr.yaml`).
+  (`claude.yaml` and `publish-pr.yaml`).
 
 ## Architecture
 
@@ -297,13 +290,12 @@ An exception that the audit does not use also causes a failure.
     1. Commit the work on that branch.
     2. Run the full verification.
     3. Open a pull request with `gh pr create`.
-       Do not open a draft: Codex does not review drafts.
+       Do not open a draft.
+       After the Claude step, the workflow marks a draft issue PR as ready, also when the step fails.
        Write the title in the style of a commit subject.
        In the body, link the issue (`Closes #<number>`),
        summarize the changes (one list item for each rule change),
        and list the **NEEDS HUMAN** items.
-
-    After this run, Codex reviews the PR automatically (see "Codex review of issue PRs").
 
 - On an existing PR, push follow-up commits to its branch, and reply in the PR.
 - After Claude opens a PR for an issue, ask for follow-up work with `@claude` on the PR, not on the issue.
@@ -348,7 +340,7 @@ Release procedure:
       commits `Publish vX.Y.Z` with the signed-commit tool, and opens the release PR (`Closes #<number>`).
       The PR body gives the version, the reason for it, a summary of the release, the **NEEDS HUMAN** items,
       and the maintainer's next steps.
-      Codex reviews it as a Claude issue PR (see "Codex review of issue PRs").
+      The maintainer reviews it as a Claude issue PR (see "Claude issue PRs").
     - **Release issue.** Open an issue with the title `Release @perfective/eslint-config vX.Y.Z`,
       and add the `release` label.
       Nothing runs when you open the issue, so the issue can wait.
@@ -377,7 +369,7 @@ Release procedure:
         Claude opens the PR when none is open, and otherwise comments on it.
         A fix outside those files is **NEEDS HUMAN**: it stays out of the Publish PR.
 
-        This Publish PR (`publish-vX.Y.Z`) is not in the Codex loop: the maintainer reviews it.
+        The maintainer reviews this Publish PR (`publish-vX.Y.Z`).
 2. After CI passes, the maintainer squash-merges the Publish PR with the title `Publish vX.Y.Z`.
 3. The maintainer signs the tag on the merged commit and pushes it
    (`git tag -s vX.Y.Z`, then `git push origin vX.Y.Z`).
@@ -484,10 +476,7 @@ Other agents must read the `SKILL.md` files directly.
   when Renovate opens or updates the PR, or when a maintainer adds the `claude-review` label.
   Claude pushes the necessary changes as a follow-up commit, with the Claude GitHub App token, so CI runs on it.
   It reports the verdict, the rule changes, and the **NEEDS HUMAN** items in a PR comment.
-  When the job succeeds, `Codex Review` reads the latest Codex summary if one exists.
-  If Claude pushes a follow-up commit, that push triggers a new automatic review.
-- If Claude did not run (see "Claude workflows"), `Dependency Review` also adds `help wanted`,
-  and the Codex loop does not start.
+- If Claude did not run (see "Claude workflows"), `Dependency Review` also adds `help wanted`.
   To fix an outdated test merge, tick the rebase checkbox:
   Renovate then makes the branch again on the current `main`.
   The `claude-review` label alone runs the review again on the same outdated test merge.
@@ -495,143 +484,28 @@ Other agents must read the `SKILL.md` files directly.
   To get a newer version or to resolve conflicts, tick the rebase checkbox in the PR.
   The `renovate-regenerate` label (`rebaseLabel` in `renovate.json`) has the same effect.
   Renovate makes the branch again from the start, without the follow-up commit, and the review runs again.
-  This sets the round count to zero: the old commits are gone,
-  and the loop waits for a successful Dependency Review run whose commit is on the new branch.
 - Claude does not merge or rebase in CI (see "GitHub Actions").
   When a maintainer asks Claude to resolve conflicts, Claude asks the maintainer to tick the rebase checkbox.
 - A review of a recreated branch first reads the PR conversation.
   It applies only the decisions of maintainers (`OWNER`, `MEMBER`, or `COLLABORATOR`, not a bot),
   and does not ask for them again.
-  It ignores `@codex review` requests.
 - Before the merge, review the PR with `update-dependency` (locally, if the workflow did not run).
   An npm update to a declared version or range must change both `package.json` and `package-lock.json`.
   A GitHub Actions dependency update can change workflow files alone.
 - Do not amend the Renovate commit. Add a follow-up commit on the PR branch.
 
-### Codex review loop
+### Concurrency
 
-Codex is the ChatGPT Codex GitHub App (`chatgpt-codex-connector[bot]`).
-To turn on automatic review for this repository, open the Codex settings in ChatGPT, Code review, and set:
-
-- Automatic review: "Review all PRs".
-- Review trigger: "On every push".
-
-Each value can be a personal preference, a repository override, or both.
-Codex does not review drafts, and follows "Code Review Rules" below.
-
-The summary comment:
-
-- Codex posts one summary comment for each PR, and edits it when reviews start and finish.
-- A hidden `<!-- codex-review-state:v1 {...} -->` line in the comment gives the reviewed commit,
-  the review status, and the unresolved findings
-  (`has_unresolved_findings`, or `has_any_findings` when that flag is null).
-  Codex defines this format, and it has no documentation.
-
-When `Codex Review` acts:
-
-- It acts only on Renovate PRs and Claude issue PRs, and only when the reviewed commit is the branch tip.
-  It does not act on Publish PRs (`publish-vX.Y.Z`): the maintainer reviews them.
-- It skips a summary edit when the previous body already showed a completed code review for the same commit
-  and the security review status and commit are unchanged.
-  A change to the security review can make the workflow process the same commit again within the same round.
-- A null or running `code_review.status` waits for the edit that finishes the review.
-- On a Renovate PR, it does not act while Dependency Review runs on that branch.
-  It waits up to 2 minutes for a run, so that a run with a skipped job can finish.
-  A successful Dependency Review run then starts `Codex Review` again (`workflow_run`)
-  with the latest Codex summary on the PR, with or without a new commit.
-  The workflow never treats that run as already handled.
-- One route job runs for each PR (`codex-review-route-<number>`).
-  A later summary edit waits (`cancel-in-progress: false`, `queue: max`).
-  It does not replace a route that is not finished,
-  because the previous body of that edit is the completed review, and the route would skip it.
-- A `workflow_run` payload without a PR number uses the same number.
-  The workflow finds the open PR whose head is the branch of the run, and uses the number of that PR.
-  A group named after the branch would not match the group of the summary edits.
-  It starts the loop only when the latest completed run succeeded and its commit is still on the PR.
-
-Rounds:
-
-- The round is the number of different commits on the PR that `chatgpt-codex-connector[bot]` reviewed,
-  up to the reviewed commit.
-- Only the PR reviews and the issue comments of that app count
-  (the `code_review.commit_sha` of the summary, the `commit_id` of a review, and the reviewed commit of a receipt).
-  A marker in a comment of a different author cannot change the round.
-- On a Renovate PR, round 1 groups the reviewed commits whose committer dates are at or before
-  the completion time of the latest completed Dependency Review run that was not skipped.
-  This applies only when that run succeeded and its commit is still on the PR.
-  If the latest run failed or was cancelled, the workflow does not use an older successful run.
-  As a result, the Renovate commit and the follow-up commit of that run are one round.
-  Each reviewed commit with a later committer date is one more round.
-- Codex reviews each push, so a fix with more than one push can use one round for each push.
-- The workflow sends findings to Claude in rounds 1 and 2.
-  From round 3 onward, it reports findings with **NEEDS HUMAN** and `help wanted`
-  unless every open Codex thread already asks for a decision.
-  Codex can still review later pushes.
-
-Results:
-
-- A null or `skipped` `security_review.status` means that the security review did not run.
-  The workflow ignores a security review of a different commit.
-- The loop ends when the code review completed with no findings,
-  and the security review did not run or also has no findings.
-  The loop stays open while the security review has findings or is not finished.
-  When the loop ends, the workflow writes a comment that the loop is finished.
-- These results get a **NEEDS HUMAN** comment and `help wanted`:
-  a failed review, a finished status other than `completed`, or a state line that the workflow cannot read.
-- If all open Codex threads already ask for a decision, the workflow does not start Claude again.
-  This applies to code findings and security findings.
-- Claude fixes the other findings (review threads and review bodies) and pushes one commit for Codex to review.
-- Claude replies on each thread that it fixes, with the full commit SHA.
-  The workflow resolves an open Codex thread when the last reply is from Claude,
-  contains the full SHA of the new branch tip or the reviewed commit, and has no **NEEDS HUMAN** marker.
-  The workflow counts a new branch tip as a pushed fix only when it descends from the reviewed commit.
-- Codex threads can stay open on earlier commits,
-  for example on the Renovate commit that the Dependency Review follow-up already fixed.
-  On such a thread, Claude replies "Already fixed in `<sha>`" with the full reviewed commit SHA,
-  and changes nothing.
-  The workflow also resolves that thread.
-- If Claude does not push, the workflow checks the remaining Codex threads:
-    - If every open thread already asks for a decision, it leaves the PR as it is.
-    - If it resolved at least one thread in that run and none remain open,
-      it writes a comment that the loop is finished.
-    - Otherwise, it writes a comment and adds `help wanted`.
-      This can happen when Claude reports a finding in a review body as already fixed.
-- If Claude did not run, the `fix` job also writes a comment and adds `help wanted`.
-- After a failed Codex review, the summary does not change until Codex reviews again.
-  To get a new review, push a commit, or ask Codex for a review in a comment.
-
-Concurrency:
-
-- The loop jobs and the `Claude` workflow share the `claude-<number>` concurrency group,
-  so a loop step and an `@claude` request do not push at the same time.
-  `Dependency Review` uses `dependency-review-<number>` and can overlap an `@claude` run on a Renovate PR.
-  In that group, a new review run cancels the run that is in progress (`cancel-in-progress: true`).
+- The `claude` job of the `Claude` workflow uses the `claude-<number>` concurrency group.
+  This group runs one job at a time for the same issue or PR.
 - For Claude issue PRs, the number is the issue number (from the `feature/issue-<number>-...` branch),
   for requests on the issue and on the PR.
   For other PRs, the number is the PR number.
-- The group is on the jobs, so the skipped runs for other comments cannot cancel a loop step.
-- The jobs in that group use `queue: max`: the waiting jobs run in the sequence in which they started to wait
-  (up to 100), so a later request does not cancel a waiting job, for example a loop step.
-
-To start the loop again on a Renovate PR, add the `claude-review` label.
-Dependency Review runs again, and when it succeeds, `Codex Review` reads the latest summary again.
-If Dependency Review pushes a commit, that commit is round 1.
-
-`Codex Review Watchdog`:
-
-- When the head commit of an open Renovate PR or Claude issue PR is at least 2 hours old
-  and has no review from `chatgpt-codex-connector[bot]`,
-  the watchdog adds `help wanted` and writes one **NEEDS HUMAN** comment.
-  The watchdog accepts a review record for the head or a Codex comment containing the full SHA
-  or a `Reviewed commit` entry beginning with its first 10 characters.
-  A summary for a review that is still running can satisfy this check.
-- It writes the comment and adds the label with `GITHUB_TOKEN`.
-  It skips the flag when the latest watchdog marker is a flag for the current head,
-  even if a maintainer removed the label.
-  If the branch returns to an earlier head after a new marker, the watchdog can flag that head again.
-- When the watchdog finds review evidence for the head of a flagged PR, it writes a comment that the flag is cleared.
-  It removes `help wanted` only when the latest `labeled` event for that label
-  is from `github-actions[bot]` and is after the flag, so it keeps a label that a different user added.
+- The group puts pending runs in a queue with `queue: max`:
+  the waiting jobs run in the sequence in which they started to wait (up to 100),
+  so a later request does not cancel a waiting job.
+- `Dependency Review` uses its own `dependency-review-<number>` group and can overlap an `@claude` run on a Renovate PR.
+  In that group, a new review run cancels the run that is in progress (`cancel-in-progress: true`).
 
 ### Squash commit message
 
@@ -683,7 +557,7 @@ To address the review comments on a PR:
 4. Resolve the threads that the change or the maintainer's decision settles.
 
 In CI, Claude replies (`gh api repos/<owner>/<repo>/pulls/<number>/comments/<id>/replies -f body=...`),
-and the workflow resolves the threads (see "Codex review loop").
+and the maintainer resolves the threads.
 A comment that asks for a decision is **NEEDS HUMAN**.
 Ask the maintainer, then record the decision in the reply.
 
@@ -695,38 +569,28 @@ The `help wanted` label shows that a PR waits for a maintainer decision, and has
 - Claude adds it when its review or follow-up ends with **NEEDS HUMAN** items.
   Claude removes it when a later run has no such items
   (for example, after it applies the maintainer's decisions from the PR thread).
-- `Codex Review` adds it when the loop stops for a maintainer decision (see "Codex review loop").
-- `Dependency Review` and `Codex Review` add it when Claude did not run.
+- `Dependency Review` adds it when Claude did not run.
   The `Claude` workflow only writes a comment.
-- `Codex Review Watchdog` adds it when the head of a loop PR has no evidence of a Codex review after 2 hours.
-  It removes the label when it finds that evidence and the latest label event passes the watchdog's check.
 
-## Codex review of issue PRs
+## Claude issue PRs
 
-The Codex loop also runs on a PR that the `Claude` workflow opened for an issue
+A Claude issue PR is a PR that the `Claude` workflow opened for an issue
 (the author is `claude[bot]`, and the branch is `feature/issue-<number>-...` in this repository).
-It does not run on the Publish PR (`publish-vX.Y.Z`).
+`Dependency Review` is the only automated review, and no workflow reviews a PR after Claude.
+The maintainer reviews the `Dependency Review` results, Claude issue PRs, and Publish PRs.
 
 - Open the PR ready for review, not as a draft.
   After the Claude step, the workflow runs `gh pr ready` on a draft with the job token,
   also when the Claude step failed.
-  The PR stays ready for review while the loop runs.
-- Codex reviews the PR automatically when the PR opens and after each push.
-- An `@claude` request on the PR continues the loop when Claude pushes commits.
-  A subsequent job resolves each Codex thread when the last reply is from Claude,
-  names the full SHA of a commit from that run, and does not have **NEEDS HUMAN**.
-  A request on the issue cannot commit to the PR branch, so it does not continue the loop.
 - On these PRs, as on Renovate PRs, the `Claude` workflow lets Claude run the npm commands
   (`restrict_untrusted_prs` is off).
   Their branches are in this repository, and CI runs on them.
-- The issue in the branch name defines the task for the findings, not the PR body, which people can edit.
+- The issue in the branch name defines the task for the requests on the PR, not the PR body, which people can edit.
   Claude reads the issue body and comments.
   The issue body is the task, because a maintainer started the workflow on it.
   Only the comments of maintainers (`OWNER`, `MEMBER`, or `COLLABORATOR`, not a bot) change the scope.
-  A finding that asks for work outside that scope is **NEEDS HUMAN**.
+  A request for work outside that scope is **NEEDS HUMAN**.
   An issue that Claude cannot read is also **NEEDS HUMAN**.
-- To get a new review after a failed review, push a commit,
-  or write `@codex review` in a comment (the workflows never do this).
 
 ## Reviewer signatures
 
@@ -739,18 +603,15 @@ also for text that they post with `gh`, an MCP connector, or a personal token.
   Do not add a bot header, a quote block around the body, or the agent's name as the first line.
 - End the text with a blank line, then an italic signature with the name of the agent,
   for example `*Written by Claude*`, `*Written by Cursor*`, `*Written by Codex*`, or `*Written by Grok Bot*`.
-- A Codex review request with the maintainer's account starts with `@codex review` on the first line,
-  then a blank line and the italic signature line.
-- Never write a bare `@codex` or `@claude` mention at a different location
+- Never write a bare `@claude` mention
   in a GitHub comment, review, or issue.
   The `Claude` workflow checks the raw text for the mention, including inside backticks.
   A backticked mention can start the workflow and lead to a "Claude did not run" failure.
   Refer to Claude by name when you are not requesting a run.
-  Put references to the Codex command in backticks (for example, `` `@codex review` ``).
 
 ## Code Review Rules
 
-Codex reads this section when it reviews a pull request.
+Read this section when you review a pull request.
 
 - Review the PR against this file:
   the rule configuration conventions, the documentation rules,

@@ -41,6 +41,17 @@ Align those lists when revising the maintenance workflow.
 The manifest pins ESLint plugins but still uses ranges for several development tools;
 clarify the scope of the root guide's exact-version requirement before changing those ranges.
 
+[[automated-pr-review]]
+== Automated PR review
+
+The Codex review loop is removed, so no workflow reviews Renovate PRs or Claude issue PRs after Claude.
+
+* Choose a second reviewer that runs on subscription pricing.
+Cursor Bugbot and Cursor Automations bill outside the seat usage, so they do not qualify.
+The Cursor CLI in GitHub Actions qualifies only if a test run with `CURSOR_API_KEY` uses the included usage.
+Otherwise, use a review-only Claude job.
+* Then add a fix loop for the findings (Claude fixes in rounds 1 and 2) and resolve the fixed threads.
+
 == Agent guidance maintenance
 
 Keep shared instructions in the root `AGENTS.md`, source details in `src/AGENTS.md`,
