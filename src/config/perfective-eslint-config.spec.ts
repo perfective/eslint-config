@@ -210,6 +210,11 @@ const ruleAuditExceptions: RuleAuditException[] = [
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
     },
     {
+        rule: 'jsdoc/implements-on-classes',
+        check: 'severity-convention',
+        reason: 'The fixer is opt-in (fix) and is not enabled.',
+    },
+    {
         rule: 'jsdoc/no-bad-blocks',
         check: 'severity-convention',
         reason: 'Pending review: fixable, but kept as "error" since before the audit.',
