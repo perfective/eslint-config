@@ -549,6 +549,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'cypress/no-debug': [],
     'cypress/no-force': [],
     'cypress/no-pause': [],
+    'cypress/no-unnecessary-assertions': ['fixable'],
     'cypress/no-unnecessary-waiting': [],
     'cypress/no-xpath': ['deprecated'],
     'cypress/require-data-selectors': [],

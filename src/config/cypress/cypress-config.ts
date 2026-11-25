@@ -27,6 +27,7 @@ export function cypressConfig(files: Glob[] = [cypressFiles]): Linter.Config {
             'cypress/no-debug': 'error',
             'cypress/no-force': 'error',
             'cypress/no-pause': 'error',
+            'cypress/no-unnecessary-assertions': 'warn',
             'cypress/no-unnecessary-waiting': 'error',
             // Deprecated since v6.2.0. No replacement.
             // Use cy.get() with data selectors (cypress/require-data-selectors) instead.
