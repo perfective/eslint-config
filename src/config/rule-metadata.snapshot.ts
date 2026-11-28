@@ -810,6 +810,7 @@ export const ruleMetadata: Record<string, RuleFlag[]> = {
     'n/prefer-node-protocol': ['fixable'],
     'n/prefer-process-get-builtin-module': [],
     'n/process-exit-as-throw': [],
+    'n/require-child-process-timeout': [],
     'n/shebang': ['deprecated', 'fixable'],
 
     'n/no-unsupported-features/es-builtins': [],

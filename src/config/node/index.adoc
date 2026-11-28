@@ -153,6 +153,9 @@ since March 2020.
 | `link:{eslint-n-rules}/process-exit-as-throw.md[n/process-exit-as-throw]` [recommended]
 | Error
 
+| `link:{eslint-n-rules}/require-child-process-timeout.md[n/require-child-process-timeout]`
+| Error
+
 | `link:{eslint-n-rules}/shebang.md[n/shebang]` [deprecated] [fixable]
 | Off
 2+| Use `n/hashbang` instead.

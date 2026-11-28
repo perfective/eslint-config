@@ -78,6 +78,7 @@ export function nodeConfig(files: Glob[] = ecmaFiles): Linter.Config {
             'n/prefer-promises/dns': 'error',
             'n/prefer-promises/fs': 'error',
             'n/process-exit-as-throw': 'error',
+            'n/require-child-process-timeout': 'error',
             // Deprecated. Use n/hashbang instead.
             'n/shebang': 'off',
         },
